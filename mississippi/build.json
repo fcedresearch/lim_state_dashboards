@@ -2,11 +2,11 @@
  "state": "MS",
  "name": "Mississippi",
  "folder": "mississippi",
- "built": "2026-09-11",
- "seconds": 127,
+ "built": "2026-09-30",
+ "seconds": 74,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 27,
+ "lim_headline_n": 30,
  "schools": 890,
  "years": [
   2015,
@@ -17,39 +17,39 @@
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
    "bytes": 132812308,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/lim/Build/work/MS/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/MS/data/Subjects_Tests_FINAL (8).csv",
    "rows": 53580
   },
   "roster": {
-   "path": "/home/claude/lim/Build/work/MS/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/MS/data/LIM Schools (Current_Active) (11).csv",
    "rows": 689
   },
   "comparison": {
-   "path": "/home/claude/lim/Build/work/MS/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/MS/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 6722
   },
   "mra": {
-   "path": "/home/claude/lim/Build/work/MS/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/MS/data/All MRA Surveys.csv",
    "rows": 107
   }
  },
@@ -63,13 +63,16 @@
   "2023-2024ReportCardData.xlsx",
   "2024-2025ReportCardData.xlsx",
   "2025-ACT-Junior-Report.xlsx",
+  "LiM Materials/",
   "Non-LIM Schools (9).csv",
   "Proficiency_MS_2026/",
-  "ms_2026_subjects.csv"
+  "ms_2026_name_join.csv",
+  "ms_2026_subjects.csv",
+  "ms_2026_subjects_audit.json"
  ],
  "extras_module": "ms_core_extras",
  "verified": true,
- "dashboard_bytes": 1461369,
+ "dashboard_bytes": 1461829,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -82,12 +85,12 @@
    "Science",
    "Social Studies"
   ],
-  "rows_share_of_prior": 0.45,
+  "rows_share_of_prior": 0.47,
   "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 51869,
+   "rows": 51817,
    "levels 3 and 4": 8.1,
    "levels 2, 3 and 4": 0.7,
    "level 4 alone": 12.5,
@@ -134,24 +137,35 @@
    "with": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 27,
-    "comp_n": 402,
-    "lim_change": 6.84,
-    "comp_change": 3.92,
-    "p": 0.068
+    "lim_n": 30,
+    "comp_n": 465,
+    "lim_change": 6.42,
+    "comp_change": 4.32,
+    "p": 0.145
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 22,
-    "comp_n": 402,
-    "lim_change": 7.11,
-    "comp_change": 3.92,
-    "p": 0.085
+    "lim_n": 23,
+    "comp_n": 465,
+    "lim_change": 6.85,
+    "comp_change": 4.32,
+    "p": 0.152
    },
    "schools": 11
   },
   "subjects_by_keyword": [],
   "subjects_excluded": []
- }
+ },
+ "best_schools": {
+  "qualified": 6,
+  "in_the_process": 4,
+  "lapsed_on_the_list": 2,
+  "reviewed": 36,
+  "measures": 56,
+  "outcomes": 18,
+  "improved_every_year": 0,
+  "lapsed_longer_ago": 35
+ },
+ "best_schools_added": "2026-09-30"
 }

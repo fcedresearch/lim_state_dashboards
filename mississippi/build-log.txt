@@ -1,0 +1,321 @@
+
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state MS --core /home/claude/sdf/Core --out /home/claude/work1/MS --data /home/claude/work1/MS/data --extras ms_core_extras
+reading the core for Mississippi ...
+[core] subjects: 53,580 school rows kept; dropped 24,996 rows with no school id and 1,701 with an id but no school record
+[core] Leader in Me roster: 689 rows
+[core] comparison schools: 6,722 rows
+[core] MRA surveys: 107 rows
+  subject rows added from the state's own file: 3,608 (Mississippi 2025-26 MAAP reading and math (Mississippi Department of Education))
+  subject rows 57,188 · roster rows 689 (76 schools) · comparison rows 6,722 (816 schools) · MRA surveys 107
+[core] Leader in Me roster: 56,181 rows
+  exits: 64 of 76 roster schools carry an expiration date; 41 past it by more than 30 days (exited), 0 inside the grace window, 23 in the future, 12 undated (11 with a start date)
+  892 schools · 163 districts
+applying the cleaning rules ...
+  28,618 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 270 of 760 reviewed
+  no start date: 1 schools · dated exits: 35 (school-years after an exit with rows: 81) · aggregate 'All grades' rows used 0, skipped 0
+  achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 10% of rows (a five-level state whose export carries four columns, usually))
+  proficiency = level 4 alone on 12.5% of rows
+folding in Mississippi's own measures (ms_core_extras) ...
+  state files (resolved by pattern; the log names the file each year came from):
+    report_card 2017-18: 2017-2018ReportCardData.xlsx
+    report_card 2018-19: 2018-2019ReportCardData.xlsx
+    report_card 2019-20: 2019-2020ReportCardData.xlsx
+    report_card 2021-22: 2021-2022ReportCardData.xlsx
+    report_card 2022-23: 2022-2023ReportCardData.xlsx
+    report_card 2023-24: 2023-2024ReportCardData.xlsx
+    report_card 2024-25: 2024-2025ReportCardData.xlsx
+    act 2023-24: 2023-2024-ACT-Results-for-Juniors.xlsx
+    act 2024-25: 2025-ACT-Junior-Report.xlsx
+    report cards: 6,125 school-years from the cache (7 workbooks unchanged)
+  report cards: 967 schools, 6,125 school-years, 2017-18 to 2024-25
+  ACT juniors: 686 school-springs for 230 schools (2022-23, 2023-24, 2024-25); 280 district roll-up rows and 13 summary rows set aside; 20 school-spring values matched no report-card school, 0 matched more than one
+    ACT value not joined: Capital City Alternative School 2024 (under Jackson Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School For Mathematics and Science 2024 (under Meridian Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School For Mathematics and Science 2023 (under Meridian Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School For Math and Science 2024 (under Meridian Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School For Math and Science 2023 (under Meridian Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School For The Arts 2024 (under Meridian Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School For The Arts 2023 (under Meridian Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School of the Arts 2024 (under Meridian Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School of the Arts 2023 (under Meridian Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School For The Blind and Deaf 2024 (under Meridian Public School District, 2023-2024-ACT-Results-for-Juniors.xlsx)
+    ACT value not joined: Mississippi School For Mathematics and Science 2025 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    ACT value not joined: Mississippi School For Mathematics and Science 2024 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    ACT value not joined: Mississippi School For Math and Science 2025 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    ACT value not joined: Mississippi School For Math and Science 2024 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    ACT value not joined: Mississippi School For The Arts 2025 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    ACT value not joined: Mississippi School For The Arts 2024 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    ACT value not joined: Mississippi School of the Arts 2025 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    ACT value not joined: Mississippi School of the Arts 2024 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    ACT value not joined: Mississippi School For The Blind and Deaf 2025 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    ACT value not joined: Mississippi School For The Blind and Deaf 2024 (under Meridian Public School District, 2025-ACT-Junior-Report.xlsx)
+    the spring both reports carry: 228 of 228 composites agree to two decimals; the newer report's copy is kept
+    NCES directory: 1,175 federal-to-state id pairs from the cache (8 CCD files unchanged)
+  crosswalk: NCES's state id for each federal id; the August name-and-district join as the audit and the fallback
+    852 of 892 schools carry a state id the report cards know (ccd 879); Leader in Me 75 of 76, comparison 777 of 816; not reached: Ward-Stewart Elementary School (Starkville Oktibbeha Consolidated School District)
+    audit against the August join: both speak for 799 schools and agree on 794; 0 schools joined by name alone; 0 shared state ids settled; 0 NCES pairs re-pointed to an id the core folded
+    disagreement (namesake): Shivers Middle School (Aberdeen School District, comparison): NCES says 4820-026 None (None) and the name join says 4820-032 Belle Shivers Middle School (Aberdeen School District), which belongs to Belle-Shivers Middle School
+    disagreement (namesake): North Woolmarket Elementary and Middle School (Harrison County School District, comparison): NCES says 2400-038 North Woolmarket Elementary & Middle (Harrison County School District) and the name join says 2400-052 Woolmarket Elementary School (Harrison County School District), which belongs to Woolmarket Elementary
+    disagreement (roster_district): Carver Elementary (Sunflower County Consolidated School District, Leader in Me): NCES says 3300-004 Carver Elementary School (Jefferson Davis County School District) and the name join says 6711-006 Carver Elementary School (Sunflower County Consolidate School District), which belongs to Carver Elementary
+    disagreement (namesake): Laurel High School Vocational Complex (Laurel School District, comparison): NCES says 3420-090 None (None) and the name join says 3420-040 Laurel High School (Laurel School District), which belongs to Laurel High School
+    disagreement (new_federal_id): Leland School Park (Leland School District, comparison): NCES says 7612-006 None (None) and the name join says 7612-008 Leland School Park (Leland School District), which belongs to Leland School Park
+  out-of-school suspension excluded by name: the 2024-25 out-of-school suspension column reads '<5%' for 100% of reporting schools
+  chronic absence, the state's report card against DOMO's value on the same school-years (an independent check of the crosswalk): r = 1.0 across 3,447 school-years, 100.0% within a point
+  graduation rate, the same check: r = 1.0 across 1,325 school-years, 100.0% within a point
+  fill offered to the core: chronic absence on 4,490 school-years (DOMO has none in 2024-25), graduation rate on 1,391; the core keeps DOMO's value wherever it has one
+  card: 10 Mississippi measures, each group on each year's own membership
+  per-school report-card records for the pack: 5,411
+  core measures filled from Mississippi's own files where DOMO had none: chronic_absent 3,463 rows, grad_rate 125 rows
+  school type from NCES: Title I on 857 schools (687 yes), charter 7, magnet 13, alternative 3; Title I published 2017-2022, carried forward after
+  funders: 28 Mississippi schools carry a funding source (28 on the page; Kern 11, 11 on the page); latest non-blank year per school
+building matched pairs, inside each band ...
+  pairs 57  by band {'Primary': {'pairs': 31, 'unmatched': 0}, 'Secondary': {'pairs': 26, 'unmatched': 0}}
+  MRA: 94 surveys · 36 schools · 384 sentinel values · 5 shells
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 30, 'comp_n': 465, 'lim_change': 6.42, 'comp_change': 4.32, 'p': 0.145} · without the 11 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 23, 'comp_n': 465, 'lim_change': 6.85, 'comp_change': 4.32, 'p': 0.152}
+  roster: 31 counted, 41 exited, 3 not counted yet, 1 not counted
+best-performing schools: 6 of 36 counted schools, 56 measures in 18 outcomes
+
+wrote ms_payload.json  (14.8 MB, 28,618 rows) · page kind full (30 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fd5a84a86926'}
+
+$ python3 build2.py ms_payload.json MS_Dashboard.html MS_Methods.html
+payload 14.8 MB -> 0.86 MB gzip
+MS_Dashboard.html: 1428 KB
+MS_Methods.html: 56 KB
+
+$ python3 /home/claude/sdf/Build/verify_core.py --state MS --work /home/claude/work1/MS
+
+--------------------------------------------------------------------------
+Tier 0 — install and input-value audit
+--------------------------------------------------------------------------
+ok   the template in use carries the brand palette and the ink helper
+ok   the template carries the three-school floor in headline and movement
+ok   the template reads the payload's raw window on the insights tab
+ok   the template honours the composite row flag
+ok   the template carries the research pack, look-alike mode and the school list
+ok   the office helper carries the Word table builder
+ok   the subject pull is one state's (federal id state code)
+ok   the roster and comparison pulls are one state's
+ok   2019-20 rows, if the file has any, are excluded from the payload  [0 rows in the file]
+ok   no duplicate school-year-grade-subject rows
+ok   no test value above 100
+ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
+ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
+ok   every comparison row is LIM School = false
+ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   the roster's '% White' is a count, not a percentage
+ok   one expiration date per roster school
+ok   every expiration date parsed
+ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
+ok   the exit rule's counts recompute from the roster  [41 exited, 0 in grace, 23 future]
+ok   the grace window is the 30 days Eve set
+ok   MRA exact-100 values were counted as sentinels  [36 composite cells at 100, 0 in 90-99.9]
+ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
+ok   no school appears in both groups in the same year
+
+--------------------------------------------------------------------------
+Tier 1 — rules and maths
+--------------------------------------------------------------------------
+ok   lim_rules.py self-tests pass
+ok   skill_version.py self-tests pass
+ok   payload carries a build stamp
+ok   years exclude both COVID years
+ok   the straight-numbers window starts in 2022 or later
+ok   the long window is scored relative to the state
+ok   no Leader in Me row counted before its full year was finished  [0 rows]
+ok   schools with no start date appear in neither group  [1 schools]
+ok   the count of undated schools is on the methods page
+ok   no row survives after a school's dated exit, in either group  [0 rows]
+ok   exited schools keep their true Leader in Me years  [30 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [41 exited (0 from DOMO's flags)]
+ok   lim_exit carries every exited school and nothing else
+ok   the roster section lists every roster school once
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 41, 'counted': 31, 'not counted yet': 3, 'not counted': 1}]
+ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
+ok   the headline sensitivity without the undated schools is on the methods page
+ok   size bands are the NCES categories in the payload's order
+ok   the poverty share rides on most rows for the look-alike caliper  [100%]
+ok   every offered measure is carried by at least one school-year
+ok   the composite flag keeps science, social studies and writing out of the no-filter view
+ok   the grade table lists tested grades in order and every school in it has a name
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [343 schools]
+ok   the grade table carries no school-year the rules dropped
+ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 10% of rows (a five-level state whose export carries four columns, usually)]
+ok   school names and start dates are in the payload for the pack
+ok   MRA by-school rows exist for the pack
+ok   the MRA respondent map names a group or a blend for every measure
+ok   look-alike settings are in the payload with their rationale
+ok   a Leader in Me school's pre-start years count in the comparison group  [1,243 rows]
+ok   Lighthouse schools are inside the Leader in Me family
+ok   combined-grade schools appear in both bands  [289 schools]
+ok   the school count never exceeds the band-slice count  [495 schools vs 657 band slices]
+ok   pairs are built inside bands
+ok   the by-band pair counts sum to the total
+ok   no comparison school is used twice
+ok   no Leader in Me school is paired twice inside a band
+ok   the signed baseline gap recomputes to the payload's  [offline -0.004 vs payload +0.000 on 57 pairs]
+ok   the mean signed baseline gap is under one point  [-0.004]
+ok   the widest single baseline gap is inside the caliper's reach  [2.0 points]
+ok   the printed signed gap is not a negative zero  [0.0]
+ok   no MRA value of exactly 100 survives into the payload
+ok   every MRA value sits on the published scale
+ok   the MRA trend stays inside one instrument version
+ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
+ok   movers are built on ten or more schools each
+  demo district: Vicksburg Warren School District · prospect district: Rankin County School District
+
+--------------------------------------------------------------------------
+Tier 2 — behaviour in a real browser
+--------------------------------------------------------------------------
+ok   the page loads and the headline renders
+ok   load time is workable  [0.6s]
+ok   no console errors on load
+ok   chart c1 draws an svg or explains why
+ok   chart c2 draws an svg or explains why
+ok   the MRA card shows exactly when a trend line can be drawn
+ok   the discipline card shows exactly when the payload carries a discipline trend  [payload has no discipline_ga]
+ok   the incidents card shows exactly when the payload carries an incident trend  [payload has no incidents]
+ok   the state extras card shows exactly when the payload carries state measures  [10 state measures]
+ok   every state measure on the card draws a Leader in Me and a comparison line
+ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
+ok   the headline p recomputes offline  [page 0.1451 scipy 0.1451 · window 2022-2026 · LiM n=30 mean +6.42 · comparison n=465 mean +4.32]
+ok   the headline counts schools, not band slices  [page 495 vs offline 495 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [30 vs 30]
+ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
+ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
+ok   choosing 'Title I schools' narrows the view and names it  [637 of 890 schools; In Mississippi Title I schools, between 2021-22 and 2025-26, Leader in Me school]
+ok   every school in the 'Title I schools' view carries that attribute
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
+ok   Title I status is known for most schools on the page  [96.3%]
+ok   the Primary band filter re-renders without error
+ok   the Secondary band filter re-renders without error
+ok   measure 'percent_proficient' either draws or says why
+ok   measure 'percent_below' either draws or says why
+ok   measure 'standard_score' either draws or says why
+ok   measure 'chronic_absent' either draws or says why
+ok   measure 'grad_rate' either draws or says why
+ok   the matched toggle re-renders the headline  [In Mississippi schools (matched to similar schools only), between 2021-22 and 2025-26, Lea]
+ok   the matched view shrinks or equals the Leader in Me count  [22 matched]
+ok   no console errors after the filter sweep
+ok   the insights tab hides the explore view
+ok   Vicksburg Warren School District generates cards or says there is nothing to report  [10 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.14507261642356717, 'n1': 30, 'n2': 465}]
+ok   no console errors on the insights tab
+ok   the MRA tab is offered exactly when the payload carries surveys
+ok   the MRA tab shows its own view and sidebar and hides the explore ones
+ok   the MRA summary renders a sentence  [Across 17 Mississippi Leader in Me schools surveyed in 2024-25, Leadership averaged 79.6 on the MRA ]
+ok   MRA chart c6 draws an svg or explains why
+ok   MRA chart c7 draws an svg or explains why
+ok   MRA chart c10 draws an svg or explains why
+ok   the measure picker offers every MRA measure with data  [37 options, 37 measures with data, 37 in the catalogue]
+ok   the MRA paired test recomputes offline  [page 0.0056 scipy 0.0056 on 22 schools]
+ok   the MRA latest-year school count recomputes offline  [page 17 vs offline 17]
+ok   the MRA same-schools count is every school surveyed more than once  [page 22 vs offline 22]
+ok   choosing the submeasure 'Personal Effectiveness' re-renders the MRA summary  [Across 22 Mississippi Leader in Me schools surveyed in 2024-25, Personal Effectiveness ave]
+ok   the MRA district filter narrows to Vicksburg Warren School District's surveyed schools  [12 of 36 schools]
+ok   the MRA school type filter keeps only schools with that trait  [title1_yes]
+ok   the same-schools switch keeps only schools surveyed at both ends
+ok   no console errors on the MRA tab
+ok   the MRA view downloads one row per school, year and measure  [2,837 rows]
+ok   leaving the MRA tab restores the explore view
+ok   export c1.pptx downloads, opens and carries the chart image  [172,251 bytes]
+ok   the pptx export is named for the state and chart  [MS_Percent_meeting_the_standard_year_by_year_Mississippi_schools.pptx]
+ok   export c1.docx downloads, opens and carries the chart image  [172,630 bytes]
+ok   the docx export is named for the state and chart  [MS_Percent_meeting_the_standard_year_by_year_Mississippi_schools.docx]
+ok   the research pack downloads with its sections  [19,544 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it will come back.]
+ok   the look-alike box reports both counts or says why not  [Schools like Rankin County School District’s: 4 Leader in Me schools and 219 comparison schools look like Rankin County School District’s 24 schools with result]
+ok   the matched switch is disabled while an anchor is set
+ok   no console errors in look-alike mode
+skip look-alike recompute  [look-alike groups have no balanced window]
+ok   the grade filter lists the tested grades
+ok   choosing a grade re-renders the headline and names the grade  [In Mississippi grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 2.4% on Perce]
+ok   whole-school measures switch off while a grade is chosen  [3 whole-school measures in the payload]
+ok   dark mode re-renders without errors
+ok   no horizontal overflow at 900px  [0px]
+ok   no horizontal overflow at 700px  [0px]
+ok   the methods page loads
+ok   no console errors on the methods page
+
+--------------------------------------------------------------------------
+Tier 3 — honesty
+--------------------------------------------------------------------------
+ok   the build declares itself real, not a prototype
+ok   the banner names the Subject Test source
+ok   the banner names the roster source
+ok   the banner names the expiration source
+ok   the methods page owns the 'exit' limitation
+ok   the methods page owns the 'snapshot' limitation
+ok   the methods page owns the 'Title I' limitation
+ok   the methods page owns the 'observational' limitation
+ok   the methods page owns the 'both ends' limitation
+ok   poverty_help tells the reader which measure is on screen and its ceiling
+ok   the methods page names the matching method rather than asserting it
+ok   the level audit is on the methods page
+ok   the subject mapping is on the methods page
+ok   the poverty audit is on the methods page
+ok   the methods page carries the exit-dating box
+ok   the methods page carries the look-alike section
+ok   the undated schools are listed by name in the payload
+
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +6.42 pts (n=30) vs comparison +4.32 pts (n=465), p=0.1451 -> not significant
+
+==========================================================================
+155 of 155 checks pass · 2 skipped
+==========================================================================
+
+$ python3 /home/claude/sdf/Build/states/ms_core_verify.py --work /home/claude/work1/MS
+
+Mississippi's own measures
+--------------------------------------------------------------------------
+ok   the crosswalk reaches nearly every Leader in Me school  [75 of 76]
+ok   the crosswalk reaches most comparison schools  [777 of 816]
+ok   NCES's own id pairs anchor the crosswalk  [879 exact pairs of 879 entries (ccd 879)]
+ok   NCES and the August name join agree where both speak  [794 of 799; 5 read one by one]
+ok   every disagreement is classified, and the Leader in Me ones are roster-district labels NCES and the subject file both contradict  [{'namesake': 3, 'roster_district': 1, 'new_federal_id': 1}]
+ok   no state id is on two schools  [879 entries, 879 schools]
+ok   the Leader in Me schools the crosswalk cannot reach are named on the page
+ok   the methods page says how the join works and audits it
+ok   the 2024-25 growth index, experienced-teacher share and letter grade on the page equal the state's workbook for Leader in Me schools  [56 of 56 Leader in Me schools with one state id]
+ok   the 2024-25 chronic-absence column on the rows is the state's own workbook value  [690 of 690 schools]
+ok   Math growth (MDE): the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 60.72 (n=34) vs offline 60.72 (n=34)]
+ok   Experienced teachers: the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 67.04 (n=34) vs offline 67.04 (n=34)]
+ok   Suspensions kept low: the latest Leader in Me point recomputes from the state's table and the membership file  [2024: payload 31.43 (n=35) vs offline 31.43 (n=35)]
+ok   ACT composite (juniors): the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 15.58 (n=3) vs offline 15.58 (n=3)]
+ok   DOMO's chronic absence is the state's own rate on the crosswalked school-years (an independent check of the join)  [r = 1.0 across 3,447 school-years, 100.0% within a point]
+ok   DOMO's graduation rate is the state's own rate on the crosswalked school-years  [r = 1.0 across 1,325 school-years]
+ok   chronic absence reaches 2024-25 on the rows from the state's report card (DOMO has none that year)  [690 schools]
+ok   no DOMO chronic-absence value was overwritten by the fill  [3,447 of 3,447 school-years keep DOMO's value]
+ok   the fill before 2024-25 only touches school-years DOMO had no value for  [104 of 3,551 school-years came from the report card]
+ok   the closure years are on no Mississippi card  [[2018, 2019, 2022, 2023, 2024, 2025]]
+ok   every card year is a report-card year at or before the core's last year  [[2018, 2019, 2022, 2023, 2024, 2025]]
+ok   the masked 2024-25 suspension column is excluded by name and is on no card point  [[2025]]
+ok   an excluded suspension year carries no suspension value in the pack
+ok   the pack carries 2019-20 (the state's record) while no card does
+ok   the methods page names the suspension mask, the new cut scores and the chronic-absence fill
+ok   the state file each year came from is in the build record  [{'report_card': 7, 'act': 2}]
+ok   the ACT reports' roll-up and summary rows were set aside and the shared spring agrees between reports  [280 roll-ups, 13 summary lines, 228 of 228 agree]
+ok   no ACT value was joined to more than one school, and the unmatched ones are named in the audit  [20 unmatched values]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 4,369 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [208 Leader in Me school-years on the cards]
+ok   no card member sits beyond the core's last year
+ok   Suspensions kept low: the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=35]
+ok   Rated A or B: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
+ok   Math growth (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
+ok   ELA growth (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
+ok   Math growth, lowest 25% (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
+ok   ELA growth, lowest 25% (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
+ok   ACT composite (juniors): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=3]
+ok   College & career ready: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=3]
+ok   Went on to college: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=3]
+ok   Experienced teachers: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
+ok   level measures carry the poverty context line and the growth-index measures do not
+ok   the research pack's per-school Mississippi values are keyed to schools on the page  [5,411 records]
+ok   every school with a state id on the page has it in the pack  [877 of 890]
+ok   look-alike mode names no behavior measure, and the page says why (the suspension mask)
+ok   the August card's eight measures are all still on the page  [10 on the card]
+ok   the pack carries the letter grade, the state's chronic absence and the ACT takers beside the card's measures
+
+ALL MISSISSIPPI CHECKS PASS
