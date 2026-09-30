@@ -1,20 +1,21 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state CO --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/CO --data /home/claude/sdf/Build/work/CO/data --extras co_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state CO --core /home/claude/sdf/Core --out /home/claude/work1/CO --data /home/claude/work1/CO/data --extras co_core_extras
 reading the core for Colorado ...
 [core] subjects: 116,523 school rows kept; dropped 23,875 rows with no school id and 3,505 with an id but no school record
 [core] Leader in Me roster: 554 rows
 [core] comparison schools: 13,892 rows
 [core] MRA surveys: 81 rows
-  subject rows 116,523 · roster rows 554 (62 schools) · comparison rows 13,892 (1726 schools) · MRA surveys 81
+  subject rows added from the state's own file: 8,083 (Colorado 2025-26 CMAS reading and math (Colorado Department of Education))
+  subject rows 124,606 · roster rows 554 (62 schools) · comparison rows 13,892 (1726 schools) · MRA surveys 81
 [core] Leader in Me roster: 56,181 rows
   exits: 52 of 62 roster schools carry an expiration date; 21 past it by more than 30 days (exited), 0 inside the grace window, 31 in the future, 10 undated (7 with a start date)
-  1,788 schools · 164 districts
+  1,788 schools · 178 districts
 applying the cleaning rules ...
-  45,151 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 275 of 558 reviewed
-  no start date: 4 schools · dated exits: 14 (school-years after an exit with rows: 41) · aggregate 'All grades' rows used 168, skipped 104
-  achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 16% of rows (a five-level state whose export carries four columns, usually))
-  proficiency = levels 3 and 4 on 10.8% of rows
+  48,215 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 314 of 620 reviewed
+  no start date: 4 schools · dated exits: 19 (school-years after an exit with rows: 59) · aggregate 'All grades' rows used 168, skipped 104
+  achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 15% of rows (a five-level state whose export carries four columns, usually))
+  proficiency = levels 3 and 4 on 10.4% of rows
 folding in Colorado's own measures (co_core_extras) ...
   state files (resolved by pattern; the log names the file each year came from):
     attendance 2020: 2019-2020_Attendance_SCHOOL_TruancyData.xlsx
@@ -61,56 +62,57 @@ folding in Colorado's own measures (co_core_extras) ...
     set aside: 2020ACCESSGrowthResults_FINAL_2.xlsx: the 2019-20 WIDA ACCESS growth file, a closure year; read for the research pack only
     set aside: 2021CMASGrowthPercentiles-final.xlsx: the 2020-21 CMAS growth file, a closure year; grade-level two-year growth (2019 to 2021) with no school figure, not read
     set aside: 2021WIDAGrowthPercentiles-state_dist_sch_final.xlsx: the 2020-21 WIDA ACCESS growth file, a closure year; read for the research pack only
-    NCES directory: 2,094 federal-to-state id triples from the cache (8 CCD files unchanged)
-    attendance: 13,310 rows from the cache (7 files unchanged)
-    growth: 31,602 rows from the cache (17 files unchanged)
-    plan types: 29,735 rows from the cache (6 files unchanged)
-    framework: 9,251 totals and 36,542 detail rows from the cache (4 files unchanged)
-    matriculation: 18,553 rows from the cache (7 files unchanged)
+    NCES directory: 2,094 federal-to-state id triples for Colorado from 8 CCD files (2016-17 to 2023-24), cached
+    attendance: 13,310 school-years read from 7 workbooks, cached in cache/
+    growth: 33,083 school-test-subject rows read from 17 workbooks, cached in cache/
+    plan types: 29,737 school-years read from 6 workbooks (2010, 2011, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026), cached in cache/
+    framework: 9,251 school-report rows and 36,542 detail rows read from 4 workbooks, cached in cache/
+    matriculation: 18,553 school-class-category rows read from 7 workbooks, cached in cache/
   attendance: 13,310 school-years, 2019-20 to 2025-26; 101 rates at or above 99.9%, 7 of exactly zero and 331 truancy rates of zero with no unexcused day read as unreported
-  growth: 21,509 school-test-years, 2019-20 to 2025-26; 9,795 masked cells; tests CMAS, PSAT/SAT, WIDA ACCESS
-  plan types: 29,735 school-years, 2010, 2011, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
+  growth: 22,990 school-test-years, 2019-20 to 2025-26; 10,648 masked cells; tests CMAS, PSAT/SAT, WIDA ACCESS
+  plan types: 29,737 school-years, 2010, 2011, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
   framework: 9,251 school-report rows 2021-22 to 2024-25; matriculation: 3,597 school-classes, classes of 2019 to 2025
   crosswalk: NCES's district and school codes for each federal id, audited against a name-within-district join and the state files' own names
     1,778 of 1,788 schools carry a state id (1,778 from NCES's directory, 0 by name within district); Leader in Me 62 of 62, comparison 1,716 of 1,726; 1,751 appear in at least one Colorado file
-    audit against the name-within-district join: both speak for 1,749 schools and agree on 1,749; the state files' own name agrees with DOMO's on 1,745 of 1,751 crosswalked ids; 0 triples re-pointed to a folded id; 1 shared state ids settled; 0 schools carry more than one state id
+    audit against the name-within-district join: both speak for 1,749 schools and agree on 1,749; the state files' own name agrees with DOMO's on 1,741 of 1,751 crosswalked ids; 0 triples re-pointed to a folded id; 1 shared state ids settled; 0 schools carry more than one state id
     reached but in no Colorado file: Stansberry Elementary School (Thompson School District R-2j)
   value check of the join (a value the map was not built from): DOMO's chronic absence against the state's attendance rate on 2,953 school-years (2024, 2025): r = -0.923, Spearman -0.974
   DOMO's graduation rate against the framework's four-year rate: 2021-22: 100.0% within half a point of the file labelled 2022-23 (n 231), 15.2% of the same-labelled file; 2022-23: 100.0% within half a point of the file labelled 2023-24 (n 263), 10.9% of the same-labelled file; 2023-24: 99.3% within half a point of the file labelled 2024-25 (n 294), 14.3% of the same-labelled file; 2024-25: -% within half a point of the file labelled 2025-26 (n 0), 12.8% of the same-labelled file
   the matriculation file against the framework's own matriculation on the same class: 100.0% within half a point on 1,458 school-classes; growth medians against the framework's on single-level schools: mgp_ela 4292/4292 exact, mgp_math 4264/4264 exact, mgp_sat_ela 1393/1393 exact, mgp_sat_math 1436/1436 exact
   graduation fill (only where DOMO has none, on the class's own year): class of 2022 from the 2022-23 file, 94 school-years DOMO lacks; class of 2023 from the 2023-24 file, 55 school-years DOMO lacks; class of 2024 from the 2024-25 file, 73 school-years DOMO lacks
   chronic absence: DOMO carries it for 2023-24, 2024-25; Colorado's own chronic absenteeism file covers 2025-26 only, no school-year in common, so nothing is filled and nothing overwritten
-  rows gain: attendance_rate on 8,220 school-year-bands (47 Leader in Me schools ever), truancy_rate on 8,171 school-year-bands (47 Leader in Me schools ever), mgp on 7,803 school-year-bands (46 Leader in Me schools ever), spf_pct_points on 15,509 school-year-bands (54 Leader in Me schools ever); left off the rows for thin Leader in Me coverage: matric_rate (2); 0 school-years had no band to sit in
+  rows gain: attendance_rate on 10,272 school-year-bands (50 Leader in Me schools ever), truancy_rate on 10,213 school-year-bands (50 Leader in Me schools ever), mgp on 9,813 school-year-bands (49 Leader in Me schools ever), spf_pct_points on 15,572 school-year-bands (54 Leader in Me schools ever); left off the rows for thin Leader in Me coverage: matric_rate (2); 0 school-years had no band to sit in
   card: 9 Colorado measures, each group on each year's own membership (thin, left off: matric_rate, matric_4yr)
-    card line attendance_rate: 4 Leader in Me points, latest 2025 n=39 (92.67)
-    card line truancy_rate: 4 Leader in Me points, latest 2025 n=39 (2.3)
-    card line mgp_ela: 4 Leader in Me points, latest 2025 n=38 (47.79)
-    card line mgp_math: 4 Leader in Me points, latest 2025 n=38 (47.51)
-    card line mgp_elp: 4 Leader in Me points, latest 2025 n=17 (47.15)
+    card line attendance_rate: 5 Leader in Me points, latest 2026 n=37 (92.81)
+    card line truancy_rate: 5 Leader in Me points, latest 2026 n=37 (1.93)
+    card line mgp_ela: 5 Leader in Me points, latest 2026 n=36 (50.07)
+    card line mgp_math: 5 Leader in Me points, latest 2026 n=36 (48.33)
+    card line mgp_elp: 5 Leader in Me points, latest 2026 n=11 (49.77)
     card line spf_pct_points: 8 Leader in Me points, latest 2025 n=39 (59.93)
     card line spf_performance: 8 Leader in Me points, latest 2025 n=39 (74.36)
     card line spf_ach_pct: 4 Leader in Me points, latest 2025 n=39 (61.12)
     card line spf_gro_pct: 4 Leader in Me points, latest 2025 n=39 (58.34)
-  per-school Colorado records for the pack: 18,148 (48 columns)
-  Colorado's measures on 16,073 school-year-bands: 13,821 joined to existing rows, 2,252 school-year-bands added with no test rows of their own
+  per-school Colorado records for the pack: 18,159 (48 columns)
+  Colorado's measures on 18,161 school-year-bands: 15,389 joined to existing rows, 2,772 school-year-bands added with no test rows of their own
   core measures filled from Colorado's own files where DOMO had none: grad_rate 439 rows
-  school type from NCES: Title I on 1,695 schools (634 yes), charter 250, magnet 24, alternative 35; Title I published 2017-2022, carried forward after
+  school type from NCES: Title I on 1,713 schools (642 yes), charter 253, magnet 25, alternative 36; Title I published 2017-2022, carried forward after
   funders: 27 Colorado schools carry a funding source (26 on the page; Kern 7, 6 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 42  by band {'Primary': {'pairs': 32, 'unmatched': 0}, 'Secondary': {'pairs': 10, 'unmatched': 1}}
   MRA: 76 surveys · 29 schools · 236 sentinel values · 2 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 32, 'comp_n': 1262, 'lim_change': 1.67, 'comp_change': 1.51, 'p': 0.902} · without the 7 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 28, 'comp_n': 1262, 'lim_change': 1.24, 'comp_change': 1.51, 'p': 0.846}
-  roster: 34 counted, 21 exited, 3 not counted yet, 4 not counted
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 30, 'comp_n': 1092, 'lim_change': 3.5, 'comp_change': 2.45, 'p': 0.561} · without the 7 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 26, 'comp_n': 1092, 'lim_change': 3.43, 'comp_change': 2.45, 'p': 0.637}
+  roster: 37 counted, 21 exited, 0 not counted yet, 4 not counted
+best-performing schools: 8 of 39 counted schools, 60 measures in 17 outcomes
 
-wrote co_payload.json  (30.7 MB, 47,403 rows) · page kind full (32 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote co_payload.json  (32.5 MB, 50,987 rows) · page kind full (30 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '5d61da568208'}
 
 $ python3 build2.py co_payload.json CO_Dashboard.html CO_Methods.html
-payload 30.7 MB -> 2.11 MB gzip
-CO_Dashboard.html: 3031 KB
-CO_Methods.html: 54 KB
+payload 32.5 MB -> 2.22 MB gzip
+CO_Dashboard.html: 3198 KB
+CO_Methods.html: 64 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state CO --work /home/claude/sdf/Build/work/CO
+$ python3 /home/claude/sdf/Build/verify_core.py --state CO --work /home/claude/work1/CO
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -157,7 +159,7 @@ ok   exited schools keep their true Leader in Me years  [21 exited schools with 
 ok   the exit counts on the methods page match the rule  [21 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 34, 'exited': 21, 'not counted': 4, 'not counted yet': 3}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 37, 'exited': 21, 'not counted': 4}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -165,17 +167,17 @@ ok   the poverty share rides on most rows for the look-alike caliper  [99%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [859 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [893 schools]
 ok   the grade table carries no school-year the rules dropped
-ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 16% of rows (a five-level state whose export carries four columns, usually)]
+ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 15% of rows (a five-level state whose export carries four columns, usually)]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [747 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [455 schools]
-ok   the school count never exceeds the band-slice count  [1294 schools vs 1543 band slices]
+ok   combined-grade schools appear in both bands  [464 schools]
+ok   the school count never exceeds the band-slice count  [1122 schools vs 1360 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -195,7 +197,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [1.4s]
+ok   load time is workable  [0.7s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -205,14 +207,14 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [9 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.9022 scipy 0.9022 · window 2022-2025 · LiM n=32 mean +1.67 · comparison n=1262 mean +1.51]
-ok   the headline counts schools, not band slices  [page 1294 vs offline 1294 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [32 vs 32]
-ok   the district filter re-renders the headline  [In Douglas County School District No. Re 1 schools, between 2021-22 and 2024-25, Leader in]
+ok   the headline p recomputes offline  [page 0.5602 scipy 0.5602 · window 2022-2026 · LiM n=30 mean +3.50 · comparison n=1092 mean +2.45]
+ok   the headline counts schools, not band slices  [page 1122 vs offline 1122 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [30 vs 30]
+ok   the district filter re-renders the headline  [In Douglas County School District No. Re 1 schools, between 2021-22 and 2025-26, Leader in]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [632 of 1733 schools; In Colorado Title I schools, between 2021-22 and 2024-25, Leader in Me schools r]
+ok   choosing 'Title I schools' narrows the view and names it  [640 of 1751 schools; In Colorado Title I schools, between 2021-22 and 2025-26, Leader in Me schools r]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Colorado schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025-26]
 ok   Title I status is known for most schools on the page  [97.8%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
@@ -225,12 +227,12 @@ ok   measure 'attendance_rate' either draws or says why
 ok   measure 'truancy_rate' either draws or says why
 ok   measure 'mgp' either draws or says why
 ok   measure 'spf_pct_points' either draws or says why
-ok   the matched toggle re-renders the headline  [In Colorado schools (matched to similar schools only), between 2021-22 and 2024-25, Leader]
-ok   the matched view shrinks or equals the Leader in Me count  [26 matched]
+ok   the matched toggle re-renders the headline  [In Colorado schools (matched to similar schools only), between 2021-22 and 2025-26, Leader]
+ok   the matched view shrinks or equals the Leader in Me count  [22 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Douglas County School District No. Re 1 generates cards or says there is nothing to report  [9 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.902164907467762, 'n1': 32, 'n2': 1262}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5601575090593618, 'n1': 30, 'n2': 1092}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -249,22 +251,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [2,322 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [169,825 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [180,298 bytes]
 ok   the pptx export is named for the state and chart  [CO_Percent_meeting_the_standard_year_by_year_Colorado_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [170,004 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [180,848 bytes]
 ok   the docx export is named for the state and chart  [CO_Percent_meeting_the_standard_year_by_year_Colorado_schools.docx]
-ok   the research pack downloads with its sections  [40,675 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [42,057 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 ok   the pack's Leader in Me count for the district is the page's  [6 vs 6]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Colorado schools like School District No. 1’s, between 2021-22 and 2024-25, Leader in Me schools rose 1.7% on Percent]
-ok   the look-alike box reports both counts or says why not  [Schools like School District No. 1’s: 13 Leader in Me schools and 452 comparison schools look like School District No. 1’s 171 schools with results in these yea]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Colorado schools like School District No. 1’s, between 2021-22 and 2025-26, Leader in Me schools rose 4.5% on Percent]
+ok   the look-alike box reports both counts or says why not  [Schools like School District No. 1’s: 14 Leader in Me schools and 452 comparison schools look like School District No. 1’s 174 schools with results in these yea]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.9469]
+ok   the look-alike headline p recomputes offline  [p=0.5578]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [195 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [196 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Colorado grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 0.2% on Percent ]
+ok   choosing a grade re-renders the headline and names the grade  [In Colorado grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 8.0% on Percent ]
 ok   whole-school measures switch off while a grade is chosen  [7 whole-school measures in the payload]
 ok   dark mode re-renders without errors
 ok   no horizontal overflow at 900px  [0px]
@@ -293,13 +295,13 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +1.67 pts (n=32) vs comparison +1.51 pts (n=1262), p=0.9022 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +3.50 pts (n=30) vs comparison +2.45 pts (n=1092), p=0.5602 -> not significant
 
 ==========================================================================
 164 of 164 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/co_core_verify.py --work /home/claude/sdf/Build/work/CO
+$ python3 /home/claude/sdf/Build/states/co_core_verify.py --work /home/claude/work1/CO
 
 Colorado's own measures
 --------------------------------------------------------------------------
@@ -307,86 +309,93 @@ ok   the crosswalk reaches nearly every Leader in Me school  [62 of 62]
 ok   the crosswalk reaches most comparison schools  [1,716 of 1,726]
 ok   NCES's own id pairs anchor the crosswalk  [1,778 pairs for 1,778 of 1,788 schools]
 ok   the name-within-district join (the second way) agrees with NCES on nearly every school both speak for  [1,749 of 1,749; 0 read one by one]
-ok   the state files' own school names agree with DOMO's on nearly every crosswalked id  [1,745 of 1,751; 6 read one by one]
+ok   the state files' own school names agree with DOMO's on nearly every crosswalked id  [1,741 of 1,751; 10 read one by one]
 ok   DOMO's own chronic absence tracks the state's attendance rate through the crosswalk (an independent check of the join)  [r = -0.923 on 2,953 school-years, Spearman -0.974]
 ok   no state id is on two schools  [1,778 pairs, 1,778 schools]
 ok   every state id has Colorado's four-digit district and school form
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page
 ok   the join note on the card carries the reach
-ok   attendance 2024-25 (re-read from the xlsx): the pack's attendance_rate is the state file's own value through the crosswalk  [1614 of 1614 agree (need 800); 52 Leader in Me schools among them]
-ok   truancy 2024-25 (re-read from the xlsx): the pack's truancy_rate is the state file's own value through the crosswalk  [1607 of 1607 agree (need 800); 52 Leader in Me schools among them]
-ok   attendance 2024-25: the 14 rates at or above 99.9% or under 20% in the xlsx carry no attendance value in the pack  [5 of them on the page]
-ok   truancy 2024-25: a zero rate with no unexcused day recorded carries no truancy value in the pack  [12 of them on the page]
-ok   attendance_rate 2024-25: the rows' measure equals the pack's attendance_rate on every band  [2015 of 2015]
-ok   truancy_rate 2024-25: the rows' measure equals the pack's truancy_rate on every band  [2007 of 2007]
-ok   attendance 2024-25: the published rate rebuilds from days attended over days possible on every row  [1895 of 1895]
+ok   attendance 2025-26 (re-read from the xlsx): the pack's attendance_rate is the state file's own value through the crosswalk  [1597 of 1597 agree (need 800); 55 Leader in Me schools among them]
+ok   truancy 2025-26 (re-read from the xlsx): the pack's truancy_rate is the state file's own value through the crosswalk  [1588 of 1588 agree (need 800); 55 Leader in Me schools among them]
+ok   attendance 2025-26: the 12 rates at or above 99.9% or under 20% in the xlsx carry no attendance value in the pack  [5 of them on the page]
+ok   truancy 2025-26: a zero rate with no unexcused day recorded carries no truancy value in the pack  [14 of them on the page]
+ok   attendance_rate 2025-26: the rows' measure equals the pack's attendance_rate on every band  [1996 of 1996]
+ok   truancy_rate 2025-26: the rows' measure equals the pack's truancy_rate on every band  [1986 of 1986]
+ok   attendance 2025-26: the published rate rebuilds from days attended over days possible on every row  [1887 of 1887]
 ok   no attendance rate in the pack sits at the ceiling or under the floor  [min 31.10, max 99.80]
-ok   CMAS growth 2024-25 (re-read from the xlsx, English language arts): the pack's mgp_ela is the state file's own value through the crosswalk  [1328 of 1328 agree (need 800); 51 Leader in Me schools among them]
-ok   CMAS growth 2024-25 (re-read from the xlsx, mathematics): the pack's mgp_math is the state file's own value through the crosswalk  [1329 of 1329 agree (need 800); 51 Leader in Me schools among them]
-ok   CMAS growth 2024-25: a masked cell (n < 20) carries no median in the pack  [39 masked schools on the page]
-ok   CMAS growth 2024-25: the combined figure is the mean of the two subject medians, and a school with one subject masked has none  [1328 of 1328; 1 one-subject schools with no combined figure]
-ok   mgp 2024-25: the rows' measure equals the pack's mgp_cmas on every band (Primary only)  [1003 of 1003]
-ok   mgp 2024-25: the secondary band carries the mean of the tests the school's secondary grades take  [971 of 971]
-ok   plan types 2025 (re-read from the xlsx, the percent of points where a plan type was issued): the pack's spf_pct_points is the state file's own value through the crosswalk  [1543 of 1543 agree (need 1200); 52 Leader in Me schools among them]
+ok   CMAS growth 2025-26 (re-read from the xlsx, English language arts): the pack's mgp_ela is the state file's own value through the crosswalk  [1323 of 1323 agree (need 800); 54 Leader in Me schools among them]
+ok   CMAS growth 2025-26 (re-read from the xlsx, mathematics): the pack's mgp_math is the state file's own value through the crosswalk  [1323 of 1323 agree (need 800); 54 Leader in Me schools among them]
+ok   CMAS growth 2025-26: a masked cell (n < 20) carries no median in the pack  [33 masked schools on the page]
+ok   CMAS growth 2025-26: the combined figure is the mean of the two subject medians, and a school with one subject masked has none  [1323 of 1323; 0 one-subject schools with no combined figure]
+ok   mgp 2025-26: the rows' measure equals the pack's mgp_cmas on every band (Primary only)  [991 of 991]
+ok   mgp 2025-26: the secondary band carries the mean of the tests the school's secondary grades take  [969 of 969]
+ok   plan types 2025 (re-read from the xlsx, the percent of points where a plan type was issued): the pack's spf_pct_points is the state file's own value through the crosswalk  [1544 of 1544 agree (need 1200); 55 Leader in Me schools among them]
 ok   plan types 2025: Alternative Education Campuses and schools without a plan type carry no percent of points in the pack  [71 AECs and 0 unrated schools on the page]
-ok   plan types 2025 (re-read from the xlsx, on a Performance plan): the pack's spf_performance is the state file's own value through the crosswalk  [1543 of 1543 agree (need 1200); 52 Leader in Me schools among them]
-ok   spf_pct_points 2024-25: the rows' measure equals the pack's spf_pct_points on every band  [1935 of 1935]
-ok   framework 2024-25 (re-read from the xlsx, the achievement indicator's percent of points on the official report): the pack's spf_ach_pct is the state file's own value through the crosswalk  [1613 of 1614 agree (need 1200); 52 Leader in Me schools among them]
+ok   plan types 2025 (re-read from the xlsx, on a Performance plan): the pack's spf_performance is the state file's own value through the crosswalk  [1544 of 1544 agree (need 1200); 55 Leader in Me schools among them]
+ok   spf_pct_points 2024-25: the rows' measure equals the pack's spf_pct_points on every band  [1944 of 1944]
+ok   framework 2024-25 (re-read from the xlsx, the achievement indicator's percent of points on the official report): the pack's spf_ach_pct is the state file's own value through the crosswalk  [1614 of 1615 agree (need 1200); 55 Leader in Me schools among them]
 ok   matriculation class of 2025 (re-read from the xlsx, the overall rate): the pack's matric_rate is the state file's own value through the crosswalk  [369 of 369 agree (need 300); 2 Leader in Me schools among them]
 ok   matriculation class of 2025: a cohort the state masks (n < 16) carries no rate in the pack  [43 masked schools on the page]
 ok   the matriculation rate is on the secondary band only, or off the rows for thin coverage
-ok   the closure years are on no Colorado card  [[2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
-ok   attendance_rate sits in no closure year and no year beyond the core's on the rows  [[2022, 2023, 2024, 2025]]
-ok   truancy_rate sits in no closure year and no year beyond the core's on the rows  [[2022, 2023, 2024, 2025]]
-ok   mgp sits in no closure year and no year beyond the core's on the rows  [[2022, 2023, 2024, 2025]]
+ok   the closure years are on no Colorado card  [[2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   attendance_rate sits in no closure year and no year beyond the core's on the rows  [[2022, 2023, 2024, 2025, 2026]]
+ok   truancy_rate sits in no closure year and no year beyond the core's on the rows  [[2022, 2023, 2024, 2025, 2026]]
+ok   mgp sits in no closure year and no year beyond the core's on the rows  [[2022, 2023, 2024, 2025, 2026]]
 ok   spf_pct_points sits in no closure year and no year beyond the core's on the rows  [[2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   the framework's percent of points carries no rolled-over, preliminary or no-rating year (2015, 2020, 2021, 2026), and does carry 2016-2019 and 2022-2025  [[2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
-ok   the 2025-26 files sit in the research pack only (attendance carried for 2026 in the pack, on no row, on no card)  [1596 pack records for 2025-26]
+ok   the 2025-26 attendance figures are on the rows and the card now that the page's test results reach 2025-26  [1579 schools on the 2025-26 rows; card years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
 ok   the growth measure carries no 2020-21 CMAS value (the grade-level two-year file is not read)
 ok   every exclusion is counted on the cleaning audit
 ok   DOMO's own 2024-25 chronic absence was never overwritten by the state's files  [1469 rows identical to the DOMO export]
-ok   no chronic-absence value on the rows comes from anywhere but DOMO (Colorado's 2025-26 rate shares no school-year with DOMO's)  [0 school-years not in the DOMO export]
+ok   no chronic-absence value on the rows comes from anywhere but DOMO (Colorado's 2025-26 rate shares no school-year with DOMO's)  [0 school-years not in the DOMO export; state [2026], DOMO to 2024-25]
 ok   the methods page says chronic absence is neither filled nor overwritten from Colorado's files
 ok   the graduation fill never overwrote a DOMO value  [1108 of 1,108 DOMO school-years unchanged]
 ok   the graduation fill landed on every secondary row DOMO lacked, with the framework's own four-year rate  [221 of 221 filled school-years with a secondary row (1 had no row to land on)]
 ok   every graduation rate on the rows is DOMO's own or a named fill  [0 stray school-years]
 ok   the fill's class-year convention was established against DOMO on the same school-years and the methods page says so  [file a class behind in [2022, 2023, 2024]]
 ok   the fill is counted on the cleaning audit
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 12,831 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [258 Leader in Me school-years on the cards]
-ok   the card membership ends at the core's last year (the 2025-26 files stay in the pack)  [2025]
-ok   Attendance rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 92.67 (n=39) vs offline 92.67 (n=39)]
-ok   Truancy rate (unexcused absence): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 2.3 (n=39) vs offline 2.3 (n=39)]
-ok   Median growth percentile, English language arts (CMAS, grades 4-8): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 47.79 (n=38) vs offline 47.79 (n=38)]
-ok   Median growth percentile, mathematics (CMAS, grades 4-8): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 47.51 (n=38) vs offline 47.51 (n=38)]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 14,422 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [297 Leader in Me school-years on the cards]
+ok   the card membership ends at the core's last year  [2026]
+ok   Attendance rate: the latest Leader in Me point recomputes from the long table and the membership file  [2026: payload 92.81 (n=37) vs offline 92.81 (n=37)]
+ok   Truancy rate (unexcused absence): the latest Leader in Me point recomputes from the long table and the membership file  [2026: payload 1.93 (n=37) vs offline 1.93 (n=37)]
+ok   Median growth percentile, English language arts (CMAS, grades 4-8): the latest Leader in Me point recomputes from the long table and the membership file  [2026: payload 50.07 (n=36) vs offline 50.07 (n=36)]
+ok   Median growth percentile, mathematics (CMAS, grades 4-8): the latest Leader in Me point recomputes from the long table and the membership file  [2026: payload 48.33 (n=36) vs offline 48.33 (n=36)]
 ok   School Performance Framework: percent of points earned: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 59.93 (n=39) vs offline 59.93 (n=39)]
 ok   Schools on a Performance plan: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 74.36 (n=39) vs offline 74.36 (n=39)]
 ok   Framework achievement indicator: percent of points: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 61.12 (n=39) vs offline 61.12 (n=39)]
 ok   Framework growth indicator: percent of points: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 58.34 (n=39) vs offline 58.34 (n=39)]
-ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=39]
-ok   Truancy rate (unexcused absence): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=39]
-ok   Median growth percentile, English language arts (CMAS, grades 4-8): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=38]
-ok   Median growth percentile, mathematics (CMAS, grades 4-8): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=38]
-ok   Median growth percentile, English language proficiency (WIDA ACCESS): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=17]
+ok   Attendance rate: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=37]
+ok   Truancy rate (unexcused absence): the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=37]
+ok   Median growth percentile, English language arts (CMAS, grades 4-8): the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=36]
+ok   Median growth percentile, mathematics (CMAS, grades 4-8): the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=36]
+ok   Median growth percentile, English language proficiency (WIDA ACCESS): the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=11]
 ok   School Performance Framework: percent of points earned: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=39]
 ok   Schools on a Performance plan: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=39]
 ok   Framework achievement indicator: percent of points: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=39]
 ok   Framework growth indicator: percent of points: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=39]
 ok   every card measure carries the poverty context line
 ok   the card carries a manageable set, and the ones the files support  [9 on the card]
-ok   the attendance card's latest Leader in Me point counts roughly the schools the headline counts  [card n=39, headline 32]
+ok   the attendance card's latest Leader in Me point counts roughly the schools the headline counts  [card n=37, headline 30]
 ok   the framework line reaches back to 2015-16 on the Leader in Me side  [from 2016]
-ok   attendance_rate is a measure in the rows with Leader in Me school-years behind it  [150 Leader in Me school-years]
-ok   truancy_rate is a measure in the rows with Leader in Me school-years behind it  [150 Leader in Me school-years]
-ok   mgp is a measure in the rows with Leader in Me school-years behind it  [145 Leader in Me school-years]
+ok   attendance_rate is a measure in the rows with Leader in Me school-years behind it  [187 Leader in Me school-years]
+ok   truancy_rate is a measure in the rows with Leader in Me school-years behind it  [187 Leader in Me school-years]
+ok   mgp is a measure in the rows with Leader in Me school-years behind it  [182 Leader in Me school-years]
 ok   spf_pct_points is a measure in the rows with Leader in Me school-years behind it  [247 Leader in Me school-years]
-ok   the research pack's per-school Colorado values are keyed to schools on the page  [18,148 records]
+ok   the research pack's per-school Colorado values are keyed to schools on the page  [18,159 records]
 ok   every pack column carries a label  [48 columns]
-ok   every school with a state id on the page has it in the pack  [1,723 of 1,733]
+ok   every school with a state id on the page has it in the pack  [1,724 of 1,751]
 ok   look-alike mode names the truancy rate as the behavior measure, and the methods page says what it is
 ok   the methods page carries the join, attendance, growth, framework, graduation, matriculation and measures notes
 ok   the banner names the four Colorado families
 ok   the sources list names CDE's five files and the NCES directory
 ok   the matriculation widening is named on the card or the methods page
+ok   2025-26 rows are in the working subject file, only 2025-26 was added, and the page runs to it  [8,083 rows in 2026 of 8,083 prepared; page runs to 2026]
+ok   the 2025-26 rows are grades 3-8 English language arts and math in DOMO's own Colorado subject names (no Spanish language arts)  [['English Language Arts', 'Math']]
+ok   2025-26 is in the combined reading-and-math figure (same test and cut scores; nothing kept out by name)
+ok   every 2025-26 row is CDE's own percent met or exceeded expectations, re-read from the workbook through the page's crosswalk  [8,039 of 8,039 rows on the page's schools agree (32 not placed by the page's crosswalk; 12 rows for ids not on the page)]
+ok   no 2025-26 row CDE masks on proficiency is on the page  [0 masked]
+ok   the lowest level on those rows is CDE's own Did Not Yet Meet Expectations share  [5,328 of 5,328]
+ok   the Leader in Me schools with 2025-26 results are enough for a tested page  [37 Leader in Me schools in 2025-26]
 
 ALL COLORADO CHECKS PASS

@@ -2,54 +2,54 @@
  "state": "CO",
  "name": "Colorado",
  "folder": "colorado",
- "built": "2026-09-08",
- "seconds": 147,
+ "built": "2026-09-30",
+ "seconds": 736,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 32,
- "schools": 1733,
+ "lim_headline_n": 30,
+ "schools": 1751,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 62,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/CO/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/CO/data/Subjects_Tests_FINAL (8).csv",
    "rows": 116523
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/CO/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/CO/data/LIM Schools (Current_Active) (11).csv",
    "rows": 554
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/CO/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/CO/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 13892
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/CO/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/CO/data/All MRA Surveys.csv",
    "rows": 81
   }
  },
@@ -59,33 +59,37 @@
   "PULL-MANIFEST_CO.csv",
   "Performance Framework_CO/",
   "Postsecondary Enrollment_CO/",
-  "School Grade_CO/"
+  "Proficiency_CO_2026/",
+  "School Grade_CO/",
+  "co_2026_subjects.csv",
+  "co_2026_subjects_audit.json"
  ],
  "extras_module": "co_core_extras",
  "verified": true,
- "dashboard_bytes": 3138159,
+ "dashboard_bytes": 3274619,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
-  "status": "complete",
+  "year": 2026,
+  "label": "2025-26",
+  "status": "partial",
   "subjects": [
    "ELA",
-   "Math",
+   "Math"
+  ],
+  "missing": [
    "Science"
   ],
-  "missing": [],
-  "rows_share_of_prior": 0.99,
-  "prior_year": 2024
+  "rows_share_of_prior": 0.58,
+  "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 111875,
-   "levels 3 and 4": 10.8,
-   "levels 2, 3 and 4": 1.8,
+   "rows": 119958,
+   "levels 3 and 4": 10.4,
+   "levels 2, 3 and 4": 1.9,
    "level 4 alone": 0.1,
    "100 minus level 1": 0.1,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 8.8,
+   "levels_sum_to_100_share": 8.2,
    "structure": "no combination of the reported levels reproduces the proficiency rate",
    "n_levels": null,
    "proficient_from": null,
@@ -95,9 +99,9 @@
    "years_out": null,
    "cells_out": null,
    "latest_year_ok": null,
-   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 16% of rows (a five-level state whose export carries four columns, usually)",
+   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 15% of rows (a five-level state whose export carries four columns, usually)",
    "combination_shares": {
-    "levels 3 and 4": 15.8,
+    "levels 3 and 4": 15.1,
     "levels 2, 3 and 4": 3.1,
     "levels 1 and 2 (1 the top)": 2.1,
     "levels 1, 2 and 3 (1 the top)": 2.0
@@ -125,21 +129,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 32,
-    "comp_n": 1262,
-    "lim_change": 1.67,
-    "comp_change": 1.51,
-    "p": 0.902
+    "y1": 2026,
+    "lim_n": 30,
+    "comp_n": 1092,
+    "lim_change": 3.5,
+    "comp_change": 2.45,
+    "p": 0.561
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 28,
-    "comp_n": 1262,
-    "lim_change": 1.24,
-    "comp_change": 1.51,
-    "p": 0.846
+    "y1": 2026,
+    "lim_n": 26,
+    "comp_n": 1092,
+    "lim_change": 3.43,
+    "comp_change": 2.45,
+    "p": 0.637
    },
    "schools": 7
   },
@@ -147,14 +151,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 6,
-  "in_the_process": 6,
+  "qualified": 8,
+  "in_the_process": 8,
   "lapsed_on_the_list": 0,
-  "reviewed": 36,
+  "reviewed": 39,
   "measures": 60,
-  "outcomes": 18,
-  "improved_every_year": 1,
+  "outcomes": 17,
+  "improved_every_year": 0,
   "lapsed_longer_ago": 19
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-30"
 }
