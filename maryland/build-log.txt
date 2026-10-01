@@ -5,75 +5,22 @@ reading the core for Maryland ...
 [core] Leader in Me roster: 2,066 rows
 [core] comparison schools: 10,350 rows
 [core] MRA surveys: 264 rows
-  subject rows added from the state's own file: 7,186 (Maryland 2025-26 MCAP reading and math (Maryland State Department of Education))
-  subject rows 97,418 · roster rows 2,066 (220 schools) · comparison rows 10,350 (1161 schools) · MRA surveys 264
+  newest-year like-for-like: 3 grade-test pairs not in the state's newest file; 0 rows at 0 schools left out of that year
+  subject rows added from the state's own file: 8,179 (Maryland 2025-26 MCAP reading and math (Maryland State Department of Education))
+  subject rows 98,411 · roster rows 2,066 (220 schools) · comparison rows 10,350 (1161 schools) · MRA surveys 264
   identity: Jones Lane Elementary (Gaithersburg): 240048000503 -> 240048010503
   identity: S. Christa McAuliffe Elementary (Germantown): 240048000502 -> 240048010502
 [core] Leader in Me roster: 56,181 rows
   exits: 159 of 220 roster schools carry an expiration date; 151 past it by more than 30 days (exited), 1 inside the grace window, 7 in the future, 61 undated (44 with a start date)
   1,379 schools · 25 districts
 applying the cleaning rules ...
-  36,414 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  37,029 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
   Leader in Me school-years counted: 435 of 2200 reviewed
-  no start date: 20 schools · dated exits: 148 (school-years after an exit with rows: 357) · aggregate 'All grades' rows used 0, skipped 0
-  achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 53% of rows (a five-level state whose export carries four columns, usually))
-  proficiency = levels 3 and 4 on 52.5% of rows
+  no start date: 20 schools · dated exits: 148 (school-years after an exit with rows: 377) · aggregate 'All grades' rows used 0, skipped 0
+  achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 54% of rows (a five-level state whose export carries four columns, usually))
+  proficiency = levels 3 and 4 on 52.9% of rows
 folding in Maryland's own measures (md_core_extras) ...
   state files (resolved by name; every MSDE file labels itself with the school year's end, which the pull manifest confirms):
-    unpacked Attendance_2015.zip: Attendance_2015.csv
-    unpacked Attendance_2016.zip: Attendance_2016.csv
-    unpacked Attendance_2017.zip: Attendance_2017.csv
-    unpacked Attendance_2018.zip: Attendance_2018.csv
-    unpacked Attendance_2019.zip: Attendance_2019.csv
-    unpacked Attendance_2020.zip: Attendance_2020.csv
-    unpacked Attendance_2021.zip: Attendance_2021.csv
-    unpacked Attendance_2022.zip: Attendance_2022.csv
-    unpacked Attendance_2023.zip: Attendance_2023.csv
-    unpacked Attendance_2024.zip: Attendance_2024.csv
-    unpacked Attendance_2025.zip: Attendance_2025.csv
-    unpacked College_Readiness_2016.zip: ACT_Graduates_2016.csv, AP_Graduates_2016.csv, SAT_Graduates_2016.csv
-    unpacked College_Readiness_2017.zip: ACT_Graduates_2017.csv, AP_Graduates_2017.csv, SAT_Graduates_2017.csv
-    unpacked College_Readiness_2018.zip: ACT_Graduates_2018.csv, AP_Graduates_2018.csv, SAT_Graduates_2018.csv
-    unpacked College_Readiness_2019.zip: ACT_Graduates_2019.csv, AP_Graduates_2019.csv, SAT_Graduates_2019.csv
-    unpacked College_Readiness_2020.zip: ACT_Graduates_2020.csv, AP_Graduates_2020.csv, SAT_Graduates_2020.csv
-    unpacked College_Readiness_2021.zip: ACT_Graduates_2021.csv, AP_Graduates_2021.csv, SAT_Graduates_2021.csv
-    unpacked College_Readiness_2022.zip: ACT_Graduates_2022.csv, AP_Graduates_2022.csv, SAT_Graduates_2022.csv
-    unpacked College_Readiness_2023.zip: ACT_Graduates_2023.csv, AP_Graduates_2023.csv, SAT_Graduates_2023.csv
-    unpacked College_Readiness_2024.zip: ACT_Graduates_2024.csv, AP_Graduates_2024.csv, SAT_Graduates_2024.csv
-    unpacked College_Readiness_2025.zip: ACT_Graduates_2025.csv, AP_Graduates_2025.csv, SAT_Graduates_2025.csv
-    unpacked 2022_School_Survey_Educator_Results.zip: 2022_School_Survey_Educator_Results.csv
-    unpacked 2022_School_Survey_Student_Results.zip: 2022_School_Survey_Student_Results.csv
-    unpacked 2023_School_Survey_Educator_Results.zip: 2023_School_Survey_Educator_Results.csv
-    unpacked 2023_School_Survey_Student_Results.zip: 2023_School_Survey_Student_Results.csv
-    unpacked 2024_School_Survey_Educator_Results.zip: 2024_School_Survey_Educator_Results.csv
-    unpacked 2024_School_Survey_Student_Results.zip: 2024_School_Survey_Student_Results.csv
-    unpacked 2025_School_Survey_Educator_Results.zip: 2025_School_Survey_Educator_Results.csv
-    unpacked 2025_School_Survey_Student_Results.zip: 2025_School_Survey_Student_Results.csv
-    unpacked Nationwide-College-Enrollment-2023.zip: Nationwide-College-Enrollment-2023.csv
-    unpacked Nationwide-College-Enrollment-2024.zip: Nationwide-College-Enrollment-2024.csv
-    unpacked Nationwide_College_Enrollment_2015.zip: Nationwide_College_Enrollment_2015.csv
-    unpacked Nationwide_College_Enrollment_2016.zip: Nationwide_College_Enrollment_2016.csv
-    unpacked Nationwide_College_Enrollment_2017.zip: Nationwide_College_Enrollment_2017.csv
-    unpacked Nationwide_College_Enrollment_2018.zip: Nationwide_College_Enrollment_2018.csv
-    unpacked Nationwide_College_Enrollment_2019.zip: Nationwide_College_Enrollment_2019.csv
-    unpacked Nationwide_College_Enrollment_2020.zip: Nationwide_College_Enrollment_2020.csv
-    unpacked Nationwide_College_Enrollment_2021.zip: Nationwide_College_Enrollment_2021.csv
-    unpacked Nationwide_College_Enrollment_2022.zip: Nationwide_College_Enrollment_2022.csv
-    unpacked HighSchoolToCollegeDashboard2025DataDownload.zip: High School to College Dashboard Notes for Click to Download 2025.pdf, MD PublicHS Grads- College and Workforce Outcomes 2025.xlsx
-    unpacked 2018_Accountability_Detail.zip: 2018 Accountability Detail.csv
-    unpacked 2019_Accountability_Detail.zip: 2019 Accountability Detail.csv
-    unpacked 2022_Accountability_Detail.zip: 2022_Accountability_Detail.csv
-    unpacked 2022_Accountability_Schools.zip: 2022_Accountability_Schools.csv
-    unpacked 2023_Accountability_Detail.zip: 2023_Accountability_Detail.csv
-    unpacked 2023_Accountability_Schools.zip: 2023_Accountability_Schools.csv
-    unpacked 2024_Accountability_Detail.zip: 2024_Accountability_Detail.csv
-    unpacked 2024_Accountability_Schools.zip: 2024_Accountability_Schools.csv
-    unpacked 2025_Accountability_Detail.zip: 2025_Accountability_Detail.csv
-    unpacked 2025_Accountability_Schools.zip: 2025_Accountability_Schools.csv
-    unpacked CSI_ATSI_Schools_2019.zip: CSI_ATSI_Schools_2019.csv
-    unpacked CSI_ATSI_Schools_2023.zip: CSI_ATSI_Schools_2023.csv
-    unpacked TSI_Schools_2024.zip: TSI_Schools_2024.csv
-    unpacked TSI_Schools_2025.zip: TSI_Schools_2025.csv
     attendance 2015: Attendance_2015.csv
     attendance 2016: Attendance_2016.csv
     attendance 2017: Attendance_2017.csv
@@ -152,9 +99,8 @@ folding in Maryland's own measures (md_core_extras) ...
     accountability (2025, 'detail'): 2025_Accountability_Detail.csv
     accountability (2025, 'schools'): 2025_Accountability_Schools.csv
     accountability (2025, 'tsi'): TSI_Schools_2025.csv
-    NCES directory: 1,487 federal-to-state id triples for Maryland from 8 CCD files (2016-17 to 2023-24), cached
-    MLDS outcomes: reading MD PublicHS Grads- College and Workforce Outcomes 2025.xlsx (41.3 MB) ...
-    MLDS outcomes: 4,981 school-cohort rows for 303 high schools, cohorts 2007-08 to 2023-24, cached in cache/
+    NCES directory: 1,487 federal-to-state id triples from the cache (8 CCD files unchanged)
+    MLDS outcomes: 4,981 school-cohort rows from the cache (workbook unchanged)
   attendance: 11 years (2014-15 to 2024-25), 15,227 school-years; the rate is at the state's 95 ceiling on 5,766 of 18,240 school-type rows; chronic absence from 2017-18
   survey: 5 survey years (2019, 2022, 2023, 2024, 2025), 6,854 school-years; 11 educator topics and 10 student topics, the same in every year
   accountability: detail 2017-18, 2018-19, 2021-22, 2022-23, 2023-24, 2024-25; star ratings 2017-18, 2018-19, 2021-22, 2022-23, 2023-24, 2024-25; identifications 2018-19, 2022-23, 2023-24, 2024-25
@@ -180,22 +126,22 @@ folding in Maryland's own measures (md_core_extras) ...
   per-school Maryland records for the pack: 13,148 (63 columns, 25 of them survey)
   Maryland's measures on 13,134 school-year-bands: 12,260 joined to existing rows, 874 school-year-bands added with no test rows of their own
   core measures filled from Maryland's own files where DOMO had none: chronic_absent 136 rows
-  school type from NCES: Title I on 1,337 schools (420 yes), charter 55, magnet 92, alternative 29; Title I published 2017-2022, carried forward after
+  school type from NCES: Title I on 1,338 schools (420 yes), charter 55, magnet 93, alternative 29; Title I published 2017-2022, carried forward after
   funders: 32 Maryland schools carry a funding source (29 on the page; Kern 5, 3 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 78  by band {'Primary': {'pairs': 55, 'unmatched': 1}, 'Secondary': {'pairs': 23, 'unmatched': 0}}
   MRA: 173 surveys · 124 schools · 641 sentinel values · 31 shells
-  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 48, 'comp_n': 898, 'lim_change': 4.88, 'comp_change': 4.96, 'p': 0.923} · without the 44 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 7, 'comp_n': 898, 'lim_change': 5.98, 'comp_change': 4.96, 'p': 0.682}
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 51, 'comp_n': 1068, 'lim_change': 5.62, 'comp_change': 6.34, 'p': 0.445} · without the 44 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 8, 'comp_n': 1068, 'lim_change': 6.12, 'comp_change': 6.34, 'p': 0.929}
   roster: 49 counted, 150 exited, 1 not counted yet, 20 not counted
-best-performing schools: 6 of 50 counted schools, 70 measures in 23 outcomes
+best-performing schools: 8 of 51 counted schools, 70 measures in 23 outcomes
 
-wrote md_payload.json  (28.0 MB, 37,288 rows) · page kind full (48 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '5d61da568208'}
+wrote md_payload.json  (28.2 MB, 37,903 rows) · page kind full (51 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
 
 $ python3 build2.py md_payload.json MD_Dashboard.html MD_Methods.html
-payload 28.0 MB -> 2.12 MB gzip
-MD_Dashboard.html: 3063 KB
-MD_Methods.html: 70 KB
+payload 28.2 MB -> 2.13 MB gzip
+MD_Dashboard.html: 3079 KB
+MD_Methods.html: 71 KB
 
 $ python3 /home/claude/sdf/Build/verify_core.py --state MD --work /home/claude/work1/MD
 
@@ -254,7 +200,7 @@ ok   the composite flag keeps science, social studies and writing out of the no-
 ok   the grade table lists tested grades in order and every school in it has a name
 ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [756 schools]
 ok   the grade table carries no school-year the rules dropped
-ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 53% of rows (a five-level state whose export carries four columns, usually)]
+ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 54% of rows (a five-level state whose export carries four columns, usually)]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
@@ -262,7 +208,7 @@ ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [3,278 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [197 schools]
-ok   the school count never exceeds the band-slice count  [946 schools vs 1044 band slices]
+ok   the school count never exceeds the band-slice count  [1119 schools vs 1217 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -282,7 +228,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.7s]
+ok   load time is workable  [0.9s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -292,15 +238,15 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [17 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.9246 scipy 0.9246 · window 2022-2026 · LiM n=48 mean +4.88 · comparison n=898 mean +4.96]
-ok   the headline counts schools, not band slices  [page 946 vs offline 946 on 2022-2026]
-ok   the page's Leader in Me count is the builder's  [48 vs 48]
+ok   the headline p recomputes offline  [page 0.4458 scipy 0.4458 · window 2022-2026 · LiM n=51 mean +5.62 · comparison n=1068 mean +6.34]
+ok   the headline counts schools, not band slices  [page 1119 vs offline 1119 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [51 vs 51]
 ok   the district filter re-renders the headline  [In Baltimore City Public Schools schools, between 2021-22 and 2025-26, Leader in Me school]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [453 of 1366 schools; In Maryland Title I schools, between 2021-22 and 2025-26, Leader in Me schools r]
+ok   choosing 'Title I schools' narrows the view and names it  [453 of 1368 schools; In Maryland Title I schools, between 2021-22 and 2025-26, Leader in Me schools r]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Maryland schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025-26]
-ok   Title I status is known for most schools on the page  [97.9%]
+ok   Title I status is known for most schools on the page  [97.8%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
 ok   measure 'percent_proficient' either draws or says why
@@ -319,7 +265,7 @@ ok   the matched view shrinks or equals the Leader in Me count  [16 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Baltimore City Public Schools generates cards or says there is nothing to report  [12 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.9246014443273793, 'n1': 48, 'n2': 898}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.4457701873682164, 'n1': 51, 'n2': 1068}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -338,17 +284,17 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [4,691 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [125,645 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [124,320 bytes]
 ok   the pptx export is named for the state and chart  [MD_Percent_meeting_the_standard_year_by_year_Maryland_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [126,531 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [125,281 bytes]
 ok   the docx export is named for the state and chart  [MD_Percent_meeting_the_standard_year_by_year_Maryland_schools.docx]
-ok   the research pack downloads with its sections  [72,879 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'report_card', 'report_card_school', 'roster']]
+ok   the research pack downloads with its sections  [73,092 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'report_card', 'report_card_school', 'roster']]
 ok   the pack's Leader in Me count for the district is the page's  [7 vs 7]
 ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Maryland schools like Prince George's County Public Schools’, between 2021-22 and 2025-26, Leader in Me schools rose ]
-ok   the look-alike box reports both counts or says why not  [Schools like Prince George's County Public Schools’: 68 Leader in Me schools and 221 comparison schools look like Prince George's County Public Schools’ 195 sch]
+ok   the look-alike box reports both counts or says why not  [Schools like Prince George's County Public Schools’: 68 Leader in Me schools and 226 comparison schools look like Prince George's County Public Schools’ 195 sch]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.9384]
+ok   the look-alike headline p recomputes offline  [p=0.9471]
 ok   the anchor's own schools are never inside the look-alike groups
 ok   the school list downloads with one row per school  [264 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
@@ -382,7 +328,7 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +4.88 pts (n=48) vs comparison +4.96 pts (n=898), p=0.9246 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +5.62 pts (n=51) vs comparison +6.34 pts (n=1068), p=0.4458 -> not significant
 
 ==========================================================================
 166 of 166 checks pass
@@ -508,16 +454,19 @@ ok   the methods page names the attendance ceiling and the PDF-only suspensions
 ok   the research pack carries every survey topic, labelled with the respondent group and the domain  [25 survey columns in the pack]
 ok   the banner names the Maryland School Survey and the attendance files
 ok   the research pack's per-school Maryland values are keyed to schools on the page  [13,148 records]
-ok   every school with a state id on the page has it in the pack  [1,350 of 1,366]
+ok   every school with a state id on the page has it in the pack  [1,350 of 1,368]
 ok   look-alike mode names the educators' bullying score as its behavior measure
 ok   the measures the card can carry are on it  [17 on the card]
 ok   no measure label contains another (the measure picker is driven by label text)  [percent meeting the standard; percent in the lowest level; schooldigger standard score; chronic absence; graduation rate; attendance rate; accountability points earned (share of possible); educators: overall school survey score; students: overall school survey score; four-year cohort graduation (msde); college enrollment within 12 months]
-ok   the prepared 2025-26 file: every row is 2026, grades 3-8 ELA or math, with a 12-digit DOMO id and a proficiency value from 0 to 100  [7,186 rows, 1,109 schools]
+ok   the prepared 2025-26 file: every row is 2026, grades 3-8 ELA or math or one of the high school tests as DOMO keys them (English Language Arts 10th Grade; Algebra I, Algebra II, Geometry End of course), with a 12-digit DOMO id and a proficiency value from 0 to 100  [8,179 rows (993 high school), 1,312 schools]
 ok   the prepared 2025-26 file has one row per school, grade and subject  [0 duplicates]
-ok   where a 2025-26 row carries all four levels they add to 100 and proficiency is levels 3 and 4, within the state's rounding  [6,822 rows carry all four]
+ok   where a 2025-26 row carries all four levels they add to 100 and proficiency is levels 3 and 4, within the state's rounding  [7,700 rows carry all four]
 ok   the reading is DOMO's own: every DOMO 2024-25 grade 3-8 row is one row of the state's 2024-25 workbook and every value agrees  [7160 of 7160 found; PercentLevel1 7157/7157, PercentLevel2 7157/7157, PercentLevel3 6776/6776, PercentLevel4 6776/6776, PercentMetStandard 7160/7160]
-ok   every prepared 2025-26 row reached the working subject file and the page runs to 2025-26  [7,186 of 7,186 rows; page runs to 2026]
+ok   the high school reading is DOMO's own: every DOMO 2024-25 English 10, Algebra I, Algebra II and Geometry row is one row of the state's 2024-25 workbook and every value agrees  [988 of 988 found; PercentLevel1 980/980, PercentLevel2 980/980, PercentLevel3 871/871, PercentLevel4 871/871, PercentMetStandard 988/988]
+ok   every prepared 2025-26 row reached the working subject file and the page runs to 2025-26  [8,179 of 8,179 rows; page runs to 2026]
 ok   2025-26 on the page is reading and math only  [['ELA', 'Math']]
-ok   the prepared file reaches nearly every school DOMO tested in grades 3-8 in 2024-25, and every Leader in Me one  [1,095 of 1,099 schools; Leader in Me 65 of 65]
+ok   the prepared file reaches nearly every school DOMO tested in grades 3-8 in 2024-25, and every Leader in Me one  [1,096 of 1,099 schools; Leader in Me 65 of 65]
+ok   the prepared file's high school rows reach nearly every school DOMO carried a high school test for in 2024-25, and every Leader in Me one  [462 of 470 schools; Leader in Me 17 of 17]
+ok   high schools carry 2025-26 Secondary reading or math rows on the page wherever they carried 2024-25 ones  [171 of 173 high schools]
 
 ALL MARYLAND CHECKS PASS

@@ -2,12 +2,12 @@
  "state": "MI",
  "name": "Michigan",
  "folder": "michigan",
- "built": "2026-09-30",
- "seconds": 123,
+ "built": "2026-10-01",
+ "seconds": 127,
  "builder": "build_payload_core.py",
  "page_kind": "full",
  "lim_headline_n": 87,
- "schools": 3272,
+ "schools": 3273,
  "years": [
   2015,
   2026
@@ -60,36 +60,35 @@
  ],
  "extras_module": "mi_core_extras",
  "verified": true,
- "dashboard_bytes": 5249867,
+ "dashboard_bytes": 5360859,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
   "status": "partial",
   "subjects": [
    "ELA",
-   "Math"
-  ],
-  "missing": [
+   "Math",
    "Science",
    "Social Studies"
   ],
-  "rows_share_of_prior": 0.44,
+  "missing": [],
+  "rows_share_of_prior": 0.72,
   "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 185228,
-   "levels 3 and 4": 64.1,
+   "rows": 188203,
+   "levels 3 and 4": 64.3,
    "levels 2, 3 and 4": 0.4,
    "level 4 alone": 1.3,
    "100 minus level 1": 0.1,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 63.8,
+   "levels_sum_to_100_share": 64.0,
    "structure": "four levels, numbered from the bottom; proficiency is the top 2",
    "n_levels": 4,
    "proficient_from": 3,
    "reversed_numbering": false,
-   "coverage": 64.6,
+   "coverage": 64.8,
    "years_ok": [
     2015,
     2016,
@@ -119,7 +118,7 @@
    "latest_year_ok": true,
    "reason": null,
    "combination_shares": {
-    "levels 3 and 4": 92.8,
+    "levels 3 and 4": 92.9,
     "levels 2, 3 and 4": 1.6,
     "levels 1 and 2 (1 the top)": 2.4,
     "levels 1, 2 and 3 (1 the top)": 1.4
@@ -434,8 +433,8 @@
     {
      "year": 2026,
      "subject": "ELA",
-     "rows": 6854,
-     "level_rows": 5219,
+     "rows": 6351,
+     "level_rows": 4930,
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
@@ -443,8 +442,26 @@
     {
      "year": 2026,
      "subject": "Math",
-     "rows": 6448,
-     "level_rows": 4615,
+     "rows": 6126,
+     "level_rows": 4438,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Science",
+     "rows": 1950,
+     "level_rows": 1469,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Social Studies",
+     "rows": 1850,
+     "level_rows": 1267,
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
@@ -474,19 +491,19 @@
     "y0": 2022,
     "y1": 2026,
     "lim_n": 87,
-    "comp_n": 1728,
-    "lim_change": -0.51,
-    "comp_change": -0.18,
-    "p": 0.692
+    "comp_n": 1639,
+    "lim_change": -0.62,
+    "comp_change": -0.42,
+    "p": 0.807
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
     "lim_n": 65,
-    "comp_n": 1728,
-    "lim_change": 0.05,
-    "comp_change": -0.18,
-    "p": 0.799
+    "comp_n": 1639,
+    "lim_change": -0.1,
+    "comp_change": -0.42,
+    "p": 0.736
    },
    "schools": 29
   },
@@ -494,8 +511,8 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 17,
-  "in_the_process": 12,
+  "qualified": 22,
+  "in_the_process": 17,
   "lapsed_on_the_list": 5,
   "reviewed": 99,
   "measures": 52,

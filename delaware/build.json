@@ -2,8 +2,8 @@
  "state": "DE",
  "name": "Delaware",
  "folder": "delaware",
- "built": "2026-09-30",
- "seconds": 40,
+ "built": "2026-10-01",
+ "seconds": 42,
  "builder": "build_payload_core.py",
  "page_kind": "descriptive",
  "lim_headline_n": 15,
@@ -65,7 +65,7 @@
  ],
  "extras_module": "de_core_extras",
  "verified": true,
- "dashboard_bytes": 818831,
+ "dashboard_bytes": 818783,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -78,23 +78,23 @@
    "Science",
    "Social Studies"
   ],
-  "rows_share_of_prior": 0.42,
+  "rows_share_of_prior": 0.4,
   "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 11517,
-   "levels 3 and 4": 28.6,
+   "rows": 11458,
+   "levels 3 and 4": 28.8,
    "levels 2, 3 and 4": 0.0,
    "level 4 alone": 0.1,
    "100 minus level 1": 0.0,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 28.7,
+   "levels_sum_to_100_share": 28.9,
    "structure": "four levels, numbered from the bottom; proficiency is the top 2",
    "n_levels": 4,
    "proficient_from": 3,
    "reversed_numbering": false,
-   "coverage": 29.7,
+   "coverage": 29.9,
    "years_ok": [
     2015,
     2016,
@@ -404,7 +404,7 @@
     {
      "year": 2026,
      "subject": "ELA",
-     "rows": 485,
+     "rows": 455,
      "level_rows": 0,
      "sum_to_100": 0.0,
      "match": 0.0,
@@ -413,7 +413,7 @@
     {
      "year": 2026,
      "subject": "Math",
-     "rows": 465,
+     "rows": 436,
      "level_rows": 0,
      "sum_to_100": 0.0,
      "match": 0.0,
@@ -444,19 +444,19 @@
     "y0": 2022,
     "y1": 2026,
     "lim_n": 15,
-    "comp_n": 104,
+    "comp_n": 99,
     "lim_change": 1.76,
-    "comp_change": 2.08,
-    "p": 0.89
+    "comp_change": 1.86,
+    "p": 0.965
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
     "lim_n": 12,
-    "comp_n": 104,
+    "comp_n": 99,
     "lim_change": 0.16,
-    "comp_change": 2.08,
-    "p": 0.45
+    "comp_change": 1.86,
+    "p": 0.501
    },
    "schools": 3
   },

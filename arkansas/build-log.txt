@@ -1,0 +1,467 @@
+
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state AR --core /home/claude/sdf/Core --out /home/claude/work1/AR --data /home/claude/work1/AR/data --extras ar_core_extras
+reading the core for Arkansas ...
+[core] subjects: 130,319 school rows kept; dropped 90,391 rows with no school id and 2,985 with an id but no school record
+[core] Leader in Me roster: 658 rows
+[core] comparison schools: 8,747 rows
+[core] MRA surveys: 72 rows
+  newest-year like-for-like: 3 grade-test pairs not in the state's newest file; 16 rows at 5 schools left out of that year
+  subject rows added from the state's own file: 7,540 (Arkansas 2025-26 ATLAS results (Arkansas DESE))
+  subject rows 137,859 · roster rows 658 (74 schools) · comparison rows 8,747 (1067 schools) · MRA surveys 72
+[core] Leader in Me roster: 56,181 rows
+  exits: 68 of 74 roster schools carry an expiration date; 31 past it by more than 30 days (exited), 0 inside the grace window, 37 in the future, 6 undated (5 with a start date)
+  1,140 schools · 273 districts
+  1 roster schools have comparison-export rows after their roster years (DOMO's own flag says they left): read as exited after [2017]
+applying the cleaning rules ...
+  41,070 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 225 of 740 reviewed
+  no start date: 2 schools · dated exits: 27 (school-years after an exit with rows: 66) · aggregate 'All grades' rows used 6, skipped 1
+  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 90.3% of rows in years and subjects whose levels add up)
+  level values blanked on 3 year-subject cells that do not add up: 2014-15 ELA, 2014-15 Math (end-of-course), 2014-15 Math
+  proficiency = levels 3 and 4 on 90.4% of rows
+  statewide jump: ELA 2015->2016: 32.0 -> 52.5 (+20.5)
+  statewide jump: ELA 2023->2024: 49.8 -> 32.8 (-17.0)
+  statewide jump: Math 2015->2016: 23.5 -> 43.4 (+19.9)
+folding in Arkansas's own measures (ar_core_extras) ...
+  state files (resolved by pattern; the log names the file each year came from):
+    attendance 2011: ADAADMADTall_Schools_2010-11.csv
+    attendance 2012: ADAADMADTall_Schools_2011-12.csv
+    attendance 2013: ADAADMADTall_Schools_2012-13.csv
+    attendance 2014: ADAADMADTall_Schools_2013-14.csv
+    attendance 2015: ADAADMADTall_Schools_2014-15.csv
+    attendance 2016: ADAADMADTall_Schools_2015-16.csv
+    attendance 2017: ADAADMADTall_Schools_2016-17.csv
+    attendance 2018: ADAADMADTall_Schools_2017-18.csv
+    attendance 2019: ADAADMADTall_Schools_2018-19.csv
+    attendance 2020: ADAADMADTall_Schools_2019-20.csv
+    attendance 2021: ADAADMADTall_Schools_2020-21.csv
+    attendance 2022: ADAADMADTall_Schools_2021-22.csv
+    attendance 2023: ADAADMADTall_Schools_2022-23.csv
+    attendance 2024: ADAADMADTall_Schools_2023-24.csv
+    attendance 2025: ADAADMADTall_Schools_2024-25.csv
+    attendance 2026: ADAADMADTall_Schools_2025-26.csv
+    discipline 2014: MSI_Disciplinary_Actions_and_Infractions_Schools_2013-14.xlsx
+    discipline 2015: MSI_Disciplinary_Actions_and_Infractions_Schools_2014-15.xlsx
+    discipline 2016: MSI_Disciplinary_Actions_and_Infractions_Schools_2015-16.xlsx
+    discipline 2017: MSI_Disciplinary_Actions_and_Infractions_Schools_2016-17.xlsx
+    discipline 2018: MSI_Disciplinary_Actions_and_Infractions_Schools_2017-18.xlsx
+    discipline 2019: MSI_Disciplinary_Actions_and_Infractions_Schools_2018-19.xlsx
+    discipline 2020: MSI_Disciplinary_Actions_and_Infractions_Schools_2019-20.xlsx
+    discipline 2021: MSI_Disciplinary_Actions_and_Infractions_Schools_2020-21.xlsx
+    discipline 2022: MSI_Disciplinary_Actions_and_Infractions_Schools_2021-22.xlsx
+    discipline 2023: MSI_Disciplinary_Actions_and_Infractions_Schools_2022-23.xlsx
+    discipline 2024: MSI_Disciplinary_Actions_and_Infractions_Schools_2023-24.xlsx
+    discipline 2025: MSI_Disciplinary_Actions_and_Infractions_Schools_2024-25.xlsx
+    discipline 2026: MSI_Disciplinary_Actions_and_Infractions_Schools_2025-26.xlsx
+    oep 2014: 2014-letter-grades.xlsx
+    oep 2015: 2014-15-school-performance.xlsx
+    oep 2016: recognition-data_2015.xlsx
+    oep 2016: v-a-m-data-for-schools_2014-15-and-2015-16.xlsx
+    oep 2017: ar-essa-2017-school-growth-scores-1pdd6hf.xlsx
+    oep 2018: ar-essa-2018-school-growth-scores-1twg1qe.xlsx
+    oep 2019: 2018-2019-school-level-essa-report.xlsx
+    oep 2022: LetterGrades_2022_updated.xlsx
+    oep 2023: ESSA-Growth-Score_SchoolLevel_2022-2023-844092609a5ea180.xlsx
+    oep 2024: 2023-2024-School-Level-Growth-Scores.xlsx
+    oep 2025: 2024-2025-School-Letter-Grade-and-Accountability-Data-Final.xlsx
+    oep 2025: 2024-2025-School-Level-Growth-Scores.xlsx
+    workforce 2017: MSI_Workforce_Stability_Index_Schools_2016-17.xlsx
+    workforce 2018: MSI_Workforce_Stability_Index_Schools_2017-18.xlsx
+    workforce 2019: MSI_Workforce_Stability_Index_Schools_2018-19.xlsx
+    workforce 2020: MSI_Workforce_Stability_Index_Schools_2019-20.xlsx
+    workforce 2021: MSI_Workforce_Stability_Index_Schools_2020-21.xlsx
+    workforce 2023: MSI_Workforce_Stability_Index_Schools_2022-23.xlsx
+    NCES directory: 1,291 federal-to-state id pairs from the cache (8 CCD files unchanged)
+    discipline: 13,836 rows from the cache (13 files unchanged)
+    OEP workbooks: 10,501 rows from the cache (12 files unchanged)
+  attendance: 16,923 school-years, 2010-11 to 2025-26; 242 rates at or above 99.9% read as unreported
+  discipline: 13,836 school-years, 2013-14 to 2025-26; 1080 blank rows read as unreported
+  workforce: 6,352 school-years, 2016-17 to 2022-23 (2016-17 2017-2021, 2017-18 2017-2021, 2018-19 2017-2021, 2019-20 2017-2021, 2020-21 2017-2021, 2022-23 2023); 16 attrition shares above 100% read as unreported
+  OEP: 10,501 school-years, 2013-14 to 2024-25; grades in [2014, 2015, 2017, 2018, 2019, 2022, 2023, 2025], ESSA index in [2017, 2018, 2019, 2022, 2023], content growth in [2018, 2019, 2022, 2023, 2024, 2025]
+  crosswalk: NCES's state LEA code for each federal id, followed across renumberings outside NCES's window by name within district, audited against a name-within-district join
+    1,139 of 1,140 schools carry a state LEA code (ccd 1115, name 24, predecessor 25, successor 6); Leader in Me 74 of 74, comparison 1,065 of 1,066; 1,139 appear in at least one Arkansas file
+    audit against the name-within-district join: both speak for 1,086 schools and agree on 1,086; the state files' own name agrees with DOMO's on 1,181 of 1,195 crosswalked ids; 31 renumbered ids followed outside NCES's window; 24 schools joined by name alone; 0 shared state ids settled; 0 pairs re-pointed to a folded id
+    followed (predecessor): Noble Elementary School ['0203020'] -> 0203028 NOBLE ELEMENTARY SCHOOL (2011-2011)
+    followed (predecessor): Gentry High School ['0403017', '0403703'] -> 0403014 GENTRY HIGH SCHOOL (2011-2016)
+    followed (predecessor): Siloam Springs High School Conversion Charter ['0406703'] -> 0406050 SILOAM SPRINGS HIGH SCHOOL (2011-2015)
+    followed (successor): Siloam Springs High School Conversion Charter ['0406050', '0406703'] -> 0406052 Siloam Springs High School (2026-2026)
+    followed (predecessor): Thomas C Brunson Elementary School ['0602017', '0602704'] -> 0602013 THOMAS C. BRUNSON ELEM. SCHOOL (2011-2013)
+    followed (predecessor): Warren Middle School ['0602702'] -> 0602015 WARREN MIDDLE SCHOOL (2011-2014)
+    followed (successor): Warren Middle School ['0602015', '0602702'] -> 0602020 Warren Middle School (2025-2026)
+    followed (predecessor): Riverside High School ['1613021'] -> 1613032 RIVERSIDE HIGH SCHOOL (2011-2011)
+    followed (successor): Mountainburg High School ['1703013'] -> 1703703 Mountainburg High School (2025-2026)
+    followed (predecessor): Cross County High School A New Technical School ['1901703'] -> 1901004 CROSS COUNTY HIGH SCHOOL (2011-2011)
+    followed (predecessor): Cross County Elementary Technical Academy ['1901701'] -> 1901006 CROSS COUNTY ELEMENTARY (2011-2012)
+    followed (predecessor, Leader in Me): Fountain Lake Middle School ['2602702'] -> 2602007 FOUNTAIN LAKE MIDDLE SCHOOL (2011-2014)
+    followed (successor, Leader in Me): Fountain Lake Middle School ['2602007', '2602702'] -> 2602008 Fountain Lake Middle School (2025-2026)
+    followed (predecessor): Oak Grove Elementary School ['2808045'] -> 2808701 OAK GROVE ELEM HEALTH WELLNESS (2011-2013)
+    followed (predecessor): Lee High School ['3904011'] -> 3904008 LEE HIGH SCHOOL (2011-2012)
+    followed (predecessor): Ashdown Elementary School ['4101006'] -> 4101005 ASHDOWN ELEMENTARY SCHOOL (2011-2020)
+    followed (predecessor): Yellville-Summit Middle School ['4502008'] -> 4502007 YELLVILLE-SUMMIT MIDDLE SCHOOL (2014-2015)
+    followed (predecessor): Blytheville High School ['4702014', '4702706'] -> 4702013 BLYTHEVILLE HIGH SCHOOL (2011-2013)
+    followed (predecessor): Osceola Middle School ['4713055', '4713705'] -> 4713050 OSCEOLA MIDDLE SCHOOL (2011-2012)
+    followed (predecessor): J.F. Wahl Elementary School ['5403023'] -> 5403015 J.F. WAHL ELEMENTARY SCHOOL (2011-2012)
+    followed (predecessor): Maumelle High School ['6003151'] -> 6003126 MAUMELLE HIGH SCHOOL (2011-2012)
+    followed (predecessor): Lincoln Academy ['6201016'] -> 6201702 LINCOLN ACADEMY OF EXCELLENCE (2011-2015)
+    followed (successor): Bruno-Pyatt Elementary School ['6505012'] -> 6505020 Bruno-Pyatt Elementary (2024-2026)
+    followed (predecessor): Cave City High Career & Collegiate Preparatory School ['6802703'] -> 6802002 CAVE CITY HIGH SCHOOL (2011-2016)
+    followed (predecessor): Norphlet Middle School ['7008037'] -> 7008036 NORPHLET MIDDLE SCHOOL (2015-2015)
+    followed (predecessor): Farmington High School ['7202012'] -> 7202006 FARMINGTON HIGH SCHOOL (2011-2015)
+    followed (predecessor): Lincoln High School ['7205706'] -> 7205032 LINCOLN HIGH SCHOOL (2011-2012)
+    followed (predecessor): Southwest Middle School ['7311054'] -> 7311050 SOUTHWEST MIDDLE SCHOOL (2011-2011)
+    followed (predecessor): Warren High School ['0602019'] -> 0602014 WARREN HIGH SCHOOL (2011-2015)
+    followed (successor): The Academies At Newport High School ['3403013'] -> 3403703 The Academies At Newport High School (2025-2026)
+    followed (predecessor): Southwood Elementary School ['3505051'] -> 3505049 Southwood Elementary School (2017-2019)
+    joined by name alone: Oak Park Elementary School -> 3505034 OAK PARK ELEMENTARY SCHOOL
+    joined by name alone: Southeast Middle School -> 3505041 SOUTHEAST MIDDLE SCHOOL
+    joined by name alone: Badger Elementary -> 7302013 BADGER ELEMENTARY
+    joined by name alone: Paron Elementary School -> 6303036 PARON ELEMENTARY SCHOOL
+    joined by name alone: Hartford Elementary School -> 6604051 HARTFORD ELEMENTARY SCHOOL
+    joined by name alone: Hartford High School -> 6604052 HARTFORD HIGH SCHOOL
+    joined by name alone: Mildred Jackson Elementary School -> 6202022 MILDRED JACKSON ELEM. SCHOOL
+    joined by name alone: Hughes High School -> 6202024 HUGHES HIGH SCHOOL
+    joined by name alone: No. Heights Elementary School -> 6002063 NO. HEIGHTS ELEMENTARY SCHOOL
+    joined by name alone: Park Hill Elementary School -> 6002064 PARK HILL ELEMENTARY SCHOOL
+    joined by name alone: Pike View Elementary School -> 6002065 PIKE VIEW ELEMENTARY SCHOOL
+    joined by name alone: North Little Rock Academy -> 6002080 NORTH LITTLE ROCK ACADEMY
+    joined by name alone: Prairie Grove Intermediate -> 7206039 PRAIRIE GROVE INTERMEDIATE
+    joined by name alone: Bayou Meto Elementary School -> 6003094 BAYOU METO ELEMENTARY SCHOOL
+    joined by name alone: Warren Dupree Elementary School -> 6003099 WARREN DUPREE ELEM. SCHOOL
+    joined by name alone: Jacksonville High School -> 6003123 JACKSONVILLE HIGH SCHOOL
+    joined by name alone: Tolleson Elementary School -> 6003106 TOLLESON ELEMENTARY SCHOOL
+    joined by name alone: Arnold Drive Elementary School -> 6003137 ARNOLD DRIVE ELEMENTARY SCHOOL
+    joined by name alone: Pinewood Elementary School -> 6003130 PINEWOOD ELEMENTARY SCHOOL
+    joined by name alone: Scott Elementary School -> 6003111 SCOTT ELEMENTARY SCHOOL
+    joined by name alone: Northwood Middle School -> 6003140 NORTHWOOD MIDDLE SCHOOL
+    joined by name alone: Murrell Taylor Elementary School -> 6003141 MURRELL TAYLOR ELEM. SCHOOL
+    joined by name alone: Jacksonville Middle School -> 6003119 JACKSONVILLE MIDDLE SCHOOL
+    joined by name alone: Academy Of Technology -> 2307701 ACADEMY OF TECHNOLOGY
+    name disagreement (Leader in Me): DOMO 'Herbert Carter Global Community Magnet School' vs state 'MARION ELEMENTARY SCHOOL' (1804012)
+    name disagreement (Leader in Me): DOMO 'Vera Kilpatrick Elementary School' vs state 'Kilpatrick Academy of Public Service' (4605021)
+    name disagreement (Leader in Me): DOMO 'Edward D. Trice Elementary School' vs state 'Trice Academy of Performing Arts' (4605027)
+    name disagreement (Leader in Me): DOMO 'Judsonia Elementary School' vs state 'RIVERVIEW INTERMEDIATE SCHOOL' (7307026)
+    name disagreement (Leader in Me): DOMO 'Kensett Elementary School' vs state 'RIVERVIEW PRIMARY SCHOOL' (7307030)
+  discipline rates: 12,747 school-years per 100 students on the state's own ADM (12,747), 0 on DOMO's enrollment where the attendance file has no row, 8 under 20 students and 1 with no denominator left without a rate
+  value check of the join (a file the map was not built from): the state's graduation rate against DOMO's on 170 school-years (2018): 98.8% within a point, r = 0.989
+  rows gain: attendance_rate on 12,422 school-year-bands (68 Leader in Me schools ever), oss_per100 on 11,837 school-year-bands (68 Leader in Me schools ever), iss_per100 on 11,837 school-year-bands (68 Leader in Me schools ever), wsi on 3,787 school-year-bands (23 Leader in Me schools ever), essa_index on 6,283 school-year-bands (37 Leader in Me schools ever), growth_score on 7,550 school-year-bands (54 Leader in Me schools ever); 0 school-years had no band to sit in
+  graduation: DOMO carries a rate for 2018 on; the state's own rate fills 295 schools in 2014-15, 2015-16, 2016-17
+  card: 11 Arkansas measures, each group on each year's own membership
+    card line attendance_rate: 10 Leader in Me points, latest 2026 n=44 (93.72)
+    card line oss_per100: 10 Leader in Me points, latest 2026 n=43 (11.25)
+    card line iss_per100: 10 Leader in Me points, latest 2026 n=43 (17.3)
+    card line bullying_per100: 10 Leader in Me points, latest 2026 n=43 (0.53)
+    card line corporal_per100: 10 Leader in Me points, latest 2026 n=43 (0.37)
+    card line wsi: 3 Leader in Me points, latest 2019 n=22 (92.0)
+    card line teacher_attrition: 3 Leader in Me points, latest 2019 n=22 (15.59)
+    card line teacher_retention: 1 Leader in Me points, latest 2023 n=25 (71.71)
+    card line essa_index: 5 Leader in Me points, latest 2023 n=25 (63.85)
+    card line growth_score: 6 Leader in Me points, latest 2025 n=36 (80.7)
+    card line grade_ab: 5 Leader in Me points, latest 2023 n=25 (12.0)
+  per-school Arkansas records for the pack: 9,846 (50 columns)
+  Arkansas's measures on 12,555 school-year-bands: 11,477 joined to existing rows, 1,078 school-year-bands added with no test rows of their own
+  core measures filled from Arkansas's own files where DOMO had none: grad_rate 4,199 rows
+  school type from NCES: Title I on 1,092 schools (840 yes), charter 129, magnet 33, alternative 5; Title I published 2017-2022, carried forward after
+  funders: 52 Arkansas schools carry a funding source (52 on the page; Kern 29, 29 on the page); latest non-blank year per school
+building matched pairs, inside each band ...
+  pairs 29  by band {'Primary': {'pairs': 23, 'unmatched': 1}, 'Secondary': {'pairs': 6, 'unmatched': 0}}
+  MRA: 66 surveys · 41 schools · 192 sentinel values · 5 shells
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 40, 'comp_n': 806, 'lim_change': -4.64, 'comp_change': -4.76, 'p': 0.946} · without the 5 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 36, 'comp_n': 806, 'lim_change': -4.47, 'comp_change': -4.76, 'p': 0.869}
+  roster: 40 counted, 32 exited, 0 not counted yet, 2 not counted
+measures not offered (no school-year carries a value): chronic_absent
+best-performing schools: 0 of 45 counted schools, 67 measures in 19 outcomes
+payload carried NaN or infinite values; written as null
+
+wrote ar_payload.json  (31.0 MB, 42,148 rows) · page kind full (40 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
+
+$ python3 build2.py ar_payload.json AR_Dashboard.html AR_Methods.html
+payload 31.0 MB -> 2.75 MB gzip
+AR_Dashboard.html: 3890 KB
+AR_Methods.html: 65 KB
+
+$ python3 /home/claude/sdf/Build/verify_core.py --state AR --work /home/claude/work1/AR
+
+--------------------------------------------------------------------------
+Tier 0 — install and input-value audit
+--------------------------------------------------------------------------
+ok   the template in use carries the brand palette and the ink helper
+ok   the template carries the three-school floor in headline and movement
+ok   the template reads the payload's raw window on the insights tab
+ok   the template honours the composite row flag
+ok   the template carries the research pack, look-alike mode and the school list
+ok   the office helper carries the Word table builder
+ok   the subject pull is one state's (federal id state code)
+ok   the roster and comparison pulls are one state's
+ok   2019-20 rows, if the file has any, are excluded from the payload  [0 rows in the file]
+ok   no duplicate school-year-grade-subject rows
+ok   no test value above 100
+ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
+ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
+ok   every comparison row is LIM School = false
+ok   comparison rows for roster schools sit only in years the roster does not carry  [1 roster schools have comparison rows]
+ok   the roster's '% White' is a count, not a percentage
+ok   one expiration date per roster school
+ok   every expiration date parsed
+ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
+ok   the exit rule's counts recompute from the roster  [31 exited, 0 in grace, 37 future]
+ok   the grace window is the 30 days Eve set
+ok   MRA exact-100 values were counted as sentinels  [14 composite cells at 100, 0 in 90-99.9]
+ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
+ok   no school appears in both groups in the same year
+
+--------------------------------------------------------------------------
+Tier 1 — rules and maths
+--------------------------------------------------------------------------
+ok   lim_rules.py self-tests pass
+ok   skill_version.py self-tests pass
+ok   payload carries a build stamp
+ok   years exclude both COVID years
+ok   the straight-numbers window starts in 2022 or later
+ok   the long window is scored relative to the state
+ok   no Leader in Me row counted before its full year was finished  [0 rows]
+ok   schools with no start date appear in neither group  [2 schools]
+ok   the count of undated schools is on the methods page
+ok   no row survives after a school's dated exit, in either group  [0 rows]
+ok   exited schools keep their true Leader in Me years  [28 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [32 exited (1 from DOMO's flags)]
+ok   lim_exit carries every exited school and nothing else
+ok   the roster section lists every roster school once
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 40, 'exited': 32, 'not counted': 2}]
+ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
+ok   the headline sensitivity without the undated schools is on the methods page
+ok   size bands are the NCES categories in the payload's order
+ok   the poverty share rides on most rows for the look-alike caliper  [99%]
+ok   every offered measure is carried by at least one school-year
+ok   a measure no school-year carries is named on the methods page as not offered  [Chronic absence]
+ok   the composite flag keeps science, social studies and writing out of the no-filter view
+ok   the grade table lists tested grades in order and every school in it has a name
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [348 schools]
+ok   the grade table carries no school-year the rules dropped
+ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
+ok   the level shares sum to 100 on the grade rows that carry them  [46,365 grade rows, 100.0% within 1.5 points]
+ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 99.8% of grade rows within 1.5]
+ok   the grade table carries the level columns
+ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
+ok   the levels at or above the standard count up, the levels below count down
+ok   the proficiency label names the levels it adds
+ok   years and subjects whose levels do not add up carry no level values  [3 cells set aside, 5,204 grade rows in them]
+ok   school names and start dates are in the payload for the pack
+ok   MRA by-school rows exist for the pack
+ok   the MRA respondent map names a group or a blend for every measure
+ok   look-alike settings are in the payload with their rationale
+ok   a Leader in Me school's pre-start years count in the comparison group  [1,523 rows]
+ok   Lighthouse schools are inside the Leader in Me family
+ok   combined-grade schools appear in both bands  [337 schools]
+ok   the school count never exceeds the band-slice count  [846 schools vs 970 band slices]
+ok   pairs are built inside bands
+ok   the by-band pair counts sum to the total
+ok   no comparison school is used twice
+ok   no Leader in Me school is paired twice inside a band
+ok   the signed baseline gap recomputes to the payload's  [offline +0.117 vs payload +0.120 on 29 pairs]
+ok   the mean signed baseline gap is under one point  [+0.117]
+ok   the widest single baseline gap is inside the caliper's reach  [2.0 points]
+ok   the printed signed gap is not a negative zero  [0.12]
+ok   no MRA value of exactly 100 survives into the payload
+ok   every MRA value sits on the published scale
+ok   the MRA trend stays inside one instrument version
+ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
+ok   movers are built on ten or more schools each
+  demo district: Little Rock School District · prospect district: Springdale School District
+
+--------------------------------------------------------------------------
+Tier 2 — behaviour in a real browser
+--------------------------------------------------------------------------
+ok   the page loads and the headline renders
+ok   load time is workable  [0.8s]
+ok   no console errors on load
+ok   chart c1 draws an svg or explains why
+ok   chart c2 draws an svg or explains why
+ok   the MRA card shows exactly when a trend line can be drawn
+ok   the discipline card shows exactly when the payload carries a discipline trend  [payload has no discipline_ga]
+ok   the incidents card shows exactly when the payload carries an incident trend  [payload has no incidents]
+ok   the state extras card shows exactly when the payload carries state measures  [11 state measures]
+ok   every state measure on the card draws a Leader in Me and a comparison line
+ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
+ok   the headline p recomputes offline  [page 0.9459 scipy 0.9459 · window 2022-2026 · LiM n=40 mean -4.64 · comparison n=806 mean -4.76]
+ok   the headline counts schools, not band slices  [page 846 vs offline 846 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [40 vs 40]
+ok   the district filter re-renders the headline  [In Little Rock School District schools, between 2021-22 and 2025-26, Leader in Me schools ]
+ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
+ok   choosing 'Title I schools' narrows the view and names it  [788 of 1164 schools; In Arkansas Title I schools, between 2021-22 and 2025-26, Leader in Me schools f]
+ok   every school in the 'Title I schools' view carries that attribute
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Arkansas schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025-26]
+ok   Title I status is known for most schools on the page  [93.8%]
+ok   the Primary band filter re-renders without error
+ok   the Secondary band filter re-renders without error
+ok   measure 'percent_proficient' either draws or says why
+ok   measure 'percent_level4' either draws or says why
+ok   measure 'percent_level3' either draws or says why
+ok   measure 'percent_level2' either draws or says why
+ok   measure 'percent_below' either draws or says why
+ok   measure 'standard_score' either draws or says why
+ok   measure 'grad_rate' either draws or says why
+ok   measure 'attendance_rate' either draws or says why
+ok   measure 'oss_per100' either draws or says why
+ok   measure 'iss_per100' either draws or says why
+ok   measure 'wsi' either draws or says why
+ok   measure 'essa_index' either draws or says why
+ok   measure 'growth_score' either draws or says why
+ok   the matched toggle re-renders the headline  [In Arkansas schools (matched to similar schools only), between 2021-22 and 2025-26, Leader]
+ok   the matched view shrinks or equals the Leader in Me count  [13 matched]
+ok   no console errors after the filter sweep
+ok   the insights tab hides the explore view
+ok   Little Rock School District generates cards or says there is nothing to report  [9 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.9459293830918188, 'n1': 40, 'n2': 806}]
+ok   no console errors on the insights tab
+ok   the MRA tab is offered exactly when the payload carries surveys
+ok   the MRA tab shows its own view and sidebar and hides the explore ones
+ok   the MRA summary renders a sentence  [Across 30 Arkansas Leader in Me schools surveyed in 2024-25, Leadership averaged 76.1 on the MRA sca]
+ok   MRA chart c6 draws an svg or explains why
+ok   MRA chart c7 draws an svg or explains why
+ok   MRA chart c10 draws an svg or explains why
+ok   the measure picker offers every MRA measure with data  [37 options, 37 measures with data, 37 in the catalogue]
+ok   the MRA paired test recomputes offline  [page 0.0618 scipy 0.0618 on 11 schools]
+ok   the MRA latest-year school count recomputes offline  [page 30 vs offline 30]
+ok   the MRA same-schools count is every school surveyed more than once  [page 11 vs offline 11]
+ok   choosing the submeasure 'Personal Effectiveness' re-renders the MRA summary  [Across 26 Arkansas Leader in Me schools surveyed in 2024-25, Personal Effectiveness averag]
+ok   the MRA district filter narrows to Little Rock School District's surveyed schools  [9 of 41 schools]
+ok   the MRA school type filter keeps only schools with that trait  [title1_yes]
+ok   the same-schools switch keeps only schools surveyed at both ends
+ok   no console errors on the MRA tab
+ok   the MRA view downloads one row per school, year and measure  [1,866 rows]
+ok   leaving the MRA tab restores the explore view
+ok   export c1.pptx downloads, opens and carries the chart image  [191,090 bytes]
+ok   the pptx export is named for the state and chart  [AR_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Arkansas_schools.pptx]
+ok   export c1.docx downloads, opens and carries the chart image  [192,221 bytes]
+ok   the docx export is named for the state and chart  [AR_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Arkansas_schools.docx]
+ok   the research pack downloads with its sections  [42,656 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the pack's Leader in Me count for the district is the page's  [6 vs 6]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it will come back.]
+ok   the look-alike box reports both counts or says why not  [Schools like Springdale School District’s: 3 Leader in Me schools and 52 comparison schools look like Springdale School District’s 29 schools with results in th]
+ok   the matched switch is disabled while an anchor is set
+ok   no console errors in look-alike mode
+skip look-alike recompute  [look-alike groups have no balanced window]
+ok   the grade filter lists the tested grades
+ok   choosing a grade re-renders the headline and names the grade  [In Arkansas grade 4 results, between 2021-22 and 2025-26, Leader in Me schools fell 1.9% on Meeting ]
+ok   the level measures stay on while a grade is chosen
+ok   whole-school measures switch off while a grade is chosen  [8 whole-school measures in the payload]
+ok   dark mode re-renders without errors
+ok   no horizontal overflow at 900px  [0px]
+ok   no horizontal overflow at 700px  [0px]
+ok   the methods page loads
+ok   no console errors on the methods page
+
+--------------------------------------------------------------------------
+Tier 3 — honesty
+--------------------------------------------------------------------------
+ok   the build declares itself real, not a prototype
+ok   the banner names the Subject Test source
+ok   the banner names the roster source
+ok   the banner names the expiration source
+ok   the methods page owns the 'exit' limitation
+ok   the methods page owns the 'snapshot' limitation
+ok   the methods page owns the 'Title I' limitation
+ok   the methods page owns the 'observational' limitation
+ok   the methods page owns the 'both ends' limitation
+ok   poverty_help tells the reader which measure is on screen and its ceiling
+ok   the methods page names the matching method rather than asserting it
+ok   the level audit is on the methods page
+ok   the subject mapping is on the methods page
+ok   the poverty audit is on the methods page
+ok   the methods page carries the exit-dating box
+ok   the methods page carries the look-alike section
+ok   the undated schools are listed by name in the payload
+ok   a statewide jump is flagged on the methods page
+
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me -4.64 pts (n=40) vs comparison -4.76 pts (n=806), p=0.9459 -> not significant
+
+==========================================================================
+174 of 174 checks pass · 1 skipped
+==========================================================================
+
+$ python3 /home/claude/sdf/Build/states/ar_core_verify.py --work /home/claude/work1/AR
+
+Arkansas's own measures
+--------------------------------------------------------------------------
+ok   the crosswalk reaches nearly every Leader in Me school  [74 of 74]
+ok   the crosswalk reaches most comparison schools  [1,065 of 1,066]
+ok   NCES's own id pairs anchor the crosswalk  [1,140 pairs for 1,115 of 1,140 schools]
+ok   the name-within-district join (the second way) agrees with NCES on nearly every school both speak for  [1,086 of 1,086; 0 read one by one]
+ok   the state files' own school names agree with DOMO's on nearly every crosswalked id  [1,181 of 1,195; 14 read one by one]
+ok   DOMO's own graduation rate matches the state's through the crosswalk (an independent check of the join)  [98.8% within a point on 170 school-years, r = 0.989]
+ok   no state id is on two schools  [1,195 pairs, 1,139 schools]
+ok   every renumbering followed outside NCES's window keeps the school's district and never coexists with its known ids  [31 followed]
+ok   the Leader in Me schools the crosswalk cannot reach are named on the page
+ok   the join note on the card carries the reach
+ok   attendance 2025-26 (re-read from the CSV, ADA over ADM): the pack's attendance_rate is the state file's own value through the crosswalk  [941 of 941 agree (need 800); 65 Leader in Me schools among them]
+ok   attendance 2025-26: the 23 rates at or above 99.9% in the CSV carry no attendance value in the pack  [21 of them on the page]
+ok   attendance 2025-26: the rows' attendance measure equals the pack's value on every band  [1173 of 1173]
+ok   no attendance rate in the pack sits above the ceiling  [max 99.90 (the pack rounds to two decimals)]
+ok   discipline 2018-19 (re-read from the xlsx: injury plus non-injury suspensions over the attendance file's ADM): the pack's oss_per100 is the state file's own value through the crosswalk  [936 of 936 agree (need 800); 63 Leader in Me schools among them]
+ok   discipline 2018-19: the 58 schools that left every action cell blank carry no suspension rate in the pack (unreported, never zero)  [46 of them on the page]
+ok   discipline 2025-26 (re-read from the xlsx: injury plus non-injury suspensions over the attendance file's ADM): the pack's oss_per100 is the state file's own value through the crosswalk  [907 of 907 agree (need 800); 64 Leader in Me schools among them]
+ok   discipline 2025-26: the 82 schools that left every action cell blank carry no suspension rate in the pack (unreported, never zero)  [53 of them on the page]
+ok   discipline 2025-26: the rows' suspension measure equals the pack's value on every band  [1132 of 1132]
+ok   workforce 2018-19: the index rebuilds as 100 minus the average of its five component shares on every row  [1054 of 1054]
+ok   workforce 2018-19 (re-read from the xlsx): the pack's wsi is the state file's own value through the crosswalk  [981 of 981 agree (need 800); 64 Leader in Me schools among them]
+ok   the group row of the workforce export names two indexes  [Workforce Stability Index (2017-2021); Workforce Stability Index (2023)]
+ok   workforce 2022-23 (re-read from the xlsx, the retention share of the 2023 index): the pack's teacher_retention is the state file's own value through the crosswalk  [970 of 970 agree (need 800); 64 Leader in Me schools among them]
+ok   the 2022-23 index (a percentile rank) is never on the 2017-2021 index line
+ok   no attrition share in the pack exceeds 100%, and the shares above it are counted  [16 read as unreported]
+ok   OEP 2022-23 (re-read from the xlsx): the pack's essa_index is the state file's own value through the crosswalk  [989 of 989 agree (need 800); 65 Leader in Me schools among them]
+ok   OEP 2022-23 letter grades (re-read from the xlsx, A or B as 100): the pack's grade_ab is the state file's own value through the crosswalk  [971 of 971 agree (need 800); 65 Leader in Me schools among them]
+ok   OEP 2024-25 content growth (re-read from the xlsx): the pack's growth_score is the state file's own value through the crosswalk  [972 of 972 agree (need 800); 66 Leader in Me schools among them]
+ok   OEP 2024-25: the rows' growth measure equals the pack's value on every band  [1222 of 1222]
+ok   the OEP workbooks' ids with a lost leading zero were padded back to seven digits
+ok   the closure years are on no Arkansas card  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   attendance_rate sits in no closure year on the rows  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   oss_per100 sits in no closure year on the rows  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   iss_per100 sits in no closure year on the rows  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   wsi sits in no closure year on the rows  [[2017, 2018, 2019]]
+ok   essa_index sits in no closure year on the rows  [[2017, 2018, 2019, 2022, 2023]]
+ok   growth_score sits in no closure year on the rows  [[2018, 2019, 2022, 2023, 2024, 2025]]
+ok   the pack carries no closure year
+ok   the 2016-17 growth column (value-added with language growth) carries no content growth value in the pack or the rows  [967 value-added scores in the pack for 2016-17]
+ok   the card's letter-grade line is drawn on the ESSA-era grades only (2016-17 to 2022-23)  [[2017, 2018, 2019, 2022, 2023]]
+ok   the points-based grades sit in the pack under their own scheme and the LEARNS grades under theirs
+ok   the 2022-23 workforce file carries no value on the 2017-2021 index and no attrition share
+ok   suspension rates on fewer than 20 students are not drawn
+ok   every exclusion is counted on the cleaning audit
+ok   DOMO's own 2018 graduation rates were never overwritten by the state's  [165 rows identical to the DOMO export]
+ok   the state's graduation rate fills only the years DOMO lacks, on the secondary band  [years [2015, 2016, 2017], 295 schools; DOMO from 2018]
+ok   the filled 2016-17 graduation rates are the state's own (the 2017-18 file's lagged rate, filed on its class)  [280 of 280]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 9,754 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [225 Leader in Me school-years on the cards]
+ok   Attendance rate: the latest Leader in Me point recomputes from the long table and the membership file  [2026: payload 93.72 (n=44) vs offline 93.72 (n=44)]
+ok   Out-of-school suspensions per 100 students: the latest Leader in Me point recomputes from the long table and the membership file  [2026: payload 11.25 (n=43) vs offline 11.25 (n=43)]
+ok   Workforce Stability Index (2016-17 to 2018-19): the latest Leader in Me point recomputes from the long table and the membership file  [2019: payload 92.0 (n=22) vs offline 92.0 (n=22)]
+ok   ESSA School Index: the latest Leader in Me point recomputes from the long table and the membership file  [2023: payload 63.85 (n=25) vs offline 63.85 (n=25)]
+ok   Content growth score: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 80.7 (n=36) vs offline 80.7 (n=36)]
+ok   Graded A or B (ESSA-era letter grades): the latest Leader in Me point recomputes from the long table and the membership file  [2023: payload 12.0 (n=25) vs offline 12.0 (n=25)]
+ok   Attendance rate: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=44]
+ok   Out-of-school suspensions per 100 students: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=43]
+ok   In-school suspensions per 100 students: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=43]
+ok   Bullying infractions per 100 students: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=43]
+ok   Corporal punishment per 100 students: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=43]
+ok   Workforce Stability Index (2016-17 to 2018-19): the Leader in Me point in 2019 rests on at least three counted schools and a comparison line exists  [n=22]
+ok   Teacher attrition: the Leader in Me point in 2019 rests on at least three counted schools and a comparison line exists  [n=22]
+ok   Teachers retained (2022-23 index): the Leader in Me point in 2023 rests on at least three counted schools and a comparison line exists  [n=25]
+ok   ESSA School Index: the Leader in Me point in 2023 rests on at least three counted schools and a comparison line exists  [n=25]
+ok   Content growth score: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=36]
+ok   Graded A or B (ESSA-era letter grades): the Leader in Me point in 2023 rests on at least three counted schools and a comparison line exists  [n=25]
+ok   every card measure carries the poverty context line
+ok   the card carries at most a dozen measures, and the ones the files support  [11 on the card]
+ok   attendance_rate is a measure in the rows with Leader in Me school-years behind it  [223 Leader in Me school-years]
+ok   oss_per100 is a measure in the rows with Leader in Me school-years behind it  [214 Leader in Me school-years]
+ok   growth_score is a measure in the rows with Leader in Me school-years behind it  [154 Leader in Me school-years]
+ok   essa_index is a measure in the rows with Leader in Me school-years behind it  [102 Leader in Me school-years]
+ok   wsi is a measure in the rows with Leader in Me school-years behind it  [51 Leader in Me school-years]
+ok   the research pack's per-school Arkansas values are keyed to schools on the page  [9,846 records]
+ok   every pack column carries a label  [50 columns]
+ok   every school with a state id on the page has it in the pack  [1,136 of 1,164]
+ok   look-alike mode names out-of-school suspensions per 100 as its behavior measure
+ok   the methods page carries the join, attendance, discipline, workforce and grading-scheme notes
+ok   the banner names the four Arkansas families
+ok   the discipline denominator is the state's own membership for nearly every rated school-year  [{'ADM': 12747, 'under 20 students': 8, 'none': 1}]
+
+ALL ARKANSAS CHECKS PASS

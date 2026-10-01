@@ -2,8 +2,8 @@
  "state": "SC",
  "name": "South Carolina",
  "folder": "south-carolina",
- "built": "2026-09-11",
- "seconds": 207,
+ "built": "2026-10-01",
+ "seconds": 141,
  "builder": "build_payload_core.py",
  "page_kind": "full",
  "lim_headline_n": 116,
@@ -17,39 +17,39 @@
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
    "bytes": 132812308,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/lim/Build/work/SC/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/SC/data/Subjects_Tests_FINAL (8).csv",
    "rows": 97269
   },
   "roster": {
-   "path": "/home/claude/lim/Build/work/SC/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/SC/data/LIM Schools (Current_Active) (11).csv",
    "rows": 1993
   },
   "comparison": {
-   "path": "/home/claude/lim/Build/work/SC/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/SC/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 8844
   },
   "mra": {
-   "path": "/home/claude/lim/Build/work/SC/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/SC/data/All MRA Surveys.csv",
    "rows": 283
   }
  },
@@ -72,11 +72,12 @@
   "SC Career Readiness Assessment 2026.xlsx",
   "SC LIM Schools Data 2015_2025.csv",
   "SC Subject Testing 2015_2025.csv",
-  "sc_2026_subjects.csv"
+  "sc_2026_subjects.csv",
+  "sc_2026_subjects_audit.json"
  ],
  "extras_module": "sc_core_extras",
  "verified": true,
- "dashboard_bytes": 3122207,
+ "dashboard_bytes": 3102279,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -89,23 +90,23 @@
    "Science",
    "Social Studies"
   ],
-  "rows_share_of_prior": 0.52,
+  "rows_share_of_prior": 0.44,
   "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 95451,
-   "levels 3 and 4": 60.6,
+   "rows": 94624,
+   "levels 3 and 4": 60.3,
    "levels 2, 3 and 4": 0.2,
    "level 4 alone": 0.3,
    "100 minus level 1": 1.8,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 60.6,
+   "levels_sum_to_100_share": 60.2,
    "structure": "four levels, numbered from the bottom; proficiency is the top 2",
    "n_levels": 4,
    "proficient_from": 3,
    "reversed_numbering": false,
-   "coverage": 61.7,
+   "coverage": 61.4,
    "years_ok": [
     2015,
     2016,
@@ -169,8 +170,8 @@
    "latest_year_ok": true,
    "reason": null,
    "combination_shares": {
-    "levels 3 and 4": 66.5,
-    "levels 2, 3 and 4": 23.4,
+    "levels 3 and 4": 66.2,
+    "levels 2, 3 and 4": 23.6,
     "levels 1 and 2 (1 the top)": 2.5,
     "levels 1, 2 and 3 (1 the top)": 1.6
    },
@@ -754,8 +755,8 @@
     {
      "year": 2026,
      "subject": "ELA",
-     "rows": 2849,
-     "level_rows": 2849,
+     "rows": 2719,
+     "level_rows": 2719,
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
@@ -763,8 +764,8 @@
     {
      "year": 2026,
      "subject": "Math",
-     "rows": 2840,
-     "level_rows": 2840,
+     "rows": 2143,
+     "level_rows": 2143,
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
@@ -812,5 +813,16 @@
   },
   "subjects_by_keyword": [],
   "subjects_excluded": []
- }
+ },
+ "best_schools": {
+  "qualified": 18,
+  "in_the_process": 15,
+  "lapsed_on_the_list": 3,
+  "reviewed": 141,
+  "measures": 69,
+  "outcomes": 27,
+  "improved_every_year": 7,
+  "lapsed_longer_ago": 46
+ },
+ "best_schools_added": "2026-09-30"
 }

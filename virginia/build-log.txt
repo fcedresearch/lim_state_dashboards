@@ -5,21 +5,22 @@ reading the core for Virginia ...
 [core] Leader in Me roster: 330 rows
 [core] comparison schools: 17,258 rows
 [core] MRA surveys: 45 rows
-  subject rows added from the state's own file: 7,899 (Virginia 2025-26 SOL reading and math (Virginia Department of Education))
-  subject rows 170,743 · roster rows 330 (34 schools) · comparison rows 17,258 (1796 schools) · MRA surveys 45
+  newest-year like-for-like: 64 grade-test pairs not in the state's newest file; 75 rows at 42 schools left out of that year
+  subject rows added from the state's own file: 8,917 (Virginia 2025-26 SOL reading, math and grade 5 science (Virginia Department of Education))
+  subject rows 171,761 · roster rows 330 (34 schools) · comparison rows 17,258 (1796 schools) · MRA surveys 45
   subject labels excluded (not achievement tests): ['History (Alternate)', 'Mathematics (Alternate)', 'Science (Alternate)']
 [core] Leader in Me roster: 56,181 rows
   exits: 22 of 34 roster schools carry an expiration date; 10 past it by more than 30 days (exited), 0 inside the grace window, 12 in the future, 12 undated (11 with a start date)
   1,830 schools · 132 districts
 applying the cleaning rules ...
   Math 2026: 1,121 rows kept out of the combined figure (Virginia's 2025-26 grade 6-8 math is left out (the state's file groups it by the grade of the test taken), so 2025-26 math covers grades 3-5 only and would change the combined figure's make-up for middle schools; it shows on the math view for grades 3-5)
-  ELA 2026: 1,696 rows kept out of the combined figure (2026 is kept out of the combined reading-and-math figure because the combined figure needs both subjects on the same grades at each end; 2025-26 reading shows on the reading view)
-  74,302 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  ELA 2026: 1,654 rows kept out of the combined figure (2026 is kept out of the combined reading-and-math figure because the combined figure needs both subjects on the same grades at each end; 2025-26 reading shows on the reading view)
+  75,344 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
   Leader in Me school-years counted: 174 of 340 reviewed
   no start date: 3 schools · dated exits: 8 (school-years after an exit with rows: 26) · aggregate 'All grades' rows used 0, skipped 0
-  achievement levels as measures: yes (three levels, numbered from the bottom; proficiency is the top 2; 94.9% of rows in years and subjects whose levels add up)
+  achievement levels as measures: yes (three levels, numbered from the bottom; proficiency is the top 2; 94.3% of rows in years and subjects whose levels add up)
   level values blanked on 3 year-subject cells that do not add up: 2014-15 Social Studies, 2015-16 Social Studies, 2016-17 Social Studies
-  proficiency = levels 2, 3 and 4 on 94.8% of rows
+  proficiency = 100 minus level 1 on 94.2% of rows
 folding in Virginia's own measures (va_core_extras) ...
   school type from NCES: Title I on 1,808 schools (721 yes), charter 7, magnet 119, alternative 6; Title I published 2017-2022, carried forward after
   funders: 22 Virginia schools carry a funding source (20 on the page; Kern 8, 6 on the page); latest non-blank year per school
@@ -28,15 +29,15 @@ building matched pairs, inside each band ...
   MRA: 39 surveys · 17 schools · 125 sentinel values · 5 shells
   headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 23, 'comp_n': 1709, 'lim_change': 2.27, 'comp_change': 1.67, 'p': 0.734} · without the 11 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 13, 'comp_n': 1709, 'lim_change': 1.25, 'comp_change': 1.67, 'p': 0.785}
   roster: 21 counted, 10 exited, 0 not counted yet, 3 not counted
-best-performing schools: 5 of 23 counted schools, 55 measures in 11 outcomes
+best-performing schools: 6 of 23 counted schools, 55 measures in 11 outcomes
 
-wrote va_payload.json  (39.6 MB, 74,302 rows) · page kind full (23 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '5d61da568208'}
+wrote va_payload.json  (40.1 MB, 75,344 rows) · page kind full (23 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
 
 $ python3 build2.py va_payload.json VA_Dashboard.html VA_Methods.html
-payload 39.6 MB -> 2.54 MB gzip
-VA_Dashboard.html: 3619 KB
-VA_Methods.html: 48 KB
+payload 40.1 MB -> 2.56 MB gzip
+VA_Dashboard.html: 3638 KB
+VA_Methods.html: 50 KB
 
 $ python3 /home/claude/sdf/Build/verify_core.py --state VA --work /home/claude/work1/VA
 
@@ -131,7 +132,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.9s]
+ok   load time is workable  [0.8s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -184,9 +185,9 @@ ok   the MRA view downloads one row per school, year and measure  [1,011 rows]
 ok   leaving the MRA tab restores the explore view
 ok   export c1.pptx downloads, opens and carries the chart image  [163,676 bytes]
 ok   the pptx export is named for the state and chart  [VA_Meeting_or_exceeding_the_standard_levels_2_and_3_year_by_year_Virginia_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [162,050 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [162,284 bytes]
 ok   the docx export is named for the state and chart  [VA_Meeting_or_exceeding_the_standard_levels_2_and_3_year_by_year_Virginia_schools.docx]
-ok   the research pack downloads with its sections  [36,704 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'roster']]
+ok   the research pack downloads with its sections  [36,795 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'roster']]
 ok   the pack's Leader in Me count for the district is the page's  [5 vs 5]
 ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Virginia schools like Norfolk City Public Schools’, between 2021-22 and 2024-25, Leader in Me schools rose 1.8% on Me]
 ok   the look-alike box reports both counts or says why not  [Schools like Norfolk City Public Schools’: 3 Leader in Me schools and 185 comparison schools look like Norfolk City Public Schools’ 41 schools with results in t]
@@ -238,22 +239,26 @@ $ python3 /home/claude/sdf/Build/states/va_core_verify.py --work /home/claude/wo
 Virginia's own measures
 --------------------------------------------------------------------------
 ok   the prepared 2025-26 file and the working subject file are both in data/  [va_2026_subjects.csv True, subject pull True]
-ok   the prepared file has one row per school, grade and subject  [9,299 rows, 1,488 schools]
+ok   the prepared file has one row per school, grade and subject  [11,565 rows, 1,488 schools]
 ok   every prepared value is a percentage from 0 to 100  [0 outside]
-ok   the prepared file is 2025-26 grades 3-8 English Reading and Mathematics only, with no levels
+ok   the prepared file is 2025-26 grades 3-8 English Reading and Mathematics, grade 5 Science and the VA Studies and Civics and Economics rows only, with no levels and nothing past grade 8  [11,565 rows: Mathematics 4,703, English Reading 4,596, Science 1,093, VA Studies 877, Civics and Economics 296]
+ok   the page reads exactly the tests the module says it reads (everything else in the prepared file is left out by name)
 ok   each prepared id is its FIPS parts
-ok   2025-26 rows are in the working subject file, and 2025-26 is the last year there  [7,899 rows in 2026]
-ok   grades 6-8 math carries no 2025-26 row in the working file, and the prepared file still holds those rows  [1,400 prepared, 0 in the working file]
-ok   every 2025-26 row in the working subject file is the prepared file's own value  [7,899 of 7,899 agree; 7,899 prepared rows the page reads]
+ok   2025-26 rows are in the working subject file, and 2025-26 is the last year there  [8,917 rows in 2026]
+ok   grades 6-8 math and every other test the module leaves out carry no 2025-26 row in the working file, and the prepared file still holds the grades 6-8 math rows  [2,573 prepared rows left out (1,400 grade 6-8 math), 0 in the working file]
+ok   every 2025-26 row in the working subject file is the prepared file's own value, and every prepared row the page reads is there except those the newest-year like-for-like rule leaves out  [8,917 of 8,917 agree; 8,992 prepared rows the page reads, 75 left out like for like]
 ok   the page runs to 2025-26  [years 2015-2026]
-ok   the page carries 2025-26 rows for reading and for math  [ELA 1,696, Math 1,121]
-ok   every 2025-26 value on the page is a percentage from 0 to 100  [2,817 values]
+ok   the page carries 2025-26 rows for reading and for math  [ELA 1,654, Math 1,121]
+ok   every 2025-26 value on the page is a percentage from 0 to 100  [3,859 values]
 ok   no 2025-26 math row on the page is a grades 6-8 (secondary) row
 ok   the grade table carries no 2025-26 math value for grades 6-8  [0 rows]
 ok   the grade table carries 2025-26 reading for grades 3-8
+ok   the grade table's 2025-26 rows are grades 3-8 only (no high school or end-of-course row) and its 2025-26 science is grade 5 only  [ELA 4,488, Math 3,276, Science 1,084]
+ok   the page carries 2025-26 grade 5 science (primary band) and no 2025-26 secondary science  [1,084 rows]
+ok   social studies carries no 2025-26 row on the page while the module holds the history tests  [0 rows]
 ok   Leader in Me schools carry 2025-26 rows on the page  [21 Leader in Me schools in 2025-26]
 ok   the methods page carries the 2025-26 fold's note
-ok   the cleaning rules carry the 2025-26 fold's rule and the grades 6-8 math exclusion
+ok   the cleaning rules carry the 2025-26 fold's rule and the grades 6-8 math exclusion (and the history hold while it stands)
 ok   the sources list names the Virginia Department of Education's SOL file
 ok   the combined figure keeps exactly the exclusions the module declares (none for Virginia's 2025-26)  [declared [('ELA', 2026), ('Math', 2026)]]
 

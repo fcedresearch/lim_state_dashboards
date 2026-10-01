@@ -2,8 +2,8 @@
  "state": "CO",
  "name": "Colorado",
  "folder": "colorado",
- "built": "2026-09-30",
- "seconds": 736,
+ "built": "2026-10-01",
+ "seconds": 152,
  "builder": "build_payload_core.py",
  "page_kind": "full",
  "lim_headline_n": 30,
@@ -66,7 +66,7 @@
  ],
  "extras_module": "co_core_extras",
  "verified": true,
- "dashboard_bytes": 3274619,
+ "dashboard_bytes": 3271103,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -78,18 +78,18 @@
   "missing": [
    "Science"
   ],
-  "rows_share_of_prior": 0.58,
+  "rows_share_of_prior": 0.55,
   "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 119958,
+   "rows": 119535,
    "levels 3 and 4": 10.4,
    "levels 2, 3 and 4": 1.9,
    "level 4 alone": 0.1,
    "100 minus level 1": 0.1,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 8.2,
+   "levels_sum_to_100_share": 8.3,
    "structure": "no combination of the reported levels reproduces the proficiency rate",
    "n_levels": null,
    "proficient_from": null,
@@ -131,19 +131,19 @@
     "y0": 2022,
     "y1": 2026,
     "lim_n": 30,
-    "comp_n": 1092,
-    "lim_change": 3.5,
-    "comp_change": 2.45,
-    "p": 0.561
+    "comp_n": 1051,
+    "lim_change": 3.47,
+    "comp_change": 2.82,
+    "p": 0.72
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
     "lim_n": 26,
-    "comp_n": 1092,
-    "lim_change": 3.43,
-    "comp_change": 2.45,
-    "p": 0.637
+    "comp_n": 1051,
+    "lim_change": 3.4,
+    "comp_change": 2.82,
+    "p": 0.783
    },
    "schools": 7
   },

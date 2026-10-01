@@ -2,86 +2,94 @@
  "state": "AL",
  "name": "Alabama",
  "folder": "alabama",
- "built": "2026-09-08",
- "seconds": 143,
+ "built": "2026-10-01",
+ "seconds": 102,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 95,
- "schools": 1327,
+ "lim_headline_n": 77,
+ "schools": 1359,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 158,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/AL/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/AL/data/Subjects_Tests_FINAL (8).csv",
    "rows": 88300
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/AL/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/AL/data/LIM Schools (Current_Active) (11).csv",
    "rows": 1463
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/AL/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/AL/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 10682
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/AL/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/AL/data/All MRA Surveys.csv",
    "rows": 112
   }
  },
  "state_files": [
   "2021-2022-SIR-Web-Report-by-School.xlsx",
+  "All Other Schools (Non-LiM & Exited) (1).csv",
   "CCR_AL/",
+  "Discipline_AL 21_25/",
+  "Non-LIM Schools (9).csv",
   "PULL-MANIFEST_AL.csv",
   "Postsecondary Enrollment_AL/",
+  "Proficiency_AL_2026/",
   "RD_SD_2024214_2022-2023-SIR-Web-Report-by-School_V1.0.xlsb",
   "RD_SD_202495_2023-2024-SIR-Web-Report-by-School_V1.0.xlsb",
   "RD_SD_2025102_2025SIRReportbySch_v1.xlsx",
-  "School Grade_AL/"
+  "School Grade_AL/",
+  "al_2026_subjects.csv",
+  "al_2026_subjects_audit.json"
  ],
  "extras_module": "al_core_extras",
  "verified": true,
- "dashboard_bytes": 3240404,
+ "dashboard_bytes": 3394709,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
-  "status": "complete",
+  "year": 2026,
+  "label": "2025-26",
+  "status": "partial",
   "subjects": [
    "ELA",
    "Math",
    "Science"
   ],
-  "missing": [],
-  "rows_share_of_prior": 0.97,
-  "prior_year": 2024
+  "missing": [
+   "Science"
+  ],
+  "rows_share_of_prior": 0.53,
+  "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 79302,
+   "rows": 85453,
    "levels 3 and 4": 100.0,
    "levels 2, 3 and 4": 0.1,
    "level 4 alone": 1.1,
@@ -102,7 +110,8 @@
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "years_out": [],
    "cells_out": [],
@@ -112,7 +121,7 @@
     "levels 3 and 4": 100.0,
     "levels 2, 3 and 4": 0.1,
     "levels 1 and 2 (1 the top)": 2.3,
-    "levels 1, 2 and 3 (1 the top)": 1.1
+    "levels 1, 2 and 3 (1 the top)": 1.2
    },
    "cells": [
     {
@@ -411,6 +420,33 @@
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "ELA",
+     "rows": 2967,
+     "level_rows": 2967,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Math",
+     "rows": 2967,
+     "level_rows": 2967,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Science",
+     "rows": 217,
+     "level_rows": 217,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
     }
    ],
    "levels_as_measures": true
@@ -431,25 +467,34 @@
     "high_poverty_share": 24.3
    }
   },
-  "statewide_jumps": [],
+  "statewide_jumps": [
+   {
+    "subject": "ELA",
+    "from": 2025,
+    "to": 2026,
+    "from_mean": 51.2,
+    "to_mean": 60.5,
+    "change": 9.3
+   }
+  ],
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 95,
-    "comp_n": 1042,
-    "lim_change": 9.37,
-    "comp_change": 7.51,
-    "p": 0.026
+    "y1": 2026,
+    "lim_n": 77,
+    "comp_n": 761,
+    "lim_change": 11.67,
+    "comp_change": 11.18,
+    "p": 0.658
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 26,
-    "comp_n": 1042,
-    "lim_change": 7.2,
-    "comp_change": 7.51,
-    "p": 0.765
+    "y1": 2026,
+    "lim_n": 19,
+    "comp_n": 761,
+    "lim_change": 11.41,
+    "comp_change": 11.18,
+    "p": 0.907
    },
    "schools": 72
   },
@@ -457,14 +502,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 31,
-  "in_the_process": 30,
+  "qualified": 30,
+  "in_the_process": 29,
   "lapsed_on_the_list": 1,
-  "reviewed": 95,
+  "reviewed": 93,
   "measures": 58,
   "outcomes": 15,
-  "improved_every_year": 10,
+  "improved_every_year": 7,
   "lapsed_longer_ago": 59
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-30"
 }

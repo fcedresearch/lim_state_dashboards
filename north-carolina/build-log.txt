@@ -1,0 +1,381 @@
+
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state NC --core /home/claude/sdf/Core --out /home/claude/work1/NC --data /home/claude/work1/NC/data --extras nc_core_extras
+reading the core for North Carolina ...
+[core] subjects: 173,498 school rows kept; dropped 20,403 rows with no school id and 3,207 with an id but no school record
+[core] Leader in Me roster: 1,865 rows
+[core] comparison schools: 22,705 rows
+[core] MRA surveys: 302 rows
+  newest-year like-for-like: 3 grade-test pairs not in the state's newest file; 0 rows at 0 schools left out of that year
+  subject rows added from the state's own file: 14,735 (North Carolina 2025-26 End-of-Grade and End-of-Course results (NC DPI disaggregated data set))
+  subject rows 188,233 · roster rows 1,865 (195 schools) · comparison rows 22,705 (2567 schools) · MRA surveys 302
+[core] Leader in Me roster: 56,181 rows
+  crosswalk: NC DPI agency codes to the DOMO id (district, then name; charters by city and by statewide name; a state id that changed is settled by tested years)
+    DOMO schools 2,762 · state schools 3,105 · crosswalked 2,712 (district+name 2537, district+name contains 103, district+loose name 28, city+name contains (charter) 16, city+loose name 15, district+name, years disambiguated 12, truncated charter name 1) · Leader in Me 195 of 195
+    independent audit (state average daily membership vs DOMO enrollment, neither used to build the map): 2,491 schools, r = 0.9972, median size difference 2.63%, 99.2% within 25%
+  2025-26 eg_met: 2,583 schools from the workbook; the reader gives back the 2024-25 table on 2,590 of 2,590 schools; state schools' mean 70.54 -> 72.71, median school change 0.0, r = 0.287 on 2,560 schools
+  2025-26 eg_index: 2,583 schools from the workbook; the reader gives back the 2024-25 table on 2,590 of 2,590 schools; state schools' mean -0.1 -> -0.01, median school change -0.01, r = 0.493 on 2,560 schools
+  2025-26 act: 695 schools from the workbook; the reader gives back the 2024-25 table on 695 of 695 schools; state schools' mean 29.93 -> 30.52, median school change 0.3, r = 0.924 on 683 schools
+  2025-26 workkeys: 452 schools from the workbook; the reader gives back the 2024-25 table on 452 of 452 schools; state schools' mean 58.76 -> 58.71, median school change -1.05, r = 0.807 on 428 schools
+  2025-26 grad_rate: 696 schools from the workbook; the reader gives back the 2024-25 table on 691 of 691 schools; state schools' mean 85.61 -> 86.48, median school change 0.0, r = 0.935 on 681 schools
+  2025-26 title1: 2,678 schools from the workbook; the reader gives back the 2024-25 table on 2,668 of 2,668 schools; state schools' mean 61.73 -> 61.54, median school change 0.0, r = 0.955 on 2,655 schools
+  held at the report-card tables' last year: beg_teachers, ccr, chronic_absent, college, eds, iss_per1k, lowperf, nbpts, rta, spg_ab, spg_score, sts_per100
+  crosswalk: Southside/Ashpole Elementary (Public Schools of Robeson County, 370393001588) shares state code 780408 with the same school under its current id, so it keeps its DOMO measures and no North Carolina measures
+  crosswalk: Moss Street Elementary (Rockingham County Schools, 370399001540) shares state code 790358 with the same school under its current id, so it keeps its DOMO measures and no North Carolina measures
+  poverty: North Carolina's economically-disadvantaged share on 2,686 schools (195 Leader in Me), latest year per school {2017: 11, 2018: 23, 2019: 19, 2020: 11, 2021: 6, 2022: 25, 2023: 13, 2024: 29, 2025: 2549}; against the lunch share r = 0.629 on 2,667 schools, lunch share +29.3 points above it at the median; high-poverty 9.2% of Leader in Me schools on the state's measure vs 69.2% on the lunch share
+  poverty: North Carolina's own measure (North Carolina economically-disadvantaged share (NC DPI report cards, rcd_acc_eds)) replaces the lunch share on 2,686 schools (195 Leader in Me); 76 keep DOMO's
+  exits: 169 of 195 roster schools carry an expiration date; 52 past it by more than 30 days (exited), 0 inside the grace window, 117 in the future, 26 undated (25 with a start date)
+  districts: 232 charter schools grouped as "Charter schools (statewide)" (225 flagged CH by the state, 7 one-school DOMO districts the crosswalk could not reach)
+  districts regrouped by North Carolina's module on 232 schools (Charter schools (statewide))
+  2,762 schools · 118 districts
+applying the cleaning rules ...
+  79,314 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 998 of 1950 reviewed
+  no start date: 4 schools · dated exits: 47 (school-years after an exit with rows: 123) · aggregate 'All grades' rows used 0, skipped 0
+  achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 10% of rows (a five-level state whose export carries four columns, usually))
+  proficiency = 100 minus level 1 on 51.4% of rows
+folding in North Carolina's own measures (nc_core_extras) ...
+  crosswalk reach: 195 of 195 Leader in Me schools, 2,515 of 2,567 comparison schools
+  card: 15 North Carolina measures, each group on each year's own membership
+  incidents: 12 statewide points, 679 district-year rows
+  core measures filled from the state's tables where DOMO had none: chronic_absent 47,426 rows (DOMO carries 0 chronic-absence values for North Carolina), grad_rate 7,543 rows (DOMO's own value is the state's cohort rate within 0.15 on 98.0% of 2,906 overlapping school-years and is kept); filled here rather than through fill_measures, see FILL_VIA_HOOK
+  per-school report-card records for the pack: 17,874 · student-group rows 105,579 · counts 27,811 · published agency-years 2440 for 116 districts · state schools with no DOMO record in 2024-25: 151
+  school type from NCES: Title I on 2,697 schools (1,451 yes), charter 220, magnet 168, alternative 77; Title I published 2017-2022, carried forward after
+  funders: 116 North Carolina schools carry a funding source (112 on the page; Kern 50, 47 on the page); latest non-blank year per school
+building matched pairs, inside each band ...
+  pairs 132  by band {'Primary': {'pairs': 94, 'unmatched': 0}, 'Secondary': {'pairs': 38, 'unmatched': 0}}
+  MRA: 275 surveys · 126 schools · 839 sentinel values · 19 shells
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 140, 'comp_n': 2215, 'lim_change': 8.15, 'comp_change': 8.37, 'p': 0.75} · without the 25 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 117, 'comp_n': 2215, 'lim_change': 8.1, 'comp_change': 8.37, 'p': 0.73}
+  roster: 137 counted, 52 exited, 2 not counted yet, 4 not counted
+best-performing schools: 46 of 142 counted schools, 55 measures in 18 outcomes
+
+wrote nc_payload.json  (51.5 MB, 79,314 rows) · page kind full (140 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
+
+$ python3 build2.py nc_payload.json NC_Dashboard.html NC_Methods.html
+payload 51.5 MB -> 4.59 MB gzip
+NC_Dashboard.html: 6279 KB
+NC_Methods.html: 65 KB
+
+$ python3 /home/claude/sdf/Build/verify_core.py --state NC --work /home/claude/work1/NC
+
+--------------------------------------------------------------------------
+Tier 0 — install and input-value audit
+--------------------------------------------------------------------------
+ok   the template in use carries the brand palette and the ink helper
+ok   the template carries the three-school floor in headline and movement
+ok   the template reads the payload's raw window on the insights tab
+ok   the template honours the composite row flag
+ok   the template carries the research pack, look-alike mode and the school list
+ok   the office helper carries the Word table builder
+ok   the subject pull is one state's (federal id state code)
+ok   the roster and comparison pulls are one state's
+ok   2019-20 rows, if the file has any, are excluded from the payload  [0 rows in the file]
+ok   no duplicate school-year-grade-subject rows
+ok   no test value above 100
+ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': -0.2, 'PercentLevel2': -0.1, 'PercentLevel3': -0.1, 'PercentLevel4': -0.1, 'PercentMetStandard': 0.0}]
+ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
+ok   every comparison row is LIM School = false
+ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   the roster's '% White' is a count, not a percentage
+ok   one expiration date per roster school
+ok   every expiration date parsed
+ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
+ok   the exit rule's counts recompute from the roster  [52 exited, 0 in grace, 117 future]
+ok   the grace window is the 30 days Eve set
+ok   MRA exact-100 values were counted as sentinels  [50 composite cells at 100, 1 in 90-99.9]
+ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
+ok   no school appears in both groups in the same year
+
+--------------------------------------------------------------------------
+Tier 1 — rules and maths
+--------------------------------------------------------------------------
+ok   lim_rules.py self-tests pass
+ok   skill_version.py self-tests pass
+ok   payload carries a build stamp
+ok   years exclude both COVID years
+ok   the straight-numbers window starts in 2022 or later
+ok   the long window is scored relative to the state
+ok   no Leader in Me row counted before its full year was finished  [0 rows]
+ok   schools with no start date appear in neither group  [4 schools]
+ok   the count of undated schools is on the methods page
+ok   no row survives after a school's dated exit, in either group  [0 rows]
+ok   exited schools keep their true Leader in Me years  [48 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [52 exited (0 from DOMO's flags)]
+ok   lim_exit carries every exited school and nothing else
+ok   the roster section lists every roster school once
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 137, 'exited': 52, 'not counted': 4, 'not counted yet': 2}]
+ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
+ok   the headline sensitivity without the undated schools is on the methods page
+ok   size bands are the NCES categories in the payload's order
+ok   the poverty share rides on most rows for the look-alike caliper  [100%]
+ok   every offered measure is carried by at least one school-year
+ok   the composite flag keeps science, social studies and writing out of the no-filter view
+ok   the grade table lists tested grades in order and every school in it has a name
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [1426 schools]
+ok   the grade table carries no school-year the rules dropped
+ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 10% of rows (a five-level state whose export carries four columns, usually)]
+ok   school names and start dates are in the payload for the pack
+ok   MRA by-school rows exist for the pack
+ok   the MRA respondent map names a group or a blend for every measure
+ok   look-alike settings are in the payload with their rationale
+ok   a Leader in Me school's pre-start years count in the comparison group  [2,488 rows]
+ok   Lighthouse schools are inside the Leader in Me family
+ok   combined-grade schools appear in both bands  [432 schools]
+ok   the school count never exceeds the band-slice count  [2355 schools vs 2623 band slices]
+ok   pairs are built inside bands
+ok   the by-band pair counts sum to the total
+ok   no comparison school is used twice
+ok   no Leader in Me school is paired twice inside a band
+ok   the signed baseline gap recomputes to the payload's  [offline -0.040 vs payload -0.040 on 132 pairs]
+ok   the mean signed baseline gap is under one point  [-0.040]
+ok   the widest single baseline gap is inside the caliper's reach  [3.2 points]
+ok   the printed signed gap is not a negative zero  [-0.04]
+ok   no MRA value of exactly 100 survives into the payload
+ok   every MRA value sits on the published scale
+ok   the MRA trend stays inside one instrument version
+ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
+ok   movers are built on ten or more schools each
+  demo district: Wake County Schools · prospect district: Cumberland County Schools
+
+--------------------------------------------------------------------------
+Tier 2 — behaviour in a real browser
+--------------------------------------------------------------------------
+ok   the page loads and the headline renders
+ok   load time is workable  [1.1s]
+ok   no console errors on load
+ok   chart c1 draws an svg or explains why
+ok   chart c2 draws an svg or explains why
+ok   the MRA card shows exactly when a trend line can be drawn
+ok   the discipline card shows exactly when the payload carries a discipline trend  [payload has no discipline_ga]
+ok   the incidents card shows exactly when the payload carries an incident trend  [payload has incidents]
+ok   the state extras card shows exactly when the payload carries state measures  [15 state measures]
+ok   every state measure on the card draws a Leader in Me and a comparison line
+ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
+ok   the headline p recomputes offline  [page 0.7526 scipy 0.7526 · window 2022-2026 · LiM n=140 mean +8.15 · comparison n=2215 mean +8.37]
+ok   the headline counts schools, not band slices  [page 2355 vs offline 2355 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [140 vs 140]
+ok   the district filter re-renders the headline  [In Wake County Schools schools, between 2021-22 and 2025-26, Leader in Me schools rose 13.]
+ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
+ok   choosing 'Title I schools' narrows the view and names it  [1503 of 2757 schools; In North Carolina Title I schools, between 2021-22 and 2025-26, Leader in Me sch]
+ok   every school in the 'Title I schools' view carries that attribute
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In North Carolina schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2]
+ok   Title I status is known for most schools on the page  [97.8%]
+ok   the Primary band filter re-renders without error
+ok   the Secondary band filter re-renders without error
+ok   measure 'percent_proficient' either draws or says why
+ok   measure 'percent_below' either draws or says why
+ok   measure 'standard_score' either draws or says why
+ok   measure 'chronic_absent' either draws or says why
+ok   measure 'grad_rate' either draws or says why
+ok   the matched toggle re-renders the headline  [In North Carolina schools (matched to similar schools only), between 2021-22 and 2025-26, ]
+ok   the matched view shrinks or equals the Leader in Me count  [88 matched]
+ok   no console errors after the filter sweep
+ok   the insights tab hides the explore view
+ok   Wake County Schools generates cards or says there is nothing to report  [7 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.7525915942295398, 'n1': 140, 'n2': 2215}]
+ok   no console errors on the insights tab
+ok   the MRA tab is offered exactly when the payload carries surveys
+ok   the MRA tab shows its own view and sidebar and hides the explore ones
+ok   the MRA summary renders a sentence  [Across 86 North Carolina Leader in Me schools surveyed in 2024-25, Leadership averaged 76.3 on the M]
+ok   MRA chart c6 draws an svg or explains why
+ok   MRA chart c7 draws an svg or explains why
+ok   MRA chart c10 draws an svg or explains why
+ok   the measure picker offers every MRA measure with data  [37 options, 37 measures with data, 37 in the catalogue]
+ok   the MRA paired test recomputes offline  [page 0.0000 scipy 0.0000 on 72 schools]
+ok   the MRA latest-year school count recomputes offline  [page 86 vs offline 86]
+ok   the MRA same-schools count is every school surveyed more than once  [page 72 vs offline 72]
+ok   choosing the submeasure 'Personal Effectiveness' re-renders the MRA summary  [Across 71 North Carolina Leader in Me schools surveyed in 2024-25, Personal Effectiveness ]
+ok   the MRA district filter narrows to Lincoln County Schools's surveyed schools  [19 of 126 schools]
+ok   the MRA school type filter keeps only schools with that trait  [title1_yes]
+ok   the same-schools switch keeps only schools surveyed at both ends
+ok   no console errors on the MRA tab
+ok   the MRA view downloads one row per school, year and measure  [8,001 rows]
+ok   leaving the MRA tab restores the explore view
+ok   export c1.pptx downloads, opens and carries the chart image  [192,505 bytes]
+ok   the pptx export is named for the state and chart  [NC_Percent_meeting_the_standard_year_by_year_North_Carolina_schools.pptx]
+ok   export c1.docx downloads, opens and carries the chart image  [194,651 bytes]
+ok   the docx export is named for the state and chart  [NC_Percent_meeting_the_standard_year_by_year_North_Carolina_schools.docx]
+ok   the research pack downloads with its sections  [54,820 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
+ok   the pack's Leader in Me count for the district is the page's  [5 vs 5]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In North Carolina schools like Cumberland County Schools’, between 2021-22 and 2025-26, Leader in Me schools rose 10.8% ]
+ok   the look-alike box reports both counts or says why not  [Schools like Cumberland County Schools’: 54 Leader in Me schools and 583 comparison schools look like Cumberland County Schools’ 85 schools with results in thes]
+ok   the matched switch is disabled while an anchor is set
+ok   no console errors in look-alike mode
+ok   the look-alike headline p recomputes offline  [p=0.4215]
+ok   the anchor's own schools are never inside the look-alike groups
+ok   the school list downloads with one row per school  [139 rows, 0 same-name pairs]
+ok   the school list carries traits and change columns
+ok   the grade filter lists the tested grades
+ok   choosing a grade re-renders the headline and names the grade  [In North Carolina grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 6.8% on Pe]
+ok   whole-school measures switch off while a grade is chosen  [3 whole-school measures in the payload]
+ok   dark mode re-renders without errors
+ok   no horizontal overflow at 900px  [0px]
+ok   no horizontal overflow at 700px  [0px]
+ok   the methods page loads
+ok   no console errors on the methods page
+
+--------------------------------------------------------------------------
+Tier 3 — honesty
+--------------------------------------------------------------------------
+ok   the build declares itself real, not a prototype
+ok   the banner names the Subject Test source
+ok   the banner names the roster source
+ok   the banner names the expiration source
+ok   the methods page owns the 'exit' limitation
+ok   the methods page owns the 'snapshot' limitation
+ok   the methods page owns the 'Title I' limitation
+ok   the methods page owns the 'observational' limitation
+ok   the methods page owns the 'both ends' limitation
+ok   poverty_help names the state's own poverty measure  [North Carolina economically-disadvantaged share (NC DPI report cards, rcd_acc_eds)]
+ok   the methods page says poverty comes from the state's own measure
+ok   the methods page names the matching method rather than asserting it
+ok   the level audit is on the methods page
+ok   the subject mapping is on the methods page
+ok   the poverty audit is on the methods page
+ok   the methods page carries the exit-dating box
+ok   the methods page carries the look-alike section
+ok   the undated schools are listed by name in the payload
+
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +8.15 pts (n=140) vs comparison +8.37 pts (n=2215), p=0.7526 -> not significant
+
+==========================================================================
+161 of 161 checks pass
+==========================================================================
+
+$ python3 /home/claude/sdf/Build/states/nc_core_verify.py --work /home/claude/work1/NC
+
+North Carolina's own measures
+--------------------------------------------------------------------------
+ok   the crosswalk reaches every Leader in Me school  [195 of 195]
+ok   the crosswalk reaches nearly every comparison school  [2,515 of 2,567]
+ok   the independent audit holds (state average daily membership vs DOMO enrollment)  [n=2491, r=0.9972, 99.2% within 25%]
+ok   the resolved crosswalk attaches each DOMO id to one state code and each state code to one school  [2,710 rows]
+ok   a state code claimed by two DOMO ids, if any, was resolved rather than joined twice  [2 shared codes in the raw map; set aside: ['Southside/Ashpole Elementary (Public Schools of Robeson County)', 'Moss Street Elementary (Rockingham County Schools)']]
+ok   every Leader in Me school the crosswalk cannot reach is named on the methods page  [0 unreached, 0 named]
+ok   the crosswalk reach and its audit are printed on the methods page
+ok   every school set aside for a shared state code is named on the methods page
+ok   every school-year on a card's Leader in Me line is one the page counts as Leader in Me  [0 disagreements across 828 school-years with rows]
+ok   every school-year on a card's comparison line is one the page counts as comparison  [0 disagreements]
+ok   a school-year on a card without test rows is a roster school the rules count, or a comparison school  [11 counted Leader in Me school-years without test rows]
+ok   a roster school with no start date sits on no card, on either line  [4 undated schools]
+ok   no school-year after a dated exit sits on any card, on either line  [0 school-years across 52 exited schools]
+ok   an exited school keeps its true Leader in Me years on the cards  [49 exited schools with counted years on a card]
+ok   closure years are off every card
+ok   in-school suspensions per 1,000 in 2025, lim: the card's mean and count recompute from rcd_inc2  [file 122.24 (n=138) vs card 122.24 (n=138)]
+ok   in-school suspensions per 1,000 in 2025, comparison: the card's mean and count recompute from rcd_inc2  [file 144.71 (n=2373) vs card 144.71 (n=2373)]
+ok   short-term suspensions per 100 students in 2025, lim: the card recomputes from rcd_inc2 and the state's membership  [12.03 on 138 schools vs card 12.03 on 138]
+ok   short-term suspensions per 100 students in 2025, comparison: the card recomputes from rcd_inc2 and the state's membership  [14.80 on 2371 schools vs card 14.8 on 2371]
+ok   the suspension card carries both groups over six years  [years [2018, 2019, 2022, 2023, 2024, 2025]]
+ok   the district suspension frame uses the payload's own district labels  [679 district-years]
+ok   Read to Achieve is the promoted share and reads the state's own statewide figure (79.4% in 2024-25)  [79.4]
+ok   WorkKeys reads the state's own statewide figure (59.8% of CTE concentrators in 2024-25)  [59.8]
+ok   teacher shares are on the percent scale, not fractions  [beginning 17.07, National Board 9.23]
+ok   college enrollment and ACT are on the percent scale
+ok   the ACT measure carries the state's own name for it (subject tests meeting the benchmark, counted by test, not by student) on the card, the school list and the published table, and the old composite label is gone  [ACT subject tests meeting the benchmark]
+ok   Read to Achieve draws on elementary schools (hundreds a side), WorkKeys on high schools (dozens a side)
+ok   Science and Biology 2024-25 are excluded by name (the core's own state table)  [science years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024]]
+ok   science rows carry the composite flag and nothing else does
+ok   Math III 2024-25 is in (Eve, September 2): secondary math rows exist for 2024-25  [1,453 rows]
+ok   the college-and-career composite has no 2024-25 point
+ok   the two composition measures cannot fire an insight
+ok   every outcome measure carries a poverty-direction context line
+ok   the excluded counts name the closure years, the unreached schools and the shared state codes
+ok   DOMO carries no chronic absence for North Carolina, and the page says so
+ok   chronic absence on the page is the state's own value to the tenth, in every year from 2017-18  [14,581 school-years checked, years [2018, 2019, 2022, 2023, 2024, 2025]]
+ok   no chronic absence value sits on a school the crosswalk does not reach
+ok   chronic absence rows are on the percent scale  [mean 23.0]
+ok   where DOMO carries a graduation rate the page keeps DOMO's value (nothing overwritten)  [2,976 school-years]
+ok   the years DOMO lacks (2014-15, 2015-16) carry the state's cohort rate to the tenth  [930 school-years]
+ok   DOMO's graduation rate is the state's cohort rate on nearly every overlapping school-year (the identity on the methods page)  [98.0% of 2,906]
+ok   graduation never rides on a primary row, and never exceeds the state's 95 cap
+ok   the two measures say where they come from
+ok   the state-table fill is one of the cleaning rules
+ok   the research pack's per-school North Carolina values are keyed to schools on the page  [17,874 records]
+ok   extras_school is one record per school-year
+ok   per-school records carry the suspension rate, the letter grade and the growth status  [15,138 suspension rates, 14,797 letters]
+ok   look-alike mode names the short-term suspension rate as its behavior measure, and the records carry it
+ok   every per-school key has a label for the school list  [unlabelled: []]
+ok   the state school code is in the payload for the pack
+ok   student-group rows are in the pack for seven groups, keyed to schools on the page  [105,579 rows]
+ok   the counts behind the rates carry the state's own membership and the chronic-absence denominators  [27,810 membership figures checked]
+ok   the page's poverty measure is the state's economically-disadvantaged share, and the help text says so  [North Carolina economically-disadvantaged share (NC DPI report cards, rcd_acc_eds)]
+ok   the core's own-measure methods note is on the page
+ok   the state's share reaches nearly every crosswalked school  [2686 schools, 195 Leader in Me]
+ok   each school's poverty share on the page is the state's latest published share, to the tenth  [2,681 schools checked]
+ok   the poverty bands come from the state's measure (a minority of schools high-poverty, not seven in ten)  [13% high-poverty]
+ok   the poverty switch changes the picture materially, and the audit says by how much  [Leader in Me high-poverty 9.2% on the state's measure vs 69.2% on the lunch share]
+ok   the matched pairs were built on the state's poverty measure (three or more pairs a band)  [{'Primary': {'pairs': 94, 'unmatched': 0}, 'Secondary': {'pairs': 38, 'unmatched': 0}}]
+ok   every school the state flags as a charter sits under the charter label on the page  [224 of 224]
+ok   no school under the charter label is one the state files under a regular LEA  [0 crosswalked non-charters in the group]
+ok   the district filter is a list of districts, not of charters  [348 DOMO districts before, 118 labels after]
+ok   the charter group has no LEA code and the district frames use the regrouped labels
+ok   the charter grouping is explained on the methods page and in the cleaning rules
+ok   the demo district carries a state LEA code in the payload  [Wake County Schools -> 920LEA]
+ok   the state's own published figures are in the pack for the district and for the state  [21 district-years, 21 state-years]
+ok   the demo district's published chronic absence is the state's LEA row to the decimal  [Wake County Schools: pack 20.54 vs LEA row 20.54]
+ok   the demo district's published graduation rate is the state's LEA row to the decimal  [Wake County Schools: pack 90.7]
+ok   the state's published chronic absence is the NC-SEA row to the decimal  [pack 24.26]
+ok   the state's schools with no DOMO record are listed for the pack, with their LEA code  [151 schools]
+ok   the 2025-26 indicator workbook's six measures are folded for 2025-26, and only for 2025-26  [folded ['act', 'eg_index', 'eg_met', 'grad_rate', 'title1', 'workkeys']]
+ok   act: the reader gives back the report-card table's 2024-25 values from the 2024-25 workbook on every school both carry, and on every district and state row  [2025: 695 of 695, agencies 116 of 116]
+ok   eg_index: the reader gives back the report-card table's 2024-25 values from the 2024-25 workbook on every school both carry  [2025: 2,590 of 2,590]
+ok   eg_met: the reader gives back the report-card table's 2024-25 values from the 2024-25 workbook on every school both carry  [2025: 2,590 of 2,590]
+ok   grad_rate: the reader gives back the report-card table's 2024-25 values from the 2024-25 workbook on every school both carry, and on every district and state row  [2025: 691 of 691, agencies 116 of 116]
+ok   title1: the reader gives back the report-card table's 2024-25 values from the 2024-25 workbook on every school both carry  [2025: 2,668 of 2,668]
+ok   workkeys: the reader gives back the report-card table's 2024-25 values from the 2024-25 workbook on every school both carry, and on every district and state row  [2025: 452 of 452, agencies 116 of 116]
+ok   every measure the workbook cannot extend is held by name with its reason  [held ['beg_teachers', 'ccr', 'chronic_absent', 'college', 'eds', 'iss_per1k', 'lowperf', 'nbpts', 'rta', 'spg_ab', 'spg_score', 'sts_per100']]
+ok   Met or exceeded growth (EVAAS): the card carries 2025-26 for both groups  [years [2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   EVAAS growth index: the card carries 2025-26 for both groups  [years [2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   Share graded A or B: held, so the card stops at 2024-25 or earlier  [latest 2025]
+ok   School performance score: held, so the card stops at 2024-25 or earlier  [latest 2025]
+ok   In-school suspensions per 1,000 students: held, so the card stops at 2024-25 or earlier  [latest 2025]
+ok   College and career ready share: held, so the card stops at 2024-25 or earlier  [latest 2024]
+ok   Third graders promoted under Read to Achieve: held, so the card stops at 2024-25 or earlier  [latest 2025]
+ok   Graduates enrolling in college: held, so the card stops at 2024-25 or earlier  [latest 2025]
+ok   ACT subject tests meeting the benchmark: the card carries 2025-26 for both groups  [years [2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   CTE concentrators earning a WorkKeys certificate: the card carries 2025-26 for both groups  [years [2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   Beginning teachers: held, so the card stops at 2024-25 or earlier  [latest 2025]
+ok   National Board certified teachers: held, so the card stops at 2024-25 or earlier  [latest 2025]
+ok   Designated low-performing: held, so the card stops at 2024-25 or earlier  [latest 2025]
+ok   Economic disadvantage (context): held, so the card stops at 2024-25 or earlier  [latest 2025]
+ok   Title I schools (context): the card carries 2025-26 for both groups  [years [2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   eg_met 2025-26 per school is the workbook's own display-tab value (read a second way)  [2,481 schools, 0 unmatched]
+ok   Met or exceeded growth (EVAAS) 2025-26, lim: the card's mean and count recompute from the workbook's display tab  [tab 77.30 (n=141) vs card 77.3 (n=141)]
+ok   Met or exceeded growth (EVAAS) 2025-26, comparison: the card's mean and count recompute from the workbook's display tab  [tab 72.65 (n=2296) vs card 72.65 (n=2296)]
+ok   eg_index 2025-26 per school is the workbook's own display-tab value (read a second way)  [2,481 schools, 0 unmatched]
+ok   EVAAS growth index 2025-26, lim: the card's mean and count recompute from the workbook's display tab  [tab -0.00 (n=141) vs card -0.0 (n=141)]
+ok   EVAAS growth index 2025-26, comparison: the card's mean and count recompute from the workbook's display tab  [tab 0.01 (n=2296) vs card 0.01 (n=2296)]
+ok   act 2025-26 per school is the workbook's own display-tab value (read a second way)  [644 schools, 0 unmatched]
+ok   ACT subject tests meeting the benchmark 2025-26, lim: the card's mean and count recompute from the workbook's display tab  [tab 27.26 (n=22) vs card 27.26 (n=22)]
+ok   ACT subject tests meeting the benchmark 2025-26, comparison: the card's mean and count recompute from the workbook's display tab  [tab 30.54 (n=618) vs card 30.54 (n=618)]
+ok   workkeys 2025-26 per school is the workbook's own display-tab value (read a second way)  [432 schools, 0 unmatched]
+ok   CTE concentrators earning a WorkKeys certificate 2025-26, lim: the card's mean and count recompute from the workbook's display tab  [tab 58.84 (n=17) vs card 58.84 (n=17)]
+ok   CTE concentrators earning a WorkKeys certificate 2025-26, comparison: the card's mean and count recompute from the workbook's display tab  [tab 58.36 (n=412) vs card 58.36 (n=412)]
+ok   the 2025-26 graduation rate on the page is the workbook's four-year cohort rate for that school, to the tenth, on secondary rows only  [600 schools, 0 unmatched]
+ok   the state's published 2025-26 ACT, WorkKeys and graduation rate are the workbook's state row; nothing else is claimed for 2025-26  [pack [31.8, 59.1, 88.8]]
+ok   the demo district's published 2025-26 graduation rate is the workbook's district row  [Wake County Schools: pack 91.3 vs tab 91.3]
+ok   every 2024-25-or-earlier value of the folded measures is the report-card table's own, record for record  [51,575 records; page-only 0, table-only 0]
+ok   every 2024-25-or-earlier graduation rate on the page is DOMO's value or, where DOMO has none, the state table's  [4,819 school-years]
+ok   the methods page says which North Carolina measures run to 2025-26, gives the proof, and names what stays at 2024-25
+ok   Met or exceeded growth (EVAAS): the Leader in Me point in 2026 rests on at least three counted schools  [n=141]
+ok   EVAAS growth index: the Leader in Me point in 2026 rests on at least three counted schools  [n=141]
+ok   Share graded A or B: the Leader in Me point in 2025 rests on at least three counted schools  [n=137]
+ok   School performance score: the Leader in Me point in 2025 rests on at least three counted schools  [n=137]
+ok   In-school suspensions per 1,000 students: the Leader in Me point in 2025 rests on at least three counted schools  [n=138]
+ok   College and career ready share: the Leader in Me point in 2024 rests on at least three counted schools  [n=115]
+ok   Third graders promoted under Read to Achieve: the Leader in Me point in 2025 rests on at least three counted schools  [n=98]
+ok   Graduates enrolling in college: the Leader in Me point in 2025 rests on at least three counted schools  [n=18]
+ok   ACT subject tests meeting the benchmark: the Leader in Me point in 2026 rests on at least three counted schools  [n=22]
+ok   CTE concentrators earning a WorkKeys certificate: the Leader in Me point in 2026 rests on at least three counted schools  [n=17]
+ok   Beginning teachers: the Leader in Me point in 2025 rests on at least three counted schools  [n=138]
+ok   National Board certified teachers: the Leader in Me point in 2025 rests on at least three counted schools  [n=133]
+ok   Designated low-performing: the Leader in Me point in 2025 rests on at least three counted schools  [n=138]
+ok   Economic disadvantage (context): the Leader in Me point in 2025 rests on at least three counted schools  [n=138]
+ok   Title I schools (context): the Leader in Me point in 2026 rests on at least three counted schools  [n=142]
+ok   no card cell is built on fewer than three schools
+ok   the fourteen report-card measures are on the card (fifteen with the college-and-career-ready share)  [act, beg_teachers, ccr, college, eds, eg_index, eg_met, iss_per1k, lowperf, nbpts, rta, spg_ab, spg_score, title1, workkeys]
+ok   the methods page owns the Title I-source, masking and suspension limitations
+ok   the banner names the North Carolina report-card tables
+ok   the lowest-level column's two eras are read off the export and named on the page  [level 2 zero on 100.0% of late rows; level 1 is the complement on 100.0%]
+
+ALL NORTH CAROLINA CHECKS PASS

@@ -5,17 +5,18 @@ reading the core for Mississippi ...
 [core] Leader in Me roster: 689 rows
 [core] comparison schools: 6,722 rows
 [core] MRA surveys: 107 rows
-  subject rows added from the state's own file: 3,608 (Mississippi 2025-26 MAAP reading and math (Mississippi Department of Education))
-  subject rows 57,188 · roster rows 689 (76 schools) · comparison rows 6,722 (816 schools) · MRA surveys 107
+  newest-year like-for-like: 1 grade-test pairs not in the state's newest file; 0 rows at 0 schools left out of that year
+  subject rows added from the state's own file: 4,883 (Mississippi 2025-26 MAAP results (Mississippi Department of Education))
+  subject rows 58,463 · roster rows 689 (76 schools) · comparison rows 6,722 (816 schools) · MRA surveys 107
 [core] Leader in Me roster: 56,181 rows
   exits: 64 of 76 roster schools carry an expiration date; 41 past it by more than 30 days (exited), 0 inside the grace window, 23 in the future, 12 undated (11 with a start date)
   892 schools · 163 districts
 applying the cleaning rules ...
-  28,618 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  29,841 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
   Leader in Me school-years counted: 270 of 760 reviewed
-  no start date: 1 schools · dated exits: 35 (school-years after an exit with rows: 81) · aggregate 'All grades' rows used 0, skipped 0
+  no start date: 1 schools · dated exits: 35 (school-years after an exit with rows: 86) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 10% of rows (a five-level state whose export carries four columns, usually))
-  proficiency = level 4 alone on 12.5% of rows
+  proficiency = level 4 alone on 12.2% of rows
 folding in Mississippi's own measures (ms_core_extras) ...
   state files (resolved by pattern; the log names the file each year came from):
     report_card 2017-18: 2017-2018ReportCardData.xlsx
@@ -72,17 +73,17 @@ folding in Mississippi's own measures (ms_core_extras) ...
 building matched pairs, inside each band ...
   pairs 57  by band {'Primary': {'pairs': 31, 'unmatched': 0}, 'Secondary': {'pairs': 26, 'unmatched': 0}}
   MRA: 94 surveys · 36 schools · 384 sentinel values · 5 shells
-  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 30, 'comp_n': 465, 'lim_change': 6.42, 'comp_change': 4.32, 'p': 0.145} · without the 11 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 23, 'comp_n': 465, 'lim_change': 6.85, 'comp_change': 4.32, 'p': 0.152}
-  roster: 31 counted, 41 exited, 3 not counted yet, 1 not counted
-best-performing schools: 6 of 36 counted schools, 56 measures in 18 outcomes
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 35, 'comp_n': 597, 'lim_change': 6.42, 'comp_change': 5.26, 'p': 0.372} · without the 11 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 28, 'comp_n': 597, 'lim_change': 6.77, 'comp_change': 5.26, 'p': 0.326}
+  roster: 33 counted, 41 exited, 1 not counted yet, 1 not counted
+best-performing schools: 5 of 38 counted schools, 56 measures in 18 outcomes
 
-wrote ms_payload.json  (14.8 MB, 28,618 rows) · page kind full (30 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fd5a84a86926'}
+wrote ms_payload.json  (15.3 MB, 29,841 rows) · page kind full (35 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
 
 $ python3 build2.py ms_payload.json MS_Dashboard.html MS_Methods.html
-payload 14.8 MB -> 0.86 MB gzip
-MS_Dashboard.html: 1428 KB
-MS_Methods.html: 56 KB
+payload 15.3 MB -> 0.88 MB gzip
+MS_Dashboard.html: 1451 KB
+MS_Methods.html: 57 KB
 
 $ python3 /home/claude/sdf/Build/verify_core.py --state MS --work /home/claude/work1/MS
 
@@ -131,7 +132,7 @@ ok   exited schools keep their true Leader in Me years  [30 exited schools with 
 ok   the exit counts on the methods page match the rule  [41 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 41, 'counted': 31, 'not counted yet': 3, 'not counted': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 41, 'counted': 33, 'not counted yet': 1, 'not counted': 1}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -149,7 +150,7 @@ ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [1,243 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [289 schools]
-ok   the school count never exceeds the band-slice count  [495 schools vs 657 band slices]
+ok   the school count never exceeds the band-slice count  [632 schools vs 794 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -169,7 +170,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.6s]
+ok   load time is workable  [0.4s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -179,9 +180,9 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [10 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.1451 scipy 0.1451 · window 2022-2026 · LiM n=30 mean +6.42 · comparison n=465 mean +4.32]
-ok   the headline counts schools, not band slices  [page 495 vs offline 495 on 2022-2026]
-ok   the page's Leader in Me count is the builder's  [30 vs 30]
+ok   the headline p recomputes offline  [page 0.3724 scipy 0.3724 · window 2022-2026 · LiM n=35 mean +6.42 · comparison n=597 mean +5.26]
+ok   the headline counts schools, not band slices  [page 632 vs offline 632 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [35 vs 35]
 ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
 ok   choosing 'Title I schools' narrows the view and names it  [637 of 890 schools; In Mississippi Title I schools, between 2021-22 and 2025-26, Leader in Me school]
@@ -196,11 +197,11 @@ ok   measure 'standard_score' either draws or says why
 ok   measure 'chronic_absent' either draws or says why
 ok   measure 'grad_rate' either draws or says why
 ok   the matched toggle re-renders the headline  [In Mississippi schools (matched to similar schools only), between 2021-22 and 2025-26, Lea]
-ok   the matched view shrinks or equals the Leader in Me count  [22 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [25 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Vicksburg Warren School District generates cards or says there is nothing to report  [10 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.14507261642356717, 'n1': 30, 'n2': 465}]
+ok   Vicksburg Warren School District generates cards or says there is nothing to report  [11 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.37236079158957036, 'n1': 35, 'n2': 597}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -219,11 +220,11 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [2,837 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [172,251 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [171,625 bytes]
 ok   the pptx export is named for the state and chart  [MS_Percent_meeting_the_standard_year_by_year_Mississippi_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [172,630 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [172,087 bytes]
 ok   the docx export is named for the state and chart  [MS_Percent_meeting_the_standard_year_by_year_Mississippi_schools.docx]
-ok   the research pack downloads with its sections  [19,544 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [19,712 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it will come back.]
 ok   the look-alike box reports both counts or says why not  [Schools like Rankin County School District’s: 4 Leader in Me schools and 219 comparison schools look like Rankin County School District’s 24 schools with result]
@@ -260,7 +261,7 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +6.42 pts (n=30) vs comparison +4.32 pts (n=465), p=0.1451 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +6.42 pts (n=35) vs comparison +5.26 pts (n=597), p=0.3724 -> not significant
 
 ==========================================================================
 155 of 155 checks pass · 2 skipped
@@ -278,7 +279,7 @@ ok   every disagreement is classified, and the Leader in Me ones are roster-dist
 ok   no state id is on two schools  [879 entries, 879 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page
 ok   the methods page says how the join works and audits it
-ok   the 2024-25 growth index, experienced-teacher share and letter grade on the page equal the state's workbook for Leader in Me schools  [56 of 56 Leader in Me schools with one state id]
+ok   the 2024-25 growth index, experienced-teacher share and letter grade on the page equal the state's workbook for Leader in Me schools  [58 of 58 Leader in Me schools with one state id]
 ok   the 2024-25 chronic-absence column on the rows is the state's own workbook value  [690 of 690 schools]
 ok   Math growth (MDE): the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 60.72 (n=34) vs offline 60.72 (n=34)]
 ok   Experienced teachers: the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 67.04 (n=34) vs offline 67.04 (n=34)]

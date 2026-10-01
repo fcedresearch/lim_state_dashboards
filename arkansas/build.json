@@ -2,12 +2,12 @@
  "state": "AR",
  "name": "Arkansas",
  "folder": "arkansas",
- "built": "2026-09-11",
- "seconds": 163,
+ "built": "2026-10-01",
+ "seconds": 88,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 23,
- "schools": 1158,
+ "lim_headline_n": 40,
+ "schools": 1164,
  "years": [
   2015,
   2026
@@ -17,39 +17,39 @@
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
    "bytes": 132812308,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-11"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/lim/Build/work/AR/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/AR/data/Subjects_Tests_FINAL (8).csv",
    "rows": 130319
   },
   "roster": {
-   "path": "/home/claude/lim/Build/work/AR/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/AR/data/LIM Schools (Current_Active) (11).csv",
    "rows": 658
   },
   "comparison": {
-   "path": "/home/claude/lim/Build/work/AR/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/AR/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 8747
   },
   "mra": {
-   "path": "/home/claude/lim/Build/work/AR/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/AR/data/All MRA Surveys.csv",
    "rows": 72
   }
  },
@@ -60,41 +60,39 @@
   "PULL-MANIFEST_AR.csv",
   "Proficiency_AR_2026/",
   "Teacher Retention_AR/",
-  "ar_2026_subjects.csv"
+  "ar_2026_subjects.csv",
+  "ar_2026_subjects_audit.json"
  ],
  "extras_module": "ar_core_extras",
  "verified": true,
- "dashboard_bytes": 3894647,
+ "dashboard_bytes": 3983767,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
-  "status": "partial",
+  "status": "complete",
   "subjects": [
-   "ELA",
-   "Math"
-  ],
-  "missing": [
    "ELA",
    "Math",
    "Science"
   ],
-  "rows_share_of_prior": 0.29,
+  "missing": [],
+  "rows_share_of_prior": 0.82,
   "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 119672,
-   "levels 3 and 4": 91.9,
+   "rows": 125346,
+   "levels 3 and 4": 90.4,
    "levels 2, 3 and 4": 0.8,
-   "level 4 alone": 1.7,
-   "100 minus level 1": 0.7,
+   "level 4 alone": 1.6,
+   "100 minus level 1": 0.6,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 91.7,
+   "levels_sum_to_100_share": 90.3,
    "structure": "four levels, numbered from the bottom; proficiency is the top 2",
    "n_levels": 4,
    "proficient_from": 3,
    "reversed_numbering": false,
-   "coverage": 91.8,
+   "coverage": 90.3,
    "years_ok": [
     2015,
     2016,
@@ -111,15 +109,14 @@
    "cells_out": [
     "2014-15 ELA",
     "2014-15 Math (end-of-course)",
-    "2014-15 Math",
-    "2025-26 Math"
+    "2014-15 Math"
    ],
    "latest_year_ok": true,
    "reason": null,
    "combination_shares": {
-    "levels 3 and 4": 95.2,
-    "levels 2, 3 and 4": 0.9,
-    "levels 1 and 2 (1 the top)": 2.4,
+    "levels 3 and 4": 95.3,
+    "levels 2, 3 and 4": 0.7,
+    "levels 1 and 2 (1 the top)": 2.5,
     "levels 1, 2 and 3 (1 the top)": 1.3
    },
    "cells": [
@@ -405,20 +402,29 @@
     {
      "year": 2026,
      "subject": "ELA",
-     "rows": 897,
-     "level_rows": 897,
-     "sum_to_100": 92.2,
+     "rows": 3712,
+     "level_rows": 2166,
+     "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
     },
     {
      "year": 2026,
      "subject": "Math",
-     "rows": 969,
-     "level_rows": 969,
-     "sum_to_100": 85.3,
+     "rows": 2035,
+     "level_rows": 1009,
+     "sum_to_100": 100.0,
      "match": 100.0,
-     "ok": false
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Science",
+     "rows": 1793,
+     "level_rows": 1020,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
     }
    ],
    "levels_as_measures": true
@@ -457,52 +463,47 @@
     "change": -17.0
    },
    {
-    "subject": "ELA",
-    "from": 2025,
-    "to": 2026,
-    "from_mean": 33.8,
-    "to_mean": 46.3,
-    "change": 12.5
-   },
-   {
     "subject": "Math",
     "from": 2015,
     "to": 2016,
     "from_mean": 23.5,
     "to_mean": 43.4,
     "change": 19.9
-   },
-   {
-    "subject": "Math",
-    "from": 2025,
-    "to": 2026,
-    "from_mean": 35.0,
-    "to_mean": 51.1,
-    "change": 16.1
    }
   ],
   "sensitivity": {
    "with": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 23,
-    "comp_n": 492,
-    "lim_change": 1.18,
-    "comp_change": -1.97,
-    "p": 0.244
+    "lim_n": 40,
+    "comp_n": 806,
+    "lim_change": -4.64,
+    "comp_change": -4.76,
+    "p": 0.946
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 20,
-    "comp_n": 492,
-    "lim_change": -0.19,
-    "comp_change": -1.97,
-    "p": 0.514
+    "lim_n": 36,
+    "comp_n": 806,
+    "lim_change": -4.47,
+    "comp_change": -4.76,
+    "p": 0.869
    },
    "schools": 5
   },
   "subjects_by_keyword": [],
   "subjects_excluded": []
- }
+ },
+ "best_schools": {
+  "qualified": 0,
+  "in_the_process": 0,
+  "lapsed_on_the_list": 0,
+  "reviewed": 45,
+  "measures": 67,
+  "outcomes": 19,
+  "improved_every_year": 0,
+  "lapsed_longer_ago": 27
+ },
+ "best_schools_added": "2026-09-30"
 }

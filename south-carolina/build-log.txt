@@ -1,0 +1,366 @@
+
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state SC --core /home/claude/sdf/Core --out /home/claude/work1/SC --data /home/claude/work1/SC/data --extras sc_core_extras
+reading the core for South Carolina ...
+[core] subjects: 97,269 school rows kept; dropped 19,323 rows with no school id and 2,126 with an id but no school record
+[core] Leader in Me roster: 1,993 rows
+[core] comparison schools: 8,844 rows
+[core] MRA surveys: 283 rows
+  newest-year like-for-like: 6 grade-test pairs not in the state's newest file; 827 rows at 242 schools left out of that year
+  subject rows added from the state's own file: 4,862 (South Carolina 2025-26 SC READY reading and math (SC Department of Education))
+  subject rows 102,131 · roster rows 1,993 (215 schools) · comparison rows 8,844 (1081 schools) · MRA surveys 283
+  identity: Brookdale Elementary (Orangeburg): 450321000866 -> 450391000866
+  identity: Denmark-Olar Elementary (Denmark): 450391601426 -> 450096001426
+  identity: Elloree Elementary (Elloree): 450315000877 -> 450391000877
+  identity: Holly Hill Elementary (Holly Hill): 450315000853 -> 450391000853
+  identity: Lowcountry Leadership Charter School (Meggett): 450390901613 -> 450390101613
+  identity: Mellichamp Elementary (Orangeburg): 450321000865 -> 450391001694
+  identity: Mellichamp Elementary (Orangeburg): 450321001694 -> 450391001694
+  identity: Richard Carroll Elementary (Bamberg): 450391601609 -> 450093001609
+  identity: Sheridan Elementary (Orangeburg): 450321000868 -> 450391000868
+  identity: Whittaker Elementary (Orangeburg): 450321000869 -> 450391000869
+[core] Leader in Me roster: 56,181 rows
+  state files (resolved by pattern; the log names the file each year came from):
+    researcher 2017-18: ReportCardData_forResearchers2018.XLSx (Report Card Data_SC/)
+    researcher 2018-19: ReportCardData_forResearchers2019.XLSx (Report Card Data_SC/)
+    researcher 2019-20: ReportCardData_forResearchers2020.XLSx (Report Card Data_SC/)
+    researcher 2020-21: ReportCardData_forResearchers2021.XLSx (Report Card Data_SC/)
+    researcher 2021-22: ReportCardData_forResearchers2022.XLSx (Report Card Data_SC/)
+    researcher 2022-23: ReportCardData_forResearchers2023_3.XLSx (Report Card Data_SC/); also present, not read: ReportCardData_forResearchers2023_3 (1).XLSx
+    researcher 2023-24: ReportCardData_forResearchers2024_11.xlsx (Report Card Data_SC/)
+    researcher 2024-25: ReportCardData_forResearchers2025 5.xlsx (Report Card Data_SC/)
+    additional 2017-18: ReportCardData_AdditionalInfo2018.XLSx (Report Card Data_SC/)
+    additional 2018-19: ReportCardData_AdditionalInfo2019.XLSx (Report Card Data_SC/)
+    additional 2019-20: ReportCardData_AdditionalInfo2020_updated.XLSx (Report Card Data_SC/)
+    additional 2020-21: ReportCardData_AdditionalInfo2021.XLSx (Report Card Data_SC/)
+    additional 2021-22: ReportCardData_AdditionalInfo2022.XLSx (Report Card Data_SC/)
+    additional 2022-23: ReportCardData_AdditionalInfo2023_3.XLSx (Report Card Data_SC/)
+    additional 2023-24: ReportCardData_AdditionalInfo2024_6.XLSx (Report Card Data_SC/)
+    additional 2024-25: ReportCardData_AdditionalInfo2025 5.xlsx (Report Card Data_SC/)
+    cra 2022-23: SC Career Readiness Assessment 2023.xlsx
+    cra 2023-24: SC Career Readiness Assessment 2024.xlsx
+    cra 2024-25: SC Career Readiness Assessment 2025 (1).xlsx
+    cra 2025-26: SC Career Readiness Assessment 2026.xlsx
+    access 2020-21: ACCESS 2021.xlsx
+    access 2021-22: ACCESS 2022.xlsx
+    access 2022-23: ACCESS 2023.xlsx
+    access 2023-24: ACCESS 2024.xlsx
+    access 2024-25: ACCESS 2025.xlsx
+    access 2025-26: ACCESS 2026.xlsx
+  report-card directory: 1,392 schools, 2017-18 to 2024-25
+    NCES directory: 1,468 federal-to-state id pairs from the cache (8 CCD files unchanged)
+    columns absent in some years (left missing): ['2018:life_scholar:LIFEScholar_PctSnrEligCurrYr', '2019:life_scholar:LIFEScholar_PctSnrEligCurrYr', '2020:par_safe:PAR_ChildFeelsSafe', '2020:par_sat_env:PAR_SatWithLearningEnvironPct', '2020:par_sat_home:PAR_SatWithSchlHomeRelationPct', '2020:stu_sat_env:STU_SatWithLearningEnvironPct', '2020:tch_rules:TCH_RulesEnforced', '2020:tch_safe:TCH_IFeelSafe', '2020:tch_sat_env:TCH_SatWithLearningEnvironPct', '2024:college_enrolled:COLLEGE_PctEnrolledCurrYr']
+  measures: 151,023 school-year values, 1,405 schools, 24 measures, 2017-18 to 2025-26
+  crosswalk: NCES's state id for each federal id, followed across renumberings by name; the August name-and-district join as the audit and the fallback
+    1,263 of 1,286 schools carry a state id the report cards know (ccd 1280, name 1, successor 18); Leader in Me 215 of 215, comparison 1,048 of 1,071
+    audit against the August join: both speak for 1,216 schools and agree on 1,199; 18 renumbered ids followed; 1 schools joined by name alone; 0 shared state ids settled
+    disagreement (namesake): Lakeside Middle (Anderson 05, comparison): NCES says 405039 None (None) and the name join says 3201010 Lakeside Middle School (Lexington County School District 1), which belongs to 450270001268
+    disagreement (new_federal_id): Kelly Edwards Elementary (Barnwell 29, comparison): NCES says 629007 Kelly Edwards Elementary School (Williston School District) and the name join says 601007 Kelly Edwards Elementary School (Barnwell County School District), which belongs to 450391400128
+    disagreement (new_federal_id): Williston-Elko High (Barnwell 29, comparison): NCES says 629006 Williston-Elko High School (Williston School District) and the name join says 601006 Williston-Elko High School (Barnwell County School District), which belongs to 450391400129
+    disagreement (new_federal_id): Williston-Elko Middle (Barnwell 29, comparison): NCES says 629008 Williston Elko Middle School (Williston School District) and the name join says 601008 Williston-Elko Middle School (Barnwell County School District), which belongs to 450391401327
+    disagreement (namesake): Hilton Head Island Elementary (Beaufort 01, comparison): NCES says 701033 Hilton Head Elementary School (Beaufort County School District) and the name join says 701032 Hilton Head Island Elementary School For The Creative Arts (Beaufort County School District), which belongs to 450111000942
+    disagreement (roster_district): C. E. Williams Middle School for Creative and Scientific Art (Florence School District One, Leader in Me): NCES says 1001092 C. E. Williams Middle School For Creative And Scientific Art (Charleston County School District) and the name join says 2101005 Williams Middle School (Florence 1 Schools), which belongs to 450213000441
+    disagreement (namesake): Brockington Elementary Magnet (Florence 01, comparison): NCES says 2101043 Brockington Magnet Elementary (Florence 1 Schools) and the name join says 1601013 Brockington Elementary Magnet School (Darlington County School District), which belongs to 450186000350
+    disagreement (roster_district): Hillcrest Middle (Sumter School District, Leader in Me): NCES says 2301011 Hillcrest Middle School (Greenville County School District) and the name join says 4301004 Hillcrest Middle School (Sumter), which belongs to 450390201079
+    disagreement (namesake): Greer Middle College Charter High (Greenville 01, comparison): NCES says 2301616 None (None) and the name join says 2301060 Greer Middle School (Greenville County School District), which belongs to 450231001244
+    disagreement (new_federal_id): Vance-Providence Elementary (Orangeburg 03, comparison): NCES says 3803022 Vance-Providence Elementary School (Orangeburg County Consolidated School District Thr) and the name join says 3809022 Vance-Providence Elementary (Orangeburg County School District), which belongs to 450391000855
+    disagreement (namesake): Lake Marion High School and Technology Center (Orangeburg 03, comparison): NCES says 3803048 Lake Marion High School And Technology Center (Orangeburg County Consolidated School District Thr) and the name join says 3809048 Lake Marion High School (Orangeburg County School District), which belongs to 450391001192
+    disagreement (new_federal_id): Holly Hill-Roberts Middle (Orangeburg 03, comparison): NCES says 3803018 Holly Hill-Roberts Middle (Orangeburg County Consolidated School District Thr) and the name join says 3809018 Holly Hill Roberts Middle School (Orangeburg County School District), which belongs to 450391001289
+    disagreement (new_federal_id): St. James-Gaillard Elementary (Orangeburg 03, comparison): NCES says 3803021 St. James-Gaillard Elementary School (Orangeburg County Consolidated School District Thr) and the name join says 3809021 St. James-Gaillard Elementary School (Orangeburg County School District), which belongs to 450391001290
+    disagreement (namesake): John De La Howe School (School Governor's School for Agriculture at John de la Howe, comparison): NCES says 5205002 None (None) and the name join says 5205003 South Carolina Governor's School For Agriculture At John De La Howe (John De La Howe for Agriculture)
+    disagreement (other): The South Carolina Preparatory Academy (Charter Institute at Erskine, comparison): NCES says 4801024 The Sc Preparatory Academy (The Charter Institute At Erskine) and the name join says 4901028 The South Carolina Preparatory Academy (Limestone Charter Association)
+    disagreement (new_federal_id): Hampton Elementary (Hampton, comparison): NCES says 2503005 Hampton Intermediate School (Hampton County School District) and the name join says 2501006 Hampton Elementary School (Hampton District One), which belongs to 450243000606
+    disagreement (other): Walker-Gamble Elementary (Clarendon 06, comparison): NCES says 1406005 Walker Gamble Elementary School (Clarendon County School District) and the name join says 1406006 Walker Gamble Elementary School (Clarendon 6)
+    joined by name alone: Rivelon Elementary -> 3805056 (Orangeburg Consolidated School District 5)
+    name join refused (no NCES id in the report cards, and the namesake does not match on name and district): John De La Howe School (School Governor's School for Agriculture at John de la Howe) vs 5205003 South Carolina Governor's School For Agriculture At John De La Howe (John De La Howe for Agriculture)
+  poverty: South Carolina's own measure (South Carolina's poverty index) replaces the lunch share on 1,263 schools (215 Leader in Me); 23 keep DOMO's
+  exits: 197 of 215 roster schools carry an expiration date; 60 past it by more than 30 days (exited), 0 inside the grace window, 137 in the future, 18 undated (16 with a start date)
+  1,286 schools · 95 districts
+applying the cleaning rules ...
+  Math 2026: 723 rows kept out of the combined figure (South Carolina reset its mathematics cut scores in 2026, so the 2026 mathematics score is a new baseline and is not comparable to prior years)
+  ELA 2026: 906 rows kept out of the combined figure (2026 is kept out of the combined reading-and-math figure because mathematics reset its cut scores that year and the combined figure needs both subjects; 2025-26 reading still shows on the reading view, where its 2025 cut scores make it comparable)
+  42,345 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 768 of 2150 reviewed
+  no start date: 19 schools · dated exits: 46 (school-years after an exit with rows: 123) · aggregate 'All grades' rows used 0, skipped 0
+  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 61.4% of rows in years and subjects whose levels add up)
+  level values blanked on 45 year-subject cells that do not add up: 2014-15 ELA (end-of-course), 2014-15 Math (end-of-course), 2014-15 Science (end-of-course), 2014-15 Science, 2014-15 Social Studies (end-of-course), 2014-15 Social Studies, 2015-16 ELA (end-of-course), 2015-16 ELA ...
+  proficiency = levels 3 and 4 on 60.3% of rows
+folding in South Carolina's own measures (sc_core_extras) ...
+  rows gain: suspension on 1,225 schools, 6,301 school-year-bands (6,301 with an out-of-school rate); 0 school-years had no band to sit in
+  card: 15 South Carolina measures, each group on each year's own membership
+  chronic absence, the state's report card against DOMO's value on the same school-years (an independent check of the crosswalk): r = 1.0 across 6,034 school-years, 100.0% within a point
+  per-school report-card records for the pack: 9,674
+  South Carolina's measures on 6,301 school-year-bands: 5,838 joined to existing rows, 463 school-year-bands added with no test rows of their own
+  school type from NCES: Title I on 1,228 schools (608 yes), charter 125, magnet 119, alternative 1; Title I published 2017-2022, carried forward after
+  funders: 117 South Carolina schools carry a funding source (100 on the page; Kern 84, 67 on the page); latest non-blank year per school
+building matched pairs, inside each band ...
+  pairs 82  by band {'Primary': {'pairs': 66, 'unmatched': 2}, 'Secondary': {'pairs': 16, 'unmatched': 1}}
+  MRA: 263 surveys · 110 schools · 960 sentinel values · 12 shells
+  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 116, 'comp_n': 862, 'lim_change': 9.7, 'comp_change': 8.43, 'p': 0.138} · without the 16 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 102, 'comp_n': 861, 'lim_change': 9.8, 'comp_change': 8.43, 'p': 0.144}
+  roster: 128 counted, 60 exited, 8 not counted yet, 19 not counted
+best-performing schools: 18 of 141 counted schools, 69 measures in 27 outcomes
+payload carried NaN or infinite values; written as null
+
+wrote sc_payload.json  (26.2 MB, 42,808 rows) · page kind full (116 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
+
+$ python3 build2.py sc_payload.json SC_Dashboard.html SC_Methods.html
+payload 26.2 MB -> 2.09 MB gzip
+SC_Dashboard.html: 3030 KB
+SC_Methods.html: 64 KB
+
+$ python3 /home/claude/sdf/Build/verify_core.py --state SC --work /home/claude/work1/SC
+
+--------------------------------------------------------------------------
+Tier 0 — install and input-value audit
+--------------------------------------------------------------------------
+ok   the template in use carries the brand palette and the ink helper
+ok   the template carries the three-school floor in headline and movement
+ok   the template reads the payload's raw window on the insights tab
+ok   the template honours the composite row flag
+ok   the template carries the research pack, look-alike mode and the school list
+ok   the office helper carries the Word table builder
+ok   the subject pull is one state's (federal id state code)
+ok   the roster and comparison pulls are one state's
+ok   2019-20 rows, if the file has any, are excluded from the payload  [0 rows in the file]
+ok   no duplicate school-year-grade-subject rows
+ok   no test value above 100
+ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': -0.1, 'PercentLevel2': 0.0, 'PercentLevel3': -0.1, 'PercentLevel4': -0.1, 'PercentMetStandard': 0.0}]
+ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
+ok   every comparison row is LIM School = false
+ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   the roster's '% White' is a count, not a percentage
+ok   one expiration date per roster school
+ok   every expiration date parsed
+ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
+ok   the exit rule's counts recompute from the roster  [60 exited, 0 in grace, 137 future]
+ok   the grace window is the 30 days Eve set
+ok   MRA exact-100 values were counted as sentinels  [96 composite cells at 100, 5 in 90-99.9]
+ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [10 collisions]
+ok   no school appears in both groups in the same year
+
+--------------------------------------------------------------------------
+Tier 1 — rules and maths
+--------------------------------------------------------------------------
+ok   lim_rules.py self-tests pass
+ok   skill_version.py self-tests pass
+ok   payload carries a build stamp
+ok   years exclude both COVID years
+ok   the straight-numbers window starts in 2022 or later
+note the headline window settles on 2022-2025 (the window's edges are 2022-2026)
+ok   the long window is scored relative to the state
+ok   no Leader in Me row counted before its full year was finished  [0 rows]
+ok   schools with no start date appear in neither group  [19 schools]
+ok   the count of undated schools is on the methods page
+ok   no row survives after a school's dated exit, in either group  [0 rows]
+ok   exited schools keep their true Leader in Me years  [55 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [60 exited (0 from DOMO's flags)]
+ok   lim_exit carries every exited school and nothing else
+ok   the roster section lists every roster school once
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 128, 'exited': 60, 'not counted': 19, 'not counted yet': 8}]
+ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
+ok   the headline sensitivity without the undated schools is on the methods page
+ok   size bands are the NCES categories in the payload's order
+ok   the poverty share rides on most rows for the look-alike caliper  [100%]
+ok   every offered measure is carried by at least one school-year
+ok   the composite flag keeps science, social studies and writing out of the no-filter view  [declared exclusions: [('ELA', 2026), ('Math', 2026)]]
+ok   the grade table lists tested grades in order and every school in it has a name
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [589 schools]
+ok   the grade table carries no school-year the rules dropped
+ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
+ok   the level shares sum to 100 on the grade rows that carry them  [47,893 grade rows, 100.0% within 1.5 points]
+ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
+ok   the grade table carries the level columns
+ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
+ok   the levels at or above the standard count up, the levels below count down
+ok   the proficiency label names the levels it adds
+ok   years and subjects whose levels do not add up carry no level values  [45 cells set aside, 34,520 grade rows in them]
+ok   school names and start dates are in the payload for the pack
+ok   MRA by-school rows exist for the pack
+ok   the MRA respondent map names a group or a blend for every measure
+ok   look-alike settings are in the payload with their rationale
+ok   a Leader in Me school's pre-start years count in the comparison group  [4,397 rows]
+ok   Lighthouse schools are inside the Leader in Me family
+ok   combined-grade schools appear in both bands  [178 schools]
+ok   the school count never exceeds the band-slice count  [978 schools vs 1050 band slices]
+ok   pairs are built inside bands
+ok   the by-band pair counts sum to the total
+ok   no comparison school is used twice
+ok   no Leader in Me school is paired twice inside a band
+ok   the signed baseline gap recomputes to the payload's  [offline -0.045 vs payload -0.050 on 82 pairs]
+ok   the mean signed baseline gap is under one point  [-0.045]
+ok   the widest single baseline gap is inside the caliper's reach  [2.3 points]
+ok   the printed signed gap is not a negative zero  [-0.05]
+ok   no MRA value of exactly 100 survives into the payload
+ok   every MRA value sits on the published scale
+ok   the MRA trend stays inside one instrument version
+ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
+ok   movers are built on ten or more schools each
+  demo district: Greenville 01 · prospect district: Horry 01
+
+--------------------------------------------------------------------------
+Tier 2 — behaviour in a real browser
+--------------------------------------------------------------------------
+ok   the page loads and the headline renders
+ok   load time is workable  [0.8s]
+ok   no console errors on load
+ok   chart c1 draws an svg or explains why
+ok   chart c2 draws an svg or explains why
+ok   the MRA card shows exactly when a trend line can be drawn
+ok   the discipline card shows exactly when the payload carries a discipline trend  [payload has no discipline_ga]
+ok   the incidents card shows exactly when the payload carries an incident trend  [payload has no incidents]
+ok   the state extras card shows exactly when the payload carries state measures  [15 state measures]
+ok   every state measure on the card draws a Leader in Me and a comparison line
+ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
+ok   the headline p recomputes offline  [page 0.1388 scipy 0.1388 · window 2022-2025 · LiM n=116 mean +9.70 · comparison n=862 mean +8.43]
+ok   the headline counts schools, not band slices  [page 978 vs offline 978 on 2022-2025]
+ok   the page's Leader in Me count is the builder's  [116 vs 116]
+ok   the district filter re-renders the headline  [In Greenville 01 schools, between 2021-22 and 2024-25, Leader in Me schools rose 7.1% on M]
+ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Kern Family Foundation schools]
+ok   choosing 'Title I schools' narrows the view and names it  [564 of 1280 schools; In South Carolina Title I schools, between 2021-22 and 2024-25, Leader in Me sch]
+ok   every school in the 'Title I schools' view carries that attribute
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In South Carolina schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2]
+ok   Title I status is known for most schools on the page  [95.9%]
+ok   the Primary band filter re-renders without error
+ok   the Secondary band filter re-renders without error
+ok   measure 'percent_proficient' either draws or says why
+ok   measure 'percent_level4' either draws or says why
+ok   measure 'percent_level3' either draws or says why
+ok   measure 'percent_level2' either draws or says why
+ok   measure 'percent_below' either draws or says why
+ok   measure 'standard_score' either draws or says why
+ok   measure 'chronic_absent' either draws or says why
+ok   measure 'grad_rate' either draws or says why
+ok   measure 'oss_per100' either draws or says why
+ok   measure 'iss_per100' either draws or says why
+ok   the matched toggle re-renders the headline  [In South Carolina schools (matched to similar schools only), between 2021-22 and 2024-25, ]
+ok   the matched view shrinks or equals the Leader in Me count  [64 matched]
+ok   no console errors after the filter sweep
+ok   the insights tab hides the explore view
+ok   Greenville 01 generates cards or says there is nothing to report  [7 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.13882612394624838, 'n1': 116, 'n2': 862}]
+ok   no console errors on the insights tab
+ok   the MRA tab is offered exactly when the payload carries surveys
+ok   the MRA tab shows its own view and sidebar and hides the explore ones
+ok   the MRA summary renders a sentence  [Across 78 South Carolina Leader in Me schools surveyed in 2024-25, Leadership averaged 77.9 on the M]
+ok   MRA chart c6 draws an svg or explains why
+ok   MRA chart c7 draws an svg or explains why
+ok   MRA chart c10 draws an svg or explains why
+ok   the measure picker offers every MRA measure with data  [37 options, 37 measures with data, 37 in the catalogue]
+ok   the MRA paired test recomputes offline  [page 0.0001 scipy 0.0001 on 70 schools]
+ok   the MRA latest-year school count recomputes offline  [page 78 vs offline 78]
+ok   the MRA same-schools count is every school surveyed more than once  [page 70 vs offline 70]
+ok   choosing the submeasure 'Personal Effectiveness' re-renders the MRA summary  [Across 76 South Carolina Leader in Me schools surveyed in 2024-25, Personal Effectiveness ]
+ok   the MRA district filter narrows to York 03's surveyed schools  [13 of 110 schools]
+ok   the MRA school type filter keeps only schools with that trait  [title1_yes]
+ok   the same-schools switch keeps only schools surveyed at both ends
+ok   no console errors on the MRA tab
+ok   the MRA view downloads one row per school, year and measure  [7,594 rows]
+ok   leaving the MRA tab restores the explore view
+ok   export c1.pptx downloads, opens and carries the chart image  [182,692 bytes]
+ok   the pptx export is named for the state and chart  [SC_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_South_Carolina_schools.pptx]
+ok   export c1.docx downloads, opens and carries the chart image  [182,610 bytes]
+ok   the docx export is named for the state and chart  [SC_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_South_Carolina_schools.docx]
+ok   the research pack downloads with its sections  [50,441 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the pack's Leader in Me count for the district is the page's  [7 vs 7]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In South Carolina schools like Horry 01’s, between 2021-22 and 2024-25, Leader in Me schools rose 7.4% on Meeting or exc]
+ok   the look-alike box reports both counts or says why not  [Schools like Horry 01’s: 14 Leader in Me schools and 126 comparison schools look like Horry 01’s 50 schools with results in these years (each matched at its fir]
+ok   the matched switch is disabled while an anchor is set
+ok   no console errors in look-alike mode
+ok   the look-alike headline p recomputes offline  [p=0.7533]
+ok   the anchor's own schools are never inside the look-alike groups
+ok   the school list downloads with one row per school  [66 rows, 0 same-name pairs]
+ok   the school list carries traits and change columns
+ok   the grade filter lists the tested grades
+ok   choosing a grade re-renders the headline and names the grade  [In South Carolina grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 8.7% on Me]
+ok   the level measures stay on while a grade is chosen
+ok   whole-school measures switch off while a grade is chosen  [5 whole-school measures in the payload]
+ok   dark mode re-renders without errors
+ok   no horizontal overflow at 900px  [0px]
+ok   no horizontal overflow at 700px  [0px]
+ok   the methods page loads
+ok   no console errors on the methods page
+
+--------------------------------------------------------------------------
+Tier 3 — honesty
+--------------------------------------------------------------------------
+ok   the build declares itself real, not a prototype
+ok   the banner names the Subject Test source
+ok   the banner names the roster source
+ok   the banner names the expiration source
+ok   the methods page owns the 'exit' limitation
+ok   the methods page owns the 'snapshot' limitation
+ok   the methods page owns the 'Title I' limitation
+ok   the methods page owns the 'observational' limitation
+ok   the methods page owns the 'both ends' limitation
+ok   poverty_help names the state's own poverty measure  [South Carolina's poverty index]
+ok   the methods page says poverty comes from the state's own measure
+ok   the methods page names the matching method rather than asserting it
+ok   the level audit is on the methods page
+ok   the subject mapping is on the methods page
+ok   the poverty audit is on the methods page
+ok   the methods page carries the exit-dating box
+ok   the methods page carries the look-alike section
+ok   the undated schools are listed by name in the payload
+
+  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +9.70 pts (n=116) vs comparison +8.43 pts (n=862), p=0.1388 -> not significant
+
+==========================================================================
+174 of 174 checks pass
+==========================================================================
+
+$ python3 /home/claude/sdf/Build/states/sc_core_verify.py --work /home/claude/work1/SC
+
+South Carolina's own measures
+--------------------------------------------------------------------------
+ok   the crosswalk reaches nearly every Leader in Me school  [215 of 215]
+ok   the crosswalk reaches most comparison schools  [1,048 of 1,071]
+ok   NCES's own id pairs anchor the crosswalk  [1,292 exact pairs of 1,311 entries (ccd 1280, name 1, successor 18)]
+ok   NCES and the August name join agree where both speak  [1,199 of 1,216; 17 read one by one]
+ok   every disagreement is classified and the Leader in Me ones are roster-district labels  [{'new_federal_id': 7, 'namesake': 6, 'roster_district': 2, 'other': 2}]
+ok   no state id is on two schools  [1,311 entries, 1,280 schools]
+ok   the Leader in Me schools the crosswalk cannot reach are named on the page
+ok   the poverty index on the page equals the 2024-25 financial page for Leader in Me schools (one state id)  [179 of 179 within a tenth of a point (older latest values excepted)]
+ok   Students meeting growth: the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 47.05 (n=109) vs offline 47.05 (n=109)]
+ok   Teachers returning: the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 82.95 (n=119) vs offline 82.95 (n=119)]
+ok   DOMO's chronic absence is the state's own rate on the crosswalked school-years (an independent check of the join)  [r = 1.0 across 6,034 school-years, 100.0% within a point]
+ok   suspension is a measure in the rows  [19,502 rows carry an out-of-school rate]
+ok   the rows carry the report card's own suspension rate  [5,511 of 5,511 agree]
+ok   suspension rows sit in the years the workbooks carry the counts (2018-19, then 2021-22 on)  [[2019, 2022, 2023, 2024, 2025]]
+ok   a combined school carries one whole-school rate on each band  [697 school-years on both bands]
+ok   the page says poverty is the state's own index  [South Carolina's poverty index]
+ok   the poverty share rides on nearly every row  [99.8%]
+ok   the state's index covers nearly every school on the page  [1,263 of 1,286; DOMO's share was blank for 66 of 215 Leader in Me schools]
+ok   the methods page carries the poverty switch and the crosswalk note
+ok   the closure years are on no South Carolina card  [[2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   no bullying year reads zero for every school, and the page says the check is data-driven
+ok   bullying per 1,000 is in the pack and not on the card
+ok   softskills_pass reaches 2025-26 on the card  [years [2023, 2024, 2025, 2026]]
+ok   career_cert reaches 2025-26 on the card  [years [2023, 2024, 2025, 2026]]
+ok   ell_exit_ready reaches 2025-26 on the card  [years [2022, 2023, 2024, 2025, 2026]]
+ok   the retention merge is named as absent, or present
+ok   the state file each year came from is in the build record  [{'researcher': 8, 'additional': 8, 'cra': 4, 'access': 6}]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 7,374 school-years]
+ok   no Leader in Me card member in a core year is a school-year the core dropped  [671 Leader in Me school-years on the cards]
+ok   every Leader in Me member in 2027 was a Leader in Me member in 2026 (status carried one year, exits honoured)  [0 carried]
+ok   Students meeting growth: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=109]
+ok   Growth for the lowest 20%: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=109]
+ok   Rated Excellent or Good: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=117]
+ok   Multilingual learners reaching English proficiency: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=88]
+ok   School climate index: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=117]
+ok   Teachers satisfied with the learning environment: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=118]
+ok   Students satisfied with the learning environment: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=117]
+ok   Parents satisfied with the learning environment: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=96]
+ok   Teachers returning: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=119]
+ok   Passing the soft skills assessment: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=13]
+ok   Teachers saying rules are enforced: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=118]
+ok   Parents saying their child feels safe: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=96]
+ok   College or career ready: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=9]
+ok   Earning a career-ready credential: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=14]
+ok   Graduates enrolled in college: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=8]
+ok   unfavourable-prone measures carry the poverty context line
+ok   the research pack's per-school South Carolina values are keyed to schools on the page  [9,674 records]
+ok   every school with a state id on the page has it in the pack  [1,261 of 1,280]
+ok   look-alike mode names the suspension rate as its behavior measure
+ok   the August card's measures are all still on the page  [15 on the card]
+
+ALL SOUTH CAROLINA CHECKS PASS
