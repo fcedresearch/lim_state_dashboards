@@ -2,54 +2,54 @@
  "state": "WA",
  "name": "Washington",
  "folder": "washington",
- "built": "2026-09-08",
- "seconds": 131,
+ "built": "2026-10-01",
+ "seconds": 95,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 21,
- "schools": 2145,
+ "lim_headline_n": 23,
+ "schools": 2147,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 44,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/WA/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/WA/data/Subjects_Tests_FINAL (8).csv",
    "rows": 152783
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/WA/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/WA/data/LIM Schools (Current_Active) (11).csv",
    "rows": 383
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/WA/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/WA/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 18006
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/WA/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/WA/data/All MRA Surveys.csv",
    "rows": 36
   }
  },
@@ -60,15 +60,18 @@
   "PULL-MANIFEST_WA.csv",
   "Postsecondary Enrollment_WA/",
   "Postsecondary Outcomes_WA/",
+  "Proficiency_WA_2026/",
   "Report Card SQSS_WA/",
-  "School Grade_WA/"
+  "School Grade_WA/",
+  "wa_2026_subjects.csv",
+  "wa_2026_subjects_audit.json"
  ],
  "extras_module": "wa_core_extras",
  "verified": true,
- "dashboard_bytes": 4336981,
+ "dashboard_bytes": 4481907,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
+  "year": 2026,
+  "label": "2025-26",
   "status": "complete",
   "subjects": [
    "ELA",
@@ -76,12 +79,12 @@
    "Science"
   ],
   "missing": [],
-  "rows_share_of_prior": 1.0,
-  "prior_year": 2024
+  "rows_share_of_prior": 0.97,
+  "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 137393,
+   "rows": 155470,
    "no_levels": true,
    "best": "the reported PercentMetStandard alone (the file carries no level percentages)",
    "structure": "four levels, numbered from the bottom; proficiency is the top 2",
@@ -99,7 +102,8 @@
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "cells_out": [
     "2014-15 ELA",
@@ -131,12 +135,15 @@
     "2023-24 Science",
     "2024-25 ELA",
     "2024-25 Math",
-    "2024-25 Science"
+    "2024-25 Science",
+    "2025-26 ELA",
+    "2025-26 Math",
+    "2025-26 Science"
    ],
    "latest_year_ok": false,
    "reason": "the levels add up on too few rows to stand as measures",
    "combination_shares": {
-    "levels 3 and 4": 77.5,
+    "levels 3 and 4": 76.6,
     "levels 2, 3 and 4": 0.8,
     "levels 1 and 2 (1 the top)": 2.9,
     "levels 1, 2 and 3 (1 the top)": 2.4
@@ -411,6 +418,33 @@
      "sum_to_100": 40.9,
      "match": 60.7,
      "ok": false
+    },
+    {
+     "year": 2026,
+     "subject": "ELA",
+     "rows": 7158,
+     "level_rows": 7158,
+     "sum_to_100": 47.6,
+     "match": 70.2,
+     "ok": false
+    },
+    {
+     "year": 2026,
+     "subject": "Math",
+     "rows": 7125,
+     "level_rows": 7125,
+     "sum_to_100": 45.4,
+     "match": 75.2,
+     "ok": false
+    },
+    {
+     "year": 2026,
+     "subject": "Science",
+     "rows": 3794,
+     "level_rows": 3794,
+     "sum_to_100": 41.3,
+     "match": 60.1,
+     "ok": false
     }
    ],
    "levels_as_measures": false
@@ -444,21 +478,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 21,
-    "comp_n": 1838,
-    "lim_change": 1.46,
-    "comp_change": 0.7,
-    "p": 0.633
+    "y1": 2026,
+    "lim_n": 23,
+    "comp_n": 1833,
+    "lim_change": 0.39,
+    "comp_change": -0.02,
+    "p": 0.808
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 11,
-    "comp_n": 1838,
-    "lim_change": -0.47,
-    "comp_change": 0.7,
-    "p": 0.674
+    "y1": 2026,
+    "lim_n": 13,
+    "comp_n": 1833,
+    "lim_change": -2.23,
+    "comp_change": -0.02,
+    "p": 0.364
    },
    "schools": 11
   },
@@ -466,14 +500,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 5,
-  "in_the_process": 5,
+  "qualified": 3,
+  "in_the_process": 3,
   "lapsed_on_the_list": 0,
-  "reviewed": 22,
+  "reviewed": 24,
   "measures": 48,
   "outcomes": 13,
   "improved_every_year": 1,
   "lapsed_longer_ago": 10
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-10-01"
 }
