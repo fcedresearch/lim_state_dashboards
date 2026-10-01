@@ -1,20 +1,21 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state CT --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/CT --data /home/claude/sdf/Build/work/CT/data --extras ct_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state CT --core /home/claude/sdf/Core --out /home/claude/work1/CT --data /home/claude/work1/CT/data --extras ct_core_extras
 reading the core for Connecticut ...
 [core] subjects: 50,555 school rows kept; dropped 24,109 rows with no school id and 1,951 with an id but no school record
 [core] Leader in Me roster: 93 rows
 [core] comparison schools: 8,157 rows
 [core] MRA surveys: 4 rows
-  subject rows 50,555 · roster rows 93 (11 schools) · comparison rows 8,157 (956 schools) · MRA surveys 4
+  subject rows added from SchoolDigger's bulk file: 4,940 (Connecticut 2025-26 results (SchoolDigger bulk file, the source of DOMO's subject file))
+  subject rows 55,495 · roster rows 93 (11 schools) · comparison rows 8,157 (956 schools) · MRA surveys 4
 [core] Leader in Me roster: 56,181 rows
   exits: 10 of 11 roster schools carry an expiration date; 3 past it by more than 30 days (exited), 0 inside the grace window, 7 in the future, 1 undated (0 with a start date)
-  967 schools · 193 districts
+  967 schools · 195 districts
 applying the cleaning rules ...
-  22,136 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 11 of 99 reviewed
-  no start date: 1 schools · dated exits: 1 (school-years after an exit with rows: 2) · aggregate 'All grades' rows used 0, skipped 0
+  24,812 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 17 of 110 reviewed
+  no start date: 1 schools · dated exits: 3 (school-years after an exit with rows: 5) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 0.0% of rows in years and subjects whose levels add up; not offered because the levels add up on too few rows to stand as measures)
-  level values blanked on 22 year-subject cells that do not add up: 2015-16 ELA, 2015-16 Math, 2015-16 Science, 2016-17 ELA, 2016-17 Math, 2016-17 Science, 2017-18 ELA, 2017-18 Math ...
+  level values blanked on 25 year-subject cells that do not add up: 2015-16 ELA, 2015-16 Math, 2015-16 Science, 2016-17 ELA, 2016-17 Math, 2016-17 Science, 2017-18 ELA, 2017-18 Math ...
   proficiency = the reported PercentMetStandard alone (the file carries no level percentages) on 0% of rows
 folding in Connecticut's own measures (ct_core_extras) ...
   state file:
@@ -27,7 +28,7 @@ folding in Connecticut's own measures (ct_core_extras) ...
     names: the state file's own school name agrees with DOMO's on 959 of 959 crosswalked schools, and the state's district names DOMO's on 959 of 959; 0 pairs re-pointed to a folded id; 0 shared codes settled; 0 schools carry more than one state code
   membership: Leader in Me schools counted per year on the cards {2017: 1, 2018: 1, 2019: 1, 2022: 1, 2023: 2, 2024: 1, 2025: 4} (the core's own status)
   value check of the join (files the map was not built from): DOMO's chronic absence is the state's Indicator 4 within a point on 2856 of 2856 school-years (to the decimal on 2856); DOMO's graduation rate is Indicator 8, keyed on the class year, within a point on 419 of 419 (to the decimal on 419)
-  rows gain: growth_ela on 7,589 school-year-bands (4 Leader in Me schools ever), growth_math on 7,589 school-year-bands (4 Leader in Me schools ever), fitness on 10,091 school-year-bands (5 Leader in Me schools ever), on_track on 4,097 school-year-bands (3 Leader in Me schools ever); left off the rows for thin Leader in Me coverage: college_entrance (1), arts_access (1); 0 school-years had no band to sit in
+  rows gain: growth_ela on 7,629 school-year-bands (4 Leader in Me schools ever), growth_math on 7,629 school-year-bands (4 Leader in Me schools ever), fitness on 10,136 school-year-bands (5 Leader in Me schools ever), on_track on 4,097 school-year-bands (3 Leader in Me schools ever); left off the rows for thin Leader in Me coverage: college_entrance (1), arts_access (1); 0 school-years had no band to sit in
   fill: chronic absence is the same measure; the state fills 5308 school-years DOMO lacks (2014-15: 915, 2015-16: 920, 2016-17: 919, 2017-18: 919, 2018-19: 911, 2021-22: 198, 2022-23: 204, 2023-24: 212, 2024-25: 110); graduation is the same measure; the state fills 973 secondary school-years DOMO lacks (2014-15: 193, 2015-16: 198, 2016-17: 202, 2017-18: 203, 2021-22: 62, 2022-23: 60, 2023-24: 55); no DOMO value is overwritten
   card: 6 Connecticut measures, each group on each year's own membership; Leader in Me points in [2025]
     card line acc_index: 1 Leader in Me point, latest 2025 n=4 (68.74)
@@ -37,26 +38,27 @@ folding in Connecticut's own measures (ct_core_extras) ...
     card line fitness: 1 Leader in Me point, latest 2025 n=4 (49.22)
     card line on_track: 1 Leader in Me point, latest 2025 n=3 (94.17)
   per-school Connecticut records for the pack: 8,286 (23 columns)
-  Connecticut's measures on 10,137 school-year-bands: 8,901 joined to existing rows, 1,236 school-year-bands added with no test rows of their own
-  core measures filled from Connecticut's own files where DOMO had none: chronic_absent 14,322 rows, grad_rate 2,146 rows
-  school type from NCES: Title I on 948 schools (576 yes), charter 22, magnet 88, alternative 3; Title I published 2017-2022, carried forward after
+  Connecticut's measures on 10,182 school-year-bands: 8,901 joined to existing rows, 1,281 school-year-bands added with no test rows of their own
+  core measures filled from Connecticut's own files where DOMO had none: chronic_absent 14,351 rows, grad_rate 2,146 rows
+  school type from NCES: Title I on 968 schools (588 yes), charter 22, magnet 88, alternative 4; Title I published 2017-2022, carried forward after
   funders: 8 Connecticut schools carry a funding source (8 on the page; Kern 7, 7 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 1  by band {'Primary': {'pairs': 1, 'unmatched': 0}, 'Secondary': {'pairs': 0, 'unmatched': 0}}
   MRA: 4 surveys · 3 schools · 9 sentinel values · 0 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 3, 'comp_n': 743, 'lim_change': 10.14, 'comp_change': 2.46, 'p': 0.278} · without the 0 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 3, 'comp_n': 743, 'lim_change': 10.14, 'comp_change': 2.46, 'p': 0.278}
-  roster: 2 counted, 3 exited, 5 not counted yet, 1 not counted
+  headline 2024-25 to 2025-26: {'y0': 2025, 'y1': 2026, 'lim_n': 6, 'comp_n': 768, 'lim_change': 1.23, 'comp_change': 0.27, 'p': 0.524} · without the 0 undated schools {'y0': 2025, 'y1': 2026, 'lim_n': 6, 'comp_n': 768, 'lim_change': 1.23, 'comp_change': 0.27, 'p': 0.524}
+  roster: 6 counted, 3 exited, 1 not counted yet, 1 not counted
 measures not offered (no school-year carries a value): percent_below
+best-performing schools: 0 of 6 counted schools, 53 measures in 14 outcomes
 
-wrote ct_payload.json  (15.4 MB, 23,372 rows) · page kind descriptive (3 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote ct_payload.json  (16.5 MB, 26,093 rows) · page kind descriptive (6 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'b4086360738c'}
 
 $ python3 build2.py ct_payload.json CT_Dashboard.html CT_Methods.html
-payload 15.4 MB -> 1.09 MB gzip
-CT_Dashboard.html: 1703 KB
-CT_Methods.html: 46 KB
+payload 16.5 MB -> 1.14 MB gzip
+CT_Dashboard.html: 1792 KB
+CT_Methods.html: 55 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state CT --work /home/claude/sdf/Build/work/CT
+$ python3 /home/claude/sdf/Build/verify_core.py --state CT --work /home/claude/work1/CT
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -94,6 +96,7 @@ ok   skill_version.py self-tests pass
 ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
+note the headline window settles on 2025-2026 (the window's edges are 2022-2026)
 ok   the long window is scored relative to the state
 ok   no Leader in Me row counted before its full year was finished  [0 rows]
 ok   schools with no start date appear in neither group  [1 schools]
@@ -103,7 +106,7 @@ ok   exited schools keep their true Leader in Me years  [3 exited schools with c
 ok   the exit counts on the methods page match the rule  [3 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'not counted yet': 5, 'exited': 3, 'counted': 2, 'not counted': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 6, 'exited': 3, 'not counted yet': 1, 'not counted': 1}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -112,7 +115,7 @@ ok   every offered measure is carried by at least one school-year
 ok   a measure no school-year carries is named on the methods page as not offered  [Percent in the lowest level]
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [425 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [441 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   no level measure is offered when the level structure is unconfirmed  [the levels add up on too few rows to stand as measures]
 ok   school names and start dates are in the payload for the pack
@@ -121,27 +124,27 @@ ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [196 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [229 schools]
-ok   the school count never exceeds the band-slice count  [746 schools vs 892 band slices]
+ok   combined-grade schools appear in both bands  [246 schools]
+ok   the school count never exceeds the band-slice count  [774 schools vs 926 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
 skip signed baseline gap recompute  [only 1 pairs; rounding alone can move the mean]
-skip mean signed gap under one point  [only 1 pairs; the gap is +0.30]
+skip mean signed gap under one point  [only 1 pairs; the gap is +3.00]
 skip widest baseline gap  [only 1 pairs; the matched view is not offered under three]
 ok   the printed signed gap is not a negative zero  [0.23]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   every promised MRA group either draws or is explained with real counts  [drawn=[] absent=['all', 'lighthouse', 'early', 'established']]
 ok   movers are built on ten or more schools each
-  demo district: Branford School District · prospect district: New Haven School District
+  demo district: Branford School District · prospect district: Hartford School District
 
 --------------------------------------------------------------------------
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.6s]
+ok   load time is workable  [0.5s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -151,13 +154,15 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [6 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-skip headline recompute  [fewer than two schools a side]
+ok   the headline p recomputes offline  [page 0.5241 scipy 0.5241 · window 2025-2026 · LiM n=6 mean +1.23 · comparison n=768 mean +0.27]
+ok   the headline counts schools, not band slices  [page 774 vs offline 774 on 2025-2026]
+ok   the page's Leader in Me count is the builder's  [6 vs 6]
 ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [557 of 964 schools; Not enough schools match these filters to compare anything yet. Remove a filter ]
+ok   choosing 'Title I schools' narrows the view and names it  [571 of 994 schools; In Connecticut Title I schools, between 2024-25 and 2025-26, Leader in Me school]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
-ok   Title I status is known for most schools on the page  [98.3%]
+ok   Title I status is known for most schools on the page  [97.4%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
 ok   measure 'percent_proficient' either draws or says why
@@ -171,7 +176,8 @@ ok   measure 'on_track' either draws or says why
 skip matched view  [fewer than three pairs, or a territory page]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Branford School District generates cards or says there is nothing to report  [4 cards]
+ok   Branford School District generates cards or says there is nothing to report  [3 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5241347646464495, 'n1': 6, 'n2': 768}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -188,11 +194,11 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [119 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [85,922 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [95,196 bytes]
 ok   the pptx export is named for the state and chart  [CT_Percent_meeting_the_standard_year_by_year_Connecticut_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [85,145 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [95,575 bytes]
 ok   the docx export is named for the state and chart  [CT_Percent_meeting_the_standard_year_by_year_Connecticut_schools.docx]
-ok   the research pack downloads with its sections  [4,187 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
+ok   the research pack downloads with its sections  [4,390 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
@@ -226,11 +232,13 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a descriptive page says so on the methods page
 
+  HEADLINE (statewide, 2025-2026, no filters): Leader in Me +1.23 pts (n=6) vs comparison +0.27 pts (n=768), p=0.5241 -> not significant
+
 ==========================================================================
-143 of 143 checks pass · 8 skipped
+147 of 147 checks pass · 7 skipped
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/ct_core_verify.py --work /home/claude/sdf/Build/work/CT
+$ python3 /home/claude/sdf/Build/states/ct_core_verify.py --work /home/claude/work1/CT
 
 Connecticut's own measures
 --------------------------------------------------------------------------
@@ -244,18 +252,18 @@ ok   DOMO's graduation rate is the state's Indicator 8, keyed on the class year,
 ok   no state code is on two schools  [959 pairs, 959 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page, or every one is reached and the page says so
 ok   the join note on the card carries the reach
-ok   each Leader in Me school's state code sits in the pack's state ids  [5 Leader in Me schools]
-ok   index 2024-25: the pack's acc_index is the file's own value re-read from the CSV  [903 of 903 agree (need 800); 5 Leader in Me schools among them]
-ok   chronic absenteeism 2024-25: the pack's chronic_absent is the file's own value re-read from the CSV  [903 of 903 agree (need 800); 5 Leader in Me schools among them]
-ok   growth 2024-25 (ELA): the pack's growth_ela is the file's own value re-read from the CSV  [715 of 715 agree (need 600); 4 Leader in Me schools among them]
-ok   growth 2024-25 (math): the pack's growth_math is the file's own value re-read from the CSV  [715 of 715 agree (need 600); 4 Leader in Me schools among them]
-ok   fitness 2024-25: the pack's fitness is the file's own value re-read from the CSV  [886 of 886 agree (need 700); 5 Leader in Me schools among them]
-ok   graduation (the 2024-25 row, keyed on the class of 2024): the pack's grad_rate_4yr is the file's own value re-read from the CSV  [197 of 197 agree (need 150); 1 Leader in Me schools among them]
-ok   on track 2024-25: the pack's on_track is the file's own value re-read from the CSV  [450 of 450 agree (need 350); 4 Leader in Me schools among them]
-ok   college entrance 2024-25: the pack's college_entrance is the file's own value re-read from the CSV  [198 of 198 agree (need 150); 1 Leader in Me schools among them]
-ok   arts access 2024-25: the pack's arts_access is the file's own value re-read from the CSV  [202 of 202 agree (need 150); 1 Leader in Me schools among them]
-ok   growth_ela 2024-25: the rows' measure equals the pack's value  [932 of 932 rows agree]
-ok   fitness 2024-25: the rows' measure equals the pack's value  [1102 of 1102 rows agree]
+ok   each Leader in Me school's state code sits in the pack's state ids  [9 Leader in Me schools]
+ok   index 2024-25: the pack's acc_index is the file's own value re-read from the CSV  [903 of 903 agree (need 800); 9 Leader in Me schools among them]
+ok   chronic absenteeism 2024-25: the pack's chronic_absent is the file's own value re-read from the CSV  [903 of 903 agree (need 800); 9 Leader in Me schools among them]
+ok   growth 2024-25 (ELA): the pack's growth_ela is the file's own value re-read from the CSV  [715 of 715 agree (need 600); 7 Leader in Me schools among them]
+ok   growth 2024-25 (math): the pack's growth_math is the file's own value re-read from the CSV  [715 of 715 agree (need 600); 7 Leader in Me schools among them]
+ok   fitness 2024-25: the pack's fitness is the file's own value re-read from the CSV  [886 of 886 agree (need 700); 9 Leader in Me schools among them]
+ok   graduation (the 2024-25 row, keyed on the class of 2024): the pack's grad_rate_4yr is the file's own value re-read from the CSV  [197 of 197 agree (need 150); 2 Leader in Me schools among them]
+ok   on track 2024-25: the pack's on_track is the file's own value re-read from the CSV  [450 of 450 agree (need 350); 5 Leader in Me schools among them]
+ok   college entrance 2024-25: the pack's college_entrance is the file's own value re-read from the CSV  [198 of 198 agree (need 150); 2 Leader in Me schools among them]
+ok   arts access 2024-25: the pack's arts_access is the file's own value re-read from the CSV  [202 of 202 agree (need 150); 2 Leader in Me schools among them]
+ok   growth_ela 2024-25: the rows' measure equals the pack's value  [937 of 937 rows agree]
+ok   fitness 2024-25: the rows' measure equals the pack's value  [1107 of 1107 rows agree]
 ok   chronic_absent: DOMO's own value stands on every school-year DOMO carries (never overwritten)  [2856 of 2856]
 ok   chronic_absent: the school-years DOMO lacks carry the state's value, and the audit counts them  [5308 of 5308 filled school-years; audit 5308; years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   grad_rate: DOMO's own value stands on every school-year DOMO carries (never overwritten)  [553 of 553]
@@ -305,7 +313,7 @@ ok   a whole-school measure is carried on both bands of a combined school
 ok   chronic absence and graduation are described as state-filled in the measure text
 ok   the research pack's per-school Connecticut values are keyed to schools on the page  [8,286 records]
 ok   every pack key carries a label
-ok   every school with a state code on the page has it in the pack  [956 of 964]
+ok   every school with a state code on the page has it in the pack  [956 of 994]
 ok   the pack's published section carries the state's own index and chronic absenteeism by year and the districts' rows  [9 state rows, 1728 rows in all, 193 districts mapped]
 ok   the banner names the Next Generation Accountability export
 ok   the methods page owns the descriptive limit for the Connecticut cards

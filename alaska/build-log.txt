@@ -1,40 +1,42 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state AK --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/AK --data /home/claude/sdf/Build/work/AK/data
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state AK --core /home/claude/sdf/Core --out /home/claude/work1/AK --data /home/claude/work1/AK/data
 reading the core for Alaska ...
 [core] subjects: 28,122 school rows kept; dropped 7,859 rows with no school id and 1,623 with an id but no school record
 [core] Leader in Me roster: 13 rows
 [core] comparison schools: 2,853 rows
 [core] MRA surveys: 1 rows
-  subject rows 28,122 · roster rows 13 (3 schools) · comparison rows 2,853 (385 schools) · MRA surveys 1
+  subject rows added from SchoolDigger's bulk file: 2,811 (Alaska 2025-26 results (SchoolDigger bulk file, the source of DOMO's subject file))
+  subject rows 30,933 · roster rows 13 (3 schools) · comparison rows 2,853 (385 schools) · MRA surveys 1
 [core] Leader in Me roster: 56,181 rows
   exits: 3 of 3 roster schools carry an expiration date; 3 past it by more than 30 days (exited), 0 inside the grace window, 0 in the future, 0 undated (0 with a start date)
-  388 schools · 50 districts
+  388 schools · 53 districts
 applying the cleaning rules ...
-  11,501 school-year-band-subject rows · years [2014, 2015, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 7 of 27 reviewed
-  no start date: 0 schools · dated exits: 2 (school-years after an exit with rows: 1) · aggregate 'All grades' rows used 6, skipped 27
-  achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 13.2% of rows in years and subjects whose levels add up; not offered because the levels add up on too few rows to stand as measures)
-  proficiency = levels 3 and 4 on 13.2% of rows
+  12,522 school-year-band-subject rows · years [2014, 2015, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 7 of 30 reviewed
+  no start date: 0 schools · dated exits: 3 (school-years after an exit with rows: 3) · aggregate 'All grades' rows used 13, skipped 132
+  achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 11.9% of rows in years and subjects whose levels add up; not offered because the levels add up on too few rows to stand as measures)
+  proficiency = levels 3 and 4 on 11.9% of rows
   statewide jump: ELA 2014->2015: 72.6 -> 33.9 (-38.7)
   statewide jump: Math 2014->2015: 64.6 -> 29.9 (-34.7)
   statewide jump: Math 2022->2023: 29.6 -> 37.9 (+8.3)
-  school type from NCES: Title I on 381 schools (202 yes), charter 31, magnet 32, alternative 15; Title I published 2017-2022, carried forward after
+  school type from NCES: Title I on 382 schools (203 yes), charter 31, magnet 32, alternative 15; Title I published 2017-2022, carried forward after
 building matched pairs, inside each band ...
   pairs 0  by band {'Primary': {'pairs': 0, 'unmatched': 0}, 'Secondary': {'pairs': 0, 'unmatched': 1}}
   MRA: 1 surveys · 1 schools · 0 sentinel values · 0 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 0, 'comp_n': 248, 'lim_change': None, 'comp_change': 4.68, 'p': None} · without the 0 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 0, 'comp_n': 248, 'lim_change': None, 'comp_change': 4.68, 'p': None}
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 0, 'comp_n': 249, 'lim_change': None, 'comp_change': 4.18, 'p': None} · without the 0 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 0, 'comp_n': 249, 'lim_change': None, 'comp_change': 4.18, 'p': None}
   roster: 0 counted, 3 exited, 0 not counted yet, 0 not counted
 measures not offered (no school-year carries a value): chronic_absent
+best-performing schools: 0 of 0 counted schools, 28 measures in 9 outcomes
 
-wrote ak_payload.json  (5.0 MB, 11,501 rows) · page kind territory (0 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote ak_payload.json  (5.5 MB, 12,522 rows) · page kind territory (0 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'b4086360738c'}
 
 $ python3 build2.py ak_payload.json AK_Dashboard.html AK_Methods.html
-payload 5.0 MB -> 0.23 MB gzip
-AK_Dashboard.html: 586 KB
-AK_Methods.html: 34 KB
+payload 5.5 MB -> 0.25 MB gzip
+AK_Dashboard.html: 635 KB
+AK_Methods.html: 42 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state AK --work /home/claude/sdf/Build/work/AK
+$ python3 /home/claude/sdf/Build/verify_core.py --state AK --work /home/claude/work1/AK
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -90,7 +92,7 @@ ok   every offered measure is carried by at least one school-year
 ok   a measure no school-year carries is named on the methods page as not offered  [Chronic absence]
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [162 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [159 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   no level measure is offered when the level structure is unconfirmed  [the levels add up on too few rows to stand as measures]
 ok   school names and start dates are in the payload for the pack
@@ -100,7 +102,7 @@ ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [26 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [219 schools]
-ok   the school count never exceeds the band-slice count  [248 schools vs 304 band slices]
+ok   the school count never exceeds the band-slice count  [249 schools vs 301 band slices]
 skip matching contract  [no pairs (too few Leader in Me schools)]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
@@ -122,11 +124,11 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [no state files]
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
 skip headline recompute  [fewer than two schools a side]
-ok   the district filter re-renders the headline  [In Anchorage School District schools, between 2021-22 and 2024-25, schools rose 1.6% on Pe]
+ok   the district filter re-renders the headline  [In Anchorage School District schools, between 2021-22 and 2025-26, schools rose 1.6% on Pe]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools]
-ok   choosing 'Title I schools' narrows the view and names it  [121 of 387 schools; In Alaska Title I schools, between 2021-22 and 2024-25, schools rose 5.8% on Per]
+ok   choosing 'Title I schools' narrows the view and names it  [127 of 389 schools; In Alaska Title I schools, between 2021-22 and 2025-26, schools rose 5.2% on Per]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   Title I status is known for most schools on the page  [98.4%]
+ok   Title I status is known for most schools on the page  [98.2%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
 ok   measure 'percent_proficient' either draws or says why
@@ -152,15 +154,15 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [20 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [86,832 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [88,257 bytes]
 ok   the pptx export is named for the state and chart  [AK_Percent_meeting_the_standard_year_by_year_Alaska_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [83,765 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [85,602 bytes]
 ok   the docx export is named for the state and chart  [AK_Percent_meeting_the_standard_year_by_year_Alaska_schools.docx]
-ok   the research pack downloads with its sections  [10,680 rows, sections ['about', 'growth_test', 'look_alike', 'movement', 'mra', 'report_card', 'school', 'school_values']]
+ok   the research pack downloads with its sections  [11,179 rows, sections ['about', 'growth_test', 'look_alike', 'movement', 'mra', 'report_card', 'school', 'school_values']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Alaska grade 4 results, between 2021-22 and 2024-25, schools rose 8.0% on Percent meeting the sta]
+ok   choosing a grade re-renders the headline and names the grade  [In Alaska grade 4 results, between 2021-22 and 2025-26, schools rose 8.7% on Percent meeting the sta]
 ok   whole-school measures switch off while a grade is chosen  [2 whole-school measures in the payload]
 ok   dark mode re-renders without errors
 ok   no horizontal overflow at 900px  [0px]

@@ -1,18 +1,19 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state HI --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/HI --data /home/claude/sdf/Build/work/HI/data --extras hi_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state HI --core /home/claude/sdf/Core --out /home/claude/work1/HI --data /home/claude/work1/HI/data --extras hi_core_extras
 reading the core for Hawaii ...
 [core] subjects: 21,812 school rows kept; dropped 121 rows with no school id and 194 with an id but no school record
 [core] Leader in Me roster: 206 rows
 [core] comparison schools: 2,591 rows
 [core] MRA surveys: 28 rows
-  subject rows 21,812 · roster rows 206 (21 schools) · comparison rows 2,591 (273 schools) · MRA surveys 28
+  subject rows added from SchoolDigger's bulk file: 870 (Hawaii 2025-26 results (SchoolDigger bulk file, the source of DOMO's subject file))
+  subject rows 22,682 · roster rows 206 (21 schools) · comparison rows 2,591 (273 schools) · MRA surveys 28
 [core] Leader in Me roster: 56,181 rows
   exits: 21 of 21 roster schools carry an expiration date; 5 past it by more than 30 days (exited), 0 inside the grace window, 16 in the future, 0 undated (0 with a start date)
   294 schools · 1 districts
 applying the cleaning rules ...
-  8,017 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 72 of 189 reviewed
-  no start date: 1 schools · dated exits: 4 (school-years after an exit with rows: 9) · aggregate 'All grades' rows used 1539, skipped 1007
+  8,530 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 87 of 210 reviewed
+  no start date: 1 schools · dated exits: 5 (school-years after an exit with rows: 11) · aggregate 'All grades' rows used 2061, skipped 1355
   achievement levels as measures: no (no level percentages; 0.0% of rows in years and subjects whose levels add up; not offered because the file carries no level percentages)
   proficiency = the reported PercentMetStandard alone (the file carries no level percentages) on 0% of rows
 folding in Hawaii's own measures (hi_core_extras) ...
@@ -57,19 +58,20 @@ folding in Hawaii's own measures (hi_core_extras) ...
 building matched pairs, inside each band ...
   pairs 14  by band {'Primary': {'pairs': 9, 'unmatched': 0}, 'Secondary': {'pairs': 5, 'unmatched': 0}}
   MRA: 24 surveys · 11 schools · 81 sentinel values · 2 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 6, 'comp_n': 163, 'lim_change': 5.83, 'comp_change': 2.16, 'p': 0.249} · without the 0 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 6, 'comp_n': 163, 'lim_change': 5.83, 'comp_change': 2.16, 'p': 0.249}
-  roster: 14 counted, 5 exited, 1 not counted yet, 1 not counted
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 7, 'comp_n': 161, 'lim_change': 5.57, 'comp_change': 2.17, 'p': 0.313} · without the 0 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 7, 'comp_n': 161, 'lim_change': 5.57, 'comp_change': 2.17, 'p': 0.313}
+  roster: 15 counted, 5 exited, 0 not counted yet, 1 not counted
 measures not offered (no school-year carries a value): percent_below
+best-performing schools: 0 of 15 counted schools, 54 measures in 16 outcomes
 
-wrote hi_payload.json  (3.9 MB, 8,284 rows) · page kind descriptive (6 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote hi_payload.json  (4.1 MB, 8,797 rows) · page kind descriptive (7 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'b4086360738c'}
 
 $ python3 build2.py hi_payload.json HI_Dashboard.html HI_Methods.html
-payload 3.9 MB -> 0.20 MB gzip
-HI_Dashboard.html: 546 KB
-HI_Methods.html: 48 KB
+payload 4.1 MB -> 0.21 MB gzip
+HI_Dashboard.html: 580 KB
+HI_Methods.html: 58 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state HI --work /home/claude/sdf/Build/work/HI
+$ python3 /home/claude/sdf/Build/verify_core.py --state HI --work /home/claude/work1/HI
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -117,7 +119,7 @@ ok   exited schools keep their true Leader in Me years  [3 exited schools with c
 ok   the exit counts on the methods page match the rule  [5 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 14, 'exited': 5, 'not counted yet': 1, 'not counted': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 15, 'exited': 5, 'not counted': 1}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -135,7 +137,7 @@ ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [302 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [121 schools]
-ok   the school count never exceeds the band-slice count  [169 schools vs 169 band slices]
+ok   the school count never exceeds the band-slice count  [168 schools vs 168 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -165,12 +167,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [8 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.2477 scipy 0.2477 · window 2022-2025 · LiM n=6 mean +5.84 · comparison n=163 mean +2.16]
-ok   the headline counts schools, not band slices  [page 169 vs offline 169 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [6 vs 6]
-ok   the district filter re-renders the headline  [In Hawaii Department of Education schools, between 2021-22 and 2024-25, Leader in Me schoo]
+ok   the headline p recomputes offline  [page 0.3122 scipy 0.3122 · window 2022-2026 · LiM n=7 mean +5.58 · comparison n=161 mean +2.16]
+ok   the headline counts schools, not band slices  [page 168 vs offline 168 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [7 vs 7]
+ok   the district filter re-renders the headline  [In Hawaii Department of Education schools, between 2021-22 and 2025-26, Leader in Me schoo]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [192 of 291 schools; In Hawaii Title I schools, between 2021-22 and 2024-25, Leader in Me schools ros]
+ok   choosing 'Title I schools' narrows the view and names it  [192 of 291 schools; In Hawaii Title I schools, between 2021-22 and 2025-26, Leader in Me schools ros]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
 ok   Title I status is known for most schools on the page  [100.0%]
@@ -183,12 +185,12 @@ ok   measure 'grad_rate' either draws or says why
 ok   measure 'growth_ela' either draws or says why
 ok   measure 'growth_math' either draws or says why
 ok   measure 'science_prof' either draws or says why
-ok   the matched toggle re-renders the headline  [In Hawaii schools (matched to similar schools only), between 2021-22 and 2024-25, Leader i]
+ok   the matched toggle re-renders the headline  [In Hawaii schools (matched to similar schools only), between 2021-22 and 2025-26, Leader i]
 ok   the matched view shrinks or equals the Leader in Me count  [4 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Hawaii Department of Education generates cards or says there is nothing to report  [3 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.2476532014841336, 'n1': 6, 'n2': 163}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.3121611759409617, 'n1': 7, 'n2': 161}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -206,12 +208,12 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [707 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [181,153 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [179,987 bytes]
 ok   the pptx export is named for the state and chart  [HI_Percent_meeting_the_standard_year_by_year_Hawaii_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [181,137 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [180,383 bytes]
 ok   the docx export is named for the state and chart  [HI_Percent_meeting_the_standard_year_by_year_Hawaii_schools.docx]
-ok   the research pack downloads with its sections  [37,691 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
-ok   the pack's Leader in Me count for the district is the page's  [6 vs 6]
+ok   the research pack downloads with its sections  [38,512 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the pack's Leader in Me count for the district is the page's  [7 vs 7]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
 ok   choosing a grade re-renders the headline and names the grade  [In Hawaii grade 4 results, between 2021-22 and 2023-24, Leader in Me schools rose 2.1% on Percent me]
@@ -244,13 +246,13 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a descriptive page says so on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +5.84 pts (n=6) vs comparison +2.16 pts (n=163), p=0.2477 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +5.58 pts (n=7) vs comparison +2.16 pts (n=161), p=0.3122 -> not significant
 
 ==========================================================================
 155 of 155 checks pass · 1 skipped
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/hi_core_verify.py --work /home/claude/sdf/Build/work/HI
+$ python3 /home/claude/sdf/Build/states/hi_core_verify.py --work /home/claude/work1/HI
 
 Hawaii's own measures
 --------------------------------------------------------------------------
@@ -263,16 +265,16 @@ ok   DOMO's proficiency tracks the state's own ELA-and-math mean on the crosswal
 ok   no school code is on two schools  [294 pairs, 294 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page, or every one is reached and the page says so
 ok   the join note on the card carries the reach
-ok   each Leader in Me school's DOE code sits in the pack's state ids  [17 Leader in Me schools]
+ok   each Leader in Me school's DOE code sits in the pack's state ids  [18 Leader in Me schools]
 ok   nearly every school in the Strive HI files is on the page through the crosswalk  [293 of 296 codes]
-ok   attendance 2024-25: the pack's regular_attendance is the workbook's own value re-read from the file  [290 of 290 agree (need 150); 17 Leader in Me schools among them]
-ok   growth 2024-25: the pack's growth_ela is the workbook's own value re-read from the file  [248 of 248 agree (need 150); 17 Leader in Me schools among them]
+ok   attendance 2024-25: the pack's regular_attendance is the workbook's own value re-read from the file  [290 of 290 agree (need 150); 18 Leader in Me schools among them]
+ok   growth 2024-25: the pack's growth_ela is the workbook's own value re-read from the file  [248 of 248 agree (need 150); 18 Leader in Me schools among them]
 ok   growth 2024-25: the rows' growth in ELA proficiency equals the pack's value  [354 of 354]
-ok   science 2024-25: the pack's science_prof is the workbook's own value re-read from the file  [282 of 282 agree (need 150); 17 Leader in Me schools among them]
+ok   science 2024-25: the pack's science_prof is the workbook's own value re-read from the file  [282 of 282 agree (need 150); 18 Leader in Me schools among them]
 ok   science 2024-25: the rows' science proficiency equals the pack's value  [388 of 388]
-ok   chronic absenteeism 2022-23 (15 or more days): the pack's chronic_absent_15d is the workbook's own value re-read from the file  [290 of 290 agree (need 150); 17 Leader in Me schools among them]
-ok   median growth percentile 2022-23: the pack's mgp_ela is the workbook's own value re-read from the file  [246 of 246 agree (need 150); 17 Leader in Me schools among them]
-ok   school climate 2022-23 (elementary): the pack's climate_elem is the workbook's own value re-read from the file  [199 of 199 agree (need 120); 16 Leader in Me schools among them]
+ok   chronic absenteeism 2022-23 (15 or more days): the pack's chronic_absent_15d is the workbook's own value re-read from the file  [290 of 290 agree (need 150); 18 Leader in Me schools among them]
+ok   median growth percentile 2022-23: the pack's mgp_ela is the workbook's own value re-read from the file  [246 of 246 agree (need 150); 18 Leader in Me schools among them]
+ok   school climate 2022-23 (elementary): the pack's climate_elem is the workbook's own value re-read from the file  [199 of 199 agree (need 120); 17 Leader in Me schools among them]
 ok   CCRI on-time graduation, class of 2025: the pack's on_time_grad is the workbook's own value re-read from the file  [64 of 64 agree (need 40); 0 Leader in Me schools among them]
 ok   CCRI first-fall college enrollment, class of 2024: the pack's college_fall is the workbook's own value re-read from the file  [54 of 54 agree (need 40); 0 Leader in Me schools among them]
 ok   no core measure was filled from the state's files (the audit found DOMO already carries the state's attendance, and the graduation keying differs)  [fill_measures {}]
@@ -291,7 +293,7 @@ ok   Chronic absenteeism, 15 or more days (2022-23): the latest Leader in Me poi
 ok   Median growth percentile, ELA (2022-23): the latest Leader in Me point recomputes from the long table and the membership file  [2023: payload 53.62 (n=8) vs offline 53.62 (n=8)]
 ok   School climate, elementary students responding positively (2022-23): the latest Leader in Me point recomputes from the long table and the membership file  [2023: payload 71.88 (n=8) vs offline 71.88 (n=8)]
 ok   the closure years are on no Hawaii card  [[2023, 2024, 2025]]
-ok   no card year sits past the core's last year  [2025 vs 2025]
+ok   no card year sits past the core's last year  [2025 vs 2026]
 ok   growth_ela sits in no closure year on the rows  [[2024, 2025]]
 ok   growth_math sits in no closure year on the rows  [[2024, 2025]]
 ok   science_prof sits in no closure year on the rows  [[2023, 2024, 2025]]
@@ -305,7 +307,7 @@ ok   every exclusion is counted on the cleaning audit
 ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 1,125 school-years]
 ok   no Leader in Me card member is a school-year the core dropped  [41 Leader in Me school-years on the cards]
 ok   every Leader in Me card member is a school the headline's roster counts  [16 schools]
-ok   no card member sits past the core's last year  [2025 vs 2025]
+ok   no card member sits past the core's last year  [2025 vs 2026]
 ok   Chronic absenteeism, 15 or more days (2022-23): the Leader in Me point in 2023 rests on at least three counted schools and a comparison line exists  [n=8]
 ok   Regular attendance (90% or more of days): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=14]
 ok   Students making typical or better growth, ELA: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=14]
@@ -325,7 +327,7 @@ ok   every school with a DOE code on the page has it in the pack  [291 of 291]
 ok   the research pack carries the CCRI families with the class named in the label  [18 CCRI columns]
 ok   look-alike mode names regular attendance as its behavior measure
 ok   the banner names the Strive HI files and the CCRI workbook
-ok   the methods page owns the descriptive limit for Hawaii's cards  [headline n = 6]
+ok   the methods page owns the descriptive limit for Hawaii's cards  [headline n = 7]
 ok   the methods page carries the attendance audit and the graduation keying
 ok   the measures the card can carry are on it  [8 on the card]
 

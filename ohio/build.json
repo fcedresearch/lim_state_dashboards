@@ -2,54 +2,54 @@
  "state": "OH",
  "name": "Ohio",
  "folder": "ohio",
- "built": "2026-09-08",
- "seconds": 215,
+ "built": "2026-10-01",
+ "seconds": 191,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 148,
- "schools": 3320,
+ "lim_headline_n": 130,
+ "schools": 3431,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 266,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/OH/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/OH/data/Subjects_Tests_FINAL (8).csv",
    "rows": 257256
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/OH/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/OH/data/LIM Schools (Current_Active) (11).csv",
    "rows": 2523
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/OH/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/OH/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 27381
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/OH/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/OH/data/All MRA Surveys.csv",
    "rows": 371
   }
  },
@@ -60,14 +60,16 @@
   "Discipline_OH/",
   "PULL-MANIFEST_OH.csv",
   "Post High School Data_OH/",
-  "School Grade_OH/"
+  "School Grade_OH/",
+  "sd_newest_audit.json",
+  "sd_newest_subjects.csv"
  ],
  "extras_module": "oh_core_extras",
  "verified": true,
- "dashboard_bytes": 5811639,
+ "dashboard_bytes": 6072239,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
+  "year": 2026,
+  "label": "2025-26",
   "status": "complete",
   "subjects": [
    "ELA",
@@ -76,12 +78,12 @@
    "Social Studies"
   ],
   "missing": [],
-  "rows_share_of_prior": 0.98,
-  "prior_year": 2024
+  "rows_share_of_prior": 1.0,
+  "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 233846,
+   "rows": 257304,
    "no_levels": true,
    "best": "the reported PercentMetStandard alone (the file carries no level percentages)",
    "structure": "no level percentages",
@@ -127,21 +129,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 148,
-    "comp_n": 2615,
-    "lim_change": 3.8,
-    "comp_change": 3.37,
-    "p": 0.455
+    "y1": 2026,
+    "lim_n": 130,
+    "comp_n": 2570,
+    "lim_change": 5.16,
+    "comp_change": 4.59,
+    "p": 0.444
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 121,
-    "comp_n": 2615,
-    "lim_change": 3.32,
-    "comp_change": 3.37,
-    "p": 0.936
+    "y1": 2026,
+    "lim_n": 104,
+    "comp_n": 2570,
+    "lim_change": 4.37,
+    "comp_change": 4.59,
+    "p": 0.784
    },
    "schools": 32
   },
@@ -149,14 +151,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 24,
-  "in_the_process": 22,
-  "lapsed_on_the_list": 2,
-  "reviewed": 143,
+  "qualified": 29,
+  "in_the_process": 24,
+  "lapsed_on_the_list": 5,
+  "reviewed": 139,
   "measures": 58,
   "outcomes": 21,
-  "improved_every_year": 3,
+  "improved_every_year": 5,
   "lapsed_longer_ago": 87
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-10-01"
 }

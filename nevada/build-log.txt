@@ -1,22 +1,23 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state NV --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/NV --data /home/claude/sdf/Build/work/NV/data --extras nv_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state NV --core /home/claude/sdf/Core --out /home/claude/work1/NV --data /home/claude/work1/NV/data --extras nv_core_extras
 reading the core for Nevada ...
 [core] subjects: 41,155 school rows kept; dropped 3,022 rows with no school id and 1,617 with an id but no school record
 [core] Leader in Me roster: 785 rows
 [core] comparison schools: 4,419 rows
 [core] MRA surveys: 79 rows
-  subject rows 41,155 · roster rows 785 (101 schools) · comparison rows 4,419 (581 schools) · MRA surveys 79
+  subject rows added from SchoolDigger's bulk file: 5,081 (Nevada 2025-26 results (SchoolDigger bulk file, the source of DOMO's subject file))
+  subject rows 46,236 · roster rows 785 (101 schools) · comparison rows 4,419 (581 schools) · MRA surveys 79
 [core] Leader in Me roster: 56,181 rows
-  exits: 82 of 101 roster schools carry an expiration date; 27 past it by more than 30 days (exited), 2 inside the grace window, 53 in the future, 19 undated (17 with a start date)
+  exits: 82 of 101 roster schools carry an expiration date; 29 past it by more than 30 days (exited), 1 inside the grace window, 52 in the future, 19 undated (17 with a start date)
   681 schools · 20 districts
   1 roster schools have comparison-export rows after their roster years (DOMO's own flag says they left): read as exited after [2017]
 applying the cleaning rules ...
-  14,162 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 321 of 909 reviewed
-  no start date: 8 schools · dated exits: 16 (school-years after an exit with rows: 39) · aggregate 'All grades' rows used 16, skipped 20
-  achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 58.8% of rows in years and subjects whose levels add up; not offered because the latest year's reading and math levels do not add up)
-  level values blanked on 12 year-subject cells that do not add up: 2016-17 ELA (end-of-course), 2016-17 Math (end-of-course), 2016-17 Science, 2021-22 Math, 2021-22 Science, 2022-23 ELA, 2022-23 Math, 2023-24 Math ...
-  proficiency = levels 3 and 4 on 57.4% of rows
+  15,876 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 390 of 1010 reviewed
+  no start date: 8 schools · dated exits: 24 (school-years after an exit with rows: 63) · aggregate 'All grades' rows used 43, skipped 55
+  achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 51.7% of rows in years and subjects whose levels add up; not offered because the latest year's reading and math levels do not add up)
+  level values blanked on 16 year-subject cells that do not add up: 2016-17 ELA (end-of-course), 2016-17 Math (end-of-course), 2016-17 Science, 2021-22 Math, 2021-22 Science, 2022-23 ELA, 2022-23 Math, 2023-24 Math ...
+  proficiency = levels 3 and 4 on 50.4% of rows
   statewide jump: ELA 2015->2016: 81.3 -> 47.0 (-34.4)
   statewide jump: Math 2015->2016: 75.2 -> 35.1 (-40.0)
   statewide jump: Math 2016->2017: 35.1 -> 44.7 (+9.6)
@@ -34,26 +35,27 @@ folding in Nevada's own measures (nv_core_extras) ...
   DOMO's graduation rate against the file's four-year rate: 2015-16: 100.0% within half a point of the file labelled 2016-17 (6), -% of the same-labelled file; 2016-17: 100.0% within half a point of the file labelled 2017-18 (78), 1.4% of the same-labelled file; 2017-18: 100.0% within half a point of the file labelled 2018-19 (65), 16.9% of the same-labelled file; 2018-19: -% within half a point of the file labelled 2019-20 (0), 17.9% of the same-labelled file; 2021-22: 100.0% within half a point of the file labelled 2022-23 (63), 13.6% of the same-labelled file; 2022-23: 100.0% within half a point of the file labelled 2023-24 (58), 17.9% of the same-labelled file; 2023-24: 100.0% within half a point of the file labelled 2024-25 (66), 19.0% of the same-labelled file
   graduation fill (only where DOMO has none, on the class's own year): class of 2016 from the 2016-17 file, 98 school-years DOMO lacks, 5 of them on a secondary row the page carries; class of 2017 from the 2017-18 file, 14 school-years DOMO lacks, 2 of them on a secondary row the page carries; class of 2018 from the 2018-19 file, 26 school-years DOMO lacks, 18 of them on a secondary row the page carries; class of 2022 from the 2022-23 file, 30 school-years DOMO lacks, 21 of them on a secondary row the page carries; class of 2023 from the 2023-24 file, 31 school-years DOMO lacks, 22 of them on a secondary row the page carries; class of 2024 from the 2024-25 file, 29 school-years DOMO lacks, 24 of them on a secondary row the page carries
   card: 7 Nevada measures, each group on each year's own membership
-  per-school framework records for the pack: 4,568 school-years; state codes for 680 schools
+  per-school framework records for the pack: 4,605 school-years; state codes for 680 schools
   Nevada's measures on 4,613 school-year-bands: 4,142 joined to existing rows, 471 school-year-bands added with no test rows of their own
   core measures filled from Nevada's own files where DOMO had none: grad_rate 103 rows
-  school type from NCES: Title I on 663 schools (379 yes), charter 104, magnet 50, alternative 24; Title I published 2017-2022, carried forward after
+  school type from NCES: Title I on 667 schools (382 yes), charter 106, magnet 50, alternative 24; Title I published 2017-2022, carried forward after
   funders: 47 Nevada schools carry a funding source (41 on the page; Kern 12, 6 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 61  by band {'Primary': {'pairs': 44, 'unmatched': 1}, 'Secondary': {'pairs': 17, 'unmatched': 1}}
   MRA: 71 surveys · 33 schools · 208 sentinel values · 7 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 57, 'comp_n': 474, 'lim_change': 5.17, 'comp_change': 3.14, 'p': 0.038} · without the 17 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 42, 'comp_n': 473, 'lim_change': 6.43, 'comp_change': 3.13, 'p': 0.002}
-  roster: 55 counted, 28 exited, 10 not counted yet, 8 not counted
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 59, 'comp_n': 474, 'lim_change': 5.11, 'comp_change': 3.32, 'p': 0.091} · without the 17 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 43, 'comp_n': 474, 'lim_change': 5.99, 'comp_change': 3.32, 'p': 0.04}
+  roster: 61 counted, 30 exited, 2 not counted yet, 8 not counted
+best-performing schools: 19 of 67 counted schools, 55 measures in 13 outcomes
 
-wrote nv_payload.json  (8.1 MB, 14,633 rows) · page kind full (57 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote nv_payload.json  (8.8 MB, 16,347 rows) · page kind full (59 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'b4086360738c'}
 
 $ python3 build2.py nv_payload.json NV_Dashboard.html NV_Methods.html
-payload 8.1 MB -> 0.52 MB gzip
-NV_Dashboard.html: 958 KB
-NV_Methods.html: 51 KB
+payload 8.8 MB -> 0.56 MB gzip
+NV_Dashboard.html: 1035 KB
+NV_Methods.html: 62 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state NV --work /home/claude/sdf/Build/work/NV
+$ python3 /home/claude/sdf/Build/verify_core.py --state NV --work /home/claude/work1/NV
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -77,7 +79,7 @@ ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [27 exited, 2 in grace, 53 future]
+ok   the exit rule's counts recompute from the roster  [29 exited, 1 in grace, 52 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [20 composite cells at 100, 0 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -96,19 +98,19 @@ ok   no Leader in Me row counted before its full year was finished  [0 rows]
 ok   schools with no start date appear in neither group  [8 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [26 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [28 exited (1 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [28 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [30 exited (1 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 55, 'exited': 28, 'not counted yet': 10, 'not counted': 8}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 61, 'exited': 30, 'not counted': 8, 'not counted yet': 2}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
-ok   the poverty share rides on most rows for the look-alike caliper  [100%]
+ok   the poverty share rides on most rows for the look-alike caliper  [99%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [357 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [354 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   no level measure is offered when the level structure is unconfirmed  [the latest year's reading and math levels do not add up]
 ok   school names and start dates are in the payload for the pack
@@ -117,8 +119,8 @@ ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [1,176 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [128 schools]
-ok   the school count never exceeds the band-slice count  [531 schools vs 576 band slices]
+ok   combined-grade schools appear in both bands  [134 schools]
+ok   the school count never exceeds the band-slice count  [533 schools vs 580 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -138,7 +140,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.8s]
+ok   load time is workable  [0.5s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -148,15 +150,15 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [7 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.0383 scipy 0.0383 · window 2022-2025 · LiM n=57 mean +5.17 · comparison n=474 mean +3.14]
-ok   the headline counts schools, not band slices  [page 531 vs offline 531 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [57 vs 57]
-ok   the district filter re-renders the headline  [In Clark County schools, between 2021-22 and 2024-25, Leader in Me schools rose 4.6% on Pe]
+ok   the headline p recomputes offline  [page 0.0924 scipy 0.0924 · window 2022-2026 · LiM n=59 mean +5.11 · comparison n=474 mean +3.33]
+ok   the headline counts schools, not band slices  [page 533 vs offline 533 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [59 vs 59]
+ok   the district filter re-renders the headline  [In Clark County schools, between 2021-22 and 2025-26, Leader in Me schools rose 4.5% on Pe]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [376 of 672 schools; In Nevada Title I schools, between 2021-22 and 2024-25, Leader in Me schools ros]
+ok   choosing 'Title I schools' narrows the view and names it  [379 of 691 schools; In Nevada Title I schools, between 2021-22 and 2025-26, Leader in Me schools ros]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
-ok   Title I status is known for most schools on the page  [98.7%]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Nevada schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025-26, ]
+ok   Title I status is known for most schools on the page  [96.5%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
 ok   measure 'percent_proficient' either draws or says why
@@ -165,12 +167,12 @@ ok   measure 'standard_score' either draws or says why
 ok   measure 'chronic_absent' either draws or says why
 ok   measure 'grad_rate' either draws or says why
 ok   measure 'nspf_index' either draws or says why
-ok   the matched toggle re-renders the headline  [In Nevada schools (matched to similar schools only), between 2021-22 and 2024-25, Leader i]
-ok   the matched view shrinks or equals the Leader in Me count  [41 matched]
+ok   the matched toggle re-renders the headline  [In Nevada schools (matched to similar schools only), between 2021-22 and 2025-26, Leader i]
+ok   the matched view shrinks or equals the Leader in Me count  [39 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Clark County generates cards or says there is nothing to report  [8 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.038298371996459274, 'n1': 57, 'n2': 474}]
+ok   Clark County generates cards or says there is nothing to report  [5 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.09240769956171369, 'n1': 59, 'n2': 474}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -189,22 +191,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [2,109 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [178,745 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [182,096 bytes]
 ok   the pptx export is named for the state and chart  [NV_Percent_meeting_the_standard_year_by_year_Nevada_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [178,943 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [182,333 bytes]
 ok   the docx export is named for the state and chart  [NV_Percent_meeting_the_standard_year_by_year_Nevada_schools.docx]
-ok   the research pack downloads with its sections  [60,831 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
-ok   the pack's Leader in Me count for the district is the page's  [36 vs 36]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Nevada schools like Washoe County’s, between 2021-22 and 2024-25, Leader in Me schools rose 4.3% on Percent meeting t]
-ok   the look-alike box reports both counts or says why not  [Schools like Washoe County’s: 39 Leader in Me schools and 172 comparison schools look like Washoe County’s 104 schools with results in these years (each matched]
+ok   the research pack downloads with its sections  [62,201 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the pack's Leader in Me count for the district is the page's  [34 vs 34]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Nevada schools like Washoe County’s, between 2021-22 and 2025-26, Leader in Me schools rose 5.2% on Percent meeting t]
+ok   the look-alike box reports both counts or says why not  [Schools like Washoe County’s: 44 Leader in Me schools and 193 comparison schools look like Washoe County’s 109 schools with results in these years (each matched]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.6165]
+ok   the look-alike headline p recomputes offline  [p=0.9560]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [149 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [155 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Nevada grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 6.5% on Percent me]
+ok   choosing a grade re-renders the headline and names the grade  [In Nevada grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 5.3% on Percent me]
 ok   whole-school measures switch off while a grade is chosen  [4 whole-school measures in the payload]
 ok   dark mode re-renders without errors
 ok   no horizontal overflow at 900px  [0px]
@@ -234,13 +236,13 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +5.17 pts (n=57) vs comparison +3.14 pts (n=474), p=0.0383 -> significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +5.11 pts (n=59) vs comparison +3.33 pts (n=474), p=0.0924 -> not significant
 
 ==========================================================================
 162 of 162 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/nv_core_verify.py --work /home/claude/sdf/Build/work/NV
+$ python3 /home/claude/sdf/Build/states/nv_core_verify.py --work /home/claude/work1/NV
 
 Nevada's own measures
 --------------------------------------------------------------------------
@@ -286,10 +288,10 @@ ok   card line 'nspf_grad' recomputes from the pack on the rows' own status, thr
 ok   the star lines sit on rated years only (no 2021-22 point, no 2015-16)  [[2017, 2018, 2019, 2023, 2024, 2025]]
 ok   the index line carries 2021-22 (the stated rule) and no 2015-16  [[2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   the graduation line sits on class years the files carry and never on the closure classes  [[2017, 2018, 2022, 2023, 2024]]
-ok   every Leader in Me school-year behind the card is a roster school inside its counted years  [315 Leader in Me school-years, 0 after a dated exit]
+ok   every Leader in Me school-year behind the card is a roster school inside its counted years  [379 Leader in Me school-years, 0 after a dated exit]
 ok   every Leader in Me school-year in the pack is one the payload rows count  [311 pack school-years]
 ok   every pack column carries a label  [[]]
-ok   the research pack's per-school values are keyed to schools on the page  [4,568 records]
+ok   the research pack's per-school values are keyed to schools on the page  [4,605 records]
 ok   the pack carries no 2019-20 or 2020-21 framework record, and for 2015-16 only the class of 2016's graduation rates (from the 2016-17 file)  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025], 108 class-of-2016 records]
 ok   the methods page prints the crosswalk's reach
 ok   the methods page names the Leader in Me schools the crosswalk could not reach, or says every one is reached  [0 unreached]

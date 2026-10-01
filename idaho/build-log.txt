@@ -1,24 +1,27 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state ID --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/ID --data /home/claude/sdf/Build/work/ID/data --extras id_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state ID --core /home/claude/sdf/Core --out /home/claude/work1/ID --data /home/claude/work1/ID/data --extras id_core_extras
 reading the core for Idaho ...
 [core] subjects: 30,174 school rows kept; dropped 18,834 rows with no school id and 4,831 with an id but no school record
 [core] Leader in Me roster: 149 rows
 [core] comparison schools: 3,809 rows
 [core] MRA surveys: 23 rows
-  subject rows 30,174 · roster rows 149 (25 schools) · comparison rows 3,809 (607 schools) · MRA surveys 23
+  subject rows added from SchoolDigger's bulk file: 5,015 (Idaho 2025-26 results (SchoolDigger bulk file, the source of DOMO's subject file))
+  subject rows 35,189 · roster rows 149 (25 schools) · comparison rows 3,809 (607 schools) · MRA surveys 23
 [core] Leader in Me roster: 56,181 rows
-  exits: 23 of 25 roster schools carry an expiration date; 8 past it by more than 30 days (exited), 1 inside the grace window, 14 in the future, 2 undated (2 with a start date)
-  632 schools · 165 districts
+  exits: 23 of 25 roster schools carry an expiration date; 9 past it by more than 30 days (exited), 0 inside the grace window, 14 in the future, 2 undated (2 with a start date)
+  632 schools · 180 districts
 applying the cleaning rules ...
-  11,423 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 92 of 225 reviewed
-  no start date: 3 schools · dated exits: 6 (school-years after an exit with rows: 9) · aggregate 'All grades' rows used 1670, skipped 444
-  achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 58% of rows (a five-level state whose export carries four columns, usually))
-  proficiency = levels 3 and 4 on 47.3% of rows
+  13,609 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 107 of 250 reviewed
+  no start date: 3 schools · dated exits: 7 (school-years after an exit with rows: 15) · aggregate 'All grades' rows used 1734, skipped 525
+  achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 14.1% of rows in years and subjects whose levels add up; not offered because the levels add up on too few rows to stand as measures)
+  level values blanked on 36 year-subject cells that do not add up: 2014-15 ELA, 2014-15 Math, 2014-15 Science, 2015-16 ELA, 2015-16 Math, 2015-16 Science, 2016-17 ELA, 2016-17 Math ...
+  proficiency = levels 3 and 4 on 14.1% of rows
 folding in Idaho's own measures (id_core_extras) ...
   state files (resolved by pattern):
     college-going workbook: IdahoCollegeGoingData.xlsx
     in the state folder without a pull-manifest record, not read: IdahoReportCard_DataExport_Normalized_20260904_044242.csv
+    in the state folder without a pull-manifest record, not read: sd_newest_subjects.csv
     NCES directory: 855 federal-to-state id pairs from the cache (8 CCD files unchanged)
     college-going workbook: 10,424 school-class-measure rows from the cache (workbook unchanged)
   join: 180 of 236 high schools in the workbook are on this page (181 by the workbook's own federal id, 0 through the state id NCES pairs with a different federal id); NCES's directory agrees with the workbook's federal id on 235 schools, differs on 0, has no entry for 1; names agree with DOMO's on 179 of 181; the workbook's charter flag agrees with NCES's on 181 of 181; 1 federal id carried by two state ids (a renamed school): 160017200846: Idaho Distance Education Academy (2014-2019), Gem Prep: Online School (2020-2022)
@@ -26,24 +29,25 @@ folding in Idaho's own measures (id_core_extras) ...
     name disagreement: workbook 'Idaho Distance Education Academy' vs DOMO 'Gem Prep: Online School'
   Leader in Me high schools in the workbook: Carey Public School, Bliss School, Fruitland High School, Genesee School, Canyon Ridge High School; counted per class with a rate on 10 or more graduates: 2015: 1; 2016: 1; 2017: 1; 2018: 1; 2019: 2; 2022: 2 -> at most 2, under the three a card line or a row measure needs (classes under 10 graduates: Bliss School, Carey Public School)
   college-going on 962 school-classes (176 high schools, the classes of 2015 to 2022); 1817 rates on fewer than 10 graduates, 2160 closure-class values and 1230 values before the page set aside
-  per-school Idaho records for the pack: 950 (7 columns); no card and no row measure, on the three-school floor
-  school type from NCES: Title I on 613 schools (377 yes), charter 73, magnet 18, alternative 19; Title I published 2017-2022, carried forward after
+  per-school Idaho records for the pack: 956 (7 columns); no card and no row measure, on the three-school floor
+  school type from NCES: Title I on 662 schools (417 yes), charter 81, magnet 18, alternative 28; Title I published 2017-2022, carried forward after
   funders: 16 Idaho schools carry a funding source (13 on the page; Kern 8, 5 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 5  by band {'Primary': {'pairs': 4, 'unmatched': 0}, 'Secondary': {'pairs': 1, 'unmatched': 0}}
   MRA: 21 surveys · 12 schools · 54 sentinel values · 2 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 4, 'comp_n': 286, 'lim_change': 11.93, 'comp_change': 0.82, 'p': 0.158} · without the 2 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 4, 'comp_n': 286, 'lim_change': 11.93, 'comp_change': 0.82, 'p': 0.158}
-  roster: 10 counted, 8 exited, 3 not counted yet, 4 not counted
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 5, 'comp_n': 314, 'lim_change': 5.63, 'comp_change': 1.35, 'p': 0.477} · without the 2 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 5, 'comp_n': 314, 'lim_change': 5.63, 'comp_change': 1.35, 'p': 0.477}
+  roster: 13 counted, 9 exited, 0 not counted yet, 3 not counted
+best-performing schools: 0 of 15 counted schools, 46 measures in 9 outcomes
 
-wrote id_payload.json  (5.2 MB, 11,423 rows) · page kind descriptive (4 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote id_payload.json  (5.9 MB, 13,609 rows) · page kind descriptive (5 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'b4086360738c'}
 
 $ python3 build2.py id_payload.json ID_Dashboard.html ID_Methods.html
-payload 5.2 MB -> 0.33 MB gzip
-ID_Dashboard.html: 716 KB
-ID_Methods.html: 41 KB
+payload 5.9 MB -> 0.34 MB gzip
+ID_Dashboard.html: 749 KB
+ID_Methods.html: 51 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state ID --work /home/claude/sdf/Build/work/ID
+$ python3 /home/claude/sdf/Build/verify_core.py --state ID --work /home/claude/work1/ID
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -67,7 +71,7 @@ ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [8 exited, 1 in grace, 14 future]
+ok   the exit rule's counts recompute from the roster  [9 exited, 0 in grace, 14 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [2 composite cells at 100, 0 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -86,29 +90,29 @@ ok   no Leader in Me row counted before its full year was finished  [0 rows]
 ok   schools with no start date appear in neither group  [3 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [8 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [8 exited (0 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [9 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [9 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 10, 'exited': 8, 'not counted': 4, 'not counted yet': 3}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 13, 'exited': 9, 'not counted': 3}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
-ok   the poverty share rides on most rows for the look-alike caliper  [100%]
+ok   the poverty share rides on most rows for the look-alike caliper  [98%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [300 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [319 schools]
 ok   the grade table carries no school-year the rules dropped
-ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 58% of rows (a five-level state whose export carries four columns, usually)]
+ok   no level measure is offered when the level structure is unconfirmed  [the levels add up on too few rows to stand as measures]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [198 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [200 schools]
-ok   the school count never exceeds the band-slice count  [290 schools vs 358 band slices]
+ok   combined-grade schools appear in both bands  [213 schools]
+ok   the school count never exceeds the band-slice count  [319 schools vs 387 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -128,7 +132,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.5s]
+ok   load time is workable  [0.3s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -137,15 +141,15 @@ ok   the discipline card shows exactly when the payload carries a discipline tre
 ok   the incidents card shows exactly when the payload carries an incident trend  [payload has no incidents]
 ok   the state extras card shows exactly when the payload carries state measures  [no state files]
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.1574 scipy 0.1574 · window 2022-2025 · LiM n=4 mean +11.93 · comparison n=286 mean +0.82]
-ok   the headline counts schools, not band slices  [page 290 vs offline 290 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [4 vs 4]
+ok   the headline p recomputes offline  [page 0.4766 scipy 0.4766 · window 2022-2026 · LiM n=5 mean +5.64 · comparison n=314 mean +1.36]
+ok   the headline counts schools, not band slices  [page 319 vs offline 319 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [5 vs 5]
 ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [338 of 623 schools; In Idaho Title I schools, between 2021-22 and 2024-25, Leader in Me schools rose]
+ok   choosing 'Title I schools' narrows the view and names it  [385 of 686 schools; In Idaho Title I schools, between 2021-22 and 2025-26, Leader in Me schools rose]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
-ok   Title I status is known for most schools on the page  [98.4%]
+ok   Title I status is known for most schools on the page  [96.5%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
 ok   measure 'percent_proficient' either draws or says why
@@ -157,8 +161,8 @@ ok   the matched toggle re-renders the headline  [In Idaho schools (matched to s
 ok   the matched view shrinks or equals the Leader in Me count  [4 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Bonneville Joint District generates cards or says there is nothing to report  [3 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.1573744742742642, 'n1': 4, 'n2': 286}]
+ok   Bonneville Joint District generates cards or says there is nothing to report  [4 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.4766027425993282, 'n1': 5, 'n2': 314}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -177,15 +181,15 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [627 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [161,896 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [157,731 bytes]
 ok   the pptx export is named for the state and chart  [ID_Percent_meeting_the_standard_year_by_year_Idaho_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [161,035 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [157,280 bytes]
 ok   the docx export is named for the state and chart  [ID_Percent_meeting_the_standard_year_by_year_Idaho_schools.docx]
-ok   the research pack downloads with its sections  [6,262 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [5,392 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Idaho grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 5.8% on Percent mee]
+ok   choosing a grade re-renders the headline and names the grade  [In Idaho grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 1.0% on Percent mee]
 ok   whole-school measures switch off while a grade is chosen  [3 whole-school measures in the payload]
 ok   dark mode re-renders without errors
 ok   no horizontal overflow at 900px  [0px]
@@ -215,13 +219,13 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a descriptive page says so on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +11.93 pts (n=4) vs comparison +0.82 pts (n=286), p=0.1574 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +5.64 pts (n=5) vs comparison +1.36 pts (n=314), p=0.4766 -> not significant
 
 ==========================================================================
 150 of 150 checks pass · 3 skipped
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/id_core_verify.py --work /home/claude/sdf/Build/work/ID
+$ python3 /home/claude/sdf/Build/states/id_core_verify.py --work /home/claude/work1/ID
 
 Idaho's own measures
 --------------------------------------------------------------------------
@@ -233,12 +237,12 @@ ok   the workbook's charter flag agrees with NCES's own directory flag (an indep
 ok   a school re-pointed through its state id is named on the page, or none was  [0 re-pointed]
 ok   a federal id carried by two state ids is a renamed school whose classes do not overlap, or one was set aside  [1 shared ids]
 ok   no school-class in the pack is fed by two state ids
-ok   each joined school's state id sits in the pack's state ids  [175 state ids]
-ok   class of 2022, fall enrollment: the pack's college_fall is the workbook's own value re-read from the xlsx  [166 of 166 agree (need 120); 3 Leader in Me schools among them]
-ok   class of 2019, first-year enrollment: the pack's college_first_year is the workbook's own value re-read from the xlsx  [158 of 158 agree (need 120); 3 Leader in Me schools among them]
-ok   class of 2019, enrollment within three years: the pack's college_3yr is the workbook's own value re-read from the xlsx  [158 of 158 agree (need 120); 3 Leader in Me schools among them]
+ok   each joined school's state id sits in the pack's state ids  [178 state ids]
+ok   class of 2022, fall enrollment: the pack's college_fall is the workbook's own value re-read from the xlsx  [167 of 167 agree (need 120); 3 Leader in Me schools among them]
+ok   class of 2019, first-year enrollment: the pack's college_first_year is the workbook's own value re-read from the xlsx  [159 of 159 agree (need 120); 3 Leader in Me schools among them]
+ok   class of 2019, enrollment within three years: the pack's college_3yr is the workbook's own value re-read from the xlsx  [159 of 159 agree (need 120); 3 Leader in Me schools among them]
 ok   class of 2019, four-year share of fall enrollees: the pack's college_fall_four_year is the workbook's own value re-read from the xlsx  [130 of 130 agree (need 100); 2 Leader in Me schools among them]
-ok   class of 2016, fall enrollment: the pack's college_fall is the workbook's own value re-read from the xlsx  [156 of 156 agree (need 100); 3 Leader in Me schools among them]
+ok   class of 2016, fall enrollment: the pack's college_fall is the workbook's own value re-read from the xlsx  [157 of 157 agree (need 100); 3 Leader in Me schools among them]
 ok   a rate on fewer than 10 graduates carries no value in the pack  [97 such school-classes on the page, 0 leaked]
 ok   the pack is keyed on the graduating class with the closure classes and the class of 2014 out  [[2015, 2016, 2017, 2018, 2019, 2022]]
 ok   the pack's graduate counts are the workbook's denominators
@@ -249,11 +253,11 @@ ok   the excluded counts carry the floor and the exclusions
 ok   chronic absence on the rows is DOMO's own value on every school-year (nothing filled)  [1574 of 1574]
 ok   graduation on the rows is DOMO's own value on every school-year (nothing filled)  [543 of 543]
 ok   no core measure was filled from the state's file
-ok   the research pack's per-school Idaho values are keyed to schools on the page  [950 records]
-ok   the pack carries a go-on rate for a counted Leader in Me high school  [18 Leader in Me school-classes]
+ok   the research pack's per-school Idaho values are keyed to schools on the page  [956 records]
+ok   the pack carries a go-on rate for a counted Leader in Me high school  [19 Leader in Me school-classes]
 ok   the pack labels say the year is the graduating class
 ok   the banner names the OSBE workbook
-ok   the methods page owns the descriptive limit  [headline n = 4]
+ok   the methods page owns the descriptive limit  [headline n = 5]
 ok   the unmanifested report card export is named as not read
 ok   the page says the workbook stops at the class of 2022 although the dashboard shows later classes
 

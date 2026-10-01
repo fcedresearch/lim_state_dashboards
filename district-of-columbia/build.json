@@ -2,87 +2,90 @@
  "state": "DC",
  "name": "District of Columbia",
  "folder": "district-of-columbia",
- "built": "2026-09-08",
- "seconds": 64,
+ "built": "2026-10-01",
+ "seconds": 53,
  "builder": "build_payload_core.py",
  "page_kind": "descriptive",
  "lim_headline_n": 5,
- "schools": 234,
+ "schools": 247,
  "years": [
   2014,
-  2025
+  2026
  ],
  "lim_roster_schools": 6,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/DC/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/DC/data/Subjects_Tests_FINAL (8).csv",
    "rows": 12429
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/DC/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/DC/data/LIM Schools (Current_Active) (11).csv",
    "rows": 58
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/DC/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/DC/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 1683
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/DC/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/DC/data/All MRA Surveys.csv",
    "rows": 6
   }
  },
  "state_files": [
   "DC School Report Card_DC/",
   "PULL-MANIFEST_DC.csv",
-  "Teacher Retention_DC/"
+  "Teacher Retention_DC/",
+  "sd_newest_audit.json",
+  "sd_newest_subjects.csv"
  ],
  "extras_module": "dc_core_extras",
  "verified": true,
- "dashboard_bytes": 620607,
+ "dashboard_bytes": 638715,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
-  "status": "complete",
+  "year": 2026,
+  "label": "2025-26",
+  "status": "partial",
   "subjects": [
    "ELA",
-   "Math",
+   "Math"
+  ],
+  "missing": [
    "Science"
   ],
-  "missing": [],
-  "rows_share_of_prior": 0.99,
-  "prior_year": 2024
+  "rows_share_of_prior": 0.83,
+  "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 12429,
-   "levels 3 and 4": 12.9,
+   "rows": 13981,
+   "levels 3 and 4": 11.6,
    "levels 2, 3 and 4": 0.8,
-   "level 4 alone": 25.5,
+   "level 4 alone": 22.8,
    "100 minus level 1": 0.2,
    "best": "level 4 alone",
-   "levels_sum_to_100_share": 37.9,
+   "levels_sum_to_100_share": 34.2,
    "structure": "no combination of the reported levels reproduces the proficiency rate",
    "n_levels": null,
    "proficient_from": null,
@@ -92,11 +95,11 @@
    "years_out": null,
    "cells_out": null,
    "latest_year_ok": null,
-   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 16% of rows (a five-level state whose export carries four columns, usually)",
+   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 15% of rows (a five-level state whose export carries four columns, usually)",
    "combination_shares": {
-    "levels 3 and 4": 15.8,
+    "levels 3 and 4": 14.5,
     "levels 2, 3 and 4": 1.3,
-    "levels 1 and 2 (1 the top)": 2.1,
+    "levels 1 and 2 (1 the top)": 2.2,
     "levels 1, 2 and 3 (1 the top)": 1.1
    },
    "cells": [],
@@ -170,5 +173,5 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 4
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-10-01"
 }

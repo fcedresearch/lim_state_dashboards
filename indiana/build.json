@@ -2,68 +2,70 @@
  "state": "IN",
  "name": "Indiana",
  "folder": "indiana",
- "built": "2026-09-08",
- "seconds": 140,
+ "built": "2026-10-01",
+ "seconds": 118,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 60,
- "schools": 1906,
+ "lim_headline_n": 53,
+ "schools": 1984,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 104,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/IN/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/IN/data/Subjects_Tests_FINAL (8).csv",
    "rows": 142211
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/IN/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/IN/data/LIM Schools (Current_Active) (11).csv",
    "rows": 1000
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/IN/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/IN/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 16046
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/IN/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/IN/data/All MRA Surveys.csv",
    "rows": 139
   }
  },
  "state_files": [
   "Attendance_IN/",
   "PULL-MANIFEST_IN.csv",
-  "School Grade_IN/"
+  "School Grade_IN/",
+  "sd_newest_audit.json",
+  "sd_newest_subjects.csv"
  ],
  "extras_module": "in_core_extras",
  "verified": true,
- "dashboard_bytes": 3763620,
+ "dashboard_bytes": 4145393,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
+  "year": 2026,
+  "label": "2025-26",
   "status": "complete",
   "subjects": [
    "ELA",
@@ -72,29 +74,30 @@
    "Social Studies"
   ],
   "missing": [],
-  "rows_share_of_prior": 1.25,
-  "prior_year": 2024
+  "rows_share_of_prior": 1.02,
+  "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 129555,
-   "levels 3 and 4": 55.7,
+   "rows": 146699,
+   "levels 3 and 4": 60.8,
    "levels 2, 3 and 4": 0.5,
    "level 4 alone": 1.0,
    "100 minus level 1": 0.5,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 55.4,
+   "levels_sum_to_100_share": 60.7,
    "structure": "four levels, numbered from the bottom; proficiency is the top 2",
    "n_levels": 4,
    "proficient_from": 3,
    "reversed_numbering": false,
-   "coverage": 55.4,
+   "coverage": 60.7,
    "years_ok": [
     2019,
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "years_out": [
     2015,
@@ -107,9 +110,9 @@
    "reason": null,
    "combination_shares": {
     "levels 3 and 4": 100.0,
-    "levels 2, 3 and 4": 0.6,
+    "levels 2, 3 and 4": 0.5,
     "levels 1 and 2 (1 the top)": 2.5,
-    "levels 1, 2 and 3 (1 the top)": 1.3
+    "levels 1, 2 and 3 (1 the top)": 1.2
    },
    "cells": [
     {
@@ -498,6 +501,51 @@
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "ELA",
+     "rows": 6415,
+     "level_rows": 6415,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Math",
+     "rows": 6417,
+     "level_rows": 6417,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Science (end-of-course)",
+     "rows": 486,
+     "level_rows": 486,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Science",
+     "rows": 2928,
+     "level_rows": 2928,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Social Studies",
+     "rows": 898,
+     "level_rows": 898,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
     }
    ],
    "levels_as_measures": true
@@ -539,21 +587,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 60,
-    "comp_n": 1564,
-    "lim_change": -1.93,
-    "comp_change": 0.32,
-    "p": 0.05
+    "y1": 2026,
+    "lim_n": 53,
+    "comp_n": 1547,
+    "lim_change": -0.05,
+    "comp_change": 0.7,
+    "p": 0.532
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 55,
-    "comp_n": 1564,
-    "lim_change": -2.5,
-    "comp_change": 0.32,
-    "p": 0.018
+    "y1": 2026,
+    "lim_n": 48,
+    "comp_n": 1547,
+    "lim_change": -0.71,
+    "comp_change": 0.7,
+    "p": 0.255
    },
    "schools": 6
   },
@@ -561,14 +609,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 9,
-  "in_the_process": 8,
-  "lapsed_on_the_list": 1,
-  "reviewed": 54,
+  "qualified": 11,
+  "in_the_process": 9,
+  "lapsed_on_the_list": 2,
+  "reviewed": 56,
   "measures": 57,
   "outcomes": 13,
-  "improved_every_year": 0,
-  "lapsed_longer_ago": 24
+  "improved_every_year": 2,
+  "lapsed_longer_ago": 25
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-10-01"
 }

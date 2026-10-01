@@ -1,21 +1,22 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state MA --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/MA --data /home/claude/sdf/Build/work/MA/data --extras ma_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state MA --core /home/claude/sdf/Core --out /home/claude/work1/MA --data /home/claude/work1/MA/data --extras ma_core_extras
 reading the core for Massachusetts ...
 [core] subjects: 138,414 school rows kept; dropped 63,478 rows with no school id and 2,860 with an id but no school record
 [core] Leader in Me roster: 144 rows
 [core] comparison schools: 15,273 rows
 [core] MRA surveys: 4 rows
-  subject rows 138,414 · roster rows 144 (15 schools) · comparison rows 15,273 (1674 schools) · MRA surveys 4
+  subject rows added from SchoolDigger's bulk file: 14,887 (Massachusetts 2025-26 results (SchoolDigger bulk file, the source of DOMO's subject file))
+  subject rows 153,301 · roster rows 144 (15 schools) · comparison rows 15,273 (1674 schools) · MRA surveys 4
 [core] Leader in Me roster: 56,181 rows
-  exits: 14 of 15 roster schools carry an expiration date; 11 past it by more than 30 days (exited), 1 inside the grace window, 2 in the future, 1 undated (1 with a start date)
-  1,689 schools · 409 districts
+  exits: 14 of 15 roster schools carry an expiration date; 12 past it by more than 30 days (exited), 0 inside the grace window, 2 in the future, 1 undated (1 with a start date)
+  1,689 schools · 411 districts
 applying the cleaning rules ...
-  51,279 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 39 of 135 reviewed
-  no start date: 0 schools · dated exits: 3 (school-years after an exit with rows: 8) · aggregate 'All grades' rows used 2, skipped 2
-  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 72.4% of rows in years and subjects whose levels add up)
+  57,447 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 43 of 150 reviewed
+  no start date: 0 schools · dated exits: 11 (school-years after an exit with rows: 19) · aggregate 'All grades' rows used 11, skipped 29
+  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 75.4% of rows in years and subjects whose levels add up)
   level values blanked on 15 year-subject cells that do not add up: 2014-15 ELA, 2014-15 Math, 2014-15 Science (end-of-course), 2014-15 Science, 2015-16 ELA, 2015-16 Math, 2015-16 Science (end-of-course), 2015-16 Science ...
-  proficiency = levels 3 and 4 on 71.4% of rows
+  proficiency = levels 3 and 4 on 74.5% of rows
   statewide jump: ELA 2016->2017: 66.7 -> 57.3 (-9.3)
 folding in Massachusetts's own measures (ma_core_extras) ...
   state files (resolved by pattern):
@@ -41,7 +42,7 @@ folding in Massachusetts's own measures (ma_core_extras) ...
     set aside: federal-designations-2025.xlsx: the 2025 federal designations lists (CSI, TSI, ATSI): a category, and the classification file carries each school's classification
     NCES directory: 1,967 federal-to-state id pairs from the cache (8 CCD files unchanged)
     state files: 282,622 rows over 11 families from the cache (files unchanged)
-  Massachusetts measures per school-year: 16,626 school-years, 62 measure keys; closure-year values set aside 56,816; beyond the page's last year 14,531; chronic_absent_ma 2018-2025 (10,980 values); pct_disciplined 2015-2025 (16,545 values); teacher_retention 2015-2025 (15,984 values); sgp_ela 2018-2025 (7,832 values); acct_percentile 2018-2025 (9,238 values); target_pct 2018-2025 (6,347 values); grad_rate_4yr 2015-2025 (3,521 values)
+  Massachusetts measures per school-year: 18,424 school-years, 62 measure keys; closure-year values set aside 56,816; beyond the page's last year 0; chronic_absent_ma 2018-2026 (12,777 values); pct_disciplined 2015-2025 (16,545 values); teacher_retention 2015-2026 (17,751 values); sgp_ela 2018-2025 (7,832 values); acct_percentile 2018-2025 (9,238 values); target_pct 2018-2025 (6,347 values); grad_rate_4yr 2015-2025 (3,521 values)
   crosswalk: NCES's organization code for each federal id, audited against the state files' own school names within district
     1,673 of 1,689 schools carry an organization code in NCES's directory; Leader in Me 15 of 15, comparison 1,658 of 1,674; 1,673 appear in at least one state file
     names within district: the state files' school name agrees with DOMO's on 1,668 of 1,674 crosswalked schools, the district on 1,673 of 1,673; 0 pairs re-pointed to a folded id; 1 shared codes settled; 1 school carries more than one code across the years
@@ -51,38 +52,39 @@ folding in Massachusetts's own measures (ma_core_extras) ...
     name disagreement: DOMO 'Leonard Middle School' vs state 'Francis M Leahy Middle' (01490090)
     name disagreement: DOMO 'Fecteau-Leary Junior/Senior High School' vs state 'Harold Durgin Success Academy' (01630525)
     name disagreement: DOMO 'Bridgewater Middle School' vs state 'Edward J. O’Donoghue Middle School' (06250320)
-  membership: Leader in Me schools counted per year on the cards {2015: 1, 2016: 1, 2017: 3, 2018: 3, 2019: 4, 2022: 4, 2023: 3, 2024: 10, 2025: 10} (the core's own status)
+  membership: Leader in Me schools counted per year on the cards {2015: 1, 2016: 1, 2017: 3, 2018: 3, 2019: 4, 2022: 4, 2023: 3, 2024: 10, 2025: 10, 2026: 4} (the core's own status)
   value check of the join (files the map was not built from): DOMO's graduation rate is the state's four-year cohort rate within a point on 2093 of 2094 school-years (to the decimal on 2093); DOMO's enrollment against the discipline file's on 1673 schools, r = 0.997, median size difference 3.6%
-  fill: chronic absence from the state attendance file on 9,555 school-years for 1,649 schools on the page (2017-18, 2018-19, 2021-22, 2022-23, 2023-24, 2024-25; DOMO carries 0 chronic-absence values for Massachusetts); graduation: DOMO has 2098 secondary school-years, the state adds a rate on 1048 more (2014-15, 2015-16, 2016-17, 2017-18, 2018-19); no DOMO value is overwritten
-  rows gain: teacher_retention on 17,605 school-year-bands (13 Leader in Me schools ever), pct_disciplined on 18,104 school-year-bands (13 Leader in Me schools ever), sgp_ela on 10,720 school-year-bands (13 Leader in Me schools ever), sgp_math on 10,716 school-year-bands (13 Leader in Me schools ever); 0 school-years had no band to sit in; on combined-grade schools the two growth bands, student-weighted, rebuild the whole-school figure within a point on 1990 of 1990 school-years; 10622 single-band values are the published whole-school figure
+  fill: chronic absence from the state attendance file on 11,101 school-years for 1,649 schools on the page (2017-18, 2018-19, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26; DOMO carries 0 chronic-absence values for Massachusetts); graduation: DOMO has 2098 secondary school-years, the state adds a rate on 1048 more (2014-15, 2015-16, 2016-17, 2017-18, 2018-19); no DOMO value is overwritten
+  rows gain: teacher_retention on 19,596 school-year-bands (14 Leader in Me schools ever), pct_disciplined on 18,141 school-year-bands (13 Leader in Me schools ever), sgp_ela on 10,716 school-year-bands (13 Leader in Me schools ever), sgp_math on 10,712 school-year-bands (13 Leader in Me schools ever); 0 school-years had no band to sit in; on combined-grade schools the two growth bands, student-weighted, rebuild the whole-school figure within a point on 1990 of 1990 school-years; 10578 single-band values are the published whole-school figure
   card: 7 Massachusetts measures, each group on each year's own membership (left off, under three Leader in Me schools: college_16mo {})
-    card line chronic_absent_ma: 6 Leader in Me points, latest 2025 n=10 (15.6); years [2018, 2019, 2022, 2023, 2024, 2025]
+    card line chronic_absent_ma: 7 Leader in Me points, latest 2026 n=4 (23.45); years [2018, 2019, 2022, 2023, 2024, 2025, 2026]
     card line pct_disciplined: 7 Leader in Me points, latest 2025 n=10 (1.47); years [2017, 2018, 2019, 2022, 2023, 2024, 2025]
-    card line teacher_retention: 7 Leader in Me points, latest 2025 n=10 (78.58); years [2017, 2018, 2019, 2022, 2023, 2024, 2025]
+    card line teacher_retention: 8 Leader in Me points, latest 2026 n=4 (77.07); years [2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
     card line sgp_ela: 6 Leader in Me points, latest 2025 n=10 (52.8); years [2018, 2019, 2022, 2023, 2024, 2025]
     card line sgp_math: 6 Leader in Me points, latest 2025 n=10 (54.4); years [2018, 2019, 2022, 2023, 2024, 2025]
     card line acct_percentile: 6 Leader in Me points, latest 2025 n=10 (41.7); years [2018, 2019, 2022, 2023, 2024, 2025]
     card line target_pct: 4 Leader in Me points, latest 2025 n=10 (56.0); years [2018, 2023, 2024, 2025]
-  per-school Massachusetts records for the pack: 14,412 (62 columns)
-  Massachusetts's measures on 18,121 school-year-bands: 17,014 joined to existing rows, 1,107 school-year-bands added with no test rows of their own
-  core measures filled from Massachusetts's own files where DOMO had none: chronic_absent 35,188 rows, grad_rate 3,949 rows
-  school type from NCES: Title I on 1,648 schools (1,013 yes), charter 85, magnet 0, alternative 15; Title I published 2017-2022, carried forward after
+  per-school Massachusetts records for the pack: 15,958 (62 columns)
+  Massachusetts's measures on 20,114 school-year-bands: 18,888 joined to existing rows, 1,226 school-year-bands added with no test rows of their own
+  core measures filled from Massachusetts's own files where DOMO had none: chronic_absent 41,330 rows, grad_rate 3,949 rows
+  school type from NCES: Title I on 1,697 schools (1,043 yes), charter 86, magnet 0, alternative 17; Title I published 2017-2022, carried forward after
   funders: 6 Massachusetts schools carry a funding source (6 on the page; Kern 1, 1 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 6  by band {'Primary': {'pairs': 4, 'unmatched': 0}, 'Secondary': {'pairs': 2, 'unmatched': 0}}
   MRA: 4 surveys · 3 schools · 9 sentinel values · 0 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 10, 'comp_n': 1469, 'lim_change': 2.36, 'comp_change': -0.47, 'p': 0.206} · without the 1 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 9, 'comp_n': 1469, 'lim_change': 2.26, 'comp_change': -0.47, 'p': 0.273}
-  roster: 3 counted, 11 exited, 1 not counted yet, 0 not counted
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 4, 'comp_n': 1457, 'lim_change': 4.64, 'comp_change': -1.45, 'p': 0.166} · without the 1 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 3, 'comp_n': 1457, 'lim_change': 4.53, 'comp_change': -1.45, 'p': 0.333}
+  roster: 3 counted, 12 exited, 0 not counted yet, 0 not counted
+best-performing schools: 2 of 4 counted schools, 63 measures in 16 outcomes
 
-wrote ma_payload.json  (35.6 MB, 52,386 rows) · page kind descriptive (10 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote ma_payload.json  (39.1 MB, 58,673 rows) · page kind descriptive (4 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'b4086360738c'}
 
 $ python3 build2.py ma_payload.json MA_Dashboard.html MA_Methods.html
-payload 35.6 MB -> 2.95 MB gzip
-MA_Dashboard.html: 4131 KB
-MA_Methods.html: 60 KB
+payload 39.1 MB -> 3.26 MB gzip
+MA_Dashboard.html: 4554 KB
+MA_Methods.html: 71 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state MA --work /home/claude/sdf/Build/work/MA
+$ python3 /home/claude/sdf/Build/verify_core.py --state MA --work /home/claude/work1/MA
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -106,7 +108,7 @@ ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [11 exited, 1 in grace, 2 future]
+ok   the exit rule's counts recompute from the roster  [12 exited, 0 in grace, 2 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [0 composite cells at 100, 0 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -125,11 +127,11 @@ ok   no Leader in Me row counted before its full year was finished  [0 rows]
 ok   schools with no start date appear in neither group  [0 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [10 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [11 exited (0 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [11 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [12 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 11, 'counted': 3, 'not counted yet': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 12, 'counted': 3}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -137,10 +139,10 @@ ok   the records carry no lunch share for this state, and the methods page says 
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [899 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [884 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [61,965 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [70,874 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
@@ -153,8 +155,8 @@ ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [305 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [435 schools]
-ok   the school count never exceeds the band-slice count  [1479 schools vs 1808 band slices]
+ok   combined-grade schools appear in both bands  [445 schools]
+ok   the school count never exceeds the band-slice count  [1461 schools vs 1788 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -168,13 +170,13 @@ ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
 ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early'] absent=['lighthouse', 'established']]
 ok   movers are built on ten or more schools each
-  demo district: Waltham · prospect district: Worcester
+  demo district: Springfield · prospect district: Worcester
 
 --------------------------------------------------------------------------
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [1.4s]
+ok   load time is workable  [1.0s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -184,14 +186,14 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [7 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.2055 scipy 0.2055 · window 2022-2025 · LiM n=10 mean +2.36 · comparison n=1469 mean -0.47]
-ok   the headline counts schools, not band slices  [page 1479 vs offline 1479 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [10 vs 10]
-ok   the district filter re-renders the headline  [In Waltham schools, between 2023-24 and 2024-25, Leader in Me schools rose 2.2% on Meeting]
+ok   the headline p recomputes offline  [page 0.1657 scipy 0.1657 · window 2022-2026 · LiM n=4 mean +4.66 · comparison n=1457 mean -1.45]
+ok   the headline counts schools, not band slices  [page 1461 vs offline 1461 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [4 vs 4]
+ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Alternative schools]
-ok   choosing 'Title I schools' narrows the view and names it  [1041 of 1689 schools; In Massachusetts Title I schools, between 2021-22 and 2024-25, Leader in Me scho]
+ok   choosing 'Title I schools' narrows the view and names it  [1071 of 1747 schools; In Massachusetts Title I schools, between 2021-22 and 2025-26, Leader in Me scho]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   Title I status is known for most schools on the page  [97.6%]
+ok   Title I status is known for most schools on the page  [97.1%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
 ok   measure 'percent_proficient' either draws or says why
@@ -210,8 +212,8 @@ ok   the matched toggle re-renders the headline  [In Massachusetts schools (matc
 ok   the matched view shrinks or equals the Leader in Me count  [3 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Waltham generates cards or says there is nothing to report  [6 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.20553244395951242, 'n1': 10, 'n2': 1469}]
+ok   Springfield generates cards or says there is nothing to report  [7 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.1657071682150993, 'n1': 4, 'n2': 1457}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -228,15 +230,15 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [129 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [129,170 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [123,597 bytes]
 ok   the pptx export is named for the state and chart  [MA_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Massachusetts_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [130,006 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [124,823 bytes]
 ok   the docx export is named for the state and chart  [MA_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Massachusetts_schools.docx]
-ok   the research pack downloads with its sections  [15,629 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'report_card', 'report_card_school']]
-ok   the pack's Leader in Me count for the district is the page's  [7 vs 7]
+ok   the research pack downloads with its sections  [32,025 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
+skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Massachusetts grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 2.4% on Mee]
+ok   choosing a grade re-renders the headline and names the grade  [In Massachusetts grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 1.3% on Mee]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [7 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -268,13 +270,13 @@ ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 ok   a descriptive page says so on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +2.36 pts (n=10) vs comparison -0.47 pts (n=1469), p=0.2055 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +4.66 pts (n=4) vs comparison -1.45 pts (n=1457), p=0.1657 -> not significant
 
 ==========================================================================
-164 of 164 checks pass · 3 skipped
+163 of 163 checks pass · 4 skipped
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/ma_core_verify.py --work /home/claude/sdf/Build/work/MA
+$ python3 /home/claude/sdf/Build/states/ma_core_verify.py --work /home/claude/work1/MA
 
 Massachusetts's own measures
 --------------------------------------------------------------------------
@@ -288,31 +290,31 @@ ok   DOMO's enrollment tracks the discipline file's on the crosswalked schools  
 ok   no organization code is on two schools  [1,674 pairs, 1,673 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page, or every one is reached and the page says so
 ok   the join note on the card carries the reach
-ok   each Leader in Me school's organization code sits in the pack's state ids  [13 Leader in Me schools]
+ok   each Leader in Me school's organization code sits in the pack's state ids  [14 Leader in Me schools]
 ok   the attendance file read is the stored-precision re-pull  [Student_Attendance_ak6h-9k7x_all-students_stored-precision.csv]
-ok   attendance 2024-25: the pack's chronic_absent_ma is the state file's own value re-read from the file  [1564 of 1564 agree (need 1200); 13 Leader in Me schools among them]
+ok   attendance 2025-26: the pack's chronic_absent_ma is the state file's own value re-read from the file  [1546 of 1546 agree (need 1200); 14 Leader in Me schools among them]
 ok   the attendance rates in the re-pull carry three decimals of a fraction, not one (the rounding defect is not read)
-ok   attendance 2024-25: the rows' chronic-absence measure is the state's value (DOMO carries none for Massachusetts)  [1561 of 1561 rows agree]
-ok   chronic absence on the rows sits only in the years the state published it (2017-18 on) and never in a closure year  [[2018, 2019, 2022, 2023, 2024, 2025]]
+ok   attendance 2025-26: the rows' chronic-absence measure is the state's value (DOMO carries none for Massachusetts)  [1535 of 1535 rows agree]
+ok   chronic absence on the rows sits only in the years the state published it (2017-18 on) and never in a closure year  [[2018, 2019, 2022, 2023, 2024, 2025, 2026]]
 ok   the discipline file read is the stored-precision re-pull  [Student_Discipline_2kca-w7rq_all-students_all-offenses_stored-precision.csv]
-ok   discipline 2024-25 (students disciplined, rebuilt from the file's counts): the pack's pct_disciplined is the state file's own value re-read from the file  [1566 of 1566 agree (need 1200); 13 Leader in Me schools among them]
+ok   discipline 2024-25 (students disciplined, rebuilt from the file's counts): the pack's pct_disciplined is the state file's own value re-read from the file  [1566 of 1566 agree (need 1200); 14 Leader in Me schools among them]
 ok   discipline 2024-25 (out-of-school suspension where published): the pack's pct_oss is the state file's own value re-read from the file  [803 of 803 agree (need 500); 5 Leader in Me schools among them]
 ok   a suspension rate the state leaves blank (fewer than six students disciplined) carries no value in the pack  [763 such schools on the page in 2024-25]
-ok   discipline 2024-25: the rows' students-disciplined measure equals the pack's value on every band  [1971 of 1971]
-ok   teacher retention 2024-25 (rebuilt from the file's counts): the pack's teacher_retention is the state file's own value re-read from the file  [1563 of 1563 agree (need 1200); 13 Leader in Me schools among them]
+ok   discipline 2024-25: the rows' students-disciplined measure equals the pack's value on every band  [1976 of 1976]
+ok   teacher retention 2025-26 (rebuilt from the file's counts): the pack's teacher_retention is the state file's own value re-read from the file  [1545 of 1545 agree (need 1200); 14 Leader in Me schools among them]
 ok   the published retention percent is rounded to a tenth and the rebuilt rate agrees with it rounded on nearly every school-year  [32,412 of 32,416]
-ok   a retention rate on fewer than five teachers or an exact zero carries no value in the pack  [1 small and 1 zero school-years on the page in 2024-25]
-ok   teacher retention 2024-25: the rows' measure equals the pack's value  [1967 of 1967]
-ok   growth 2024-25 (mean student growth percentile, ELA, grades 3-8): the pack's sgp_ela is the state file's own value re-read from the file  [1273 of 1273 agree (need 1000); 13 Leader in Me schools among them]
-ok   growth 2024-25: a school in one band inside grades 3-8 carries the published whole-school figure on its row  [782 of 782]
-ok   growth 2024-25: combined-grade schools carry a value on each band, built from the grade figures  [695 band rows on 374 schools]
+ok   a retention rate on fewer than five teachers or an exact zero carries no value in the pack  [1 small and 0 zero school-years on the page in 2025-26]
+ok   teacher retention 2025-26: the rows' measure equals the pack's value  [1944 of 1944]
+ok   growth 2024-25 (mean student growth percentile, ELA, grades 3-8): the pack's sgp_ela is the state file's own value re-read from the file  [1273 of 1273 agree (need 1000); 14 Leader in Me schools among them]
+ok   growth 2024-25: a school in one band inside grades 3-8 carries the published whole-school figure on its row  [777 of 777]
+ok   growth 2024-25: combined-grade schools carry a value on each band, built from the grade figures  [699 band rows on 378 schools]
 ok   on combined-grade schools the two growth bands rebuild the whole-school figure within a point  [1990 of 1990]
 ok   the 2016-17 growth figure (a median) is out of the mean series and in the pack under its own name  [mean years [2018, 2019, 2022, 2023, 2024, 2025]]
 ok   the legacy median growth percentiles sit only in 2014-15 to 2017-18 and under their own names
-ok   accountability 2024-25 (percentile, classification file): the pack's acct_percentile is the state file's own value re-read from the file  [1505 of 1505 agree (need 1200); 13 Leader in Me schools among them]
-ok   accountability 2024-25 (criterion-referenced target percentage, current year): the pack's target_pct is the state file's own value re-read from the file  [1521 of 1521 agree (need 1200); 13 Leader in Me schools among them]
-ok   accountability 2017-18 (percentile, profiles workbook): the pack's acct_percentile is the state file's own value re-read from the file  [1543 of 1543 agree (need 1000); 12 Leader in Me schools among them]
-ok   accountability 2017-18 (target percentage, the first-year single-year figure): the pack's target_pct is the state file's own value re-read from the file  [1559 of 1559 agree (need 1000); 12 Leader in Me schools among them]
+ok   accountability 2024-25 (percentile, classification file): the pack's acct_percentile is the state file's own value re-read from the file  [1505 of 1505 agree (need 1200); 14 Leader in Me schools among them]
+ok   accountability 2024-25 (criterion-referenced target percentage, current year): the pack's target_pct is the state file's own value re-read from the file  [1521 of 1521 agree (need 1200); 14 Leader in Me schools among them]
+ok   accountability 2017-18 (percentile, profiles workbook): the pack's acct_percentile is the state file's own value re-read from the file  [1543 of 1543 agree (need 1000); 13 Leader in Me schools among them]
+ok   accountability 2017-18 (target percentage, the first-year single-year figure): the pack's target_pct is the state file's own value re-read from the file  [1559 of 1559 agree (need 1000); 13 Leader in Me schools among them]
 ok   the 2025 accountability data workbook agrees with the classification file on the percentile, the annual target percentage and the restated prior year  [percentile 1517 of 1517; 2025 annual 1572 of 1572; restated 2024 1549 of 1549]
 ok   the state's restatement of the prior year's target percentage is counted and explained on the methods page  [49 of 1549 schools restated by more than a point]
 ok   the accountability series sit in their own years: percentile 2017-18 on, old-system percentile 2014-15 to 2016-17, current-year target 2017-18 and 2022-23 on, cumulative 2018-19, 2023-24, 2024-25  [{'acct_percentile': [2018, 2019, 2022, 2023, 2024, 2025], 'target_pct': [2018, 2023, 2024, 2025], 'target_pct_cumulative': [2019, 2024, 2025], 'school_percentile_old': [2015, 2016, 2017], 'ppi_all_students': [2015, 2016, 2017], 'needs_assistance': [2018, 2019, 2023, 2024, 2025]}]
@@ -327,12 +329,12 @@ ok   graduation: the school-years DOMO lacks carry the state's four-year rate, a
 ok   graduation sits on secondary rows only
 ok   DART figures the file publishes twice with differing values (the class of 2024's college enrollment) are set aside and counted  [224 set aside; 167 exact repeats dropped]
 ok   MassCore 2024-25: the pack's masscore_pct is the state file's own value re-read from the file  [370 of 370 agree (need 300); 0 Leader in Me schools among them]
-ok   Chronic absence: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 15.6 (n=10) vs offline 15.6 (n=10)]
-ok   Chronic absence: the latest comparison point recomputes from the long table and the membership file  [2025: payload 18.29 (n=1551) vs offline 18.29 (n=1551)]
+ok   Chronic absence: the latest Leader in Me point recomputes from the long table and the membership file  [2026: payload 23.45 (n=4) vs offline 23.45 (n=4)]
+ok   Chronic absence: the latest comparison point recomputes from the long table and the membership file  [2026: payload 16.69 (n=1531) vs offline 16.69 (n=1531)]
 ok   Students disciplined: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 1.47 (n=10) vs offline 1.47 (n=10)]
 ok   Students disciplined: the latest comparison point recomputes from the long table and the membership file  [2025: payload 3.07 (n=1553) vs offline 3.07 (n=1553)]
-ok   Teachers retained from the year before: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 78.58 (n=10) vs offline 78.58 (n=10)]
-ok   Teachers retained from the year before: the latest comparison point recomputes from the long table and the membership file  [2025: payload 82.58 (n=1550) vs offline 82.58 (n=1550)]
+ok   Teachers retained from the year before: the latest Leader in Me point recomputes from the long table and the membership file  [2026: payload 77.07 (n=4) vs offline 77.07 (n=4)]
+ok   Teachers retained from the year before: the latest comparison point recomputes from the long table and the membership file  [2026: payload 83.56 (n=1530) vs offline 83.56 (n=1530)]
 ok   Student growth percentile, English language arts: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 52.8 (n=10) vs offline 52.8 (n=10)]
 ok   Student growth percentile, English language arts: the latest comparison point recomputes from the long table and the membership file  [2025: payload 50.43 (n=1260) vs offline 50.43 (n=1260)]
 ok   Student growth percentile, mathematics: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 54.4 (n=10) vs offline 54.4 (n=10)]
@@ -341,27 +343,27 @@ ok   Accountability percentile (1-99): the latest Leader in Me point recomputes 
 ok   Accountability percentile (1-99): the latest comparison point recomputes from the long table and the membership file  [2025: payload 50.06 (n=1492) vs offline 50.06 (n=1492)]
 ok   Share of improvement targets met: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 56.0 (n=10) vs offline 56.0 (n=10)]
 ok   Share of improvement targets met: the latest comparison point recomputes from the long table and the membership file  [2025: payload 51.6 (n=1508) vs offline 51.6 (n=1508)]
-ok   the closure years are on no Massachusetts card  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
-ok   no card year sits past the core's last year  [2025 vs 2025]
-ok   teacher_retention sits in no closure year on the rows and never past the page's last year  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
+ok   the closure years are on no Massachusetts card  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
+ok   no card year sits past the core's last year  [2026 vs 2026]
+ok   teacher_retention sits in no closure year on the rows and never past the page's last year  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
 ok   pct_disciplined sits in no closure year on the rows and never past the page's last year  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   sgp_ela sits in no closure year on the rows and never past the page's last year  [[2018, 2019, 2022, 2023, 2024, 2025]]
 ok   sgp_math sits in no closure year on the rows and never past the page's last year  [[2018, 2019, 2022, 2023, 2024, 2025]]
-ok   chronic_absent sits in no closure year on the rows and never past the page's last year  [[2018, 2019, 2022, 2023, 2024, 2025]]
+ok   chronic_absent sits in no closure year on the rows and never past the page's last year  [[2018, 2019, 2022, 2023, 2024, 2025, 2026]]
 ok   grad_rate sits in no closure year on the rows and never past the page's last year  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
-ok   the pack carries no closure year and nothing past the page's last year  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
+ok   the pack carries no closure year and nothing past the page's last year  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
 ok   the attendance file's March year-to-date rows are not read and are counted
-ok   every 2025-26 value (attendance, retention, pathways, DART) is held for the next build and counted
+ok   the state's 2025-26 values (attendance, retention, pathways) are on the page, none held past its last year  [1,546 2025-26 pack records; beyond 0]
 ok   the pack's pathways enrollment stops at 2024-25 and starts at 2021-22
 ok   every exclusion is counted on the cleaning audit
 ok   the rounding defect of the bulk export is on the methods page and in the pull manifest's terms
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 14,384 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [39 Leader in Me school-years on the cards]
-ok   every Leader in Me card member is a school the headline's roster counts  [13 schools]
-ok   no card member sits past the core's last year  [2025 vs 2025]
-ok   Chronic absence: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=10; years [2018, 2019, 2022, 2023, 2024, 2025]]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 15,919 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [43 Leader in Me school-years on the cards]
+ok   every Leader in Me card member is a school the headline's roster counts  [14 schools]
+ok   no card member sits past the core's last year  [2026 vs 2026]
+ok   Chronic absence: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=4; years [2018, 2019, 2022, 2023, 2024, 2025, 2026]]
 ok   Students disciplined: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=10; years [2017, 2018, 2019, 2022, 2023, 2024, 2025]]
-ok   Teachers retained from the year before: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=10; years [2017, 2018, 2019, 2022, 2023, 2024, 2025]]
+ok   Teachers retained from the year before: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=4; years [2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
 ok   Student growth percentile, English language arts: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=10; years [2018, 2019, 2022, 2023, 2024, 2025]]
 ok   Student growth percentile, mathematics: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=10; years [2018, 2019, 2022, 2023, 2024, 2025]]
 ok   Accountability percentile (1-99): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=10; years [2018, 2019, 2022, 2023, 2024, 2025]]
@@ -370,20 +372,20 @@ ok   every card measure carries the context line
 ok   the card stays at a dozen measures or fewer  [7 on the card]
 ok   a line the Leader in Me side cannot fill is off the card and explained in the note  [thin: ['college_16mo']]
 ok   the page says when the first Leader in Me point is drawn and why
-ok   a year with fewer than three counted Leader in Me schools draws no point on any card  [counted per year {'2015': 1, '2016': 1, '2017': 3, '2018': 3, '2019': 4, '2022': 4, '2023': 3, '2024': 10, '2025': 10}]
-ok   the card's Leader in Me count per year never exceeds the headline's roster  [max 10 vs 13 roster schools with counted years]
-ok   students disciplined, teacher retention and the growth percentiles are measures in the rows with Leader in Me school-years behind them  [39 Leader in Me retention school-years]
+ok   a year with fewer than three counted Leader in Me schools draws no point on any card  [counted per year {'2015': 1, '2016': 1, '2017': 3, '2018': 3, '2019': 4, '2022': 4, '2023': 3, '2024': 10, '2025': 10, '2026': 4}]
+ok   the card's Leader in Me count per year never exceeds the headline's roster  [max 10 vs 14 roster schools with counted years]
+ok   students disciplined, teacher retention and the growth percentiles are measures in the rows with Leader in Me school-years behind them  [43 Leader in Me retention school-years]
 ok   chronic absence and graduation are described as state-filled in the measure text
 ok   chronic absence is offered on the page (DOMO carried none; the state fills it)
-ok   the research pack's per-school Massachusetts values are keyed to schools on the page  [14,412 records]
+ok   the research pack's per-school Massachusetts values are keyed to schools on the page  [15,958 records]
 ok   every pack key carries a plain-English label  [62 columns]
 ok   no label leaves a state acronym unexplained
-ok   every school with an organization code on the page has it in the pack  [1,673 of 1,689]
+ok   every school with an organization code on the page has it in the pack  [1,673 of 1,747]
 ok   look-alike mode names students disciplined as its behavior measure
-ok   the pack's published section carries the state's own attendance, discipline and retention rows  [9 state rows, 3597 rows in all]
+ok   the pack's published section carries the state's own attendance, discipline and retention rows  [10 state rows, 3989 rows in all]
 ok   the district codes the pack maps carry published rows  [409 districts mapped]
 ok   the banner names the attendance, discipline, retention, growth and accountability files
-ok   the methods page owns the descriptive limit for the Massachusetts cards
+ok   the methods page owns the descriptive limit for the Massachusetts cards  [headline n = 4]
 ok   the methods page carries the graduation fill rule and the chronic-absence source
 ok   the measures the card can carry are on it  [7 on the card]
 

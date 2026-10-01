@@ -2,54 +2,54 @@
  "state": "HI",
  "name": "Hawaii",
  "folder": "hawaii",
- "built": "2026-09-08",
- "seconds": 51,
+ "built": "2026-10-01",
+ "seconds": 43,
  "builder": "build_payload_core.py",
  "page_kind": "descriptive",
- "lim_headline_n": 6,
+ "lim_headline_n": 7,
  "schools": 291,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 21,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/HI/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/HI/data/Subjects_Tests_FINAL (8).csv",
    "rows": 21812
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/HI/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/HI/data/LIM Schools (Current_Active) (11).csv",
    "rows": 206
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/HI/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/HI/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 2591
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/HI/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/HI/data/All MRA Surveys.csv",
    "rows": 28
   }
  },
@@ -57,30 +57,29 @@
   "CCR_HI/",
   "Discipline_HI/",
   "PULL-MANIFEST_HI.csv",
-  "Strive HI KPI_HI/"
+  "Strive HI KPI_HI/",
+  "sd_newest_audit.json",
+  "sd_newest_subjects.csv"
  ],
  "extras_module": "hi_core_extras",
  "verified": true,
- "dashboard_bytes": 589221,
+ "dashboard_bytes": 594187,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
-  "status": "partial",
+  "year": 2026,
+  "label": "2025-26",
+  "status": "complete",
   "subjects": [
    "ELA",
    "Math",
    "Science"
   ],
-  "missing": [
-   "ELA",
-   "Math"
-  ],
-  "rows_share_of_prior": 0.46,
-  "prior_year": 2024
+  "missing": [],
+  "rows_share_of_prior": 1.0,
+  "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 19185,
+   "rows": 20055,
    "no_levels": true,
    "best": "the reported PercentMetStandard alone (the file carries no level percentages)",
    "structure": "no level percentages",
@@ -117,21 +116,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 6,
-    "comp_n": 163,
-    "lim_change": 5.83,
-    "comp_change": 2.16,
-    "p": 0.249
+    "y1": 2026,
+    "lim_n": 7,
+    "comp_n": 161,
+    "lim_change": 5.57,
+    "comp_change": 2.17,
+    "p": 0.313
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 6,
-    "comp_n": 163,
-    "lim_change": 5.83,
-    "comp_change": 2.16,
-    "p": 0.249
+    "y1": 2026,
+    "lim_n": 7,
+    "comp_n": 161,
+    "lim_change": 5.57,
+    "comp_change": 2.17,
+    "p": 0.313
    },
    "schools": 0
   },
@@ -142,11 +141,11 @@
   "qualified": 0,
   "in_the_process": 0,
   "lapsed_on_the_list": 0,
-  "reviewed": 14,
+  "reviewed": 15,
   "measures": 54,
   "outcomes": 16,
   "improved_every_year": 0,
   "lapsed_longer_ago": 5
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-10-01"
 }
