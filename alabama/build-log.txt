@@ -5,9 +5,9 @@ reading the core for Alabama ...
 [core] Leader in Me roster: 1,463 rows
 [core] comparison schools: 10,682 rows
 [core] MRA surveys: 112 rows
-  newest-year like-for-like: 4 grade-test pairs not in the state's newest file; 978 rows at 160 schools left out of that year
-  subject rows added from the state's own file: 6,151 (Alabama 2025-26 assessment results (Alabama State Department of Education))
-  subject rows 94,451 · roster rows 1,463 (158 schools) · comparison rows 10,682 (1179 schools) · MRA surveys 112
+  newest-year like-for-like: 2 grade-test pairs not in the state's newest file; 158 rows at 158 schools left out of that year
+  subject rows added from the state's own file: 7,719 (Alabama 2025-26 assessment results (Alabama State Department of Education))
+  subject rows 96,019 · roster rows 1,463 (158 schools) · comparison rows 10,682 (1179 schools) · MRA surveys 112
   identity: Gulf Shores Elementary School (Gulf Shores): 010020202469 -> 010027001477
   identity: Gulf Shores High School (Gulf Shores): 010020202473 -> 010027000641
   identity: Gulf Shores Middle School (Gulf Shores): 010020202471 -> 010027000023
@@ -18,12 +18,11 @@ reading the core for Alabama ...
   1,330 schools · 147 districts
   2 roster schools have comparison-export rows after their roster years (DOMO's own flag says they left): read as exited after [2015, 2016]
 applying the cleaning rules ...
-  45,229 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  46,267 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
   Leader in Me school-years counted: 881 of 1580 reviewed
-  no start date: 3 schools · dated exits: 62 (school-years after an exit with rows: 196) · aggregate 'All grades' rows used 0, skipped 0
+  no start date: 3 schools · dated exits: 62 (school-years after an exit with rows: 200) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 100.0% of rows in years and subjects whose levels add up)
   proficiency = levels 3 and 4 on 100.0% of rows
-  statewide jump: ELA 2025->2026: 51.2 -> 60.5 (+9.3)
 folding in Alabama's own measures (al_core_extras) ...
   SIR: parsing 4 workbooks (2021-22, 2022-23, 2023-24, 2024-25)
     2021-2022-SIR-Web-Report-by-School.xlsx: 141 system sheets (2021-22)
@@ -62,18 +61,18 @@ folding in Alabama's own measures (al_core_extras) ...
 building matched pairs, inside each band ...
   pairs 139  by band {'Primary': {'pairs': 92, 'unmatched': 2}, 'Secondary': {'pairs': 47, 'unmatched': 2}}
   MRA: 107 surveys · 58 schools · 352 sentinel values · 3 shells
-  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 77, 'comp_n': 761, 'lim_change': 11.67, 'comp_change': 11.18, 'p': 0.658} · without the 72 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 19, 'comp_n': 761, 'lim_change': 11.41, 'comp_change': 11.18, 'p': 0.907}
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 89, 'comp_n': 1039, 'lim_change': 10.27, 'comp_change': 8.7, 'p': 0.075} · without the 72 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 21, 'comp_n': 1039, 'lim_change': 8.49, 'comp_change': 8.7, 'p': 0.87}
   roster: 85 counted, 70 exited, 0 not counted yet, 3 not counted
 best-performing schools: 30 of 93 counted schools, 58 measures in 15 outcomes
 payload carried NaN or infinite values; written as null
 
-wrote al_payload.json  (27.4 MB, 45,848 rows) · page kind full (77 Leader in Me schools on the headline)
+wrote al_payload.json  (27.9 MB, 46,886 rows) · page kind full (89 Leader in Me schools on the headline)
 build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
 
 $ python3 build2.py al_payload.json AL_Dashboard.html AL_Methods.html
-payload 27.4 MB -> 2.31 MB gzip
-AL_Dashboard.html: 3315 KB
-AL_Methods.html: 76 KB
+payload 27.9 MB -> 2.35 MB gzip
+AL_Dashboard.html: 3362 KB
+AL_Methods.html: 75 KB
 
 $ python3 /home/claude/sdf/Build/verify_core.py --state AL --work /home/claude/work1/AL
 
@@ -133,7 +132,7 @@ ok   the grade table lists tested grades in order and every school in it has a n
 ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [626 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [70,680 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [72,210 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
@@ -146,7 +145,7 @@ ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [1,613 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [447 schools]
-ok   the school count never exceeds the band-slice count  [838 schools vs 1011 band slices]
+ok   the school count never exceeds the band-slice count  [1128 schools vs 1367 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -176,9 +175,9 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [8 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.6605 scipy 0.6605 · window 2022-2026 · LiM n=77 mean +11.67 · comparison n=761 mean +11.18]
-ok   the headline counts schools, not band slices  [page 838 vs offline 838 on 2022-2026]
-ok   the page's Leader in Me count is the builder's  [77 vs 77]
+ok   the headline p recomputes offline  [page 0.0752 scipy 0.0752 · window 2022-2026 · LiM n=89 mean +10.26 · comparison n=1039 mean +8.70]
+ok   the headline counts schools, not band slices  [page 1128 vs offline 1128 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [89 vs 89]
 ok   the district filter re-renders the headline  [In Mobile County schools, between 2021-22 and 2025-26, Leader in Me schools rose 13.1% on ]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
 ok   choosing 'Title I schools' narrows the view and names it  [901 of 1359 schools; In Alabama Title I schools, between 2021-22 and 2025-26, Leader in Me schools ro]
@@ -198,11 +197,11 @@ ok   measure 'grad_rate' either draws or says why
 ok   measure 'ccr_rate' either draws or says why
 ok   measure 'acc_points' either draws or says why
 ok   the matched toggle re-renders the headline  [In Alabama schools (matched to similar schools only), between 2021-22 and 2025-26, Leader ]
-ok   the matched view shrinks or equals the Leader in Me count  [63 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [67 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Mobile County generates cards or says there is nothing to report  [10 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.6605167233259661, 'n1': 77, 'n2': 761}]
+ok   Mobile County generates cards or says there is nothing to report  [12 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.07523664100792092, 'n1': 89, 'n2': 1039}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -221,17 +220,17 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [3,185 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [167,498 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [169,220 bytes]
 ok   the pptx export is named for the state and chart  [AL_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Alabama_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [170,146 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [171,899 bytes]
 ok   the docx export is named for the state and chart  [AL_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Alabama_schools.docx]
-ok   the research pack downloads with its sections  [44,124 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [44,338 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 ok   the pack's Leader in Me count for the district is the page's  [8 vs 8]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Alabama schools like Huntsville City’s, between 2021-22 and 2025-26, Leader in Me schools rose 15.1% on Meeting or ex]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Alabama schools like Huntsville City’s, between 2021-22 and 2025-26, Leader in Me schools rose 14.7% on Meeting or ex]
 ok   the look-alike box reports both counts or says why not  [Schools like Huntsville City’s: 22 Leader in Me schools and 167 comparison schools look like Huntsville City’s 43 schools with results in these years (each matc]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.2688]
+ok   the look-alike headline p recomputes offline  [p=0.0726]
 ok   the anchor's own schools are never inside the look-alike groups
 ok   the school list downloads with one row per school  [65 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
@@ -265,12 +264,11 @@ ok   the poverty audit is on the methods page
 ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
-ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +11.67 pts (n=77) vs comparison +11.18 pts (n=761), p=0.6605 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +10.26 pts (n=89) vs comparison +8.70 pts (n=1039), p=0.0752 -> not significant
 
 ==========================================================================
-173 of 173 checks pass
+172 of 172 checks pass
 ==========================================================================
 
 $ python3 /home/claude/sdf/Build/states/al_core_verify.py --work /home/claude/work1/AL
@@ -350,7 +348,7 @@ ok   card line 'ccr_rate' recomputes from the pack on the rows' own status, thre
 ok   card line 'grade_ab' recomputes from the pack on the rows' own status, three or more counted Leader in Me schools a point, a comparison point beside each  [2019 l 77.0 (n=100); 2019 c 60.57 (n=1126); 2022 l 67.89 (n=109); 2022 c 50.18 (n=1128); 2023 l 72.17 (n=115); 2023 c 54.76 (n=1114); 2024 l 78.1 (n=105); 2024 c 58.83 (n=1110); 2025 l 81.44 (n=97); 2025 c 64.85 (n=1098)]
 ok   card line 'acc_points' recomputes from the pack on the rows' own status, three or more counted Leader in Me schools a point, a comparison point beside each  [2019 l 84.5 (n=100); 2019 c 81.32 (n=1126); 2022 l 82.27 (n=109); 2022 c 78.79 (n=1128); 2023 l 83.44 (n=115); 2023 c 79.39 (n=1114); 2024 l 84.98 (n=105); 2024 c 81.11 (n=1110); 2025 l 86.3 (n=97); 2025 c 82.71 (n=1098)]
 ok   card line 'college_going' recomputes from the pack on the rows' own status, three or more counted Leader in Me schools a point, a comparison point beside each  [2025 l 55.68 (n=20); 2025 c 54.48 (n=340)]
-ok   every Leader in Me school-year behind the card is a roster school inside its counted years  [864 Leader in Me school-years, 0 after a dated exit]
+ok   every Leader in Me school-year behind the card is a roster school inside its counted years  [867 Leader in Me school-years, 0 after a dated exit]
 ok   the college-going join reaches most listed high schools, with no row guessed  [367 of 374: {'unique name': 286, 'unique name (loose)': 60, 'shared name, settled by county': 11, 'name contained, inside the county': 8, 'unmatched': 7, "name contained, system's county unplaced": 2}]
 ok   the college-going join reaches most Leader in Me high schools and names the rest  [26 of 26]
 ok   the joined college-going rows look like high schools (graduates a plausible share of DOMO enrollment)  [{'n': 367, 'median': 0.21, 'above_0_6': 0}]

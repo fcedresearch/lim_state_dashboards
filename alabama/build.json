@@ -3,10 +3,10 @@
  "name": "Alabama",
  "folder": "alabama",
  "built": "2026-10-01",
- "seconds": 102,
+ "seconds": 108,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 77,
+ "lim_headline_n": 89,
  "schools": 1359,
  "years": [
   2015,
@@ -71,7 +71,7 @@
  ],
  "extras_module": "al_core_extras",
  "verified": true,
- "dashboard_bytes": 3394709,
+ "dashboard_bytes": 3443033,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -84,12 +84,12 @@
   "missing": [
    "Science"
   ],
-  "rows_share_of_prior": 0.53,
+  "rows_share_of_prior": 0.75,
   "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 85453,
+   "rows": 87021,
    "levels 3 and 4": 100.0,
    "levels 2, 3 and 4": 0.1,
    "level 4 alone": 1.1,
@@ -424,8 +424,8 @@
     {
      "year": 2026,
      "subject": "ELA",
-     "rows": 2967,
-     "level_rows": 2967,
+     "rows": 3751,
+     "level_rows": 3751,
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
@@ -433,8 +433,8 @@
     {
      "year": 2026,
      "subject": "Math",
-     "rows": 2967,
-     "level_rows": 2967,
+     "rows": 3751,
+     "level_rows": 3751,
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
@@ -467,34 +467,25 @@
     "high_poverty_share": 24.3
    }
   },
-  "statewide_jumps": [
-   {
-    "subject": "ELA",
-    "from": 2025,
-    "to": 2026,
-    "from_mean": 51.2,
-    "to_mean": 60.5,
-    "change": 9.3
-   }
-  ],
+  "statewide_jumps": [],
   "sensitivity": {
    "with": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 77,
-    "comp_n": 761,
-    "lim_change": 11.67,
-    "comp_change": 11.18,
-    "p": 0.658
+    "lim_n": 89,
+    "comp_n": 1039,
+    "lim_change": 10.27,
+    "comp_change": 8.7,
+    "p": 0.075
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 19,
-    "comp_n": 761,
-    "lim_change": 11.41,
-    "comp_change": 11.18,
-    "p": 0.907
+    "lim_n": 21,
+    "comp_n": 1039,
+    "lim_change": 8.49,
+    "comp_change": 8.7,
+    "p": 0.87
    },
    "schools": 72
   },
@@ -503,8 +494,8 @@
  },
  "best_schools": {
   "qualified": 30,
-  "in_the_process": 29,
-  "lapsed_on_the_list": 1,
+  "in_the_process": 30,
+  "lapsed_on_the_list": 0,
   "reviewed": 93,
   "measures": 58,
   "outcomes": 15,
