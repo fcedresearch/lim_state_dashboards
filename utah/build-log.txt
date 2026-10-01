@@ -1,21 +1,22 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state UT --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/UT --data /home/claude/sdf/Build/work/UT/data --extras ut_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state UT --core /home/claude/sdf/Core --out /home/claude/work1/UT --data /home/claude/work1/UT/data --extras ut_core_extras
 reading the core for Utah ...
 [core] subjects: 73,008 school rows kept; dropped 19,379 rows with no school id and 624 with an id but no school record
 [core] Leader in Me roster: 904 rows
 [core] comparison schools: 7,217 rows
 [core] MRA surveys: 112 rows
-  subject rows 73,008 · roster rows 904 (99 schools) · comparison rows 7,217 (844 schools) · MRA surveys 112
+  subject rows added from the state's own file: 5,329 (Utah 2025-26 RISE and Utah Aspire Plus results (Utah State Board of Education))
+  subject rows 78,337 · roster rows 904 (99 schools) · comparison rows 7,217 (844 schools) · MRA surveys 112
 [core] Leader in Me roster: 56,181 rows
   exits: 75 of 99 roster schools carry an expiration date; 43 past it by more than 30 days (exited), 0 inside the grace window, 32 in the future, 24 undated (21 with a start date)
-  941 schools · 144 districts
+  941 schools · 146 districts
   2 roster schools have comparison-export rows after their roster years (DOMO's own flag says they left): read as exited after [2015, 2016]
 applying the cleaning rules ...
-  32,654 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 471 of 891 reviewed
-  no start date: 9 schools · dated exits: 25 (school-years after an exit with rows: 86) · aggregate 'All grades' rows used 0, skipped 0
-  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 53.7% of rows in years and subjects whose levels add up)
-  proficiency = levels 3 and 4 on 53.7% of rows
+  35,382 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 526 of 990 reviewed
+  no start date: 9 schools · dated exits: 35 (school-years after an exit with rows: 120) · aggregate 'All grades' rows used 0, skipped 0
+  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 57.2% of rows in years and subjects whose levels add up)
+  proficiency = levels 3 and 4 on 57.2% of rows
 folding in Utah's own measures (ut_core_extras) ...
   state files (resolved by pattern; the log names the file each year came from):
     attendance 2018: 2018Attendance.xlsx
@@ -56,7 +57,7 @@ folding in Utah's own measures (ut_core_extras) ...
     audit against the name-within-LEA join: both speak for 930 schools and agree on 930; the state files' own name agrees with DOMO's on 928 of 932 crosswalked ids; 0 triples re-pointed to a folded id; 0 shared state ids settled; 1 schools carry more than one state id
   growth names: 7,823 of 7,846 school-years resolved to a state id by name within LEA, 7,083 of them to a school on the page (same year 6234, any year 847, not on the page 740, no state id 21, alike 2, ccd 2); refused (two schools alike): Minersville School (Beaver District); no state id found: BRYANT MIDDLE (SALT LAKE DISTRICT, 2016-17); Bryant Middle (Salt Lake District, 2017-18); Bryant Middle (Salt Lake District, 2018-19); DIXIE SUN SCHOOL (WASHINGTON DISTRICT, 2016-17); Dixie Sun School (Washington District, 2017-18); ESCHOOL@PROVO SCHOOL DISTRICT (PROVO DISTRICT, 2016-17); HORIZONTE INSTR & TRN CTR (SALT LAKE DISTRICT, 2016-17); Home School (Granite) (Granite District, 2023-24)
   value check of the join (a value the map was not built from): DOMO's chronic absence against the state's attendance rate on 4,143 school-years (2018, 2019, 2022, 2023, 2024, 2025): r = -0.961, Spearman -0.976
-  rows gain: attendance_rate on 8,058 school-year-bands (86 Leader in Me schools ever), mgp on 9,320 school-year-bands (86 Leader in Me schools ever), act_composite on 942 school-year-bands (6 Leader in Me schools ever); 0 school-years had no band to sit in
+  rows gain: attendance_rate on 8,068 school-year-bands (86 Leader in Me schools ever), mgp on 9,331 school-year-bands (86 Leader in Me schools ever), act_composite on 942 school-year-bands (6 Leader in Me schools ever); 0 school-years had no band to sit in
   chronic absence: DOMO carries it for 2017-18, 2018-19, 2021-22, 2022-23, 2023-24, 2024-25; Utah's attendance files carry an attendance rate, not a chronic-absence rate, so nothing is filled and nothing is overwritten
   card: 6 Utah measures, each group on each year's own membership
     card line attendance_rate: 6 Leader in Me points, latest 2025 n=62 (92.01)
@@ -66,24 +67,25 @@ folding in Utah's own measures (ut_core_extras) ...
     card line act_composite: 4 Leader in Me points, latest 2025 n=6 (19.42)
     card line act_18: 4 Leader in Me points, latest 2025 n=4 (60.27)
   per-school Utah records for the pack: 6,133 (25 columns)
-  Utah's measures on 9,375 school-year-bands: 8,286 joined to existing rows, 1,089 school-year-bands added with no test rows of their own
-  school type from NCES: Title I on 911 schools (300 yes), charter 131, magnet 21, alternative 7; Title I published 2017-2022, carried forward after
+  Utah's measures on 9,386 school-year-bands: 8,286 joined to existing rows, 1,100 school-year-bands added with no test rows of their own
+  school type from NCES: Title I on 915 schools (302 yes), charter 133, magnet 21, alternative 7; Title I published 2017-2022, carried forward after
   funders: 46 Utah schools carry a funding source (40 on the page; Kern 15, 9 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 89  by band {'Primary': {'pairs': 52, 'unmatched': 1}, 'Secondary': {'pairs': 37, 'unmatched': 3}}
   MRA: 97 surveys · 37 schools · 300 sentinel values · 10 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 59, 'comp_n': 680, 'lim_change': 0.6, 'comp_change': 0.39, 'p': 0.846} · without the 21 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 43, 'comp_n': 680, 'lim_change': 0.62, 'comp_change': 0.39, 'p': 0.859}
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 50, 'comp_n': 704, 'lim_change': 1.87, 'comp_change': 1.14, 'p': 0.56} · without the 21 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 34, 'comp_n': 704, 'lim_change': 2.59, 'comp_change': 1.14, 'p': 0.347}
   roster: 45 counted, 45 exited, 0 not counted yet, 9 not counted
+best-performing schools: 11 of 55 counted schools, 58 measures in 13 outcomes
 
-wrote ut_payload.json  (19.5 MB, 33,743 rows) · page kind full (59 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote ut_payload.json  (20.9 MB, 36,482 rows) · page kind full (50 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
 
 $ python3 build2.py ut_payload.json UT_Dashboard.html UT_Methods.html
-payload 19.5 MB -> 1.43 MB gzip
-UT_Dashboard.html: 2152 KB
-UT_Methods.html: 49 KB
+payload 20.9 MB -> 1.55 MB gzip
+UT_Dashboard.html: 2333 KB
+UT_Methods.html: 63 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state UT --work /home/claude/sdf/Build/work/UT
+$ python3 /home/claude/sdf/Build/verify_core.py --state UT --work /home/claude/work1/UT
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -99,7 +101,7 @@ ok   the roster and comparison pulls are one state's
 ok   2019-20 rows, if the file has any, are excluded from the payload  [0 rows in the file]
 ok   no duplicate school-year-grade-subject rows
 ok   no test value above 100
-ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 1.4, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
+ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
 ok   comparison rows for roster schools sit only in years the roster does not carry  [2 roster schools have comparison rows]
@@ -140,7 +142,7 @@ ok   the composite flag keeps science, social studies and writing out of the no-
 ok   the grade table lists tested grades in order and every school in it has a name
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [23,387 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [26,302 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
@@ -152,8 +154,8 @@ ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's pre-start years count in the comparison group  [1,223 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [491 schools]
-ok   the school count never exceeds the band-slice count  [739 schools vs 1043 band slices]
+ok   combined-grade schools appear in both bands  [498 schools]
+ok   the school count never exceeds the band-slice count  [754 schools vs 1034 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -167,13 +169,13 @@ ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
 ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
 ok   movers are built on ten or more schools each
-  demo district: Granite District · prospect district: Alpine District
+  demo district: Davis District · prospect district: Alpine District
 
 --------------------------------------------------------------------------
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.9s]
+ok   load time is workable  [0.5s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -183,15 +185,15 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [6 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.8454 scipy 0.8454 · window 2022-2025 · LiM n=59 mean +0.60 · comparison n=680 mean +0.39]
-ok   the headline counts schools, not band slices  [page 739 vs offline 739 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [59 vs 59]
-ok   the district filter re-renders the headline  [In Granite District schools, between 2021-22 and 2024-25, Leader in Me schools rose 2.6% o]
+ok   the headline p recomputes offline  [page 0.5592 scipy 0.5592 · window 2022-2026 · LiM n=50 mean +1.87 · comparison n=704 mean +1.13]
+ok   the headline counts schools, not band slices  [page 754 vs offline 754 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [50 vs 50]
+ok   the district filter re-renders the headline  [In Davis District schools, between 2024-25 and 2025-26, Leader in Me schools rose 5.8% on ]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [277 of 928 schools; In Utah Title I schools, between 2021-22 and 2024-25, Leader in Me schools fell ]
+ok   choosing 'Title I schools' narrows the view and names it  [278 of 942 schools; In Utah Title I schools, between 2021-22 and 2025-26, Leader in Me schools rose ]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Utah schools (Leader in Me side: Kern Family Foundation schools), between 2023-24 and 2024-25, Le]
-ok   Title I status is known for most schools on the page  [98.2%]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Utah schools (Leader in Me side: Kern Family Foundation schools), between 2023-24 and 2025-26, Le]
+ok   Title I status is known for most schools on the page  [97.1%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
 ok   measure 'percent_proficient' either draws or says why
@@ -205,12 +207,12 @@ ok   measure 'grad_rate' either draws or says why
 ok   measure 'attendance_rate' either draws or says why
 ok   measure 'mgp' either draws or says why
 ok   measure 'act_composite' either draws or says why
-ok   the matched toggle re-renders the headline  [In Utah schools (matched to similar schools only), between 2021-22 and 2024-25, Leader in ]
-ok   the matched view shrinks or equals the Leader in Me count  [48 matched]
+ok   the matched toggle re-renders the headline  [In Utah schools (matched to similar schools only), between 2021-22 and 2025-26, Leader in ]
+ok   the matched view shrinks or equals the Leader in Me count  [41 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Granite District generates cards or says there is nothing to report  [6 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.8454305648336186, 'n1': 59, 'n2': 680}]
+ok   Davis District generates cards or says there is nothing to report  [3 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5592207388308914, 'n1': 50, 'n2': 704}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -229,22 +231,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [2,514 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [160,967 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [169,937 bytes]
 ok   the pptx export is named for the state and chart  [UT_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Utah_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [160,472 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [170,257 bytes]
 ok   the docx export is named for the state and chart  [UT_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Utah_schools.docx]
-ok   the research pack downloads with its sections  [41,875 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'report_card', 'report_card_school', 'roster']]
-ok   the pack's Leader in Me count for the district is the page's  [4 vs 4]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Utah schools like Alpine District’s, between 2021-22 and 2024-25, Leader in Me schools rose 2.5% on Meeting or exceed]
-ok   the look-alike box reports both counts or says why not  [Schools like Alpine District’s: 25 Leader in Me schools and 251 comparison schools look like Alpine District’s 81 schools with results in these years (each matc]
+ok   the research pack downloads with its sections  [49,267 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the pack's Leader in Me count for the district is the page's  [3 vs 3]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Utah schools like Alpine District’s, between 2021-22 and 2025-26, Leader in Me schools rose 2.3% on Meeting or exceed]
+ok   the look-alike box reports both counts or says why not  [Schools like Alpine District’s: 34 Leader in Me schools and 381 comparison schools look like Alpine District’s 83 schools with results in these years (each matc]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.1882]
+ok   the look-alike headline p recomputes offline  [p=0.5606]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [106 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [117 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Utah grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 4.8% on Meeting or e]
+ok   choosing a grade re-renders the headline and names the grade  [In Utah grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 7.6% on Meeting or e]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [6 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -274,13 +276,13 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +0.60 pts (n=59) vs comparison +0.39 pts (n=680), p=0.8454 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +1.87 pts (n=50) vs comparison +1.13 pts (n=704), p=0.5592 -> not significant
 
 ==========================================================================
 172 of 172 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/ut_core_verify.py --work /home/claude/sdf/Build/work/UT
+$ python3 /home/claude/sdf/Build/states/ut_core_verify.py --work /home/claude/work1/UT
 
 Utah's own measures
 --------------------------------------------------------------------------
@@ -299,13 +301,13 @@ ok   a growth name two schools share within one LEA joins no school  [10 rows re
 ok   attendance 2024-25 (re-read from the xlsx, K-12 overall rate): the pack's attendance_rate is the state file's own value through the crosswalk  [881 of 881 agree (need 800); 85 Leader in Me schools among them]
 ok   attendance 2024-25 (re-read from the xlsx, economically disadvantaged students): the pack's att_econ is the state file's own value through the crosswalk  [878 of 878 agree (need 800); 85 Leader in Me schools among them]
 ok   attendance 2024-25: the 3 rates at or above 99.9% or of zero in the xlsx carry no attendance value in the pack  [2 of them on the page]
-ok   attendance_rate 2024-25: the rows' measure equals the pack's value on every band  [1296 of 1296]
+ok   attendance_rate 2024-25: the rows' measure equals the pack's value on every band  [1298 of 1298]
 ok   attendance 2024-25: the published rate rebuilds from the days attended over the days enrolled on every row  [1019 of 1019]
 ok   no attendance rate in the pack sits at the ceiling or at zero  [min 35.28, max 99.89]
 ok   growth 2024-25 (re-read from the xlsx): the pack's subject medians are the state file's own values through the name join  [2628 of 2628 agree]
 ok   growth 2024-25: a masked cell (n<10) carries no median in the pack  [2 of 2 masked cells on the page]
 ok   growth 2024-25: the combined measure is the mean of the two subject medians, and a school with one subject masked has none  [877 of 877; 1 one-subject schools]
-ok   mgp 2024-25: the rows' measure equals the pack's value on every band  [1293 of 1293]
+ok   mgp 2024-25: the rows' measure equals the pack's value on every band  [1295 of 1295]
 ok   ACT 2024-25 (re-read from the xlsx, the grade 11 composite mean): the pack's act_composite is the state file's own value through the crosswalk  [159 of 159 agree (need 150); 7 Leader in Me schools among them]
 ok   ACT 2024-25 (re-read from the xlsx, the share scoring 18 or higher where printed as a value): the pack's act_18 is the state file's own value through the crosswalk  [137 of 137 agree (need 100); 5 Leader in Me schools among them]
 ok   ACT 2024-25: a benchmark share the state printed as a range carries no number in the pack, and the range travels as text  [23 ranged schools on the page]
@@ -321,6 +323,7 @@ ok   the pack carries no closure year
 ok   the 2016-17 growth file (SAGE) is drawn on the card as part of one series and the methods page says why
 ok   every exclusion is counted on the cleaning audit
 ok   DOMO's own 2024-25 chronic absence was never overwritten by the state's files  [762 rows identical to the DOMO export]
+ok   no school-year after DOMO's last chronic-absence year carries a chronic-absence value  [DOMO's last year 2024-25]
 ok   no chronic-absence value on the rows comes from anywhere but DOMO (nothing filled: Utah's files carry no chronic-absence rate)  [0 school-years not in the DOMO export]
 ok   the methods page says chronic absence is never filled or overwritten from Utah's files
 ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 6,051 school-years]
@@ -340,16 +343,46 @@ ok   ACT composite, grade 11: the Leader in Me point in 2025 rests on at least t
 ok   Grade 11 students scoring 18 or higher on the ACT: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=4]
 ok   every card measure carries the poverty context line
 ok   the card carries a manageable set, and the ones the files support  [6 on the card]
-ok   the attendance card's latest Leader in Me point counts roughly the schools the headline counts  [card n=62, headline 59]
+ok   the attendance card's latest Leader in Me point counts roughly the Leader in Me schools the rows count in 2024-25  [card n=62 in 2024-25, rows 62, headline 50]
 ok   attendance_rate is a measure in the rows with Leader in Me school-years behind it  [344 Leader in Me school-years]
 ok   mgp is a measure in the rows with Leader in Me school-years behind it  [389 Leader in Me school-years]
 ok   act_composite is a measure in the rows with Leader in Me school-years behind it  [23 Leader in Me school-years]
 ok   the research pack's per-school Utah values are keyed to schools on the page  [6,133 records]
 ok   every pack column carries a label  [25 columns]
-ok   every school with a state id on the page has it in the pack  [928 of 928]
+ok   every school with a state id on the page has it in the pack  [928 of 942]
 ok   look-alike mode names no behavior measure (Utah publishes none in this build), and the methods page says so
 ok   the methods page carries the join, attendance, growth, ACT and measures notes
 ok   the banner names the three Utah families
 ok   the sources list names USBE's three files and the NCES directory
+
+2025-26 RISE and Utah Aspire Plus
+--------------------------------------------------------------------------
+ok   the prepared 2025-26 file and the working subject file are both in data/  [ut_2026_subjects.csv True, subject pull True]
+ok   the prepared file has one row per school, grade and subject, all 2025-26  [7,807 rows, 870 schools]
+ok   every prepared proficiency and level is a percentage from 0 to 100  [0 proficiency values outside]
+ok   every prepared row carries all four levels or none  [7,793 with four, 14 with none]
+ok   where a prepared row carries levels, they add to 100 and levels 3 and 4 are its proficiency (to rounding)  [7,793 rows]
+ok   the prepared file carries only the tests the module reads or holds (no Secondary Math I, nothing past grade 10)  [English Language Arts 2,789, Mathematics 2,777, Science 2,241]
+ok   the prepared file covers every test DOMO carried for Utah in 2024-25 that the module reads  [17 of 17 grade-tests]
+ok   each prepared id is its FIPS parts, in Utah
+ok   2025-26 rows are in the working subject file, and 2025-26 is the last year there  [5,329 rows in 2026]
+ok   RISE English language arts grades 3-8 carries no 2025-26 row in the working file, and the prepared file still holds it  [2,478 prepared rows held, 0 in the working file]
+ok   every 2025-26 row in the working subject file is the prepared file's own value (proficiency and levels), and every prepared row the page reads is there except those the newest-year like-for-like rule leaves out  [5,329 of 5,329 agree; 5,329 prepared rows the page reads, 0 left out like for like]
+ok   the prepared proficiency is the state workbook's own Percent Proficient, re-read here through this build's crosswalk  [7,674 of 7,674 agree to the hundredth]
+ok   the prep's definition audit finds every DOMO 2024-25 Utah row in the state's 2024-25 workbooks and reproduces at least 90% within half a point  [5041 of 5041 found; 0.926 within 0.5, 0.621 equal]
+ok   the prep counts every masked cell by kind and uses no midpoint  [2,003 masked rates; 23 fixed from the levels]
+ok   the page runs to 2025-26  [years 2015-2026]
+ok   the page carries 2025-26 math and science rows on both bands  [ELA 221, Math 1,254, Science 1,253]
+ok   2025-26 English language arts on the page is secondary only (Utah Aspire Plus grades 9-10; RISE grades 3-8 held)  [221 ELA rows]
+ok   every 2025-26 value on the page is a percentage from 0 to 100  [2,728 values]
+ok   the grade table's 2025-26 English language arts is grades 9-10 only  [Grade 10, Grade 9]
+ok   the grade table carries 2025-26 math for grades 3-10 and science for grades 4-10
+ok   every Leader in Me school counted in 2024-25 is counted in 2025-26 unless its contract ended before 2025-26, and every roster school with DOMO 2024-25 rows has a 2025-26 row in the prepared file  [52 in 2025-26 against 62 in 2024-25; 10 not counted, 10 of them exited by contract date in 2025; roster 92 of 92 reached]
+ok   no 2025-26 Utah measure (attendance, growth, ACT) is on the rows: Utah's own files for 2025-26 are not out yet
+ok   the methods page carries the 2025-26 fold's note, naming the tests and grades it covers and the held English language arts
+ok   the cleaning rules carry the 2025-26 fold's rule and the held English language arts count
+ok   the methods limits say grades 3-8 English language arts ends at 2023-24
+ok   the sources list names USBE's 2025-26 RISE and Utah Aspire Plus workbooks
+ok   the combined figure keeps exactly the exclusions the module declares (none for Utah's 2025-26)  [the tests the page reads kept their scale]
 
 ALL UTAH CHECKS PASS
