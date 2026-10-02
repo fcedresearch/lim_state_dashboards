@@ -2,64 +2,67 @@
  "state": "NM",
  "name": "New Mexico",
  "folder": "new-mexico",
- "built": "2026-09-08",
- "seconds": 61,
+ "built": "2026-10-01",
+ "seconds": 56,
  "builder": "build_payload_core.py",
  "page_kind": "descriptive",
- "lim_headline_n": 9,
- "schools": 886,
+ "lim_headline_n": 7,
+ "schools": 891,
  "years": [
   2014,
-  2025
+  2026
  ],
  "lim_roster_schools": 23,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (11).csv",
    "bytes": 12784777,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/NM/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/NM/data/Subjects_Tests_FINAL (8).csv",
    "rows": 52695
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/NM/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/NM/data/LIM Schools (Current_Active) (11).csv",
    "rows": 201
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/NM/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/NM/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 6916
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/NM/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/NM/data/All MRA Surveys.csv",
    "rows": 28
   }
  },
- "state_files": [],
+ "state_files": [
+  "sd_newest_audit.json",
+  "sd_newest_subjects.csv"
+ ],
  "extras_module": null,
  "verified": true,
- "dashboard_bytes": 994237,
+ "dashboard_bytes": 1040087,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
+  "year": 2026,
+  "label": "2025-26",
   "status": "complete",
   "subjects": [
    "ELA",
@@ -67,18 +70,18 @@
    "Science"
   ],
   "missing": [],
-  "rows_share_of_prior": 0.88,
-  "prior_year": 2024
+  "rows_share_of_prior": 1.1,
+  "prior_year": 2025
  },
  "audits": {
   "levels": {
-   "rows": 52695,
-   "levels 3 and 4": 11.5,
-   "levels 2, 3 and 4": 0.4,
-   "level 4 alone": 6.9,
+   "rows": 57759,
+   "levels 3 and 4": 10.5,
+   "levels 2, 3 and 4": 0.3,
+   "level 4 alone": 6.3,
    "100 minus level 1": 0.3,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 18.6,
+   "levels_sum_to_100_share": 17.0,
    "structure": "no combination of the reported levels reproduces the proficiency rate",
    "n_levels": null,
    "proficient_from": null,
@@ -143,21 +146,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 9,
-    "comp_n": 571,
-    "lim_change": 7.53,
-    "comp_change": 6.16,
-    "p": 0.435
+    "y1": 2026,
+    "lim_n": 7,
+    "comp_n": 621,
+    "lim_change": 6.12,
+    "comp_change": 6.61,
+    "p": 0.856
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 9,
-    "comp_n": 571,
-    "lim_change": 7.53,
-    "comp_change": 6.16,
-    "p": 0.435
+    "y1": 2026,
+    "lim_n": 7,
+    "comp_n": 621,
+    "lim_change": 6.12,
+    "comp_change": 6.61,
+    "p": 0.856
    },
    "schools": 0
   },
@@ -170,11 +173,11 @@
   "qualified": 0,
   "in_the_process": 0,
   "lapsed_on_the_list": 0,
-  "reviewed": 5,
+  "reviewed": 8,
   "measures": 42,
   "outcomes": 8,
   "improved_every_year": 0,
   "lapsed_longer_ago": 15
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-10-01"
 }
