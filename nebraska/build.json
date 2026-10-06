@@ -435,5 +435,284 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 1
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 2 and 3)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3849,
+    "2017": 3041,
+    "2018": 2981,
+    "2019": 3019,
+    "2022": 2947,
+    "2023": 2980,
+    "2024": 2454,
+    "2025": 1657
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3849,
+    "2018": 1751,
+    "2019": 1776,
+    "2022": 1759,
+    "2023": 1768,
+    "2025": 1657
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3849,
+    "2018": 1751,
+    "2019": 1776,
+    "2022": 1759,
+    "2023": 1768,
+    "2025": 1657
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3849,
+    "2018": 1751,
+    "2019": 1776,
+    "2022": 1759,
+    "2023": 1768,
+    "2025": 1657
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3386,
+    "2017": 2628,
+    "2018": 2577,
+    "2019": 2622,
+    "2022": 2566,
+    "2023": 2595,
+    "2024": 2159,
+    "2025": 1488
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2022": 2803,
+    "2023": 2774,
+    "2024": 2294,
+    "2025": 1605
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2017": 981,
+    "2018": 939,
+    "2019": 971,
+    "2022": 924,
+    "2023": 920,
+    "2024": 731,
+    "2025": 497
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2016": 3949,
+    "2017": 3192,
+    "2018": 3146,
+    "2019": 3152,
+    "2022": 3105,
+    "2023": 3145,
+    "2024": 2744,
+    "2025": 2179
+   }
+  },
+  "growth": {
+   "label": "AQuESTT growth",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2019": 2384,
+    "2022": 2333,
+    "2023": 2342,
+    "2024": 2007,
+    "2025": 1511
+   }
+  },
+  "science_prof": {
+   "label": "Science proficiency",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 2558,
+    "2019": 2568,
+    "2022": 2526,
+    "2023": 2560,
+    "2024": 2221,
+    "2025": 1733
+   }
+  },
+  "pct_suspended": {
+   "label": "Suspended or expelled",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2024": 2744,
+    "2025": 2179
+   }
+  },
+  "classification": {
+   "label": "AQuESTT classification (1 to 4)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "status": {
+   "label": "AQuESTT status: share of ELA and math assessments on track or above, the state's own proficiency (mean of the school's grade spans)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 863,
+    "2019": 851,
+    "2022": 859,
+    "2023": 869,
+    "2024": 872,
+    "2025": 864
+   }
+  },
+  "participation": {
+   "label": "AQuESTT assessment participation rate",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 863,
+    "2019": 850,
+    "2022": 859,
+    "2023": 869,
+    "2024": 872,
+    "2025": 863
+   }
+  },
+  "csi": {
+   "label": "Designated for comprehensive support and improvement in that year's AQuESTT file (100 = yes)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 869,
+    "2019": 860,
+    "2022": 867,
+    "2023": 878,
+    "2024": 883,
+    "2025": 874
+   }
+  },
+  "pct_disciplined": {
+   "label": "Students with any disciplinary action, share of the population as the discipline file publishes it (2022-23 on; suppressed under 10 students)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2023": 388,
+    "2024": 383,
+    "2025": 384
+   }
+  },
+  "college_going": {
+   "label": "College-going rate: graduates enrolled in a postsecondary institution by the second October after graduation (the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 218,
+    "2017": 220,
+    "2018": 223,
+    "2019": 229,
+    "2022": 223,
+    "2023": 220
+   }
+  },
+  "college_going_count": {
+   "label": "Graduates counted as college-going (the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 218,
+    "2017": 220,
+    "2018": 223,
+    "2019": 229,
+    "2022": 223,
+    "2023": 220
+   }
+  },
+  "grad_4yr": {
+   "label": "AQuESTT four-year cohort graduation rate (high school rows; not DOMO's graduation rate)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 256,
+    "2019": 256,
+    "2022": 256,
+    "2023": 258,
+    "2024": 258,
+    "2025": 256
+   }
+  },
+  "grad_7yr": {
+   "label": "AQuESTT seven-year extended graduation rate (high school rows)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 254,
+    "2019": 254,
+    "2022": 254,
+    "2023": 255,
+    "2024": 255,
+    "2025": 254
+   }
+  },
+  "susp_per100": {
+   "label": "Suspensions per 100 students, from the discipline file's published count (2022-23 on; suppressed under 10)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2023": 269,
+    "2024": 231,
+    "2025": 202
+   }
+  },
+  "exp_per100": {
+   "label": "Expulsions per 100 students, from the discipline file's published count (2022-23 on; suppressed under 10)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2023": 22,
+    "2024": 23,
+    "2025": 22
+   }
+  }
+ }
 }

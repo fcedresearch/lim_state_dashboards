@@ -520,5 +520,128 @@
   "improved_every_year": 4,
   "lapsed_longer_ago": 81
  },
- "best_schools_added": "2026-09-30"
+ "best_schools_added": "2026-09-30",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 13603,
+    "2016": 12844,
+    "2017": 11303,
+    "2018": 9470,
+    "2019": 8255,
+    "2022": 8928,
+    "2023": 11413,
+    "2024": 11574,
+    "2025": 11740,
+    "2026": 8460
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 13603,
+    "2016": 5233,
+    "2017": 9778,
+    "2018": 5004,
+    "2023": 7849,
+    "2024": 8013,
+    "2025": 8604,
+    "2026": 6612
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 13603,
+    "2016": 5235,
+    "2017": 9778,
+    "2018": 5004,
+    "2023": 7849,
+    "2024": 8013,
+    "2025": 8604,
+    "2026": 6612
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 13603,
+    "2016": 5313,
+    "2017": 9778,
+    "2018": 5009,
+    "2023": 7849,
+    "2024": 8013,
+    "2025": 8604,
+    "2026": 6612
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 13603,
+    "2016": 5314,
+    "2017": 9778,
+    "2018": 5009,
+    "2023": 7849,
+    "2024": 8013,
+    "2025": 8604,
+    "2026": 6612
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 12949,
+    "2016": 12231,
+    "2017": 10761,
+    "2018": 8890,
+    "2019": 7757,
+    "2022": 8426,
+    "2023": 10902,
+    "2024": 11061,
+    "2025": 11250
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2017": 9324,
+    "2018": 8442,
+    "2019": 7616,
+    "2022": 8683,
+    "2023": 11184,
+    "2024": 11281,
+    "2025": 11469
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2017": 3464,
+    "2018": 2786,
+    "2019": 2378,
+    "2022": 1799,
+    "2023": 3468,
+    "2024": 3514,
+    "2025": 3538
+   }
+  }
+ }
 }

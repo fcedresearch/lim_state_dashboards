@@ -179,5 +179,65 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 15
  },
- "best_schools_added": "2026-10-01"
+ "best_schools_added": "2026-10-01",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 2854,
+    "2015": 2757,
+    "2016": 2706,
+    "2017": 2487,
+    "2018": 2699,
+    "2019": 2779,
+    "2022": 2453,
+    "2023": 1579,
+    "2024": 2246,
+    "2025": 1979,
+    "2026": 2186
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 2854,
+    "2015": 1941,
+    "2016": 1911
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 2600,
+    "2015": 2563,
+    "2016": 2517,
+    "2017": 2314,
+    "2018": 2524,
+    "2019": 2617,
+    "2022": 2261,
+    "2023": 1579,
+    "2024": 1956,
+    "2025": 1837
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 561,
+    "2019": 532,
+    "2022": 442,
+    "2023": 321,
+    "2024": 437,
+    "2025": 374
+   }
+  }
+ }
 }

@@ -371,5 +371,73 @@
   "improved_every_year": 4,
   "lapsed_longer_ago": 39
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2970,
+    "2016": 2898,
+    "2017": 2826,
+    "2018": 2788,
+    "2019": 2944,
+    "2022": 4104,
+    "2023": 4063,
+    "2024": 4017,
+    "2025": 4018
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 2898,
+    "2017": 2826,
+    "2018": 2788
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2570,
+    "2016": 2520,
+    "2017": 2444,
+    "2018": 2406,
+    "2019": 2536,
+    "2022": 3616,
+    "2023": 3579,
+    "2024": 3533,
+    "2025": 3590
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 2684,
+    "2019": 2870,
+    "2022": 4089,
+    "2023": 4063,
+    "2024": 4017
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2019": 826,
+    "2022": 1292,
+    "2023": 1303,
+    "2024": 1309,
+    "2025": 1300
+   }
+  }
+ }
 }

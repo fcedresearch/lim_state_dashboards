@@ -173,5 +173,714 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 4
  },
- "best_schools_added": "2026-10-01"
+ "best_schools_added": "2026-10-01",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 436,
+    "2015": 389,
+    "2016": 401,
+    "2017": 430,
+    "2018": 499,
+    "2019": 508,
+    "2022": 394,
+    "2023": 499,
+    "2024": 605,
+    "2025": 599,
+    "2026": 500
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 436,
+    "2015": 389,
+    "2016": 401,
+    "2017": 430,
+    "2018": 499,
+    "2019": 508,
+    "2022": 385,
+    "2023": 463,
+    "2024": 460,
+    "2026": 384
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 408,
+    "2015": 364,
+    "2016": 367,
+    "2017": 404,
+    "2018": 479,
+    "2019": 488,
+    "2022": 368,
+    "2023": 475,
+    "2024": 524,
+    "2025": 567
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2022": 514,
+    "2023": 579,
+    "2024": 628,
+    "2025": 679
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2017": 66,
+    "2018": 85,
+    "2019": 36,
+    "2022": 68,
+    "2023": 74,
+    "2024": 76,
+    "2025": 81
+   }
+  },
+  "in_seat_attendance": {
+   "label": "In-seat attendance",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 567,
+    "2022": 502
+   }
+  },
+  "teacher_retention": {
+   "label": "Teacher retention",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2022": 510,
+    "2023": 574,
+    "2024": 628,
+    "2025": 680,
+    "2026": 553
+   }
+  },
+  "chronic_absenteeism": {
+   "label": "Chronic absenteeism",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "oss_5plus": {
+   "label": "Schools suspending 5% or more of students",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "mgp_ela": {
+   "label": "Median growth percentile, ELA",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 1,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "mgp_math": {
+   "label": "Median growth percentile, math",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 1,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "says_s35_belonging": {
+   "label": "DC SAYS: belonging (students, grades 3-5)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2025": 2
+   }
+  },
+  "says_s35_self_efficacy": {
+   "label": "DC SAYS: self-efficacy (students, grades 3-5)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2025": 2
+   }
+  },
+  "says_s35_perseverance": {
+   "label": "DC SAYS: perseverance (students, grades 3-5)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2025": 2
+   }
+  },
+  "says_s35_school_safety": {
+   "label": "DC SAYS: school safety (students, grades 3-5)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2025": 2
+   }
+  },
+  "says_fam_family_engagement": {
+   "label": "DC SAYS: family engagement (families)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2025": 2
+   }
+  },
+  "says_fam_school_fit": {
+   "label": "DC SAYS: school fit (families)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2025": 2
+   }
+  },
+  "grad_rate_4yr": {
+   "label": "Four-year adjusted cohort graduation rate, OSSE",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 34,
+    "2018": 37,
+    "2022": 33,
+    "2023": 33,
+    "2024": 35,
+    "2025": 34
+   }
+  },
+  "ap_ib_participation": {
+   "label": "AP/IB participation (2017-18, 2021-22)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 30,
+    "2022": 27
+   }
+  },
+  "ap_ib_performance": {
+   "label": "AP/IB performance (2017-18 to 2022-23)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 30,
+    "2022": 21,
+    "2023": 23
+   }
+  },
+  "attendance_90pct": {
+   "label": "Students attending 90% or more of days (2017-18 only; not chronic absenteeism)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 197
+   }
+  },
+  "attendance_growth": {
+   "label": "Attendance growth, change in in-seat attendance from the year before, points (2021-22 excluded by name)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 196,
+    "2023": 208,
+    "2024": 208,
+    "2025": 208
+   }
+  },
+  "grad_rate_5yr": {
+   "label": "Five-year adjusted cohort graduation rate",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 36,
+    "2022": 29,
+    "2023": 29,
+    "2024": 30,
+    "2025": 30
+   }
+  },
+  "pct_any_suspension": {
+   "label": "Any suspension, share of students (2017-18 only)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 197
+   }
+  },
+  "pct_expelled": {
+   "label": "Expulsion rate, share of students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 197,
+    "2022": 2,
+    "2023": 9,
+    "2024": 7,
+    "2025": 9
+   }
+  },
+  "pct_iss": {
+   "label": "In-school suspension rate, share of students (same publication rule)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 197,
+    "2022": 64,
+    "2023": 86,
+    "2024": 77,
+    "2025": 87
+   }
+  },
+  "pct_oss": {
+   "label": "Out-of-school suspension rate, share of students suspended at least once (2017-18 whole-number; 2021-22 on where OSSE publishes it)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 197,
+    "2022": 118,
+    "2023": 143,
+    "2024": 148,
+    "2025": 147
+   }
+  },
+  "pct_violence": {
+   "label": "Incidents of violence rate, as OSSE publishes it (share of students)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 197,
+    "2022": 112,
+    "2023": 155,
+    "2024": 159,
+    "2025": 158
+   }
+  },
+  "sat_ccr_benchmark": {
+   "label": "SAT college and career ready benchmark (2017-18, 2021-22)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 30,
+    "2022": 18
+   }
+  },
+  "star_rating": {
+   "label": "STAR rating, 1 to 5 stars (2017-18, 2018-19)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 194,
+    "2019": 197
+   }
+  },
+  "star_score": {
+   "label": "STAR Framework score (2017-18, 2018-19)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 194,
+    "2019": 197
+   }
+  },
+  "teachers_0_1yrs": {
+   "label": "Teachers with 0-1 years of experience, share (2017-18, 2021-22)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 197,
+    "2022": 207
+   }
+  },
+  "growth_to_prof_ela": {
+   "label": "Growth to proficiency, ELA (share of students on track)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 153,
+    "2023": 196,
+    "2024": 197,
+    "2025": 201
+   }
+  },
+  "growth_to_prof_math": {
+   "label": "Growth to proficiency, math",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 153,
+    "2023": 197,
+    "2024": 197,
+    "2025": 201
+   }
+  },
+  "college_12mo": {
+   "label": "Graduates enrolled in college within 12 months, by graduating class (latest OSSE publication)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 35,
+    "2019": 33,
+    "2023": 37
+   }
+  },
+  "college_6mo": {
+   "label": "Graduates enrolled in college within 6 months, by graduating class (latest OSSE publication)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 35,
+    "2019": 34,
+    "2022": 37,
+    "2023": 37,
+    "2024": 37
+   }
+  },
+  "teacher_retention_reportcard": {
+   "label": "Teacher retention as the 2021-22 report card published it (cross-check only)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 204
+   }
+  },
+  "teachers": {
+   "label": "Teachers in the base year of the retention file",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 204,
+    "2023": 208,
+    "2024": 208,
+    "2025": 208,
+    "2026": 208
+   }
+  },
+  "accountability_score": {
+   "label": "School accountability score, 0 to 100 (2022-23 on; 2021-22 excluded by name)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 197,
+    "2024": 197,
+    "2025": 197
+   }
+  },
+  "ap_ib_de_participation": {
+   "label": "AP/IB/dual-enrollment participation (2022-23)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 27
+   }
+  },
+  "adv_coursework_participation": {
+   "label": "Advanced coursework participation (2023-24 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2024": 30,
+    "2025": 33
+   }
+  },
+  "sat_college_ready": {
+   "label": "SAT college ready (2022-23 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 18,
+    "2024": 23,
+    "2025": 28
+   }
+  },
+  "says_s612_attendance_importance": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"Importance of Attendance\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 96
+   }
+  },
+  "says_s612_belonging": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"Belonging\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 96
+   }
+  },
+  "says_s612_emotion_regulation": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"Emotion Regulation (optional)\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 41
+   }
+  },
+  "says_s612_perseverance": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"Perseverance\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 96
+   }
+  },
+  "says_s612_rigorous_expectations": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"Rigorous Expectations\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 96
+   }
+  },
+  "says_s612_safety_traveling": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"Safety while Traveling\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 96
+   }
+  },
+  "says_s612_school_safety": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"School Safety\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 96
+   }
+  },
+  "says_s612_self_efficacy": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"Self-Efficacy\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 96
+   }
+  },
+  "says_s612_supportive_relationships": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"Supportive Relationships\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 58
+   }
+  },
+  "says_s612_valuing_school": {
+   "label": "DC SAYS 2024-25: students in grades 6-12 answering favorably on \"Valuing of School (optional)\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 41
+   }
+  },
+  "says_staff_belonging": {
+   "label": "DC SAYS 2024-25: school staff answering favorably on \"Belonging\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 109
+   }
+  },
+  "says_staff_professional_learning": {
+   "label": "DC SAYS 2024-25: school staff answering favorably on \"Professional Learning\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 67
+   }
+  },
+  "says_staff_response_rate": {
+   "label": "DC SAYS 2024-25 staff response rate",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2025": 88
+   }
+  },
+  "says_staff_safety_traveling": {
+   "label": "DC SAYS 2024-25: school staff answering favorably on \"Safety while Traveling\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 67
+   }
+  },
+  "says_staff_school_climate": {
+   "label": "DC SAYS 2024-25: school staff answering favorably on \"School Climate\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 67
+   }
+  },
+  "says_staff_school_leadership": {
+   "label": "DC SAYS 2024-25: school staff answering favorably on \"School Leadership\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 67
+   }
+  },
+  "says_staff_school_safety": {
+   "label": "DC SAYS 2024-25: school staff answering favorably on \"School Safety\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 64
+   }
+  },
+  "says_staff_staff_leadership_relationships": {
+   "label": "DC SAYS 2024-25: school staff answering favorably on \"Staff-Leadership Relationships\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 67
+   }
+  },
+  "says_student_response_rate": {
+   "label": "DC SAYS 2024-25 student response rate",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2025": 172
+   }
+  },
+  "adv_coursework_performance": {
+   "label": "Advanced coursework performance (2023-24 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2024": 27,
+    "2025": 30
+   }
+  },
+  "prek_in_seat_attendance": {
+   "label": "Pre-K in-seat attendance (2017-18 and 2021-22)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 114,
+    "2022": 108
+   }
+  },
+  "prek_chronic_absenteeism": {
+   "label": "Pre-K chronic absenteeism (2022-23 on)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2023": 116,
+    "2024": 111,
+    "2025": 112
+   }
+  },
+  "says_s35_attendance_importance": {
+   "label": "DC SAYS 2024-25: students in grades 3-5 answering favorably on \"Importance of Attendance\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 137
+   }
+  },
+  "says_s35_emotion_regulation": {
+   "label": "DC SAYS 2024-25: students in grades 3-5 answering favorably on \"Emotion Regulation (optional)\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 38
+   }
+  },
+  "says_s35_rigorous_expectations": {
+   "label": "DC SAYS 2024-25: students in grades 3-5 answering favorably on \"Rigorous Expectations\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 137
+   }
+  },
+  "says_s35_safety_traveling": {
+   "label": "DC SAYS 2024-25: students in grades 3-5 answering favorably on \"Safety while Traveling\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 137
+   }
+  },
+  "says_s35_supportive_relationships": {
+   "label": "DC SAYS 2024-25: students in grades 3-5 answering favorably on \"Supportive Relationships\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 58
+   }
+  },
+  "says_s35_valuing_school": {
+   "label": "DC SAYS 2024-25: students in grades 3-5 answering favorably on \"Valuing of School (optional)\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 38
+   }
+  },
+  "says_fam_safety_traveling": {
+   "label": "DC SAYS 2024-25: families answering favorably on \"Safety while Traveling\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 61
+   }
+  },
+  "says_fam_school_safety": {
+   "label": "DC SAYS 2024-25: families answering favorably on \"School Safety\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 62
+   }
+  },
+  "says_family_response_rate": {
+   "label": "DC SAYS 2024-25 family response rate",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2025": 63
+   }
+  },
+  "says_fam_attendance_importance": {
+   "label": "DC SAYS 2024-25: families answering favorably on \"Importance of Attendance\"",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 37
+   }
+  }
+ }
 }

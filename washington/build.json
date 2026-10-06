@@ -509,5 +509,1287 @@
   "improved_every_year": 1,
   "lapsed_longer_ago": 10
  },
- "best_schools_added": "2026-10-01"
+ "best_schools_added": "2026-10-01",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5942,
+    "2016": 5798,
+    "2017": 5727,
+    "2018": 5749,
+    "2019": 6554,
+    "2022": 6716,
+    "2023": 6660,
+    "2024": 6553,
+    "2025": 6540,
+    "2026": 6352
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5317,
+    "2016": 5181,
+    "2017": 5140,
+    "2018": 5259,
+    "2019": 6017,
+    "2022": 6288,
+    "2023": 6261,
+    "2024": 6230,
+    "2025": 6223
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 5738,
+    "2016": 5709,
+    "2017": 5684,
+    "2018": 5839,
+    "2019": 6357,
+    "2022": 6222,
+    "2023": 6553,
+    "2024": 6524,
+    "2025": 6510
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 783,
+    "2017": 777,
+    "2018": 839,
+    "2019": 1117,
+    "2022": 1231,
+    "2023": 1151,
+    "2024": 1151,
+    "2025": 1221
+   }
+  },
+  "median_sgp": {
+   "label": "Student growth percentile (median)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4184,
+    "2016": 5355,
+    "2017": 5325,
+    "2018": 5350,
+    "2019": 5790,
+    "2023": 5968,
+    "2024": 5911,
+    "2025": 5914
+   }
+  },
+  "reg_attend": {
+   "label": "Regular attendance (missing fewer than 10% of days)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2015": 2,
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "sgp_ela": {
+   "label": "Student growth percentile, English language arts (median)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2015": 2,
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "sgp_math": {
+   "label": "Student growth percentile, mathematics (median)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2015": 2,
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "excl_3plus": {
+   "label": "Schools suspending or expelling 3% or more of students",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2015": 2,
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "wsif_score": {
+   "label": "School Improvement Framework score (1 to 10)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "reg_attend_students": {
+   "label": "Students counted for regular attendance",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 1837,
+    "2016": 1855,
+    "2017": 1857,
+    "2018": 1871,
+    "2019": 1879,
+    "2020": 1851,
+    "2021": 1825,
+    "2022": 1930,
+    "2023": 1958,
+    "2024": 1968,
+    "2025": 1957
+   }
+  },
+  "excl_ceiling": {
+   "label": "Where the discipline rate is masked, the ceiling the state prints: fewer than three students excluded, so the rate is below this",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 479,
+    "2016": 484,
+    "2017": 449,
+    "2018": 411,
+    "2019": 503,
+    "2020": 747,
+    "2021": 1748,
+    "2022": 846,
+    "2023": 731,
+    "2024": 664,
+    "2025": 601
+   }
+  },
+  "chronic_absent_wa": {
+   "label": "Chronic absence, 100 minus the state's regular attendance rate",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1837,
+    "2016": 1855,
+    "2017": 1857,
+    "2018": 1871,
+    "2019": 1879,
+    "2020": 1851,
+    "2021": 1825,
+    "2022": 1930,
+    "2023": 1958,
+    "2024": 1968,
+    "2025": 1957
+   }
+  },
+  "sgp_ela_students": {
+   "label": "Students with an English language arts growth percentile",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 1226,
+    "2016": 1563,
+    "2017": 1571,
+    "2018": 1584,
+    "2019": 1593,
+    "2023": 1676,
+    "2024": 1670,
+    "2025": 1667
+   }
+  },
+  "sgp_math_students": {
+   "label": "Students with a mathematics growth percentile",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 1226,
+    "2016": 1560,
+    "2017": 1571,
+    "2018": 1582,
+    "2019": 1594,
+    "2023": 1675,
+    "2024": 1671,
+    "2025": 1666
+   }
+  },
+  "sgp_ela_high_share": {
+   "label": "Students with high growth in English language arts (percentile 66 or above), share of those with a percentile",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1226,
+    "2016": 1563,
+    "2017": 1571,
+    "2018": 1584,
+    "2019": 1593,
+    "2023": 1676,
+    "2024": 1670,
+    "2025": 1667
+   }
+  },
+  "sgp_math_high_share": {
+   "label": "Students with high growth in mathematics (percentile 66 or above)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1226,
+    "2016": 1560,
+    "2017": 1571,
+    "2018": 1582,
+    "2019": 1594,
+    "2023": 1675,
+    "2024": 1671,
+    "2025": 1666
+   }
+  },
+  "sgp_ela_low_share": {
+   "label": "Students with low growth in English language arts (percentile 35 or below)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1226,
+    "2016": 1563,
+    "2017": 1571,
+    "2018": 1584,
+    "2019": 1593,
+    "2023": 1676,
+    "2024": 1670,
+    "2025": 1667
+   }
+  },
+  "sgp_math_low_share": {
+   "label": "Students with low growth in mathematics (percentile 35 or below)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1226,
+    "2016": 1560,
+    "2017": 1571,
+    "2018": 1582,
+    "2019": 1594,
+    "2023": 1675,
+    "2024": 1671,
+    "2025": 1666
+   }
+  },
+  "wsif_prof_decile": {
+   "label": "Framework decile, proficiency (1 to 10)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1964,
+    "2018": 1983,
+    "2019": 1981,
+    "2022": 2051,
+    "2023": 2068,
+    "2024": 2058,
+    "2025": 2051
+   }
+  },
+  "wsif_growth_decile": {
+   "label": "Framework decile, growth (1 to 10; the 'other academic' decile from the 2022 run on, which in 2022 also weighed average achievement level)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1584,
+    "2018": 1591,
+    "2019": 1596,
+    "2022": 1704,
+    "2023": 1665,
+    "2024": 1667,
+    "2025": 1679
+   }
+  },
+  "wsif_el_decile": {
+   "label": "Framework decile, English-learner progress (1 to 10)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1040,
+    "2018": 1361,
+    "2019": 1516,
+    "2022": 994,
+    "2023": 1200,
+    "2024": 1504,
+    "2025": 1616
+   }
+  },
+  "wsif_attend_decile": {
+   "label": "Framework decile, regular attendance (1 to 10)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2017": 1988,
+    "2018": 2005,
+    "2019": 2017,
+    "2022": 2086,
+    "2023": 2092,
+    "2024": 2088,
+    "2025": 2080
+   }
+  },
+  "wsif_sqss_decile": {
+   "label": "Framework decile, school quality or student success combined (1 to 10)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1988,
+    "2018": 2005,
+    "2019": 2017,
+    "2022": 2086,
+    "2023": 2092,
+    "2024": 2088,
+    "2025": 2080
+   }
+  },
+  "wsif_prof_ela": {
+   "label": "Framework's English language arts proficiency rate (three-year pooled, as the framework computes it)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1954,
+    "2018": 1976,
+    "2019": 1976,
+    "2022": 2046,
+    "2023": 2062,
+    "2024": 2052,
+    "2025": 2044
+   }
+  },
+  "wsif_prof_math": {
+   "label": "Framework's mathematics proficiency rate (three-year pooled)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1877,
+    "2018": 1923,
+    "2019": 1935,
+    "2022": 2017,
+    "2023": 2027,
+    "2024": 2019,
+    "2025": 2015
+   }
+  },
+  "wsif_sgp_ela": {
+   "label": "Framework's English language arts growth median (as the framework computes it)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1583,
+    "2018": 1591,
+    "2019": 1596,
+    "2022": 1599,
+    "2023": 1665,
+    "2024": 1667,
+    "2025": 1679
+   }
+  },
+  "wsif_sgp_math": {
+   "label": "Framework's mathematics growth median",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1582,
+    "2018": 1591,
+    "2019": 1596,
+    "2022": 1598,
+    "2023": 1664,
+    "2024": 1667,
+    "2025": 1679
+   }
+  },
+  "wsif_reg_attend": {
+   "label": "Framework's regular attendance rate (three-year pooled; not the annual rate)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2017": 1748,
+    "2018": 1922,
+    "2019": 1939,
+    "2022": 1995,
+    "2023": 2010,
+    "2024": 2003,
+    "2025": 1992
+   }
+  },
+  "wsif_tier": {
+   "label": "Washington School Improvement Framework support tier (the state's identification for that run)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1989,
+    "2018": 1989,
+    "2019": 1986,
+    "2022": 2092,
+    "2023": 2101,
+    "2024": 2097,
+    "2025": 2084
+   }
+  },
+  "dual_credit_students": {
+   "label": "Students counted for dual credit",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 414,
+    "2016": 411,
+    "2017": 420,
+    "2018": 411,
+    "2019": 425,
+    "2020": 425,
+    "2021": 429,
+    "2022": 449,
+    "2023": 452,
+    "2024": 1956,
+    "2025": 1974
+   }
+  },
+  "ninth_on_track_students": {
+   "label": "Ninth graders counted",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 324,
+    "2016": 311,
+    "2017": 329,
+    "2018": 301,
+    "2019": 318,
+    "2020": 309,
+    "2021": 332,
+    "2022": 358,
+    "2023": 362,
+    "2024": 1931,
+    "2025": 1915
+   }
+  },
+  "excl_rate": {
+   "label": "Exclusionary discipline rate: students suspended or expelled at least once (share of enrollment), as the state publishes it (masked under three students)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1480,
+    "2016": 1490,
+    "2017": 1531,
+    "2018": 1571,
+    "2019": 1493,
+    "2020": 1262,
+    "2021": 283,
+    "2022": 1214,
+    "2023": 1336,
+    "2024": 1403,
+    "2025": 1458
+   }
+  },
+  "excl_students": {
+   "label": "Students counted for the discipline rate (enrollment)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 1480,
+    "2016": 1490,
+    "2017": 1531,
+    "2018": 1571,
+    "2019": 1493,
+    "2020": 1262,
+    "2021": 283,
+    "2022": 1214,
+    "2023": 1336,
+    "2024": 1403,
+    "2025": 1458
+   }
+  },
+  "excl_1day": {
+   "label": "Of excluded students, share excluded one day or less",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1480,
+    "2016": 1490,
+    "2017": 1531,
+    "2018": 1571,
+    "2019": 1493,
+    "2020": 1262,
+    "2021": 283,
+    "2022": 1214,
+    "2023": 1336,
+    "2024": 1403,
+    "2025": 1458
+   }
+  },
+  "excl_2to3": {
+   "label": "Of excluded students, share excluded two to three days",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1480,
+    "2016": 1490,
+    "2017": 1531,
+    "2018": 1571,
+    "2019": 1493,
+    "2020": 1262,
+    "2021": 283,
+    "2022": 1214,
+    "2023": 1336,
+    "2024": 1403,
+    "2025": 1458
+   }
+  },
+  "excl_4to5": {
+   "label": "Of excluded students, share excluded four to five days",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1480,
+    "2016": 1490,
+    "2017": 1531,
+    "2018": 1571,
+    "2019": 1493,
+    "2020": 1262,
+    "2021": 283,
+    "2022": 1214,
+    "2023": 1336,
+    "2024": 1403,
+    "2025": 1458
+   }
+  },
+  "excl_6to10": {
+   "label": "Of excluded students, share excluded six to ten days",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1480,
+    "2016": 1490,
+    "2017": 1531,
+    "2018": 1571,
+    "2019": 1493,
+    "2020": 1262,
+    "2021": 283,
+    "2022": 1214,
+    "2023": 1336,
+    "2024": 1403,
+    "2025": 1458
+   }
+  },
+  "excl_10plus": {
+   "label": "Of excluded students, share excluded ten days or more",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1480,
+    "2016": 1490,
+    "2017": 1531,
+    "2018": 1571,
+    "2019": 1493,
+    "2020": 1262,
+    "2021": 283,
+    "2022": 1214,
+    "2023": 1336,
+    "2024": 1403,
+    "2025": 1458
+   }
+  },
+  "ps_associate_6yr": {
+   "label": "Graduates whose highest award six years on is an associate degree or certificate",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 234,
+    "2006": 238,
+    "2007": 242,
+    "2008": 242,
+    "2009": 241,
+    "2010": 245,
+    "2011": 253,
+    "2012": 247,
+    "2013": 252,
+    "2014": 252,
+    "2015": 251,
+    "2016": 252,
+    "2017": 254,
+    "2018": 248
+   }
+  },
+  "ps_bachelors_6yr": {
+   "label": "Graduates holding a bachelor's degree or higher six years after graduation",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 235,
+    "2006": 238,
+    "2007": 242,
+    "2008": 242,
+    "2009": 241,
+    "2010": 245,
+    "2011": 253,
+    "2012": 247,
+    "2013": 252,
+    "2014": 252,
+    "2015": 250,
+    "2016": 251,
+    "2017": 253,
+    "2018": 247
+   }
+  },
+  "ps_enroll_2yr": {
+   "label": "Graduates enrolled in a two-year college or technical college within a year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 256,
+    "2006": 249,
+    "2007": 258,
+    "2008": 253,
+    "2009": 263,
+    "2010": 264,
+    "2011": 261,
+    "2012": 264,
+    "2013": 263,
+    "2014": 268,
+    "2015": 270,
+    "2016": 268,
+    "2017": 277,
+    "2018": 260,
+    "2019": 262,
+    "2020": 262,
+    "2021": 260,
+    "2022": 261,
+    "2023": 256,
+    "2024": 260
+   }
+  },
+  "ps_enroll_4yr": {
+   "label": "Graduates enrolled in a four-year college within a year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 245,
+    "2006": 242,
+    "2007": 247,
+    "2008": 246,
+    "2009": 254,
+    "2010": 257,
+    "2011": 256,
+    "2012": 257,
+    "2013": 256,
+    "2014": 262,
+    "2015": 260,
+    "2016": 261,
+    "2017": 272,
+    "2018": 256,
+    "2019": 260,
+    "2020": 259,
+    "2021": 260,
+    "2022": 259,
+    "2023": 256,
+    "2024": 260
+   }
+  },
+  "ps_no_degree_6yr": {
+   "label": "Graduates holding no degree or certificate six years after graduation (share of the class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 235,
+    "2006": 238,
+    "2007": 243,
+    "2008": 242,
+    "2009": 240,
+    "2010": 246,
+    "2011": 253,
+    "2012": 248,
+    "2013": 253,
+    "2014": 253,
+    "2015": 251,
+    "2016": 252,
+    "2017": 255,
+    "2018": 250
+   }
+  },
+  "ps_not_enrolled": {
+   "label": "Graduates not enrolled in college within a year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 257,
+    "2006": 249,
+    "2007": 257,
+    "2008": 254,
+    "2009": 263,
+    "2010": 263,
+    "2011": 260,
+    "2012": 265,
+    "2013": 263,
+    "2014": 268,
+    "2015": 271,
+    "2016": 269,
+    "2017": 276,
+    "2018": 260,
+    "2019": 260,
+    "2020": 262,
+    "2021": 258,
+    "2022": 261,
+    "2023": 257,
+    "2024": 261
+   }
+  },
+  "ps_persist_2yr": {
+   "label": "Of graduates who enrolled in a two-year college, share still enrolled anywhere in the second year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 213,
+    "2006": 213,
+    "2007": 217,
+    "2008": 219,
+    "2009": 221,
+    "2010": 221,
+    "2011": 221,
+    "2012": 221,
+    "2013": 222,
+    "2014": 225,
+    "2015": 222,
+    "2016": 226,
+    "2017": 223,
+    "2018": 232,
+    "2019": 230,
+    "2020": 228,
+    "2021": 232,
+    "2022": 230,
+    "2023": 236
+   }
+  },
+  "ps_persist_4yr": {
+   "label": "Of graduates who enrolled in a four-year college, share still enrolled anywhere in the second year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 149,
+    "2006": 150,
+    "2007": 166,
+    "2008": 159,
+    "2009": 160,
+    "2010": 158,
+    "2011": 156,
+    "2012": 175,
+    "2013": 172,
+    "2014": 179,
+    "2015": 178,
+    "2016": 177,
+    "2017": 185,
+    "2018": 189,
+    "2019": 195,
+    "2020": 205,
+    "2021": 199,
+    "2022": 207,
+    "2023": 198
+   }
+  },
+  "ps_remedial_2yr": {
+   "label": "Of graduates who enrolled in a two-year college, share taking any remedial (pre-college) course",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 167,
+    "2006": 168,
+    "2007": 219,
+    "2008": 230,
+    "2009": 231,
+    "2010": 233,
+    "2011": 235,
+    "2012": 237,
+    "2013": 238,
+    "2014": 238,
+    "2015": 239,
+    "2016": 245,
+    "2017": 245,
+    "2018": 254,
+    "2019": 249,
+    "2020": 242,
+    "2021": 219,
+    "2022": 217,
+    "2023": 208,
+    "2024": 201
+   }
+  },
+  "ps_remedial_4yr": {
+   "label": "Of graduates who enrolled in a four-year college, share taking any remedial course",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 95,
+    "2006": 100,
+    "2007": 116,
+    "2008": 119,
+    "2009": 114,
+    "2010": 113,
+    "2011": 86,
+    "2012": 120,
+    "2013": 93,
+    "2014": 108,
+    "2015": 149,
+    "2016": 149,
+    "2017": 159,
+    "2018": 164,
+    "2019": 157,
+    "2020": 148,
+    "2021": 129,
+    "2022": 137,
+    "2023": 122,
+    "2024": 131
+   }
+  },
+  "ps_enroll_any": {
+   "label": "Graduates enrolled in college within a year of graduation, any institution (Education Research and Data Center; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2005": 257,
+    "2006": 249,
+    "2007": 257,
+    "2008": 254,
+    "2009": 263,
+    "2010": 263,
+    "2011": 260,
+    "2012": 265,
+    "2013": 263,
+    "2014": 268,
+    "2015": 271,
+    "2016": 269,
+    "2017": 276,
+    "2018": 260,
+    "2019": 260,
+    "2020": 262,
+    "2021": 258,
+    "2022": 261,
+    "2023": 257,
+    "2024": 261
+   }
+  },
+  "dual_credit": {
+   "label": "Students enrolled in at least one dual-credit course (share of the high school's students)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 414,
+    "2016": 411,
+    "2017": 420,
+    "2018": 411,
+    "2019": 425,
+    "2020": 425,
+    "2021": 429,
+    "2022": 449,
+    "2023": 452,
+    "2024": 462,
+    "2025": 489
+   }
+  },
+  "ninth_on_track": {
+   "label": "Ninth graders who earned every credit attempted (share of ninth graders)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 324,
+    "2016": 311,
+    "2017": 329,
+    "2018": 301,
+    "2019": 318,
+    "2020": 309,
+    "2021": 332,
+    "2022": 358,
+    "2023": 362,
+    "2024": 413,
+    "2025": 410
+   }
+  },
+  "wsif_grad_decile": {
+   "label": "Framework decile, graduation (1 to 10)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 479,
+    "2018": 479,
+    "2019": 486,
+    "2022": 490,
+    "2023": 498,
+    "2024": 508,
+    "2025": 512
+   }
+  },
+  "wsif_ninth_decile": {
+   "label": "Framework decile, ninth graders on track (1 to 10)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 455,
+    "2018": 461,
+    "2019": 458,
+    "2022": 481,
+    "2023": 491,
+    "2024": 496,
+    "2025": 494
+   }
+  },
+  "wsif_dual_decile": {
+   "label": "Framework decile, dual credit (1 to 10)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 523,
+    "2018": 537,
+    "2019": 537,
+    "2022": 537,
+    "2023": 543,
+    "2024": 551,
+    "2025": 548
+   }
+  },
+  "wsif_grad4": {
+   "label": "Framework's four-year graduation rate (three-year pooled; not the annual rate at the top of the page)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 435,
+    "2018": 440,
+    "2019": 449,
+    "2022": 463,
+    "2023": 472,
+    "2024": 474,
+    "2025": 477
+   }
+  },
+  "path_asvab": {
+   "label": "Graduation Pathways: share meeting the pathway through the military entrance test (ASVAB)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2020": 179,
+    "2021": 202,
+    "2022": 212,
+    "2023": 242,
+    "2024": 271,
+    "2025": 261
+   }
+  },
+  "path_cte": {
+   "label": "Graduation Pathways: share completing the career and technical education pathway",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2020": 377,
+    "2021": 399,
+    "2022": 432,
+    "2023": 433,
+    "2024": 436,
+    "2025": 439
+   }
+  },
+  "path_ela_math": {
+   "label": "Graduation Pathways (the state's 2019 graduation pathways law): share of the four-year cohort completing a pathway in both English language arts and mathematics (the class's year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2020": 423,
+    "2021": 423,
+    "2022": 422,
+    "2023": 437,
+    "2024": 449,
+    "2025": 450
+   }
+  },
+  "path_ela_state_test": {
+   "label": "Graduation Pathways: share meeting the English language arts pathway on the state test",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2020": 420,
+    "2021": 440,
+    "2022": 407,
+    "2023": 460,
+    "2024": 459,
+    "2025": 466
+   }
+  },
+  "path_math_dual_credit": {
+   "label": "Graduation Pathways: share meeting the mathematics pathway through dual credit",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2020": 285,
+    "2021": 322,
+    "2022": 337,
+    "2023": 345,
+    "2024": 347,
+    "2025": 359
+   }
+  },
+  "path_math_state_test": {
+   "label": "Graduation Pathways: share meeting the mathematics pathway on the state test",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2020": 430,
+    "2021": 409,
+    "2022": 329,
+    "2023": 431,
+    "2024": 435,
+    "2025": 438
+   }
+  },
+  "path_ela_dual_credit": {
+   "label": "Graduation Pathways: share meeting the English language arts pathway through dual credit",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2020": 294,
+    "2021": 330,
+    "2022": 357,
+    "2023": 362,
+    "2024": 362,
+    "2025": 377
+   }
+  },
+  "ps_associate_6yr_3cls": {
+   "label": "Graduates whose highest award six years on is an associate degree or certificate (three graduating classes pooled, ending in the year shown; the state's small-school figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2007": 59,
+    "2008": 65,
+    "2009": 67,
+    "2010": 69,
+    "2011": 69,
+    "2012": 73,
+    "2013": 73,
+    "2014": 78,
+    "2015": 84,
+    "2016": 89,
+    "2017": 90,
+    "2018": 84
+   }
+  },
+  "ps_bachelors_6yr_3cls": {
+   "label": "Graduates holding a bachelor's degree or higher six years after graduation (three graduating classes pooled, ending in the year shown; the state's small-school figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2007": 59,
+    "2008": 65,
+    "2009": 66,
+    "2010": 69,
+    "2011": 67,
+    "2012": 72,
+    "2013": 72,
+    "2014": 78,
+    "2015": 84,
+    "2016": 88,
+    "2017": 90,
+    "2018": 84
+   }
+  },
+  "ps_enroll_2yr_3cls": {
+   "label": "Graduates enrolled in a two-year college or technical college within a year (three graduating classes pooled, ending in the year shown; the state's small-school figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2007": 73,
+    "2008": 79,
+    "2009": 76,
+    "2010": 76,
+    "2011": 86,
+    "2012": 89,
+    "2013": 92,
+    "2014": 96,
+    "2015": 102,
+    "2016": 102,
+    "2017": 107,
+    "2018": 94,
+    "2019": 95,
+    "2020": 95,
+    "2021": 97,
+    "2022": 96,
+    "2023": 93,
+    "2024": 97
+   }
+  },
+  "ps_enroll_4yr_3cls": {
+   "label": "Graduates enrolled in a four-year college within a year (three graduating classes pooled, ending in the year shown; the state's small-school figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2007": 66,
+    "2008": 72,
+    "2009": 74,
+    "2010": 74,
+    "2011": 82,
+    "2012": 84,
+    "2013": 87,
+    "2014": 91,
+    "2015": 97,
+    "2016": 100,
+    "2017": 102,
+    "2018": 91,
+    "2019": 91,
+    "2020": 91,
+    "2021": 94,
+    "2022": 96,
+    "2023": 94,
+    "2024": 98
+   }
+  },
+  "ps_no_degree_6yr_3cls": {
+   "label": "Graduates holding no degree or certificate six years after graduation (share of the class) (three graduating classes pooled, ending in the year shown; the state's small-school figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2007": 59,
+    "2008": 65,
+    "2009": 67,
+    "2010": 69,
+    "2011": 69,
+    "2012": 73,
+    "2013": 72,
+    "2014": 79,
+    "2015": 85,
+    "2016": 88,
+    "2017": 91,
+    "2018": 85
+   }
+  },
+  "ps_not_enrolled_3cls": {
+   "label": "Graduates not enrolled in college within a year (three graduating classes pooled, ending in the year shown; the state's small-school figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2007": 72,
+    "2008": 79,
+    "2009": 76,
+    "2010": 76,
+    "2011": 86,
+    "2012": 89,
+    "2013": 92,
+    "2014": 96,
+    "2015": 102,
+    "2016": 103,
+    "2017": 107,
+    "2018": 94,
+    "2019": 96,
+    "2020": 95,
+    "2021": 96,
+    "2022": 95,
+    "2023": 94,
+    "2024": 97
+   }
+  },
+  "ps_enroll_any_3cls": {
+   "label": "Graduates enrolled in college within a year of graduation, any institution (Education Research and Data Center; the year is the graduating class) (three graduating classes pooled, ending in the year shown; the state's small-school figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2007": 72,
+    "2008": 79,
+    "2009": 76,
+    "2010": 76,
+    "2011": 86,
+    "2012": 89,
+    "2013": 92,
+    "2014": 96,
+    "2015": 102,
+    "2016": 103,
+    "2017": 107,
+    "2018": 94,
+    "2019": 96,
+    "2020": 95,
+    "2021": 96,
+    "2022": 95,
+    "2023": 94,
+    "2024": 97
+   }
+  },
+  "ps_persist_2yr_3cls": {
+   "label": "Of graduates who enrolled in a two-year college, share still enrolled anywhere in the second year (three graduating classes pooled, ending in the year shown; the state's small-school figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2007": 53,
+    "2008": 82,
+    "2009": 93,
+    "2010": 99,
+    "2011": 101,
+    "2012": 105,
+    "2013": 107,
+    "2014": 111,
+    "2015": 112,
+    "2016": 119,
+    "2017": 115,
+    "2018": 118,
+    "2019": 122,
+    "2020": 116,
+    "2021": 114,
+    "2022": 115,
+    "2023": 107
+   }
+  },
+  "ps_persist_4yr_3cls": {
+   "label": "Of graduates who enrolled in a four-year college, share still enrolled anywhere in the second year (three graduating classes pooled, ending in the year shown; the state's small-school figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2007": 10,
+    "2008": 16,
+    "2009": 22,
+    "2010": 21,
+    "2011": 26,
+    "2012": 25,
+    "2013": 24,
+    "2014": 21,
+    "2015": 26,
+    "2016": 27,
+    "2017": 28,
+    "2018": 30,
+    "2019": 33,
+    "2020": 37,
+    "2021": 42,
+    "2022": 39,
+    "2023": 40
+   }
+  }
+ }
 }

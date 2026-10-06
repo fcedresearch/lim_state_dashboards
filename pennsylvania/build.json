@@ -409,5 +409,567 @@
   "improved_every_year": 1,
   "lapsed_longer_ago": 33
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 1 and 2)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9844,
+    "2016": 10212,
+    "2017": 10130,
+    "2018": 10076,
+    "2019": 10226,
+    "2022": 9774,
+    "2023": 9995,
+    "2024": 9968,
+    "2025": 7505
+   }
+  },
+  "percent_level4": {
+   "label": "Level 1: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9844,
+    "2016": 10212,
+    "2017": 10130,
+    "2018": 10076,
+    "2019": 10226,
+    "2022": 9774,
+    "2023": 9995,
+    "2024": 9968,
+    "2025": 7505
+   }
+  },
+  "percent_level3": {
+   "label": "Level 2: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9844,
+    "2016": 10212,
+    "2017": 10130,
+    "2018": 10076,
+    "2019": 10226,
+    "2022": 9774,
+    "2023": 9995,
+    "2024": 9968,
+    "2025": 7505
+   }
+  },
+  "percent_level2": {
+   "label": "Level 3: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9844,
+    "2016": 10212,
+    "2017": 10130,
+    "2018": 10076,
+    "2019": 10226,
+    "2022": 9774,
+    "2023": 9995,
+    "2024": 9968,
+    "2025": 7505
+   }
+  },
+  "percent_below": {
+   "label": "Level 4: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9844,
+    "2016": 10212,
+    "2017": 10130,
+    "2018": 10076,
+    "2019": 10226,
+    "2022": 9774,
+    "2023": 9995,
+    "2024": 9968,
+    "2025": 7505
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 8937,
+    "2016": 9273,
+    "2017": 9226,
+    "2018": 9178,
+    "2019": 9348,
+    "2022": 8950,
+    "2023": 9209,
+    "2024": 9180,
+    "2025": 6741
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2017": 9993,
+    "2018": 10133,
+    "2019": 10281,
+    "2022": 9900,
+    "2023": 10073,
+    "2024": 10080
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2017": 2569,
+    "2018": 2608,
+    "2019": 2701,
+    "2022": 2432,
+    "2023": 2673,
+    "2024": 2712,
+    "2025": 2463
+   }
+  },
+  "pvaas_ela": {
+   "label": "PVAAS growth score, ELA",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 10145,
+    "2019": 10258,
+    "2022": 9448,
+    "2023": 10085,
+    "2024": 10052,
+    "2025": 7587
+   }
+  },
+  "pvaas_math": {
+   "label": "PVAAS growth score, math",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 10146,
+    "2019": 10239,
+    "2022": 9486,
+    "2023": 10087,
+    "2024": 10040,
+    "2025": 7595
+   }
+  },
+  "career_std": {
+   "label": "Career standards benchmark",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 9070,
+    "2019": 9374,
+    "2022": 8999,
+    "2023": 9271,
+    "2024": 9258,
+    "2025": 6982
+   }
+  },
+  "postsec_trans": {
+   "label": "Graduates in school, the military or work a year on",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 2438,
+    "2017": 2532,
+    "2018": 2554,
+    "2019": 2646,
+    "2022": 2365,
+    "2023": 2613
+   }
+  },
+  "rigorous": {
+   "label": "Rigorous course of study",
+   "kind": "rows",
+   "family": null,
+   "years": {
+    "2018": 2597,
+    "2019": 2707,
+    "2022": 2384,
+    "2023": 2656,
+    "2024": 2692
+   }
+  },
+  "reg_attend": {
+   "label": "Regular attendance",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "pvaas_sci": {
+   "label": "PVAAS growth score, science",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "grad4": {
+   "label": "Four-year cohort graduation rate",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "postsec_ihe": {
+   "label": "Graduates enrolled in higher education a year on",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2
+   }
+  },
+  "industry": {
+   "label": "Graduates competent or advanced on an industry assessment",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "el_progress": {
+   "label": "English learners making progress toward proficiency",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "designated": {
+   "label": "Schools on the state's CSI, ATSI or TSI lists",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2025": 2
+   }
+  },
+  "ap_ib": {
+   "label": "Graduates who took an AP or IB course, through 2023-24",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 668,
+    "2019": 700,
+    "2022": 685,
+    "2023": 695,
+    "2024": 697
+   }
+  },
+  "dual_enroll": {
+   "label": "Graduates who took a college course through dual enrollment, through 2023-24",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 668,
+    "2019": 700,
+    "2022": 685,
+    "2023": 695,
+    "2024": 697
+   }
+  },
+  "eds_share": {
+   "label": "Economically disadvantaged share of enrollment as the 2018-19 index lists it",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2019": 2697
+   }
+  },
+  "enrollment": {
+   "label": "Enrollment as the 2018-19 index lists it",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2019": 2700
+   }
+  },
+  "industry_adv": {
+   "label": "Graduates advanced on an industry standards-based competency assessment",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 668,
+    "2019": 700,
+    "2022": 685,
+    "2023": 695,
+    "2024": 697,
+    "2025": 700
+   }
+  },
+  "ap_ib_12th": {
+   "label": "12th graders who took an AP or IB course (the 2024-25 re-based column)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2025": 700
+   }
+  },
+  "dual_enroll_12th": {
+   "label": "12th graders who took a college course through dual credit enrollment (the 2024-25 re-based column)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2025": 700
+   }
+  },
+  "industry_12th": {
+   "label": "12th graders competent or advanced on an industry assessment (the 2024-25 re-based column, not comparable with earlier years)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2025": 700
+   }
+  },
+  "rigorous_12th": {
+   "label": "12th graders who completed a rigorous course of study (the 2024-25 re-based column, not comparable with earlier years)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 700
+   }
+  },
+  "csi": {
+   "label": "On the state's current Comprehensive Support and Improvement list (100 = yes; posted January 2026, shown against 2024-25)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 2669
+   }
+  },
+  "atsi": {
+   "label": "On the state's current Additional Targeted Support and Improvement list (100 = yes)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 2669
+   }
+  },
+  "tsi": {
+   "label": "On the state's current Targeted Support and Improvement list (100 = yes)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 2669
+   }
+  },
+  "postsec_military": {
+   "label": "Graduates enlisted in the military a year on, keyed on the class's year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 648,
+    "2017": 651,
+    "2018": 661,
+    "2019": 669,
+    "2022": 659,
+    "2023": 664
+   }
+  },
+  "postsec_work": {
+   "label": "Graduates in the Pennsylvania workforce a year on, keyed on the class's year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 648,
+    "2017": 651,
+    "2018": 662,
+    "2019": 669,
+    "2022": 659,
+    "2023": 664
+   }
+  },
+  "grad5": {
+   "label": "Five-year cohort graduation rate, keyed one year before the index that printed it, beside the four-year rate",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 648,
+    "2018": 654,
+    "2019": 661,
+    "2022": 664,
+    "2023": 663,
+    "2024": 667
+   }
+  },
+  "adv_ela": {
+   "label": "Advanced, ELA/Literature",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2673,
+    "2019": 2660,
+    "2022": 2628,
+    "2023": 2638,
+    "2024": 2634,
+    "2025": 2625
+   }
+  },
+  "adv_math": {
+   "label": "Advanced, Mathematics/Algebra I",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2674,
+    "2019": 2660,
+    "2022": 2592,
+    "2023": 2637,
+    "2024": 2633,
+    "2025": 2626
+   }
+  },
+  "adv_sci": {
+   "label": "Advanced, Science/Biology (through 2023-24)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2629,
+    "2019": 2618,
+    "2022": 2516,
+    "2023": 2593,
+    "2024": 2580
+   }
+  },
+  "part_ela": {
+   "label": "Test participation, ELA/Literature",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 2673,
+    "2019": 2660,
+    "2022": 2628,
+    "2023": 2638,
+    "2024": 2635,
+    "2025": 2625
+   }
+  },
+  "part_math": {
+   "label": "Test participation, Mathematics/Algebra I",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 2678,
+    "2019": 2660,
+    "2022": 2592,
+    "2023": 2637,
+    "2024": 2634,
+    "2025": 2626
+   }
+  },
+  "part_sci": {
+   "label": "Test participation, Science/Biology",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 2633,
+    "2019": 2618,
+    "2022": 2516,
+    "2023": 2593,
+    "2024": 2581,
+    "2025": 2331
+   }
+  },
+  "prof_ela": {
+   "label": "Proficient or advanced, ELA/Literature, as the state publishes it",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2673,
+    "2019": 2660,
+    "2022": 2628,
+    "2023": 2637,
+    "2024": 2634,
+    "2025": 2625
+   }
+  },
+  "prof_math": {
+   "label": "Proficient or advanced, Mathematics/Algebra I, as the state publishes it",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2674,
+    "2019": 2660,
+    "2022": 2592,
+    "2023": 2636,
+    "2024": 2633,
+    "2025": 2626
+   }
+  },
+  "prof_sci": {
+   "label": "Proficient or advanced, Science/Biology, as the state publishes it (through 2023-24)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2629,
+    "2019": 2618,
+    "2022": 2516,
+    "2023": 2593,
+    "2024": 2580
+   }
+  },
+  "grade3_reading": {
+   "label": "Grade 3 students proficient or advanced in reading",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1490,
+    "2019": 1482,
+    "2022": 1469,
+    "2023": 1469,
+    "2024": 1452,
+    "2025": 1450
+   }
+  },
+  "grade7_math": {
+   "label": "Grade 7 students proficient or advanced in mathematics",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 856,
+    "2019": 862,
+    "2022": 866,
+    "2023": 862,
+    "2024": 862,
+    "2025": 856
+   }
+  }
+ }
 }

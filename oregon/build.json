@@ -500,5 +500,368 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 2
  },
- "best_schools_added": "2026-10-01"
+ "best_schools_added": "2026-10-01",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 4678,
+    "2015": 4327,
+    "2016": 4300,
+    "2017": 4255,
+    "2018": 4305,
+    "2019": 4230,
+    "2022": 4130,
+    "2023": 4174,
+    "2024": 4168,
+    "2025": 4145,
+    "2026": 4217
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 3019,
+    "2016": 2985,
+    "2017": 2957,
+    "2018": 2986,
+    "2019": 4230,
+    "2022": 4130,
+    "2023": 4174,
+    "2024": 4168,
+    "2025": 4145,
+    "2026": 4217
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 3019,
+    "2016": 2985,
+    "2017": 2957,
+    "2018": 2986,
+    "2019": 4230,
+    "2022": 4130,
+    "2023": 4174,
+    "2024": 4168,
+    "2025": 4145,
+    "2026": 4217
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 3019,
+    "2016": 2985,
+    "2017": 2957,
+    "2018": 2986,
+    "2019": 4230,
+    "2022": 4130,
+    "2023": 4174,
+    "2024": 4168,
+    "2025": 4145,
+    "2026": 4217
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 3019,
+    "2016": 2985,
+    "2017": 2957,
+    "2018": 2986,
+    "2019": 4230,
+    "2022": 4130,
+    "2023": 4174,
+    "2024": 4168,
+    "2025": 4145,
+    "2026": 4217
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 4396,
+    "2015": 4038,
+    "2016": 4030,
+    "2017": 3994,
+    "2018": 4039,
+    "2019": 3973,
+    "2022": 3885,
+    "2023": 3960,
+    "2024": 3973,
+    "2025": 3961
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2017": 4153,
+    "2018": 4222,
+    "2019": 4211,
+    "2022": 4222,
+    "2023": 4247,
+    "2024": 4271,
+    "2025": 4231
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2014": 1436,
+    "2015": 1089,
+    "2016": 1102,
+    "2017": 1075,
+    "2018": 1090,
+    "2019": 1025,
+    "2022": 1017,
+    "2023": 1063,
+    "2024": 1074,
+    "2025": 1036
+   }
+  },
+  "reg_attend": {
+   "label": "Regular attenders",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2017": 4153,
+    "2018": 4222,
+    "2019": 4211,
+    "2022": 4222,
+    "2023": 4247,
+    "2024": 4271,
+    "2025": 4231
+   }
+  },
+  "support_identified": {
+   "label": "Schools identified for ESSA support",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 1,
+    "2019": 1,
+    "2022": 1,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "mgp_ela": {
+   "label": "Median growth percentile, English language arts (all grades, all students; 2014-15 to 2018-19)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1152,
+    "2016": 1152,
+    "2017": 1155,
+    "2018": 949,
+    "2019": 957
+   }
+  },
+  "mgp_math": {
+   "label": "Median growth percentile, mathematics (all grades, all students; 2014-15 to 2018-19)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1151,
+    "2016": 1149,
+    "2017": 1153,
+    "2018": 949,
+    "2019": 957
+   }
+  },
+  "attend_students": {
+   "label": "Students included in the regular attenders report (enrolled 75 days or more)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2017": 1135,
+    "2018": 1150,
+    "2019": 1158,
+    "2022": 1179,
+    "2023": 1174,
+    "2024": 1189,
+    "2025": 1178
+   }
+  },
+  "chronic_absent_or": {
+   "label": "Chronically absent, share of students attending 90% or fewer of enrolled days (the same report; DOMO's chronic absence is this figure)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2017": 1135,
+    "2018": 1150,
+    "2019": 1158,
+    "2022": 1179,
+    "2023": 1174,
+    "2024": 1189,
+    "2025": 1178
+   }
+  },
+  "support_comprehensive": {
+   "label": "Comprehensive support (100 = yes)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1183,
+    "2019": 1191,
+    "2022": 1201,
+    "2023": 1196,
+    "2024": 1200,
+    "2025": 1194
+   }
+  },
+  "support_targeted": {
+   "label": "Targeted support (100 = yes)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1183,
+    "2019": 1191,
+    "2022": 1201,
+    "2023": 1196,
+    "2024": 1200,
+    "2025": 1194
+   }
+  },
+  "grad4_or": {
+   "label": "Four-year cohort graduation rate as ODE publishes it, keyed on the graduating class (the page's graduation measure where DOMO has none)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2014": 314,
+    "2015": 316,
+    "2016": 315,
+    "2017": 315,
+    "2018": 317,
+    "2019": 317,
+    "2022": 325,
+    "2023": 324,
+    "2024": 321
+   }
+  },
+  "grad5_or": {
+   "label": "Five-year completion rate, keyed on the cohort's four-year class",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2014": 312,
+    "2015": 316,
+    "2016": 314,
+    "2017": 315,
+    "2018": 311,
+    "2019": 317,
+    "2022": 322,
+    "2023": 320
+   }
+  },
+  "college_first_year": {
+   "label": "Graduates enrolled in a postsecondary institution before the end of the following academic year (four-year cohort graduates; classes of 2016 and 2017; keyed on the class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 271,
+    "2017": 274
+   }
+  },
+  "college_graduates": {
+   "label": "Graduates in the postsecondary enrollment file's denominator (keyed on the class)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 271,
+    "2017": 274,
+    "2018": 274,
+    "2022": 294,
+    "2023": 293
+   }
+  },
+  "college_16mo": {
+   "label": "Graduates enrolled in a postsecondary institution within 16 months (four-year cohort graduates; class of 2018; the classes of 2019 to 2021 are excluded)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 274
+   }
+  },
+  "ninth_on_track": {
+   "label": "Ninth grade on-track to graduate, full academic year students (the accountability figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 227,
+    "2019": 230,
+    "2022": 239,
+    "2023": 235,
+    "2024": 235,
+    "2025": 216
+   }
+  },
+  "ninth_on_track_all": {
+   "label": "Ninth grade on-track to graduate, all students enrolled on the first school day in May",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 242,
+    "2019": 250,
+    "2022": 257,
+    "2023": 253,
+    "2024": 257,
+    "2025": 242
+   }
+  },
+  "ninth_students": {
+   "label": "Ninth graders included (full academic year)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 227,
+    "2019": 230,
+    "2022": 239,
+    "2023": 235,
+    "2024": 235,
+    "2025": 216
+   }
+  },
+  "college_12mo": {
+   "label": "Graduates enrolled in a postsecondary institution within 12 months (all graduates that year; classes of 2022 and 2023)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 294,
+    "2023": 293
+   }
+  },
+  "el_on_track": {
+   "label": "English learners on track to proficiency (share of the school's English learners)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 627,
+    "2018": 625,
+    "2019": 629,
+    "2022": 658,
+    "2023": 680,
+    "2024": 695,
+    "2025": 701
+   }
+  }
+ }
 }

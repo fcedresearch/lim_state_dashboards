@@ -543,5 +543,967 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 11
  },
- "best_schools_added": "2026-10-01"
+ "best_schools_added": "2026-10-01",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5472,
+    "2016": 5621,
+    "2017": 5655,
+    "2018": 5651,
+    "2019": 5703,
+    "2022": 5694,
+    "2023": 5723,
+    "2024": 5659,
+    "2025": 6101,
+    "2026": 6168
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3267,
+    "2018": 3262,
+    "2019": 4012,
+    "2022": 5694,
+    "2023": 5723,
+    "2024": 5659,
+    "2025": 6101,
+    "2026": 6168
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3267,
+    "2018": 3262,
+    "2019": 4012,
+    "2022": 5694,
+    "2023": 5723,
+    "2024": 5659,
+    "2025": 6101,
+    "2026": 6168
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3267,
+    "2018": 3262,
+    "2019": 4012,
+    "2022": 5694,
+    "2023": 5723,
+    "2024": 5659,
+    "2025": 6101,
+    "2026": 6168
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3267,
+    "2018": 3262,
+    "2019": 4012,
+    "2022": 5694,
+    "2023": 5723,
+    "2024": 5659,
+    "2025": 6101,
+    "2026": 6168
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4979,
+    "2016": 5126,
+    "2017": 5164,
+    "2018": 5152,
+    "2019": 5202,
+    "2022": 5151,
+    "2023": 5164,
+    "2024": 5120,
+    "2025": 5553
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 5784,
+    "2019": 5819,
+    "2022": 5814,
+    "2023": 5817,
+    "2024": 5774,
+    "2025": 6206,
+    "2026": 6116
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 1234,
+    "2016": 1288,
+    "2017": 1289,
+    "2018": 1299,
+    "2019": 1352,
+    "2022": 1367,
+    "2023": 1401,
+    "2024": 1393,
+    "2025": 1525
+   }
+  },
+  "teacher_retention": {
+   "label": "Teacher retention",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2015": 5550,
+    "2016": 5251,
+    "2017": 5269,
+    "2018": 5737,
+    "2019": 5785,
+    "2022": 5791,
+    "2023": 5791,
+    "2024": 5748,
+    "2025": 6194,
+    "2026": 6113
+   }
+  },
+  "pct_disciplined": {
+   "label": "Students disciplined",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 5550,
+    "2016": 5764,
+    "2017": 5782,
+    "2018": 5783,
+    "2019": 5818,
+    "2022": 5814,
+    "2023": 5818,
+    "2024": 5774,
+    "2025": 6208
+   }
+  },
+  "sgp_ela": {
+   "label": "Growth percentile, English language arts",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 4733,
+    "2019": 5516,
+    "2022": 5496,
+    "2023": 5497,
+    "2024": 5478,
+    "2025": 5887
+   }
+  },
+  "sgp_math": {
+   "label": "Growth percentile, mathematics",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 4724,
+    "2019": 5517,
+    "2022": 5496,
+    "2023": 5496,
+    "2024": 5476,
+    "2025": 5883
+   }
+  },
+  "chronic_absent_ma": {
+   "label": "Chronic absence",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "acct_percentile": {
+   "label": "Accountability percentile (1-99)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "target_pct": {
+   "label": "Share of improvement targets met",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ap_3plus_jr_sr": {
+   "label": "11th and 12th grade Advanced Placement test takers scoring 3 or higher (share of takers; DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 301,
+    "2016": 301,
+    "2017": 303,
+    "2018": 311,
+    "2019": 317,
+    "2022": 315,
+    "2023": 317,
+    "2024": 318,
+    "2025": 315
+   }
+  },
+  "ap_ib_enrolled": {
+   "label": "11th and 12th graders enrolled in at least one Advanced Placement or International Baccalaureate course (share; DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 362,
+    "2016": 366,
+    "2017": 368,
+    "2018": 370,
+    "2019": 369,
+    "2022": 373,
+    "2023": 371,
+    "2024": 373,
+    "2025": 373
+   }
+  },
+  "college_16mo": {
+   "label": "Graduates enrolled in college within 16 months of graduation (share of the class; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 346,
+    "2016": 351,
+    "2017": 351,
+    "2018": 355,
+    "2019": 354,
+    "2022": 362,
+    "2023": 359,
+    "2024": 363
+   }
+  },
+  "college_16mo_in_state": {
+   "label": "Graduates enrolled within 16 months at a Massachusetts college or university (share of the class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 346,
+    "2016": 351,
+    "2017": 351,
+    "2018": 355,
+    "2019": 354,
+    "2022": 362,
+    "2023": 359,
+    "2024": 363
+   }
+  },
+  "college_16mo_private_2yr": {
+   "label": "Graduates enrolled within 16 months at a private two-year college (share of the class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 346,
+    "2016": 351,
+    "2017": 351,
+    "2018": 355,
+    "2019": 354,
+    "2022": 362,
+    "2023": 359,
+    "2024": 363
+   }
+  },
+  "college_16mo_private_4yr": {
+   "label": "Graduates enrolled within 16 months at a private four-year college (share of the class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 346,
+    "2016": 351,
+    "2017": 351,
+    "2018": 355,
+    "2019": 354,
+    "2022": 362,
+    "2023": 359,
+    "2024": 363
+   }
+  },
+  "college_16mo_public_2yr": {
+   "label": "Graduates enrolled within 16 months at a public two-year college (share of the class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 346,
+    "2016": 351,
+    "2017": 351,
+    "2018": 355,
+    "2019": 354,
+    "2022": 362,
+    "2023": 359,
+    "2024": 363
+   }
+  },
+  "college_16mo_public_4yr": {
+   "label": "Graduates enrolled within 16 months at a public four-year college (share of the class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 346,
+    "2016": 351,
+    "2017": 351,
+    "2018": 355,
+    "2019": 354,
+    "2022": 362,
+    "2023": 359,
+    "2024": 363
+   }
+  },
+  "college_immediate_fall": {
+   "label": "Graduates enrolled in college the fall after graduation (share of the class; DART high-school outcomes file; a class of 2024 figure the file carries twice with differing values is set aside)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 355,
+    "2016": 363,
+    "2017": 362,
+    "2018": 365,
+    "2019": 366,
+    "2022": 371,
+    "2023": 371,
+    "2024": 145,
+    "2025": 370
+   }
+  },
+  "college_march": {
+   "label": "Graduates enrolled in college by the March after graduation (share of the class; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 346,
+    "2016": 351,
+    "2017": 351,
+    "2018": 355,
+    "2019": 354,
+    "2022": 362,
+    "2023": 359,
+    "2024": 363,
+    "2025": 365
+   }
+  },
+  "college_persist_2yr": {
+   "label": "College enrollees still enrolled through their first two years (share; DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 345,
+    "2016": 348,
+    "2017": 349,
+    "2018": 352,
+    "2019": 349,
+    "2022": 347,
+    "2023": 351,
+    "2024": 350,
+    "2025": 352
+   }
+  },
+  "dropout_rate": {
+   "label": "Annual dropout rate, grades 9-12 (DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 371,
+    "2016": 375,
+    "2017": 372,
+    "2018": 374,
+    "2019": 373,
+    "2022": 375,
+    "2023": 377,
+    "2024": 376,
+    "2025": 376
+   }
+  },
+  "enrollment_discipline_file": {
+   "label": "Students enrolled, as the discipline file counts them",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 1607,
+    "2016": 1616,
+    "2017": 1610,
+    "2018": 1610,
+    "2019": 1607,
+    "2022": 1602,
+    "2023": 1590,
+    "2024": 1583,
+    "2025": 1566
+   }
+  },
+  "grad_rate_4yr": {
+   "label": "Four-year cohort graduation rate (the state's DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 358,
+    "2016": 360,
+    "2017": 360,
+    "2018": 362,
+    "2019": 367,
+    "2022": 372,
+    "2023": 373,
+    "2024": 370,
+    "2025": 373
+   }
+  },
+  "grad_rate_5yr": {
+   "label": "Five-year cohort graduation rate (the state's DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 358,
+    "2016": 360,
+    "2017": 360,
+    "2018": 362,
+    "2019": 367,
+    "2022": 372,
+    "2023": 371,
+    "2024": 370
+   }
+  },
+  "graduates": {
+   "label": "Graduates in the class (the base of the college-enrollment shares)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 359,
+    "2016": 366,
+    "2017": 364,
+    "2018": 367,
+    "2019": 368,
+    "2022": 373,
+    "2023": 375,
+    "2024": 374
+   }
+  },
+  "legacy_median_sgp_ela": {
+   "label": "Median student growth percentile, English language arts, all grades, legacy state test (MCAS; 2014-15 and 2015-16; districts that took PARCC are absent)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 842,
+    "2016": 613
+   }
+  },
+  "legacy_median_sgp_ela_g10": {
+   "label": "Median student growth percentile, English language arts, grade 10, legacy state test (MCAS; 2014-15 to 2017-18)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 336,
+    "2016": 340,
+    "2017": 359,
+    "2018": 356
+   }
+  },
+  "legacy_median_sgp_math": {
+   "label": "Median student growth percentile, mathematics, all grades, legacy state test (MCAS; 2014-15 and 2015-16; districts that took PARCC are absent)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 843,
+    "2016": 613
+   }
+  },
+  "legacy_median_sgp_math_g10": {
+   "label": "Median student growth percentile, mathematics, grade 10, legacy state test (MCAS; 2014-15 to 2017-18)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 336,
+    "2016": 340,
+    "2017": 357,
+    "2018": 355
+   }
+  },
+  "masscore_pct": {
+   "label": "Graduates completing MassCore, the state's recommended high-school program of study (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 356,
+    "2016": 364,
+    "2017": 362,
+    "2018": 365,
+    "2019": 366,
+    "2022": 372,
+    "2023": 373,
+    "2024": 370,
+    "2025": 370
+   }
+  },
+  "pct_emergency_removal": {
+   "label": "Emergency removal, share of students (same publication rule)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 854,
+    "2016": 881,
+    "2017": 867,
+    "2018": 894,
+    "2019": 893,
+    "2022": 862,
+    "2023": 787,
+    "2024": 807,
+    "2025": 803
+   }
+  },
+  "pct_expelled": {
+   "label": "Expulsion, share of students (same publication rule)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 854,
+    "2016": 881,
+    "2017": 867,
+    "2018": 894,
+    "2019": 893,
+    "2022": 862,
+    "2023": 787,
+    "2024": 807,
+    "2025": 803
+   }
+  },
+  "pct_iss": {
+   "label": "In-school suspension, share of students (same publication rule)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 854,
+    "2016": 881,
+    "2017": 867,
+    "2018": 894,
+    "2019": 893,
+    "2022": 862,
+    "2023": 787,
+    "2024": 807,
+    "2025": 803
+   }
+  },
+  "pct_oss": {
+   "label": "Out-of-school suspension, share of students (published only where six or more students were disciplined)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 854,
+    "2016": 881,
+    "2017": 867,
+    "2018": 894,
+    "2019": 893,
+    "2022": 862,
+    "2023": 787,
+    "2024": 807,
+    "2025": 803
+   }
+  },
+  "ppi_all_students": {
+   "label": "Cumulative progress and performance index (PPI), all students, under the pre-2018 accountability system (2014-15 to 2016-17)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1549,
+    "2016": 1556,
+    "2017": 256
+   }
+  },
+  "prog_cohort": {
+   "label": "Cohort progression: students in the cohort",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 361,
+    "2016": 369,
+    "2017": 374,
+    "2022": 378,
+    "2023": 376,
+    "2024": 377
+   }
+  },
+  "prog_degree": {
+   "label": "Cohort progression: earned a postsecondary degree (share of the cohort; classes of 2015 to 2017)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 359,
+    "2016": 366,
+    "2017": 370
+   }
+  },
+  "prog_enrolled_immediately": {
+   "label": "Cohort progression: enrolled in college immediately after graduation (share of the cohort)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 359,
+    "2016": 366,
+    "2017": 370,
+    "2022": 373,
+    "2023": 373,
+    "2024": 371
+   }
+  },
+  "prog_graduated": {
+   "label": "Cohort progression: graduated from high school (share of the graduating cohort; rebuilt from counts)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 359,
+    "2016": 366,
+    "2017": 370,
+    "2022": 373,
+    "2023": 373,
+    "2024": 371
+   }
+  },
+  "prog_persisted_2yr": {
+   "label": "Cohort progression: still enrolled in a second year of college (share of the cohort; classes of 2022 to 2024)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 359,
+    "2016": 366,
+    "2017": 370,
+    "2022": 373,
+    "2023": 373,
+    "2024": 371
+   }
+  },
+  "promotion_9_10": {
+   "label": "First-time 9th graders promoted to 10th grade (share; DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 367,
+    "2016": 367,
+    "2017": 364,
+    "2018": 362,
+    "2019": 369,
+    "2022": 365,
+    "2023": 369,
+    "2024": 371,
+    "2025": 367
+   }
+  },
+  "sat_math": {
+   "label": "SAT mathematics, average score of the school's test takers (200-800; DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 335,
+    "2016": 335,
+    "2017": 337,
+    "2018": 343,
+    "2019": 340,
+    "2022": 335,
+    "2023": 330,
+    "2024": 331,
+    "2025": 333
+   }
+  },
+  "sat_reading": {
+   "label": "SAT reading, average score of the school's test takers (200-800; DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 335,
+    "2016": 335,
+    "2017": 337,
+    "2018": 343,
+    "2019": 340,
+    "2022": 335,
+    "2023": 330,
+    "2024": 331,
+    "2025": 333
+   }
+  },
+  "school_percentile_old": {
+   "label": "School percentile, 1-99, under the accountability system in force through 2016-17 (2014-15 to 2016-17)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1526,
+    "2016": 1547,
+    "2017": 254
+   }
+  },
+  "teachers": {
+   "label": "Teachers in the year before, the base of the retention rate",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 1580,
+    "2016": 1489,
+    "2017": 1483,
+    "2018": 1591,
+    "2019": 1596,
+    "2022": 1591,
+    "2023": 1582,
+    "2024": 1574,
+    "2025": 1563,
+    "2026": 1545
+   }
+  },
+  "absent_10_days": {
+   "label": "Students absent 10 or more days (share)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1610,
+    "2019": 1607,
+    "2022": 1602,
+    "2023": 1589,
+    "2024": 1583,
+    "2025": 1564,
+    "2026": 1546
+   }
+  },
+  "adv_coursework_11_12": {
+   "label": "11th and 12th graders completing advanced coursework (share; DART high-school outcomes file, 2017-18 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 370,
+    "2019": 369,
+    "2022": 372,
+    "2023": 372,
+    "2024": 374,
+    "2025": 374
+   }
+  },
+  "attend_rate": {
+   "label": "Attendance rate (share of enrolled days attended)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1610,
+    "2019": 1607,
+    "2022": 1602,
+    "2023": 1589,
+    "2024": 1583,
+    "2025": 1564,
+    "2026": 1546
+   }
+  },
+  "avg_days_absent": {
+   "label": "Average days absent per student",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1610,
+    "2019": 1607,
+    "2022": 1602,
+    "2023": 1589,
+    "2024": 1583,
+    "2025": 1564,
+    "2026": 1546
+   }
+  },
+  "extended_engagement": {
+   "label": "Extended engagement rate: students of the cohort who graduated, are still enrolled or earned a certificate of attainment (share; DART high-school outcomes file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 327,
+    "2019": 331,
+    "2022": 359,
+    "2023": 334,
+    "2025": 335
+   }
+  },
+  "fafsa_completed": {
+   "label": "12th graders who completed the FAFSA financial-aid form (share; DART high-school outcomes file, 2017-18 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 364,
+    "2019": 366,
+    "2022": 371,
+    "2023": 372,
+    "2024": 367,
+    "2025": 370
+   }
+  },
+  "needs_assistance": {
+   "label": "Classified as requiring assistance or intervention (100 = yes, 0 = not requiring; blank where the state issued no classification)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1573,
+    "2019": 1574,
+    "2023": 1557,
+    "2024": 1556,
+    "2025": 1534
+   }
+  },
+  "unexcused_10_days": {
+   "label": "Students with 10 or more unexcused absences (share)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1610,
+    "2019": 1607,
+    "2022": 1602,
+    "2023": 1589,
+    "2024": 1583,
+    "2025": 1564,
+    "2026": 1546
+   }
+  },
+  "passing_all_9th": {
+   "label": "9th graders completing and passing all their courses (share; DART high-school outcomes file, 2018-19 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 370,
+    "2022": 365,
+    "2023": 370,
+    "2024": 370,
+    "2025": 368
+   }
+  },
+  "sgp_ela_g10": {
+   "label": "Mean student growth percentile, English language arts, grade 10 (2018-19 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 344,
+    "2022": 341,
+    "2023": 341,
+    "2024": 343,
+    "2025": 340
+   }
+  },
+  "sgp_math_g10": {
+   "label": "Mean student growth percentile, mathematics, grade 10 (2018-19 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 344,
+    "2022": 341,
+    "2023": 341,
+    "2024": 343,
+    "2025": 338
+   }
+  },
+  "target_pct_cumulative": {
+   "label": "Criterion-referenced target percentage, cumulative (blends the year before; 2018-19, 2023-24, 2024-25)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1563,
+    "2024": 1510,
+    "2025": 1505
+   }
+  },
+  "chronic_absent_20": {
+   "label": "Severe chronic absence (absent 20% or more of enrolled days; 2021-22 on)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2022": 1602,
+    "2023": 1589,
+    "2024": 1583,
+    "2025": 1564,
+    "2026": 1546
+   }
+  },
+  "innovation_pathway": {
+   "label": "Students enrolled in an Innovation Career Pathway (share; 2021-22 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 42,
+    "2023": 54,
+    "2024": 69,
+    "2025": 85
+   }
+  },
+  "pathway_any": {
+   "label": "Students enrolled in any career pathway or program (share of students; a student in two programs counts twice; 2021-22 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 159,
+    "2023": 166,
+    "2024": 185,
+    "2025": 200,
+    "2026": 212
+   }
+  },
+  "median_sgp_2017_ela": {
+   "label": "Median student growth percentile, English language arts, grades 3-8, as published for 2016-17 (a median; not the mean series)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1303
+   }
+  },
+  "median_sgp_2017_math": {
+   "label": "Median student growth percentile, mathematics, grades 3-8, as published for 2016-17 (a median; not the mean series)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1303
+   }
+  },
+  "cte_ch74": {
+   "label": "Students enrolled in a Chapter 74 career/technical education program (share; 2021-22 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 103,
+    "2023": 106,
+    "2024": 108,
+    "2025": 112
+   }
+  },
+  "early_college": {
+   "label": "Students enrolled in an Early College program (share; 2021-22 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 38,
+    "2023": 51,
+    "2024": 56,
+    "2025": 59
+   }
+  }
+ }
 }

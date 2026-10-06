@@ -815,5 +815,632 @@
   "improved_every_year": 2,
   "lapsed_longer_ago": 99
  },
- "best_schools_added": "2026-09-30"
+ "best_schools_added": "2026-09-30",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 7000,
+    "2016": 5184,
+    "2017": 5176,
+    "2018": 4419,
+    "2019": 4857,
+    "2022": 4842,
+    "2023": 4866,
+    "2024": 3747,
+    "2025": 3609,
+    "2026": 3667
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 1298,
+    "2016": 1219,
+    "2017": 1221,
+    "2018": 358
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 6383,
+    "2016": 4752,
+    "2017": 4755,
+    "2018": 4115,
+    "2019": 4465,
+    "2022": 4500,
+    "2023": 4511,
+    "2024": 3528,
+    "2025": 3399
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2019": 4738,
+    "2022": 4885,
+    "2023": 4912,
+    "2024": 3813,
+    "2025": 3658
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 1290,
+    "2017": 1226,
+    "2018": 914,
+    "2019": 899,
+    "2022": 818,
+    "2023": 917,
+    "2024": 1011,
+    "2025": 956
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2016": 5337,
+    "2017": 5329,
+    "2018": 4593,
+    "2019": 4988,
+    "2022": 4957,
+    "2023": 4970,
+    "2024": 3898,
+    "2025": 3744,
+    "2026": 3700
+   }
+  },
+  "pct_oss": {
+   "label": "Out-of-school suspension",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2016": 5318,
+    "2017": 5320,
+    "2018": 4593,
+    "2019": 4988,
+    "2022": 4957,
+    "2023": 4974,
+    "2024": 3905,
+    "2025": 3745
+   }
+  },
+  "pct_iss": {
+   "label": "In-school suspension",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2016": 5318,
+    "2017": 5320,
+    "2018": 4593,
+    "2019": 4988,
+    "2022": 4957,
+    "2023": 4974,
+    "2024": 3905,
+    "2025": 3745
+   }
+  },
+  "sps": {
+   "label": "School Performance Score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 4557,
+    "2019": 4824,
+    "2022": 4480,
+    "2023": 4782,
+    "2024": 3766,
+    "2025": 3581
+   }
+  },
+  "progress_index": {
+   "label": "Progress index",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 4532,
+    "2019": 4818,
+    "2022": 4472,
+    "2023": 4782,
+    "2024": 3763,
+    "2025": 3581
+   }
+  },
+  "college_enroll": {
+   "label": "College enrollment",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 1542,
+    "2017": 1555,
+    "2018": 1267,
+    "2019": 1250,
+    "2022": 1277,
+    "2023": 1287,
+    "2024": 1440
+   }
+  },
+  "grade_ab": {
+   "label": "Schools graded A or B",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "top_growth": {
+   "label": "Tests showing top growth (LEAP 2025 progress)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "cred_rate": {
+   "label": "Graduates earning a Basic or Advanced credential",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "college_persist": {
+   "label": "College enrollees still enrolled a year later",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2
+   }
+  },
+  "act_composite": {
+   "label": "ACT composite score",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2015": 1,
+    "2016": 1,
+    "2017": 1,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "sps_old": {
+   "label": "School Performance Score, old formula (2015-2018)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1183,
+    "2016": 1189,
+    "2017": 1153,
+    "2018": 1204
+   }
+  },
+  "act_takers": {
+   "label": "ACT takers (graduating seniors)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 300,
+    "2016": 302,
+    "2017": 304,
+    "2018": 307,
+    "2019": 311,
+    "2020": 312,
+    "2021": 315,
+    "2022": 323,
+    "2023": 330,
+    "2024": 323,
+    "2025": 329
+   }
+  },
+  "grade_old": {
+   "label": "State letter grade, old formula (2015-2018)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1183,
+    "2016": 1189,
+    "2017": 1153,
+    "2018": 1202
+   }
+  },
+  "enrollment": {
+   "label": "Cumulative enrollment (discipline file)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 1209,
+    "2017": 1208,
+    "2018": 1223,
+    "2019": 1219,
+    "2020": 1210,
+    "2021": 1203,
+    "2022": 1201,
+    "2023": 1205,
+    "2024": 1200,
+    "2025": 1181
+   }
+  },
+  "pct_ise": {
+   "label": "In-school expulsion rate (students per 100)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 1209,
+    "2017": 1208,
+    "2018": 1223,
+    "2019": 1219,
+    "2020": 1210,
+    "2021": 1203,
+    "2022": 1201,
+    "2023": 1205,
+    "2024": 1200,
+    "2025": 1181
+   }
+  },
+  "pct_ose": {
+   "label": "Out-of-school expulsion rate (students per 100)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 1209,
+    "2017": 1208,
+    "2018": 1223,
+    "2019": 1219,
+    "2020": 1210,
+    "2021": 1203,
+    "2022": 1201,
+    "2023": 1205,
+    "2024": 1200,
+    "2025": 1181
+   }
+  },
+  "pct_alt_susp": {
+   "label": "Alternate-site suspension rate (students per 100)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 1209,
+    "2017": 1208,
+    "2018": 1223,
+    "2019": 1219,
+    "2020": 1210,
+    "2021": 1203,
+    "2022": 1201,
+    "2023": 1205,
+    "2024": 1200,
+    "2025": 1181
+   }
+  },
+  "pct_alt_exp": {
+   "label": "Alternate-site expulsion rate (students per 100)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 1209,
+    "2017": 1208,
+    "2018": 1223,
+    "2019": 1219,
+    "2020": 1210,
+    "2021": 1203,
+    "2022": 1201,
+    "2023": 1205,
+    "2024": 1200,
+    "2025": 1181
+   }
+  },
+  "cred_advanced": {
+   "label": "Cohort earning an Advanced credential",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 308,
+    "2017": 175,
+    "2018": 209,
+    "2019": 214,
+    "2020": 202,
+    "2021": 210,
+    "2022": 236,
+    "2023": 240,
+    "2024": 248,
+    "2025": 263
+   }
+  },
+  "cred_basic": {
+   "label": "Cohort earning a Basic credential",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 308,
+    "2017": 294,
+    "2018": 296,
+    "2019": 293,
+    "2020": 297,
+    "2021": 304,
+    "2022": 304,
+    "2023": 312,
+    "2024": 309,
+    "2025": 317
+   }
+  },
+  "cred_none": {
+   "label": "Cohort earning a diploma with no credential",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 308,
+    "2017": 289,
+    "2018": 278,
+    "2019": 266,
+    "2020": 284,
+    "2021": 276,
+    "2022": 264,
+    "2023": 264,
+    "2024": 255,
+    "2025": 276
+   }
+  },
+  "hs_graduates": {
+   "label": "High school graduates (college enrollment report)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 297,
+    "2017": 303,
+    "2018": 308,
+    "2019": 310,
+    "2020": 316,
+    "2021": 315,
+    "2022": 315,
+    "2023": 326,
+    "2024": 322
+   }
+  },
+  "college_instate": {
+   "label": "Of college enrollees, share in state",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 252,
+    "2017": 252,
+    "2018": 253,
+    "2019": 266,
+    "2020": 273,
+    "2021": 256,
+    "2022": 260,
+    "2023": 277,
+    "2024": 278
+   }
+  },
+  "grad_mark": {
+   "label": "Cohort graduation rate mark ('>95', '<5', '~')",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 52,
+    "2017": 73,
+    "2018": 94,
+    "2019": 92,
+    "2020": 117,
+    "2021": 110,
+    "2022": 122,
+    "2023": 106,
+    "2024": 109,
+    "2025": 116
+   }
+  },
+  "assessment_index": {
+   "label": "Assessment index (0-150)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1200,
+    "2019": 1165,
+    "2022": 1078,
+    "2023": 1152,
+    "2024": 1148,
+    "2025": 1118
+   }
+  },
+  "top_growth_ela": {
+   "label": "Tests showing top growth, ELA",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1175,
+    "2019": 1201,
+    "2021": 1209,
+    "2022": 1185,
+    "2023": 1187,
+    "2024": 1177,
+    "2025": 1165
+   }
+  },
+  "top_growth_math": {
+   "label": "Tests showing top growth, math",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1176,
+    "2019": 1200,
+    "2021": 1205,
+    "2022": 1182,
+    "2023": 1186,
+    "2024": 1176,
+    "2025": 1165
+   }
+  },
+  "mastery_ela": {
+   "label": "Tests scoring Mastery or above, ELA",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1169,
+    "2019": 1194,
+    "2021": 1170,
+    "2022": 1163,
+    "2023": 1167,
+    "2024": 1159,
+    "2025": 1154
+   }
+  },
+  "mastery_math": {
+   "label": "Tests scoring Mastery or above, math",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1159,
+    "2019": 1180,
+    "2021": 1075,
+    "2022": 1104,
+    "2023": 1120,
+    "2024": 1104,
+    "2025": 1121
+   }
+  },
+  "grade": {
+   "label": "State letter grade (formula in force since 2018)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1202,
+    "2019": 1163,
+    "2022": 1078,
+    "2023": 1152,
+    "2024": 1147,
+    "2025": 1117
+   }
+  },
+  "college_2yr": {
+   "label": "Of college enrollees, share at a two-year college",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 289,
+    "2017": 295,
+    "2018": 298,
+    "2019": 305,
+    "2020": 303,
+    "2021": 305,
+    "2022": 303,
+    "2023": 310,
+    "2024": 307
+   }
+  },
+  "college_4yr": {
+   "label": "Of college enrollees, share at a four-year college",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 289,
+    "2017": 295,
+    "2018": 298,
+    "2019": 305,
+    "2020": 303,
+    "2021": 305,
+    "2022": 303,
+    "2023": 310,
+    "2024": 307
+   }
+  },
+  "sps_sim": {
+   "label": "2020-21 simulated School Performance Score (federal waiver year)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2021": 1102
+   }
+  },
+  "attendance_rate_excluded": {
+   "label": "Student attendance rate, a year excluded by name (2014-15 ceiling; 2020-21 copy of 2018-19)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 658,
+    "2021": 1219
+   }
+  },
+  "avg_absences": {
+   "label": "Average days absent per student",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2025": 1180,
+    "2026": 1145
+   }
+  },
+  "sps_revised": {
+   "label": "2025 School Performance Score, revised-formula simulation (0-100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 1118
+   }
+  },
+  "grade_revised": {
+   "label": "2025 letter grade, revised-formula simulation",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 1118
+   }
+  },
+  "grad_rate_state": {
+   "label": "Cohort graduation rate (state file; '>95' and '<5' cells absent)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 255,
+    "2017": 246,
+    "2018": 232,
+    "2019": 236,
+    "2020": 219,
+    "2021": 225,
+    "2022": 217,
+    "2023": 240,
+    "2024": 234,
+    "2025": 227
+   }
+  }
+ }
 }

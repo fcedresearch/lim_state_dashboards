@@ -814,5 +814,697 @@
   "improved_every_year": 4,
   "lapsed_longer_ago": 207
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 22038,
+    "2017": 22326,
+    "2018": 36922,
+    "2019": 38161,
+    "2022": 32454,
+    "2023": 32910,
+    "2024": 33215,
+    "2025": 32833,
+    "2026": 26372
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 22326,
+    "2018": 36922,
+    "2019": 38161,
+    "2022": 32454,
+    "2023": 32910,
+    "2024": 33215,
+    "2025": 32833,
+    "2026": 26372
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 22326,
+    "2018": 36922,
+    "2019": 38161,
+    "2022": 32454,
+    "2023": 32910,
+    "2024": 33215,
+    "2025": 32833,
+    "2026": 26372
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 22326,
+    "2018": 36922,
+    "2019": 38161,
+    "2022": 32454,
+    "2023": 32910,
+    "2024": 33215,
+    "2025": 32833,
+    "2026": 26372
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 22326,
+    "2018": 36922,
+    "2019": 38161,
+    "2022": 32454,
+    "2023": 32910,
+    "2024": 33215,
+    "2025": 32833,
+    "2026": 26372
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 20916,
+    "2017": 21214,
+    "2018": 35632,
+    "2019": 36988,
+    "2022": 31237,
+    "2023": 31740,
+    "2024": 32084,
+    "2025": 31708,
+    "2026": 25386
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2019": 38036,
+    "2022": 32795,
+    "2023": 33053,
+    "2024": 33236
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 8544,
+    "2019": 8652,
+    "2022": 8663,
+    "2023": 8827,
+    "2024": 8849
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2016": 22484,
+    "2017": 22741,
+    "2018": 36892,
+    "2019": 38177,
+    "2022": 32690,
+    "2023": 32988,
+    "2024": 33076
+   }
+  },
+  "dropout_912": {
+   "label": "Dropout rate (grades 9-12)",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 7833,
+    "2017": 7932,
+    "2018": 9493,
+    "2019": 9842,
+    "2022": 9730,
+    "2023": 10040,
+    "2024": 10273
+   }
+  },
+  "ccmr": {
+   "label": "College, Career and Military Ready graduates",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2017": 7386,
+    "2018": 8732,
+    "2019": 8985,
+    "2022": 8944,
+    "2023": 9195,
+    "2024": 9287
+   }
+  },
+  "college_enroll_tx": {
+   "label": "Graduates enrolled in a Texas college",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 7266,
+    "2017": 7390,
+    "2018": 8719,
+    "2019": 8978,
+    "2022": 9108
+   }
+  },
+  "overall_score_v1": {
+   "label": "Overall accountability score, 2018-2022 system",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2
+   }
+  },
+  "overall_score_v2": {
+   "label": "Overall accountability score, 2023 refresh",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "growth_component_v1": {
+   "label": "Academic growth score, 2018-2022 system",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2
+   }
+  },
+  "growth_component_v2": {
+   "label": "Academic growth score, 2023 refresh",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "rated_ab": {
+   "label": "Schools rated A or B",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "met_standard": {
+   "label": "Schools rated Met Standard",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2
+   }
+  },
+  "any_10plus": {
+   "label": "Schools where 10% or more of students had a disciplinary action",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "oss_5plus": {
+   "label": "Schools suspending 5% or more of students out of school",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "sat_act_grads_above": {
+   "label": "Graduates at or above the SAT/ACT college-ready score",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "apib_taking": {
+   "label": "Students taking an AP or IB exam",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "econ_disadv": {
+   "label": "Economically disadvantaged share of enrollment, as TEA reports it for the accountability year",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 7667,
+    "2017": 7751,
+    "2018": 7809,
+    "2019": 7884,
+    "2021": 7976,
+    "2022": 8049,
+    "2023": 8121,
+    "2024": 8139,
+    "2025": 8105,
+    "2026": 8011
+   }
+  },
+  "pct_oss": {
+   "label": "Students with an out-of-school suspension, share of enrollment (masked counts missing)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 4661,
+    "2017": 4727,
+    "2018": 4564,
+    "2019": 4726,
+    "2021": 4726,
+    "2022": 4997,
+    "2023": 5006,
+    "2024": 5077,
+    "2025": 4917
+   }
+  },
+  "pct_daep": {
+   "label": "Students placed in a disciplinary alternative education program (DAEP), share of enrollment (masked counts missing)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 5125,
+    "2017": 5196,
+    "2018": 5226,
+    "2019": 5350,
+    "2021": 5797,
+    "2022": 5758,
+    "2023": 5692,
+    "2024": 5573,
+    "2025": 5586
+   }
+  },
+  "per100_any": {
+   "label": "Disciplinary actions per 100 students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 6689,
+    "2017": 6745,
+    "2018": 6629,
+    "2019": 6710,
+    "2021": 5874,
+    "2022": 6702,
+    "2023": 6884,
+    "2024": 6881,
+    "2025": 6865
+   }
+  },
+  "any_masked_flag": {
+   "label": "TEA masked the any-discipline student count, one to nine students (100 = masked)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 7616,
+    "2017": 7692,
+    "2018": 7750,
+    "2019": 7828,
+    "2021": 7924,
+    "2022": 7993,
+    "2023": 8058,
+    "2024": 8070,
+    "2025": 8041
+   }
+  },
+  "oss_masked_flag": {
+   "label": "TEA masked the out-of-school suspension student count, one to nine students (100 = masked)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 7616,
+    "2017": 7692,
+    "2018": 7750,
+    "2019": 7828,
+    "2021": 7924,
+    "2022": 7993,
+    "2023": 8058,
+    "2024": 8070,
+    "2025": 8041
+   }
+  },
+  "overall_score": {
+   "label": "Overall accountability scaled score, 0-100 (the 2018 system for 2018, 2019 and 2022; the 2023 refresh after, not comparable)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 7622,
+    "2019": 7691,
+    "2022": 7854,
+    "2023": 7939,
+    "2024": 7961,
+    "2025": 7927,
+    "2026": 7831
+   }
+  },
+  "achievement_score": {
+   "label": "Student Achievement domain scaled score",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 7609,
+    "2019": 7669,
+    "2022": 7823,
+    "2023": 7898,
+    "2024": 7925,
+    "2025": 7897,
+    "2026": 7801
+   }
+  },
+  "progress_score": {
+   "label": "School Progress domain scaled score",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 7465,
+    "2019": 7567,
+    "2022": 7669,
+    "2023": 7869,
+    "2024": 7891,
+    "2025": 7865,
+    "2026": 7776
+   }
+  },
+  "gaps_score": {
+   "label": "Closing the Gaps domain scaled score",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 7432,
+    "2019": 7502,
+    "2022": 7636,
+    "2023": 7796,
+    "2024": 7836,
+    "2025": 7804,
+    "2026": 7723
+   }
+  },
+  "growth_component": {
+   "label": "Academic growth score, School Progress domain (the 2018 system through 2022; the 2023 refresh after, not comparable)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 7415,
+    "2019": 7535,
+    "2022": 7640,
+    "2023": 7745,
+    "2024": 7777,
+    "2025": 7763,
+    "2026": 7677
+   }
+  },
+  "pct_any": {
+   "label": "Students with at least one disciplinary action, share of cumulative year-end enrollment (missing where TEA masks a count under ten)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 6255,
+    "2017": 6251,
+    "2018": 6160,
+    "2019": 6260,
+    "2021": 5352,
+    "2022": 6247,
+    "2023": 6428,
+    "2024": 6393,
+    "2025": 6366
+   }
+  },
+  "pct_iss": {
+   "label": "Students with an in-school suspension, share of enrollment (masked counts missing)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 6004,
+    "2017": 6051,
+    "2018": 6088,
+    "2019": 6148,
+    "2021": 5638,
+    "2022": 6135,
+    "2023": 6313,
+    "2024": 6289,
+    "2025": 6252
+   }
+  },
+  "chronic_absent_tx": {
+   "label": "Chronic absenteeism as TEA publishes it (students missing 10% or more of enrolled days; the page's chronic absence)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2019": 7703,
+    "2020": 7814,
+    "2021": 7873,
+    "2022": 7939,
+    "2023": 7972,
+    "2024": 7978
+   }
+  },
+  "act_avg": {
+   "label": "ACT composite average of the school's examinees (2016-17 excluded, an unconfirmed column)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 1399,
+    "2018": 1420,
+    "2019": 1412,
+    "2020": 1601,
+    "2021": 1493,
+    "2022": 1532,
+    "2023": 1220,
+    "2024": 1218
+   }
+  },
+  "advanced_courses": {
+   "label": "Students in grades 9-12 completing at least one advanced or dual-credit course",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 1851,
+    "2017": 1874,
+    "2018": 1899,
+    "2019": 1933,
+    "2020": 1932,
+    "2021": 1955,
+    "2022": 1982,
+    "2023": 2026,
+    "2024": 2051
+   }
+  },
+  "dropout_78": {
+   "label": "Annual dropout rate, grades 7-8",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 2121,
+    "2017": 2153,
+    "2018": 2171,
+    "2019": 2222,
+    "2020": 2247,
+    "2021": 2268,
+    "2022": 2308,
+    "2023": 2341,
+    "2024": 2371
+   }
+  },
+  "grad_adv_plan": {
+   "label": "Graduates on an advanced diploma plan (Recommended, Distinguished, or Foundation with endorsements or Distinguished Level of Achievement), share of graduates",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 1718,
+    "2017": 1731,
+    "2018": 1762,
+    "2019": 1789,
+    "2020": 1807,
+    "2021": 1822,
+    "2022": 1851,
+    "2023": 1886
+   }
+  },
+  "sat_act_tested": {
+   "label": "Students taking the SAT or ACT, share of grade 11-12 students",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 1718,
+    "2017": 1765,
+    "2018": 1763,
+    "2019": 1792,
+    "2020": 1806,
+    "2021": 1822,
+    "2022": 1851,
+    "2023": 1886,
+    "2024": 1907
+   }
+  },
+  "dual_credit_grads": {
+   "label": "Graduates who earned dual credit (3 hours in English or math, or 9 hours in any subject), share of the class (classes of 2017 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 1731,
+    "2018": 1764,
+    "2019": 1792,
+    "2020": 1807,
+    "2021": 1822,
+    "2022": 1851,
+    "2023": 1886,
+    "2024": 1907
+   }
+  },
+  "sat_act_above": {
+   "label": "SAT or ACT examinees scoring at or above TEA's college-ready criterion (classes of 2018 on; an earlier criterion is excluded)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 1595,
+    "2019": 1627,
+    "2020": 1632,
+    "2021": 1607,
+    "2022": 1664,
+    "2023": 1693,
+    "2024": 1704
+   }
+  },
+  "sat_avg": {
+   "label": "SAT average of the school's examinees, 400-1600 scale (2017-18 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 1338,
+    "2019": 1405,
+    "2020": 1645,
+    "2021": 1593,
+    "2022": 1629,
+    "2023": 1409,
+    "2024": 1410
+   }
+  },
+  "tsi_both": {
+   "label": "Graduates meeting the Texas Success Initiative college-readiness criteria in both reading and math (classes of 2018 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 1764,
+    "2019": 1792,
+    "2020": 1807,
+    "2021": 1822,
+    "2022": 1851,
+    "2023": 1886,
+    "2024": 1907
+   }
+  },
+  "ccmr_component": {
+   "label": "College, Career and Military Ready (CCMR) component score as accountability computed it (the class of the year before)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 1765,
+    "2019": 1765,
+    "2021": 1815,
+    "2022": 1835,
+    "2023": 1858,
+    "2024": 1886,
+    "2025": 1919,
+    "2026": 1929
+   }
+  },
+  "grad_component": {
+   "label": "Graduation rate component score (the best of the four-, five- and six-year rates, not the four-year rate)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 1833,
+    "2019": 1857,
+    "2021": 1875,
+    "2022": 1899,
+    "2023": 1930,
+    "2024": 1967,
+    "2025": 1995,
+    "2026": 1999
+   }
+  },
+  "apib_above": {
+   "label": "AP or IB examinees scoring above the criterion (3 on AP, 4 on IB), share of examinees",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 981,
+    "2017": 1022,
+    "2018": 1028,
+    "2019": 1051,
+    "2020": 1033,
+    "2021": 1064,
+    "2022": 1067,
+    "2023": 1079,
+    "2024": 1088
+   }
+  },
+  "sat_avg_2400": {
+   "label": "SAT average of the school's examinees, 600-2400 scale (the pre-2016 test; 2013-14 to 2015-16 only)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 1252
+   }
+  }
+ }
 }

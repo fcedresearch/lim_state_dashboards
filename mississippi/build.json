@@ -168,5 +168,284 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 35
  },
- "best_schools_added": "2026-09-30"
+ "best_schools_added": "2026-09-30",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2140,
+    "2016": 3150,
+    "2017": 3262,
+    "2018": 3219,
+    "2019": 3239,
+    "2022": 3070,
+    "2023": 2995,
+    "2024": 3069,
+    "2025": 3050,
+    "2026": 2647
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2140,
+    "2016": 3150,
+    "2017": 3262,
+    "2018": 3219,
+    "2019": 3239,
+    "2022": 3070,
+    "2023": 2995,
+    "2024": 3069,
+    "2025": 3050,
+    "2026": 771
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 1858,
+    "2016": 2869,
+    "2017": 2968,
+    "2018": 2915,
+    "2019": 2927,
+    "2022": 2766,
+    "2023": 2699,
+    "2024": 2773,
+    "2025": 2758
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 3097,
+    "2019": 2996,
+    "2022": 3016,
+    "2023": 2971,
+    "2024": 3041,
+    "2025": 2999
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 1131,
+    "2019": 1131,
+    "2022": 1123,
+    "2023": 1071,
+    "2024": 1114,
+    "2025": 1108
+   }
+  },
+  "oss_under5": {
+   "label": "Suspensions kept low",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "grade_ab": {
+   "label": "Rated A or B",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "growth_math": {
+   "label": "Math growth (MDE)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "growth_ela": {
+   "label": "ELA growth (MDE)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "growth_math_low25": {
+   "label": "Math growth, lowest 25% (MDE)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "growth_ela_low25": {
+   "label": "ELA growth, lowest 25% (MDE)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "act_comp": {
+   "label": "ACT composite (juniors)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ccr": {
+   "label": "College & career ready",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "postsec": {
+   "label": "Went on to college",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "exp_teachers": {
+   "label": "Experienced teachers",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "grad_state": {
+   "label": "Graduation rate (state report card)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 238,
+    "2019": 231,
+    "2020": 227,
+    "2022": 233,
+    "2023": 230,
+    "2024": 229,
+    "2025": 230
+   }
+  },
+  "chronic_state": {
+   "label": "Chronic absence (state report card)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 764,
+    "2019": 718,
+    "2022": 755,
+    "2023": 759,
+    "2024": 752,
+    "2025": 742
+   }
+  },
+  "grade_letter": {
+   "label": "Accountability letter grade",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 790,
+    "2019": 777,
+    "2020": 761,
+    "2022": 766,
+    "2023": 755,
+    "2024": 759,
+    "2025": 746
+   }
+  },
+  "oss_rate": {
+   "label": "Out-of-school suspension rate (published at 5% and above)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 467,
+    "2019": 470,
+    "2022": 482,
+    "2023": 481,
+    "2024": 464
+   }
+  },
+  "iss_rate": {
+   "label": "In-school suspension rate (published at 5% and above)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 315,
+    "2019": 311,
+    "2022": 239,
+    "2023": 243,
+    "2024": 221
+   }
+  },
+  "act_takers": {
+   "label": "ACT test takers (juniors)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 229,
+    "2024": 229,
+    "2025": 228
+   }
+  }
+ }
 }

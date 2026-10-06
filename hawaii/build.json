@@ -147,5 +147,392 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 5
  },
- "best_schools_added": "2026-10-01"
+ "best_schools_added": "2026-10-01",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 792,
+    "2016": 975,
+    "2017": 508,
+    "2018": 956,
+    "2019": 963,
+    "2022": 1098,
+    "2023": 1097,
+    "2024": 1113,
+    "2025": 515,
+    "2026": 513
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 632,
+    "2016": 806,
+    "2017": 508,
+    "2018": 790,
+    "2019": 799,
+    "2022": 942,
+    "2023": 939,
+    "2024": 974,
+    "2025": 659
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2024": 1133,
+    "2025": 741
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2024": 231,
+    "2025": 138
+   }
+  },
+  "growth_ela": {
+   "label": "Typical or better growth, ELA",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2024": 1015,
+    "2025": 629
+   }
+  },
+  "growth_math": {
+   "label": "Typical or better growth, math",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2024": 1015,
+    "2025": 629
+   }
+  },
+  "science_prof": {
+   "label": "Science proficiency",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2023": 1103,
+    "2024": 1117,
+    "2025": 730
+   }
+  },
+  "chronic_absent_15d": {
+   "label": "Chronic absenteeism, 15 or more days (2022-23)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2023": 2
+   }
+  },
+  "regular_attendance": {
+   "label": "Regular attendance (90% or more of days)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "mgp_ela": {
+   "label": "Median growth percentile, ELA (2022-23)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2023": 2
+   }
+  },
+  "mgp_math": {
+   "label": "Median growth percentile, math (2022-23)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2023": 2
+   }
+  },
+  "climate_elem": {
+   "label": "School climate, elementary students responding positively (2022-23)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2
+   }
+  },
+  "climate_sec": {
+   "label": "School climate: secondary students (grades 6-12) responding positively on the Panorama survey (2022-23 only)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 194
+   }
+  },
+  "ela_prof_hi": {
+   "label": "ELA proficiency as Hawaii publishes it, all tested grades (Strive HI; in 2022-23 a participation penalty applies below 95% tested)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 289,
+    "2024": 286,
+    "2025": 287
+   }
+  },
+  "literacy_3": {
+   "label": "Third-grade literacy: share above or at/near the grade 3 reading standard (2022-23 only)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 191
+   }
+  },
+  "math_prof_hi": {
+   "label": "Math proficiency as Hawaii publishes it, all tested grades (Strive HI; in 2022-23 a participation penalty applies below 95% tested)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 288,
+    "2024": 287,
+    "2025": 287
+   }
+  },
+  "act_taken": {
+   "label": "Completers who took the ACT (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 52,
+    "2023": 53,
+    "2024": 53,
+    "2025": 53
+   }
+  },
+  "ap_3plus": {
+   "label": "Completers scoring 3 or higher on at least one AP exam (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 32,
+    "2023": 37,
+    "2024": 34,
+    "2025": 33
+   }
+  },
+  "ap_taken": {
+   "label": "Completers who took at least one AP exam (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 38,
+    "2023": 40,
+    "2024": 38,
+    "2025": 38
+   }
+  },
+  "college_fall": {
+   "label": "Completers enrolled in college the fall after graduation (CCRI; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 52,
+    "2023": 51,
+    "2024": 54,
+    "2025": 54
+   }
+  },
+  "college_fall_2yr": {
+   "label": "Completers enrolled at a two-year college the first fall (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 41,
+    "2023": 44,
+    "2024": 47,
+    "2025": 45
+   }
+  },
+  "college_fall_4yr": {
+   "label": "Completers enrolled at a four-year college the first fall (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 50,
+    "2023": 48,
+    "2024": 48,
+    "2025": 50
+   }
+  },
+  "college_persist": {
+   "label": "First-fall college enrollees also enrolled the second fall, share of enrollees (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 48,
+    "2023": 46,
+    "2024": 49
+   }
+  },
+  "completers": {
+   "label": "High school completers in the class (CCRI; the year is the graduating class)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 54,
+    "2023": 54,
+    "2024": 57,
+    "2025": 57
+   }
+  },
+  "cte_concentrator": {
+   "label": "Completers who were CTE concentrators (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 47,
+    "2023": 46,
+    "2024": 44,
+    "2025": 43
+   }
+  },
+  "dual_credit": {
+   "label": "Completers who took at least one UH dual-credit course (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 51,
+    "2023": 51,
+    "2024": 54,
+    "2025": 56
+   }
+  },
+  "dual_credit_6plus": {
+   "label": "Completers who earned six or more UH college credits before graduation (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 46,
+    "2023": 47,
+    "2024": 48,
+    "2025": 48
+   }
+  },
+  "honors_cert": {
+   "label": "Completers earning a DOE honors certificate (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 44,
+    "2023": 43,
+    "2024": 43,
+    "2025": 43
+   }
+  },
+  "on_time_grad": {
+   "label": "On-time four-year adjusted cohort graduation rate (CCRI; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 64,
+    "2023": 63,
+    "2024": 65,
+    "2025": 64
+   }
+  },
+  "sba_ela_11": {
+   "label": "Tested 11th graders meeting the ELA standard on the Smarter Balanced Assessment (CCRI)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 50,
+    "2023": 52,
+    "2024": 53,
+    "2025": 54
+   }
+  },
+  "sba_math_11": {
+   "label": "Tested 11th graders meeting the math standard on the Smarter Balanced Assessment (CCRI)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 43,
+    "2023": 45,
+    "2024": 42,
+    "2025": 43
+   }
+  },
+  "uh_fall": {
+   "label": "Completers enrolled at a University of Hawaii campus the first fall (CCRI)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 48,
+    "2023": 51,
+    "2024": 53,
+    "2025": 52
+   }
+  },
+  "cte_rate": {
+   "label": "CTE concentrator rate, share of 12th graders completing two courses in a CTE program of study (2022-23 only)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 50
+   }
+  },
+  "literacy_8": {
+   "label": "Eighth-grade literacy: share above or at/near the grade 8 reading standard (2022-23 only)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 71
+   }
+  },
+  "promotion_9": {
+   "label": "Ninth-grade promotion rate (2022-23 only)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 58
+   }
+  },
+  "eoc_biology": {
+   "label": "Tested high school students meeting the standard on the biology end-of-course exam (CCRI)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 39,
+    "2024": 44,
+    "2025": 45
+   }
+  },
+  "extended_completion": {
+   "label": "Extended high school completion within five years, as published in that year's KPI file (Strive HI KPI, 2023-24 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2024": 55,
+    "2025": 54
+   }
+  },
+  "seal_biliteracy": {
+   "label": "Completers earning the Seal of Biliteracy (CCRI; '<0.01' cells stay missing)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 52,
+    "2023": 51,
+    "2024": 56,
+    "2025": 56
+   }
+  }
+ }
 }

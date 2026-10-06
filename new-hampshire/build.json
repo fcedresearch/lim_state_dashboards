@@ -408,5 +408,115 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 9
  },
- "best_schools_added": "2026-10-01"
+ "best_schools_added": "2026-10-01",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 869,
+    "2016": 1023,
+    "2017": 959,
+    "2018": 1374,
+    "2019": 1377,
+    "2022": 1422,
+    "2023": 1430,
+    "2024": 1413,
+    "2025": 1370,
+    "2026": 1476
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 869,
+    "2018": 1356,
+    "2019": 1338,
+    "2022": 1377,
+    "2023": 1400,
+    "2024": 1375,
+    "2025": 1330,
+    "2026": 1413
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 869,
+    "2018": 1356,
+    "2019": 1338,
+    "2022": 1377,
+    "2023": 1400,
+    "2024": 1375,
+    "2025": 1330,
+    "2026": 1426
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 869,
+    "2018": 1356,
+    "2019": 1338,
+    "2022": 1377,
+    "2023": 1400,
+    "2024": 1375,
+    "2025": 1330,
+    "2026": 1426
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 869,
+    "2018": 1356,
+    "2019": 1338,
+    "2022": 1377,
+    "2023": 1400,
+    "2024": 1375,
+    "2025": 1330,
+    "2026": 1426
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 780,
+    "2016": 911,
+    "2017": 859,
+    "2018": 1251,
+    "2019": 1247,
+    "2022": 1281,
+    "2023": 1293,
+    "2024": 1272,
+    "2025": 1234
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 166,
+    "2017": 164,
+    "2018": 233,
+    "2019": 213,
+    "2022": 250,
+    "2023": 246,
+    "2024": 253,
+    "2025": 245
+   }
+  }
+ }
 }

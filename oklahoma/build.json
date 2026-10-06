@@ -540,5 +540,659 @@
   "improved_every_year": 1,
   "lapsed_longer_ago": 25
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4562,
+    "2016": 3763,
+    "2017": 2459,
+    "2018": 1847,
+    "2019": 1806,
+    "2022": 2351,
+    "2023": 2934,
+    "2024": 2427,
+    "2025": 4877
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3763,
+    "2017": 2459,
+    "2018": 1798,
+    "2019": 1753,
+    "2022": 2317,
+    "2023": 2481,
+    "2024": 2359,
+    "2025": 4411
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3763,
+    "2017": 2459,
+    "2018": 1798,
+    "2019": 1753,
+    "2022": 2317,
+    "2023": 2481,
+    "2024": 2359,
+    "2025": 4411
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3763,
+    "2017": 2459,
+    "2018": 1798,
+    "2019": 1753,
+    "2022": 2317,
+    "2023": 2481,
+    "2024": 2359,
+    "2025": 4411
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3763,
+    "2017": 2459,
+    "2018": 1798,
+    "2019": 1753,
+    "2022": 2317,
+    "2023": 2481,
+    "2024": 2359,
+    "2025": 4411
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4564,
+    "2016": 3600,
+    "2017": 2336,
+    "2018": 1706,
+    "2019": 1666,
+    "2022": 2261,
+    "2023": 2858,
+    "2024": 2291,
+    "2025": 4601
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 3147,
+    "2019": 3117,
+    "2022": 3489,
+    "2023": 4059,
+    "2024": 3424,
+    "2025": 5409
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2017": 601,
+    "2018": 442,
+    "2022": 1044,
+    "2023": 1765,
+    "2024": 905
+   }
+  },
+  "rc_points": {
+   "label": "Report card overall score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 3147,
+    "2019": 3119,
+    "2022": 3493,
+    "2023": 4059,
+    "2024": 3420,
+    "2025": 5405
+   }
+  },
+  "growth_score": {
+   "label": "Academic growth indicator",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 2648,
+    "2019": 2615,
+    "2022": 2357,
+    "2023": 2249,
+    "2024": 2512,
+    "2025": 3570
+   }
+  },
+  "teacher_retention": {
+   "label": "Teacher retention",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2023": 3786,
+    "2024": 3208
+   }
+  },
+  "college_going": {
+   "label": "College-going rate (Oklahoma colleges)",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 1673,
+    "2016": 1027,
+    "2017": 871,
+    "2018": 453,
+    "2019": 455,
+    "2022": 1059,
+    "2023": 1755,
+    "2024": 900
+   }
+  },
+  "grade_ab": {
+   "label": "Schools graded A or B",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ach": {
+   "label": "Academic achievement indicator (0-100)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "chronic_state": {
+   "label": "Chronic absenteeism (state report card)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "postsec_opps": {
+   "label": "Postsecondary opportunities indicator (0-100)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 1,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 1,
+    "2025": 2
+   }
+  },
+  "grad4_class": {
+   "label": "Four-year graduation rate (state report card, class year)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2017": 1,
+    "2018": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 1
+   }
+  },
+  "attendance_rate": {
+   "label": "Average daily attendance rate",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "gpa_3plus": {
+   "label": "College freshmen with a GPA of 3.0 or higher (class year)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 1,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2
+   }
+  },
+  "remediation": {
+   "label": "College freshmen in developmental courses (class year)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 1,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2
+   }
+  },
+  "rc_grade": {
+   "label": "Report card overall letter grade",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1563,
+    "2019": 1579,
+    "2022": 1537,
+    "2023": 1575,
+    "2024": 1682,
+    "2025": 1689
+   }
+  },
+  "ach_grade": {
+   "label": "Academic achievement indicator grade",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1612,
+    "2019": 1621,
+    "2022": 1602,
+    "2023": 1621,
+    "2024": 1687,
+    "2025": 1691
+   }
+  },
+  "growth_grade": {
+   "label": "Academic growth indicator grade",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1134,
+    "2019": 1139,
+    "2022": 1122,
+    "2023": 1134,
+    "2024": 1223,
+    "2025": 1227
+   }
+  },
+  "growth_ela_vt": {
+   "label": "Growth value-table score, English language arts (mean points per student; 100 is a student who held a proficient level)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1133,
+    "2019": 1139,
+    "2022": 1122,
+    "2023": 1134,
+    "2024": 1223,
+    "2025": 1227
+   }
+  },
+  "growth_math_vt": {
+   "label": "Growth value-table score, mathematics (mean points per student)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1134,
+    "2019": 1139,
+    "2022": 1122,
+    "2023": 1134,
+    "2024": 1223,
+    "2025": 1227
+   }
+  },
+  "growth_students_ela": {
+   "label": "Students in the ELA growth calculation",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 1133,
+    "2019": 1139,
+    "2022": 1122,
+    "2023": 1134,
+    "2024": 1223,
+    "2025": 1227
+   }
+  },
+  "growth_students_math": {
+   "label": "Students in the mathematics growth calculation",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 1134,
+    "2019": 1139,
+    "2022": 1122,
+    "2023": 1134,
+    "2024": 1223,
+    "2025": 1227
+   }
+  },
+  "chronic_grade": {
+   "label": "Chronic absenteeism indicator grade",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1630,
+    "2019": 1637,
+    "2022": 1636,
+    "2023": 1635,
+    "2024": 1688,
+    "2025": 1691
+   }
+  },
+  "tch_moved_district": {
+   "label": "Teachers who moved to another school in the district (%; OEIP)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 1563,
+    "2024": 1558
+   }
+  },
+  "tch_moved_state": {
+   "label": "Teachers who moved to a school in another Oklahoma district (%; OEIP)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 1563,
+    "2024": 1558
+   }
+  },
+  "tch_left": {
+   "label": "Teachers who did not return to an Oklahoma public school (%; OEIP)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 1563,
+    "2024": 1558
+   }
+  },
+  "tch_experience": {
+   "label": "Average years of experience in education, teachers (OEIP)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 1563,
+    "2024": 1558
+   }
+  },
+  "tch_beginning": {
+   "label": "Teachers in their first three years (%; OEIP)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2023": 1563,
+    "2024": 1558
+   }
+  },
+  "teacher_fte": {
+   "label": "Teacher FTE (OEIP)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 1563,
+    "2024": 1558
+   }
+  },
+  "dropout_7_12": {
+   "label": "Dropout rate, grades 7-12 (%; OEIP)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 1039,
+    "2024": 1046
+   }
+  },
+  "college_going_any": {
+   "label": "Graduates entering an Oklahoma college any time in the following academic year (%; OSRHE)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 452,
+    "2016": 452,
+    "2017": 454,
+    "2018": 452,
+    "2019": 455,
+    "2022": 463,
+    "2023": 459,
+    "2024": 459
+   }
+  },
+  "college_grads": {
+   "label": "Graduates counted by the OSRHE",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 452,
+    "2016": 452,
+    "2017": 454,
+    "2018": 452,
+    "2019": 455,
+    "2022": 463,
+    "2023": 459,
+    "2024": 459
+   }
+  },
+  "grad5_class": {
+   "label": "Five-year cohort graduation rate (%) from the report card, on the class's own year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 439,
+    "2018": 444,
+    "2022": 414,
+    "2023": 444,
+    "2024": 442
+   }
+  },
+  "postsec_opps_grade": {
+   "label": "Postsecondary opportunities indicator grade",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 453,
+    "2019": 453,
+    "2022": 428,
+    "2023": 452,
+    "2024": 461,
+    "2025": 462
+   }
+  },
+  "grad6_class": {
+   "label": "Six-year cohort graduation rate (%) from the report card, on the class's own year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 445,
+    "2022": 413,
+    "2023": 434,
+    "2024": 448
+   }
+  },
+  "grad_composite": {
+   "label": "Graduation composite indicator (0-100), on the report-card year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 442,
+    "2019": 454,
+    "2022": 446,
+    "2023": 449,
+    "2024": 460,
+    "2025": 462
+   }
+  },
+  "grad_composite_grade": {
+   "label": "Graduation composite indicator grade",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 443,
+    "2019": 454,
+    "2022": 446,
+    "2023": 449,
+    "2024": 460,
+    "2025": 462
+   }
+  },
+  "gpa_avg": {
+   "label": "Average freshman GPA of the school's graduates in Oklahoma public colleges (OSRHE)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 374,
+    "2019": 367,
+    "2022": 351,
+    "2023": 346
+   }
+  },
+  "gpa_headcount": {
+   "label": "College freshmen counted in the GPA report (OSRHE)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 448,
+    "2019": 452,
+    "2022": 452,
+    "2023": 446
+   }
+  },
+  "remediation_freshmen": {
+   "label": "College freshmen counted in the developmental-education report (OSRHE)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 447,
+    "2019": 452,
+    "2022": 452,
+    "2023": 446,
+    "2024": 451
+   }
+  },
+  "college_going_oeip_ok": {
+   "label": "Graduates entering an Oklahoma college the following fall (%; OEIP's copy of the OSRHE figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 450,
+    "2023": 454
+   }
+  },
+  "college_going_out_of_state": {
+   "label": "Graduates entering a college outside Oklahoma the following fall (%; OEIP, from a name and birth-date match)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 450,
+    "2023": 454
+   }
+  },
+  "college_going_total": {
+   "label": "Graduates entering any college the following fall, in or out of state (%; OEIP)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 450,
+    "2023": 454
+   }
+  },
+  "gpa_3plus_oeip": {
+   "label": "College freshmen with a GPA of 3.0 or higher (%; OEIP's copy)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 350,
+    "2023": 348
+   }
+  },
+  "remediation_oeip": {
+   "label": "College freshmen in remediation (%; OEIP's copy)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 355,
+    "2023": 351
+   }
+  },
+  "grad4_oeip": {
+   "label": "Four-year graduation rate (%; OEIP's copy, on the cohort year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 444,
+    "2023": 446
+   }
+  },
+  "postsec_enroll_1yr": {
+   "label": "Graduates enrolled in college within a year of graduation (%), as the 2022-23 report card's postsecondary enrollment archive publishes it, on the class year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 436
+   }
+  },
+  "act_composite": {
+   "label": "Average ACT composite of the class (OEIP)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 435,
+    "2024": 440
+   }
+  },
+  "elp": {
+   "label": "English language proficiency progress indicator (0-100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 589,
+    "2019": 658,
+    "2022": 832,
+    "2023": 838,
+    "2024": 1079,
+    "2025": 1111
+   }
+  },
+  "elp_grade": {
+   "label": "English language proficiency indicator grade",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 589,
+    "2019": 658,
+    "2022": 832,
+    "2023": 838,
+    "2024": 1079,
+    "2025": 1111
+   }
+  }
+ }
 }

@@ -439,5 +439,375 @@
   "improved_every_year": 23,
   "lapsed_longer_ago": 188
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 1 and 2)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 33917,
+    "2016": 34024,
+    "2017": 24586,
+    "2018": 24407,
+    "2019": 35555,
+    "2022": 36366,
+    "2023": 36435,
+    "2024": 36317,
+    "2025": 35839
+   }
+  },
+  "percent_level4": {
+   "label": "Level 1: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 24003,
+    "2016": 24248,
+    "2017": 24560,
+    "2018": 24378,
+    "2019": 35555,
+    "2022": 35990,
+    "2023": 35963,
+    "2024": 35840,
+    "2025": 35441
+   }
+  },
+  "percent_level3": {
+   "label": "Level 2: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 24003,
+    "2016": 24248,
+    "2017": 24560,
+    "2018": 24378,
+    "2019": 35555,
+    "2022": 35990,
+    "2023": 35963,
+    "2024": 35840,
+    "2025": 35441
+   }
+  },
+  "percent_level2": {
+   "label": "Level 3: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 24003,
+    "2016": 24248,
+    "2017": 24560,
+    "2018": 24378,
+    "2019": 35555,
+    "2022": 35990,
+    "2023": 35963,
+    "2024": 35840,
+    "2025": 35441
+   }
+  },
+  "percent_below": {
+   "label": "Level 4: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 24003,
+    "2016": 24248,
+    "2017": 24560,
+    "2018": 24378,
+    "2019": 35555,
+    "2022": 35990,
+    "2023": 35963,
+    "2024": 35840,
+    "2025": 35441
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 29550,
+    "2016": 29703,
+    "2017": 20356,
+    "2018": 20234,
+    "2019": 31283,
+    "2022": 31748,
+    "2023": 31871,
+    "2024": 31816,
+    "2025": 31720
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2017": 22141,
+    "2018": 22118,
+    "2019": 31311,
+    "2022": 32022,
+    "2023": 36693,
+    "2024": 36616,
+    "2025": 36353
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2017": 3591,
+    "2018": 3639,
+    "2019": 5494,
+    "2022": 7521,
+    "2023": 7684,
+    "2024": 7679,
+    "2025": 6185
+   }
+  },
+  "pct_suspended": {
+   "label": "Students suspended",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 34658,
+    "2016": 35010,
+    "2017": 25586,
+    "2018": 25550,
+    "2019": 36317,
+    "2022": 37040,
+    "2023": 37130,
+    "2024": 36994,
+    "2025": 36711
+   }
+  },
+  "college_going": {
+   "label": "College-going rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 6438,
+    "2016": 6556,
+    "2017": 4643,
+    "2018": 4670,
+    "2019": 7176,
+    "2022": 7513,
+    "2023": 7635
+   }
+  },
+  "cci_prepared": {
+   "label": "Prepared for college or a career (state indicator)",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2024": 7761,
+    "2025": 7769
+   }
+  },
+  "growth_ela": {
+   "label": "Academic growth score, English language arts",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2025": 2
+   }
+  },
+  "growth_math": {
+   "label": "Academic growth score, mathematics",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2025": 2
+   }
+  },
+  "pct_expelled": {
+   "label": "Students expelled (share of cumulative enrollment)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 9114,
+    "2016": 9210,
+    "2017": 9247,
+    "2018": 9282,
+    "2019": 9311,
+    "2020": 9344,
+    "2021": 9324,
+    "2022": 9332,
+    "2023": 9342,
+    "2024": 9327,
+    "2025": 9292
+   }
+  },
+  "cumulative_enrollment": {
+   "label": "Cumulative enrollment: every student enrolled at any point in the year, the denominator of the suspension and expulsion rates",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 9114,
+    "2016": 9210,
+    "2017": 9247,
+    "2018": 9282,
+    "2019": 9311,
+    "2020": 9344,
+    "2021": 9324,
+    "2022": 9332,
+    "2023": 9342,
+    "2024": 9327,
+    "2025": 9292
+   }
+  },
+  "students_suspended": {
+   "label": "Students suspended at least once (unduplicated count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 9114,
+    "2016": 9210,
+    "2017": 9247,
+    "2018": 9282,
+    "2019": 9307,
+    "2020": 9344,
+    "2021": 9324,
+    "2022": 9332,
+    "2023": 9342,
+    "2024": 9327,
+    "2025": 9292
+   }
+  },
+  "suspensions_total": {
+   "label": "Suspensions in the year (a student suspended twice counts twice)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 9114,
+    "2016": 9210,
+    "2017": 9247,
+    "2018": 9282,
+    "2019": 9307,
+    "2020": 9344,
+    "2021": 9324,
+    "2022": 9332,
+    "2023": 9342,
+    "2024": 9327,
+    "2025": 9292
+   }
+  },
+  "hs_completers": {
+   "label": "High school completers in the class (graduates and other completers)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1996,
+    "2016": 2021,
+    "2017": 2056,
+    "2018": 2065,
+    "2019": 2099,
+    "2020": 2130,
+    "2021": 2128,
+    "2022": 2163,
+    "2023": 2164
+   }
+  },
+  "college_going_16mo": {
+   "label": "High school completers enrolled in college within sixteen months (share; the year is the class's year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1996,
+    "2016": 2022,
+    "2017": 2056,
+    "2018": 2065,
+    "2019": 2099,
+    "2020": 2130,
+    "2021": 2128,
+    "2022": 2163,
+    "2023": 2164
+   }
+  },
+  "cci_ag_share": {
+   "label": "Graduating class completing the University of California and State University course requirements (a-g; share; 2020-21 and 2021-22 college/career measures files)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 2188,
+    "2022": 2230
+   }
+  },
+  "cci_ap_share": {
+   "label": "Graduating class passing Advanced Placement exams as the state counts them (share; 2020-21 and 2021-22 college/career measures files)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 2188,
+    "2022": 2230
+   }
+  },
+  "cci_cte_share": {
+   "label": "Graduating class completing a career technical education pathway (share; 2020-21 and 2021-22 college/career measures files)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 2188,
+    "2022": 2230
+   }
+  },
+  "cci_prepared_earlier_rules": {
+   "label": "Graduating class prepared for college or a career, as the 2022-23 and 2023-24 downloads published it under the earlier rules (share; not comparable with the current-rules figure)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 2234,
+    "2024": 2235
+   }
+  },
+  "cci_cohort": {
+   "label": "Graduating class counted for the College/Career Indicator",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2024": 2228,
+    "2025": 2230
+   }
+  },
+  "cci_level": {
+   "label": "College/Career Indicator status level (the state's 1-to-5 sorting of the prepared share; 5 is the highest)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2025": 2230
+   }
+  },
+  "growth_ela_level": {
+   "label": "Growth level, English language arts (the state's 1-to-5 sorting of the growth score; 5 is the most growth)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 7527
+   }
+  },
+  "growth_ela_pct_improved": {
+   "label": "Students whose English language arts score improved from the year before (share of those with two scores)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 7409
+   }
+  },
+  "growth_math_level": {
+   "label": "Growth level, mathematics (the state's 1-to-5 sorting of the growth score; 5 is the most growth)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 7527
+   }
+  },
+  "growth_math_pct_improved": {
+   "label": "Students whose mathematics score improved from the year before (share of those with two scores)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 7409
+   }
+  }
+ }
 }

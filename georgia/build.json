@@ -843,5 +843,1220 @@
   "improved_every_year": 1,
   "lapsed_longer_ago": 33
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9398,
+    "2016": 9455,
+    "2017": 9180,
+    "2018": 9319,
+    "2019": 9511,
+    "2022": 7914,
+    "2023": 8022,
+    "2024": 8110,
+    "2025": 8032,
+    "2026": 1746
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9398,
+    "2016": 9455,
+    "2017": 9180,
+    "2018": 9319,
+    "2019": 9511,
+    "2022": 7914,
+    "2023": 8022,
+    "2024": 8110,
+    "2025": 8032,
+    "2026": 1746
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9398,
+    "2016": 9455,
+    "2017": 9180,
+    "2018": 9319,
+    "2019": 9511,
+    "2022": 7914,
+    "2023": 8022,
+    "2024": 8110,
+    "2025": 8032,
+    "2026": 1746
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9398,
+    "2016": 9455,
+    "2017": 9180,
+    "2018": 9319,
+    "2019": 9511,
+    "2022": 7914,
+    "2023": 8022,
+    "2024": 8110,
+    "2025": 8032,
+    "2026": 1746
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9398,
+    "2016": 9455,
+    "2017": 9180,
+    "2018": 9319,
+    "2019": 9511,
+    "2022": 7914,
+    "2023": 8022,
+    "2024": 8110,
+    "2025": 8032,
+    "2026": 1746
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 9230,
+    "2016": 9303,
+    "2017": 9090,
+    "2018": 9225,
+    "2019": 9408,
+    "2022": 7810,
+    "2023": 7910,
+    "2024": 8008,
+    "2025": 7937
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 9415,
+    "2019": 9587,
+    "2022": 8018,
+    "2023": 8096,
+    "2024": 8175,
+    "2025": 8101
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 1755,
+    "2019": 1813,
+    "2022": 1835,
+    "2023": 1923,
+    "2024": 1947,
+    "2025": 1926
+   }
+  },
+  "pct_oss": {
+   "label": "Out-of-school suspension",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 8916,
+    "2016": 9035,
+    "2017": 8898,
+    "2018": 9022,
+    "2019": 9193,
+    "2022": 7549,
+    "2023": 7613,
+    "2024": 7683,
+    "2025": 7584
+   }
+  },
+  "pct_iss": {
+   "label": "In-school suspension",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 8754,
+    "2016": 8866,
+    "2017": 8752,
+    "2018": 8920,
+    "2019": 9043,
+    "2022": 7488,
+    "2023": 7533,
+    "2024": 7542,
+    "2025": 7491
+   }
+  },
+  "college_going": {
+   "label": "College-going rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 1689,
+    "2016": 1709,
+    "2017": 1660,
+    "2018": 1749,
+    "2019": 1816,
+    "2022": 1779,
+    "2023": 1862,
+    "2024": 1883
+   }
+  },
+  "absent_15plus": {
+   "label": "Absent more than 15 days",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 9240,
+    "2019": 9399,
+    "2022": 7854,
+    "2023": 7922,
+    "2024": 8009,
+    "2025": 7918
+   }
+  },
+  "hope_eligible": {
+   "label": "HOPE-eligible graduates",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 1661,
+    "2016": 1673,
+    "2017": 1629,
+    "2018": 1699,
+    "2019": 1740,
+    "2022": 1763,
+    "2023": 1740,
+    "2024": 1763,
+    "2025": 1736
+   }
+  },
+  "dropout": {
+   "label": "Dropout rate (7-12)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "lexile": {
+   "label": "Reading at or above grade midpoint",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ccrpi": {
+   "label": "CCRPI score",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "climate": {
+   "label": "School climate stars",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2024": 2
+   }
+  },
+  "gshs_e_safe": {
+   "label": "Grades 3-5: \"I feel safe at school\"",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "gshs_e_adult": {
+   "label": "Grades 3-5: \"There is an adult at my school who will help me\u2026\"",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "gshs_e_teachers_respect": {
+   "label": "Grades 3-5: \"Teachers treat me with respect\"",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "gshs_e_peers": {
+   "label": "Grades 3-5: \"Students treat each other well\"",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "gshs_m_connected": {
+   "label": "Grades 6-12: \"I feel connected to others at school\"",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "gshs_m_teachers_respect": {
+   "label": "Grades 6-12: \"Teachers treat me with respect\"",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "gshs_m_peers_respect": {
+   "label": "Grades 6-12: \"Students at my school treat each other with respect\"",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "gshs_m_unsafe": {
+   "label": "Grades 6-12: \"I have felt unsafe at school or on my way\u2026\"",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "absent_5orfewer": {
+   "label": "Students absent 5 or fewer days (GOSA attendance)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 2115,
+    "2019": 2123,
+    "2020": 2121,
+    "2021": 2131,
+    "2022": 2139,
+    "2023": 2138,
+    "2024": 2144,
+    "2025": 2127
+   }
+  },
+  "absent_6to15": {
+   "label": "Students absent 6 to 15 days (GOSA attendance)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 2115,
+    "2019": 2123,
+    "2020": 2121,
+    "2021": 2131,
+    "2022": 2139,
+    "2023": 2130,
+    "2024": 2137,
+    "2025": 2119
+   }
+  },
+  "chronic_absent_ga": {
+   "label": "Chronic absence as Georgia publishes it (10% or more of enrolled days; GOSA attendance)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 2115,
+    "2019": 2123,
+    "2020": 2121,
+    "2021": 2131,
+    "2022": 2139,
+    "2023": 2126,
+    "2024": 2136,
+    "2025": 2118
+   }
+  },
+  "attendance_students": {
+   "label": "Students in the attendance file",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 2115,
+    "2019": 2123,
+    "2020": 2121,
+    "2021": 2131,
+    "2022": 2139,
+    "2023": 2138,
+    "2024": 2144,
+    "2025": 2127
+   }
+  },
+  "ccrpi_content_mastery": {
+   "label": "CCRPI content mastery component (mean of the bands reported)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2096,
+    "2019": 2102,
+    "2022": 2116,
+    "2023": 2117,
+    "2024": 2124,
+    "2025": 2111
+   }
+  },
+  "ccrpi_progress": {
+   "label": "CCRPI progress component (mean of the bands reported)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2078,
+    "2019": 2085,
+    "2022": 816,
+    "2023": 2088,
+    "2024": 2095,
+    "2025": 2089
+   }
+  },
+  "ccrpi_closing_gaps": {
+   "label": "CCRPI closing gaps component (mean of the bands reported)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2078,
+    "2019": 2083,
+    "2023": 2105,
+    "2024": 2107,
+    "2025": 2103
+   }
+  },
+  "ccrpi_readiness": {
+   "label": "CCRPI readiness component (mean of the bands reported)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2096,
+    "2019": 2110,
+    "2022": 2128,
+    "2023": 2137,
+    "2024": 2144,
+    "2025": 2127
+   }
+  },
+  "gshs_m_adult_talk": {
+   "label": "Students answering favourably: \"I know an adult at school that I can talk with if I need help.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2021": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_adults_respect_all": {
+   "label": "Students answering favourably: \"Adults in this school treat all students with respect.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_classroom_behavior": {
+   "label": "Students answering favourably: \"The behaviors in my classroom allow the teacher to teach so I can learn.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_fair_ability": {
+   "label": "Students answering favourably: \"Students show respect to other students regardless of their academic ability.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_fair_race": {
+   "label": "Students answering favourably: \"Students at this school are treated fairly by other students regardless of race, ethnicity or culture.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_fight": {
+   "label": "Students answering favourably: \"Students at my school fight a lot.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_fit_in": {
+   "label": "Students answering favourably: \"I feel like I fit in at my school.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_get_along": {
+   "label": "Students answering favourably: \"I get along with other students at school.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_high_standards": {
+   "label": "Students answering favourably: \"I feel my school has high standards for achievement.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_look_forward": {
+   "label": "Students answering favourably: \"Most days I look forward to going to school.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_recognized": {
+   "label": "Students answering favourably: \"Students are frequently recognized for good behavior.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_successful": {
+   "label": "Students answering favourably: \"I feel successful at school.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_teachers_fair": {
+   "label": "Students answering favourably: \"Teachers treat all students fairly.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_welcoming": {
+   "label": "Students answering favourably: \"Students in my school are welcoming to new students.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_worried_hurt": {
+   "label": "Students answering favourably: \"I have worried about other students hurting me.\" (grades 6-12, Somewhat or Strongly Agree; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_m_respondents": {
+   "label": "GSHS middle/high survey respondents (grades 6-12)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1,
+    "2018": 6,
+    "2019": 10,
+    "2020": 3,
+    "2021": 3,
+    "2022": 1,
+    "2023": 85,
+    "2024": 92
+   }
+  },
+  "gshs_e_behave": {
+   "label": "Students answering favourably: \"Students in my class behave so teachers can teach.\" (grades 3-5, Always or Often; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 7,
+    "2017": 9,
+    "2018": 18,
+    "2019": 14,
+    "2020": 6,
+    "2022": 2,
+    "2023": 165,
+    "2024": 191
+   }
+  },
+  "gshs_e_do_well": {
+   "label": "Students answering favourably: \"I feel like I do well in school.\" (grades 3-5, Always or Often; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 7,
+    "2017": 9,
+    "2018": 18,
+    "2019": 14,
+    "2020": 6,
+    "2022": 2,
+    "2023": 165,
+    "2024": 191
+   }
+  },
+  "gshs_e_get_along": {
+   "label": "Students answering favourably: \"I get along well with other students.\" (grades 3-5, Always or Often; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 7,
+    "2017": 9,
+    "2018": 18,
+    "2019": 14,
+    "2020": 6,
+    "2022": 2,
+    "2023": 165,
+    "2024": 191
+   }
+  },
+  "gshs_e_good_behavior": {
+   "label": "Students answering favourably: \"Good behavior is noticed at my school.\" (grades 3-5, Always or Often; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 7,
+    "2017": 9,
+    "2018": 18,
+    "2019": 14,
+    "2020": 6,
+    "2022": 2,
+    "2023": 165,
+    "2024": 191
+   }
+  },
+  "gshs_e_like_school": {
+   "label": "Students answering favourably: \"I like school.\" (grades 3-5, Always or Often; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 7,
+    "2017": 9,
+    "2018": 18,
+    "2019": 14,
+    "2020": 6,
+    "2022": 2,
+    "2023": 165,
+    "2024": 191
+   }
+  },
+  "gshs_e_rules": {
+   "label": "Students answering favourably: \"My school has clear rules for behavior.\" (grades 3-5, Always or Often; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 7,
+    "2017": 9,
+    "2018": 18,
+    "2019": 14,
+    "2020": 6,
+    "2022": 2,
+    "2023": 165,
+    "2024": 191
+   }
+  },
+  "gshs_e_wants_well": {
+   "label": "Students answering favourably: \"My school wants me to do well.\" (grades 3-5, Always or Often; Georgia Student Health Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 7,
+    "2017": 9,
+    "2018": 18,
+    "2019": 14,
+    "2020": 6,
+    "2022": 2,
+    "2023": 165,
+    "2024": 191
+   }
+  },
+  "gshs_e_respondents": {
+   "label": "GSHS elementary survey respondents (grades 3-5)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 7,
+    "2017": 9,
+    "2018": 18,
+    "2019": 14,
+    "2020": 6,
+    "2022": 2,
+    "2023": 165,
+    "2024": 191
+   }
+  },
+  "hope_graduates": {
+   "label": "Graduates counted for HOPE eligibility",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 401,
+    "2016": 407,
+    "2017": 402,
+    "2018": 404,
+    "2019": 408,
+    "2020": 412,
+    "2021": 413,
+    "2022": 421,
+    "2023": 403,
+    "2024": 410,
+    "2025": 405
+   }
+  },
+  "act_composite": {
+   "label": "ACT composite, average of the school's test takers (highest score)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 377,
+    "2016": 380,
+    "2017": 372,
+    "2018": 365,
+    "2019": 362,
+    "2020": 344,
+    "2021": 252,
+    "2022": 312,
+    "2023": 324,
+    "2024": 277,
+    "2025": 276
+   }
+  },
+  "act_tested": {
+   "label": "ACT test takers",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 377,
+    "2016": 380,
+    "2017": 372,
+    "2018": 365,
+    "2019": 362,
+    "2020": 344,
+    "2021": 252,
+    "2022": 312,
+    "2023": 324,
+    "2024": 277,
+    "2025": 276
+   }
+  },
+  "sat_total_2400": {
+   "label": "SAT combined, average of the school's test takers, 600-2400 scale (the pre-2016 test; 2014-15 and 2015-16 only)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 385,
+    "2016": 372
+   }
+  },
+  "sat_total_2400_tested": {
+   "label": "SAT test takers (600-2400 scale)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 385,
+    "2016": 372
+   }
+  },
+  "ap_pct_3plus": {
+   "label": "AP exams scoring 3 or higher (share of exams taken)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 344,
+    "2016": 338,
+    "2017": 330,
+    "2018": 323,
+    "2019": 322,
+    "2020": 313,
+    "2021": 314,
+    "2022": 318,
+    "2023": 313,
+    "2024": 325,
+    "2025": 335
+   }
+  },
+  "ap_tests_taken": {
+   "label": "AP exams taken",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 344,
+    "2016": 338,
+    "2017": 330,
+    "2018": 323,
+    "2019": 322,
+    "2020": 313,
+    "2021": 314,
+    "2022": 318,
+    "2023": 313,
+    "2024": 325,
+    "2025": 335
+   }
+  },
+  "ap_tests_3plus": {
+   "label": "AP exams scoring 3 or higher",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 344,
+    "2016": 338,
+    "2017": 330,
+    "2018": 323,
+    "2019": 322,
+    "2020": 313,
+    "2021": 314,
+    "2022": 318,
+    "2023": 313,
+    "2024": 325,
+    "2025": 335
+   }
+  },
+  "ap_students_tested": {
+   "label": "Students taking an AP exam",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 344,
+    "2016": 338,
+    "2017": 330,
+    "2018": 323,
+    "2019": 322,
+    "2020": 313,
+    "2021": 314,
+    "2022": 318,
+    "2023": 313,
+    "2024": 325,
+    "2025": 335
+   }
+  },
+  "college_16mo_c12": {
+   "label": "Graduates enrolled in college within 16 months, as counted in C12 (the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 394,
+    "2016": 400,
+    "2017": 399,
+    "2018": 397,
+    "2019": 401,
+    "2020": 405,
+    "2021": 402
+   }
+  },
+  "college_24credits": {
+   "label": "Graduates enrolled within 16 months who completed 24 credits within two years (GOSA C12; share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 378,
+    "2016": 385,
+    "2017": 380,
+    "2018": 379,
+    "2019": 377,
+    "2020": 382,
+    "2021": 374
+   }
+  },
+  "hsg_yr1_ga_public": {
+   "label": "Year-one: enrolled in a Georgia public college or university",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 406,
+    "2016": 411,
+    "2017": 410,
+    "2018": 416,
+    "2019": 416,
+    "2020": 415,
+    "2021": 418,
+    "2022": 422,
+    "2023": 430,
+    "2024": 435
+   }
+  },
+  "hsg_yr1_ga_technical": {
+   "label": "Year-one: enrolled in a Georgia public technical college",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 398,
+    "2016": 401,
+    "2017": 403,
+    "2018": 410,
+    "2019": 418,
+    "2020": 407,
+    "2021": 411,
+    "2022": 417,
+    "2023": 427,
+    "2024": 432
+   }
+  },
+  "hsg_yr1_ga_private": {
+   "label": "Year-one: enrolled in a Georgia private college or university",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 384,
+    "2016": 393,
+    "2017": 393,
+    "2018": 394,
+    "2019": 384,
+    "2020": 399,
+    "2021": 389,
+    "2022": 390,
+    "2023": 391,
+    "2024": 410
+   }
+  },
+  "hsg_yr1_out_of_state": {
+   "label": "Year-one: enrolled in a college or university outside Georgia",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 394,
+    "2016": 404,
+    "2017": 398,
+    "2018": 401,
+    "2019": 406,
+    "2020": 397,
+    "2021": 404,
+    "2022": 408,
+    "2023": 394,
+    "2024": 400
+   }
+  },
+  "hsg_yr1_working": {
+   "label": "Year-one: working in Georgia, not enrolled in college",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 406,
+    "2016": 416,
+    "2017": 415,
+    "2018": 415,
+    "2019": 423,
+    "2020": 421,
+    "2021": 421,
+    "2022": 427,
+    "2023": 434,
+    "2024": 437
+   }
+  },
+  "hsg_yr1_credential_working": {
+   "label": "Year-one: earned a career pathway credential, working in Georgia",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 321,
+    "2016": 371,
+    "2017": 377,
+    "2018": 384,
+    "2019": 396,
+    "2020": 381,
+    "2021": 244,
+    "2022": 351,
+    "2023": 391,
+    "2024": 401
+   }
+  },
+  "hsg_yr1_unknown": {
+   "label": "Year-one: status unknown",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 404,
+    "2016": 418,
+    "2017": 414,
+    "2018": 417,
+    "2019": 423,
+    "2020": 420,
+    "2021": 420,
+    "2022": 425,
+    "2023": 432,
+    "2024": 435
+   }
+  },
+  "hsg_yr1_enrolled": {
+   "label": "Graduates enrolled in college in the year after graduation, any sector (GA AWARDS graduate outcomes; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 408,
+    "2016": 418,
+    "2017": 415,
+    "2018": 420,
+    "2019": 425,
+    "2020": 422,
+    "2021": 422,
+    "2022": 427,
+    "2023": 434,
+    "2024": 437
+   }
+  },
+  "hsg_graduates": {
+   "label": "Graduates in the outcomes dashboard",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 408,
+    "2016": 418,
+    "2017": 415,
+    "2018": 420,
+    "2019": 425,
+    "2020": 422,
+    "2021": 422,
+    "2022": 427,
+    "2023": 434,
+    "2024": 437
+   }
+  },
+  "hsg_yr5_credential": {
+   "label": "Five years after graduation: holding any postsecondary credential (share of the class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 408,
+    "2016": 418,
+    "2017": 415,
+    "2018": 420,
+    "2019": 425
+   }
+  },
+  "hsg_yr5_bachelors_plus": {
+   "label": "Five years after graduation: holding a bachelor's degree or higher",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 408,
+    "2016": 418,
+    "2017": 415,
+    "2018": 420,
+    "2019": 425
+   }
+  },
+  "hsg_yr8_credential": {
+   "label": "Eight years after graduation: holding any postsecondary credential",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 408,
+    "2016": 418
+   }
+  },
+  "hsg_yr8_bachelors_plus": {
+   "label": "Eight years after graduation: holding a bachelor's degree or higher",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 408,
+    "2016": 418
+   }
+  },
+  "sat_total": {
+   "label": "SAT total, average of the school's test takers, 400-1600 scale (the 2016 redesign; 2015-16 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 342,
+    "2017": 380,
+    "2018": 378,
+    "2019": 371,
+    "2020": 366,
+    "2021": 333,
+    "2022": 365,
+    "2023": 371,
+    "2024": 366,
+    "2025": 380
+   }
+  },
+  "sat_total_tested": {
+   "label": "SAT test takers (400-1600 scale)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 342,
+    "2017": 380,
+    "2018": 378,
+    "2019": 371,
+    "2020": 366,
+    "2021": 333,
+    "2022": 365,
+    "2023": 371,
+    "2024": 366,
+    "2025": 380
+   }
+  },
+  "college_16mo": {
+   "label": "Graduates enrolled in college within 16 months (GOSA C11; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 402,
+    "2017": 401,
+    "2018": 406,
+    "2019": 408,
+    "2020": 407,
+    "2021": 409,
+    "2022": 414,
+    "2023": 416
+   }
+  },
+  "college_16mo_graduates": {
+   "label": "Graduates counted in C11",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 402,
+    "2017": 401,
+    "2018": 406,
+    "2019": 408,
+    "2020": 407,
+    "2021": 409,
+    "2022": 414,
+    "2023": 416
+   }
+  }
+ }
 }

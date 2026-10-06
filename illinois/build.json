@@ -173,5 +173,654 @@
   "improved_every_year": 7,
   "lapsed_longer_ago": 42
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 8833,
+    "2016": 12702,
+    "2017": 12603,
+    "2018": 12632,
+    "2019": 13114,
+    "2022": 13024,
+    "2023": 12953,
+    "2024": 10878,
+    "2025": 12789
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 8833,
+    "2016": 8931,
+    "2017": 8839,
+    "2018": 8825,
+    "2019": 9146,
+    "2022": 9043,
+    "2023": 8990,
+    "2024": 8900
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 7943,
+    "2016": 11691,
+    "2017": 11593,
+    "2018": 11634,
+    "2019": 12121,
+    "2022": 12145,
+    "2023": 12092,
+    "2024": 10150,
+    "2025": 12002
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 12977,
+    "2019": 13126,
+    "2022": 12928,
+    "2023": 12957,
+    "2024": 10868,
+    "2025": 12748
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 2193,
+    "2019": 2309,
+    "2022": 2305,
+    "2023": 2322,
+    "2024": 2150,
+    "2025": 2309
+   }
+  },
+  "teacher_retention": {
+   "label": "Teacher retention",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2018": 12688,
+    "2019": 13043,
+    "2022": 13064,
+    "2023": 13021,
+    "2024": 11042,
+    "2025": 12966
+   }
+  },
+  "mobility": {
+   "label": "Student mobility",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2018": 12980,
+    "2019": 13301,
+    "2022": 11992,
+    "2023": 11442,
+    "2024": 9573,
+    "2025": 10909
+   }
+  },
+  "e_environment": {
+   "label": "5Essentials: Supportive Environment (students)",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2016": 5494,
+    "2017": 7801,
+    "2018": 5972,
+    "2019": 12478,
+    "2022": 12353,
+    "2023": 12668,
+    "2024": 10652
+   }
+  },
+  "e_teachers": {
+   "label": "5Essentials: Collaborative Teachers",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2016": 6934,
+    "2017": 9746,
+    "2018": 7284,
+    "2019": 12242,
+    "2022": 11730,
+    "2023": 12175,
+    "2024": 10154
+   }
+  },
+  "pct_oss": {
+   "label": "Out-of-school suspension",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2023": 12007,
+    "2024": 10330
+   }
+  },
+  "e_leaders": {
+   "label": "5Essentials: Effective Leaders (teachers)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "e_families": {
+   "label": "5Essentials: Involved Families (teachers)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "e_instruction": {
+   "label": "5Essentials: Ambitious Instruction (students)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "designation_top2": {
+   "label": "Schools designated Exemplary or Commendable",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ela_growth": {
+   "label": "Student growth percentile, ELA (school mean)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "math_growth": {
+   "label": "Student growth percentile, math (school mean)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "e_student_rr": {
+   "label": "5Essentials student response rate",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 1281,
+    "2017": 1946,
+    "2018": 2052,
+    "2019": 3461,
+    "2022": 3460,
+    "2023": 3419,
+    "2024": 3408,
+    "2025": 3400
+   }
+  },
+  "e_teacher_rr": {
+   "label": "5Essentials teacher response rate",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 1819,
+    "2017": 2838,
+    "2018": 2052,
+    "2019": 3461,
+    "2022": 3455,
+    "2023": 3454,
+    "2024": 3454,
+    "2025": 3443
+   }
+  },
+  "crdc_iss": {
+   "label": "CRDC in-school suspension share (federal collection, keyed on its own school year: 2015-16 from the 2019 workbook, 2017-18 from the 2020 workbook)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 3359,
+    "2018": 3460
+   }
+  },
+  "crdc_oss": {
+   "label": "CRDC out-of-school suspension share (federal collection, keyed on its own school year)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 3359,
+    "2018": 3460
+   }
+  },
+  "crdc_exp": {
+   "label": "CRDC expulsion share (federal collection, keyed on its own school year)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 3359,
+    "2018": 3460
+   }
+  },
+  "crdc_chronic": {
+   "label": "CRDC chronic absenteeism share (federal collection, keyed on its own school year)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2016": 3359,
+    "2018": 3434
+   }
+  },
+  "crdc_ap": {
+   "label": "CRDC Advanced Placement coursework share (federal collection, keyed on its own school year)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 3359,
+    "2018": 3460
+   }
+  },
+  "e_leaders_lvl": {
+   "label": "5Essentials Effective Leaders band, 1 (weakest) to 5 (strongest)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 1696,
+    "2017": 2550,
+    "2018": 1841,
+    "2019": 3169,
+    "2022": 3053,
+    "2023": 3171,
+    "2024": 3127,
+    "2025": 3116
+   }
+  },
+  "e_teachers_lvl": {
+   "label": "5Essentials Collaborative Teachers band, 1 (weakest) to 5 (strongest)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 1698,
+    "2017": 2553,
+    "2018": 1840,
+    "2019": 3169,
+    "2022": 3052,
+    "2023": 3172,
+    "2024": 3132,
+    "2025": 3114
+   }
+  },
+  "e_families_lvl": {
+   "label": "5Essentials Involved Families band, 1 (weakest) to 5 (strongest)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 1688,
+    "2017": 2542,
+    "2018": 1820,
+    "2019": 3132,
+    "2022": 3017,
+    "2023": 3131,
+    "2024": 3079,
+    "2025": 3072
+   }
+  },
+  "low_income": {
+   "label": "Low-income share of enrollment, as the state publishes it",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 3449,
+    "2019": 3478,
+    "2022": 3409,
+    "2023": 3402,
+    "2024": 3389,
+    "2025": 3389
+   }
+  },
+  "attendance": {
+   "label": "Student attendance rate",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3495,
+    "2019": 3458,
+    "2022": 3461,
+    "2023": 3458,
+    "2024": 3452,
+    "2025": 3440
+   }
+  },
+  "truancy": {
+   "label": "Chronic truancy rate",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3495,
+    "2019": 3451,
+    "2022": 2556,
+    "2023": 2544,
+    "2024": 2542,
+    "2025": 2576
+   }
+  },
+  "dropout": {
+   "label": "High school dropout rate",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 721,
+    "2019": 716,
+    "2022": 413,
+    "2023": 416,
+    "2024": 387,
+    "2025": 365
+   }
+  },
+  "grad4": {
+   "label": "Four-year graduation rate, as the state publishes it",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 710,
+    "2019": 709,
+    "2022": 701,
+    "2023": 702,
+    "2024": 697,
+    "2025": 690
+   }
+  },
+  "grad5": {
+   "label": "Five-year graduation rate",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 690,
+    "2019": 707,
+    "2022": 701,
+    "2023": 701,
+    "2024": 697,
+    "2025": 697
+   }
+  },
+  "ontrack": {
+   "label": "9th graders on track to graduate, share (the 2018-19 workbook carries only a count)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 686,
+    "2022": 674,
+    "2023": 677,
+    "2024": 669,
+    "2025": 670
+   }
+  },
+  "postsec12": {
+   "label": "Graduates enrolled in a postsecondary institution within 12 months",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 654,
+    "2019": 659,
+    "2022": 701,
+    "2023": 694,
+    "2024": 699,
+    "2025": 624
+   }
+  },
+  "postsec16": {
+   "label": "Graduates enrolled in a postsecondary institution within 16 months",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 654,
+    "2019": 659,
+    "2022": 701,
+    "2023": 695,
+    "2024": 699,
+    "2025": 629
+   }
+  },
+  "remediation": {
+   "label": "Graduates at an Illinois community college who took a remedial course, share (2016 and 2017 from the remediation reports, the classes of 2014 and 2015)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 545,
+    "2017": 588,
+    "2018": 642,
+    "2019": 645,
+    "2022": 697,
+    "2023": 691,
+    "2024": 697,
+    "2025": 271
+   }
+  },
+  "chronic": {
+   "label": "Chronic absenteeism, as the state publishes it",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3495,
+    "2019": 3444,
+    "2022": 3373,
+    "2023": 3397,
+    "2024": 3367,
+    "2025": 3355
+   }
+  },
+  "e_environment_lvl": {
+   "label": "5Essentials Supportive Environment band, 1 (weakest) to 5 (strongest)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 1192,
+    "2017": 1830,
+    "2018": 1374,
+    "2019": 3219,
+    "2022": 3207,
+    "2023": 3288,
+    "2024": 3277,
+    "2025": 2764
+   }
+  },
+  "e_instruction_lvl": {
+   "label": "5Essentials Ambitious Instruction band, 1 (weakest) to 5 (strongest)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2016": 1191,
+    "2017": 1828,
+    "2018": 1374,
+    "2019": 3219,
+    "2022": 3207,
+    "2023": 3288,
+    "2024": 3277,
+    "2025": 2622
+   }
+  },
+  "designation": {
+   "label": "Summative designation (text; 2019-20 and 2020-21 excluded by name)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 3454,
+    "2019": 3431,
+    "2022": 3410,
+    "2023": 3411,
+    "2024": 3432,
+    "2025": 3424
+   }
+  },
+  "novice_tds": {
+   "label": "Novice teachers, share (2022 additional teacher data set)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 3448
+   }
+  },
+  "provisional_tds": {
+   "label": "Teachers on an emergency or provisional license, share (2022 additional teacher data set)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 3448
+   }
+  },
+  "pct_oss_published": {
+   "label": "Students with an out-of-school suspension, share of enrollment, wherever the state published the count (2024-25: counts under ten redacted)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2023": 2685,
+    "2024": 2714,
+    "2025": 1241
+   }
+  },
+  "disc_students": {
+   "label": "Students with a discipline incident (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2023": 2929,
+    "2024": 2957,
+    "2025": 1779
+   }
+  },
+  "disc_oss_students": {
+   "label": "Students with an out-of-school suspension (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2023": 2685,
+    "2024": 2714,
+    "2025": 1241
+   }
+  },
+  "teacher_attendance": {
+   "label": "Teacher attendance rate (2023-24 on)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2024": 3443,
+    "2025": 3431
+   }
+  },
+  "novice": {
+   "label": "Novice teachers, share (2023-24 on)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2024": 2902,
+    "2025": 2858
+   }
+  },
+  "provisional": {
+   "label": "Teachers on a short-term or provisional license, share (2023-24 on)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2024": 3446,
+    "2025": 3432
+   }
+  },
+  "e_leaders_v2": {
+   "label": "5Essentials Effective Leaders score on the re-benchmarked 2024-25 survey (not comparable with earlier years)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 3116
+   }
+  },
+  "e_teachers_v2": {
+   "label": "5Essentials Collaborative Teachers score on the re-benchmarked 2024-25 survey (not comparable with earlier years)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 3114
+   }
+  },
+  "e_families_v2": {
+   "label": "5Essentials Involved Families score on the re-benchmarked 2024-25 survey (not comparable with earlier years)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 3072
+   }
+  },
+  "e_environment_v2": {
+   "label": "5Essentials Supportive Environment score on the re-benchmarked 2024-25 survey (not comparable with earlier years)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 2764
+   }
+  },
+  "e_instruction_v2": {
+   "label": "5Essentials Ambitious Instruction score on the re-benchmarked 2024-25 survey (not comparable with earlier years)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2025": 2622
+   }
+  },
+  "disc_iss_students": {
+   "label": "Students with an in-school suspension (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2023": 2428,
+    "2024": 2504,
+    "2025": 1180
+   }
+  }
+ }
 }

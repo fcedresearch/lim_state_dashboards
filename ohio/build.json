@@ -160,5 +160,685 @@
   "improved_every_year": 5,
   "lapsed_longer_ago": 87
  },
- "best_schools_added": "2026-10-01"
+ "best_schools_added": "2026-10-01",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 15425,
+    "2016": 16200,
+    "2017": 15174,
+    "2018": 12514,
+    "2019": 12783,
+    "2022": 12320,
+    "2023": 12457,
+    "2024": 12283,
+    "2025": 12078,
+    "2026": 12123
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 13810,
+    "2016": 14622,
+    "2017": 13688,
+    "2018": 11327,
+    "2019": 11635,
+    "2022": 11244,
+    "2023": 11412,
+    "2024": 11283,
+    "2025": 11106
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 15409,
+    "2016": 16188,
+    "2017": 15174,
+    "2018": 12176,
+    "2019": 12496,
+    "2022": 12509,
+    "2023": 12658,
+    "2024": 12480,
+    "2025": 12275
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 3595,
+    "2016": 4362,
+    "2017": 3605,
+    "2018": 3564,
+    "2019": 3693,
+    "2022": 3823,
+    "2023": 3919,
+    "2024": 3886,
+    "2025": 3867
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 15690,
+    "2016": 16458,
+    "2017": 15518,
+    "2018": 12892,
+    "2019": 13067,
+    "2022": 12709,
+    "2023": 12818,
+    "2024": 12650,
+    "2025": 12439
+   }
+  },
+  "perf_index": {
+   "label": "Performance Index (2021-22 scale)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2022": 12674,
+    "2023": 12780,
+    "2024": 12611,
+    "2025": 12393
+   }
+  },
+  "va_growth": {
+   "label": "Value-added growth (one year, effect size \u00d7 100)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2022": 12628,
+    "2023": 12720,
+    "2024": 12499,
+    "2025": 12282
+   }
+  },
+  "oss_per100": {
+   "label": "Out-of-school suspension occurrences per 100 students",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 12888,
+    "2019": 13059,
+    "2022": 12709,
+    "2023": 12818,
+    "2024": 12650
+   }
+  },
+  "disc_per100": {
+   "label": "Discipline occurrences per 100 students",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 12888,
+    "2019": 13059,
+    "2022": 12709,
+    "2023": 12818,
+    "2024": 12650
+   }
+  },
+  "perf_index_old": {
+   "label": "Performance index (2014-15 to 2018-19 scale)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2015": 2,
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2
+   }
+  },
+  "overall_stars": {
+   "label": "Overall star rating (1-5)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "early_literacy_pct": {
+   "label": "Early literacy component percent",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ccwmr": {
+   "label": "College, career, workforce and military readiness",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "college_2yr": {
+   "label": "Graduates enrolled in college within two years",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2015": 1,
+    "2016": 1,
+    "2017": 1,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2
+   }
+  },
+  "enrollment": {
+   "label": "Enrollment (state report card, the year's own count and the discipline denominator)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 3085,
+    "2016": 3078,
+    "2017": 3070,
+    "2018": 3128,
+    "2019": 3114,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064,
+    "2025": 3034
+   }
+  },
+  "perf_index_grade_pts": {
+   "label": "Performance Index letter grade, through 2018-19 (A=4 to F=0)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 3066,
+    "2016": 3055,
+    "2017": 3051,
+    "2018": 3096,
+    "2019": 3083
+   }
+  },
+  "va_grade_pts": {
+   "label": "Value-added / Progress letter grade, through 2018-19 (A=4 to F=0)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 2461,
+    "2016": 3022,
+    "2017": 3025,
+    "2018": 3059,
+    "2019": 3045
+   }
+  },
+  "enrollment_domo": {
+   "label": "Enrollment (DOMO, one count per school repeated in every year: its latest)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 2952,
+    "2016": 2979,
+    "2017": 2940,
+    "2018": 2950,
+    "2019": 3013,
+    "2022": 2922,
+    "2023": 2960,
+    "2024": 2930,
+    "2025": 2900
+   }
+  },
+  "k3_readers_pct": {
+   "label": "Improving At-Risk K-3 Readers percent, 2015-16 to 2018-19",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2016": 1429,
+    "2017": 1462,
+    "2018": 1470,
+    "2019": 1485
+   }
+  },
+  "va_index_old": {
+   "label": "Value-added overall composite index, 2015-16 to 2018-19 (a multi-year pool)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2016": 3019,
+    "2017": 3023,
+    "2018": 3059,
+    "2019": 3045
+   }
+  },
+  "overall_grade_pts": {
+   "label": "Overall letter grade, 2017-18 and 2018-19 (A=4 to F=0)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 3128,
+    "2019": 3114
+   }
+  },
+  "gap_closing_pts": {
+   "label": "Gap Closing points, 2017-18 to 2018-19",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 3097,
+    "2019": 3085
+   }
+  },
+  "exp_occ": {
+   "label": "Expulsions occurrences, published reasons summed",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "oss_occ": {
+   "label": "Out-of-School Suspensions occurrences, published reasons summed",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "iss_occ": {
+   "label": "In-School Suspensions occurrences, published reasons summed",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "alt_occ": {
+   "label": "In-School Alternate Discipline occurrences, published reasons summed",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "emr_occ": {
+   "label": "Emergency Removal occurrences, published reasons summed",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "hr_occ": {
+   "label": "Hearing Removal occurrences, published reasons summed",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "disc_occ": {
+   "label": "All discipline occurrences, published reasons summed",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "iss_per100": {
+   "label": "In-school suspension occurrences per 100 students (published reasons)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "exp_per100": {
+   "label": "Expulsions per 100 students (published reasons)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "oss_reasons_withheld": {
+   "label": "Out-of-school suspension reasons withheld (fewer than ten occurrences), of sixteen",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "oss_hidden_max_per100": {
+   "label": "Most the withheld out-of-school suspension reasons could add, per 100 students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 3126,
+    "2019": 3112,
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064
+   }
+  },
+  "achievement_stars": {
+   "label": "Achievement component stars",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 3048,
+    "2023": 3051,
+    "2024": 3031,
+    "2025": 2996
+   }
+  },
+  "progress_stars": {
+   "label": "Progress component stars",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 3006,
+    "2023": 3010,
+    "2024": 2957,
+    "2025": 2928
+   }
+  },
+  "gap_closing_stars": {
+   "label": "Gap Closing component stars",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 3075,
+    "2023": 3085,
+    "2024": 3064,
+    "2025": 3034
+   }
+  },
+  "early_literacy_stars": {
+   "label": "Early Literacy component stars",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 1588,
+    "2023": 1582,
+    "2024": 1567,
+    "2025": 1555
+   }
+  },
+  "gap_closing_pct": {
+   "label": "Gap Closing component percent, 2021-22 on",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064,
+    "2025": 3034
+   }
+  },
+  "mobility_rate": {
+   "label": "Mobility rate",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 3078,
+    "2023": 3085,
+    "2024": 3064,
+    "2025": 3034
+   }
+  },
+  "va_index_reported": {
+   "label": "Value-added overall composite index as the report card shows it (one year in 2021-22, two in 2022-23, three from 2023-24)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 3010,
+    "2023": 3010,
+    "2024": 2957,
+    "2025": 2928
+   }
+  },
+  "va_effect_reported": {
+   "label": "Value-added overall effect size as the report card shows it (same pooling)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 3010,
+    "2023": 3010,
+    "2024": 2957,
+    "2025": 2928
+   }
+  },
+  "va_index": {
+   "label": "Value-added overall composite index, one year",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 3010,
+    "2023": 3004,
+    "2024": 2954,
+    "2025": 2924
+   }
+  },
+  "va_effect": {
+   "label": "Value-added overall effect size, one year (as published)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 3010,
+    "2023": 3004,
+    "2024": 2954,
+    "2025": 2924
+   }
+  },
+  "overall_points": {
+   "label": "Overall rating points (0-5)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 3085,
+    "2024": 3064,
+    "2025": 3034
+   }
+  },
+  "college_6yr": {
+   "label": "Graduates who completed college within six years (on the class's own year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 786,
+    "2016": 707,
+    "2017": 706,
+    "2018": 720
+   }
+  },
+  "grad4": {
+   "label": "Four-year graduation rate (class of the year before)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 760,
+    "2016": 761,
+    "2017": 768,
+    "2018": 813,
+    "2019": 822,
+    "2022": 835,
+    "2023": 851,
+    "2024": 853,
+    "2025": 856
+   }
+  },
+  "pfs_pct": {
+   "label": "Prepared for Success component percent, 2015-16 to 2018-19",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2016": 768,
+    "2017": 773,
+    "2018": 823,
+    "2019": 829
+   }
+  },
+  "remediation_free_pct": {
+   "label": "Graduates remediation-free on the ACT or SAT",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 768,
+    "2017": 773,
+    "2018": 823,
+    "2019": 829,
+    "2022": 835,
+    "2023": 779,
+    "2024": 779,
+    "2025": 779
+   }
+  },
+  "honors_diploma_pct": {
+   "label": "Graduates with an honors diploma",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 768,
+    "2017": 773,
+    "2018": 823,
+    "2019": 829,
+    "2022": 835,
+    "2023": 779,
+    "2024": 779,
+    "2025": 779
+   }
+  },
+  "industry_credential_pct": {
+   "label": "Graduates with an industry credential (12 credential points from 2021-22)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 768,
+    "2017": 773,
+    "2018": 823,
+    "2019": 829,
+    "2022": 835,
+    "2023": 779,
+    "2024": 779,
+    "2025": 779
+   }
+  },
+  "dual_enrollment_pct": {
+   "label": "Graduates with dual-enrollment credits (12 from 2021-22, 3 before)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 768,
+    "2017": 773,
+    "2018": 823,
+    "2019": 829,
+    "2022": 835,
+    "2023": 779,
+    "2024": 779,
+    "2025": 779
+   }
+  },
+  "grad_stars": {
+   "label": "Graduation Rate component stars",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 840,
+    "2023": 853,
+    "2024": 859,
+    "2025": 859
+   }
+  },
+  "ccwmr_initial": {
+   "label": "Readiness component percent, 2021-22 and 2022-23 (before the technical-assessment pathway counted)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 835,
+    "2023": 779
+   }
+  },
+  "technical_assessments_pct": {
+   "label": "Graduates proficient on three or more technical assessments",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 835,
+    "2023": 779,
+    "2024": 779,
+    "2025": 779
+   }
+  },
+  "ccwmr_cohort": {
+   "label": "Four-year graduation cohort counted for readiness",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 835,
+    "2023": 779,
+    "2024": 779,
+    "2025": 779
+   }
+  },
+  "ccwmr_stars": {
+   "label": "Readiness component stars",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2025": 779
+   }
+  }
+ }
 }

@@ -160,5 +160,688 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 19
  },
- "best_schools_added": "2026-09-30"
+ "best_schools_added": "2026-09-30",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 6503,
+    "2016": 5027,
+    "2017": 5133,
+    "2018": 4577,
+    "2019": 4682,
+    "2022": 3339,
+    "2023": 5297,
+    "2024": 5317,
+    "2025": 5276,
+    "2026": 2888
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2720,
+    "2017": 4034,
+    "2018": 3481,
+    "2019": 3886,
+    "2022": 2809,
+    "2023": 4589,
+    "2024": 4503,
+    "2025": 4466,
+    "2026": 2262
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 6102,
+    "2016": 4667,
+    "2017": 4777,
+    "2018": 4264,
+    "2019": 4461,
+    "2022": 3134,
+    "2023": 5088,
+    "2024": 5112,
+    "2025": 5060
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2024": 5386,
+    "2025": 5364
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2022": 659,
+    "2023": 1172,
+    "2024": 1201,
+    "2025": 910
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2022": 3749,
+    "2023": 5576,
+    "2024": 5564,
+    "2025": 5528,
+    "2026": 3398
+   }
+  },
+  "truancy_rate": {
+   "label": "Truancy rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2022": 3718,
+    "2023": 5540,
+    "2024": 5539,
+    "2025": 5509,
+    "2026": 3381
+   }
+  },
+  "mgp": {
+   "label": "Median growth percentile",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2022": 3282,
+    "2023": 5555,
+    "2024": 5531,
+    "2025": 5481,
+    "2026": 3365
+   }
+  },
+  "spf_pct_points": {
+   "label": "Framework percent of points",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 5114,
+    "2017": 5291,
+    "2018": 4755,
+    "2019": 4878,
+    "2022": 3397,
+    "2023": 5353,
+    "2024": 5418,
+    "2025": 5377
+   }
+  },
+  "mgp_ela": {
+   "label": "Median growth percentile, English language arts (CMAS, grades 4-8)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "mgp_math": {
+   "label": "Median growth percentile, mathematics (CMAS, grades 4-8)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "mgp_elp": {
+   "label": "Median growth percentile, English language proficiency (WIDA ACCESS)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "spf_performance": {
+   "label": "Schools on a Performance plan",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "spf_ach_pct": {
+   "label": "Framework achievement indicator: percent of points",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "spf_gro_pct": {
+   "label": "Framework growth indicator: percent of points",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "spf_plan": {
+   "label": "School Performance Framework plan type, as the state wrote it",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2016": 1659,
+    "2017": 1659,
+    "2018": 1659,
+    "2019": 1659,
+    "2020": 1659,
+    "2021": 1659,
+    "2022": 1665,
+    "2023": 1661,
+    "2024": 1628,
+    "2025": 1615,
+    "2026": 1596
+   }
+  },
+  "spf_aec": {
+   "label": "Alternative Education Campus (Y/N)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 1649,
+    "2017": 1649,
+    "2018": 1649,
+    "2019": 1649,
+    "2020": 1649,
+    "2021": 1649,
+    "2022": 1665,
+    "2023": 1661,
+    "2024": 1628,
+    "2025": 1615,
+    "2026": 1596
+   }
+  },
+  "plan": {
+   "label": "Plan word (Performance, Improvement, Priority Improvement, Turnaround, AEC, none)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2016": 1659,
+    "2017": 1659,
+    "2018": 1659,
+    "2019": 1659,
+    "2020": 1659,
+    "2021": 1659,
+    "2022": 1665,
+    "2023": 1661,
+    "2024": 1628,
+    "2025": 1615,
+    "2026": 1596
+   }
+  },
+  "matric_2yr": {
+   "label": "Graduates enrolled in a two-year institution (class year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2019": 358,
+    "2020": 349,
+    "2021": 352,
+    "2022": 359,
+    "2023": 364,
+    "2024": 371,
+    "2025": 369
+   }
+  },
+  "matric_4yr": {
+   "label": "Graduates enrolled in a four-year institution (class year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2019": 358,
+    "2020": 349,
+    "2021": 352,
+    "2022": 359,
+    "2023": 364,
+    "2024": 371,
+    "2025": 369
+   }
+  },
+  "matric_cte": {
+   "label": "Graduates enrolled in a career and technical education program (class year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2019": 358,
+    "2020": 349,
+    "2021": 352,
+    "2022": 359,
+    "2023": 364,
+    "2024": 371,
+    "2025": 369
+   }
+  },
+  "matric_rate": {
+   "label": "Matriculation rate: graduates enrolled in a two- or four-year institution, CTE, the military (from 2021) or a state postsecondary program (from 2023), unduplicated (class year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2019": 358,
+    "2020": 349,
+    "2021": 352,
+    "2022": 359,
+    "2023": 364,
+    "2024": 371,
+    "2025": 369
+   }
+  },
+  "matric_graduates": {
+   "label": "Graduates in the matriculation cohort",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2019": 358,
+    "2020": 349,
+    "2021": 352,
+    "2022": 359,
+    "2023": 364,
+    "2024": 371,
+    "2025": 369
+   }
+  },
+  "students": {
+   "label": "Students counted in the attendance file",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2020": 1639,
+    "2021": 1638,
+    "2022": 1648,
+    "2023": 1652,
+    "2024": 1632,
+    "2025": 1618,
+    "2026": 1601
+   }
+  },
+  "days_in_session": {
+   "label": "Days in session",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2020": 1639,
+    "2021": 1638,
+    "2022": 1648,
+    "2023": 1652,
+    "2024": 1632,
+    "2025": 1618,
+    "2026": 1601
+   }
+  },
+  "days_attended": {
+   "label": "Total student days attended",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2020": 1639,
+    "2021": 1638,
+    "2022": 1648,
+    "2023": 1652,
+    "2024": 1632,
+    "2025": 1618,
+    "2026": 1601
+   }
+  },
+  "days_possible": {
+   "label": "Total student days possible",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2020": 1639,
+    "2021": 1638,
+    "2022": 1648,
+    "2023": 1652,
+    "2024": 1632,
+    "2025": 1618,
+    "2026": 1601
+   }
+  },
+  "days_unexcused": {
+   "label": "Total student days of unexcused absence",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2020": 1639,
+    "2021": 1638,
+    "2022": 1648,
+    "2023": 1652,
+    "2024": 1632,
+    "2025": 1608,
+    "2026": 1601
+   }
+  },
+  "days_excused": {
+   "label": "Total student days of excused absence",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2020": 1639,
+    "2021": 1638,
+    "2022": 1648,
+    "2023": 1652,
+    "2024": 1632,
+    "2025": 1611,
+    "2026": 1601
+   }
+  },
+  "spf_grad4_dn": {
+   "label": "Students in the four-year graduation base (framework)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 405,
+    "2022": 339,
+    "2023": 327,
+    "2024": 404
+   }
+  },
+  "spf_grad5": {
+   "label": "Five-year graduation rate (framework), on the class's own year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 350,
+    "2022": 320,
+    "2023": 315,
+    "2024": 368
+   }
+  },
+  "spf_grad_best": {
+   "label": "The graduation rate the framework scored (the best of the 4-, 5-, 6- and 7-year rates), on the class's own year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 378,
+    "2022": 326,
+    "2023": 318,
+    "2024": 381
+   }
+  },
+  "spf_dropout": {
+   "label": "Dropout rate as the framework carries it (grades 7-12), on the year it describes",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 392,
+    "2022": 328,
+    "2023": 325,
+    "2024": 403
+   }
+  },
+  "mgp_sat_ela": {
+   "label": "Median growth percentile, PSAT/SAT evidence-based reading and writing (grades 9-11)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 352,
+    "2023": 379,
+    "2024": 376,
+    "2025": 375,
+    "2026": 363
+   }
+  },
+  "mgp_sat_math": {
+   "label": "Median growth percentile, PSAT/SAT mathematics (grades 9-11)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 372,
+    "2023": 392,
+    "2024": 391,
+    "2025": 384,
+    "2026": 377
+   }
+  },
+  "mgp_cmas": {
+   "label": "Median growth percentile, CMAS English language arts and mathematics together (mean of the two medians)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 1116,
+    "2023": 1363,
+    "2024": 1343,
+    "2025": 1329,
+    "2026": 1323
+   }
+  },
+  "mgp_sat": {
+   "label": "Median growth percentile, PSAT/SAT reading-and-writing and mathematics together (mean of the two medians)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 352,
+    "2023": 379,
+    "2024": 376,
+    "2025": 375,
+    "2026": 363
+   }
+  },
+  "n_growth_ela": {
+   "label": "Students with a CMAS English language arts growth percentile",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 1320,
+    "2023": 1381,
+    "2024": 1357,
+    "2025": 1349,
+    "2026": 1335
+   }
+  },
+  "n_growth_elp": {
+   "label": "English learners with a WIDA ACCESS growth percentile",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2020": 727,
+    "2021": 661,
+    "2022": 1563,
+    "2023": 1635,
+    "2024": 1608,
+    "2025": 1595,
+    "2026": 1572
+   }
+  },
+  "n_growth_math": {
+   "label": "Students with a CMAS mathematics growth percentile",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 1309,
+    "2023": 1381,
+    "2024": 1357,
+    "2025": 1349,
+    "2026": 1335
+   }
+  },
+  "n_growth_sat_ela": {
+   "label": "Students with a PSAT/SAT reading-and-writing growth percentile",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 378,
+    "2023": 401,
+    "2024": 398,
+    "2025": 392,
+    "2026": 381
+   }
+  },
+  "n_growth_sat_math": {
+   "label": "Students with a PSAT/SAT mathematics growth percentile",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 378,
+    "2023": 401,
+    "2024": 398,
+    "2025": 392,
+    "2026": 381
+   }
+  },
+  "spf_pwr_pct": {
+   "label": "Framework postsecondary and workforce readiness indicator: percent of points earned (high schools; official report)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 405,
+    "2023": 410,
+    "2024": 407,
+    "2025": 404
+   }
+  },
+  "spf_k12_enrollment": {
+   "label": "K-12 enrollment as the framework file lists it",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 1665,
+    "2023": 1661,
+    "2024": 1628,
+    "2025": 1615
+   }
+  },
+  "spf_pct_frl": {
+   "label": "Free or reduced-price lunch share as the framework file lists it",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 1665,
+    "2023": 1661,
+    "2024": 1628,
+    "2025": 1615
+   }
+  },
+  "spf_matric": {
+   "label": "Matriculation rate as the framework carries it, on the class's own year",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2021": 349,
+    "2022": 326,
+    "2023": 318,
+    "2024": 367
+   }
+  },
+  "sat_ebrw_mean": {
+   "label": "Mean SAT evidence-based reading and writing score, grade 11 (framework)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 350,
+    "2023": 326,
+    "2024": 320,
+    "2025": 349
+   }
+  },
+  "sat_math_mean": {
+   "label": "Mean SAT mathematics score, grade 11 (framework)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 350,
+    "2023": 326,
+    "2024": 320,
+    "2025": 349
+   }
+  },
+  "matric_military": {
+   "label": "Graduates enlisted in the military (class year; from the class of 2021)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 352,
+    "2022": 359,
+    "2023": 364,
+    "2024": 371,
+    "2025": 369
+   }
+  },
+  "spf_report_span": {
+   "label": "Framework report span the state used (1 Year, 2 Year, 3 Year)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 1661,
+    "2024": 1628,
+    "2025": 1615,
+    "2026": 1596
+   }
+  },
+  "spf_grad4": {
+   "label": "Four-year graduation rate as the framework carries it, on the class's own year (all students)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 360,
+    "2022": 325,
+    "2023": 318,
+    "2024": 367
+   }
+  },
+  "matric_psp": {
+   "label": "Graduates in a state postsecondary program, ASCENT, P-TECH or TREP (class year; from the class of 2023)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 364,
+    "2024": 371,
+    "2025": 369
+   }
+  },
+  "chronic_absent_co": {
+   "label": "Chronically absent students as Colorado counts them (10% or more of enrolled days; K-12; 2025-26 only)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2026": 1590
+   }
+  },
+  "chronic_absent_students": {
+   "label": "K-12 students in the chronic absenteeism count (2025-26 only)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2026": 1600
+   }
+  }
+ }
 }

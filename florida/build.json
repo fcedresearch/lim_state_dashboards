@@ -190,5 +190,262 @@
   "improved_every_year": 4,
   "lapsed_longer_ago": 117
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 13651,
+    "2017": 14145,
+    "2018": 14260,
+    "2019": 14776,
+    "2022": 15306,
+    "2023": 15553,
+    "2024": 15679,
+    "2025": 15788,
+    "2026": 15698
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 13651,
+    "2017": 14145,
+    "2018": 14260,
+    "2019": 14776,
+    "2022": 15306,
+    "2023": 15553,
+    "2024": 15679,
+    "2025": 15788,
+    "2026": 15698
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 13324,
+    "2017": 13829,
+    "2018": 13939,
+    "2019": 14448,
+    "2022": 14919,
+    "2023": 15141,
+    "2024": 15266,
+    "2025": 15323,
+    "2026": 15253
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 13925,
+    "2019": 14545,
+    "2022": 15302,
+    "2023": 15549,
+    "2024": 15672,
+    "2025": 15401
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2017": 2967,
+    "2018": 3055,
+    "2019": 3177,
+    "2022": 3409,
+    "2023": 3533,
+    "2024": 3543,
+    "2025": 3545
+   }
+  },
+  "ela_gains": {
+   "label": "Reading learning gains",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "ela_gains_l25": {
+   "label": "Reading gains, lowest 25%",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "math_gains": {
+   "label": "Math learning gains",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "math_gains_l25": {
+   "label": "Math gains, lowest 25%",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "grade_points": {
+   "label": "School grade score",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "grade_ab": {
+   "label": "Share graded A or B",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "ms_accel": {
+   "label": "Middle school acceleration",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "cc_accel": {
+   "label": "College and career acceleration",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "bully_per1k": {
+   "label": "Bullying incidents per 1,000 students",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "attendance": {
+   "label": "Attendance rate",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2025": 2
+   }
+  },
+  "grad_ed": {
+   "label": "Graduation rate, low-income students",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2025": 2
+   }
+  },
+  "soe": {
+   "label": "Schools of Excellence",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ed_share": {
+   "label": "Economic disadvantage (context)",
+   "kind": "cards",
+   "family": null,
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "title1": {
+   "label": "Title I schools (context)",
+   "kind": "cards",
+   "family": null,
+   "years": {
+    "2022": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "incidents": {
+   "label": "Reported safety and discipline incidents",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "grade_letter": {
+   "label": "School grade (letter)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 3304,
+    "2024": 3356,
+    "2025": 3355,
+    "2026": 3331
+   }
+  },
+  "inc_per100": {
+   "label": "Reported safety and discipline incidents per 100 students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2022": 3509,
+    "2023": 3543,
+    "2024": 3558,
+    "2025": 3566
+   }
+  }
+ }
 }

@@ -403,5 +403,471 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 2
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 1312,
+    "2017": 1326,
+    "2018": 1348,
+    "2019": 1348,
+    "2022": 1443,
+    "2023": 1436,
+    "2024": 1418,
+    "2025": 1434
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 1069,
+    "2017": 1076,
+    "2018": 1101,
+    "2019": 1105,
+    "2022": 1182,
+    "2023": 1187,
+    "2024": 1168,
+    "2025": 1181
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 649,
+    "2019": 633,
+    "2022": 695,
+    "2023": 679,
+    "2024": 708,
+    "2025": 679
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 329,
+    "2019": 319,
+    "2022": 344,
+    "2023": 335,
+    "2024": 349,
+    "2025": 348
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2016": 1363,
+    "2017": 1378,
+    "2018": 1391,
+    "2019": 1401,
+    "2022": 1484,
+    "2023": 1485,
+    "2024": 1477,
+    "2025": 1478
+   }
+  },
+  "growth_ela": {
+   "label": "Growth percentile, ELA",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 1006,
+    "2018": 1022,
+    "2019": 1037,
+    "2022": 1090,
+    "2023": 1089,
+    "2024": 1087,
+    "2025": 1081
+   }
+  },
+  "growth_math": {
+   "label": "Growth percentile, math",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 1006,
+    "2018": 1022,
+    "2019": 1037,
+    "2022": 1093,
+    "2023": 1089,
+    "2024": 1083,
+    "2025": 1081
+   }
+  },
+  "cte_course_enrollments": {
+   "label": "CTE course enrollments, sum of the published course counts (a suppressed count adds nothing)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 126,
+    "2017": 121,
+    "2018": 135,
+    "2019": 139,
+    "2022": 142,
+    "2024": 103
+   }
+  },
+  "cte_courses": {
+   "label": "CTE courses offered with a published student count (ND Insights CTE course counts)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 126,
+    "2017": 121,
+    "2018": 135,
+    "2019": 139,
+    "2022": 142,
+    "2024": 103
+   }
+  },
+  "cte_pathway_enrollments": {
+   "label": "CTE pathway enrollments, sum of the published pathway counts",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 126,
+    "2017": 121,
+    "2018": 135,
+    "2019": 139,
+    "2022": 142,
+    "2024": 103
+   }
+  },
+  "cte_pathways": {
+   "label": "CTE pathways with a published student count",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 126,
+    "2017": 121,
+    "2018": 135,
+    "2019": 139,
+    "2022": 142,
+    "2024": 103
+   }
+  },
+  "cte_primary_pathway_students": {
+   "label": "Students by primary CTE pathway, sum of the published counts",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 122,
+    "2017": 118,
+    "2018": 134,
+    "2019": 136,
+    "2022": 141,
+    "2024": 103
+   }
+  },
+  "cte_primary_pathways": {
+   "label": "CTE primary pathways with a published student count",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 122,
+    "2017": 118,
+    "2018": 134,
+    "2019": 136,
+    "2022": 141,
+    "2024": 103
+   }
+  },
+  "acc_achievement_ela": {
+   "label": "Accountability: ELA achievement points earned as a share of possible",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 357,
+    "2019": 368,
+    "2022": 385,
+    "2023": 388,
+    "2024": 415,
+    "2025": 411
+   }
+  },
+  "acc_achievement_math": {
+   "label": "Accountability: math achievement points earned as a share of possible",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 357,
+    "2019": 369,
+    "2022": 385,
+    "2023": 388,
+    "2024": 415,
+    "2025": 411
+   }
+  },
+  "acc_el_growth": {
+   "label": "Accountability: English learner proficiency growth points earned as a share of possible",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 39,
+    "2019": 65,
+    "2022": 68,
+    "2023": 70,
+    "2024": 120,
+    "2025": 131
+   }
+  },
+  "acc_engagement": {
+   "label": "Accountability: student engagement points earned as a share of possible",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 383,
+    "2019": 391,
+    "2022": 410,
+    "2023": 410,
+    "2024": 414,
+    "2025": 411
+   }
+  },
+  "acc_graduation": {
+   "label": "Accountability: on-time graduation points earned as a share of possible (high schools)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 127,
+    "2019": 120,
+    "2022": 128,
+    "2023": 122,
+    "2024": 146,
+    "2025": 146
+   }
+  },
+  "acc_hs_completion": {
+   "label": "Accountability: high school completion (with GED) points earned as a share of possible",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 127,
+    "2019": 118,
+    "2022": 125,
+    "2023": 122,
+    "2024": 146,
+    "2025": 146
+   }
+  },
+  "acc_index": {
+   "label": "Accountability points earned as a share of points possible, all indicators (ND Insights accountability pie)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 384,
+    "2019": 391,
+    "2022": 410,
+    "2023": 412,
+    "2024": 416,
+    "2025": 411
+   }
+  },
+  "choice_ready": {
+   "label": "Choice Ready, share of graduates (midpoint of the published range; exact where the state publishes an exact value)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "choice_ready_range": {
+   "label": "Choice Ready: width of the published range in points (0 where the value is exact)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "cr_essential_skills": {
+   "label": "Choice Ready component, essential skills (midpoint of the published range)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "cr_essential_skills_range": {
+   "label": "Essential skills: width of the published range in points",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "cr_military": {
+   "label": "Choice Ready component, military ready (midpoint of the published range)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "cr_military_range": {
+   "label": "Military ready: width of the published range in points",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "cr_postsecondary": {
+   "label": "Choice Ready component, post-secondary ready (midpoint of the published range)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "cr_postsecondary_range": {
+   "label": "Post-secondary ready: width of the published range in points",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "cr_workforce": {
+   "label": "Choice Ready component, workforce ready (midpoint of the published range)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "cr_workforce_range": {
+   "label": "Workforce ready: width of the published range in points",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 118,
+    "2019": 112,
+    "2022": 125,
+    "2023": 116,
+    "2024": 123,
+    "2025": 121
+   }
+  },
+  "acc_choice_ready": {
+   "label": "Accountability: Choice Ready points earned as a share of possible (high schools; 2018-19 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2019": 111,
+    "2022": 125,
+    "2023": 116,
+    "2024": 145,
+    "2025": 145
+   }
+  },
+  "acc_growth_ela": {
+   "label": "Accountability: ELA growth points earned as a share of possible",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 241,
+    "2019": 249,
+    "2022": 259,
+    "2023": 263,
+    "2024": 267,
+    "2025": 265
+   }
+  },
+  "acc_growth_math": {
+   "label": "Accountability: math growth points earned as a share of possible",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 241,
+    "2019": 249,
+    "2022": 260,
+    "2023": 263,
+    "2024": 267,
+    "2025": 265
+   }
+  },
+  "growth_level_ela": {
+   "label": "Growth level, ELA (the state's 1-4 level for the school's growth)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 241,
+    "2018": 243,
+    "2019": 250,
+    "2022": 259,
+    "2023": 263,
+    "2024": 267,
+    "2025": 264
+   }
+  },
+  "growth_level_math": {
+   "label": "Growth level, math (the state's 1-4 level for the school's growth)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 241,
+    "2018": 243,
+    "2019": 250,
+    "2022": 260,
+    "2023": 263,
+    "2024": 266,
+    "2025": 264
+   }
+  }
+ }
 }

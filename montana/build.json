@@ -399,5 +399,103 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 0
  },
- "best_schools_added": "2026-09-10"
+ "best_schools_added": "2026-09-10",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 732,
+    "2016": 869,
+    "2017": 731,
+    "2018": 766,
+    "2019": 832,
+    "2022": 1246,
+    "2023": 1274,
+    "2024": 955,
+    "2025": 1609
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 732,
+    "2016": 495,
+    "2017": 195,
+    "2018": 402,
+    "2019": 471,
+    "2022": 1246,
+    "2023": 1274,
+    "2024": 955,
+    "2025": 1609
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 732,
+    "2016": 495,
+    "2017": 195,
+    "2018": 402,
+    "2019": 471,
+    "2022": 1246,
+    "2023": 1274,
+    "2024": 955,
+    "2025": 1609
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 732,
+    "2016": 494,
+    "2017": 195,
+    "2018": 402,
+    "2019": 471,
+    "2022": 1246,
+    "2023": 1274,
+    "2024": 955,
+    "2025": 1609
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 732,
+    "2016": 494,
+    "2017": 195,
+    "2018": 402,
+    "2019": 471,
+    "2022": 1246,
+    "2023": 1274,
+    "2024": 955,
+    "2025": 1609
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 732,
+    "2016": 790,
+    "2017": 658,
+    "2018": 698,
+    "2019": 714,
+    "2022": 1246,
+    "2023": 1274,
+    "2024": 955,
+    "2025": 1609
+   }
+  }
+ }
 }

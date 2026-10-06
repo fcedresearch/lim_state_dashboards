@@ -505,5 +505,719 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 27
  },
- "best_schools_added": "2026-09-30"
+ "best_schools_added": "2026-09-30",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 3499,
+    "2016": 5289,
+    "2017": 5249,
+    "2018": 3933,
+    "2019": 4014,
+    "2022": 3925,
+    "2023": 4011,
+    "2024": 4017,
+    "2025": 3909,
+    "2026": 3224
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 940,
+    "2016": 5289,
+    "2017": 5249,
+    "2018": 3930,
+    "2019": 4008,
+    "2022": 3918,
+    "2023": 4011,
+    "2024": 4017,
+    "2025": 3909,
+    "2026": 2044
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 940,
+    "2016": 5289,
+    "2017": 5249,
+    "2018": 3930,
+    "2019": 4008,
+    "2022": 3918,
+    "2023": 4011,
+    "2024": 4017,
+    "2025": 3909,
+    "2026": 2044
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 940,
+    "2016": 5289,
+    "2017": 5249,
+    "2018": 3930,
+    "2019": 4008,
+    "2022": 3918,
+    "2023": 4011,
+    "2024": 4017,
+    "2025": 3909,
+    "2026": 2044
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 940,
+    "2016": 5289,
+    "2017": 5249,
+    "2018": 3930,
+    "2019": 4008,
+    "2022": 3918,
+    "2023": 4011,
+    "2024": 4017,
+    "2025": 3909,
+    "2026": 2044
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 3038,
+    "2016": 4446,
+    "2017": 4405,
+    "2018": 3300,
+    "2019": 3381,
+    "2022": 3346,
+    "2023": 3421,
+    "2024": 3453,
+    "2025": 3334
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 1144,
+    "2016": 1527,
+    "2017": 1528,
+    "2018": 723,
+    "2019": 855,
+    "2022": 901,
+    "2023": 888,
+    "2024": 857,
+    "2025": 718
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 3602,
+    "2016": 5318,
+    "2017": 5308,
+    "2018": 4029,
+    "2019": 4078,
+    "2022": 3998,
+    "2023": 4033,
+    "2024": 4023,
+    "2025": 3917,
+    "2026": 3149
+   }
+  },
+  "oss_per100": {
+   "label": "Out-of-school suspensions per 100",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 3455,
+    "2016": 5085,
+    "2017": 5096,
+    "2018": 3865,
+    "2019": 3946,
+    "2022": 3746,
+    "2023": 3870,
+    "2024": 3841,
+    "2025": 3813,
+    "2026": 3048
+   }
+  },
+  "iss_per100": {
+   "label": "In-school suspensions per 100",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 3455,
+    "2016": 5085,
+    "2017": 5096,
+    "2018": 3865,
+    "2019": 3946,
+    "2022": 3746,
+    "2023": 3870,
+    "2024": 3841,
+    "2025": 3813,
+    "2026": 3048
+   }
+  },
+  "wsi": {
+   "label": "Workforce Stability Index",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 5365,
+    "2018": 4041,
+    "2019": 4097
+   }
+  },
+  "essa_index": {
+   "label": "ESSA School Index",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 5254,
+    "2018": 4041,
+    "2019": 4101,
+    "2022": 4035,
+    "2023": 4100
+   }
+  },
+  "growth_score": {
+   "label": "Content growth score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2018": 4041,
+    "2019": 4101,
+    "2022": 4035,
+    "2023": 4100,
+    "2024": 4088,
+    "2025": 3981
+   }
+  },
+  "bullying_per100": {
+   "label": "Bullying infractions per 100 students",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2015": 2,
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "corporal_per100": {
+   "label": "Corporal punishment per 100 students",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2015": 2,
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "teacher_attrition": {
+   "label": "Teacher attrition",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2
+   }
+  },
+  "teacher_retention": {
+   "label": "Teachers retained (2022-23 index)",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2023": 2
+   }
+  },
+  "grade_ab": {
+   "label": "Graded A or B (ESSA-era letter grades)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2
+   }
+  },
+  "ada": {
+   "label": "Average daily attendance",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 987,
+    "2016": 984,
+    "2017": 987,
+    "2018": 985,
+    "2019": 982,
+    "2022": 982,
+    "2023": 991,
+    "2024": 989,
+    "2025": 979,
+    "2026": 962
+   }
+  },
+  "adm": {
+   "label": "Average daily membership",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 987,
+    "2016": 984,
+    "2017": 987,
+    "2018": 985,
+    "2019": 982,
+    "2022": 982,
+    "2023": 991,
+    "2024": 989,
+    "2025": 979,
+    "2026": 962
+   }
+  },
+  "expelled_per100": {
+   "label": "Expulsions per 100 students (all expulsion codes)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 926,
+    "2019": 936,
+    "2022": 902,
+    "2023": 924,
+    "2024": 926,
+    "2025": 929,
+    "2026": 907
+   }
+  },
+  "fighting_per100": {
+   "label": "Fighting infractions per 100 students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 926,
+    "2019": 936,
+    "2022": 902,
+    "2023": 923,
+    "2024": 926,
+    "2025": 928,
+    "2026": 906
+   }
+  },
+  "insubordination_per100": {
+   "label": "Insubordination infractions per 100 students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 926,
+    "2019": 936,
+    "2022": 902,
+    "2023": 923,
+    "2024": 926,
+    "2025": 928,
+    "2026": 906
+   }
+  },
+  "actions_per100": {
+   "label": "All disciplinary actions per 100 students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 926,
+    "2019": 936,
+    "2022": 902,
+    "2023": 924,
+    "2024": 926,
+    "2025": 929,
+    "2026": 907
+   }
+  },
+  "oss": {
+   "label": "Out-of-school suspensions (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 927,
+    "2019": 936,
+    "2022": 903,
+    "2023": 925,
+    "2024": 927,
+    "2025": 930,
+    "2026": 909
+   }
+  },
+  "iss": {
+   "label": "In-school suspensions (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 927,
+    "2019": 936,
+    "2022": 903,
+    "2023": 925,
+    "2024": 927,
+    "2025": 930,
+    "2026": 909
+   }
+  },
+  "corporal": {
+   "label": "Corporal punishment (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 927,
+    "2019": 936,
+    "2022": 903,
+    "2023": 925,
+    "2024": 927,
+    "2025": 930,
+    "2026": 909
+   }
+  },
+  "expelled_all": {
+   "label": "Expulsions (count, all codes)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 927,
+    "2019": 936,
+    "2022": 903,
+    "2023": 925,
+    "2024": 927,
+    "2025": 930,
+    "2026": 909
+   }
+  },
+  "bullying": {
+   "label": "Bullying infractions (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 927,
+    "2019": 936,
+    "2022": 903,
+    "2023": 924,
+    "2024": 927,
+    "2025": 929,
+    "2026": 908
+   }
+  },
+  "fighting": {
+   "label": "Fighting infractions (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 915,
+    "2016": 911,
+    "2017": 924,
+    "2018": 927,
+    "2019": 936,
+    "2022": 903,
+    "2023": 924,
+    "2024": 927,
+    "2025": 929,
+    "2026": 908
+   }
+  },
+  "grade_af2014": {
+   "label": "School letter grade, points-based A-F (2013-14 and 2014-15)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 970
+   }
+  },
+  "grad_rate_state": {
+   "label": "Four-year graduation rate, the state's own (filed on the class's year; the 2018 rate is the one DOMO also carries)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 268,
+    "2016": 275,
+    "2017": 284,
+    "2018": 291
+   }
+  },
+  "growth_2016": {
+   "label": "School growth score, 2015-16 (the pre-ESSA value-added scale)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2016": 970
+   }
+  },
+  "ready_exceeds_2016": {
+   "label": "Students ready or exceeding in math and ELA (2015-16 recognition file)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 970
+   }
+  },
+  "pct_inexperienced": {
+   "label": "Inexperienced teachers (share; 2020-21 reads about twice the earlier years)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 986,
+    "2018": 985,
+    "2019": 982
+   }
+  },
+  "pct_provisional": {
+   "label": "Provisionally licensed teachers (share, 2016-17 only)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 986
+   }
+  },
+  "pct_out_of_field": {
+   "label": "Out-of-field teachers (share)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 979,
+    "2018": 985,
+    "2019": 982
+   }
+  },
+  "growth_va": {
+   "label": "Value-added growth score (English learners' language growth included)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 967,
+    "2018": 980,
+    "2019": 980,
+    "2022": 978,
+    "2023": 989,
+    "2024": 987
+   }
+  },
+  "achievement": {
+   "label": "Weighted achievement score",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 967,
+    "2018": 980,
+    "2019": 980,
+    "2022": 978,
+    "2023": 989
+   }
+  },
+  "quality": {
+   "label": "School quality and student success score",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 967,
+    "2018": 981,
+    "2019": 981,
+    "2022": 982,
+    "2023": 991
+   }
+  },
+  "grade_essa": {
+   "label": "School letter grade, ESSA index (2016-17 to 2022-23)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 957,
+    "2018": 970,
+    "2019": 965,
+    "2022": 965,
+    "2023": 971
+   }
+  },
+  "pct_ineffective": {
+   "label": "Teachers rated ineffective (share, 2017-18 to 2019-20)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 985,
+    "2019": 982
+   }
+  },
+  "wsi_2023_rank": {
+   "label": "Workforce Stability Index percentile rank (2022-23 index)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 970
+   }
+  },
+  "experience_rank": {
+   "label": "Experience score percentile rank (2022-23)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 986
+   }
+  },
+  "experience_years": {
+   "label": "Teachers' average years of experience (2022-23)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 986
+   }
+  },
+  "pct_experienced_1plus": {
+   "label": "Teachers with one or more years' experience (share, 2022-23)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 986
+   }
+  },
+  "attainment_rank": {
+   "label": "Attainment score percentile rank (2022-23)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 986
+   }
+  },
+  "pct_masters": {
+   "label": "Teachers with a master's degree (share, 2022-23)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 986
+   }
+  },
+  "pct_nbct": {
+   "label": "National Board certified teachers (share, 2022-23)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 986
+   }
+  },
+  "licensure_rank": {
+   "label": "Licensure score percentile rank (2022-23)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 986
+   }
+  },
+  "pct_no_awl_exception": {
+   "label": "Teachers without an Act 1240 licensure exception (share, 2022-23)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 986
+   }
+  },
+  "pct_no_exceptions": {
+   "label": "Teachers with no licensure exception (share, 2022-23)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 986
+   }
+  },
+  "retention_rank": {
+   "label": "Retention score percentile rank (2022-23)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2023": 970
+   }
+  },
+  "met_growth": {
+   "label": "Students meeting growth, all subjects (LEARNS, 2024-25)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 959
+   }
+  },
+  "met_achievement": {
+   "label": "Students meeting achievement, all subjects (LEARNS, 2024-25)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 958
+   }
+  },
+  "met_growth_low": {
+   "label": "Lowest-quartile students meeting growth (LEARNS, 2024-25)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 923
+   }
+  },
+  "grade_learns": {
+   "label": "School letter grade, LEARNS A-F (2024-25)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2025": 912
+   }
+  }
+ }
 }

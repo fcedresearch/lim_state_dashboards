@@ -824,5 +824,445 @@
   "improved_every_year": 7,
   "lapsed_longer_ago": 46
  },
- "best_schools_added": "2026-09-30"
+ "best_schools_added": "2026-09-30",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 6217,
+    "2016": 5176,
+    "2017": 5293,
+    "2018": 4980,
+    "2019": 5144,
+    "2022": 3675,
+    "2023": 3772,
+    "2024": 2790,
+    "2025": 3669,
+    "2026": 1629
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2943,
+    "2016": 956,
+    "2017": 980,
+    "2018": 1908,
+    "2019": 1968,
+    "2022": 1895,
+    "2023": 2866,
+    "2024": 1906,
+    "2025": 2802,
+    "2026": 1620
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2943,
+    "2016": 956,
+    "2017": 980,
+    "2018": 1908,
+    "2019": 1968,
+    "2022": 1895,
+    "2023": 2866,
+    "2024": 1906,
+    "2025": 2802,
+    "2026": 1629
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2972,
+    "2016": 970,
+    "2017": 988,
+    "2018": 1908,
+    "2019": 1968,
+    "2022": 1895,
+    "2023": 2866,
+    "2024": 1906,
+    "2025": 2802,
+    "2026": 1628
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2972,
+    "2016": 970,
+    "2017": 988,
+    "2018": 1908,
+    "2019": 1968,
+    "2022": 1895,
+    "2023": 2866,
+    "2024": 1906,
+    "2025": 2802,
+    "2026": 1615
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5931,
+    "2016": 4969,
+    "2017": 5104,
+    "2018": 4846,
+    "2019": 5000,
+    "2022": 3566,
+    "2023": 3675,
+    "2024": 2726,
+    "2025": 3579
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 4397,
+    "2019": 4447,
+    "2022": 3598,
+    "2023": 3786,
+    "2024": 2817,
+    "2025": 3694
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 766,
+    "2019": 839,
+    "2022": 706,
+    "2023": 787,
+    "2024": 747,
+    "2025": 789
+   }
+  },
+  "oss_per100": {
+   "label": "Out-of-school suspension",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2019": 5222,
+    "2022": 3787,
+    "2023": 3846,
+    "2024": 2889,
+    "2025": 3758
+   }
+  },
+  "iss_per100": {
+   "label": "In-school suspension",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2019": 5222,
+    "2022": 3787,
+    "2023": 3846,
+    "2024": 2889,
+    "2025": 3758
+   }
+  },
+  "progress_all": {
+   "label": "Students meeting growth",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "progress_low20": {
+   "label": "Growth for the lowest 20%",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "rating_good": {
+   "label": "Rated Excellent or Good",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ell_exit_ready": {
+   "label": "Multilingual learners reaching English proficiency",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "climate_total": {
+   "label": "School climate index",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "tch_sat_env": {
+   "label": "Teachers satisfied with the learning environment",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "stu_sat_env": {
+   "label": "Students satisfied with the learning environment",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "par_sat_env": {
+   "label": "Parents satisfied with the learning environment",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "teacher_return1": {
+   "label": "Teachers returning",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "softskills_pass": {
+   "label": "Passing the soft skills assessment",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "tch_rules": {
+   "label": "Teachers saying rules are enforced",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "par_safe": {
+   "label": "Parents saying their child feels safe",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "coll_or_career": {
+   "label": "College or career ready",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "career_cert": {
+   "label": "Earning a career-ready credential",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "college_enrolled": {
+   "label": "Graduates enrolled in college",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2025": 2
+   }
+  },
+  "chronic_state": {
+   "label": "Chronic absence (state report card)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1080,
+    "2019": 1064,
+    "2020": 1039,
+    "2021": 1110,
+    "2022": 1107,
+    "2023": 1117,
+    "2024": 1113,
+    "2025": 1112
+   }
+  },
+  "par_sat_home": {
+   "label": "Parents satisfied with school-home relations",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 1040,
+    "2019": 1059,
+    "2021": 1066,
+    "2022": 1083,
+    "2023": 1093,
+    "2024": 981,
+    "2025": 972
+   }
+  },
+  "poverty_index": {
+   "label": "Students in poverty (state index)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 1110,
+    "2019": 1118,
+    "2020": 1119,
+    "2021": 1121,
+    "2022": 1121,
+    "2023": 1119,
+    "2024": 1124,
+    "2025": 1111
+   }
+  },
+  "tch_safe": {
+   "label": "Teachers saying they feel safe",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 1098,
+    "2019": 1092,
+    "2021": 1067,
+    "2022": 1101,
+    "2023": 1110,
+    "2024": 1107,
+    "2025": 1094
+   }
+  },
+  "teacher_return3": {
+   "label": "Teachers returning (three-year average)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 1072,
+    "2019": 1060,
+    "2020": 1042,
+    "2021": 1045,
+    "2022": 1078,
+    "2023": 1083,
+    "2024": 1093,
+    "2025": 1095
+   }
+  },
+  "bully_per1000": {
+   "label": "Bullying and harassment incidents per 1,000 students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2019": 1122,
+    "2020": 1119,
+    "2021": 1121,
+    "2022": 1121,
+    "2023": 1119,
+    "2024": 1123,
+    "2025": 1111
+   }
+  },
+  "life_scholar": {
+   "label": "Seniors eligible for a LIFE scholarship",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2020": 184,
+    "2021": 218,
+    "2022": 204,
+    "2023": 214,
+    "2024": 215,
+    "2025": 208
+   }
+  }
+ }
 }

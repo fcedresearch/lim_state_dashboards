@@ -183,5 +183,322 @@
   "improved_every_year": 5,
   "lapsed_longer_ago": 47
  },
- "best_schools_added": "2026-09-30"
+ "best_schools_added": "2026-09-30",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 8721,
+    "2016": 8499,
+    "2017": 8011,
+    "2018": 7932,
+    "2019": 8237,
+    "2022": 8810,
+    "2023": 8772,
+    "2024": 8814,
+    "2025": 5890,
+    "2026": 5628
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 7712,
+    "2016": 5486,
+    "2017": 5603,
+    "2018": 5526,
+    "2019": 5307,
+    "2022": 8810,
+    "2023": 8772,
+    "2024": 8814,
+    "2025": 5890,
+    "2026": 5584
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 8493,
+    "2016": 8293,
+    "2017": 7809,
+    "2018": 7705,
+    "2019": 8032,
+    "2022": 8642,
+    "2023": 8602,
+    "2024": 8647,
+    "2025": 5748
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 7722,
+    "2019": 8020,
+    "2022": 8653,
+    "2023": 8598,
+    "2024": 8649,
+    "2025": 5784
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 1573,
+    "2016": 1548,
+    "2017": 1569,
+    "2018": 1563,
+    "2019": 1690,
+    "2022": 2083,
+    "2023": 2133,
+    "2024": 2186,
+    "2025": 1489,
+    "2026": 1382
+   }
+  },
+  "eg_met": {
+   "label": "Met or exceeded growth (EVAAS)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "eg_index": {
+   "label": "EVAAS growth index",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "spg_ab": {
+   "label": "Share graded A or B",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "spg_score": {
+   "label": "School performance score",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "iss_per1k": {
+   "label": "In-school suspensions per 1,000 students",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ccr": {
+   "label": "College and career ready share",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "rta": {
+   "label": "Third graders promoted under Read to Achieve",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "college": {
+   "label": "Graduates enrolling in college",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "act": {
+   "label": "ACT subject tests meeting the benchmark",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "workkeys": {
+   "label": "CTE concentrators earning a WorkKeys certificate",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "beg_teachers": {
+   "label": "Beginning teachers",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "nbpts": {
+   "label": "National Board certified teachers",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "lowperf": {
+   "label": "Designated low-performing",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "eds": {
+   "label": "Economic disadvantage (context)",
+   "kind": "cards",
+   "family": null,
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "title1": {
+   "label": "Title I schools (context)",
+   "kind": "cards",
+   "family": null,
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+   }
+  },
+  "incidents": {
+   "label": "Short-term suspensions",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "sts_per100": {
+   "label": "Short-term suspensions per 100 students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 2370,
+    "2019": 2497,
+    "2022": 2577,
+    "2023": 2575,
+    "2024": 2573,
+    "2025": 2546
+   }
+  },
+  "spg_grade": {
+   "label": "School performance letter grade",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 2431,
+    "2019": 2437,
+    "2022": 2487,
+    "2023": 2491,
+    "2024": 2489,
+    "2025": 2462
+   }
+  }
+ }
 }

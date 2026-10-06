@@ -656,5 +656,162 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 7
  },
- "best_schools_added": "2026-10-01"
+ "best_schools_added": "2026-10-01",
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 1126,
+    "2016": 1214,
+    "2017": 1646,
+    "2018": 1243,
+    "2019": 648,
+    "2022": 992,
+    "2023": 1211,
+    "2024": 1418,
+    "2025": 1925,
+    "2026": 2186
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2019": 645,
+    "2026": 1156
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 1019,
+    "2016": 1084,
+    "2017": 1436,
+    "2018": 1064,
+    "2019": 542,
+    "2022": 877,
+    "2023": 1107,
+    "2024": 1317,
+    "2025": 1732
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2022": 927,
+    "2023": 1086,
+    "2024": 1266,
+    "2025": 1664
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 206,
+    "2019": 3,
+    "2022": 282,
+    "2023": 264,
+    "2024": 344,
+    "2025": 484
+   }
+  },
+  "college_3yr": {
+   "label": "Graduates enrolled in postsecondary education within three years of graduation (OSBE; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 155,
+    "2016": 157,
+    "2017": 157,
+    "2018": 161,
+    "2019": 159
+   }
+  },
+  "college_fall": {
+   "label": "Graduates enrolled in postsecondary education by the fall after graduation, share of graduates (OSBE College-Going Dashboard; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 155,
+    "2016": 157,
+    "2017": 157,
+    "2018": 161,
+    "2019": 159,
+    "2022": 167
+   }
+  },
+  "college_fall_four_year": {
+   "label": "Fall enrollees at a four-year institution, share of fall enrollees (OSBE)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 120,
+    "2016": 122,
+    "2017": 127,
+    "2018": 123,
+    "2019": 130,
+    "2022": 127
+   }
+  },
+  "college_fall_in_state": {
+   "label": "Fall enrollees at an Idaho institution, share of fall enrollees (OSBE)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 120,
+    "2016": 122,
+    "2017": 127,
+    "2018": 123,
+    "2019": 130,
+    "2022": 127
+   }
+  },
+  "college_fall_public": {
+   "label": "Fall enrollees at a public institution, share of fall enrollees (OSBE)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 120,
+    "2016": 122,
+    "2017": 127,
+    "2018": 123,
+    "2019": 130,
+    "2022": 127
+   }
+  },
+  "college_first_year": {
+   "label": "Graduates enrolled in postsecondary education within the first year after graduation (OSBE; the year is the graduating class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 155,
+    "2016": 157,
+    "2017": 157,
+    "2018": 161,
+    "2019": 159
+   }
+  },
+  "graduates": {
+   "label": "Graduates in the class, the go-on rate's denominator (OSBE)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 155,
+    "2016": 157,
+    "2017": 157,
+    "2018": 161,
+    "2019": 159,
+    "2022": 167
+   }
+  }
+ }
 }
