@@ -2,21 +2,22 @@
 $ python3 /home/claude/sdf/Build/build_payload_core.py --state MD --core /home/claude/sdf/Core --out /home/claude/work1/MD --data /home/claude/work1/MD/data --extras md_core_extras
 reading the core for Maryland ...
 [core] subjects: 90,232 school rows kept; dropped 4,565 rows with no school id and 1,541 with an id but no school record
-[core] Leader in Me roster: 2,066 rows
+[core] Leader in Me roster: 2,291 rows
 [core] comparison schools: 10,350 rows
+[core] comparison: 4 rows set aside for 2 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 264 rows
   newest-year like-for-like: 3 grade-test pairs not in the state's newest file; 0 rows at 0 schools left out of that year
   subject rows added from the state's own file: 8,179 (Maryland 2025-26 MCAP reading and math (Maryland State Department of Education))
-  subject rows 98,411 · roster rows 2,066 (220 schools) · comparison rows 10,350 (1161 schools) · MRA surveys 264
+  subject rows 98,411 · roster rows 2,291 (223 schools) · comparison rows 10,346 (1161 schools) · MRA surveys 264
   identity: Jones Lane Elementary (Gaithersburg): 240048000503 -> 240048010503
   identity: S. Christa McAuliffe Elementary (Germantown): 240048000502 -> 240048010502
-[core] Leader in Me roster: 56,181 rows
-  exits: 159 of 220 roster schools carry an expiration date; 151 past it by more than 30 days (exited), 1 inside the grace window, 7 in the future, 61 undated (44 with a start date)
-  1,379 schools · 25 districts
+[core] Leader in Me roster: 59,452 rows
+  exits: 162 of 223 roster schools carry an expiration date; 152 past it by more than 30 days (exited), 1 inside the grace window, 9 in the future, 61 undated (44 with a start date)
+  1,380 schools · 25 districts
 applying the cleaning rules ...
-  37,029 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
-  Leader in Me school-years counted: 435 of 2200 reviewed
-  no start date: 20 schools · dated exits: 148 (school-years after an exit with rows: 377) · aggregate 'All grades' rows used 0, skipped 0
+  37,114 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 445 of 2230 reviewed
+  no start date: 18 schools · dated exits: 149 (school-years after an exit with rows: 378) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 54% of rows (a five-level state whose export carries four columns, usually))
   proficiency = levels 3 and 4 on 52.9% of rows
 folding in Maryland's own measures (md_core_extras) ...
@@ -107,41 +108,41 @@ folding in Maryland's own measures (md_core_extras) ...
   survey construction: the accountability detail's School Survey result equals the mean of the topic scores within 0.06 on 99.7% of 14,219 school-spans (median difference 0.019)
   college readiness: SAT 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 (2016 excluded by name); college enrollment classes of 2015 to 2024; MLDS outcomes 261 of 303 high-school names joined
   crosswalk: NCES's state system and school numbers for each federal id, audited against the state files' own names
-    1,370 of 1,379 schools carry a state id in NCES's directory; Leader in Me 220 of 220, comparison 1,150 of 1,159; 1,370 appear in at least one Maryland file
-    names: the state files' own school name agrees with DOMO's on 1,379 of 1,381 crosswalked schools; 0 triples re-pointed to a folded id; 0 shared state ids settled; 11 schools carry more than one state id across the years
-  value check of the join (files the map was not built from): DOMO's chronic absence equals the state's chronic absentee share within 0.05 on 100.0% of 6,964 school-years (largest difference 0.0); DOMO's graduation rate equals the state's four-year cohort rate of the FOLLOWING year within 0.15 on 100.0% of 428 pairs (same year: 4.2% of 640), and DOMO carries a value for 1 of the 282 school-years the state puts at 95 or above (DOMO's highest value 94.9, the state's 100.0)
+    1,371 of 1,380 schools carry a state id in NCES's directory; Leader in Me 223 of 223, comparison 1,148 of 1,157; 1,371 appear in at least one Maryland file
+    names: the state files' own school name agrees with DOMO's on 1,380 of 1,382 crosswalked schools; 0 triples re-pointed to a folded id; 0 shared state ids settled; 11 schools carry more than one state id across the years
+  value check of the join (files the map was not built from): DOMO's chronic absence equals the state's chronic absentee share within 0.05 on 100.0% of 6,976 school-years (largest difference 0.0); DOMO's graduation rate equals the state's four-year cohort rate of the FOLLOWING year within 0.15 on 100.0% of 428 pairs (same year: 4.2% of 640), and DOMO carries a value for 1 of the 282 school-years the state puts at 95 or above (DOMO's highest value 94.9, the state's 100.0)
   fill: 47 school-years where DOMO carries no chronic absence and the state does ({2018: 24, 2019: 20, 2022: 3}), 0 of them Leader in Me; no DOMO value is overwritten, and the graduation rate is not filled
-  rows gain: attend_rate on 12,657 school-year-bands (196 Leader in Me schools ever), star_points on 8,807 school-year-bands (196 Leader in Me schools ever), svy_educator on 7,254 school-year-bands (196 Leader in Me schools ever), svy_student on 6,870 school-year-bands (196 Leader in Me schools ever), grad_rate_md on 1,278 school-year-bands (23 Leader in Me schools ever), college_enroll on 1,740 school-year-bands (20 Leader in Me schools ever); 0 school-years had no band to sit in; the attendance rate sits at the state's 95 ceiling on 4,198 school-year-bands
+  rows gain: attend_rate on 12,684 school-year-bands (198 Leader in Me schools ever), star_points on 8,825 school-year-bands (198 Leader in Me schools ever), svy_educator on 7,269 school-year-bands (198 Leader in Me schools ever), svy_student on 6,885 school-year-bands (198 Leader in Me schools ever), grad_rate_md on 1,278 school-year-bands (23 Leader in Me schools ever), college_enroll on 1,740 school-year-bands (20 Leader in Me schools ever); 0 school-years had no band to sit in; the attendance rate sits at the state's 95 ceiling on 4,201 school-year-bands
   card: 17 Maryland measures, each group on each year's own membership
-    survey card line svy_educator: 5 Leader in Me points, latest 2025 n=70 (6.85)
-    survey card line svy_student: 5 Leader in Me points, latest 2025 n=70 (5.76)
-    survey card line svy_ed_staff_student: 5 Leader in Me points, latest 2025 n=70 (8.89)
-    survey card line svy_ed_student_student: 5 Leader in Me points, latest 2025 n=70 (5.91)
-    survey card line svy_ed_emotional_safety: 5 Leader in Me points, latest 2025 n=70 (7.0)
-    survey card line svy_ed_supports: 5 Leader in Me points, latest 2025 n=70 (7.18)
-    survey card line svy_st_staff_student: 5 Leader in Me points, latest 2025 n=70 (7.68)
-    survey card line svy_st_student_student: 5 Leader in Me points, latest 2025 n=70 (3.89)
-    survey card line svy_st_emotional_safety: 5 Leader in Me points, latest 2025 n=70 (6.11)
-    survey card line svy_st_supports: 5 Leader in Me points, latest 2025 n=70 (6.78)
-  per-school Maryland records for the pack: 13,148 (63 columns, 25 of them survey)
-  Maryland's measures on 13,134 school-year-bands: 12,260 joined to existing rows, 874 school-year-bands added with no test rows of their own
+    survey card line svy_educator: 5 Leader in Me points, latest 2025 n=71 (6.84)
+    survey card line svy_student: 5 Leader in Me points, latest 2025 n=71 (5.76)
+    survey card line svy_ed_staff_student: 5 Leader in Me points, latest 2025 n=71 (8.89)
+    survey card line svy_ed_student_student: 5 Leader in Me points, latest 2025 n=71 (5.91)
+    survey card line svy_ed_emotional_safety: 5 Leader in Me points, latest 2025 n=71 (7.0)
+    survey card line svy_ed_supports: 5 Leader in Me points, latest 2025 n=71 (7.17)
+    survey card line svy_st_staff_student: 5 Leader in Me points, latest 2025 n=71 (7.69)
+    survey card line svy_st_student_student: 5 Leader in Me points, latest 2025 n=71 (3.89)
+    survey card line svy_st_emotional_safety: 5 Leader in Me points, latest 2025 n=71 (6.11)
+    survey card line svy_st_supports: 5 Leader in Me points, latest 2025 n=71 (6.79)
+  per-school Maryland records for the pack: 13,166 (63 columns, 25 of them survey)
+  Maryland's measures on 13,161 school-year-bands: 12,287 joined to existing rows, 874 school-year-bands added with no test rows of their own
   core measures filled from Maryland's own files where DOMO had none: chronic_absent 136 rows
-  school type from NCES: Title I on 1,338 schools (420 yes), charter 55, magnet 93, alternative 29; Title I published 2017-2022, carried forward after
-  funders: 32 Maryland schools carry a funding source (29 on the page; Kern 5, 3 on the page); latest non-blank year per school
+  school type from NCES: Title I on 1,339 schools (421 yes), charter 55, magnet 93, alternative 29; Title I published 2017-2022, carried forward after
+  funders: 32 Maryland schools carry a funding source (31 on the page; Kern 5, 5 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 78  by band {'Primary': {'pairs': 55, 'unmatched': 1}, 'Secondary': {'pairs': 23, 'unmatched': 0}}
+  pairs 83  by band {'Primary': {'pairs': 56, 'unmatched': 1}, 'Secondary': {'pairs': 27, 'unmatched': 0}}
   MRA: 173 surveys · 124 schools · 641 sentinel values · 31 shells
-  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 51, 'comp_n': 1068, 'lim_change': 5.62, 'comp_change': 6.34, 'p': 0.445} · without the 44 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 8, 'comp_n': 1068, 'lim_change': 6.12, 'comp_change': 6.34, 'p': 0.929}
-  roster: 49 counted, 150 exited, 1 not counted yet, 20 not counted
-best-performing schools: 8 of 51 counted schools, 70 measures in 23 outcomes
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 53, 'comp_n': 1068, 'lim_change': 5.49, 'comp_change': 6.34, 'p': 0.355} · without the 44 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 10, 'comp_n': 1068, 'lim_change': 5.36, 'comp_change': 6.34, 'p': 0.628}
+  roster: 51 counted, 151 exited, 3 not counted yet, 18 not counted
+best-performing schools: 8 of 53 counted schools, 70 measures in 23 outcomes
 
-wrote md_payload.json  (28.2 MB, 37,903 rows) · page kind full (51 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
+wrote md_payload.json  (28.3 MB, 37,988 rows) · page kind full (53 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py md_payload.json MD_Dashboard.html MD_Methods.html
-payload 28.2 MB -> 2.13 MB gzip
-MD_Dashboard.html: 3079 KB
-MD_Methods.html: 71 KB
+payload 28.3 MB -> 2.13 MB gzip
+MD_Dashboard.html: 3098 KB
+MD_Methods.html: 73 KB
 
 $ python3 /home/claude/sdf/Build/verify_core.py --state MD --work /home/claude/work1/MD
 
@@ -162,12 +163,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': -0.2, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [2 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [151 exited, 1 in grace, 7 future]
+ok   the exit rule's counts recompute from the roster  [152 exited, 1 in grace, 9 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [55 composite cells at 100, 2 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [2 collisions]
@@ -182,15 +183,18 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [20 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 152 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [152 Year 0 rows]
+ok   schools with no start date appear in neither group  [18 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [147 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [151 exited (0 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [149 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [152 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 150, 'counted': 49, 'not counted': 20, 'not counted yet': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 151, 'counted': 51, 'not counted': 18, 'not counted yet': 3}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -198,25 +202,25 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [756 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [757 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 54% of rows (a five-level state whose export carries four columns, usually)]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [3,278 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [3,241 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [197 schools]
-ok   the school count never exceeds the band-slice count  [1119 schools vs 1217 band slices]
+ok   combined-grade schools appear in both bands  [198 schools]
+ok   the school count never exceeds the band-slice count  [1121 schools vs 1220 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline -0.133 vs payload -0.130 on 78 pairs]
-ok   the mean signed baseline gap is under one point  [-0.133]
+ok   the signed baseline gap recomputes to the payload's  [offline -0.163 vs payload -0.160 on 83 pairs]
+ok   the mean signed baseline gap is under one point  [-0.163]
 ok   the widest single baseline gap is inside the caliper's reach  [5.2 points]
-ok   the printed signed gap is not a negative zero  [-0.13]
+ok   the printed signed gap is not a negative zero  [-0.16]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
@@ -228,7 +232,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.9s]
+ok   load time is workable  [0.8s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -238,12 +242,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [17 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.4458 scipy 0.4458 · window 2022-2026 · LiM n=51 mean +5.62 · comparison n=1068 mean +6.34]
-ok   the headline counts schools, not band slices  [page 1119 vs offline 1119 on 2022-2026]
-ok   the page's Leader in Me count is the builder's  [51 vs 51]
+ok   the headline p recomputes offline  [page 0.3560 scipy 0.3560 · window 2022-2026 · LiM n=53 mean +5.49 · comparison n=1068 mean +6.34]
+ok   the headline counts schools, not band slices  [page 1121 vs offline 1121 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [53 vs 53]
 ok   the district filter re-renders the headline  [In Baltimore City Public Schools schools, between 2021-22 and 2025-26, Leader in Me school]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [453 of 1368 schools; In Maryland Title I schools, between 2021-22 and 2025-26, Leader in Me schools r]
+ok   choosing 'Title I schools' narrows the view and names it  [454 of 1369 schools; In Maryland Title I schools, between 2021-22 and 2025-26, Leader in Me schools r]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Maryland schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025-26]
 ok   Title I status is known for most schools on the page  [97.8%]
@@ -261,11 +265,11 @@ ok   measure 'svy_student' either draws or says why
 ok   measure 'grad_rate_md' either draws or says why
 ok   measure 'college_enroll' either draws or says why
 ok   the matched toggle re-renders the headline  [In Maryland schools (matched to similar schools only), between 2021-22 and 2025-26, Leader]
-ok   the matched view shrinks or equals the Leader in Me count  [16 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [17 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Baltimore City Public Schools generates cards or says there is nothing to report  [12 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.4457701873682164, 'n1': 51, 'n2': 1068}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.3559860085437103, 'n1': 53, 'n2': 1068}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -284,12 +288,12 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [4,691 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [124,320 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [146,667 bytes]
 ok   the pptx export is named for the state and chart  [MD_Percent_meeting_the_standard_year_by_year_Maryland_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [125,281 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [148,368 bytes]
 ok   the docx export is named for the state and chart  [MD_Percent_meeting_the_standard_year_by_year_Maryland_schools.docx]
-ok   the research pack downloads with its sections  [73,092 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'report_card', 'report_card_school', 'roster']]
-ok   the pack's Leader in Me count for the district is the page's  [7 vs 7]
+ok   the research pack downloads with its sections  [73,540 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'report_card', 'report_card_school', 'roster']]
+ok   the pack's Leader in Me count for the district is the page's  [8 vs 8]
 ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Maryland schools like Prince George's County Public Schools’, between 2021-22 and 2025-26, Leader in Me schools rose ]
 ok   the look-alike box reports both counts or says why not  [Schools like Prince George's County Public Schools’: 68 Leader in Me schools and 226 comparison schools look like Prince George's County Public Schools’ 195 sch]
 ok   the matched switch is disabled while an anchor is set
@@ -299,7 +303,7 @@ ok   the anchor's own schools are never inside the look-alike groups
 ok   the school list downloads with one row per school  [264 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Maryland grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 4.1% on Percent ]
+ok   choosing a grade re-renders the headline and names the grade  [In Maryland grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 4.3% on Percent ]
 ok   whole-school measures switch off while a grade is chosen  [9 whole-school measures in the payload]
 ok   dark mode re-renders without errors
 ok   no horizontal overflow at 900px  [0px]
@@ -328,38 +332,38 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +5.62 pts (n=51) vs comparison +6.34 pts (n=1068), p=0.4458 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +5.49 pts (n=53) vs comparison +6.34 pts (n=1068), p=0.3560 -> not significant
 
 ==========================================================================
-166 of 166 checks pass
+169 of 169 checks pass
 ==========================================================================
 
 $ python3 /home/claude/sdf/Build/states/md_core_verify.py --work /home/claude/work1/MD
 
 Maryland's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [220 of 220]
-ok   the crosswalk reaches most comparison schools  [1,150 of 1,159]
-ok   NCES's own id triples anchor the crosswalk  [1,381 triples for 1,379 schools]
-ok   the state files' own school names agree with DOMO's on nearly every crosswalked school  [1,379 of 1,381; 2 read one by one]
-ok   DOMO's chronic absence is the state's chronic absentee share to the decimal (an independent check of the join)  [100.0% of 6,964 school-years within 0.05]
+ok   the crosswalk reaches nearly every Leader in Me school  [223 of 223]
+ok   the crosswalk reaches most comparison schools  [1,148 of 1,157]
+ok   NCES's own id triples anchor the crosswalk  [1,382 triples for 1,380 schools]
+ok   the state files' own school names agree with DOMO's on nearly every crosswalked school  [1,380 of 1,382; 2 read one by one]
+ok   DOMO's chronic absence is the state's chronic absentee share to the decimal (an independent check of the join)  [100.0% of 6,976 school-years within 0.05]
 ok   DOMO's graduation rate is the state's four-year cohort rate of the following year, not the same year  [next year 100.0% of 428; same year 4.2% of 640]
 ok   DOMO's graduation rate is blank where the state's rate is 95 or above, as the page says  [DOMO carries 1 of 282; DOMO's highest 94.9]
-ok   no state id is on two schools  [1,381 triples, 1,370 schools]
+ok   no state id is on two schools  [1,382 triples, 1,371 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page
 ok   the join note on the card carries the reach
 ok   the graduation rate was not filled or overwritten, and the page says so
 ok   the chronic-absence fill touched only school-years DOMO lacked, in the years and counts the page names  [47 filled, 0 of them Leader in Me]
-ok   attendance 2025: the pack's attend_rate is the state file's own value through the crosswalk  [1156 of 1156 agree (need 800)]
-ok   attendance 2025: the rows' primary-band attendance rate is the file's own Elementary rate  [668 of 668]
+ok   attendance 2025: the pack's attend_rate is the state file's own value through the crosswalk  [1157 of 1157 agree (need 800)]
+ok   attendance 2025: the rows' primary-band attendance rate is the file's own Elementary rate  [669 of 669]
 ok   attendance 2025: rates the state writes as '95 or above' arrive as 95 and never above  [119 capped rows in the file]
 ok   the attendance rate is a measure in the rows with Leader in Me school-years behind it
-ok   survey (educators) 2025: the pack's svy_ed_staff_student is the state file's own value through the crosswalk  [1278 of 1278 agree (need 1000)]
-ok   survey (educators, the overall score as the mean of the file's eleven topics) 2025: the pack's svy_educator is the state file's own value through the crosswalk  [1278 of 1278 agree (need 1000)]
-ok   survey 2025: the rows' educator score equals the pack's value  [1330 of 1330]
-ok   survey (students, one-span schools) 2025: the pack's svy_st_staff_student is the state file's own value through the crosswalk  [1145 of 1145 agree (need 900)]
+ok   survey (educators) 2025: the pack's svy_ed_staff_student is the state file's own value through the crosswalk  [1280 of 1280 agree (need 1000)]
+ok   survey (educators, the overall score as the mean of the file's eleven topics) 2025: the pack's svy_educator is the state file's own value through the crosswalk  [1280 of 1280 agree (need 1000)]
+ok   survey 2025: the rows' educator score equals the pack's value  [1333 of 1333]
+ok   survey (students, one-span schools) 2025: the pack's svy_st_staff_student is the state file's own value through the crosswalk  [1146 of 1146 agree (need 900)]
 ok   the state's own survey construction holds: the accountability detail's School Survey result is the mean of the topic scores  [99.7% of 14,219 school-spans]
-ok   star ratings 2025: the pack's star_points is the state file's own value through the crosswalk  [1275 of 1275 agree (need 1000)]
+ok   star ratings 2025: the pack's star_points is the state file's own value through the crosswalk  [1277 of 1277 agree (need 1000)]
 ok   star ratings 2025: the 32 schools that inherit a paired school's star carry neither a star nor points in the pack  [2 of them on the page (most have no tested grades and so no rows)]
 ok   the accountability points are a measure in the rows
 ok   accountability detail (four-year cohort rate, re-read) 2025: the pack's grad_rate_md is the state file's own value through the crosswalk  [211 of 211 agree (need 150)]
@@ -372,12 +376,12 @@ ok   college enrollment (12 months, re-read) 2024: the pack's college_enroll is 
 ok   MLDS outcomes: the pack's eventual-enrollment share is the workbook's own value, re-read from the xlsx, through the name join  [36 of 36 school-cohorts in the workbook's first rows]
 ok   MLDS outcomes (immediate enrollment, the cached table) 2024: the pack's mlds_enrolled_immediate is the state file's own value through the crosswalk  [194 of 194 agree (need 120)]
 ok   the MLDS name join reaches most of the workbook's high schools and names the rest  [261 of 303]
-ok   identifications 2025: every listed TSI school on the page is 100 in the pack and every other school with a star that year is 0  [385 listed, 892 not]
-ok   Attendance rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 92.65 (n=70) vs offline 92.65 (n=70)]
-ok   Accountability points earned (share of possible): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 60.54 (n=70) vs offline 60.54 (n=70)]
-ok   Educators: overall School Survey score: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 6.85 (n=70) vs offline 6.85 (n=70)]
-ok   Students: overall School Survey score: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 5.76 (n=70) vs offline 5.76 (n=70)]
-ok   Students: staff-student relationships (School Survey): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 7.68 (n=70) vs offline 7.68 (n=70)]
+ok   identifications 2025: every listed TSI school on the page is 100 in the pack and every other school with a star that year is 0  [385 listed, 894 not]
+ok   Attendance rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 92.65 (n=71) vs offline 92.65 (n=71)]
+ok   Accountability points earned (share of possible): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 60.46 (n=71) vs offline 60.46 (n=71)]
+ok   Educators: overall School Survey score: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 6.84 (n=71) vs offline 6.84 (n=71)]
+ok   Students: overall School Survey score: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 5.76 (n=71) vs offline 5.76 (n=71)]
+ok   Students: staff-student relationships (School Survey): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 7.69 (n=71) vs offline 7.69 (n=71)]
 ok   Four-year cohort graduation (MSDE): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 90.72 (n=6) vs offline 90.72 (n=6)]
 ok   Graduates enrolled in college within 12 months: the latest Leader in Me point recomputes from the long table and the membership file  [2024: payload 68.77 (n=6) vs offline 68.77 (n=6)]
 ok   the closure years are on no Maryland card  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
@@ -394,21 +398,21 @@ ok   the student Bullying topic and the ACT are in the pack and not on the card
 ok   the DOMO graduation rate is on the page as it arrived and the state's own rate beside it
 ok   every exclusion is counted on the cleaning audit
 ok   the accountability files' year labels were read as the school year's end, as the pull manifest records
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 11,500 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [383 Leader in Me school-years on the cards]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 11,467 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [391 Leader in Me school-years on the cards]
 ok   no card member sits past the core's last year  [2025 vs 2026]
-ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Accountability points earned (share of possible): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Educators: overall School Survey score: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Students: overall School Survey score: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Educators: staff-student relationships (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Educators: student-student relationships (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Educators: emotional safety (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Educators: behavioral and academic supports (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Students: staff-student relationships (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Students: student-student relationships (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Students: emotional safety (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Students: behavioral and academic supports (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
+ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Accountability points earned (share of possible): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Educators: overall School Survey score: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Students: overall School Survey score: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Educators: staff-student relationships (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Educators: student-student relationships (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Educators: emotional safety (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Educators: behavioral and academic supports (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Students: staff-student relationships (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Students: student-student relationships (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Students: emotional safety (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
+ok   Students: behavioral and academic supports (School Survey): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=71]
 ok   On track in ninth grade: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=6]
 ok   Four-year cohort graduation (MSDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=6]
 ok   Graduates enrolled in college within 12 months: the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=6]
@@ -417,44 +421,44 @@ ok   Mean SAT total score: the Leader in Me point in 2025 rests on at least thre
 ok   every card measure carries the poverty context line
 ok   the two overall survey scores and eight topics are on the card, educators and students apart  [svy_educator, svy_student, svy_ed_staff_student, svy_ed_student_student, svy_ed_emotional_safety, svy_ed_supports, svy_st_staff_student, svy_st_student_student, svy_st_emotional_safety, svy_st_supports]
 ok   Educators: overall School Survey score: the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Educators: overall School Survey score: four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Educators: overall School Survey score: four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Educators: overall School Survey score: drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
 ok   Students: overall School Survey score: the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Students: overall School Survey score: four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Students: overall School Survey score: four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Students: overall School Survey score: drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
 ok   Educators: staff-student relationships (School Survey): the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Educators: staff-student relationships (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Educators: staff-student relationships (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Educators: staff-student relationships (School Survey): drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
 ok   Educators: student-student relationships (School Survey): the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Educators: student-student relationships (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Educators: student-student relationships (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Educators: student-student relationships (School Survey): drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
 ok   Educators: emotional safety (School Survey): the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Educators: emotional safety (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Educators: emotional safety (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Educators: emotional safety (School Survey): drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
 ok   Educators: behavioral and academic supports (School Survey): the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Educators: behavioral and academic supports (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Educators: behavioral and academic supports (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Educators: behavioral and academic supports (School Survey): drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
 ok   Students: staff-student relationships (School Survey): the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Students: staff-student relationships (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Students: staff-student relationships (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Students: staff-student relationships (School Survey): drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
 ok   Students: student-student relationships (School Survey): the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Students: student-student relationships (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Students: student-student relationships (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Students: student-student relationships (School Survey): drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
 ok   Students: emotional safety (School Survey): the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Students: emotional safety (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Students: emotional safety (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Students: emotional safety (School Survey): drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
 ok   Students: behavioral and academic supports (School Survey): the respondent group and the 1-to-10 scale are in the caption and the domain is named
-ok   Students: behavioral and academic supports (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=70]
+ok   Students: behavioral and academic supports (School Survey): four or more Leader in Me points, each on three or more schools, the latest in 2025  [5 points, latest n=71]
 ok   Students: behavioral and academic supports (School Survey): drawn only in survey years  [survey years [2019, 2022, 2023, 2024, 2025]]
-ok   svy_educator is a measure in the rows with Leader in Me school-years behind it  [368 Leader in Me school-years]
-ok   svy_student is a measure in the rows with Leader in Me school-years behind it  [367 Leader in Me school-years]
+ok   svy_educator is a measure in the rows with Leader in Me school-years behind it  [375 Leader in Me school-years]
+ok   svy_student is a measure in the rows with Leader in Me school-years behind it  [374 Leader in Me school-years]
 ok   the student score sits by span: primary and secondary bands both carry it
 ok   the methods page carries the survey note with the scale, the ten-respondent rule and the closure years
 ok   the methods page names the attendance ceiling and the PDF-only suspensions
 ok   the research pack carries every survey topic, labelled with the respondent group and the domain  [25 survey columns in the pack]
 ok   the banner names the Maryland School Survey and the attendance files
-ok   the research pack's per-school Maryland values are keyed to schools on the page  [13,148 records]
-ok   every school with a state id on the page has it in the pack  [1,350 of 1,368]
+ok   the research pack's per-school Maryland values are keyed to schools on the page  [13,166 records]
+ok   every school with a state id on the page has it in the pack  [1,352 of 1,369]
 ok   look-alike mode names the educators' bullying score as its behavior measure
 ok   the measures the card can carry are on it  [17 on the card]
 ok   no measure label contains another (the measure picker is driven by label text)  [percent meeting the standard; percent in the lowest level; schooldigger standard score; chronic absence; graduation rate; attendance rate; accountability points earned (share of possible); educators: overall school survey score; students: overall school survey score; four-year cohort graduation (msde); college enrollment within 12 months]
@@ -463,9 +467,9 @@ ok   the prepared 2025-26 file has one row per school, grade and subject  [0 dup
 ok   where a 2025-26 row carries all four levels they add to 100 and proficiency is levels 3 and 4, within the state's rounding  [7,700 rows carry all four]
 ok   the reading is DOMO's own: every DOMO 2024-25 grade 3-8 row is one row of the state's 2024-25 workbook and every value agrees  [7160 of 7160 found; PercentLevel1 7157/7157, PercentLevel2 7157/7157, PercentLevel3 6776/6776, PercentLevel4 6776/6776, PercentMetStandard 7160/7160]
 ok   the high school reading is DOMO's own: every DOMO 2024-25 English 10, Algebra I, Algebra II and Geometry row is one row of the state's 2024-25 workbook and every value agrees  [988 of 988 found; PercentLevel1 980/980, PercentLevel2 980/980, PercentLevel3 871/871, PercentLevel4 871/871, PercentMetStandard 988/988]
-ok   every prepared 2025-26 row reached the working subject file and the page runs to 2025-26  [8,179 of 8,179 rows; page runs to 2026]
+ok   every prepared 2025-26 row reached the working subject file, except those the newest-year like-for-like rule leaves out, and the page runs to 2025-26  [8,179 of 8,179 rows (0 left out like for like); page runs to 2026]
 ok   2025-26 on the page is reading and math only  [['ELA', 'Math']]
-ok   the prepared file reaches nearly every school DOMO tested in grades 3-8 in 2024-25, and every Leader in Me one  [1,096 of 1,099 schools; Leader in Me 65 of 65]
+ok   the prepared file reaches nearly every school DOMO tested in grades 3-8 in 2024-25, and every Leader in Me one  [1,096 of 1,099 schools; Leader in Me 66 of 66]
 ok   the prepared file's high school rows reach nearly every school DOMO carried a high school test for in 2024-25, and every Leader in Me one  [462 of 470 schools; Leader in Me 17 of 17]
 ok   high schools carry 2025-26 Secondary reading or math rows on the page wherever they carried 2024-25 ones  [171 of 173 high schools]
 

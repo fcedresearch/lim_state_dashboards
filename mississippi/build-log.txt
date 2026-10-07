@@ -2,19 +2,20 @@
 $ python3 /home/claude/sdf/Build/build_payload_core.py --state MS --core /home/claude/sdf/Core --out /home/claude/work1/MS --data /home/claude/work1/MS/data --extras ms_core_extras
 reading the core for Mississippi ...
 [core] subjects: 53,580 school rows kept; dropped 24,996 rows with no school id and 1,701 with an id but no school record
-[core] Leader in Me roster: 689 rows
+[core] Leader in Me roster: 769 rows
 [core] comparison schools: 6,722 rows
+[core] comparison: 8 rows set aside for 4 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 107 rows
   newest-year like-for-like: 1 grade-test pairs not in the state's newest file; 0 rows at 0 schools left out of that year
   subject rows added from the state's own file: 4,883 (Mississippi 2025-26 MAAP results (Mississippi Department of Education))
-  subject rows 58,463 · roster rows 689 (76 schools) · comparison rows 6,722 (816 schools) · MRA surveys 107
-[core] Leader in Me roster: 56,181 rows
-  exits: 64 of 76 roster schools carry an expiration date; 41 past it by more than 30 days (exited), 0 inside the grace window, 23 in the future, 12 undated (11 with a start date)
-  892 schools · 163 districts
+  subject rows 58,463 · roster rows 769 (82 schools) · comparison rows 6,714 (816 schools) · MRA surveys 107
+[core] Leader in Me roster: 59,452 rows
+  exits: 70 of 82 roster schools carry an expiration date; 37 past it by more than 30 days (exited), 0 inside the grace window, 33 in the future, 12 undated (11 with a start date)
+  894 schools · 165 districts
 applying the cleaning rules ...
   29,841 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
-  Leader in Me school-years counted: 270 of 760 reviewed
-  no start date: 1 schools · dated exits: 35 (school-years after an exit with rows: 86) · aggregate 'All grades' rows used 0, skipped 0
+  Leader in Me school-years counted: 302 of 820 reviewed
+  no start date: 1 schools · dated exits: 36 (school-years after an exit with rows: 86) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 10% of rows (a five-level state whose export carries four columns, usually))
   proficiency = level 4 alone on 12.2% of rows
 folding in Mississippi's own measures (ms_core_extras) ...
@@ -54,8 +55,8 @@ folding in Mississippi's own measures (ms_core_extras) ...
     the spring both reports carry: 228 of 228 composites agree to two decimals; the newer report's copy is kept
     NCES directory: 1,175 federal-to-state id pairs from the cache (8 CCD files unchanged)
   crosswalk: NCES's state id for each federal id; the August name-and-district join as the audit and the fallback
-    852 of 892 schools carry a state id the report cards know (ccd 879); Leader in Me 75 of 76, comparison 777 of 816; not reached: Ward-Stewart Elementary School (Starkville Oktibbeha Consolidated School District)
-    audit against the August join: both speak for 799 schools and agree on 794; 0 schools joined by name alone; 0 shared state ids settled; 0 NCES pairs re-pointed to an id the core folded
+    854 of 894 schools carry a state id the report cards know (ccd 881); Leader in Me 81 of 82, comparison 773 of 812; not reached: Ward-Stewart Elementary School (Starkville Oktibbeha Consolidated School District)
+    audit against the August join: both speak for 800 schools and agree on 795; 0 schools joined by name alone; 0 shared state ids settled; 0 NCES pairs re-pointed to an id the core folded
     disagreement (namesake): Shivers Middle School (Aberdeen School District, comparison): NCES says 4820-026 None (None) and the name join says 4820-032 Belle Shivers Middle School (Aberdeen School District), which belongs to Belle-Shivers Middle School
     disagreement (namesake): North Woolmarket Elementary and Middle School (Harrison County School District, comparison): NCES says 2400-038 North Woolmarket Elementary & Middle (Harrison County School District) and the name join says 2400-052 Woolmarket Elementary School (Harrison County School District), which belongs to Woolmarket Elementary
     disagreement (roster_district): Carver Elementary (Sunflower County Consolidated School District, Leader in Me): NCES says 3300-004 Carver Elementary School (Jefferson Davis County School District) and the name join says 6711-006 Carver Elementary School (Sunflower County Consolidate School District), which belongs to Carver Elementary
@@ -71,19 +72,19 @@ folding in Mississippi's own measures (ms_core_extras) ...
   school type from NCES: Title I on 857 schools (687 yes), charter 7, magnet 13, alternative 3; Title I published 2017-2022, carried forward after
   funders: 28 Mississippi schools carry a funding source (28 on the page; Kern 11, 11 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 57  by band {'Primary': {'pairs': 31, 'unmatched': 0}, 'Secondary': {'pairs': 26, 'unmatched': 0}}
+  pairs 58  by band {'Primary': {'pairs': 31, 'unmatched': 0}, 'Secondary': {'pairs': 27, 'unmatched': 0}}
   MRA: 94 surveys · 36 schools · 384 sentinel values · 5 shells
   headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 35, 'comp_n': 597, 'lim_change': 6.42, 'comp_change': 5.26, 'p': 0.372} · without the 11 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 28, 'comp_n': 597, 'lim_change': 6.77, 'comp_change': 5.26, 'p': 0.326}
-  roster: 33 counted, 41 exited, 1 not counted yet, 1 not counted
+  roster: 38 counted, 37 exited, 5 not counted yet, 2 not counted
 best-performing schools: 5 of 38 counted schools, 56 measures in 18 outcomes
 
 wrote ms_payload.json  (15.3 MB, 29,841 rows) · page kind full (35 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py ms_payload.json MS_Dashboard.html MS_Methods.html
 payload 15.3 MB -> 0.88 MB gzip
-MS_Dashboard.html: 1451 KB
-MS_Methods.html: 57 KB
+MS_Dashboard.html: 1465 KB
+MS_Methods.html: 58 KB
 
 $ python3 /home/claude/sdf/Build/verify_core.py --state MS --work /home/claude/work1/MS
 
@@ -104,12 +105,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [4 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [41 exited, 0 in grace, 23 future]
+ok   the exit rule's counts recompute from the roster  [37 exited, 0 in grace, 33 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [36 composite cells at 100, 0 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -124,19 +125,22 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 25 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [25 Year 0 rows]
 ok   schools with no start date appear in neither group  [1 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [30 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [41 exited (0 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [31 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [37 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 41, 'counted': 33, 'not counted yet': 1, 'not counted': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 38, 'exited': 37, 'not counted yet': 5, 'not counted': 2}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
-ok   the poverty share rides on most rows for the look-alike caliper  [100%]
+ok   the poverty share rides on most rows for the look-alike caliper  [99%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
@@ -147,7 +151,7 @@ ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [1,243 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [1,336 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [289 schools]
 ok   the school count never exceeds the band-slice count  [632 schools vs 794 band slices]
@@ -155,8 +159,8 @@ ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline -0.004 vs payload +0.000 on 57 pairs]
-ok   the mean signed baseline gap is under one point  [-0.004]
+ok   the signed baseline gap recomputes to the payload's  [offline +0.003 vs payload +0.000 on 58 pairs]
+ok   the mean signed baseline gap is under one point  [+0.003]
 ok   the widest single baseline gap is inside the caliper's reach  [2.0 points]
 ok   the printed signed gap is not a negative zero  [0.0]
 ok   no MRA value of exactly 100 survives into the payload
@@ -170,7 +174,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.4s]
+ok   load time is workable  [0.6s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -187,7 +191,7 @@ ok   the district filter re-renders the headline  [Not enough schools match thes
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
 ok   choosing 'Title I schools' narrows the view and names it  [637 of 890 schools; In Mississippi Title I schools, between 2021-22 and 2025-26, Leader in Me school]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Mississippi schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025]
 ok   Title I status is known for most schools on the page  [96.3%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
@@ -220,17 +224,20 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [2,837 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [171,625 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [175,410 bytes]
 ok   the pptx export is named for the state and chart  [MS_Percent_meeting_the_standard_year_by_year_Mississippi_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [172,087 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [176,611 bytes]
 ok   the docx export is named for the state and chart  [MS_Percent_meeting_the_standard_year_by_year_Mississippi_schools.docx]
-ok   the research pack downloads with its sections  [19,712 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [19,083 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it will come back.]
-ok   the look-alike box reports both counts or says why not  [Schools like Rankin County School District’s: 4 Leader in Me schools and 219 comparison schools look like Rankin County School District’s 24 schools with result]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Mississippi schools like Rankin County School District’s, between 2022-23 and 2023-24, Leader in Me schools rose 5.3%]
+ok   the look-alike box reports both counts or says why not  [Schools like Rankin County School District’s: 5 Leader in Me schools and 218 comparison schools look like Rankin County School District’s 24 schools with result]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-skip look-alike recompute  [look-alike groups have no balanced window]
+ok   the look-alike headline p recomputes offline  [p=0.1351]
+ok   the anchor's own schools are never inside the look-alike groups
+ok   the school list downloads with one row per school  [29 rows, 0 same-name pairs]
+ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
 ok   choosing a grade re-renders the headline and names the grade  [In Mississippi grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 2.4% on Perce]
 ok   whole-school measures switch off while a grade is chosen  [3 whole-school measures in the payload]
@@ -264,27 +271,27 @@ ok   the undated schools are listed by name in the payload
   HEADLINE (statewide, 2022-2026, no filters): Leader in Me +6.42 pts (n=35) vs comparison +5.26 pts (n=597), p=0.3724 -> not significant
 
 ==========================================================================
-155 of 155 checks pass · 2 skipped
+162 of 162 checks pass · 1 skipped
 ==========================================================================
 
 $ python3 /home/claude/sdf/Build/states/ms_core_verify.py --work /home/claude/work1/MS
 
 Mississippi's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [75 of 76]
-ok   the crosswalk reaches most comparison schools  [777 of 816]
-ok   NCES's own id pairs anchor the crosswalk  [879 exact pairs of 879 entries (ccd 879)]
-ok   NCES and the August name join agree where both speak  [794 of 799; 5 read one by one]
+ok   the crosswalk reaches nearly every Leader in Me school  [81 of 82]
+ok   the crosswalk reaches most comparison schools  [773 of 812]
+ok   NCES's own id pairs anchor the crosswalk  [881 exact pairs of 881 entries (ccd 881)]
+ok   NCES and the August name join agree where both speak  [795 of 800; 5 read one by one]
 ok   every disagreement is classified, and the Leader in Me ones are roster-district labels NCES and the subject file both contradict  [{'namesake': 3, 'roster_district': 1, 'new_federal_id': 1}]
-ok   no state id is on two schools  [879 entries, 879 schools]
+ok   no state id is on two schools  [881 entries, 881 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page
 ok   the methods page says how the join works and audits it
-ok   the 2024-25 growth index, experienced-teacher share and letter grade on the page equal the state's workbook for Leader in Me schools  [58 of 58 Leader in Me schools with one state id]
+ok   the 2024-25 growth index, experienced-teacher share and letter grade on the page equal the state's workbook for Leader in Me schools  [64 of 64 Leader in Me schools with one state id]
 ok   the 2024-25 chronic-absence column on the rows is the state's own workbook value  [690 of 690 schools]
-ok   Math growth (MDE): the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 60.72 (n=34) vs offline 60.72 (n=34)]
-ok   Experienced teachers: the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 67.04 (n=34) vs offline 67.04 (n=34)]
+ok   Math growth (MDE): the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 60.18 (n=43) vs offline 60.18 (n=43)]
+ok   Experienced teachers: the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 65.43 (n=43) vs offline 65.43 (n=43)]
 ok   Suspensions kept low: the latest Leader in Me point recomputes from the state's table and the membership file  [2024: payload 31.43 (n=35) vs offline 31.43 (n=35)]
-ok   ACT composite (juniors): the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 15.58 (n=3) vs offline 15.58 (n=3)]
+ok   ACT composite (juniors): the latest Leader in Me point recomputes from the state's table and the membership file  [2025: payload 15.01 (n=5) vs offline 15.01 (n=5)]
 ok   DOMO's chronic absence is the state's own rate on the crosswalked school-years (an independent check of the join)  [r = 1.0 across 3,447 school-years, 100.0% within a point]
 ok   DOMO's graduation rate is the state's own rate on the crosswalked school-years  [r = 1.0 across 1,325 school-years]
 ok   chronic absence reaches 2024-25 on the rows from the state's report card (DOMO has none that year)  [690 schools]
@@ -299,19 +306,19 @@ ok   the methods page names the suspension mask, the new cut scores and the chro
 ok   the state file each year came from is in the build record  [{'report_card': 7, 'act': 2}]
 ok   the ACT reports' roll-up and summary rows were set aside and the shared spring agrees between reports  [280 roll-ups, 13 summary lines, 228 of 228 agree]
 ok   no ACT value was joined to more than one school, and the unmatched ones are named in the audit  [20 unmatched values]
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 4,369 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [208 Leader in Me school-years on the cards]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 4,364 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [235 Leader in Me school-years on the cards]
 ok   no card member sits beyond the core's last year
 ok   Suspensions kept low: the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=35]
-ok   Rated A or B: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
-ok   Math growth (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
-ok   ELA growth (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
-ok   Math growth, lowest 25% (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
-ok   ELA growth, lowest 25% (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
-ok   ACT composite (juniors): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=3]
-ok   College & career ready: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=3]
-ok   Went on to college: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=3]
-ok   Experienced teachers: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=34]
+ok   Rated A or B: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=43]
+ok   Math growth (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=43]
+ok   ELA growth (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=43]
+ok   Math growth, lowest 25% (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=43]
+ok   ELA growth, lowest 25% (MDE): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=43]
+ok   ACT composite (juniors): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=5]
+ok   College & career ready: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=5]
+ok   Went on to college: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=5]
+ok   Experienced teachers: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=43]
 ok   level measures carry the poverty context line and the growth-index measures do not
 ok   the research pack's per-school Mississippi values are keyed to schools on the page  [5,411 records]
 ok   every school with a state id on the page has it in the pack  [877 of 890]

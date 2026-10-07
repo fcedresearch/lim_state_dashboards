@@ -1,12 +1,12 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state ME --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/ME --data /home/claude/sdf/Build/work/ME/data
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state ME --core /home/claude/sdf/Core --out /home/claude/work1/ME --data /home/claude/work1/ME/data
 reading the core for Maine ...
 [core] subjects: 22,892 school rows kept; dropped 13,498 rows with no school id and 1,033 with an id but no school record
 [core] Leader in Me roster: 30 rows
 [core] comparison schools: 4,549 rows
 [core] MRA surveys: 0 rows
   subject rows 22,892 · roster rows 30 (3 schools) · comparison rows 4,549 (579 schools) · MRA surveys 0
-[core] Leader in Me roster: 56,181 rows
+[core] Leader in Me roster: 59,452 rows
   exits: 3 of 3 roster schools carry an expiration date; 3 past it by more than 30 days (exited), 0 inside the grace window, 0 in the future, 0 undated (0 with a start date)
   582 schools · 198 districts
 applying the cleaning rules ...
@@ -24,16 +24,17 @@ building matched pairs, inside each band ...
   MRA: 0 surveys · 0 schools · 0 sentinel values · 0 shells
   headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 0, 'comp_n': 265, 'lim_change': None, 'comp_change': -25.6, 'p': None} · without the 0 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 0, 'comp_n': 265, 'lim_change': None, 'comp_change': -25.6, 'p': None}
   roster: 0 counted, 2 exited, 0 not counted yet, 1 not counted
+best-performing schools: 0 of 0 counted schools, 9 measures in 6 outcomes
 
 wrote me_payload.json  (4.3 MB, 10,546 rows) · page kind territory (0 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py me_payload.json ME_Dashboard.html ME_Methods.html
 payload 4.3 MB -> 0.22 MB gzip
-ME_Dashboard.html: 569 KB
-ME_Methods.html: 30 KB
+ME_Dashboard.html: 608 KB
+ME_Methods.html: 37 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state ME --work /home/claude/sdf/Build/work/ME
+$ python3 /home/claude/sdf/Build/verify_core.py --state ME --work /home/claude/work1/ME
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -72,7 +73,10 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 0 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [0 Year 0 rows]
 ok   schools with no start date appear in neither group  [1 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
@@ -93,7 +97,7 @@ ok   no level measure is offered when the level structure is unconfirmed  [the l
 ok   school names and start dates are in the payload for the pack
 skip MRA pack rows  [no surveys]
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [40 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [40 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [153 schools]
 ok   the school count never exceeds the band-slice count  [265 schools vs 265 band slices]
@@ -108,7 +112,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.4s]
+ok   load time is workable  [0.2s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -139,9 +143,9 @@ ok   the MRA tab is offered exactly when the payload carries surveys
 skip MRA tab  [no surveys]
 ok   export c1.pptx downloads, opens and carries the chart image  [81,043 bytes]
 ok   the pptx export is named for the state and chart  [ME_Percent_meeting_the_standard_year_by_year_Maine_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [77,975 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [78,712 bytes]
 ok   the docx export is named for the state and chart  [ME_Percent_meeting_the_standard_year_by_year_Maine_schools.docx]
-ok   the research pack downloads with its sections  [4,275 rows, sections ['about', 'growth_test', 'look_alike', 'movement', 'mra', 'report_card', 'school', 'school_values']]
+ok   the research pack downloads with its sections  [4,278 rows, sections ['about', 'growth_test', 'look_alike', 'movement', 'mra', 'report_card', 'school', 'school_values']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
@@ -177,5 +181,5 @@ ok   a statewide jump is flagged on the methods page
 ok   a territory page says so on the methods page
 
 ==========================================================================
-116 of 116 checks pass · 8 skipped
+119 of 119 checks pass · 8 skipped
 ==========================================================================

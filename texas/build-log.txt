@@ -1,11 +1,12 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state TX --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/TX --data /home/claude/sdf/Build/work/TX/data --extras tx_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state TX --core /home/claude/sdf/Core --out /home/claude/work1/TX --data /home/claude/work1/TX/data --extras tx_core_extras
 reading the core for Texas ...
 [core] subjects: 587,883 school rows kept; dropped 223,571 rows with no school id and 15,292 with an id but no school record
-[core] Leader in Me roster: 5,674 rows
+[core] Leader in Me roster: 5,753 rows
 [core] comparison schools: 71,233 rows
+[core] comparison: 78 rows set aside for 26 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 961 rows
-  subject rows 587,883 · roster rows 5,674 (610 schools) · comparison rows 71,233 (8209 schools) · MRA surveys 961
+  subject rows 587,883 · roster rows 5,753 (636 schools) · comparison rows 71,155 (8209 schools) · MRA surveys 961
   identity: Godley Middle (Godley): 482096022868 -> 482096006111
   identity: Joslin Elementary (Austin): 480894000325 -> 480894014106
   identity: Snyder J H (Snyder): 484065004602 -> 484065014034
@@ -14,57 +15,56 @@ reading the core for Texas ...
   identity: Smith Elementary (Houston) keeps two ids (both report in 2016-2026)
   identity: Thompson Elementary (Houston) keeps two ids (both report in 2016-2026)
   identity: Wilson Elementary (Houston) keeps two ids (both report in 2021-2022)
-[core] Leader in Me roster: 56,181 rows
-  exits: 514 of 610 roster schools carry an expiration date; 253 past it by more than 30 days (exited), 18 inside the grace window, 243 in the future, 96 undated (81 with a start date)
+[core] Leader in Me roster: 59,452 rows
+  exits: 539 of 636 roster schools carry an expiration date; 267 past it by more than 30 days (exited), 7 inside the grace window, 265 in the future, 97 undated (84 with a start date)
   8,811 schools · 1230 districts
   5 roster schools have comparison-export rows after their roster years (DOMO's own flag says they left): read as exited after [2017]
 applying the cleaning rules ...
-  277,231 school-year-band-subject rows · years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
-  Leader in Me school-years counted: 2303 of 5490 reviewed
-  no start date: 57 schools · dated exits: 210 (school-years after an exit with rows: 572) · aggregate 'All grades' rows used 0, skipped 0
+  278,306 school-year-band-subject rows · years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 2585 of 5724 reviewed
+  no start date: 19 schools · dated exits: 210 (school-years after an exit with rows: 572) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 91.0% of rows in years and subjects whose levels add up)
   level values blanked on 6 year-subject cells that do not add up: 2015-16 ELA (end-of-course), 2015-16 ELA, 2015-16 Math (end-of-course), 2015-16 Math, 2015-16 Science (end-of-course), 2015-16 Social Studies (end-of-course)
   proficiency = levels 3 and 4 on 91.0% of rows
-  statewide jump: ELA 2016->2017: 71.1 -> 41.7 (-29.4)
+  statewide jump: ELA 2016->2017: 71.1 -> 41.6 (-29.4)
   statewide jump: Math 2016->2017: 75.8 -> 46.3 (-29.5)
 folding in Texas's own measures (tx_core_extras) ...
   Texas's files (read through Build/cache; the audit file names every column read):
-    NCES directory: 10,609 federal-to-campus id pairs from the cache (8 CCD files unchanged)
-    TAPR: 393,708 rows from the cache (34 files unchanged)
-    accountability: 97,794 rows from the cache (11 files unchanged)
-    discipline: 77,155 rows from the cache (9 files unchanged)
+    NCES directory: 10,609 federal-to-campus id pairs for Texas from 8 CCD files (2016-17 to 2023-24), cached
+    TAPR: 393,708 campus-measure-years from 32 downloads, cached in cache/
+    accountability: 97,794 campus-years from 11 files (2015 to 2026), cached
+    discipline: 77,155 campus-years from 9 files, cached
+    campus names: 10,519 campuses from the reference sets and accountability files, cached
   TAPR measures kept: act_avg 2013-14 to 2023-24; advanced_courses 2013-14 to 2023-24; apib_above 2013-14 to 2023-24; apib_taking 2013-14 to 2023-24; attendance_rate 2013-14 to 2023-24; ccmr 2016-17 to 2023-24; chronic_absent_tx 2018-19 to 2023-24; college_enroll_tx 2012-13 to 2021-22; dropout_78 2013-14 to 2023-24; dropout_912 2013-14 to 2023-24; dual_credit_grads 2016-17 to 2023-24; grad_adv_plan 2014-15 to 2022-23; sat_act_above 2017-18 to 2023-24; sat_act_grads_above 2017-18 to 2023-24; sat_act_tested 2013-14 to 2023-24; sat_avg 2017-18 to 2023-24; sat_avg_2400 2013-14 to 2015-16; tsi_both 2017-18 to 2023-24
   chain check: 128 measure-years read from two files, 1 below 99% agreement (ccmr:2022 76.7%)
   crosswalk: NCES's TEA campus number for each federal id, audited against the state's own campus and district names
-    8,775 of 8,811 schools carry a TEA campus number in NCES's directory; Leader in Me 610 of 610, comparison 8,165 of 8,201; 8,766 appear in at least one Texas file
-    names: the state's own campus name agrees with DOMO's on 8,737 of 8,769 crosswalked schools and the district on 8,727; 3 pairs re-pointed to a folded id; 0 campus numbers shared by two federal ids; 3 schools with more than one campus number
-    name disagreement (Leader in Me): DOMO 'Ortiz Elementary' vs TEA 'MARTINEZ EL' (221901152)
-    name disagreement (Leader in Me): DOMO 'Carter J H' vs TEA 'JOEY RODRIGUEZ J H' (220901041)
-    name disagreement (Leader in Me): DOMO 'Clint Q Smith Elementary' vs TEA 'H BOB DANIEL SR EL' (057907106)
+    8,775 of 8,811 schools carry a TEA campus number in NCES's directory; Leader in Me 636 of 636, comparison 8,139 of 8,175; 8,766 appear in at least one Texas file
+    names: the state's own campus name agrees with DOMO's on 8,740 of 8,769 crosswalked schools and the district on 8,722; 3 pairs re-pointed to a folded id; 0 campus numbers shared by two federal ids; 3 schools with more than one campus number
   value check of the join (a DOMO column the map was not built from): DOMO's dropout rate against TEA's grade 9-12 annual dropout rate on 11,396 school-years, correlation 0.984, identical to the hundredth on 56.1% (the rest are combined-grade schools, where DOMO carries the 7-12 rate); DOMO's lunch share against TEA's economically disadvantaged share on 8,688 schools, Spearman 0.961, 79.4% within five points (33 DOMO shares above 100%)
-  chronic absence: DOMO carries 0 school-years for Texas, so there is nothing to compare; the state's own rate fills 31,592 school-years (2018-19: 7,703, 2021-22: 7,939, 2022-23: 7,972, 2023-24: 7,978)
-  rows gain: attendance_rate on 64,238 school-year-bands (420 Leader in Me schools ever), dropout_912 on 13,988 school-year-bands (49 Leader in Me schools ever), ccmr on 10,930 school-year-bands (46 Leader in Me schools ever), college_enroll_tx on 8,872 school-year-bands (22 Leader in Me schools ever); 0 school-years had no band to sit in
+  chronic absence: DOMO carries 0 school-years for Texas, so there is nothing to compare; the state's own rate fills 31,736 school-years (2018-19: 7,733, 2021-22: 7,977, 2022-23: 8,010, 2023-24: 8,016)
+  rows gain: attendance_rate on 64,502 school-year-bands (470 Leader in Me schools ever), dropout_912 on 14,020 school-year-bands (60 Leader in Me schools ever), ccmr on 10,944 school-year-bands (57 Leader in Me schools ever), college_enroll_tx on 8,878 school-year-bands (38 Leader in Me schools ever); 0 school-years had no band to sit in
   card: 10 Texas measures, each group on each year's own membership
-  per-school Texas records for the pack: 87,371 (37 columns)
-  Texas's measures on 64,539 school-year-bands: 59,249 joined to existing rows, 5,290 school-year-bands added with no test rows of their own
-  core measures filled from Texas's own files where DOMO had none: chronic_absent 137,120 rows
-  school type from NCES: Title I on 8,406 schools (5,909 yes), charter 1,084, magnet 264, alternative 569; Title I published 2017-2022, carried forward after
-  funders: 387 Texas schools carry a funding source (340 on the page; Kern 187, 146 on the page); latest non-blank year per school
+  per-school Texas records for the pack: 87,725 (37 columns)
+  Texas's measures on 64,803 school-year-bands: 59,477 joined to existing rows, 5,326 school-year-bands added with no test rows of their own
+  core measures filled from Texas's own files where DOMO had none: chronic_absent 137,707 rows
+  school type from NCES: Title I on 8,444 schools (5,946 yes), charter 1,108, magnet 264, alternative 569; Title I published 2017-2022, carried forward after
+  funders: 387 Texas schools carry a funding source (380 on the page; Kern 187, 186 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 338  by band {'Primary': {'pairs': 258, 'unmatched': 0}, 'Secondary': {'pairs': 80, 'unmatched': 0}}
+  pairs 374  by band {'Primary': {'pairs': 275, 'unmatched': 0}, 'Secondary': {'pairs': 99, 'unmatched': 0}}
   MRA: 885 surveys · 350 schools · 2089 sentinel values · 62 shells
-  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 318, 'comp_n': 6806, 'lim_change': 2.22, 'comp_change': 2.56, 'p': 0.498} · without the 81 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 252, 'comp_n': 6806, 'lim_change': 1.9, 'comp_change': 2.56, 'p': 0.231}
-  roster: 292 counted, 258 exited, 3 not counted yet, 57 not counted
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 346, 'comp_n': 6806, 'lim_change': 1.8, 'comp_change': 2.57, 'p': 0.128} · without the 84 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 280, 'comp_n': 6803, 'lim_change': 1.42, 'comp_change': 2.57, 'p': 0.037}
+  roster: 308 counted, 272 exited, 37 not counted yet, 19 not counted
+best-performing schools: 46 of 370 counted schools, 61 measures in 17 outcomes
 
-wrote tx_payload.json  (198.9 MB, 282,521 rows) · page kind full (318 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote tx_payload.json  (199.9 MB, 283,632 rows) · page kind full (346 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py tx_payload.json TX_Dashboard.html TX_Methods.html
-payload 198.9 MB -> 14.10 MB gzip
-TX_Dashboard.html: 18638 KB
-TX_Methods.html: 63 KB
+payload 199.9 MB -> 14.17 MB gzip
+TX_Dashboard.html: 18777 KB
+TX_Methods.html: 72 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state TX --work /home/claude/sdf/Build/work/TX
+$ python3 /home/claude/sdf/Build/verify_core.py --state TX --work /home/claude/work1/TX
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -83,12 +83,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [5 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [31 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [253 exited, 18 in grace, 243 future]
+ok   the exit rule's counts recompute from the roster  [267 exited, 7 in grace, 265 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [156 composite cells at 100, 14 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [8 collisions]
@@ -103,15 +103,18 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [57 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 107 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [107 Year 0 rows]
+ok   schools with no start date appear in neither group  [19 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [237 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [258 exited (5 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [264 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [272 exited (5 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 292, 'exited': 258, 'not counted': 57, 'not counted yet': 3}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 308, 'exited': 272, 'not counted yet': 37, 'not counted': 19}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -119,44 +122,44 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [4442 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [4471 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [355,536 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [357,043 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
 ok   the levels at or above the standard count up, the levels below count down
 ok   the proficiency label names the levels it adds
-ok   years and subjects whose levels do not add up carry no level values  [6 cells set aside, 44,920 grade rows in them]
+ok   years and subjects whose levels do not add up carry no level values  [6 cells set aside, 45,030 grade rows in them]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [7,539 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [8,341 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [1620 schools]
-ok   the school count never exceeds the band-slice count  [7124 schools vs 7910 band slices]
+ok   combined-grade schools appear in both bands  [1628 schools]
+ok   the school count never exceeds the band-slice count  [7158 schools vs 7949 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline +0.017 vs payload +0.020 on 338 pairs]
-ok   the mean signed baseline gap is under one point  [+0.017]
+ok   the signed baseline gap recomputes to the payload's  [offline +0.014 vs payload +0.010 on 374 pairs]
+ok   the mean signed baseline gap is under one point  [+0.014]
 ok   the widest single baseline gap is inside the caliper's reach  [2.8 points]
-ok   the printed signed gap is not a negative zero  [0.02]
+ok   the printed signed gap is not a negative zero  [0.01]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
 ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
 ok   movers are built on ten or more schools each
-  demo district: Houston Independent School District (Isd) · prospect district: Idea Public Schools
+  demo district: Houston Independent School District (Isd) · prospect district: Frisco Independent School District (Isd)
 
 --------------------------------------------------------------------------
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [8.2s]
+ok   load time is workable  [4.7s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -166,12 +169,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [10 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.4968 scipy 0.4968 · window 2022-2026 · LiM n=318 mean +2.22 · comparison n=6806 mean +2.56]
-ok   the headline counts schools, not band slices  [page 7124 vs offline 7124 on 2022-2026]
-ok   the page's Leader in Me count is the builder's  [318 vs 318]
+ok   the headline p recomputes offline  [page 0.1271 scipy 0.1271 · window 2022-2026 · LiM n=346 mean +1.80 · comparison n=6806 mean +2.57]
+ok   the headline counts schools, not band slices  [page 7152 vs offline 7152 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [346 vs 346]
 ok   the district filter re-renders the headline  [In Houston Independent School District (Isd) schools, between 2021-22 and 2025-26, Leader ]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [5821 of 8746 schools; In Texas Title I schools, between 2021-22 and 2025-26, Leader in Me schools rose]
+ok   choosing 'Title I schools' narrows the view and names it  [5858 of 8784 schools; In Texas Title I schools, between 2021-22 and 2025-26, Leader in Me schools rose]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Texas schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2025-26, L]
 ok   Title I status is known for most schools on the page  [96.1%]
@@ -190,11 +193,11 @@ ok   measure 'dropout_912' either draws or says why
 ok   measure 'ccmr' either draws or says why
 ok   measure 'college_enroll_tx' either draws or says why
 ok   the matched toggle re-renders the headline  [In Texas schools (matched to similar schools only), between 2021-22 and 2025-26, Leader in]
-ok   the matched view shrinks or equals the Leader in Me count  [177 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [196 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Houston Independent School District (Isd) generates cards or says there is nothing to report  [8 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.4968445575448266, 'n1': 318, 'n2': 6806}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.12710169010429406, 'n1': 346, 'n2': 6806}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -213,22 +216,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [25,599 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [189,264 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [199,763 bytes]
 ok   the pptx export is named for the state and chart  [TX_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Texas_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [189,908 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [201,144 bytes]
 ok   the docx export is named for the state and chart  [TX_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Texas_schools.docx]
-ok   the research pack downloads with its sections  [131,265 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [131,766 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 ok   the pack's Leader in Me count for the district is the page's  [8 vs 8]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Texas schools like Idea Public Schools’, between 2021-22 and 2025-26, Leader in Me schools rose 1.9% on Meeting or ex]
-ok   the look-alike box reports both counts or says why not  [Schools like Idea Public Schools’: 135 Leader in Me schools and 1597 comparison schools look like Idea Public Schools’ 110 schools with results in these years (]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Texas schools like Frisco Independent School District (Isd)’s, between 2021-22 and 2025-26, Leader in Me schools fell]
+ok   the look-alike box reports both counts or says why not  [Schools like Frisco Independent School District (Isd)’s: 23 Leader in Me schools and 265 comparison schools look like Frisco Independent School District (Isd)’s]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.3120]
+ok   the look-alike headline p recomputes offline  [p=0.3294]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [245 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [96 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Texas grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 3.3% on Meeting or ]
+ok   choosing a grade re-renders the headline and names the grade  [In Texas grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 2.9% on Meeting or ]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [7 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -259,21 +262,21 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +2.22 pts (n=318) vs comparison +2.56 pts (n=6806), p=0.4968 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +1.80 pts (n=346) vs comparison +2.57 pts (n=6806), p=0.1271 -> not significant
 
 ==========================================================================
-176 of 176 checks pass
+179 of 179 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/tx_core_verify.py --work /home/claude/sdf/Build/work/TX
+$ python3 /home/claude/sdf/Build/states/tx_core_verify.py --work /home/claude/work1/TX
 
 Texas's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [610 of 610]
+ok   the crosswalk reaches nearly every Leader in Me school  [636 of 636]
 ok   every Leader in Me school the crosswalk cannot reach is named
 ok   no TEA campus number is claimed by two federal ids on the page  [0 shared]
-ok   the state's own campus names agree with DOMO's on nearly every crosswalked school  [8,737 of 8,769]
-ok   the state's own district names agree with DOMO's on nearly every crosswalked school  [8,727 of 8,769]
+ok   the state's own campus names agree with DOMO's on nearly every crosswalked school  [8,740 of 8,769]
+ok   the state's own district names agree with DOMO's on nearly every crosswalked school  [8,722 of 8,769]
 ok   the independent value check holds (DOMO's dropout rate is TEA's annual dropout rate)  [correlation 0.984 on 11,396 school-years, 56.1% identical]
 ok   DOMO's lunch share tracks TEA's economically disadvantaged share  [Spearman 0.961, 79.4% within five points on 8,688 schools; 33 DOMO shares above 100%]
 ok   every measure-year read from two consecutive files agrees campus by campus, bar the named CCMR revision  [128 measure-years compared; below 99%: ccmr:2022 (76.7%)]
@@ -284,43 +287,43 @@ ok   no TAPR value comes from a closure-year column onto a row or the card
 ok   the class of 2022 college enrollment is the 2025 file's labelled column, not the 2024 file's mis-coded one  [1,928 campuses, classes 2013 to 2022]
 ok   the class of 2017 CCMR (one file, no workbook) agrees with the 2018 accountability file's own CCMR  [97.3% within half a point on 1,734 high schools]
 ok   the five Texas measures are on the page  [attendance_rate, dropout_912, ccmr, college_enroll_tx, chronic_absent]
-ok   the attendance rate sits on the rows in the TAPR years only, closures out  [219,048 rows, years [2016, 2017, 2018, 2019, 2022, 2023, 2024]]
+ok   the attendance rate sits on the rows in the TAPR years only, closures out  [219,859 rows, years [2016, 2017, 2018, 2019, 2022, 2023, 2024]]
 ok   the attendance rate is carried on both bands of a combined school
 ok   the rows carry TEA's own 2023-24 attendance rate (schools reconciled to the 2025 download)  [40 of 40 agree]
-ok   the grade 9-12 dropout rate sits on secondary rows only, closures out  [65,143 rows, years [2016, 2017, 2018, 2019, 2022, 2023, 2024]]
-ok   CCMR sits on secondary rows only, closures out  [52,529 rows, years [2017, 2018, 2019, 2022, 2023, 2024]]
-ok   Texas college enrollment sits on secondary rows only, closures out  [41,461 rows, years [2016, 2017, 2018, 2019, 2022]]
+ok   the grade 9-12 dropout rate sits on secondary rows only, closures out  [65,381 rows, years [2016, 2017, 2018, 2019, 2022, 2023, 2024]]
+ok   CCMR sits on secondary rows only, closures out  [52,643 rows, years [2017, 2018, 2019, 2022, 2023, 2024]]
+ok   Texas college enrollment sits on secondary rows only, closures out  [41,512 rows, years [2016, 2017, 2018, 2019, 2022]]
 ok   CCMR carries no class before 2017 and Texas college enrollment none after the class of 2022
 ok   the rows carry TEA's own class of 2024 CCMR (schools reconciled to the 2025 download)  [40 of 40 agree]
 ok   DOMO carried no chronic absence for Texas, so nothing could be overwritten
-ok   the chronic-absence fill landed on every row DOMO lacked  [31,372 of 31,372 filled school-years with rows carry the state's value (220 had no row to land on)]
+ok   the chronic-absence fill landed on every row DOMO lacked  [31,516 of 31,516 filled school-years with rows carry the state's value (220 had no row to land on)]
 ok   chronic absence sits in the state's own years only, closures out  [years [2019, 2022, 2023, 2024]]
 ok   the filled chronic absence is TEA's own 2023-24 rate (schools reconciled to the 2025 download)  [40 of 40 agree]
 ok   the graduation rate was not filled (the state's component is the best of three rates, not the four-year rate)  [filled: ['chronic_absent']]
 ok   the card carries the Texas measures and stays under the dozen-chip ceiling  [overall_score_v1, overall_score_v2, growth_component_v1, growth_component_v2, rated_ab, met_standard, any_10plus, oss_5plus, sat_act_grads_above, apib_taking]
-ok   Overall accountability score, 2018-2022 system: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022], n [192, 215, 303]]
-ok   Overall accountability score, 2023 refresh: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2023, 2024, 2025, 2026], n [314, 311, 337, 333]]
-ok   Academic growth score, 2018-2022 system: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022], n [191, 213, 301]]
-ok   Academic growth score, 2023 refresh: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2023, 2024, 2025, 2026], n [313, 309, 336, 332]]
-ok   Schools rated A or B: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2019, 2022, 2023, 2024, 2025, 2026], n [215, 303, 314, 311, 337, 333]]
-ok   Schools rated Met Standard: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2016, 2017, 2018], n [103, 157, 190]]
-ok   Schools where 10% or more of students had a disciplinary action: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025], n [103, 157, 192, 215, 302, 313, 309, 336]]
-ok   Schools suspending 5% or more of students out of school: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025], n [103, 156, 192, 214, 301, 313, 306, 330]]
-ok   Graduates at or above the SAT/ACT college-ready score: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022, 2023, 2024], n [3, 8, 22, 37, 39]]
-ok   Students taking an AP or IB exam: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024], n [3, 4, 4, 8, 24, 37, 40]]
+ok   Overall accountability score, 2018-2022 system: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022], n [210, 237, 335]]
+ok   Overall accountability score, 2023 refresh: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2023, 2024, 2025, 2026], n [342, 352, 377, 363]]
+ok   Academic growth score, 2018-2022 system: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022], n [209, 235, 333]]
+ok   Academic growth score, 2023 refresh: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2023, 2024, 2025, 2026], n [341, 350, 376, 362]]
+ok   Schools rated A or B: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2019, 2022, 2023, 2024, 2025, 2026], n [237, 335, 342, 352, 377, 363]]
+ok   Schools rated Met Standard: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2016, 2017, 2018], n [146, 184, 207]]
+ok   Schools where 10% or more of students had a disciplinary action: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025], n [146, 184, 210, 237, 334, 341, 350, 376]]
+ok   Schools suspending 5% or more of students out of school: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025], n [146, 183, 210, 235, 331, 340, 346, 370]]
+ok   Graduates at or above the SAT/ACT college-ready score: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022, 2023, 2024], n [6, 10, 38, 44, 45]]
+ok   Students taking an AP or IB exam: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024], n [4, 5, 8, 10, 40, 44, 46]]
 ok   the 2018-2022 accountability scores stay in their era and the refresh in its own, never joined
-ok   the 2025-26 share of Leader in Me schools rated A or B rebuilds from the accountability file  [file 57.36% vs card 57.36% on 333 rated schools]
+ok   the 2025-26 share of Leader in Me schools rated A or B rebuilds from the accountability file  [file 57.02% vs card 57.02% on 363 rated schools]
 ok   a masked out-of-school suspension count reads as under 5% only where nine students would be under 5%  [2,945 masked at campuses above 180 students read 0; 297 smaller ones unknown]
 ok   the out-of-school suspension flag is the published rate against 5% wherever the rate is published
 ok   the 2024-25 out-of-school suspension share rebuilds from the discipline summary (five campuses, a missing heading read as zero)  [5 of 5 agree]
 ok   the discipline rates stay off the rows and the card, as shares of schools go on the card instead
-ok   the research pack's per-school Texas values are keyed to schools on the page  [87,371 records]
+ok   the research pack's per-school Texas values are keyed to schools on the page  [87,725 records]
 ok   every pack key carries a plain-English label
 ok   no state acronym is left unexplained in the pack labels
 ok   no card chip label leans on an unexplained acronym  [Overall accountability score, 2018-2022 system; Overall accountability score, 2023 refresh; Academic growth score, 2018-2022 system; Academic growth score, 2023 refresh; Schools rated A or B; Schools rated Met Standard; Schools where 10% or more of students had a disciplinary action; Schools suspending 5% or more of students out of school; Graduates at or above the SAT/ACT college-ready score; Students taking an AP or IB exam]
 ok   the pack carries CCMR from the class of 2017 and the old-format SAT under its own name
 ok   the pack carries the discipline rates with their mask flags and the economically disadvantaged share
-ok   every school on the page with a campus number carries it in the payload  [8,710 of 8,746]
+ok   every school on the page with a campus number carries it in the payload  [8,748 of 8,784]
 ok   look-alike mode names the discipline share from the pack
 ok   the methods page says how Texas's files join and what was excluded by name
 

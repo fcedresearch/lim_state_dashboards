@@ -1,24 +1,25 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state NY --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/NY --data /home/claude/sdf/Build/work/NY/data --extras ny_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state NY --core /home/claude/sdf/Core --out /home/claude/work1/NY --data /home/claude/work1/NY/data --extras ny_core_extras
 reading the core for New York ...
 [core] subjects: 378,206 school rows kept; dropped 156,903 rows with no school id and 4,179 with an id but no school record
-[core] Leader in Me roster: 3,257 rows
+[core] Leader in Me roster: 3,287 rows
 [core] comparison schools: 38,688 rows
+[core] comparison: 30 rows set aside for 15 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 437 rows
-  subject rows 378,206 · roster rows 3,257 (346 schools) · comparison rows 38,688 (4303 schools) · MRA surveys 437
-[core] Leader in Me roster: 56,181 rows
-  exits: 285 of 346 roster schools carry an expiration date; 132 past it by more than 30 days (exited), 3 inside the grace window, 150 in the future, 61 undated (54 with a start date)
+  subject rows 378,206 · roster rows 3,287 (361 schools) · comparison rows 38,658 (4303 schools) · MRA surveys 437
+[core] Leader in Me roster: 59,452 rows
+  exits: 299 of 361 roster schools carry an expiration date; 127 past it by more than 30 days (exited), 3 inside the grace window, 169 in the future, 62 undated (56 with a start date)
   4,646 schools · 1068 districts
   3 roster schools have comparison-export rows after their roster years (DOMO's own flag says they left): read as exited after [2015, 2016]
 applying the cleaning rules ...
-  162,581 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 1148 of 3114 reviewed
-  no start date: 30 schools · dated exits: 83 (school-years after an exit with rows: 182) · aggregate 'All grades' rows used 0, skipped 0
+  163,206 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
+  Leader in Me school-years counted: 1270 of 3249 reviewed
+  no start date: 11 schools · dated exits: 83 (school-years after an exit with rows: 181) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 79.6% of rows in years and subjects whose levels add up)
   level values blanked on 24 year-subject cells that do not add up: 2014-15 ELA (end-of-course), 2014-15 Math (end-of-course), 2015-16 ELA (end-of-course), 2015-16 Math (end-of-course), 2016-17 ELA (end-of-course), 2016-17 Math (end-of-course), 2017-18 ELA (end-of-course), 2017-18 Math (end-of-course) ...
   proficiency = levels 3 and 4 on 80.1% of rows
-  statewide jump: ELA 2017->2018: 44.3 -> 52.6 (+8.3)
-  statewide jump: Math 2017->2018: 40.6 -> 54.4 (+13.7)
+  statewide jump: ELA 2017->2018: 44.2 -> 52.6 (+8.3)
+  statewide jump: Math 2017->2018: 40.6 -> 54.3 (+13.7)
   statewide jump: Math 2022->2023: 46.5 -> 54.7 (+8.2)
 folding in New York's own measures (ny_core_extras) ...
   state files (by family and release; the log names each file):
@@ -27,45 +28,78 @@ folding in New York's own measures (ny_core_extras) ...
     ccr: 2018 pathways_2018.zip, 2019 pathways_2019.zip, 2020 pathways_2020.zip, 2021 pathways_2021.zip, 2022 pathways_2022.zip, 2023 pathways_2023.zip, 2024 pathways_2024.zip, 2025 pathways_2025.zip
     NCES directory: 5,087 federal-to-BEDS pairs from the cache (8 CCD files unchanged)
     report card tables: 184,272 rows across 9 tables from the cache (CSV exports unchanged)
-    student and educator database: 59,900 entity-years from the cache (8 databases unchanged)
-    graduation pathways: 81,274 entity-class-pathway rows from the cache (8 databases unchanged)
+    student and educator database 2018: unpacking studed2018.zip (2.7 MB)
+      STUDED2018.mdb: attendance [2018], suspensions [2015, 2016, 2017], staff [2018], lunch [2016, 2017, 2018]; 18,022 school rows; turnover published for 253 schools and 722 districts
+    student and educator database 2019: unpacking studed2019.zip (5.4 MB)
+      STUDED2019.mdb: attendance [2018, 2019], suspensions [2019], staff [2018, 2019], lunch [2017, 2018, 2019]; 14,173 school rows; turnover published for 332 schools and 1444 districts
+    student and educator database 2020: unpacking studed2020.zip (8.8 MB)
+      STUDED2019-2020.mdb: attendance [2018, 2019, 2020], suspensions [2019, 2020], staff [2018, 2019, 2020], lunch [2018, 2019, 2020]; 14,198 school rows; turnover published for 488 schools and 2164 districts
+    student and educator database 2021: unpacking studed2021.zip (10.7 MB)
+      STUDED2020-2021_20220830.mdb: attendance [2019, 2020, 2021], suspensions [2019, 2020, 2021], staff [2019, 2020, 2021], lunch [2019, 2020, 2021]; 14,218 school rows; turnover published for 438 schools and 2160 districts
+    student and educator database 2022: unpacking studed2022.zip (11.1 MB)
+      STUDED2021-2022_20230824.mdb: attendance [2020, 2021, 2022], suspensions [2020, 2021, 2022], staff [2020, 2021, 2022], lunch [2020, 2021, 2022]; 14,234 school rows; turnover published for 612 schools and 2157 districts
+    student and educator database 2023: unpacking STUDED2023.zip (11.5 MB)
+      STUDED_2023.mdb: attendance [2021, 2022, 2023], suspensions [2021, 2022, 2023], staff [2021, 2022, 2023], lunch [2021, 2022, 2023]; 14,240 school rows; turnover published for 730 schools and 2156 districts
+    student and educator database 2024: unpacking STUDED2024.zip (11.7 MB)
+      STUDED_2024.mdb: attendance [2022, 2023, 2024], suspensions [2022, 2023, 2024], staff [2022, 2023, 2024], lunch [2022, 2023, 2024]; 14,248 school rows; turnover published for 802 schools and 2157 districts
+    student and educator database 2025: unpacking STUDED2025.zip (11.8 MB)
+      STUDED_2025_20260429.mdb: attendance [2023, 2024, 2025], suspensions [2023, 2024, 2025], staff [2023, 2024, 2025], lunch [2023, 2024, 2025]; 14,256 school rows; turnover published for 825 schools and 2157 districts
+    student and educator database: 59,900 entity-years from 8 databases, cached in cache/
+    graduation pathways 2018: unpacking pathways_2018.zip (13.5 MB)
+      Cohort Pathways_2018.mdb: Cohort Pathways 2017-18, class of 2018 (cohort [2014]), 1,260 schools, 168,041 June graduates
+    graduation pathways 2019: unpacking pathways_2019.zip (20.2 MB)
+      Cohort Pathways_2019.mdb: Cohort_Pathways_2019, class of 2019 (cohort [2015]), 1,250 schools, 167,346 June graduates
+    graduation pathways 2020: unpacking pathways_2020.zip (19.6 MB)
+      Cohort Pathways_2020.mdb: Cohort_Pathways_2020, class of 2020 (cohort [2016]), 1,259 schools, 172,733 June graduates
+    graduation pathways 2021: unpacking pathways_2021.zip (11.8 MB)
+      Cohort Pathways 2021.mdb: Cohort_Pathways_2021, class of 2021 (cohort [2017]), 1,273 schools, 172,345 June graduates
+    graduation pathways 2022: unpacking pathways_2022.zip (17.0 MB)
+      Cohort Pathways 2022.mdb: Cohort_Pathways_2022, class of 2022 (cohort [2018]), 1,263 schools, 170,414 June graduates
+    graduation pathways 2023: unpacking pathways_2023.zip (26.0 MB)
+      2023CareerPathwaysResearcherFile.mdb: 2023CareerPathwaysResearcherFile, class of 2023 (cohort [2019]), 1,267 schools, 166,724 June graduates
+    graduation pathways 2024: unpacking pathways_2024.zip (9.0 MB)
+      Cohort Pathways 2024_Suppressed.mdb: 2024_GRADUATUON_PATHWAYS, class of 2024 (cohort [2020]), 1,272 schools, 166,203 June graduates
+    graduation pathways 2025: unpacking pathways_2025.zip (16.7 MB)
+      2025 Cohort Pathways Researcher File.mdb: GRADUATION_PATHWAYS_2025, class of 2025 (cohort [2021]), 1,277 schools, 169,082 June graduates
+    graduation pathways: 81,274 entity-class-pathway rows from 8 databases, cached in cache/
   crosswalk: NCES's BEDS code for each federal id, audited against the state files' own school and district names
-    4,642 of 4,646 schools carry a BEDS code (4,645 pairs from NCES's directory, 29 by name within district); Leader in Me 346 of 346, comparison 4,296 of 4,300; 4,642 appear in at least one New York file
+    4,642 of 4,646 schools carry a BEDS code (4,645 pairs from NCES's directory, 29 by name within district); Leader in Me 361 of 361, comparison 4,281 of 4,285; 4,642 appear in at least one New York file
     names: the state's own school name agrees with DOMO's on 4,624 of 4,670 crosswalked schools, the district on 4,597 of 4,670; 0 pairs re-pointed to a folded id; 0 shared BEDS codes settled; 31 schools carry more than one BEDS code across the years
     name disagreement (Leader in Me): DOMO 'Luisa Pineiro Fuentes School Of Science And Discovery' vs state 'LPF SCHOOL OF SCIENCE AND DISCOVERY' (321000010307)
     name disagreement (Leader in Me): DOMO 'Restoration Academy' vs state 'RESTORIATION ACADEMY' (331300010301)
     name disagreement (Leader in Me): DOMO 'Frederick Douglass Academy VIII Middle School' vs state 'FDA VIII MIDDLE SCHOOL' (331900010452)
     name disagreement (Leader in Me): DOMO 'Charter School Of Educational Excellence' vs state 'CHARTER SCH-EDUC EXCELLENCE' (662300860862)
-  value check of the join (a file the map was not built from): DOMO's chronic absence against the state's accountability rate on 4,928 school-years: 100.0% identical to the decimal (correlation 1.0); on the 1,694 school-years that span both levels DOMO carries the grades 9-12 figure (100.0% exact) rather than the whole school's (0.7%); DOMO covers {'has grades 9-12 level': {'school_years': 4929, 'with_domo_value': 4928}, 'grades 1-8 level only': {'school_years': 11808, 'with_domo_value': 0}}
-  chronic absence fill: the same measure; 20860 school-years DOMO lacks filled (2017-18: 4217, 2018-19: 4240, 2021-22: 3157, 2022-23: 3124, 2023-24: 3059, 2024-25: 3063); Leader in Me school-years filled by year {2018: 96, 2019: 129, 2022: 173, 2023: 175, 2024: 181, 2025: 166}; 18167 of them from the grades 1-8 level
-  rows gain: attendance_rate on 43,331 school-year-bands (260 Leader in Me schools ever), pct_suspended on 41,704 school-year-bands (260 Leader in Me schools ever), college_enroll on 3,756 school-year-bands (21 Leader in Me schools ever); 0 school-years had no band to sit in
+  value check of the join (a file the map was not built from): DOMO's chronic absence against the state's accountability rate on 4,941 school-years: 100.0% identical to the decimal (correlation 1.0); on the 1,710 school-years that span both levels DOMO carries the grades 9-12 figure (100.0% exact) rather than the whole school's (0.7%); DOMO covers {'has grades 9-12 level': {'school_years': 4942, 'with_domo_value': 4941}, 'grades 1-8 level only': {'school_years': 11868, 'with_domo_value': 0}}
+  chronic absence fill: the same measure; 20951 school-years DOMO lacks filled (2017-18: 4232, 2018-19: 4255, 2021-22: 3171, 2022-23: 3139, 2023-24: 3075, 2024-25: 3079); Leader in Me school-years filled by year {2018: 116, 2019: 145, 2022: 181, 2023: 191, 2024: 183, 2025: 174}; 18253 of them from the grades 1-8 level
+  rows gain: attendance_rate on 43,492 school-year-bands (280 Leader in Me schools ever), pct_suspended on 41,858 school-year-bands (280 Leader in Me schools ever), college_enroll on 3,765 school-year-bands (28 Leader in Me schools ever); 0 school-years had no band to sit in
   card: 6 New York measures, each group on each year's own membership
-    card line attendance_rate: 8 Leader in Me points, latest 2025 n=190 (90.72)
-    card line pct_suspended: 8 Leader in Me points, latest 2025 n=190 (2.18)
-    card line ca_em: 6 Leader in Me points, latest 2025 n=178 (30.6)
-    card line ca_hs: 6 Leader in Me points, latest 2025 n=23 (34.59)
-    card line cccr_index: 3 Leader in Me points, latest 2025 n=23 (152.46)
-    card line college_enroll: 3 Leader in Me points, latest 2024 n=19 (62.11)
-  per-school New York records for the pack: 48,403 (60 columns)
-  New York's measures on 48,917 school-year-bands: 46,229 joined to existing rows, 2,688 school-year-bands added with no test rows of their own
-  core measures filled from New York's own files where DOMO had none: chronic_absent 80,920 rows
-  school type from NCES: Title I on 4,518 schools (3,481 yes), charter 349, magnet 119, alternative 28; Title I published 2017-2022, carried forward after
-  funders: 170 New York schools carry a funding source (151 on the page; Kern 56, 39 on the page); latest non-blank year per school
+    card line attendance_rate: 8 Leader in Me points, latest 2025 n=202 (90.79)
+    card line pct_suspended: 8 Leader in Me points, latest 2025 n=202 (2.32)
+    card line ca_em: 6 Leader in Me points, latest 2025 n=189 (30.41)
+    card line ca_hs: 6 Leader in Me points, latest 2025 n=27 (32.6)
+    card line cccr_index: 3 Leader in Me points, latest 2025 n=27 (155.63)
+    card line college_enroll: 3 Leader in Me points, latest 2024 n=24 (60.57)
+  per-school New York records for the pack: 48,591 (60 columns)
+  New York's measures on 49,096 school-year-bands: 46,390 joined to existing rows, 2,706 school-year-bands added with no test rows of their own
+  core measures filled from New York's own files where DOMO had none: chronic_absent 81,236 rows
+  school type from NCES: Title I on 4,536 schools (3,499 yes), charter 348, magnet 120, alternative 28; Title I published 2017-2022, carried forward after
+  funders: 170 New York schools carry a funding source (170 on the page; Kern 56, 56 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 221  by band {'Primary': {'pairs': 144, 'unmatched': 0}, 'Secondary': {'pairs': 77, 'unmatched': 0}}
+  pairs 236  by band {'Primary': {'pairs': 149, 'unmatched': 0}, 'Secondary': {'pairs': 87, 'unmatched': 0}}
   MRA: 391 surveys · 163 schools · 1236 sentinel values · 42 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 188, 'comp_n': 3895, 'lim_change': 10.34, 'comp_change': 8.44, 'p': 0.019} · without the 54 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 139, 'comp_n': 3895, 'lim_change': 10.48, 'comp_change': 8.44, 'p': 0.025}
-  roster: 150 counted, 133 exited, 33 not counted yet, 30 not counted
+  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 200, 'comp_n': 3895, 'lim_change': 10.29, 'comp_change': 8.43, 'p': 0.018} · without the 56 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 150, 'comp_n': 3894, 'lim_change': 10.38, 'comp_change': 8.44, 'p': 0.027}
+  roster: 161 counted, 130 exited, 59 not counted yet, 11 not counted
+best-performing schools: 42 of 173 counted schools, 60 measures in 14 outcomes
 
-wrote ny_payload.json  (112.5 MB, 165,269 rows) · page kind full (188 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote ny_payload.json  (113.1 MB, 165,912 rows) · page kind full (200 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py ny_payload.json NY_Dashboard.html NY_Methods.html
-payload 112.5 MB -> 8.37 MB gzip
-NY_Dashboard.html: 11180 KB
-NY_Methods.html: 60 KB
+payload 113.1 MB -> 8.42 MB gzip
+NY_Dashboard.html: 11285 KB
+NY_Methods.html: 70 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state NY --work /home/claude/sdf/Build/work/NY
+$ python3 /home/claude/sdf/Build/verify_core.py --state NY --work /home/claude/work1/NY
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -84,12 +118,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [3 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [18 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [1 stale]
-ok   the exit rule's counts recompute from the roster  [132 exited, 3 in grace, 150 future]
+ok   the exit rule's counts recompute from the roster  [127 exited, 3 in grace, 169 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [117 composite cells at 100, 5 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -104,15 +138,18 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [30 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 260 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [260 Year 0 rows]
+ok   schools with no start date appear in neither group  [11 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [110 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [135 exited (3 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [119 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [130 exited (3 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 150, 'exited': 133, 'not counted yet': 33, 'not counted': 30}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 161, 'exited': 130, 'not counted yet': 59, 'not counted': 11}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -120,30 +157,30 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [2362 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [2377 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [203,793 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [204,720 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
 ok   the levels at or above the standard count up, the levels below count down
 ok   the proficiency label names the levels it adds
-ok   years and subjects whose levels do not add up carry no level values  [24 cells set aside, 38,447 grade rows in them]
+ok   years and subjects whose levels do not add up carry no level values  [24 cells set aside, 38,549 grade rows in them]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [6,263 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [6,702 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [1111 schools]
-ok   the school count never exceeds the band-slice count  [4083 schools vs 4920 band slices]
+ok   combined-grade schools appear in both bands  [1114 schools]
+ok   the school count never exceeds the band-slice count  [4100 schools vs 4939 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline -0.001 vs payload +0.000 on 221 pairs]
-ok   the mean signed baseline gap is under one point  [-0.001]
+ok   the signed baseline gap recomputes to the payload's  [offline +0.001 vs payload +0.000 on 236 pairs]
+ok   the mean signed baseline gap is under one point  [+0.001]
 ok   the widest single baseline gap is inside the caliper's reach  [1.7 points]
 ok   the printed signed gap is not a negative zero  [0.0]
 ok   no MRA value of exactly 100 survives into the payload
@@ -157,7 +194,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [4.0s]
+ok   load time is workable  [2.7s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -167,12 +204,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [6 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.0189 scipy 0.0189 · window 2022-2025 · LiM n=188 mean +10.35 · comparison n=3895 mean +8.44]
-ok   the headline counts schools, not band slices  [page 4083 vs offline 4083 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [188 vs 188]
+ok   the headline p recomputes offline  [page 0.0175 scipy 0.0175 · window 2022-2025 · LiM n=200 mean +10.29 · comparison n=3895 mean +8.43]
+ok   the headline counts schools, not band slices  [page 4095 vs offline 4095 on 2022-2025]
+ok   the page's Leader in Me count is the builder's  [200 vs 200]
 ok   the district filter re-renders the headline  [In New York City Geographic District #10 schools, between 2021-22 and 2024-25, Leader in M]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [3400 of 4616 schools; In New York Title I schools, between 2021-22 and 2024-25, Leader in Me schools r]
+ok   choosing 'Title I schools' narrows the view and names it  [3416 of 4635 schools; In New York Title I schools, between 2021-22 and 2024-25, Leader in Me schools r]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In New York schools (Leader in Me side: Kern Family Foundation schools), between 2023-24 and 2024-25]
 ok   Title I status is known for most schools on the page  [97.9%]
@@ -190,42 +227,42 @@ ok   measure 'attendance_rate' either draws or says why
 ok   measure 'pct_suspended' either draws or says why
 ok   measure 'college_enroll' either draws or says why
 ok   the matched toggle re-renders the headline  [In New York schools (matched to similar schools only), between 2021-22 and 2024-25, Leader]
-ok   the matched view shrinks or equals the Leader in Me count  [140 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [151 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   New York City Geographic District #10 generates cards or says there is nothing to report  [11 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.018948225113502935, 'n1': 188, 'n2': 3895}]
+ok   New York City Geographic District #10 generates cards or says there is nothing to report  [13 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.017508553116399032, 'n1': 200, 'n2': 3895}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
-ok   the MRA summary renders a sentence  [Across 89 New York Leader in Me schools surveyed in 2024-25, Leadership averaged 76.7 on the MRA sca]
+ok   the MRA summary renders a sentence  [Across 88 New York Leader in Me schools surveyed in 2024-25, Leadership averaged 76.7 on the MRA sca]
 ok   MRA chart c6 draws an svg or explains why
 ok   MRA chart c7 draws an svg or explains why
 ok   MRA chart c10 draws an svg or explains why
 ok   the measure picker offers every MRA measure with data  [37 options, 37 measures with data, 37 in the catalogue]
-ok   the MRA paired test recomputes offline  [page 0.0010 scipy 0.0010 on 102 schools]
-ok   the MRA latest-year school count recomputes offline  [page 89 vs offline 89]
-ok   the MRA same-schools count is every school surveyed more than once  [page 102 vs offline 102]
+ok   the MRA paired test recomputes offline  [page 0.0013 scipy 0.0013 on 101 schools]
+ok   the MRA latest-year school count recomputes offline  [page 88 vs offline 88]
+ok   the MRA same-schools count is every school surveyed more than once  [page 101 vs offline 101]
 ok   choosing the submeasure 'Personal Effectiveness' re-renders the MRA summary  [Across 79 New York Leader in Me schools surveyed in 2024-25, Personal Effectiveness averag]
-ok   the MRA district filter narrows to New York City Geographic District #10's surveyed schools  [13 of 163 schools]
+ok   the MRA district filter narrows to New York City Geographic District #10's surveyed schools  [13 of 162 schools]
 ok   the MRA school type filter keeps only schools with that trait  [title1_yes]
 ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
-ok   the MRA view downloads one row per school, year and measure  [11,290 rows]
+ok   the MRA view downloads one row per school, year and measure  [11,226 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [175,249 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [200,989 bytes]
 ok   the pptx export is named for the state and chart  [NY_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_New_York_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [175,817 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [202,295 bytes]
 ok   the docx export is named for the state and chart  [NY_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_New_York_schools.docx]
-ok   the research pack downloads with its sections  [65,539 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
+ok   the research pack downloads with its sections  [65,940 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
 ok   the pack's Leader in Me count for the district is the page's  [11 vs 11]
 ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In New York schools like New York City Geographic District # 2’s, between 2021-22 and 2024-25, Leader in Me schools rose]
-ok   the look-alike box reports both counts or says why not  [Schools like New York City Geographic District # 2’s: 53 Leader in Me schools and 750 comparison schools look like New York City Geographic District # 2’s 107 s]
+ok   the look-alike box reports both counts or says why not  [Schools like New York City Geographic District # 2’s: 56 Leader in Me schools and 744 comparison schools look like New York City Geographic District # 2’s 107 s]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.7573]
+ok   the look-alike headline p recomputes offline  [p=0.8160]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [169 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [172 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
 ok   choosing a grade re-renders the headline and names the grade  [In New York grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 0.8% on Meeting ]
@@ -259,23 +296,23 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +10.35 pts (n=188) vs comparison +8.44 pts (n=3895), p=0.0189 -> significant
+  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +10.29 pts (n=200) vs comparison +8.43 pts (n=3895), p=0.0175 -> significant
 
 ==========================================================================
-175 of 175 checks pass
+178 of 178 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/ny_core_verify.py --work /home/claude/sdf/Build/work/NY
+$ python3 /home/claude/sdf/Build/states/ny_core_verify.py --work /home/claude/work1/NY
 
 New York's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [346 of 346]
-ok   the crosswalk reaches nearly every comparison school  [4,296 of 4,300]
+ok   the crosswalk reaches nearly every Leader in Me school  [361 of 361]
+ok   the crosswalk reaches nearly every comparison school  [4,281 of 4,285]
 ok   NCES's own id pairs anchor the crosswalk, the name route only for schools NCES does not list  [4,645 pairs from NCES, 29 by name, for 4,646 schools]
 ok   the state files' own school names agree with DOMO's on nearly every crosswalked school  [4,624 of 4,670; 46 read one by one]
 ok   the state files' own district agrees with DOMO's district on nearly every crosswalked school  [4,597 of 4,670]
-ok   DOMO's chronic absence is the state's own grades 9-12 figure to the decimal (an independent check of the join)  [100.0% exact on 4,928 school-years, correlation 1.0]
-ok   DOMO carries no chronic absence for a school at the grades 1-8 level only (the gap the state's file fills)  [{'school_years': 11808, 'with_domo_value': 0}]
+ok   DOMO's chronic absence is the state's own grades 9-12 figure to the decimal (an independent check of the join)  [100.0% exact on 4,941 school-years, correlation 1.0]
+ok   DOMO carries no chronic absence for a school at the grades 1-8 level only (the gap the state's file fills)  [{'school_years': 11868, 'with_domo_value': 0}]
 ok   no BEDS code is on two schools  [4,674 pairs, 4,642 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page
 ok   the join note on the card carries the reach
@@ -286,18 +323,18 @@ ok   a same school-year in two Student and Educator databases is identical, and 
 ok   the state publishes the attendance rate and the suspension share as whole numbers (the rounding the page names)
 ok   every Graduation Pathways database was read for the four-year June outcome of one cohort  [2018: cohort 2014; 2019: cohort 2015; 2020: cohort 2016; 2021: cohort 2017; 2022: cohort 2018; 2023: cohort 2019; 2024: cohort 2020; 2025: cohort 2021]
 ok   every pathway course of study in the files was mapped
-ok   the chronic-absence fill never overwrote a DOMO value  [4933 of 4,933 DOMO school-years with rows unchanged]
-ok   the chronic-absence fill landed on every row DOMO lacked  [20,682 of 20,682 filled school-years with rows carry the state's value (178 had no row to land on)]
+ok   the chronic-absence fill never overwrote a DOMO value  [4946 of 4,946 DOMO school-years with rows unchanged]
+ok   the chronic-absence fill landed on every row DOMO lacked  [20,774 of 20,774 filled school-years with rows carry the state's value (177 had no row to land on)]
 ok   the fill reaches 2017-18 and 2018-19, where DOMO carried nothing, and the closure years not at all  [years [2018, 2019, 2022, 2023, 2024, 2025]]
-ok   chronic absence now sits on primary rows in every year the state carries (elementary schools filled)  [{2018: 2488, 2019: 2513, 2022: 2599, 2023: 2590, 2024: 2518, 2025: 2502}]
-ok   the payload's fill count is on the cleaning audit  [{'chronic_absent': 80920}]
+ok   chronic absence now sits on primary rows in every year the state carries (elementary schools filled)  [{2018: 2499, 2019: 2524, 2022: 2614, 2023: 2605, 2024: 2533, 2025: 2517}]
+ok   the payload's fill count is on the cleaning audit  [{'chronic_absent': 81236}]
 ok   filled 2024-25 elementary and middle schools carry the state's own all-students grades 1-8 rate (read from the CSV)  [376 of 376 agree]
-ok   the attendance rate sits on the rows in the years the files carry, 2016-17 and the closure years out  [145,337 rows, years [2015, 2016, 2018, 2019, 2022, 2023, 2024, 2025]]
+ok   the attendance rate sits on the rows in the years the files carry, 2016-17 and the closure years out  [145,916 rows, years [2015, 2016, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   the attendance rate is carried on both bands of a combined school
-ok   the suspension share sits on the rows in the years the files carry, 2017-18 and the closure years out, nothing above 100  [140,634 rows, years [2015, 2016, 2017, 2019, 2022, 2023, 2024, 2025]]
-ok   a reported zero suspension share stays a zero on the rows (not read as missing)  [38,573 zero rows]
-ok   college enrollment within 16 months sits on secondary rows only, on the classes of 2022 to 2024 (the class of 2021 a closure year)  [17,783 rows, years [2022, 2023, 2024]]
-ok   each row measure rests on three or more Leader in Me schools ever counted  [{'attendance_rate': 260, 'pct_suspended': 260, 'college_enroll': 21}]
+ok   the suspension share sits on the rows in the years the files carry, 2017-18 and the closure years out, nothing above 100  [141,194 rows, years [2015, 2016, 2017, 2019, 2022, 2023, 2024, 2025]]
+ok   a reported zero suspension share stays a zero on the rows (not read as missing)  [38,800 zero rows]
+ok   college enrollment within 16 months sits on secondary rows only, on the classes of 2022 to 2024 (the class of 2021 a closure year)  [17,859 rows, years [2022, 2023, 2024]]
+ok   each row measure rests on three or more Leader in Me schools ever counted  [{'attendance_rate': 280, 'pct_suspended': 280, 'college_enroll': 28}]
 ok   the New York row measures are on the page's measure list
 ok   the closure years are on no New York row and no card point
 ok   the 2015-16 suspension share on the rows is the Report Card file's own value (read from the CSV)  [300 of 300 agree]
@@ -305,27 +342,27 @@ ok   the 2015-16 attendance rate on the rows is the Report Card file's own value
 ok   the 2024-25 attendance rate on the rows is the Student and Educator database's own value (unpacked and read back)  [400 of 400 agree]
 ok   the 2024-25 suspension share on the rows is the Student and Educator database's own value (unpacked and read back)  [400 of 400 agree]
 ok   the class of 2024 college enrollment on the rows rebuilds from the Report Card file's own counts (read from the CSV)  [300 of 300 agree]
-ok   the class of 2021 (a closure year) is in the pack and on no row  [1250 pack records]
+ok   the class of 2021 (a closure year) is in the pack and on no row  [1253 pack records]
 ok   the card carries the New York measures and stays under the dozen-chip ceiling  [['attendance_rate', 'pct_suspended', 'ca_em', 'ca_hs', 'cccr_index', 'college_enroll']]
-ok   Daily attendance rate: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2015, 2016, 2018, 2019, 2022, 2023, 2024, 2025], n [25, 32, 96, 131, 189, 192, 204, 190]]
-ok   Students suspended out of school: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2015, 2016, 2017, 2019, 2022, 2023, 2024, 2025], n [17, 19, 77, 131, 189, 192, 204, 190]]
-ok   Chronic absence, grades 1-8 (state accountability figure): Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022, 2023, 2024, 2025], n [94, 127, 179, 182, 190, 178]]
-ok   Chronic absence, grades 9-12 (state accountability figure): Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022, 2023, 2024, 2025], n [5, 6, 15, 16, 19, 23]]
-ok   College, career and civic readiness index (high schools): Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2025], n [5, 6, 23]]
-ok   Graduates enrolled in college within 16 months: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2022, 2023, 2024], n [15, 16, 19]]
+ok   Daily attendance rate: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2015, 2016, 2018, 2019, 2022, 2023, 2024, 2025], n [29, 53, 118, 147, 201, 211, 211, 202]]
+ok   Students suspended out of school: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2015, 2016, 2017, 2019, 2022, 2023, 2024, 2025], n [20, 36, 86, 147, 201, 211, 211, 202]]
+ok   Chronic absence, grades 1-8 (state accountability figure): Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022, 2023, 2024, 2025], n [114, 141, 189, 200, 196, 189]]
+ok   Chronic absence, grades 9-12 (state accountability figure): Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2022, 2023, 2024, 2025], n [6, 10, 19, 19, 24, 27]]
+ok   College, career and civic readiness index (high schools): Leader in Me points on three or more counted schools, recomputed from the working table  [years [2018, 2019, 2025], n [6, 10, 27]]
+ok   Graduates enrolled in college within 16 months: Leader in Me points on three or more counted schools, recomputed from the working table  [years [2022, 2023, 2024], n [19, 19, 24]]
 ok   every card chip's caption says the filters do not apply and names its source
 ok   the readiness index chip names its three years and the gap
 ok   the grades 1-8 chronic-absence values are the state's own all-students rows (read from the CSV)  [300 of 300 agree]
 ok   the 2024-25 readiness index values are the state's own all-students rows (read from the CSV)  [300 of 300 agree]
 ok   subgroup rows were left aside: the state's file carries them and the working table carries one row per school-year  [9 subgroups in the file]
 ok   the class of 2024 pathways in the pack rebuild from the Graduation Pathways database itself (unpacked and read back)  [300 of 300 agree]
-ok   each class's pathway shares sum to 100  [10,049 records, worst 0.02]
+ok   each class's pathway shares sum to 100  [10,073 records, worst 0.02]
 ok   the pathways and the attendance index stay off the rows and the card
-ok   the research pack's per-school New York values are keyed to schools on the page  [48,403 records]
+ok   the research pack's per-school New York values are keyed to schools on the page  [48,591 records]
 ok   every pack key carries a plain-English label  [[]]
 ok   no pack label leaves a state acronym unexplained
 ok   the pack carries both chronic-absence levels, the whole-school rate and the closure years the card leaves out
-ok   the pack carries teacher turnover only where the state publishes it for a school (charter schools)  [1729 records]
+ok   the pack carries teacher turnover only where the state publishes it for a school (charter schools)  [1724 records]
 ok   the pack's published section carries the state's own attendance, suspension, chronic-absence and turnover rows  [11 state rows, 10,989 rows in all]
 ok   the district codes the pack maps carry published rows  [1064 districts mapped]
 ok   the state ids travel with the page

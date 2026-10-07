@@ -1,25 +1,26 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state NE --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/NE --data /home/claude/sdf/Build/work/NE/data --extras ne_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state NE --core /home/claude/sdf/Core --out /home/claude/work1/NE --data /home/claude/work1/NE/data --extras ne_core_extras
 reading the core for Nebraska ...
 [core] subjects: 44,585 school rows kept; dropped 27,271 rows with no school id and 1,530 with an id but no school record
-[core] Leader in Me roster: 232 rows
+[core] Leader in Me roster: 234 rows
 [core] comparison schools: 7,513 rows
+[core] comparison: 2 rows set aside for 1 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 9 rows
-  subject rows 44,585 · roster rows 232 (24 schools) · comparison rows 7,513 (909 schools) · MRA surveys 9
-[core] Leader in Me roster: 56,181 rows
-  exits: 23 of 24 roster schools carry an expiration date; 2 past it by more than 30 days (exited), 0 inside the grace window, 21 in the future, 1 undated (1 with a start date)
+  subject rows 44,585 · roster rows 234 (25 schools) · comparison rows 7,511 (909 schools) · MRA surveys 9
+[core] Leader in Me roster: 59,452 rows
+  exits: 24 of 25 roster schools carry an expiration date; 2 past it by more than 30 days (exited), 0 inside the grace window, 22 in the future, 1 undated (1 with a start date)
   933 schools · 246 districts
 applying the cleaning rules ...
-  22,928 school-year-band-subject rows · years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 20 of 192 reviewed
-  no start date: 8 schools · dated exits: 1 (school-years after an exit with rows: 4) · aggregate 'All grades' rows used 8, skipped 5
+  23,072 school-year-band-subject rows · years [2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
+  Leader in Me school-years counted: 22 of 200 reviewed
+  no start date: 2 schools · dated exits: 1 (school-years after an exit with rows: 4) · aggregate 'All grades' rows used 8, skipped 5
   achievement levels as measures: yes (three levels, numbered from the bottom; proficiency is the top 2; 68.1% of rows in years and subjects whose levels add up)
   level values blanked on 10 year-subject cells that do not add up: 2016-17 ELA, 2016-17 Math, 2016-17 Science, 2017-18 Science, 2018-19 Science, 2021-22 Science, 2022-23 Science, 2023-24 ELA ...
   proficiency = levels 2, 3 and 4 on 64.0% of rows
-  statewide jump: ELA 2016->2017: 82.5 -> 49.5 (-32.9)
-  statewide jump: Math 2016->2017: 73.6 -> 65.1 (-8.5)
-  statewide jump: Math 2017->2018: 65.1 -> 48.5 (-16.6)
-  statewide jump: Math 2022->2023: 44.6 -> 55.4 (+10.9)
+  statewide jump: ELA 2016->2017: 82.5 -> 49.5 (-33.0)
+  statewide jump: Math 2016->2017: 73.7 -> 65.1 (-8.5)
+  statewide jump: Math 2017->2018: 65.1 -> 48.5 (-16.7)
+  statewide jump: Math 2022->2023: 44.5 -> 55.3 (+10.8)
 folding in Nebraska's own measures (ne_core_extras) ...
   state files (resolved by pattern; the log names the school year each file carries):
     attendance: 2015-16 (Attendance_Rate_20152016.txt), 2016-17 (Attendance_Rate_20162017.csv), 2017-18 (Attendance_Rate_20172018.csv), 2018-19 (Attendance_Rate_20182019.csv), 2019-20 (Attendance_Rate_20192020.csv), 2020-21 (Attendance_Rate_20202021.csv), 2021-22 (Attendance_Rate_20212022.csv), 2022-23 (Attendance_Rate_20222023.csv), 2023-24 (Attendance_Rate_20232024.csv), 2024-25 (Attendance_Rate_20242025.csv)
@@ -33,7 +34,7 @@ folding in Nebraska's own measures (ne_core_extras) ...
     attendance: 17,140 school-years, 16,189 in more than one cumulative file, 0 revised by more than a tenth of a point; 288 sentinels (-1) and 3 rate over 100 set aside
     excluded by name: growth in 2017-18 (790 values); AQuESTT chronic_absent_score (3558 values, 2017-18, 2018-19, 2021-22, 2022-23, 2023-24, 2024-25)
   crosswalk: NCES's NDE school code for each federal id, audited against the state files' own names
-    924 of 933 schools carry an NDE code in NCES's directory; Leader in Me 24 of 24, comparison 900 of 909; 923 appear in at least one state file
+    924 of 933 schools carry an NDE code in NCES's directory; Leader in Me 25 of 25, comparison 899 of 908; 923 appear in at least one state file
     names: the state files' own school name agrees with DOMO's on 915 of 922 crosswalked schools; 0 pairs re-pointed to a folded id; 0 shared codes settled; 0 schools carry more than one code across the years
     name disagreement: DOMO 'Douglas County West High School' vs state 'DOUGLAS CO WEST HIGH SCHOOL' (code 280015001)
     name disagreement: DOMO 'Douglas County West Middle School' vs state 'DOUGLAS CO WEST MIDDLE SCHOOL' (code 280015002)
@@ -42,35 +43,36 @@ folding in Nebraska's own measures (ne_core_extras) ...
     name disagreement: DOMO 'Hitchcock County Elementary' vs state 'HITCHCOCK CO ELEMENTARY' (code 440070002)
     name disagreement: DOMO 'Johnson County Central High School' vs state 'JOHNSON CO CENTRAL HIGH SCHOOL' (code 490050001)
     name disagreement: DOMO 'Johnson County Central Middle School' vs state 'JOHNSON CO CENTRAL MIDDLE SCH' (code 490050002)
-  membership: Leader in Me schools counted per year on the cards {2018: 2, 2019: 2, 2022: 4, 2023: 4, 2024: 4, 2025: 4} (the core's own status)
-  value check of the join (files the map was not built from): the state's attendance rate against DOMO's chronic absence on 2,610 school-years, r = -0.947; AQuESTT's status score against DOMO's proficiency on 4,415, r = 0.868
-  fills: AQuESTT's four-year graduation against DOMO's on 1197 school-years, median difference 3.0 pts (24.5% within a point) -> not the same measure, nothing filled; the AQuESTT chronic absenteeism score against DOMO's chronic absence: 2021-22: r = 0.982, median difference 0.26; 2022-23: r = 0.017, median difference 8.77; 2023-24: r = -0.042, median difference 8.02; 2024-25: r = 0.081, median difference 6.7 -> a level in 2021-22 and an improvement score elsewhere, excluded by name; DOMO carries chronic absence and graduation for every state-file year, nothing filled
+  membership: Leader in Me schools counted per year on the cards {2017: 1, 2018: 2, 2019: 3, 2022: 4, 2023: 4, 2024: 4, 2025: 4} (the core's own status)
+  value check of the join (files the map was not built from): the state's attendance rate against DOMO's chronic absence on 2,634 school-years, r = -0.947; AQuESTT's status score against DOMO's proficiency on 4,451, r = 0.868
+  fills: AQuESTT's four-year graduation against DOMO's on 1203 school-years, median difference 3.0 pts (24.4% within a point) -> not the same measure, nothing filled; the AQuESTT chronic absenteeism score against DOMO's chronic absence: 2021-22: r = 0.982, median difference 0.26; 2022-23: r = 0.018, median difference 8.73; 2023-24: r = -0.044, median difference 7.99; 2024-25: r = 0.079, median difference 6.7 -> a level in 2021-22 and an improvement score elsewhere, excluded by name; DOMO carries chronic absence and graduation for every state-file year, nothing filled
   rows gain: attendance_rate on 9,409 school-year-bands (4 Leader in Me schools ever), pct_suspended on 2,370 school-year-bands (4 Leader in Me schools ever), growth on 3,829 school-year-bands (4 Leader in Me schools ever), science_prof on 4,878 school-year-bands (4 Leader in Me schools ever); 11 school-years had no band to sit in
   card: 5 Nebraska measures, each group on each year's own membership
-    card line attendance_rate: 4 Leader in Me points, latest 2025 n=4 (93.4); not drawn (under three): {2018: 2, 2019: 2}
-    card line growth: 4 Leader in Me points, latest 2025 n=4 (59.43); not drawn (under three): {2019: 2}
-    card line science_prof: 4 Leader in Me points, latest 2025 n=4 (81.05); not drawn (under three): {2018: 2, 2019: 2}
+    card line attendance_rate: 5 Leader in Me points, latest 2025 n=4 (93.4); not drawn (under three): {2017: 1, 2018: 2}
+    card line growth: 5 Leader in Me points, latest 2025 n=4 (59.43)
+    card line science_prof: 5 Leader in Me points, latest 2025 n=4 (81.05); not drawn (under three): {2018: 2}
     card line pct_suspended: 2 Leader in Me points, latest 2025 n=4 (5.74)
-    card line classification: 4 Leader in Me points, latest 2025 n=4 (2.5); not drawn (under three): {2018: 2, 2019: 2}
-  per-school Nebraska records for the pack: 6,973 (15 columns)
-  Nebraska's measures on 9,427 school-year-bands: 7,693 joined to existing rows, 1,734 school-year-bands added with no test rows of their own
-  school type from NCES: Title I on 898 schools (418 yes), charter 0, magnet 0, alternative 0; Title I published 2017-2022, carried forward after
-  funders: 19 Nebraska schools carry a funding source (12 on the page; Kern 18, 11 on the page); latest non-blank year per school
+    card line classification: 5 Leader in Me points, latest 2025 n=4 (2.5); not drawn (under three): {2018: 2}
+  per-school Nebraska records for the pack: 7,021 (15 columns)
+  Nebraska's measures on 9,427 school-year-bands: 7,691 joined to existing rows, 1,736 school-year-bands added with no test rows of their own
+  school type from NCES: Title I on 904 schools (421 yes), charter 0, magnet 0, alternative 0; Title I published 2017-2022, carried forward after
+  funders: 19 Nebraska schools carry a funding source (18 on the page; Kern 18, 17 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 4  by band {'Primary': {'pairs': 2, 'unmatched': 0}, 'Secondary': {'pairs': 2, 'unmatched': 1}}
   MRA: 9 surveys · 3 schools · 40 sentinel values · 0 shells
-  headline 2021-22 to 2023-24: {'y0': 2022, 'y1': 2024, 'lim_n': 4, 'comp_n': 705, 'lim_change': 17.65, 'comp_change': 13.41, 'p': 0.27} · without the 1 undated schools {'y0': 2022, 'y1': 2024, 'lim_n': 3, 'comp_n': 705, 'lim_change': 19.85, 'comp_change': 13.41, 'p': 0.178}
-  roster: 4 counted, 1 exited, 11 not counted yet, 8 not counted
+  headline 2021-22 to 2023-24: {'y0': 2022, 'y1': 2024, 'lim_n': 4, 'comp_n': 711, 'lim_change': 17.65, 'comp_change': 13.34, 'p': 0.263} · without the 1 undated schools {'y0': 2022, 'y1': 2024, 'lim_n': 3, 'comp_n': 711, 'lim_change': 19.85, 'comp_change': 13.34, 'p': 0.176}
+  roster: 4 counted, 1 exited, 18 not counted yet, 2 not counted
+best-performing schools: 1 of 4 counted schools, 60 measures in 13 outcomes
 
-wrote ne_payload.json  (13.1 MB, 24,662 rows) · page kind descriptive (4 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote ne_payload.json  (13.2 MB, 24,808 rows) · page kind descriptive (4 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py ne_payload.json NE_Dashboard.html NE_Methods.html
-payload 13.1 MB -> 0.87 MB gzip
-NE_Dashboard.html: 1412 KB
-NE_Methods.html: 51 KB
+payload 13.2 MB -> 0.88 MB gzip
+NE_Dashboard.html: 1460 KB
+NE_Methods.html: 60 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state NE --work /home/claude/sdf/Build/work/NE
+$ python3 /home/claude/sdf/Build/verify_core.py --state NE --work /home/claude/work1/NE
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -89,12 +91,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': -1.0, 'PercentLevel2': 0.0, 'PercentLevel3': -1.0, 'PercentLevel4': nan, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [1 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [2 exited, 0 in grace, 21 future]
+ok   the exit rule's counts recompute from the roster  [2 exited, 0 in grace, 22 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [5 composite cells at 100, 0 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -110,15 +112,18 @@ ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 note the headline window settles on 2022-2024 (the window's edges are 2022-2025)
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [8 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 0 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [0 Year 0 rows]
+ok   schools with no start date appear in neither group  [2 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
 ok   exited schools keep their true Leader in Me years  [0 exited schools with counted years]
 ok   the exit counts on the methods page match the rule  [2 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'not counted yet': 11, 'not counted': 8, 'counted': 4, 'exited': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'not counted yet': 18, 'counted': 4, 'not counted': 2, 'exited': 1}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -126,24 +131,24 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [249 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [252 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 3 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3]
-ok   the level shares sum to 100 on the grade rows that carry them  [22,387 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [22,539 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 2 of 3; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: meeting the standard; Level 3: exceeding the standard]
 ok   the levels at or above the standard count up, the levels below count down
 ok   the proficiency label names the levels it adds
-ok   years and subjects whose levels do not add up carry no level values  [10 cells set aside, 12,708 grade rows in them]
+ok   years and subjects whose levels do not add up carry no level values  [10 cells set aside, 12,787 grade rows in them]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [333 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [496 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [310 schools]
-ok   the school count never exceeds the band-slice count  [709 schools vs 866 band slices]
+ok   combined-grade schools appear in both bands  [311 schools]
+ok   the school count never exceeds the band-slice count  [715 schools vs 873 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -155,7 +160,7 @@ ok   the printed signed gap is not a negative zero  [-0.12]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
-ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'lighthouse'] absent=['early', 'established']]
+ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'established', 'lighthouse'] absent=['early']]
 ok   movers are built on ten or more schools each
   demo district: Wood River Rural Schools · prospect district: Lincoln Public Schools
 
@@ -163,7 +168,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.7s]
+ok   load time is workable  [0.5s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -173,12 +178,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [5 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.2674 scipy 0.2674 · window 2022-2024 · LiM n=4 mean +17.67 · comparison n=705 mean +13.41]
-ok   the headline counts schools, not band slices  [page 709 vs offline 709 on 2022-2024]
+ok   the headline p recomputes offline  [page 0.2612 scipy 0.2612 · window 2022-2024 · LiM n=4 mean +17.67 · comparison n=711 mean +13.34]
+ok   the headline counts schools, not band slices  [page 715 vs offline 715 on 2022-2024]
 ok   the page's Leader in Me count is the builder's  [4 vs 4]
 ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [410 of 919 schools; In Nebraska Title I schools, between 2021-22 and 2023-24, Leader in Me schools r]
+ok   choosing 'Title I schools' narrows the view and names it  [413 of 925 schools; In Nebraska Title I schools, between 2021-22 and 2023-24, Leader in Me schools r]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
 ok   Title I status is known for most schools on the page  [97.7%]
@@ -200,7 +205,7 @@ ok   the matched view shrinks or equals the Leader in Me count  [3 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Wood River Rural Schools generates cards or says there is nothing to report  [4 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.26739500113591813, 'n1': 4, 'n2': 705}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.26115348714998876, 'n1': 4, 'n2': 711}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -217,11 +222,11 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [272 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [162,415 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [162,263 bytes]
 ok   the pptx export is named for the state and chart  [NE_Meeting_or_exceeding_the_standard_levels_2_and_3_year_by_year_Nebraska_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [162,378 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [162,963 bytes]
 ok   the docx export is named for the state and chart  [NE_Meeting_or_exceeding_the_standard_levels_2_and_3_year_by_year_Nebraska_schools.docx]
-ok   the research pack downloads with its sections  [9,187 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [9,197 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
@@ -257,43 +262,43 @@ ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 ok   a descriptive page says so on the methods page
 
-  HEADLINE (statewide, 2022-2024, no filters): Leader in Me +17.67 pts (n=4) vs comparison +13.41 pts (n=705), p=0.2674 -> not significant
+  HEADLINE (statewide, 2022-2024, no filters): Leader in Me +17.67 pts (n=4) vs comparison +13.34 pts (n=711), p=0.2612 -> not significant
 
 ==========================================================================
-162 of 162 checks pass · 5 skipped
+165 of 165 checks pass · 5 skipped
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/ne_core_verify.py --work /home/claude/sdf/Build/work/NE
+$ python3 /home/claude/sdf/Build/states/ne_core_verify.py --work /home/claude/work1/NE
 
 Nebraska's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches every Leader in Me school  [24 of 24]
-ok   the crosswalk reaches most comparison schools  [900 of 909]
+ok   the crosswalk reaches every Leader in Me school  [25 of 25]
+ok   the crosswalk reaches most comparison schools  [899 of 908]
 ok   NCES's own id pairs anchor the crosswalk  [924 pairs for 933 schools]
 ok   the state files' own school names agree with DOMO's on nearly every crosswalked school  [915 of 922; 7 read one by one]
-ok   the state's attendance rate runs against DOMO's chronic absence on the crosswalked schools (an independent check of the join)  [r = -0.947 on 2610 school-years]
-ok   AQuESTT's status score tracks DOMO's proficiency on the crosswalked schools  [r = 0.868 on 4415 school-years]
+ok   the state's attendance rate runs against DOMO's chronic absence on the crosswalked schools (an independent check of the join)  [r = -0.947 on 2634 school-years]
+ok   AQuESTT's status score tracks DOMO's proficiency on the crosswalked schools  [r = 0.868 on 4451 school-years]
 ok   no school code is on two schools  [924 pairs, 924 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page, or every one is reached and the page says so
 ok   the join note on the card carries the reach
 ok   each Leader in Me school's NDE code sits in the pack's state ids  [4 Leader in Me schools]
 ok   the 2018-19 AQuESTT file, which carries no school code, joined by name within district on nearly every row and the page says so  [1103 of 1106; 3 ambiguous, 0 unjoined]
 ok   Leader in Me schools carry a 2018-19 classification through the name join  [4 Leader in Me schools]
-ok   attendance 2024-25: the pack's attendance_rate is the file's own value re-read from the csv  [874 of 874 agree (need 700); 4 Leader in Me schools among them]
-ok   attendance 2024-25: the rows' attendance rate equals the pack's value  [1169 of 1169]
-ok   AQuESTT growth 2024-25 (mean of the school's grade spans): the pack's growth is the file's own value re-read from the csv  [746 of 746 agree (need 600); 4 Leader in Me schools among them]
-ok   AQuESTT science 2024-25: the pack's science_prof is the file's own value re-read from the csv  [813 of 813 agree (need 700); 4 Leader in Me schools among them]
-ok   AQuESTT suspended or expelled 2024-25 (100 minus the not-suspended score): the pack's pct_suspended is the file's own value re-read from the csv  [874 of 874 agree (need 700); 4 Leader in Me schools among them]
-ok   AQuESTT classification 2024-25: the pack's classification is the file's own value re-read from the csv  [874 of 874 agree (need 700); 4 Leader in Me schools among them]
-ok   AQuESTT four-year graduation 2024-25 (high school rows): the pack's grad_4yr is the file's own value re-read from the csv  [256 of 256 agree (need 150); 0 Leader in Me schools among them]
-ok   growth 2024-25: the rows carry the elementary score on the primary band and the middle score on the secondary band  [749 of 749]
-ok   discipline file 2024-25: the pack's pct_disciplined is the file's own value re-read from the csv  [384 of 384 agree (need 300); 3 Leader in Me schools among them]
-ok   college-going, class of 2023 (the latest file): the pack's college_going is the file's own value re-read from the csv  [220 of 220 agree (need 150); 0 Leader in Me schools among them]
+ok   attendance 2024-25: the pack's attendance_rate is the file's own value re-read from the csv  [880 of 880 agree (need 700); 4 Leader in Me schools among them]
+ok   attendance 2024-25: the rows' attendance rate equals the pack's value  [1176 of 1176]
+ok   AQuESTT growth 2024-25 (mean of the school's grade spans): the pack's growth is the file's own value re-read from the csv  [751 of 751 agree (need 600); 4 Leader in Me schools among them]
+ok   AQuESTT science 2024-25: the pack's science_prof is the file's own value re-read from the csv  [815 of 815 agree (need 700); 4 Leader in Me schools among them]
+ok   AQuESTT suspended or expelled 2024-25 (100 minus the not-suspended score): the pack's pct_suspended is the file's own value re-read from the csv  [880 of 880 agree (need 700); 4 Leader in Me schools among them]
+ok   AQuESTT classification 2024-25: the pack's classification is the file's own value re-read from the csv  [880 of 880 agree (need 700); 4 Leader in Me schools among them]
+ok   AQuESTT four-year graduation 2024-25 (high school rows): the pack's grad_4yr is the file's own value re-read from the csv  [257 of 257 agree (need 150); 0 Leader in Me schools among them]
+ok   growth 2024-25: the rows carry the elementary score on the primary band and the middle score on the secondary band  [754 of 754]
+ok   discipline file 2024-25: the pack's pct_disciplined is the file's own value re-read from the csv  [386 of 386 agree (need 300); 3 Leader in Me schools among them]
+ok   college-going, class of 2023 (the latest file): the pack's college_going is the file's own value re-read from the csv  [221 of 221 agree (need 150); 0 Leader in Me schools among them]
 ok   no core measure was filled from the state's files (the audit found AQuESTT's graduation a different measure and its chronic absenteeism column two measures)  [fill_measures {}]
-ok   chronic absence on the rows is DOMO's own value on every school-year (never overwritten, never filled)  [2615 of 2615]
-ok   graduation on the rows is DOMO's own value on every school-year (never overwritten, never filled)  [1432 of 1432]
-ok   the audit found AQuESTT's graduation rate is not DOMO's, and the page says so  [median difference 3.0 on 1197]
-ok   the audit found the AQuESTT chronic absenteeism column a level in 2021-22 and an improvement score elsewhere, and the column is excluded by name  [2022: r = 0.982, 2023: r = 0.017, 2024: r = -0.042, 2025: r = 0.081]
+ok   chronic absence on the rows is DOMO's own value on every school-year (never overwritten, never filled)  [2639 of 2639]
+ok   graduation on the rows is DOMO's own value on every school-year (never overwritten, never filled)  [1439 of 1439]
+ok   the audit found AQuESTT's graduation rate is not DOMO's, and the page says so  [median difference 3.0 on 1203]
+ok   the audit found the AQuESTT chronic absenteeism column a level in 2021-22 and an improvement score elsewhere, and the column is excluded by name  [2022: r = 0.982, 2023: r = 0.018, 2024: r = -0.044, 2025: r = 0.079]
 ok   Attendance rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 93.4 (n=4) vs offline 93.4 (n=4)]
 ok   AQuESTT growth: assessments holding or raising their percentile rank: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 59.43 (n=4) vs offline 59.43 (n=4)]
 ok   Science proficiency (AQuESTT status): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 81.05 (n=4) vs offline 81.05 (n=4)]
@@ -312,8 +317,8 @@ ok   college-going is keyed on the graduating class with the closure classes out
 ok   the CSI designation is a flag (0 or 100) in the pack
 ok   a value AQuESTT prints from the district for a school too small to have its own carries no value in the pack  [66 schools borrowing every science figure in 2024-25, 0 leaked]
 ok   every exclusion is counted on the cleaning audit
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 6,964 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [20 Leader in Me school-years on the cards]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 7,012 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [22 Leader in Me school-years on the cards]
 ok   every Leader in Me card member is a school the headline's roster counts  [4 schools]
 ok   no card member sits past the core's last year  [2025 vs 2025]
 ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=4]
@@ -324,11 +329,11 @@ ok   AQuESTT classification (1 to 4): the Leader in Me point in 2025 rests on at
 ok   every card measure carries the poverty context line
 ok   the card stays at a dozen measures or fewer  [5 on the card]
 ok   a line the Leader in Me side cannot fill is off the card and explained in the note  [thin: []]
-ok   the years a Leader in Me point would rest on fewer than three schools (2017-18, 2018-19: two counted) are not drawn and are named in the note  [{'2018': 2, '2019': 2}]
-ok   the attendance rate, growth, science and the share suspended are measures in the rows with Leader in Me school-years behind them  [20 Leader in Me attendance school-years]
+ok   the years a Leader in Me point would rest on fewer than three schools are not drawn and are named in the note  [{'attendance_rate': {'2017': 1, '2018': 2}, 'science_prof': {'2018': 2}, 'classification': {'2018': 2}}]
+ok   the attendance rate, growth, science and the share suspended are measures in the rows with Leader in Me school-years behind them  [22 Leader in Me attendance school-years]
 ok   the attendance rate on the rows reaches back to 2015-16
-ok   the research pack's per-school Nebraska values are keyed to schools on the page  [6,973 records]
-ok   every school with an NDE code on the page has it in the pack  [914 of 919]
+ok   the research pack's per-school Nebraska values are keyed to schools on the page  [7,021 records]
+ok   every school with an NDE code on the page has it in the pack  [920 of 925]
 ok   the research pack carries the AQuESTT families with the source in the label
 ok   look-alike mode names the attendance rate as its behavior measure
 ok   the banner names the attendance, AQuESTT, discipline and college-going files

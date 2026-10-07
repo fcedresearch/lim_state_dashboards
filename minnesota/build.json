@@ -2,8 +2,8 @@
  "state": "MN",
  "name": "Minnesota",
  "folder": "minnesota",
- "built": "2026-10-01",
- "seconds": 98,
+ "built": "2026-10-06",
+ "seconds": 91,
  "builder": "build_payload_core.py",
  "page_kind": "descriptive",
  "lim_headline_n": 10,
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,7 +42,7 @@
   },
   "roster": {
    "path": "/home/claude/work1/MN/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 193
+   "rows": 213
   },
   "comparison": {
    "path": "/home/claude/work1/MN/data/All Other Schools (Non-LiM & Exited).csv",
@@ -59,7 +59,7 @@
  ],
  "extras_module": null,
  "verified": true,
- "dashboard_bytes": 3608193,
+ "dashboard_bytes": 3621331,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -72,6 +72,123 @@
   "missing": [],
   "rows_share_of_prior": 1.32,
   "prior_year": 2025
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 6094,
+    "2016": 6003,
+    "2017": 6039,
+    "2018": 6000,
+    "2019": 6136,
+    "2022": 5981,
+    "2023": 5971,
+    "2024": 6120,
+    "2025": 4212,
+    "2026": 5575
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 6094,
+    "2016": 6003,
+    "2017": 6039,
+    "2018": 6000,
+    "2019": 6136,
+    "2022": 5981,
+    "2023": 5971,
+    "2024": 6120,
+    "2025": 4212,
+    "2026": 5575
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 6094,
+    "2016": 6003,
+    "2017": 6039,
+    "2018": 6000,
+    "2019": 6136,
+    "2022": 5981,
+    "2023": 5971,
+    "2024": 6120,
+    "2025": 4212,
+    "2026": 5575
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 6094,
+    "2016": 6003,
+    "2017": 6039,
+    "2018": 6000,
+    "2019": 6136,
+    "2022": 5981,
+    "2023": 5971,
+    "2024": 6120,
+    "2025": 4212,
+    "2026": 5575
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 6094,
+    "2016": 6003,
+    "2017": 6039,
+    "2018": 6000,
+    "2019": 6136,
+    "2022": 5981,
+    "2023": 5971,
+    "2024": 6120,
+    "2025": 4212,
+    "2026": 5575
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5422,
+    "2016": 5376,
+    "2017": 5442,
+    "2018": 5411,
+    "2019": 5510,
+    "2022": 5402,
+    "2023": 5402,
+    "2024": 5556,
+    "2025": 3716
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2017": 1992,
+    "2018": 1995,
+    "2019": 2001,
+    "2022": 2000,
+    "2023": 1993,
+    "2024": 2026,
+    "2025": 1325
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -497,122 +614,5 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 9
  },
- "best_schools_added": "2026-10-01",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Meeting or exceeding the standard (levels 3 and 4)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 6094,
-    "2016": 6003,
-    "2017": 6039,
-    "2018": 6000,
-    "2019": 6136,
-    "2022": 5981,
-    "2023": 5971,
-    "2024": 6120,
-    "2025": 4212,
-    "2026": 5575
-   }
-  },
-  "percent_level4": {
-   "label": "Level 4: exceeding the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 6094,
-    "2016": 6003,
-    "2017": 6039,
-    "2018": 6000,
-    "2019": 6136,
-    "2022": 5981,
-    "2023": 5971,
-    "2024": 6120,
-    "2025": 4212,
-    "2026": 5575
-   }
-  },
-  "percent_level3": {
-   "label": "Level 3: meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 6094,
-    "2016": 6003,
-    "2017": 6039,
-    "2018": 6000,
-    "2019": 6136,
-    "2022": 5981,
-    "2023": 5971,
-    "2024": 6120,
-    "2025": 4212,
-    "2026": 5575
-   }
-  },
-  "percent_level2": {
-   "label": "Level 2: approaching the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 6094,
-    "2016": 6003,
-    "2017": 6039,
-    "2018": 6000,
-    "2019": 6136,
-    "2022": 5981,
-    "2023": 5971,
-    "2024": 6120,
-    "2025": 4212,
-    "2026": 5575
-   }
-  },
-  "percent_below": {
-   "label": "Level 1: below the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 6094,
-    "2016": 6003,
-    "2017": 6039,
-    "2018": 6000,
-    "2019": 6136,
-    "2022": 5981,
-    "2023": 5971,
-    "2024": 6120,
-    "2025": 4212,
-    "2026": 5575
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5422,
-    "2016": 5376,
-    "2017": 5442,
-    "2018": 5411,
-    "2019": 5510,
-    "2022": 5402,
-    "2023": 5402,
-    "2024": 5556,
-    "2025": 3716
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2017": 1992,
-    "2018": 1995,
-    "2019": 2001,
-    "2022": 2000,
-    "2023": 1993,
-    "2024": 2026,
-    "2025": 1325
-   }
-  }
- }
+ "best_schools_added": "2026-10-01"
 }

@@ -1,23 +1,25 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state TN --core /home/claude/sdf/Core --out /home/claude/work3 --data /home/claude/work3/data --extras tn_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state TN --core /home/claude/sdf/Core --out /home/claude/work1/TN --data /home/claude/work1/TN/data --extras tn_core_extras
 reading the core for Tennessee ...
 [core] subjects: 207,449 school rows kept; dropped 53,210 rows with no school id and 5,642 with an id but no school record
-[core] Leader in Me roster: 529 rows
+[core] Leader in Me roster: 629 rows
 [core] comparison schools: 14,015 rows
+[core] comparison: 24 rows set aside for 12 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 68 rows
-  subject rows added from the state's own file: 19,217 (Tennessee 2025-26 TCAP results (the department's school-level assessment file))
-  subject rows 226,666 · roster rows 529 (64 schools) · comparison rows 14,015 (1817 schools) · MRA surveys 68
-[core] Leader in Me roster: 56,181 rows
-  exits: 52 of 64 roster schools carry an expiration date; 38 past it by more than 30 days (exited), 1 inside the grace window, 13 in the future, 12 undated (9 with a start date)
+  newest-year like-for-like: 14 grade-test pairs not in the state's newest file; 16 rows at 4 schools left out of that year
+  subject rows added from the state's own file: 19,201 (Tennessee 2025-26 TCAP results (the department's school-level assessment file))
+  subject rows 226,650 · roster rows 629 (77 schools) · comparison rows 13,991 (1817 schools) · MRA surveys 68
+[core] Leader in Me roster: 59,452 rows
+  exits: 65 of 77 roster schools carry an expiration date; 39 past it by more than 30 days (exited), 0 inside the grace window, 26 in the future, 12 undated (10 with a start date)
   1,881 schools · 146 districts
 applying the cleaning rules ...
-  57,894 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
-  Leader in Me school-years counted: 248 of 640 reviewed
-  no start date: 4 schools · dated exits: 33 (school-years after an exit with rows: 88) · aggregate 'All grades' rows used 3039, skipped 83
+  57,936 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 284 of 770 reviewed
+  no start date: 2 schools · dated exits: 33 (school-years after an exit with rows: 88) · aggregate 'All grades' rows used 3046, skipped 83
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 28.0% of rows in years and subjects whose levels add up)
   level values blanked on 18 year-subject cells that do not add up: 2014-15 ELA, 2014-15 Math, 2014-15 Science, 2015-16 ELA, 2015-16 Math, 2015-16 Science, 2015-16 Social Studies, 2017-18 ELA ...
   proficiency = levels 3 and 4 on 28.0% of rows
-  statewide jump: ELA 2015->2016: 48.7 -> 29.4 (-19.3)
+  statewide jump: ELA 2015->2016: 48.8 -> 29.4 (-19.3)
   statewide jump: ELA 2016->2017: 29.4 -> 39.8 (+10.4)
   statewide jump: Math 2015->2016: 56.7 -> 19.5 (-37.2)
   statewide jump: Math 2016->2017: 19.5 -> 46.1 (+26.6)
@@ -76,42 +78,50 @@ folding in Tennessee's own measures (tn_core_extras) ...
     essa 2024: school_indicator_scores_suppressed_2024.xlsx
     essa 2025: school_indicator_scores_suppressed_2025.xlsx
     set aside: ready_graduate_school_suppressed.csv: byte-for-byte the same file as ready_graduate_school_suppressed_2020-21.csv (the server's generic name, re-pulled under its year), not read twice
-    NCES directory: 2,081 federal-to-state id triples from the cache (8 CCD files unchanged)
-    survey: 293,520 school-item rows for 8 survey years from the cache (workbooks unchanged)
+    NCES directory: 2,081 federal-to-state id triples for Tennessee from 8 CCD files (2016-17 to 2023-24), cached
+    survey 2018: reading Teacher_Core_School_Consolidated.xlsx (14.7 MB)
+    survey 2019: reading Teacher_Core_School_Consolidated_Suppressed.xlsx (25.3 MB)
+    survey 2021: reading Teacher_Core_School_Consolidated_Suppressed_2021.xlsx (33.4 MB)
+    survey 2022: reading Teacher_Core_School_Consolidated_Suppressed_2022.xlsx (19.7 MB)
+    survey 2023: reading Teacher_Core_School_Consolidated_Suppressed_2023.xlsx (11.6 MB)
+    survey 2024: reading Teacher_Core_School_Consolidated_2024.xlsx (14.9 MB)
+    survey 2025: reading Teacher_Core_School_Consolidated_Suppressed_2025.xlsx (18.7 MB)
+    survey 2017: reading data_survey_results_2017_tchr_school_level.xlsx (6.9 MB); names only, joined to state numbers by name within district
+    survey: 293,520 school-item rows for 8 survey years, cached in cache/
   survey: 8 years (2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025); 8,786 school-years with published results; card constructs in every drawn year: tes_satisfied 2018-2025 (7 yrs); tes_trust 2017-2025 (8 yrs); tes_lead_roles 2017-2025 (8 yrs); tes_raise_concerns 2017-2025 (8 yrs); tes_students_respect 2017-2025 (8 yrs); tes_recommend 2019-2025 (6 yrs)
   retention: 8 years, 14,012 school-years; discipline read for 2018, 2019, 2022, 2023, 2024, 2025; Ready Graduate classes of 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025; ACT classes of 2021, 2022, 2023, 2024, 2025; postsecondary classes of 2017, 2018, 2019, 2020, 2021, 2022, 2023; ESSA 2019, 2022, 2023, 2024, 2025
   crosswalk: NCES's state system and school numbers for each federal id, audited against the state files' own names
-    1,873 of 1,881 schools carry a state id in NCES's directory; Leader in Me 64 of 64, comparison 1,809 of 1,817; 1,861 appear in at least one Tennessee file
+    1,873 of 1,881 schools carry a state id in NCES's directory; Leader in Me 77 of 77, comparison 1,796 of 1,804; 1,861 appear in at least one Tennessee file
     names: the state files' own school name agrees with DOMO's on 1,859 of 1,861 crosswalked schools; 0 triples re-pointed to a folded id; 1 shared state ids settled; 0 schools carry more than one state id across the years
-  value check of the join (files the map was not built from): the state's chronic-absenteeism indicator score against DOMO's chronic absence on 7,492 school-years, Spearman -0.497 (mean DOMO rate by score {0: 32.8, 1: 21.5, 2: 17.2, 3: 15.0, 4: 14.8}); the graduation indicator against DOMO's graduation rate on 1,524, Spearman 0.371
-  rows gain: teacher_retention on 12,107 school-year-bands (51 Leader in Me schools ever), tch_satisfied on 7,930 school-year-bands (41 Leader in Me schools ever); left off the rows for thin Leader in Me coverage: ready_grad (2), act_21 (2), college_enroll (0); 0 school-years had no band to sit in
-  card: 11 Tennessee measures, each group on each year's own membership (thin, left off: ready_grad, act_21, college_enroll)
+  value check of the join (files the map was not built from): the state's chronic-absenteeism indicator score against DOMO's chronic absence on 7,501 school-years, Spearman -0.497 (mean DOMO rate by score {0: 32.8, 1: 21.5, 2: 17.2, 3: 15.0, 4: 14.8}); the graduation indicator against DOMO's graduation rate on 1,524, Spearman 0.371
+  rows gain: teacher_retention on 12,118 school-year-bands (56 Leader in Me schools ever), tch_satisfied on 7,934 school-year-bands (42 Leader in Me schools ever), ready_grad on 2,122 school-year-bands (5 Leader in Me schools ever), act_21 on 1,390 school-year-bands (4 Leader in Me schools ever); left off the rows for thin Leader in Me coverage: college_enroll (1); 0 school-years had no band to sit in
+  card: 13 Tennessee measures, each group on each year's own membership (thin, left off: college_enroll)
     survey card line tes_satisfied: 6 Leader in Me points, latest 2025 n=15 (86.63%)
     survey card line tes_trust: 7 Leader in Me points, latest 2025 n=15 (79.05%)
     survey card line tes_lead_roles: 7 Leader in Me points, latest 2025 n=15 (84.67%)
     survey card line tes_raise_concerns: 7 Leader in Me points, latest 2025 n=15 (76.79%)
     survey card line tes_students_respect: 7 Leader in Me points, latest 2025 n=15 (73.83%)
     survey card line tes_recommend: 5 Leader in Me points, latest 2025 n=15 (84.02%)
-  per-school Tennessee records for the pack: 11,443 (52 columns, 28 of them survey items)
-  Tennessee's measures on 12,230 school-year-bands: 11,638 joined to existing rows, 592 school-year-bands added with no test rows of their own
-  school type from NCES: Title I on 1,810 schools (1,247 yes), charter 141, magnet 126, alternative 11; Title I published 2017-2022, carried forward after
-  funders: 32 Tennessee schools carry a funding source (31 on the page; Kern 13, 12 on the page); latest non-blank year per school
+  per-school Tennessee records for the pack: 11,455 (52 columns, 28 of them survey items)
+  Tennessee's measures on 12,337 school-year-bands: 11,718 joined to existing rows, 619 school-year-bands added with no test rows of their own
+  school type from NCES: Title I on 1,812 schools (1,249 yes), charter 142, magnet 126, alternative 11; Title I published 2017-2022, carried forward after
+  funders: 32 Tennessee schools carry a funding source (32 on the page; Kern 13, 13 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 42  by band {'Primary': {'pairs': 29, 'unmatched': 2}, 'Secondary': {'pairs': 13, 'unmatched': 0}}
+  pairs 49  by band {'Primary': {'pairs': 32, 'unmatched': 2}, 'Secondary': {'pairs': 17, 'unmatched': 0}}
   MRA: 59 surveys · 27 schools · 175 sentinel values · 7 shells
-  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 24, 'comp_n': 1530, 'lim_change': 7.64, 'comp_change': 6.96, 'p': 0.573} · without the 9 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 16, 'comp_n': 1530, 'lim_change': 7.39, 'comp_change': 6.96, 'p': 0.766}
-  roster: 20 counted, 38 exited, 2 not counted yet, 4 not counted
-best-performing schools: 5 of 25 counted schools, 64 measures in 20 outcomes
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 28, 'comp_n': 1528, 'lim_change': 7.97, 'comp_change': 6.96, 'p': 0.375} · without the 10 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 19, 'comp_n': 1528, 'lim_change': 7.31, 'comp_change': 6.96, 'p': 0.779}
+  roster: 23 counted, 39 exited, 13 not counted yet, 2 not counted
+best-performing schools: 5 of 29 counted schools, 68 measures in 22 outcomes
 
-wrote tn_payload.json  (37.4 MB, 58,486 rows) · page kind full (24 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fd5a84a86926'}
+wrote tn_payload.json  (37.6 MB, 58,555 rows) · page kind full (28 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py tn_payload.json TN_Dashboard.html TN_Methods.html
-payload 37.4 MB -> 2.63 MB gzip
-TN_Dashboard.html: 3732 KB
-TN_Methods.html: 65 KB
+payload 37.6 MB -> 2.66 MB gzip
+TN_Dashboard.html: 3783 KB
+TN_Methods.html: 68 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state TN --work /home/claude/work3
+$ python3 /home/claude/sdf/Build/verify_core.py --state TN --work /home/claude/work1/TN
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -130,12 +140,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 5.0, 'PercentLevel3': 1.1, 'PercentLevel4': 1.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [13 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [38 exited, 1 in grace, 13 future]
+ok   the exit rule's counts recompute from the roster  [39 exited, 0 in grace, 26 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [15 composite cells at 100, 0 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -150,15 +160,18 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [4 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 19 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [19 Year 0 rows]
+ok   schools with no start date appear in neither group  [2 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [31 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [38 exited (0 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [37 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [39 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 38, 'counted': 20, 'not counted': 4, 'not counted yet': 2}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 39, 'counted': 23, 'not counted yet': 13, 'not counted': 2}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -166,61 +179,61 @@ ok   the poverty share rides on most rows for the look-alike caliper  [94%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [942 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [944 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [26,143 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [26,169 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 97.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
 ok   the levels at or above the standard count up, the levels below count down
 ok   the proficiency label names the levels it adds
-ok   years and subjects whose levels do not add up carry no level values  [18 cells set aside, 63,203 grade rows in them]
+ok   years and subjects whose levels do not add up carry no level values  [18 cells set aside, 63,243 grade rows in them]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [697 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [991 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [430 schools]
-ok   the school count never exceeds the band-slice count  [1554 schools vs 1827 band slices]
+ok   the school count never exceeds the band-slice count  [1556 schools vs 1829 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline -0.324 vs payload -0.330 on 42 pairs]
-ok   the mean signed baseline gap is under one point  [-0.324]
+ok   the signed baseline gap recomputes to the payload's  [offline -0.365 vs payload -0.370 on 49 pairs]
+ok   the mean signed baseline gap is under one point  [-0.365]
 ok   the widest single baseline gap is inside the caliper's reach  [2.9 points]
-ok   the printed signed gap is not a negative zero  [-0.33]
+ok   the printed signed gap is not a negative zero  [-0.37]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
 ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
 ok   movers are built on ten or more schools each
-  demo district: Davidson County · prospect district: Williamson County
+  demo district: Memphis-Shelby County Schools · prospect district: Williamson County
 
 --------------------------------------------------------------------------
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.8s]
+ok   load time is workable  [1.0s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
 ok   the MRA card shows exactly when a trend line can be drawn
 ok   the discipline card shows exactly when the payload carries a discipline trend  [payload has no discipline_ga]
 ok   the incidents card shows exactly when the payload carries an incident trend  [payload has no incidents]
-ok   the state extras card shows exactly when the payload carries state measures  [11 state measures]
+ok   the state extras card shows exactly when the payload carries state measures  [13 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.5714 scipy 0.5714 · window 2022-2026 · LiM n=24 mean +7.64 · comparison n=1530 mean +6.96]
-ok   the headline counts schools, not band slices  [page 1554 vs offline 1554 on 2022-2026]
-ok   the page's Leader in Me count is the builder's  [24 vs 24]
-ok   the district filter re-renders the headline  [In Davidson County schools, between 2021-22 and 2025-26, Leader in Me schools rose 8.3% on]
+ok   the headline p recomputes offline  [page 0.3748 scipy 0.3748 · window 2022-2026 · LiM n=28 mean +7.97 · comparison n=1528 mean +6.96]
+ok   the headline counts schools, not band slices  [page 1556 vs offline 1556 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [28 vs 28]
+ok   the district filter re-renders the headline  [In Memphis-Shelby County Schools schools, between 2021-22 and 2025-26, Leader in Me school]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [1197 of 1875 schools; In Tennessee Title I schools, between 2021-22 and 2025-26, Leader in Me schools ]
+ok   choosing 'Title I schools' narrows the view and names it  [1199 of 1877 schools; In Tennessee Title I schools, between 2021-22 and 2025-26, Leader in Me schools ]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Tennessee schools (Leader in Me side: Kern Family Foundation schools), between 2022-23 and 2025-2]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Tennessee schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2025-2]
 ok   Title I status is known for most schools on the page  [96.5%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
@@ -234,12 +247,14 @@ ok   measure 'chronic_absent' either draws or says why
 ok   measure 'grad_rate' either draws or says why
 ok   measure 'teacher_retention' either draws or says why
 ok   measure 'tch_satisfied' either draws or says why
+ok   measure 'ready_grad' either draws or says why
+ok   measure 'act_21' either draws or says why
 ok   the matched toggle re-renders the headline  [In Tennessee schools (matched to similar schools only), between 2021-22 and 2025-26, Leade]
-ok   the matched view shrinks or equals the Leader in Me count  [17 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [18 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Davidson County generates cards or says there is nothing to report  [11 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5713708403811448, 'n1': 24, 'n2': 1530}]
+ok   Memphis-Shelby County Schools generates cards or says there is nothing to report  [14 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.3747817854028259, 'n1': 28, 'n2': 1528}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -258,24 +273,24 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [1,495 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [191,586 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [188,986 bytes]
 ok   the pptx export is named for the state and chart  [TN_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Tennessee_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [192,381 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [190,518 bytes]
 ok   the docx export is named for the state and chart  [TN_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Tennessee_schools.docx]
-ok   the research pack downloads with its sections  [48,351 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
-ok   the pack's Leader in Me count for the district is the page's  [3 vs 3]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Tennessee schools like Williamson County’s, between 2022-23 and 2023-24, Leader in Me schools rose 1.5% on Meeting or]
-ok   the look-alike box reports both counts or says why not  [Schools like Williamson County’s: 3 Leader in Me schools and 217 comparison schools look like Williamson County’s 51 schools with results in these years (each m]
+ok   the research pack downloads with its sections  [49,341 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the pack's Leader in Me count for the district is the page's  [4 vs 4]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Tennessee schools like Williamson County’s, between 2021-22 and 2025-26, Leader in Me schools rose 7.1% on Meeting or]
+ok   the look-alike box reports both counts or says why not  [Schools like Williamson County’s: 4 Leader in Me schools and 217 comparison schools look like Williamson County’s 51 schools with results in these years (each m]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.9659]
+ok   the look-alike headline p recomputes offline  [p=0.7845]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [54 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [55 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Tennessee grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 8.2% on Meeting]
+ok   choosing a grade re-renders the headline and names the grade  [In Tennessee grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 8.4% on Meeting]
 ok   the level measures stay on while a grade is chosen
-ok   whole-school measures switch off while a grade is chosen  [5 whole-school measures in the payload]
+ok   whole-school measures switch off while a grade is chosen  [7 whole-school measures in the payload]
 ok   dark mode re-renders without errors
 ok   no horizontal overflow at 900px  [0px]
 ok   no horizontal overflow at 700px  [0px]
@@ -304,38 +319,38 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +7.64 pts (n=24) vs comparison +6.96 pts (n=1530), p=0.5714 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +7.97 pts (n=28) vs comparison +6.96 pts (n=1528), p=0.3748 -> not significant
 
 ==========================================================================
-174 of 174 checks pass
+179 of 179 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/tn_core_verify.py --work /home/claude/work3
+$ python3 /home/claude/sdf/Build/states/tn_core_verify.py --work /home/claude/work1/TN
 
 Tennessee's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [64 of 64]
-ok   the crosswalk reaches most comparison schools  [1,809 of 1,817]
+ok   the crosswalk reaches nearly every Leader in Me school  [77 of 77]
+ok   the crosswalk reaches most comparison schools  [1,796 of 1,804]
 ok   NCES's own id triples anchor the crosswalk  [1,873 triples for 1,881 schools]
 ok   the state files' own school names agree with DOMO's on nearly every crosswalked school  [1,859 of 1,861; 2 read one by one]
-ok   DOMO's chronic absence falls as the state's absenteeism indicator score rises (an independent check of the join)  [Spearman -0.497 on 7,492 school-years; mean DOMO rate by score {0: 32.8, 1: 21.5, 2: 17.2, 3: 15.0, 4: 14.8}]
+ok   DOMO's chronic absence falls as the state's absenteeism indicator score rises (an independent check of the join)  [Spearman -0.497 on 7,501 school-years; mean DOMO rate by score {0: 32.8, 1: 21.5, 2: 17.2, 3: 15.0, 4: 14.8}]
 ok   no state id is on two schools  [1,873 triples, 1,873 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page
 ok   the join note on the card carries the reach
 ok   the undated survey workbook read as 2019 holds schools NCES first lists in 2018-19 and none first listed in 2019-20  [6 of 92 new in 2018-19; 0 of 32 new in 2019-20]
 ok   the survey years in the working table are the eight surveys the folder holds (no 2020)  [[2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025]]
-ok   survey 2025: the pack's satisfaction share is the workbook's own agree-plus-strongly-agree share, re-read from the xlsx  [1004 of 1004 agree (23 Leader in Me schools among them)]
-ok   survey 2025: the rows' satisfaction measure equals the pack's value  [1245 of 1245]
-ok   retention 2025: the pack's teacher_retention is the state file's own value through the crosswalk  [1625 of 1625 agree (need 800)]
+ok   survey 2025: the pack's satisfaction share is the workbook's own agree-plus-strongly-agree share, re-read from the xlsx  [1005 of 1005 agree (25 Leader in Me schools among them)]
+ok   survey 2025: the rows' satisfaction measure equals the pack's value  [1246 of 1246]
+ok   retention 2025: the pack's teacher_retention is the state file's own value through the crosswalk  [1627 of 1627 agree (need 800)]
 ok   retention 2024: the 24 values of exactly zero in the state file carry no retention value in the pack  [23 of them on the page]
 ok   no retention value in the pack is exactly zero
-ok   discipline 2019: the pack's pct_oss is the state file's own value through the crosswalk  [1700 of 1700 agree (need 800)]
-ok   discipline 2025: the pack's pct_oss is the state file's own value through the crosswalk  [552 of 552 agree (need 200)]
+ok   discipline 2019: the pack's pct_oss is the state file's own value through the crosswalk  [1702 of 1702 agree (need 800)]
+ok   discipline 2025: the pack's pct_oss is the state file's own value through the crosswalk  [553 of 553 agree (need 200)]
 ok   Ready Graduate 2025: the pack's ready_grad is the state file's own value through the crosswalk  [365 of 365 agree (need 200)]
 ok   Ready Graduate (re-read from the xlsx) 2025: the pack's ready_grad is the state file's own value through the crosswalk  [365 of 365 agree (need 200)]
 ok   ACT 2025: the pack's act_21 is the state file's own value through the crosswalk  [358 of 358 agree (need 200)]
 ok   postsecondary 2022: the pack's college_enroll is the state file's own value through the crosswalk  [95 of 95 agree (need 40)]
-ok   ESSA indicator scores 2025: the pack's essa_growth is the state file's own value through the crosswalk  [1692 of 1692 agree (need 800)]
+ok   ESSA indicator scores 2025: the pack's essa_growth is the state file's own value through the crosswalk  [1694 of 1694 agree (need 800)]
 ok   Teachers satisfied being a teacher at this school: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 86.63 (n=15) vs offline 86.63 (n=15)]
 ok   Teachers seeing trust and mutual respect: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 79.05 (n=15) vs offline 79.05 (n=15)]
 ok   Teachers retained from the year before: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 75.3 (n=33) vs offline 75.3 (n=33)]
@@ -344,6 +359,8 @@ ok   ESSA growth indicator score (0-4): the latest Leader in Me point recomputes
 ok   the closure years are on no Tennessee card  [[2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   teacher_retention sits in no closure year on the rows  [[2018, 2019, 2022, 2023, 2024, 2025]]
 ok   tch_satisfied sits in no closure year on the rows  [[2018, 2019, 2022, 2023, 2024, 2025]]
+ok   ready_grad sits in no closure year on the rows  [[2018, 2019, 2022, 2023, 2024, 2025]]
+ok   act_21 sits in no closure year on the rows  [[2022, 2023, 2024, 2025]]
 ok   the pack carries no closure year
 ok   the class of 2023 college-enrollment file (a wider window) carries no value in the pack  [95 values for the class of 2022]
 ok   the 2017-18 indicator file (decimal averages) carries no value in the pack
@@ -353,8 +370,8 @@ ok   a school number with two differing survey records in one year carries no su
 ok   a survey year excluded for a wording change is not drawn: the satisfaction item starts in 2018 and 'recommend' in 2019
 ok   every exclusion is counted on the cleaning audit
 ok   the duplicate Ready Graduate file was set aside by content, not read twice  [ready_graduate_school_suppressed.csv: byte-for-byte the same file as ready_graduate_school_suppressed_2020-21.csv (the server's generic name, re-pulled under it]
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 11,355 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [218 Leader in Me school-years on the cards]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 11,388 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [242 Leader in Me school-years on the cards]
 ok   no card member sits past the core's last year  [2025 vs 2026]
 ok   Teachers satisfied being a teacher at this school: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=15]
 ok   Teachers seeing trust and mutual respect: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=15]
@@ -364,6 +381,8 @@ ok   Teachers saying students treat adults with respect: the Leader in Me point 
 ok   Teachers who would recommend the school to parents: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=15]
 ok   Teachers retained from the year before: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=33]
 ok   Schools suspending 5% or more of students: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=32]
+ok   Ready Graduate share: the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=3]
+ok   ACT composite of 21 or higher: the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=3]
 ok   ESSA growth indicator score (0-4): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=33]
 ok   ESSA achievement indicator score (0-4): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=33]
 ok   ESSA chronic absenteeism indicator score (0-4): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=33]
@@ -387,26 +406,26 @@ ok   Teachers saying students treat adults with respect: drawn only in years the
 ok   Teachers who would recommend the school to parents: the item wording is quoted in the caption and the respondent group is named
 ok   Teachers who would recommend the school to parents: four or more Leader in Me points, each on three or more schools, the latest in 2025 (the last survey year the item is in)  [5 points, latest n=15, survey years to 2025, page to 2026]
 ok   Teachers who would recommend the school to parents: drawn only in years the item is worded the same  [item years [2019, 2021, 2022, 2023, 2024, 2025]]
-ok   the survey's satisfaction item is a measure in the rows with Leader in Me school-years behind it  [120 Leader in Me school-years]
+ok   the survey's satisfaction item is a measure in the rows with Leader in Me school-years behind it  [128 Leader in Me school-years]
 ok   teacher retention is a measure in the rows
 ok   the methods page carries the survey note with the dating of the undated workbooks and the 45% rule
 ok   the research pack carries every survey item worded the same in four or more years, labelled with the wording  [28 survey columns in the pack]
 ok   the banner names the Tennessee Educator Survey
-ok   the research pack's per-school Tennessee values are keyed to schools on the page  [11,443 records]
-ok   every school with a state id on the page has it in the pack  [1,867 of 1,875]
+ok   the research pack's per-school Tennessee values are keyed to schools on the page  [11,455 records]
+ok   every school with a state id on the page has it in the pack  [1,869 of 1,877]
 ok   look-alike mode names the share of schools suspending 5% or more as its behavior measure
-ok   the measures the card can carry are on it: the survey, retention, discipline and the three ESSA scores  [11 on the card]
-ok   2025-26 rows are in the working subject file and only 2025-26 was added  [19,217 rows in 2026, page runs to 2026]
+ok   the measures the card can carry are on it: the survey, retention, discipline and the three ESSA scores  [13 on the card]
+ok   2025-26 rows are in the working subject file and only 2025-26 was added  [19,201 rows in 2026, page runs to 2026]
 ok   science and its end-of-course tests carry no 2025-26 row (Biology I, Chemistry, Science), a standard-setting year  [6,962 science rows in the prepared file, 0 on the page]
 ok   no 2025-26 science value reaches the page's rows  [0 rows]
 ok   science still runs to 2024-25 on the page
-ok   every 2025-26 row on the page is the department's own on-track-and-mastered share, re-read from the workbook  [19,217 of 19,217 rows agree; workbook 239,323 rows]
-ok   the lowest level on those rows is the workbook's own below-expectations share  [10,047 of 10,047 rows carry levels and agree]
+ok   every 2025-26 row on the page is the department's own on-track-and-mastered share, re-read from the workbook  [19,201 of 19,201 rows agree; workbook 239,323 rows]
+ok   the lowest level on those rows is the workbook's own below-expectations share  [10,040 of 10,040 rows carry levels and agree]
 ok   no 2025-26 row the state masks on proficiency is on the page
 ok   the workbook reproduces the department's published 2025-26 figure for 3rd grade english language arts (44.9%)  [computed 44.9% over 975 schools]
 ok   the workbook reproduces the department's published 2025-26 figure for 4th grade mathematics (49.4%)  [computed 49.6% over 960 schools]
-ok   a school whose contract lapsed carries no year past the one its expiration date allows  [38 lapsed roster schools]
+ok   a school whose contract lapsed carries no year past the one its expiration date allows  [39 lapsed roster schools]
 ok   the schools whose contracts lapsed in 2025 carry no 2025-26 group  [9 lapsed in 2025: Andrew Jackson Elementary School; Andrew Johnson Elementary School; Big Ridge Elementary School; Dyersburg Intermediate School; East End Preparatory School; Haywood Elementary]
-ok   the Leader in Me schools with 2025-26 results are enough for a tested page  [25 Leader in Me schools in 2025-26]
+ok   the Leader in Me schools with 2025-26 results are enough for a tested page  [29 Leader in Me schools in 2025-26]
 
 ALL TENNESSEE CHECKS PASS

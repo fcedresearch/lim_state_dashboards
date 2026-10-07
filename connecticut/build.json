@@ -2,8 +2,8 @@
  "state": "CT",
  "name": "Connecticut",
  "folder": "connecticut",
- "built": "2026-10-01",
- "seconds": 70,
+ "built": "2026-10-06",
+ "seconds": 61,
  "builder": "build_payload_core.py",
  "page_kind": "descriptive",
  "lim_headline_n": 6,
@@ -12,7 +12,7 @@
   2015,
   2026
  ],
- "lim_roster_schools": 11,
+ "lim_roster_schools": 13,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,11 +42,11 @@
   },
   "roster": {
    "path": "/home/claude/work1/CT/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 93
+   "rows": 108
   },
   "comparison": {
    "path": "/home/claude/work1/CT/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 8157
+   "rows": 8153
   },
   "mra": {
    "path": "/home/claude/work1/CT/data/All MRA Surveys.csv",
@@ -61,7 +61,7 @@
  ],
  "extras_module": "ct_core_extras",
  "verified": true,
- "dashboard_bytes": 1834965,
+ "dashboard_bytes": 1847887,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -74,6 +74,415 @@
   "missing": [],
   "rows_share_of_prior": 1.07,
   "prior_year": 2025
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 3213,
+    "2016": 2487,
+    "2017": 2562,
+    "2018": 1978,
+    "2019": 1960,
+    "2022": 2469,
+    "2023": 2473,
+    "2024": 2502,
+    "2025": 2492,
+    "2026": 2676
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2991,
+    "2016": 2294,
+    "2017": 2370,
+    "2018": 1799,
+    "2019": 1795,
+    "2022": 2275,
+    "2023": 2293,
+    "2024": 2334,
+    "2025": 2333
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 3235,
+    "2016": 2646,
+    "2017": 2708,
+    "2018": 2124,
+    "2019": 2108,
+    "2022": 2631,
+    "2023": 2633,
+    "2024": 2659,
+    "2025": 2649
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 621,
+    "2016": 458,
+    "2017": 491,
+    "2018": 356,
+    "2019": 292,
+    "2022": 481,
+    "2023": 484,
+    "2024": 495
+   }
+  },
+  "growth_ela": {
+   "label": "Meeting the ELA growth target",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 2258,
+    "2017": 2303,
+    "2018": 1832,
+    "2019": 1820,
+    "2022": 2251,
+    "2023": 2242,
+    "2024": 2261,
+    "2025": 2254
+   }
+  },
+  "growth_math": {
+   "label": "Meeting the math growth target",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 2258,
+    "2017": 2303,
+    "2018": 1832,
+    "2019": 1820,
+    "2022": 2251,
+    "2023": 2242,
+    "2024": 2261,
+    "2025": 2254
+   }
+  },
+  "fitness": {
+   "label": "Meeting the physical fitness standard",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2015": 3183,
+    "2016": 2618,
+    "2017": 2701,
+    "2018": 2124,
+    "2019": 2101,
+    "2022": 2627,
+    "2023": 2619,
+    "2024": 2657,
+    "2025": 2637
+   }
+  },
+  "on_track": {
+   "label": "Ninth graders on track",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 1406,
+    "2016": 1086,
+    "2017": 1133,
+    "2018": 848,
+    "2019": 851,
+    "2022": 1122,
+    "2023": 1111,
+    "2024": 1135,
+    "2025": 1148
+   }
+  },
+  "acc_index": {
+   "label": "Accountability index",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "acc_points": {
+   "label": "Accountability points earned",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 931,
+    "2016": 934,
+    "2017": 933,
+    "2018": 929,
+    "2019": 922,
+    "2022": 912,
+    "2023": 912,
+    "2024": 910,
+    "2025": 903
+   }
+  },
+  "acc_points_possible": {
+   "label": "Accountability points possible",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 931,
+    "2016": 934,
+    "2017": 933,
+    "2018": 929,
+    "2019": 922,
+    "2022": 912,
+    "2023": 912,
+    "2024": 910,
+    "2025": 903
+   }
+  },
+  "arts_access": {
+   "label": "Grade 9-12 students in arts courses, share (Indicator 12)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 208,
+    "2016": 209,
+    "2017": 210,
+    "2018": 209,
+    "2019": 207,
+    "2022": 204,
+    "2023": 203,
+    "2024": 203,
+    "2025": 202
+   }
+  },
+  "ccr_coursework": {
+   "label": "Grade 11-12 students in college-and-career-readiness coursework, share (Indicator 5)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 203,
+    "2016": 205,
+    "2017": 208,
+    "2018": 208,
+    "2019": 204,
+    "2022": 203,
+    "2023": 202,
+    "2024": 202,
+    "2025": 200
+   }
+  },
+  "ccr_exams": {
+   "label": "Grade 11-12 students meeting a college-and-career-readiness exam benchmark, share (Indicator 6)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 199,
+    "2016": 203,
+    "2017": 206,
+    "2018": 206,
+    "2019": 203,
+    "2022": 202,
+    "2023": 202,
+    "2024": 202,
+    "2025": 200
+   }
+  },
+  "college_entrance": {
+   "label": "Graduates entering college, share (Indicator 10; keyed on the accountability year, which follows an earlier class)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 192,
+    "2016": 194,
+    "2017": 199,
+    "2018": 204,
+    "2019": 205,
+    "2022": 200,
+    "2023": 200,
+    "2024": 201,
+    "2025": 198
+   }
+  },
+  "fitness_participation": {
+   "label": "Physical fitness test participation rate (Indicator 11; can exceed 100%)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 905,
+    "2016": 916,
+    "2017": 917,
+    "2018": 919,
+    "2019": 909,
+    "2022": 898,
+    "2023": 896,
+    "2024": 895,
+    "2025": 888
+   }
+  },
+  "grad_rate_4yr": {
+   "label": "Four-year cohort graduation rate (Indicator 8; the year is the class, one year before the accountability year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 193,
+    "2016": 199,
+    "2017": 203,
+    "2018": 205,
+    "2022": 200,
+    "2023": 201,
+    "2024": 197
+   }
+  },
+  "grad_rate_6yr_high_needs": {
+   "label": "Six-year graduation rate, high-needs students (Indicator 9; the year is the class, one year before the accountability year)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 176,
+    "2016": 177,
+    "2017": 179,
+    "2018": 185,
+    "2022": 189,
+    "2023": 194,
+    "2024": 189
+   }
+  },
+  "participation_ela": {
+   "label": "ELA test participation rate (Indicator 3)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 915,
+    "2016": 925,
+    "2017": 926,
+    "2018": 924,
+    "2019": 918,
+    "2022": 908,
+    "2023": 906,
+    "2024": 906,
+    "2025": 899
+   }
+  },
+  "participation_math": {
+   "label": "Math test participation rate (Indicator 3)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 915,
+    "2016": 925,
+    "2017": 926,
+    "2018": 924,
+    "2019": 918,
+    "2022": 908,
+    "2023": 906,
+    "2024": 906,
+    "2025": 899
+   }
+  },
+  "perf_index_ela": {
+   "label": "ELA performance index, all students (0 to 100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 912,
+    "2016": 925,
+    "2017": 924,
+    "2018": 923,
+    "2019": 918,
+    "2022": 908,
+    "2023": 906,
+    "2024": 906,
+    "2025": 899
+   }
+  },
+  "perf_index_math": {
+   "label": "Math performance index, all students (0 to 100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 910,
+    "2016": 925,
+    "2017": 924,
+    "2018": 923,
+    "2019": 918,
+    "2022": 908,
+    "2023": 906,
+    "2024": 906,
+    "2025": 899
+   }
+  },
+  "perf_index_science": {
+   "label": "Science performance index, all students (0 to 100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 829,
+    "2016": 834,
+    "2017": 838,
+    "2019": 826,
+    "2022": 820,
+    "2023": 820,
+    "2024": 819,
+    "2025": 815
+   }
+  },
+  "school_of_distinction": {
+   "label": "School of Distinction that year (100 = yes)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 931,
+    "2016": 934,
+    "2017": 933,
+    "2018": 929,
+    "2019": 922,
+    "2022": 912,
+    "2023": 912,
+    "2024": 910,
+    "2025": 903
+   }
+  },
+  "support_designation": {
+   "label": "Identified for support that year (100 = yes; the reason is in the state file)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 931,
+    "2016": 934,
+    "2017": 933,
+    "2018": 929,
+    "2019": 922,
+    "2022": 912,
+    "2023": 912,
+    "2024": 910,
+    "2025": 903
+   }
+  },
+  "acc_category": {
+   "label": "Accountability category, 1 (highest) to 5 (2015-16 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2016": 927,
+    "2017": 927,
+    "2018": 924,
+    "2019": 919,
+    "2022": 908,
+    "2023": 907,
+    "2024": 906,
+    "2025": 899
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -391,14 +800,14 @@
   },
   "poverty": {
    "lim": {
-    "schools": 11,
+    "schools": 13,
     "missing": 0,
     "at_99_or_more": 0,
     "above_100": 0,
     "high_poverty_share": 0.0
    },
    "comparison": {
-    "schools": 956,
+    "schools": 954,
     "missing": 6,
     "at_99_or_more": 1,
     "above_100": 0,
@@ -411,19 +820,19 @@
     "y0": 2025,
     "y1": 2026,
     "lim_n": 6,
-    "comp_n": 768,
+    "comp_n": 767,
     "lim_change": 1.23,
-    "comp_change": 0.27,
-    "p": 0.524
+    "comp_change": 0.25,
+    "p": 0.52
    },
    "without": {
     "y0": 2025,
     "y1": 2026,
     "lim_n": 6,
-    "comp_n": 768,
+    "comp_n": 767,
     "lim_change": 1.23,
-    "comp_change": 0.27,
-    "p": 0.524
+    "comp_change": 0.25,
+    "p": 0.52
    },
    "schools": 0
   },
@@ -440,414 +849,5 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 3
  },
- "best_schools_added": "2026-10-01",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Percent meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 3213,
-    "2016": 2487,
-    "2017": 2562,
-    "2018": 1978,
-    "2019": 1960,
-    "2022": 2469,
-    "2023": 2473,
-    "2024": 2502,
-    "2025": 2492,
-    "2026": 2676
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 2991,
-    "2016": 2294,
-    "2017": 2370,
-    "2018": 1799,
-    "2019": 1795,
-    "2022": 2275,
-    "2023": 2293,
-    "2024": 2334,
-    "2025": 2333
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2015": 3235,
-    "2016": 2646,
-    "2017": 2708,
-    "2018": 2124,
-    "2019": 2108,
-    "2022": 2631,
-    "2023": 2633,
-    "2024": 2659,
-    "2025": 2649
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2015": 621,
-    "2016": 458,
-    "2017": 491,
-    "2018": 356,
-    "2019": 292,
-    "2022": 481,
-    "2023": 484,
-    "2024": 495
-   }
-  },
-  "growth_ela": {
-   "label": "Meeting the ELA growth target",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2016": 2258,
-    "2017": 2303,
-    "2018": 1832,
-    "2019": 1820,
-    "2022": 2251,
-    "2023": 2242,
-    "2024": 2261,
-    "2025": 2254
-   }
-  },
-  "growth_math": {
-   "label": "Meeting the math growth target",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2016": 2258,
-    "2017": 2303,
-    "2018": 1832,
-    "2019": 1820,
-    "2022": 2251,
-    "2023": 2242,
-    "2024": 2261,
-    "2025": 2254
-   }
-  },
-  "fitness": {
-   "label": "Meeting the physical fitness standard",
-   "kind": "rows",
-   "family": "culture",
-   "years": {
-    "2015": 3183,
-    "2016": 2618,
-    "2017": 2701,
-    "2018": 2124,
-    "2019": 2101,
-    "2022": 2627,
-    "2023": 2619,
-    "2024": 2657,
-    "2025": 2637
-   }
-  },
-  "on_track": {
-   "label": "Ninth graders on track",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2015": 1406,
-    "2016": 1086,
-    "2017": 1133,
-    "2018": 848,
-    "2019": 851,
-    "2022": 1122,
-    "2023": 1111,
-    "2024": 1135,
-    "2025": 1148
-   }
-  },
-  "acc_index": {
-   "label": "Accountability index",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2016": 1,
-    "2017": 1,
-    "2018": 1,
-    "2019": 1,
-    "2022": 1,
-    "2023": 1,
-    "2024": 1,
-    "2025": 2
-   }
-  },
-  "acc_points": {
-   "label": "Accountability points earned",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 931,
-    "2016": 934,
-    "2017": 933,
-    "2018": 929,
-    "2019": 922,
-    "2022": 912,
-    "2023": 912,
-    "2024": 910,
-    "2025": 903
-   }
-  },
-  "acc_points_possible": {
-   "label": "Accountability points possible",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 931,
-    "2016": 934,
-    "2017": 933,
-    "2018": 929,
-    "2019": 922,
-    "2022": 912,
-    "2023": 912,
-    "2024": 910,
-    "2025": 903
-   }
-  },
-  "arts_access": {
-   "label": "Grade 9-12 students in arts courses, share (Indicator 12)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 208,
-    "2016": 209,
-    "2017": 210,
-    "2018": 209,
-    "2019": 207,
-    "2022": 204,
-    "2023": 203,
-    "2024": 203,
-    "2025": 202
-   }
-  },
-  "ccr_coursework": {
-   "label": "Grade 11-12 students in college-and-career-readiness coursework, share (Indicator 5)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 203,
-    "2016": 205,
-    "2017": 208,
-    "2018": 208,
-    "2019": 204,
-    "2022": 203,
-    "2023": 202,
-    "2024": 202,
-    "2025": 200
-   }
-  },
-  "ccr_exams": {
-   "label": "Grade 11-12 students meeting a college-and-career-readiness exam benchmark, share (Indicator 6)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 199,
-    "2016": 203,
-    "2017": 206,
-    "2018": 206,
-    "2019": 203,
-    "2022": 202,
-    "2023": 202,
-    "2024": 202,
-    "2025": 200
-   }
-  },
-  "college_entrance": {
-   "label": "Graduates entering college, share (Indicator 10; keyed on the accountability year, which follows an earlier class)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 192,
-    "2016": 194,
-    "2017": 199,
-    "2018": 204,
-    "2019": 205,
-    "2022": 200,
-    "2023": 200,
-    "2024": 201,
-    "2025": 198
-   }
-  },
-  "fitness_participation": {
-   "label": "Physical fitness test participation rate (Indicator 11; can exceed 100%)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 905,
-    "2016": 916,
-    "2017": 917,
-    "2018": 919,
-    "2019": 909,
-    "2022": 898,
-    "2023": 896,
-    "2024": 895,
-    "2025": 888
-   }
-  },
-  "grad_rate_4yr": {
-   "label": "Four-year cohort graduation rate (Indicator 8; the year is the class, one year before the accountability year)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 193,
-    "2016": 199,
-    "2017": 203,
-    "2018": 205,
-    "2022": 200,
-    "2023": 201,
-    "2024": 197
-   }
-  },
-  "grad_rate_6yr_high_needs": {
-   "label": "Six-year graduation rate, high-needs students (Indicator 9; the year is the class, one year before the accountability year)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 176,
-    "2016": 177,
-    "2017": 179,
-    "2018": 185,
-    "2022": 189,
-    "2023": 194,
-    "2024": 189
-   }
-  },
-  "participation_ela": {
-   "label": "ELA test participation rate (Indicator 3)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 915,
-    "2016": 925,
-    "2017": 926,
-    "2018": 924,
-    "2019": 918,
-    "2022": 908,
-    "2023": 906,
-    "2024": 906,
-    "2025": 899
-   }
-  },
-  "participation_math": {
-   "label": "Math test participation rate (Indicator 3)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 915,
-    "2016": 925,
-    "2017": 926,
-    "2018": 924,
-    "2019": 918,
-    "2022": 908,
-    "2023": 906,
-    "2024": 906,
-    "2025": 899
-   }
-  },
-  "perf_index_ela": {
-   "label": "ELA performance index, all students (0 to 100)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 912,
-    "2016": 925,
-    "2017": 924,
-    "2018": 923,
-    "2019": 918,
-    "2022": 908,
-    "2023": 906,
-    "2024": 906,
-    "2025": 899
-   }
-  },
-  "perf_index_math": {
-   "label": "Math performance index, all students (0 to 100)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 910,
-    "2016": 925,
-    "2017": 924,
-    "2018": 923,
-    "2019": 918,
-    "2022": 908,
-    "2023": 906,
-    "2024": 906,
-    "2025": 899
-   }
-  },
-  "perf_index_science": {
-   "label": "Science performance index, all students (0 to 100)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 829,
-    "2016": 834,
-    "2017": 838,
-    "2019": 826,
-    "2022": 820,
-    "2023": 820,
-    "2024": 819,
-    "2025": 815
-   }
-  },
-  "school_of_distinction": {
-   "label": "School of Distinction that year (100 = yes)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 931,
-    "2016": 934,
-    "2017": 933,
-    "2018": 929,
-    "2019": 922,
-    "2022": 912,
-    "2023": 912,
-    "2024": 910,
-    "2025": 903
-   }
-  },
-  "support_designation": {
-   "label": "Identified for support that year (100 = yes; the reason is in the state file)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 931,
-    "2016": 934,
-    "2017": 933,
-    "2018": 929,
-    "2019": 922,
-    "2022": 912,
-    "2023": 912,
-    "2024": 910,
-    "2025": 903
-   }
-  },
-  "acc_category": {
-   "label": "Accountability category, 1 (highest) to 5 (2015-16 on)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2016": 927,
-    "2017": 927,
-    "2018": 924,
-    "2019": 919,
-    "2022": 908,
-    "2023": 907,
-    "2024": 906,
-    "2025": 899
-   }
-  }
- }
+ "best_schools_added": "2026-10-01"
 }

@@ -2,61 +2,61 @@
  "state": "IA",
  "name": "Iowa",
  "folder": "iowa",
- "built": "2026-09-08",
- "seconds": 76,
+ "built": "2026-10-06",
+ "seconds": 58,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 134,
- "schools": 1292,
+ "lim_headline_n": 147,
+ "schools": 1295,
  "years": [
   2015,
   2025
  ],
- "lim_roster_schools": 187,
+ "lim_roster_schools": 192,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-04"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/IA/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/IA/data/Subjects_Tests_FINAL (8).csv",
    "rows": 72500
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/IA/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 1762
+   "path": "/home/claude/work1/IA/data/LIM Schools (Current_Active) (11).csv",
+   "rows": 1772
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/IA/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 9592
+   "path": "/home/claude/work1/IA/data/All Other Schools (Non-LiM & Exited).csv",
+   "rows": 9582
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/IA/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/IA/data/All MRA Surveys.csv",
    "rows": 353
   }
  },
  "state_files": [],
  "extras_module": null,
  "verified": true,
- "dashboard_bytes": 1316235,
+ "dashboard_bytes": 1332327,
  "latest_results": {
   "year": 2025,
   "label": "2024-25",
@@ -69,6 +69,74 @@
   "missing": [],
   "rows_share_of_prior": 1.0,
   "prior_year": 2024
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2980,
+    "2016": 2908,
+    "2017": 2838,
+    "2018": 2796,
+    "2019": 2954,
+    "2022": 4123,
+    "2023": 4082,
+    "2024": 4036,
+    "2025": 4039
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 2908,
+    "2017": 2838,
+    "2018": 2796
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2576,
+    "2016": 2526,
+    "2017": 2452,
+    "2018": 2412,
+    "2019": 2544,
+    "2022": 3631,
+    "2023": 3594,
+    "2024": 3548,
+    "2025": 3605
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 2692,
+    "2019": 2880,
+    "2022": 4108,
+    "2023": 4082,
+    "2024": 4036
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2019": 828,
+    "2022": 1298,
+    "2023": 1309,
+    "2024": 1315,
+    "2025": 1306
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -313,14 +381,14 @@
   },
   "poverty": {
    "lim": {
-    "schools": 187,
+    "schools": 192,
     "missing": 0,
     "at_99_or_more": 0,
     "above_100": 0,
-    "high_poverty_share": 7.5
+    "high_poverty_share": 7.3
    },
    "comparison": {
-    "schools": 1112,
+    "schools": 1106,
     "missing": 20,
     "at_99_or_more": 0,
     "above_100": 0,
@@ -332,7 +400,7 @@
     "subject": "Math",
     "from": 2018,
     "to": 2019,
-    "from_mean": 78.1,
+    "from_mean": 78.2,
     "to_mean": 69.8,
     "change": -8.4
    }
@@ -341,20 +409,20 @@
    "with": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 134,
-    "comp_n": 924,
-    "lim_change": 4.14,
-    "comp_change": 4.28,
-    "p": 0.815
+    "lim_n": 147,
+    "comp_n": 915,
+    "lim_change": 4.08,
+    "comp_change": 4.27,
+    "p": 0.736
    },
    "without": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 131,
-    "comp_n": 924,
-    "lim_change": 4.27,
-    "comp_change": 4.28,
-    "p": 0.98
+    "lim_n": 144,
+    "comp_n": 915,
+    "lim_change": 4.19,
+    "comp_change": 4.27,
+    "p": 0.891
    },
    "schools": 4
   },
@@ -362,82 +430,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 16,
-  "in_the_process": 15,
+  "qualified": 18,
+  "in_the_process": 17,
   "lapsed_on_the_list": 1,
-  "reviewed": 124,
+  "reviewed": 137,
   "measures": 45,
   "outcomes": 9,
-  "improved_every_year": 4,
+  "improved_every_year": 7,
   "lapsed_longer_ago": 39
  },
- "best_schools_added": "2026-09-10",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Percent meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 2970,
-    "2016": 2898,
-    "2017": 2826,
-    "2018": 2788,
-    "2019": 2944,
-    "2022": 4104,
-    "2023": 4063,
-    "2024": 4017,
-    "2025": 4018
-   }
-  },
-  "percent_below": {
-   "label": "Percent in the lowest level",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2016": 2898,
-    "2017": 2826,
-    "2018": 2788
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 2570,
-    "2016": 2520,
-    "2017": 2444,
-    "2018": 2406,
-    "2019": 2536,
-    "2022": 3616,
-    "2023": 3579,
-    "2024": 3533,
-    "2025": 3590
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2018": 2684,
-    "2019": 2870,
-    "2022": 4089,
-    "2023": 4063,
-    "2024": 4017
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2019": 826,
-    "2022": 1292,
-    "2023": 1303,
-    "2024": 1309,
-    "2025": 1300
-   }
-  }
- }
+ "best_schools_added": "2026-10-06"
 }

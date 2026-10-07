@@ -2,21 +2,22 @@
 $ python3 /home/claude/sdf/Build/build_payload_core.py --state IN --core /home/claude/sdf/Core --out /home/claude/work1/IN --data /home/claude/work1/IN/data --extras in_core_extras
 reading the core for Indiana ...
 [core] subjects: 142,211 school rows kept; dropped 65,006 rows with no school id and 2,528 with an id but no school record
-[core] Leader in Me roster: 1,000 rows
+[core] Leader in Me roster: 1,107 rows
 [core] comparison schools: 16,046 rows
+[core] comparison: 6 rows set aside for 3 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 139 rows
   subject rows added from SchoolDigger's bulk file: 17,144 (Indiana 2025-26 results (SchoolDigger bulk file, the source of DOMO's subject file))
-  subject rows 159,355 · roster rows 1,000 (104 schools) · comparison rows 16,046 (1824 schools) · MRA surveys 139
-[core] Leader in Me roster: 56,181 rows
-  exits: 83 of 104 roster schools carry an expiration date; 43 past it by more than 30 days (exited), 0 inside the grace window, 40 in the future, 21 undated (6 with a start date)
+  subject rows 159,355 · roster rows 1,107 (107 schools) · comparison rows 16,040 (1824 schools) · MRA surveys 139
+[core] Leader in Me roster: 59,452 rows
+  exits: 86 of 107 roster schools carry an expiration date; 39 past it by more than 30 days (exited), 0 inside the grace window, 47 in the future, 21 undated (6 with a start date)
   1,928 schools · 468 districts
 applying the cleaning rules ...
-  72,629 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
-  Leader in Me school-years counted: 349 of 1040 reviewed
-  no start date: 22 schools · dated exits: 25 (school-years after an exit with rows: 55) · aggregate 'All grades' rows used 0, skipped 21
+  72,943 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 373 of 1070 reviewed
+  no start date: 15 schools · dated exits: 25 (school-years after an exit with rows: 55) · aggregate 'All grades' rows used 0, skipped 21
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 60.7% of rows in years and subjects whose levels add up)
   proficiency = levels 3 and 4 on 60.8% of rows
-  statewide jump: ELA 2018->2019: 60.7 -> 47.8 (-12.9)
+  statewide jump: ELA 2018->2019: 60.8 -> 47.8 (-12.9)
   statewide jump: Math 2015->2016: 62.8 -> 52.6 (-10.2)
 folding in Indiana's own measures (in_core_extras) ...
   state files (resolved by name; the log names the role of each):
@@ -49,7 +50,7 @@ folding in Indiana's own measures (in_core_extras) ...
   state grades: 14,417 school-years, [2013, 2014, 2015, 2016, 2017, 2018, 2019]; points for [2017, 2018] (domain model) and [2013, 2014] (4-point scale)
   federal: 10,870 school-years, [2018, 2019, 2022, 2023, 2024, 2025]
   crosswalk: NCES's state school id for each federal id, a closed school NCES never listed followed by name within corporation, audited against a name-within-corporation join
-    1,927 of 1,928 schools carry a state school id (ccd 1918, name 9); Leader in Me 104 of 104, comparison 1,823 of 1,824; 1,924 appear in at least one Indiana file
+    1,927 of 1,928 schools carry a state school id (ccd 1918, name 9); Leader in Me 107 of 107, comparison 1,820 of 1,821; 1,924 appear in at least one Indiana file
     audit against the name-within-corporation join: both speak for 1,885 schools and agree on 1,885; the state files' own name agrees with DOMO's on 1,923 of 1,928 crosswalked ids; 9 schools NCES never listed joined by name alone; 11 state ids sit under two federal ids (settled by year); 4 federal ids held two state ids; 0 triples re-pointed to a folded id
     joined by name alone: Fall Creek Academy -> 5870 Fall Creek Academy (2006-2015)
     joined by name alone: University Heights Preparatory Acd -> 5864 University Heights Preparatory Acd (2006-2015)
@@ -65,35 +66,35 @@ folding in Indiana's own measures (in_core_extras) ...
   state_grades: 12,105 of 12,749 public-school rows reach a school on the page (0 school-years reached twice)
   federal: 10,356 of 10,870 public-school rows reach a school on the page (0 school-years reached twice)
   report_card_2022: 1,769 of 2,133 public-school rows reach a school on the page (0 school-years reached twice)
-  value checks of the join (files the map was not built from): the 2021-22 federal graduation rate against DOMO's on 387 high schools, r = 0.906, medians 91.0 and 90.8; attendance against DOMO's chronic absence on 4,958 school-years, r = -0.874; the report card's absenteeism count against DOMO's chronic absence on 466 schools, r = 0.196 (means 3.8 and 27.4: a different count)
-  rows gain: attendance_rate on 18,009 school-year-bands (75 Leader in Me schools ever), acc_points on 4,385 school-year-bands (14 Leader in Me schools ever); 0 schools had no band to sit in; 27 exclusively virtual schools kept out of the attendance rows
+  value checks of the join (files the map was not built from): the 2021-22 federal graduation rate against DOMO's on 388 high schools, r = 0.906, medians 90.9 and 90.8; attendance against DOMO's chronic absence on 4,979 school-years, r = -0.874; the report card's absenteeism count against DOMO's chronic absence on 467 schools, r = 0.196 (means 3.8 and 27.4: a different count)
+  rows gain: attendance_rate on 18,009 school-year-bands (77 Leader in Me schools ever), acc_points on 4,385 school-year-bands (20 Leader in Me schools ever); 0 schools had no band to sit in; 27 exclusively virtual schools kept out of the attendance rows
   card: 8 Indiana measures, each group on each year's own membership
-    card line attendance_rate: 8 Leader in Me points, latest 2025 n=62 (94.18)
-    card line acc_points: 2 Leader in Me points, latest 2018 n=14 (82.51)
-    card line growth_pts_48: 2 Leader in Me points, latest 2018 n=14 (96.87)
-    card line grade_ab: 3 Leader in Me points, latest 2018 n=14 (57.14)
-    card line fed_meets: 5 Leader in Me points, latest 2025 n=62 (32.26)
-    card line fed_progress_meets: 5 Leader in Me points, latest 2025 n=56 (28.57)
-    card line fed_chronic_meets: 5 Leader in Me points, latest 2025 n=56 (10.71)
-    card line fed_csi: 5 Leader in Me points, latest 2025 n=62 (1.61)
-  per-school Indiana records for the pack: 18,917
-  Indiana's measures on 18,032 school-year-bands: 16,789 joined to existing rows, 1,243 school-year-bands added with no test rows of their own
-  school type from NCES: Title I on 1,893 schools (998 yes), charter 155, magnet 27, alternative 10; Title I published 2017-2022, carried forward after
-  funders: 48 Indiana schools carry a funding source (41 on the page; Kern 38, 31 on the page); latest non-blank year per school
+    card line attendance_rate: 8 Leader in Me points, latest 2025 n=63 (94.19)
+    card line acc_points: 2 Leader in Me points, latest 2018 n=20 (82.67)
+    card line growth_pts_48: 2 Leader in Me points, latest 2018 n=20 (97.32)
+    card line grade_ab: 3 Leader in Me points, latest 2018 n=20 (65.0)
+    card line fed_meets: 5 Leader in Me points, latest 2025 n=63 (31.75)
+    card line fed_progress_meets: 5 Leader in Me points, latest 2025 n=57 (28.95)
+    card line fed_chronic_meets: 5 Leader in Me points, latest 2025 n=57 (10.53)
+    card line fed_csi: 5 Leader in Me points, latest 2025 n=63 (1.59)
+  per-school Indiana records for the pack: 18,994
+  Indiana's measures on 18,032 school-year-bands: 16,788 joined to existing rows, 1,244 school-year-bands added with no test rows of their own
+  school type from NCES: Title I on 1,900 schools (999 yes), charter 155, magnet 28, alternative 10; Title I published 2017-2022, carried forward after
+  funders: 48 Indiana schools carry a funding source (48 on the page; Kern 38, 38 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 66  by band {'Primary': {'pairs': 37, 'unmatched': 0}, 'Secondary': {'pairs': 29, 'unmatched': 1}}
+  pairs 68  by band {'Primary': {'pairs': 38, 'unmatched': 0}, 'Secondary': {'pairs': 30, 'unmatched': 1}}
   MRA: 127 surveys · 52 schools · 370 sentinel values · 10 shells
-  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 53, 'comp_n': 1547, 'lim_change': -0.05, 'comp_change': 0.7, 'p': 0.532} · without the 6 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 48, 'comp_n': 1547, 'lim_change': -0.71, 'comp_change': 0.7, 'p': 0.255}
-  roster: 39 counted, 43 exited, 0 not counted yet, 22 not counted
-best-performing schools: 11 of 56 counted schools, 57 measures in 13 outcomes
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 57, 'comp_n': 1549, 'lim_change': 0.24, 'comp_change': 0.71, 'p': 0.686} · without the 6 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 52, 'comp_n': 1549, 'lim_change': -0.34, 'comp_change': 0.71, 'p': 0.379}
+  roster: 47 counted, 39 exited, 6 not counted yet, 15 not counted
+best-performing schools: 11 of 60 counted schools, 57 measures in 13 outcomes
 
-wrote in_payload.json  (44.8 MB, 73,872 rows) · page kind full (53 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'b4086360738c'}
+wrote in_payload.json  (45.0 MB, 74,187 rows) · page kind full (57 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py in_payload.json IN_Dashboard.html IN_Methods.html
-payload 44.8 MB -> 2.87 MB gzip
-IN_Dashboard.html: 4048 KB
-IN_Methods.html: 66 KB
+payload 45.0 MB -> 2.89 MB gzip
+IN_Dashboard.html: 4078 KB
+IN_Methods.html: 67 KB
 
 $ python3 /home/claude/sdf/Build/verify_core.py --state IN --work /home/claude/work1/IN
 
@@ -114,12 +115,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [3 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [43 exited, 0 in grace, 40 future]
+ok   the exit rule's counts recompute from the roster  [39 exited, 0 in grace, 47 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [27 composite cells at 100, 0 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -134,15 +135,18 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [22 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 34 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [34 Year 0 rows]
+ok   schools with no start date appear in neither group  [15 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [39 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [43 exited (0 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [36 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [39 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 43, 'counted': 39, 'not counted': 22}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 47, 'exited': 39, 'not counted': 15, 'not counted yet': 6}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -150,10 +154,10 @@ ok   the poverty share rides on most rows for the look-alike caliper  [99%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [968 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [972 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [52,667 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [52,895 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
@@ -163,18 +167,18 @@ ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [1,976 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [2,248 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [609 schools]
-ok   the school count never exceeds the band-slice count  [1600 schools vs 1917 band slices]
+ok   combined-grade schools appear in both bands  [612 schools]
+ok   the school count never exceeds the band-slice count  [1607 schools vs 1927 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline +0.067 vs payload +0.060 on 66 pairs]
-ok   the mean signed baseline gap is under one point  [+0.067]
+ok   the signed baseline gap recomputes to the payload's  [offline +0.059 vs payload +0.050 on 68 pairs]
+ok   the mean signed baseline gap is under one point  [+0.059]
 ok   the widest single baseline gap is inside the caliper's reach  [2.3 points]
-ok   the printed signed gap is not a negative zero  [0.06]
+ok   the printed signed gap is not a negative zero  [0.05]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
@@ -186,7 +190,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [1.0s]
+ok   load time is workable  [1.3s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -196,12 +200,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [8 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.5330 scipy 0.5330 · window 2022-2026 · LiM n=53 mean -0.05 · comparison n=1547 mean +0.70]
-ok   the headline counts schools, not band slices  [page 1600 vs offline 1600 on 2022-2026]
-ok   the page's Leader in Me count is the builder's  [53 vs 53]
-ok   the district filter re-renders the headline  [In New Castle Community School Corp schools, between 2022-23 and 2024-25, Leader in Me sch]
+ok   the headline p recomputes offline  [page 0.6860 scipy 0.6860 · window 2022-2026 · LiM n=57 mean +0.24 · comparison n=1549 mean +0.71]
+ok   the headline counts schools, not band slices  [page 1606 vs offline 1606 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [57 vs 57]
+ok   the district filter re-renders the headline  [In New Castle Community School Corp schools, between 2022-23 and 2023-24, Leader in Me sch]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [950 of 1984 schools; In Indiana Title I schools, between 2021-22 and 2025-26, Leader in Me schools fe]
+ok   choosing 'Title I schools' narrows the view and names it  [952 of 1991 schools; In Indiana Title I schools, between 2021-22 and 2025-26, Leader in Me schools fe]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Indiana schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2025-26,]
 ok   Title I status is known for most schools on the page  [95.4%]
@@ -218,11 +222,11 @@ ok   measure 'grad_rate' either draws or says why
 ok   measure 'attendance_rate' either draws or says why
 ok   measure 'acc_points' either draws or says why
 ok   the matched toggle re-renders the headline  [In Indiana schools (matched to similar schools only), between 2021-22 and 2025-26, Leader ]
-ok   the matched view shrinks or equals the Leader in Me count  [34 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [36 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   New Castle Community School Corp generates cards or says there is nothing to report  [7 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5330069136599267, 'n1': 53, 'n2': 1547}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.6860304977933809, 'n1': 57, 'n2': 1549}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -241,22 +245,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [3,841 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [166,897 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [180,973 bytes]
 ok   the pptx export is named for the state and chart  [IN_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Indiana_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [167,568 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [182,383 bytes]
 ok   the docx export is named for the state and chart  [IN_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Indiana_schools.docx]
-ok   the research pack downloads with its sections  [23,806 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [23,555 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 ok   the pack's Leader in Me count for the district is the page's  [6 vs 6]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Indiana schools like Fort Wayne Community Schools’, between 2021-22 and 2025-26, Leader in Me schools rose 1.0% on Me]
-ok   the look-alike box reports both counts or says why not  [Schools like Fort Wayne Community Schools’: 9 Leader in Me schools and 308 comparison schools look like Fort Wayne Community Schools’ 47 schools with results in]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Indiana schools like Fort Wayne Community Schools’, between 2021-22 and 2025-26, Leader in Me schools rose 1.7% on Me]
+ok   the look-alike box reports both counts or says why not  [Schools like Fort Wayne Community Schools’: 10 Leader in Me schools and 308 comparison schools look like Fort Wayne Community Schools’ 48 schools with results i]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.5856]
+ok   the look-alike headline p recomputes offline  [p=0.8217]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [56 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [58 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Indiana grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 1.5% on Meeting o]
+ok   choosing a grade re-renders the headline and names the grade  [In Indiana grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 1.8% on Meeting o]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [5 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -287,31 +291,31 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2026, no filters): Leader in Me -0.05 pts (n=53) vs comparison +0.70 pts (n=1547), p=0.5330 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +0.24 pts (n=57) vs comparison +0.71 pts (n=1549), p=0.6860 -> not significant
 
 ==========================================================================
-173 of 173 checks pass
+176 of 176 checks pass
 ==========================================================================
 
 $ python3 /home/claude/sdf/Build/states/in_core_verify.py --work /home/claude/work1/IN
 
 Indiana's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [104 of 104]
+ok   the crosswalk reaches nearly every Leader in Me school  [107 of 107]
 ok   the crosswalk reaches nearly every school on the page  [1,927 of 1,928]
 ok   the name-within-corporation join agrees with NCES's id wherever both speak  [1,885 of 1,885]
 ok   the state files' own school name agrees with DOMO's on nearly every crosswalked id  [1,923 of 1,928]
 ok   every Leader in Me school the crosswalk cannot reach is named on the methods page  [0 unreached]
-ok   the value check the map was not built from holds: the 2021-22 federal graduation rate tracks DOMO's  [r = 0.906 on 387 high schools, medians 91.0 and 90.8]
-ok   attendance runs opposite to DOMO's chronic absence on the same school-years  [r = -0.874 on 4958 school-years]
+ok   the value check the map was not built from holds: the 2021-22 federal graduation rate tracks DOMO's  [r = 0.906 on 388 high schools, medians 90.9 and 90.8]
+ok   attendance runs opposite to DOMO's chronic absence on the same school-years  [r = -0.874 on 4979 school-years]
 ok   a state id under two federal ids is settled by year, never joined twice in one year  [{'attendance': 0, 'state_grades': 0, 'federal': 0, 'report_card_2022': 0}]
-ok   the state ids on the page are the crosswalk's  [1,905 of 1,906 schools with a year before the newest (1,984 on the page)]
-ok   Leader in Me attendance rates for 2024-25 equal the state's own sheet (to the hundredth)  [76 of 76 schools]
-ok   the rows carry the state's own attendance rate, unchanged  [64 agree]
-ok   2017-18 state grades in the pack equal the state's own file  [1712 of 1712]
-ok   2017-18 accountability points in the pack equal the state's own domain sheet  [1712 of 1712]
-ok   the rows carry the state's own 2017-18 points, unchanged  [1676 of 1676]
-ok   2024-25 federal ratings in the pack equal the state's own file  [1690 of 1690]
+ok   the state ids on the page are the crosswalk's  [1,912 of 1,913 schools with a year before the newest (1,991 on the page)]
+ok   Leader in Me attendance rates for 2024-25 equal the state's own sheet (to the hundredth)  [81 of 81 schools]
+ok   the rows carry the state's own attendance rate, unchanged  [69 agree]
+ok   2017-18 state grades in the pack equal the state's own file  [1719 of 1719]
+ok   2017-18 accountability points in the pack equal the state's own domain sheet  [1719 of 1719]
+ok   the rows carry the state's own 2017-18 points, unchanged  [1683 of 1683]
+ok   2024-25 federal ratings in the pack equal the state's own file  [1697 of 1697]
 ok   the 2024-25 school-level ratings reconcile to the state's statewide summary (Meets)  [650 read, summary 650]
 ok   attendance_rate on the rows carries no closure year  [years [2015, 2016, 2017, 2018, 2019, 2023, 2024, 2025]]
 ok   acc_points on the rows carries no closure year  [years [2017, 2018]]
@@ -323,32 +327,32 @@ ok   the federal rating line starts at 2018-19 (the 2017-18 letter is a differen
 ok   the comprehensive-support line follows the two stable rules (fewer flagged than the file's own 2023-24 count)
 ok   the core's chronic-absence and graduation columns were not filled from Indiana's files
 ok   the attendance line has no 2021-22 point (no file covers it)
-ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools  [n=62]
-ok   Attendance rate: the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [233 school-years, 233 with Leader in Me rows, 0 stray, 0 off the page]
+ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools  [n=63]
+ok   Attendance rate: the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [252 school-years, 252 with Leader in Me rows, 0 stray, 0 off the page]
 ok   Attendance rate: no closure year on the line
-ok   State accountability points (2016-17, 2017-18): the Leader in Me point in 2018 rests on at least three counted schools  [n=14]
-ok   State accountability points (2016-17, 2017-18): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [21 school-years, 21 with Leader in Me rows, 0 stray, 0 off the page]
+ok   State accountability points (2016-17, 2017-18): the Leader in Me point in 2018 rests on at least three counted schools  [n=20]
+ok   State accountability points (2016-17, 2017-18): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [30 school-years, 30 with Leader in Me rows, 0 stray, 0 off the page]
 ok   State accountability points (2016-17, 2017-18): no closure year on the line
-ok   State growth-domain points, grades 4-8 (2016-17, 2017-18): the Leader in Me point in 2018 rests on at least three counted schools  [n=14]
-ok   State growth-domain points, grades 4-8 (2016-17, 2017-18): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [21 school-years, 21 with Leader in Me rows, 0 stray, 0 off the page]
+ok   State growth-domain points, grades 4-8 (2016-17, 2017-18): the Leader in Me point in 2018 rests on at least three counted schools  [n=20]
+ok   State growth-domain points, grades 4-8 (2016-17, 2017-18): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [30 school-years, 30 with Leader in Me rows, 0 stray, 0 off the page]
 ok   State growth-domain points, grades 4-8 (2016-17, 2017-18): no closure year on the line
-ok   Graded A or B by the state (2015-16 to 2017-18): the Leader in Me point in 2018 rests on at least three counted schools  [n=14]
-ok   Graded A or B by the state (2015-16 to 2017-18): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [26 school-years, 26 with Leader in Me rows, 0 stray, 0 off the page]
+ok   Graded A or B by the state (2015-16 to 2017-18): the Leader in Me point in 2018 rests on at least three counted schools  [n=20]
+ok   Graded A or B by the state (2015-16 to 2017-18): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [35 school-years, 35 with Leader in Me rows, 0 stray, 0 off the page]
 ok   Graded A or B by the state (2015-16 to 2017-18): no closure year on the line
-ok   Rated Meets or Exceeds Expectations (federal rating): the Leader in Me point in 2025 rests on at least three counted schools  [n=62]
-ok   Rated Meets or Exceeds Expectations (federal rating): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [253 school-years, 252 with Leader in Me rows, 0 stray, 0 off the page]
+ok   Rated Meets or Exceeds Expectations (federal rating): the Leader in Me point in 2025 rests on at least three counted schools  [n=63]
+ok   Rated Meets or Exceeds Expectations (federal rating): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [264 school-years, 263 with Leader in Me rows, 0 stray, 0 off the page]
 ok   Rated Meets or Exceeds Expectations (federal rating): no closure year on the line
-ok   Academic progress indicators at Meets or better (grades 4-8): the Leader in Me point in 2025 rests on at least three counted schools  [n=56]
-ok   Academic progress indicators at Meets or better (grades 4-8): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [230 school-years, 229 with Leader in Me rows, 0 stray, 0 off the page]
+ok   Academic progress indicators at Meets or better (grades 4-8): the Leader in Me point in 2025 rests on at least three counted schools  [n=57]
+ok   Academic progress indicators at Meets or better (grades 4-8): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [238 school-years, 237 with Leader in Me rows, 0 stray, 0 off the page]
 ok   Academic progress indicators at Meets or better (grades 4-8): no closure year on the line
-ok   Chronic-absenteeism indicator at Meets or better (grades K-8): the Leader in Me point in 2025 rests on at least three counted schools  [n=56]
-ok   Chronic-absenteeism indicator at Meets or better (grades K-8): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [232 school-years, 231 with Leader in Me rows, 0 stray, 0 off the page]
+ok   Chronic-absenteeism indicator at Meets or better (grades K-8): the Leader in Me point in 2025 rests on at least three counted schools  [n=57]
+ok   Chronic-absenteeism indicator at Meets or better (grades K-8): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [240 school-years, 239 with Leader in Me rows, 0 stray, 0 off the page]
 ok   Chronic-absenteeism indicator at Meets or better (grades K-8): no closure year on the line
-ok   Identified for comprehensive support (bottom 5% or graduation under 67%): the Leader in Me point in 2025 rests on at least three counted schools  [n=62]
-ok   Identified for comprehensive support (bottom 5% or graduation under 67%): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [253 school-years, 252 with Leader in Me rows, 0 stray, 0 off the page]
+ok   Identified for comprehensive support (bottom 5% or graduation under 67%): the Leader in Me point in 2025 rests on at least three counted schools  [n=63]
+ok   Identified for comprehensive support (bottom 5% or graduation under 67%): the Leader in Me line is the core's own membership (no comparison-year school, none off the page)  [264 school-years, 263 with Leader in Me rows, 0 stray, 0 off the page]
 ok   Identified for comprehensive support (bottom 5% or graduation under 67%): no closure year on the line
 ok   the card carries a manageable set of Indiana measures  [8 measures]
-ok   the research pack's per-school Indiana values are keyed to schools on the page  [18,917 records]
+ok   the research pack's per-school Indiana values are keyed to schools on the page  [18,994 records]
 ok   every pack column carries a label
 ok   the pack carries the closure years' attendance, labelled and off the rows
 ok   the Indiana row measures are on the page  [attendance_rate, acc_points]

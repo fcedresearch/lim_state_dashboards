@@ -1,18 +1,19 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state IL --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/IL --data /home/claude/sdf/Build/work/IL/data --extras il_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state IL --core /home/claude/sdf/Core --out /home/claude/work1/IL --data /home/claude/work1/IL/data --extras il_core_extras
 reading the core for Illinois ...
 [core] subjects: 259,108 school rows kept; dropped 116,636 rows with no school id and 5,246 with an id but no school record
-[core] Leader in Me roster: 1,454 rows
+[core] Leader in Me roster: 1,456 rows
 [core] comparison schools: 31,953 rows
+[core] comparison: 2 rows set aside for 1 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 158 rows
-  subject rows 259,108 · roster rows 1,454 (153 schools) · comparison rows 31,953 (3461 schools) · MRA surveys 158
-[core] Leader in Me roster: 56,181 rows
-  exits: 129 of 153 roster schools carry an expiration date; 50 past it by more than 30 days (exited), 2 inside the grace window, 77 in the future, 24 undated (17 with a start date)
+  subject rows 259,108 · roster rows 1,456 (154 schools) · comparison rows 31,951 (3461 schools) · MRA surveys 158
+[core] Leader in Me roster: 59,452 rows
+  exits: 131 of 154 roster schools carry an expiration date; 52 past it by more than 30 days (exited), 0 inside the grace window, 79 in the future, 23 undated (17 with a start date)
   3,614 schools · 875 districts
 applying the cleaning rules ...
-  109,528 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 476 of 1377 reviewed
-  no start date: 8 schools · dated exits: 33 (school-years after an exit with rows: 81) · aggregate 'All grades' rows used 1991, skipped 922
+  109,584 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
+  Leader in Me school-years counted: 527 of 1386 reviewed
+  no start date: 6 schools · dated exits: 34 (school-years after an exit with rows: 82) · aggregate 'All grades' rows used 1991, skipped 922
   achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 6% of rows (a five-level state whose export carries four columns, usually))
   proficiency = level 4 alone on 31.1% of rows
   statewide jump: ELA 2024->2025: 36.1 -> 51.0 (+14.9)
@@ -27,8 +28,16 @@ folding in Illinois's own measures (il_core_extras) ...
     report card 2023: 23-RC-Pub-Data-Set.xlsx
     report card 2024: 24-RC-Pub-Data-Set.xlsx
     report card 2018: Report-Card-Public-Data-Set.xlsx
-    NCES directory: 4,740 federal-to-state id pairs from the cache (8 CCD files unchanged)
-    report cards: 37,745 rows for 8 years from the cache (workbooks unchanged)
+    NCES directory: 4,740 federal-to-state id pairs for Illinois from 8 CCD files (2016-17 to 2023-24; 30,560 school-year ids rebuilt from the district segment), cached
+    report card 2018: reading Report-Card-Public-Data-Set.xlsx (14.3 MB)
+    report card 2019: reading 2019-Report-Card-Public-Data-Set.xlsx (20.1 MB)
+    report card 2020: reading 2020-Report-Card-Public-Data-Set.xlsx (5.9 MB)
+    report card 2021: reading 2021-RC-Pub-Data-Set.xlsx (17.5 MB)
+    report card 2022: reading 2022-Report-Card-Public-Data-Set.xlsx (21.2 MB)
+    report card 2023: reading 23-RC-Pub-Data-Set.xlsx (23.6 MB)
+    report card 2024: reading 24-RC-Pub-Data-Set.xlsx (55.6 MB)
+    report card 2025: reading 2025-Report-Card-Public-Data-Set.xlsx (40.3 MB)
+    report cards: 37,745 rows for 8 years, cached in cache/
     climate 2017: 2017_5E_response_rate_score_report.xlsx (3066 rows)
     climate 2016: rc16-5E-response-rate-score-report.xlsx (1949 rows)
     growth IL-Student-Growth-2019-2022-CohortvBaseline.xlsx School ELA: IL-Student-Growth-2019-2022-CohortvBaseline.xlsx School ELA (2856 rows)
@@ -52,38 +61,39 @@ folding in Illinois's own measures (il_core_extras) ...
   report cards: 8 years (2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025); 30,812 school rows; chronic absenteeism on 29,436, teacher retention on 30,339, mobility on 27,916, 5Essentials Effective Leaders on 22,411, growth percentile on 17,008, discipline counts on 8,058
   climate files: 5,014 school rows for 2016, 2017; growth workbooks: 23,176 school-subject-years; additional teacher data: 3,841 schools; remediation reports: 1,243 school rows
   crosswalk: NCES's RCDTS code for each federal id, audited against the state files' own school names
-    3,582 of 3,614 schools carry an RCDTS code in NCES's directory; Leader in Me 153 of 153, comparison 3,429 of 3,461; 3,573 appear in at least one Illinois file
+    3,582 of 3,614 schools carry an RCDTS code in NCES's directory; Leader in Me 154 of 154, comparison 3,428 of 3,460; 3,573 appear in at least one Illinois file
     names: the state files' own school name agrees with DOMO's on 3,568 of 3,574 crosswalked schools; 0 pairs re-pointed to a folded id; 0 shared state codes settled; 1 schools carry more than one RCDTS code across the years
-  chronic absence: the report card's value is DOMO's within 0.15 on 100.0% of 19,815 overlapping school-years; graduation within 0.15 on 100.0% of 4,109; the state's table fills 76 chronic-absence rows and 16 graduation rows DOMO left empty on the test rows, and overwrites none
+  chronic absence: the report card's value is DOMO's within 0.15 on 100.0% of 19,826 overlapping school-years; graduation within 0.15 on 100.0% of 4,109; the state's table fills 76 chronic-absence rows and 16 graduation rows DOMO left empty on the test rows, and overwrites none
   growth workbooks (cohort ELA) against the report card's growth percentile: 2018-19: 92.7% within 0.6 on 2,828 schools (r 0.999); 2021-22: 89.8% within 0.6 on 2,785 schools (r 0.999); 2022-23: 91.5% within 0.6 on 2,819 schools (r 0.983); 2023-24: 100.0% within 0.6 on 2,812 schools (r 1.0)
-  poverty: DOMO's lunch share against the state's latest low-income share on 3,515 schools: r = 0.997, medians 52.5 vs 52.1, 77.2% within a point; high-poverty 33.3% vs 32.7% of Leader in Me schools; the lunch share stays on screen
-  rows gain: teacher_retention on 27,498 school-year-bands (109 Leader in Me schools ever), mobility on 25,397 school-year-bands (106 Leader in Me schools ever), e_environment on 24,325 school-year-bands (103 Leader in Me schools ever), e_teachers on 25,486 school-year-bands (101 Leader in Me schools ever), pct_oss on 8,504 school-year-bands (91 Leader in Me schools ever); 0 school-years had no band to sit in
+  poverty: DOMO's lunch share against the state's latest low-income share on 3,515 schools: r = 0.997, medians 52.5 vs 52.1, 77.2% within a point; high-poverty 33.1% vs 32.5% of Leader in Me schools; the lunch share stays on screen
+  rows gain: teacher_retention on 27,516 school-year-bands (137 Leader in Me schools ever), mobility on 25,415 school-year-bands (135 Leader in Me schools ever), e_environment on 24,339 school-year-bands (107 Leader in Me schools ever), e_teachers on 25,502 school-year-bands (105 Leader in Me schools ever), pct_oss on 8,510 school-year-bands (94 Leader in Me schools ever); 0 school-years had no band to sit in
   card: 11 Illinois measures, each group on each year's own membership
-    survey card line e_leaders: 7 Leader in Me points, latest 2024 n=75 (45.17)
-    survey card line e_teachers: 7 Leader in Me points, latest 2024 n=75 (42.8)
-    survey card line e_families: 7 Leader in Me points, latest 2024 n=74 (46.35)
-    survey card line e_environment: 7 Leader in Me points, latest 2024 n=80 (49.31)
-    survey card line e_instruction: 7 Leader in Me points, latest 2024 n=80 (56.09)
-  per-school Illinois records for the pack: 27,180 (49 columns); published district-years 5177 for 865 districts and the state
-  Illinois's measures on 34,076 school-year-bands: 32,272 joined to existing rows, 1,804 school-year-bands added with no test rows of their own
+    survey card line e_leaders: 7 Leader in Me points, latest 2024 n=78 (45.31)
+    survey card line e_teachers: 7 Leader in Me points, latest 2024 n=78 (42.86)
+    survey card line e_families: 7 Leader in Me points, latest 2024 n=77 (46.74)
+    survey card line e_environment: 7 Leader in Me points, latest 2024 n=83 (49.51)
+    survey card line e_instruction: 7 Leader in Me points, latest 2024 n=83 (56.02)
+  per-school Illinois records for the pack: 27,195 (49 columns); published district-years 5177 for 865 districts and the state
+  Illinois's measures on 34,097 school-year-bands: 32,293 joined to existing rows, 1,804 school-year-bands added with no test rows of their own
   core measures filled from Illinois's own files where DOMO had none: chronic_absent 720 rows, grad_rate 110 rows
-  school type from NCES: Title I on 3,500 schools (2,444 yes), charter 157, magnet 147, alternative 5; Title I published 2018-2022, carried forward after
-  funders: 78 Illinois schools carry a funding source (76 on the page; Kern 47, 46 on the page); latest non-blank year per school
+  school type from NCES: Title I on 3,502 schools (2,446 yes), charter 157, magnet 147, alternative 5; Title I published 2018-2022, carried forward after
+  funders: 78 Illinois schools carry a funding source (77 on the page; Kern 47, 47 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 126  by band {'Primary': {'pairs': 71, 'unmatched': 0}, 'Secondary': {'pairs': 55, 'unmatched': 1}}
+  pairs 132  by band {'Primary': {'pairs': 75, 'unmatched': 0}, 'Secondary': {'pairs': 57, 'unmatched': 1}}
   MRA: 142 surveys · 62 schools · 424 sentinel values · 14 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 80, 'comp_n': 3234, 'lim_change': 18.57, 'comp_change': 17.34, 'p': 0.165} · without the 17 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 64, 'comp_n': 3234, 'lim_change': 19.72, 'comp_change': 17.34, 'p': 0.015}
-  roster: 64 counted, 50 exited, 31 not counted yet, 8 not counted
+  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 105, 'comp_n': 3209, 'lim_change': 18.33, 'comp_change': 17.34, 'p': 0.18} · without the 17 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 89, 'comp_n': 3209, 'lim_change': 19.12, 'comp_change': 17.34, 'p': 0.025}
+  roster: 89 counted, 52 exited, 7 not counted yet, 6 not counted
+best-performing schools: 17 of 98 counted schools, 58 measures in 18 outcomes
 
-wrote il_payload.json  (70.5 MB, 111,332 rows) · page kind full (80 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote il_payload.json  (70.6 MB, 111,388 rows) · page kind full (105 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py il_payload.json IL_Dashboard.html IL_Methods.html
-payload 70.5 MB -> 4.79 MB gzip
-IL_Dashboard.html: 6522 KB
-IL_Methods.html: 53 KB
+payload 70.6 MB -> 4.80 MB gzip
+IL_Dashboard.html: 6573 KB
+IL_Methods.html: 63 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state IL --work /home/claude/sdf/Build/work/IL
+$ python3 /home/claude/sdf/Build/verify_core.py --state IL --work /home/claude/work1/IL
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -102,12 +112,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [1 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [50 exited, 2 in grace, 77 future]
+ok   the exit rule's counts recompute from the roster  [52 exited, 0 in grace, 79 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [27 composite cells at 100, 3 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -122,15 +132,18 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [8 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 65 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [65 Year 0 rows]
+ok   schools with no start date appear in neither group  [6 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [45 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [50 exited (0 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [48 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [52 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 64, 'exited': 50, 'not counted yet': 31, 'not counted': 8}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 89, 'exited': 52, 'not counted yet': 7, 'not counted': 6}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -138,23 +151,23 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [2014 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [2015 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 6% of rows (a five-level state whose export carries four columns, usually)]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [2,630 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [2,476 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [1236 schools]
-ok   the school count never exceeds the band-slice count  [3314 schools vs 4296 band slices]
+ok   combined-grade schools appear in both bands  [1237 schools]
+ok   the school count never exceeds the band-slice count  [3315 schools vs 4297 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline +0.010 vs payload +0.010 on 126 pairs]
-ok   the mean signed baseline gap is under one point  [+0.010]
+ok   the signed baseline gap recomputes to the payload's  [offline +0.008 vs payload +0.010 on 132 pairs]
+ok   the mean signed baseline gap is under one point  [+0.008]
 ok   the widest single baseline gap is inside the caliper's reach  [1.1 points]
 ok   the printed signed gap is not a negative zero  [0.01]
 ok   no MRA value of exactly 100 survives into the payload
@@ -168,7 +181,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [2.4s]
+ok   load time is workable  [1.6s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -178,12 +191,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [11 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.1655 scipy 0.1655 · window 2022-2025 · LiM n=80 mean +18.57 · comparison n=3234 mean +17.34]
+ok   the headline p recomputes offline  [page 0.1812 scipy 0.1812 · window 2022-2025 · LiM n=105 mean +18.32 · comparison n=3209 mean +17.34]
 ok   the headline counts schools, not band slices  [page 3314 vs offline 3314 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [80 vs 80]
+ok   the page's Leader in Me count is the builder's  [105 vs 105]
 ok   the district filter re-renders the headline  [In Chicago Public Schools District 299 schools, between 2021-22 and 2024-25, Leader in Me ]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [2451 of 3603 schools; In Illinois Title I schools, between 2021-22 and 2024-25, Leader in Me schools r]
+ok   choosing 'Title I schools' narrows the view and names it  [2453 of 3605 schools; In Illinois Title I schools, between 2021-22 and 2024-25, Leader in Me schools r]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Illinois schools (Leader in Me side: Kern Family Foundation schools), between 2022-23 and 2024-25]
 ok   Title I status is known for most schools on the page  [97.1%]
@@ -200,11 +213,11 @@ ok   measure 'e_environment' either draws or says why
 ok   measure 'e_teachers' either draws or says why
 ok   measure 'pct_oss' either draws or says why
 ok   the matched toggle re-renders the headline  [In Illinois schools (matched to similar schools only), between 2021-22 and 2024-25, Leader]
-ok   the matched view shrinks or equals the Leader in Me count  [60 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [62 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Chicago Public Schools District 299 generates cards or says there is nothing to report  [6 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.16549454052295898, 'n1': 80, 'n2': 3234}]
+ok   Chicago Public Schools District 299 generates cards or says there is nothing to report  [5 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.18121391504853723, 'n1': 105, 'n2': 3209}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -223,22 +236,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [4,276 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [180,998 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [192,486 bytes]
 ok   the pptx export is named for the state and chart  [IL_Percent_meeting_the_standard_year_by_year_Illinois_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [181,465 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [193,691 bytes]
 ok   the docx export is named for the state and chart  [IL_Percent_meeting_the_standard_year_by_year_Illinois_schools.docx]
-ok   the research pack downloads with its sections  [235,784 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
+ok   the research pack downloads with its sections  [235,789 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
 ok   the pack's Leader in Me count for the district is the page's  [27 vs 27]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Illinois schools like School District U-46’s, between 2021-22 and 2024-25, Leader in Me schools rose 18.8% on Percent]
-ok   the look-alike box reports both counts or says why not  [Schools like School District U-46’s: 38 Leader in Me schools and 645 comparison schools look like School District U-46’s 53 schools with results in these years ]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Illinois schools like School District U-46’s, between 2021-22 and 2024-25, Leader in Me schools rose 18.6% on Percent]
+ok   the look-alike box reports both counts or says why not  [Schools like School District U-46’s: 44 Leader in Me schools and 639 comparison schools look like School District U-46’s 53 schools with results in these years ]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.0627]
+ok   the look-alike headline p recomputes offline  [p=0.0516]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [91 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [97 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Illinois grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 17.7% on Percent]
+ok   choosing a grade re-renders the headline and names the grade  [In Illinois grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 17.6% on Percent]
 ok   whole-school measures switch off while a grade is chosen  [8 whole-school measures in the payload]
 ok   dark mode re-renders without errors
 ok   no horizontal overflow at 900px  [0px]
@@ -268,52 +281,52 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +18.57 pts (n=80) vs comparison +17.34 pts (n=3234), p=0.1655 -> not significant
+  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +18.32 pts (n=105) vs comparison +17.34 pts (n=3209), p=0.1812 -> not significant
 
 ==========================================================================
-166 of 166 checks pass
+169 of 169 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/il_core_verify.py --work /home/claude/sdf/Build/work/IL
+$ python3 /home/claude/sdf/Build/states/il_core_verify.py --work /home/claude/work1/IL
 
 Illinois's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [153 of 153]
-ok   the crosswalk reaches most comparison schools  [3,429 of 3,461]
+ok   the crosswalk reaches nearly every Leader in Me school  [154 of 154]
+ok   the crosswalk reaches most comparison schools  [3,428 of 3,460]
 ok   NCES's own id pairs anchor the crosswalk  [3,583 pairs for 3,614 schools]
 ok   the state files' own school names agree with DOMO's on nearly every crosswalked school (the second-way audit)  [3,568 of 3,574; 6 read one by one]
-ok   the report card's chronic absenteeism is DOMO's chronic absence to the decimal on the same school-years (an independent check of the join)  [100.0% within 0.15 on 19,815 school-years]
+ok   the report card's chronic absenteeism is DOMO's chronic absence to the decimal on the same school-years (an independent check of the join)  [100.0% within 0.15 on 19,826 school-years]
 ok   the report card's four-year graduation rate is DOMO's on the same school-years  [100.0% within 0.15 on 4,109]
 ok   no RCDTS code is on two schools  [3,583 pairs, 3,582 schools]
 ok   every RCDTS code in the crosswalk is fifteen characters
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page
 ok   the join note on the card carries the reach
-ok   every chronic-absence value on the rows that the state also carries is the state's value (DOMO's own, or the fill)  [27,260 of 27,260]
+ok   every chronic-absence value on the rows that the state also carries is the state's value (DOMO's own, or the fill)  [27,276 of 27,276]
 ok   the fill touched only the school-years DOMO lacked, and there were some  [76 chronic-absence rows, 16 graduation rows]
 ok   the graduation rate sits on secondary rows only
 ok   the methods page says DOMO's values are the state's and the fill overwrites nothing
 ok   poverty was not overridden: DOMO's lunch share tracks the state's low-income share  [r = 0.997, 77.2% within a point on 3,515 schools]
 ok   the methods page names the poverty decision
 ok   the payload's poverty source is DOMO's lunch share, not a state override
-ok   report card (re-read from the xlsx) 2025: the pack's teacher_retention is the state file's own value through the crosswalk  [3428 of 3428 agree (need 2500)]
-ok   report card (re-read from the xlsx) 2025: the pack's mobility is the state file's own value through the crosswalk  [2871 of 2871 agree (need 2000)]
-ok   report card (re-read from the xlsx) 2025: the pack's chronic is the state file's own value through the crosswalk  [3355 of 3355 agree (need 2500)]
-ok   report card (re-read from the xlsx), the re-benchmarked 2024-25 survey in the pack under its own key 2025: the pack's e_leaders_v2 is the state file's own value through the crosswalk  [3116 of 3116 agree (need 2500)]
-ok   report card 2024: the pack's e_environment is the state file's own value through the crosswalk  [3277 of 3277 agree (need 2500)]
-ok   report card 2024: the pack's ela_growth is the state file's own value through the crosswalk  [2788 of 2788 agree (need 2000)]
-ok   5Essentials detail file 2017 (re-read from the xlsx) 2017: the pack's e_leaders is the state file's own value through the crosswalk  [2550 of 2550 agree (need 2000)]
-ok   5Essentials detail file 2017 (re-read from the xlsx) 2017: the pack's e_environment is the state file's own value through the crosswalk  [1830 of 1830 agree (need 1200)]
-ok   growth workbook 2024 (cohort ELA) against the report card's growth column 2024: the pack's ela_growth is the state file's own value through the crosswalk  [2785 of 2785 agree (need 2000)]
-ok   discipline sheet 2024 (count over enrollment) 2024: the pack's pct_oss is the state file's own value through the crosswalk  [2714 of 2714 agree (need 2000)]
-ok   additional teacher data set 2022 2022: the pack's novice_tds is the state file's own value through the crosswalk  [3448 of 3448 agree (need 2000)]
+ok   report card (re-read from the xlsx) 2025: the pack's teacher_retention is the state file's own value through the crosswalk  [3430 of 3430 agree (need 2500)]
+ok   report card (re-read from the xlsx) 2025: the pack's mobility is the state file's own value through the crosswalk  [2873 of 2873 agree (need 2000)]
+ok   report card (re-read from the xlsx) 2025: the pack's chronic is the state file's own value through the crosswalk  [3357 of 3357 agree (need 2500)]
+ok   report card (re-read from the xlsx), the re-benchmarked 2024-25 survey in the pack under its own key 2025: the pack's e_leaders_v2 is the state file's own value through the crosswalk  [3118 of 3118 agree (need 2500)]
+ok   report card 2024: the pack's e_environment is the state file's own value through the crosswalk  [3279 of 3279 agree (need 2500)]
+ok   report card 2024: the pack's ela_growth is the state file's own value through the crosswalk  [2790 of 2790 agree (need 2000)]
+ok   5Essentials detail file 2017 (re-read from the xlsx) 2017: the pack's e_leaders is the state file's own value through the crosswalk  [2551 of 2551 agree (need 2000)]
+ok   5Essentials detail file 2017 (re-read from the xlsx) 2017: the pack's e_environment is the state file's own value through the crosswalk  [1831 of 1831 agree (need 1200)]
+ok   growth workbook 2024 (cohort ELA) against the report card's growth column 2024: the pack's ela_growth is the state file's own value through the crosswalk  [2787 of 2787 agree (need 2000)]
+ok   discipline sheet 2024 (count over enrollment) 2024: the pack's pct_oss is the state file's own value through the crosswalk  [2716 of 2716 agree (need 2000)]
+ok   additional teacher data set 2022 2022: the pack's novice_tds is the state file's own value through the crosswalk  [3450 of 3450 agree (need 2000)]
 ok   remediation report 2017 (class of 2015) 2017: the pack's remediation is the state file's own value through the crosswalk  [588 of 588 agree (need 300)]
-ok   5Essentials: Supportive Environment (students): the latest Leader in Me point recomputes from the long table and the membership file  [2024: payload 49.31 (n=80) vs offline 49.31 (n=80)]
-ok   5Essentials: Effective Leaders (teachers): the latest Leader in Me point recomputes from the long table and the membership file  [2024: payload 45.17 (n=75) vs offline 45.17 (n=75)]
-ok   Teachers retained from the year before: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 83.85 (n=81) vs offline 83.85 (n=81)]
-ok   Student mobility rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 10.3 (n=70) vs offline 10.3 (n=70)]
-ok   Students with an out-of-school suspension: the latest Leader in Me point recomputes from the long table and the membership file  [2024: payload 3.75 (n=76) vs offline 3.75 (n=76)]
-ok   Schools designated Exemplary or Commendable: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 85.19 (n=81) vs offline 85.19 (n=81)]
-ok   Student growth percentile, ELA (school mean): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 50.09 (n=76) vs offline 50.09 (n=76)]
+ok   5Essentials: Supportive Environment (students): the latest Leader in Me point recomputes from the long table and the membership file  [2024: payload 49.51 (n=83) vs offline 49.51 (n=83)]
+ok   5Essentials: Effective Leaders (teachers): the latest Leader in Me point recomputes from the long table and the membership file  [2024: payload 45.31 (n=78) vs offline 45.31 (n=78)]
+ok   Teachers retained from the year before: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 84.91 (n=107) vs offline 84.91 (n=107)]
+ok   Student mobility rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 9.4 (n=96) vs offline 9.4 (n=96)]
+ok   Students with an out-of-school suspension: the latest Leader in Me point recomputes from the long table and the membership file  [2024: payload 3.69 (n=79) vs offline 3.69 (n=79)]
+ok   Schools designated Exemplary or Commendable: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 86.92 (n=107) vs offline 86.92 (n=107)]
+ok   Student growth percentile, ELA (school mean): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 49.93 (n=98) vs offline 49.93 (n=98)]
 ok   the closure years are on no Illinois card  [[2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   teacher_retention sits in no closure year on the rows  [[2018, 2019, 2022, 2023, 2024, 2025]]
 ok   mobility sits in no closure year on the rows  [[2018, 2019, 2022, 2023, 2024, 2025]]
@@ -340,44 +353,44 @@ ok   the CRDC columns are on no card and no row
 ok   every exclusion is counted on the cleaning audit
 ok   the fixed-width 2014-15 to 2016-17 files were set aside by name
 ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 27,553 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [460 Leader in Me school-years on the cards]
+ok   no Leader in Me card member is a school-year the core dropped  [509 Leader in Me school-years on the cards]
 ok   no card member sits past the core's last year  [2025 vs 2025]
-ok   5Essentials: Effective Leaders (teachers): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=75]
-ok   5Essentials: Collaborative Teachers (teachers): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=75]
-ok   5Essentials: Involved Families (teachers): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=74]
-ok   5Essentials: Supportive Environment (students): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=80]
-ok   5Essentials: Ambitious Instruction (students): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=80]
-ok   Teachers retained from the year before: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=81]
-ok   Student mobility rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=70]
-ok   Students with an out-of-school suspension: the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=76]
-ok   Schools designated Exemplary or Commendable: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=81]
-ok   Student growth percentile, ELA (school mean): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=76]
-ok   Student growth percentile, math (school mean): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=76]
+ok   5Essentials: Effective Leaders (teachers): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=78]
+ok   5Essentials: Collaborative Teachers (teachers): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=78]
+ok   5Essentials: Involved Families (teachers): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=77]
+ok   5Essentials: Supportive Environment (students): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=83]
+ok   5Essentials: Ambitious Instruction (students): the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=83]
+ok   Teachers retained from the year before: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=107]
+ok   Student mobility rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=96]
+ok   Students with an out-of-school suspension: the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=79]
+ok   Schools designated Exemplary or Commendable: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=107]
+ok   Student growth percentile, ELA (school mean): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=98]
+ok   Student growth percentile, math (school mean): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=98]
 ok   every card measure carries the poverty context line
 ok   the card carries a dozen measures at most  [11 on the card]
 ok   the five 5Essentials essentials are on the card  [e_leaders, e_teachers, e_families, e_environment, e_instruction]
 ok   5Essentials: Effective Leaders (teachers): the definition and the respondent group are in the caption
-ok   5Essentials: Effective Leaders (teachers): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=75]
+ok   5Essentials: Effective Leaders (teachers): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=78]
 ok   5Essentials: Effective Leaders (teachers): drawn only in years the survey was scored the same way  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024]]
 ok   5Essentials: Collaborative Teachers (teachers): the definition and the respondent group are in the caption
-ok   5Essentials: Collaborative Teachers (teachers): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=75]
+ok   5Essentials: Collaborative Teachers (teachers): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=78]
 ok   5Essentials: Collaborative Teachers (teachers): drawn only in years the survey was scored the same way  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024]]
 ok   5Essentials: Involved Families (teachers): the definition and the respondent group are in the caption
-ok   5Essentials: Involved Families (teachers): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=74]
+ok   5Essentials: Involved Families (teachers): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=77]
 ok   5Essentials: Involved Families (teachers): drawn only in years the survey was scored the same way  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024]]
 ok   5Essentials: Supportive Environment (students): the definition and the respondent group are in the caption
-ok   5Essentials: Supportive Environment (students): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=80]
+ok   5Essentials: Supportive Environment (students): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=83]
 ok   5Essentials: Supportive Environment (students): drawn only in years the survey was scored the same way  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024]]
 ok   5Essentials: Ambitious Instruction (students): the definition and the respondent group are in the caption
-ok   5Essentials: Ambitious Instruction (students): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=80]
+ok   5Essentials: Ambitious Instruction (students): five or more Leader in Me points, each on three or more schools, the latest in 2024  [7 points, latest n=83]
 ok   5Essentials: Ambitious Instruction (students): drawn only in years the survey was scored the same way  [years [2016, 2017, 2018, 2019, 2022, 2023, 2024]]
-ok   Supportive Environment and Collaborative Teachers are measures in the rows with Leader in Me school-years behind them  [323 Leader in Me school-years]
+ok   Supportive Environment and Collaborative Teachers are measures in the rows with Leader in Me school-years behind them  [339 Leader in Me school-years]
 ok   teacher retention and mobility are measures in the rows
 ok   the methods page carries the survey note with the re-benchmarking evidence and the zero rule
 ok   the research pack carries every 5Essentials score, band and response rate, labelled  [17 survey columns in the pack]
 ok   the banner names the report card and the 5Essentials
-ok   the research pack's per-school Illinois values are keyed to schools on the page  [27,180 records]
-ok   every school with an RCDTS code on the page has it in the pack  [3,572 of 3,603]
+ok   the research pack's per-school Illinois values are keyed to schools on the page  [27,195 records]
+ok   every school with an RCDTS code on the page has it in the pack  [3,574 of 3,605]
 ok   look-alike mode names the out-of-school suspension share as its behavior measure
 ok   the pack carries the state's published district and statewide figures with the district codes the page's labels map to  [5177 rows, 865 districts]
 ok   the measures the card can carry are on it: the five essentials, retention, mobility, suspension, the designation share and the two growth percentiles  [11 on the card]

@@ -2,54 +2,54 @@
  "state": "MO",
  "name": "Missouri",
  "folder": "missouri",
- "built": "2026-09-08",
- "seconds": 142,
+ "built": "2026-10-06",
+ "seconds": 100,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 158,
- "schools": 2053,
+ "lim_headline_n": 160,
+ "schools": 2055,
  "years": [
   2015,
   2025
  ],
- "lim_roster_schools": 232,
+ "lim_roster_schools": 236,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-04"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/MO/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/MO/data/Subjects_Tests_FINAL (8).csv",
    "rows": 106874
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/MO/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 2184
+   "path": "/home/claude/work1/MO/data/LIM Schools (Current_Active) (11).csv",
+   "rows": 2192
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/MO/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 15057
+   "path": "/home/claude/work1/MO/data/All Other Schools (Non-LiM & Exited).csv",
+   "rows": 15049
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/MO/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/MO/data/All MRA Surveys.csv",
    "rows": 414
   }
  },
@@ -60,7 +60,7 @@
  ],
  "extras_module": "mo_core_extras",
  "verified": true,
- "dashboard_bytes": 2783751,
+ "dashboard_bytes": 2800481,
  "latest_results": {
   "year": 2025,
   "label": "2024-25",
@@ -74,6 +74,470 @@
   "missing": [],
   "rows_share_of_prior": 0.98,
   "prior_year": 2024
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 7804,
+    "2016": 5950,
+    "2017": 6284,
+    "2018": 5375,
+    "2019": 6786,
+    "2022": 5225,
+    "2023": 5198,
+    "2024": 5254,
+    "2025": 5123
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 7804,
+    "2017": 6284,
+    "2018": 4707,
+    "2019": 6129
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 7030,
+    "2016": 5448,
+    "2017": 5628,
+    "2018": 4748,
+    "2019": 6136,
+    "2022": 4840,
+    "2023": 4858,
+    "2024": 4906,
+    "2025": 4799
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 5319,
+    "2019": 6719,
+    "2022": 5310,
+    "2023": 5314,
+    "2024": 5361,
+    "2025": 5208
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 1883,
+    "2017": 1672,
+    "2018": 1668,
+    "2019": 1818,
+    "2022": 1236,
+    "2023": 1244,
+    "2024": 1323,
+    "2025": 1341
+   }
+  },
+  "apr_pct": {
+   "label": "APR score (share of points earned)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2022": 5748,
+    "2023": 5784,
+    "2024": 5791,
+    "2025": 5672
+   }
+  },
+  "attend_90": {
+   "label": "Students attending 90% or more of days",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2016": 6507,
+    "2017": 6499,
+    "2018": 5553,
+    "2019": 6929,
+    "2022": 5771
+   }
+  },
+  "ccr_assess": {
+   "label": "Graduates with a qualifying college or career assessment score",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 1880,
+    "2017": 1660,
+    "2018": 1692,
+    "2019": 1843,
+    "2022": 1352
+   }
+  },
+  "adv_credit": {
+   "label": "Graduates earning advanced credit",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 1878,
+    "2017": 1662,
+    "2018": 1688,
+    "2019": 1838,
+    "2022": 1353
+   }
+  },
+  "att_points": {
+   "label": "Attendance indicator points earned (share of possible)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "grad4": {
+   "label": "Four-year graduation rate (DESE, class year)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2022": 2
+   }
+  },
+  "ela_mpi_msip5": {
+   "label": "ELA MAP Performance Index, MSIP 5 formula (2017-18, 2018-19)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1957,
+    "2019": 1962
+   }
+  },
+  "ela_prof": {
+   "label": "ELA percent proficient or advanced as the APR carries it",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1952,
+    "2019": 1956,
+    "2022": 1918
+   }
+  },
+  "math_mpi_msip5": {
+   "label": "Math MAP Performance Index, MSIP 5 formula (2017-18, 2018-19)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1958,
+    "2019": 1963
+   }
+  },
+  "math_prof": {
+   "label": "Math percent proficient or advanced as the APR carries it",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1950,
+    "2019": 1951,
+    "2022": 1885
+   }
+  },
+  "ela_status": {
+   "label": "ELA status determination (Floor, Approaching, On Track, Target; MSIP 5 in 2018-19, MSIP 6 from 2022-23)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1934,
+    "2023": 1965,
+    "2024": 1945,
+    "2025": 1939
+   }
+  },
+  "math_status": {
+   "label": "Math status determination (MSIP 5 in 2018-19, MSIP 6 from 2022-23)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1936,
+    "2023": 1965,
+    "2024": 1945,
+    "2025": 1939
+   }
+  },
+  "apr_possible": {
+   "label": "APR total points possible",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 1962,
+    "2023": 1985,
+    "2024": 1961,
+    "2025": 1954
+   }
+  },
+  "ela_growth_z": {
+   "label": "ELA growth z-score (2021-22 only)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 1607
+   }
+  },
+  "ela_mpi_msip6": {
+   "label": "ELA MAP Performance Index, MSIP 6 formula (2021-22 on; not comparable with the MSIP 5 index)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 1943,
+    "2023": 1963,
+    "2024": 1944,
+    "2025": 1938
+   }
+  },
+  "math_growth_z": {
+   "label": "Math growth z-score (2021-22 only)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 1607
+   }
+  },
+  "math_mpi_msip6": {
+   "label": "Math MAP Performance Index, MSIP 6 formula (2021-22 on; not comparable with the MSIP 5 index)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 1944,
+    "2023": 1964,
+    "2024": 1944,
+    "2025": 1939
+   }
+  },
+  "apr_ci_pct": {
+   "label": "APR continuous-improvement points earned as a share of possible (2022-23 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 1980,
+    "2024": 1960,
+    "2025": 1953
+   }
+  },
+  "apr_perf_pct": {
+   "label": "APR performance points earned as a share of possible (2022-23 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 1965,
+    "2024": 1947,
+    "2025": 1940
+   }
+  },
+  "apr_perf_possible": {
+   "label": "APR performance points possible (2022-23 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 1985,
+    "2024": 1961,
+    "2025": 1954
+   }
+  },
+  "ela_growth_pts": {
+   "label": "ELA growth points earned as a share of possible (2022-23 a continuous share; 2023-24 on binned to 25, 50, 75 or 100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 1937,
+    "2024": 1927,
+    "2025": 1920
+   }
+  },
+  "math_growth_pts": {
+   "label": "Math growth points earned as a share of possible (2022-23 a continuous share; 2023-24 on binned to 25, 50, 75 or 100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2023": 1939,
+    "2024": 1926,
+    "2025": 1920
+   }
+  },
+  "follow_up": {
+   "label": "Graduates in college, a career or the military 180 days after graduation, on the class's year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 512,
+    "2016": 513,
+    "2017": 513,
+    "2018": 511,
+    "2021": 509
+   }
+  },
+  "dual_credit_completed": {
+   "label": "Graduates who completed dual credit (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 434,
+    "2022": 439,
+    "2023": 456,
+    "2024": 459,
+    "2025": 454
+   }
+  },
+  "dual_credit_enrolled": {
+   "label": "Graduates who enrolled in dual credit (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 447,
+    "2022": 449,
+    "2023": 460,
+    "2024": 464,
+    "2025": 465
+   }
+  },
+  "ccr_points": {
+   "label": "College-and-career assessment points earned as a share of possible (2022-23 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 522,
+    "2024": 511,
+    "2025": 512
+   }
+  },
+  "grad_points": {
+   "label": "Graduation indicator points earned as a share of possible (2022-23 on)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2023": 522,
+    "2024": 514,
+    "2025": 514
+   }
+  },
+  "ap_completed": {
+   "label": "Graduates who completed an AP course (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 241,
+    "2022": 235,
+    "2023": 242,
+    "2024": 222,
+    "2025": 222
+   }
+  },
+  "ap_enrolled": {
+   "label": "Graduates who enrolled in an AP course (count, DESE advanced coursework file; no graduate denominator)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 256,
+    "2022": 247,
+    "2023": 258,
+    "2024": 230,
+    "2025": 235
+   }
+  },
+  "dual_enrollment_completed": {
+   "label": "Graduates who completed dual enrollment (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 207,
+    "2022": 221,
+    "2023": 229,
+    "2024": 249,
+    "2025": 248
+   }
+  },
+  "dual_enrollment_enrolled": {
+   "label": "Graduates who enrolled in dual enrollment (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 209,
+    "2022": 225,
+    "2023": 235,
+    "2024": 254,
+    "2025": 253
+   }
+  },
+  "ap_exam": {
+   "label": "Graduates who took an AP exam (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 202,
+    "2022": 213,
+    "2023": 207,
+    "2024": 209,
+    "2025": 192
+   }
+  },
+  "ib_completed": {
+   "label": "Graduates who completed an IB course (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 25,
+    "2022": 20,
+    "2023": 19,
+    "2024": 24,
+    "2025": 24
+   }
+  },
+  "ib_enrolled": {
+   "label": "Graduates who enrolled in an IB course (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 32,
+    "2022": 29,
+    "2023": 24,
+    "2024": 29,
+    "2025": 28
+   }
+  },
+  "apr_pct_ci_only": {
+   "label": "APR score for a building scored on attendance and kindergarten-entry points alone (no academic indicator; off the rows and the card)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 16,
+    "2023": 18,
+    "2024": 14,
+    "2025": 13
+   }
+  },
+  "ib_exam": {
+   "label": "Graduates who took an IB exam (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 13,
+    "2022": 12,
+    "2023": 13,
+    "2024": 15,
+    "2025": 11
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -695,14 +1159,14 @@
   },
   "poverty": {
    "lim": {
-    "schools": 232,
+    "schools": 236,
     "missing": 1,
     "at_99_or_more": 15,
     "above_100": 0,
-    "high_poverty_share": 12.9
+    "high_poverty_share": 12.7
    },
    "comparison": {
-    "schools": 1824,
+    "schools": 1820,
     "missing": 12,
     "at_99_or_more": 362,
     "above_100": 2,
@@ -723,20 +1187,20 @@
    "with": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 158,
+    "lim_n": 160,
     "comp_n": 1296,
-    "lim_change": 0.69,
+    "lim_change": 0.76,
     "comp_change": 1.73,
-    "p": 0.152
+    "p": 0.177
    },
    "without": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 135,
+    "lim_n": 137,
     "comp_n": 1296,
-    "lim_change": 0.59,
+    "lim_change": 0.66,
     "comp_change": 1.73,
-    "p": 0.146
+    "p": 0.172
    },
    "schools": 28
   },
@@ -744,478 +1208,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 23,
+  "qualified": 24,
   "in_the_process": 23,
-  "lapsed_on_the_list": 0,
-  "reviewed": 160,
+  "lapsed_on_the_list": 1,
+  "reviewed": 162,
   "measures": 58,
-  "outcomes": 15,
+  "outcomes": 14,
   "improved_every_year": 0,
   "lapsed_longer_ago": 67
  },
- "best_schools_added": "2026-09-10",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Percent meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 7792,
-    "2016": 5938,
-    "2017": 6273,
-    "2018": 5366,
-    "2019": 6775,
-    "2022": 5215,
-    "2023": 5188,
-    "2024": 5244,
-    "2025": 5113
-   }
-  },
-  "percent_below": {
-   "label": "Percent in the lowest level",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 7792,
-    "2017": 6273,
-    "2018": 4699,
-    "2019": 6119
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 7020,
-    "2016": 5438,
-    "2017": 5619,
-    "2018": 4741,
-    "2019": 6127,
-    "2022": 4832,
-    "2023": 4850,
-    "2024": 4897,
-    "2025": 4791
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2018": 5310,
-    "2019": 6708,
-    "2022": 5300,
-    "2023": 5304,
-    "2024": 5351,
-    "2025": 5198
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2016": 1876,
-    "2017": 1666,
-    "2018": 1663,
-    "2019": 1812,
-    "2022": 1231,
-    "2023": 1239,
-    "2024": 1317,
-    "2025": 1336
-   }
-  },
-  "apr_pct": {
-   "label": "APR score (share of points earned)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2022": 5738,
-    "2023": 5774,
-    "2024": 5781,
-    "2025": 5662
-   }
-  },
-  "attend_90": {
-   "label": "Students attending 90% or more of days",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2016": 6495,
-    "2017": 6488,
-    "2018": 5544,
-    "2019": 6918,
-    "2022": 5761
-   }
-  },
-  "ccr_assess": {
-   "label": "Graduates with a qualifying college or career assessment score",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2016": 1873,
-    "2017": 1654,
-    "2018": 1687,
-    "2019": 1837,
-    "2022": 1347
-   }
-  },
-  "adv_credit": {
-   "label": "Graduates earning advanced credit",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2016": 1871,
-    "2017": 1656,
-    "2018": 1683,
-    "2019": 1832,
-    "2022": 1348
-   }
-  },
-  "att_points": {
-   "label": "Attendance indicator points earned (share of possible)",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "grad4": {
-   "label": "Four-year graduation rate (DESE, class year)",
-   "kind": "cards",
-   "family": "graduation",
-   "years": {
-    "2016": 1,
-    "2017": 1,
-    "2018": 1,
-    "2019": 1,
-    "2022": 2
-   }
-  },
-  "ela_mpi_msip5": {
-   "label": "ELA MAP Performance Index, MSIP 5 formula (2017-18, 2018-19)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 1955,
-    "2019": 1960
-   }
-  },
-  "ela_prof": {
-   "label": "ELA percent proficient or advanced as the APR carries it",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 1950,
-    "2019": 1954,
-    "2022": 1916
-   }
-  },
-  "math_mpi_msip5": {
-   "label": "Math MAP Performance Index, MSIP 5 formula (2017-18, 2018-19)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 1956,
-    "2019": 1961
-   }
-  },
-  "math_prof": {
-   "label": "Math percent proficient or advanced as the APR carries it",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 1948,
-    "2019": 1949,
-    "2022": 1883
-   }
-  },
-  "ela_status": {
-   "label": "ELA status determination (Floor, Approaching, On Track, Target; MSIP 5 in 2018-19, MSIP 6 from 2022-23)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1932,
-    "2023": 1963,
-    "2024": 1943,
-    "2025": 1937
-   }
-  },
-  "math_status": {
-   "label": "Math status determination (MSIP 5 in 2018-19, MSIP 6 from 2022-23)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1934,
-    "2023": 1963,
-    "2024": 1943,
-    "2025": 1937
-   }
-  },
-  "apr_possible": {
-   "label": "APR total points possible",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 1960,
-    "2023": 1983,
-    "2024": 1959,
-    "2025": 1952
-   }
-  },
-  "ela_growth_z": {
-   "label": "ELA growth z-score (2021-22 only)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 1605
-   }
-  },
-  "ela_mpi_msip6": {
-   "label": "ELA MAP Performance Index, MSIP 6 formula (2021-22 on; not comparable with the MSIP 5 index)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 1941,
-    "2023": 1961,
-    "2024": 1942,
-    "2025": 1936
-   }
-  },
-  "math_growth_z": {
-   "label": "Math growth z-score (2021-22 only)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 1605
-   }
-  },
-  "math_mpi_msip6": {
-   "label": "Math MAP Performance Index, MSIP 6 formula (2021-22 on; not comparable with the MSIP 5 index)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 1942,
-    "2023": 1962,
-    "2024": 1942,
-    "2025": 1937
-   }
-  },
-  "apr_ci_pct": {
-   "label": "APR continuous-improvement points earned as a share of possible (2022-23 on)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2023": 1978,
-    "2024": 1958,
-    "2025": 1951
-   }
-  },
-  "apr_perf_pct": {
-   "label": "APR performance points earned as a share of possible (2022-23 on)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2023": 1963,
-    "2024": 1945,
-    "2025": 1938
-   }
-  },
-  "apr_perf_possible": {
-   "label": "APR performance points possible (2022-23 on)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2023": 1983,
-    "2024": 1959,
-    "2025": 1952
-   }
-  },
-  "ela_growth_pts": {
-   "label": "ELA growth points earned as a share of possible (2022-23 a continuous share; 2023-24 on binned to 25, 50, 75 or 100)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2023": 1935,
-    "2024": 1925,
-    "2025": 1918
-   }
-  },
-  "math_growth_pts": {
-   "label": "Math growth points earned as a share of possible (2022-23 a continuous share; 2023-24 on binned to 25, 50, 75 or 100)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2023": 1937,
-    "2024": 1924,
-    "2025": 1918
-   }
-  },
-  "follow_up": {
-   "label": "Graduates in college, a career or the military 180 days after graduation, on the class's year",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 511,
-    "2016": 512,
-    "2017": 512,
-    "2018": 510,
-    "2021": 508
-   }
-  },
-  "dual_credit_completed": {
-   "label": "Graduates who completed dual credit (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 433,
-    "2022": 438,
-    "2023": 455,
-    "2024": 458,
-    "2025": 453
-   }
-  },
-  "dual_credit_enrolled": {
-   "label": "Graduates who enrolled in dual credit (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 446,
-    "2022": 448,
-    "2023": 459,
-    "2024": 463,
-    "2025": 464
-   }
-  },
-  "ccr_points": {
-   "label": "College-and-career assessment points earned as a share of possible (2022-23 on)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2023": 521,
-    "2024": 510,
-    "2025": 511
-   }
-  },
-  "grad_points": {
-   "label": "Graduation indicator points earned as a share of possible (2022-23 on)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2023": 521,
-    "2024": 513,
-    "2025": 513
-   }
-  },
-  "ap_completed": {
-   "label": "Graduates who completed an AP course (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 241,
-    "2022": 235,
-    "2023": 242,
-    "2024": 222,
-    "2025": 222
-   }
-  },
-  "ap_enrolled": {
-   "label": "Graduates who enrolled in an AP course (count, DESE advanced coursework file; no graduate denominator)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 256,
-    "2022": 247,
-    "2023": 258,
-    "2024": 230,
-    "2025": 234
-   }
-  },
-  "dual_enrollment_completed": {
-   "label": "Graduates who completed dual enrollment (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 206,
-    "2022": 220,
-    "2023": 228,
-    "2024": 248,
-    "2025": 248
-   }
-  },
-  "dual_enrollment_enrolled": {
-   "label": "Graduates who enrolled in dual enrollment (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 208,
-    "2022": 224,
-    "2023": 234,
-    "2024": 253,
-    "2025": 253
-   }
-  },
-  "ap_exam": {
-   "label": "Graduates who took an AP exam (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 202,
-    "2022": 213,
-    "2023": 206,
-    "2024": 209,
-    "2025": 192
-   }
-  },
-  "ib_completed": {
-   "label": "Graduates who completed an IB course (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 25,
-    "2022": 20,
-    "2023": 19,
-    "2024": 24,
-    "2025": 23
-   }
-  },
-  "ib_enrolled": {
-   "label": "Graduates who enrolled in an IB course (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 32,
-    "2022": 29,
-    "2023": 24,
-    "2024": 29,
-    "2025": 27
-   }
-  },
-  "apr_pct_ci_only": {
-   "label": "APR score for a building scored on attendance and kindergarten-entry points alone (no academic indicator; off the rows and the card)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 16,
-    "2023": 18,
-    "2024": 14,
-    "2025": 13
-   }
-  },
-  "ib_exam": {
-   "label": "Graduates who took an IB exam (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 13,
-    "2022": 12,
-    "2023": 13,
-    "2024": 15,
-    "2025": 11
-   }
-  }
- }
+ "best_schools_added": "2026-10-06"
 }

@@ -2,17 +2,17 @@
  "state": "HI",
  "name": "Hawaii",
  "folder": "hawaii",
- "built": "2026-10-01",
- "seconds": 43,
+ "built": "2026-10-06",
+ "seconds": 41,
  "builder": "build_payload_core.py",
  "page_kind": "descriptive",
- "lim_headline_n": 7,
- "schools": 291,
+ "lim_headline_n": 8,
+ "schools": 292,
  "years": [
   2015,
   2026
  ],
- "lim_roster_schools": 21,
+ "lim_roster_schools": 22,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,11 +42,11 @@
   },
   "roster": {
    "path": "/home/claude/work1/HI/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 206
+   "rows": 229
   },
   "comparison": {
    "path": "/home/claude/work1/HI/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 2591
+   "rows": 2589
   },
   "mra": {
    "path": "/home/claude/work1/HI/data/All MRA Surveys.csv",
@@ -63,7 +63,7 @@
  ],
  "extras_module": "hi_core_extras",
  "verified": true,
- "dashboard_bytes": 594187,
+ "dashboard_bytes": 608045,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -77,93 +77,22 @@
   "rows_share_of_prior": 1.0,
   "prior_year": 2025
  },
- "audits": {
-  "levels": {
-   "rows": 20055,
-   "no_levels": true,
-   "best": "the reported PercentMetStandard alone (the file carries no level percentages)",
-   "structure": "no level percentages",
-   "n_levels": null,
-   "proficient_from": null,
-   "reversed_numbering": null,
-   "coverage": 0.0,
-   "years_ok": null,
-   "years_out": null,
-   "cells_out": null,
-   "latest_year_ok": null,
-   "reason": "the file carries no level percentages",
-   "combination_shares": null,
-   "cells": [],
-   "levels_as_measures": false
-  },
-  "poverty": {
-   "lim": {
-    "schools": 21,
-    "missing": 0,
-    "at_99_or_more": 0,
-    "above_100": 0,
-    "high_poverty_share": 0.0
-   },
-   "comparison": {
-    "schools": 273,
-    "missing": 0,
-    "at_99_or_more": 0,
-    "above_100": 0,
-    "high_poverty_share": 9.2
-   }
-  },
-  "statewide_jumps": [],
-  "sensitivity": {
-   "with": {
-    "y0": 2022,
-    "y1": 2026,
-    "lim_n": 7,
-    "comp_n": 161,
-    "lim_change": 5.57,
-    "comp_change": 2.17,
-    "p": 0.313
-   },
-   "without": {
-    "y0": 2022,
-    "y1": 2026,
-    "lim_n": 7,
-    "comp_n": 161,
-    "lim_change": 5.57,
-    "comp_change": 2.17,
-    "p": 0.313
-   },
-   "schools": 0
-  },
-  "subjects_by_keyword": [],
-  "subjects_excluded": []
- },
- "best_schools": {
-  "qualified": 0,
-  "in_the_process": 0,
-  "lapsed_on_the_list": 0,
-  "reviewed": 15,
-  "measures": 54,
-  "outcomes": 16,
-  "improved_every_year": 0,
-  "lapsed_longer_ago": 5
- },
- "best_schools_added": "2026-10-01",
  "measure_years": {
   "percent_proficient": {
    "label": "Percent meeting the standard",
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 792,
-    "2016": 975,
-    "2017": 508,
-    "2018": 956,
-    "2019": 963,
-    "2022": 1098,
-    "2023": 1097,
-    "2024": 1113,
-    "2025": 515,
-    "2026": 513
+    "2015": 794,
+    "2016": 978,
+    "2017": 511,
+    "2018": 959,
+    "2019": 966,
+    "2022": 1101,
+    "2023": 1100,
+    "2024": 1116,
+    "2025": 518,
+    "2026": 516
    }
   },
   "standard_score": {
@@ -171,15 +100,15 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 632,
-    "2016": 806,
-    "2017": 508,
-    "2018": 790,
-    "2019": 799,
-    "2022": 942,
-    "2023": 939,
-    "2024": 974,
-    "2025": 659
+    "2015": 634,
+    "2016": 809,
+    "2017": 511,
+    "2018": 793,
+    "2019": 802,
+    "2022": 945,
+    "2023": 942,
+    "2024": 977,
+    "2025": 662
    }
   },
   "chronic_absent": {
@@ -187,8 +116,8 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2024": 1133,
-    "2025": 741
+    "2024": 1136,
+    "2025": 744
    }
   },
   "grad_rate": {
@@ -205,8 +134,8 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2024": 1015,
-    "2025": 629
+    "2024": 1018,
+    "2025": 632
    }
   },
   "growth_math": {
@@ -214,8 +143,8 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2024": 1015,
-    "2025": 629
+    "2024": 1018,
+    "2025": 632
    }
   },
   "science_prof": {
@@ -223,9 +152,9 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2023": 1103,
-    "2024": 1117,
-    "2025": 730
+    "2023": 1106,
+    "2024": 1120,
+    "2025": 733
    }
   },
   "chronic_absent_15d": {
@@ -282,9 +211,9 @@
    "kind": "pack",
    "family": "academic",
    "years": {
-    "2023": 289,
-    "2024": 286,
-    "2025": 287
+    "2023": 290,
+    "2024": 287,
+    "2025": 288
    }
   },
   "literacy_3": {
@@ -292,7 +221,7 @@
    "kind": "pack",
    "family": "academic",
    "years": {
-    "2023": 191
+    "2023": 192
    }
   },
   "math_prof_hi": {
@@ -300,9 +229,9 @@
    "kind": "pack",
    "family": "academic",
    "years": {
-    "2023": 288,
-    "2024": 287,
-    "2025": 287
+    "2023": 289,
+    "2024": 288,
+    "2025": 288
    }
   },
   "act_taken": {
@@ -534,5 +463,76 @@
     "2025": 56
    }
   }
- }
+ },
+ "audits": {
+  "levels": {
+   "rows": 20055,
+   "no_levels": true,
+   "best": "the reported PercentMetStandard alone (the file carries no level percentages)",
+   "structure": "no level percentages",
+   "n_levels": null,
+   "proficient_from": null,
+   "reversed_numbering": null,
+   "coverage": 0.0,
+   "years_ok": null,
+   "years_out": null,
+   "cells_out": null,
+   "latest_year_ok": null,
+   "reason": "the file carries no level percentages",
+   "combination_shares": null,
+   "cells": [],
+   "levels_as_measures": false
+  },
+  "poverty": {
+   "lim": {
+    "schools": 22,
+    "missing": 0,
+    "at_99_or_more": 0,
+    "above_100": 0,
+    "high_poverty_share": 0.0
+   },
+   "comparison": {
+    "schools": 272,
+    "missing": 0,
+    "at_99_or_more": 0,
+    "above_100": 0,
+    "high_poverty_share": 9.2
+   }
+  },
+  "statewide_jumps": [],
+  "sensitivity": {
+   "with": {
+    "y0": 2022,
+    "y1": 2026,
+    "lim_n": 8,
+    "comp_n": 161,
+    "lim_change": 4.83,
+    "comp_change": 2.17,
+    "p": 0.372
+   },
+   "without": {
+    "y0": 2022,
+    "y1": 2026,
+    "lim_n": 8,
+    "comp_n": 161,
+    "lim_change": 4.83,
+    "comp_change": 2.17,
+    "p": 0.372
+   },
+   "schools": 0
+  },
+  "subjects_by_keyword": [],
+  "subjects_excluded": []
+ },
+ "best_schools": {
+  "qualified": 0,
+  "in_the_process": 0,
+  "lapsed_on_the_list": 0,
+  "reviewed": 16,
+  "measures": 54,
+  "outcomes": 16,
+  "improved_every_year": 0,
+  "lapsed_longer_ago": 5
+ },
+ "best_schools_added": "2026-10-01"
 }

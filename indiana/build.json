@@ -2,17 +2,17 @@
  "state": "IN",
  "name": "Indiana",
  "folder": "indiana",
- "built": "2026-10-01",
- "seconds": 118,
+ "built": "2026-10-06",
+ "seconds": 105,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 53,
- "schools": 1984,
+ "lim_headline_n": 57,
+ "schools": 1991,
  "years": [
   2015,
   2026
  ],
- "lim_roster_schools": 104,
+ "lim_roster_schools": 107,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,11 +42,11 @@
   },
   "roster": {
    "path": "/home/claude/work1/IN/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 1000
+   "rows": 1107
   },
   "comparison": {
    "path": "/home/claude/work1/IN/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 16046
+   "rows": 16040
   },
   "mra": {
    "path": "/home/claude/work1/IN/data/All MRA Surveys.csv",
@@ -62,7 +62,7 @@
  ],
  "extras_module": "in_core_extras",
  "verified": true,
- "dashboard_bytes": 4145393,
+ "dashboard_bytes": 4176367,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -76,6 +76,691 @@
   "missing": [],
   "rows_share_of_prior": 1.02,
   "prior_year": 2025
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 7002,
+    "2016": 8137,
+    "2017": 7870,
+    "2018": 7806,
+    "2019": 7354,
+    "2022": 6982,
+    "2023": 7334,
+    "2024": 5785,
+    "2025": 7251,
+    "2026": 7422
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2019": 6559,
+    "2022": 6166,
+    "2023": 6538,
+    "2024": 4925,
+    "2025": 6399,
+    "2026": 6596
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2019": 6559,
+    "2022": 6982,
+    "2023": 7334,
+    "2024": 5785,
+    "2025": 7251,
+    "2026": 7422
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2019": 6559,
+    "2022": 6982,
+    "2023": 7334,
+    "2024": 5785,
+    "2025": 7251,
+    "2026": 7422
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2019": 6559,
+    "2022": 6982,
+    "2023": 7334,
+    "2024": 5785,
+    "2025": 7251,
+    "2026": 7422
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5947,
+    "2016": 7032,
+    "2017": 6825,
+    "2018": 6763,
+    "2019": 6396,
+    "2022": 5982,
+    "2023": 6362,
+    "2024": 5116,
+    "2025": 6357
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2022": 6966,
+    "2023": 7430,
+    "2024": 5876,
+    "2025": 7371
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 1389,
+    "2019": 1330,
+    "2022": 1104,
+    "2023": 1485,
+    "2024": 1482,
+    "2025": 1539
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 7041,
+    "2016": 8162,
+    "2017": 7991,
+    "2018": 7930,
+    "2019": 7472,
+    "2023": 7357,
+    "2024": 5770,
+    "2025": 7262
+   }
+  },
+  "acc_points": {
+   "label": "State accountability points",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 7799,
+    "2018": 7743
+   }
+  },
+  "growth_pts_48": {
+   "label": "State growth-domain points, grades 4-8 (2016-17, 2017-18)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2
+   }
+  },
+  "grade_ab": {
+   "label": "Graded A or B by the state (2015-16 to 2017-18)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2
+   }
+  },
+  "fed_meets": {
+   "label": "Rated Meets or Exceeds Expectations (federal rating)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "fed_progress_meets": {
+   "label": "Academic progress indicators at Meets or better (grades 4-8)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "fed_chronic_meets": {
+   "label": "Chronic-absenteeism indicator at Meets or better (grades K-8)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "fed_csi": {
+   "label": "Identified for comprehensive support (bottom 5% or graduation under 67%)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "attendance_rate_ceiling": {
+   "label": "Attendance rate of exactly 100%, read as unreported",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 9,
+    "2016": 9,
+    "2017": 10,
+    "2018": 8,
+    "2019": 8,
+    "2020": 10,
+    "2021": 31,
+    "2023": 17,
+    "2024": 25,
+    "2025": 15
+   }
+  },
+  "frl_share": {
+   "label": "Free or reduced-price lunch share, 2021-22 federal report card",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 1740
+   }
+  },
+  "inexperienced_share": {
+   "label": "Inexperienced teachers as a share of teachers, 2021-22 federal report card",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1692
+   }
+  },
+  "emergency_permit_share": {
+   "label": "Teachers on emergency permits as a share of teachers, 2021-22 federal report card",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1692
+   }
+  },
+  "state_grade": {
+   "label": "State A-F school grade as the year's file places it (No Grade, Appeal Pending kept as written)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1703,
+    "2016": 1725,
+    "2017": 1723,
+    "2018": 1719,
+    "2019": 1714
+   }
+  },
+  "state_grade_scheme": {
+   "label": "The grading scheme the year used (old = 2011-2014 model; hold-harmless 2015 and 2019 = never below the prior year; domain = 2015-16 to 2017-18 model)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1711,
+    "2016": 1725,
+    "2017": 1723,
+    "2018": 1719,
+    "2019": 1714
+   }
+  },
+  "perf_pts_38": {
+   "label": "State performance-domain points, grades 3-8",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 1383,
+    "2018": 1370
+   }
+  },
+  "fed_grade_2018": {
+   "label": "Federal accountability grade, 2017-18 (an A-F letter; the ratings from 2018-19 use four bands)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1719
+   }
+  },
+  "fp_ach_38": {
+   "label": "Federal academic achievement indicator points, grades 3-8 (2017-18)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1402
+   }
+  },
+  "fp_prog_48": {
+   "label": "Federal academic progress indicator points, grades 4-8 (2017-18; capped at 100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1431
+   }
+  },
+  "fp_chronic": {
+   "label": "Federal chronic absenteeism indicator points, grades K-8 (2017-18)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1405
+   }
+  },
+  "fed_points": {
+   "label": "Federal accountability overall points, 2017-18 (0-100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 1719
+   }
+  },
+  "fed_rating": {
+   "label": "Federal accountability overall rating (2018-19, 2021-22 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1714,
+    "2022": 1717,
+    "2023": 1718,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_ela_ach": {
+   "label": "Federal indicator rating: E/LA academic achievement (grades 3-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1444,
+    "2022": 1445,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_math_ach": {
+   "label": "Federal indicator rating: math academic achievement (grades 3-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1444,
+    "2022": 1445,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_ela_prog": {
+   "label": "Federal indicator rating: E/LA academic progress (grades 4-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1444,
+    "2022": 1445,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_math_prog": {
+   "label": "Federal indicator rating: math academic progress (grades 4-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1444,
+    "2022": 1445,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_ela_gap": {
+   "label": "Federal indicator rating: E/LA closing gaps (grades 3-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1444,
+    "2022": 1445,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_math_gap": {
+   "label": "Federal indicator rating: math closing gaps (grades 3-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1444,
+    "2022": 1445,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_elp": {
+   "label": "Federal indicator rating: English learner progress (grades K-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1441,
+    "2022": 1445,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_chronic": {
+   "label": "Federal indicator rating: addressing chronic absenteeism (grades K-8)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2019": 1444,
+    "2022": 1445,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "csi": {
+   "label": "Identified for comprehensive support and improvement (CSI) as the year's file flags it",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1714,
+    "2022": 1717,
+    "2023": 1718,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "atsi": {
+   "label": "A student group identified for additional targeted support (ATSI)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1714,
+    "2022": 1717,
+    "2023": 1718,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "tsi": {
+   "label": "A student group identified for targeted support (TSI; 2021-22 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1714,
+    "2022": 1717,
+    "2023": 1718,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "mode_virtual": {
+   "label": "Share of 2020-21 weeks the school's primary mode was virtual (IDOE band)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1581
+   }
+  },
+  "mode_in_person": {
+   "label": "Share of 2020-21 weeks the school's primary mode was in person (IDOE band)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1581
+   }
+  },
+  "mode_hybrid": {
+   "label": "Share of 2020-21 weeks the school's primary mode was hybrid (IDOE band)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1581
+   }
+  },
+  "oss_per100": {
+   "label": "Out-of-school suspensions per 100 students, 2021-22 federal report card (incidents over the card's enrollment)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2022": 1630
+   }
+  },
+  "iss_per100": {
+   "label": "In-school suspensions per 100 students, 2021-22 federal report card",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2022": 1245
+   }
+  },
+  "spend_per_pupil": {
+   "label": "Expenditure per student, 2021-22 federal report card (dollars)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 1731
+   }
+  },
+  "enrollment_rc": {
+   "label": "Enrollment, 2021-22 federal report card",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 1731
+   }
+  },
+  "fr_ela_ach_hs": {
+   "label": "Federal indicator rating: E/LA academic achievement (high school)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 395,
+    "2022": 416,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_math_ach_hs": {
+   "label": "Federal indicator rating: math academic achievement (high school)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 395,
+    "2022": 416,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_elp_hs": {
+   "label": "Federal indicator rating: English learner progress (high school)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 395,
+    "2022": 416,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "fr_chronic_hs": {
+   "label": "Federal indicator rating: addressing chronic absenteeism (high school)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2019": 395,
+    "2022": 416,
+    "2023": 1712,
+    "2024": 1701,
+    "2025": 1697
+   }
+  },
+  "perf_pts_10": {
+   "label": "State performance-domain points, grade 10",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 362,
+    "2018": 363
+   }
+  },
+  "growth_pts_1012": {
+   "label": "State growth-domain points, grades 10-12",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 344,
+    "2018": 362
+   }
+  },
+  "mm_pts_12": {
+   "label": "State multiple-measures points, grade 12",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 370,
+    "2018": 371
+   }
+  },
+  "fp_ach_10": {
+   "label": "Federal academic achievement indicator points, grade 10 (2017-18)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 364
+   }
+  },
+  "fp_grad": {
+   "label": "Federal graduation rate indicator points (2017-18)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 377
+   }
+  },
+  "fp_ccr": {
+   "label": "Federal college and career readiness indicator points (2017-18; nine schools in ten at the cap)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 377
+   }
+  },
+  "fr_ela_prog_hs": {
+   "label": "Federal indicator rating: E/LA academic progress (high school, 2018-19 only)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 395
+   }
+  },
+  "fr_math_prog_hs": {
+   "label": "Federal indicator rating: math academic progress (high school, 2018-19 only)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 395
+   }
+  },
+  "fed_grad_rate": {
+   "label": "Federal four-year graduation rate, all students, 2021-22 federal report card (a different rate from DOMO's)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 488
+   }
+  },
+  "expulsions_per100": {
+   "label": "Expulsions per 100 students, 2021-22 federal report card",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2022": 475
+   }
+  },
+  "rc_absenteeism_pct": {
+   "label": "The 2021-22 federal report card's 'chronic absenteeism' count as a share of enrollment (a different count from the chronic-absence rate; excluded by name)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2022": 474
+   }
+  },
+  "fp_elp": {
+   "label": "Federal English learner progress indicator points (2017-18)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 456
+   }
+  },
+  "csi_type": {
+   "label": "Type of CSI identification, in the file's own words (2021-22 on; 2024-25 carries exits and at-risk notes too)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 134,
+    "2023": 142,
+    "2024": 220,
+    "2025": 249
+   }
+  },
+  "csi_years": {
+   "label": "Years in CSI (the file's own count, 2021-22 on)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 135,
+    "2023": 142,
+    "2024": 220,
+    "2025": 206
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -552,14 +1237,14 @@
   },
   "poverty": {
    "lim": {
-    "schools": 104,
+    "schools": 107,
     "missing": 0,
     "at_99_or_more": 0,
     "above_100": 0,
     "high_poverty_share": 1.9
    },
    "comparison": {
-    "schools": 1824,
+    "schools": 1821,
     "missing": 23,
     "at_99_or_more": 12,
     "above_100": 0,
@@ -571,7 +1256,7 @@
     "subject": "ELA",
     "from": 2018,
     "to": 2019,
-    "from_mean": 60.7,
+    "from_mean": 60.8,
     "to_mean": 47.8,
     "change": -12.9
    },
@@ -588,20 +1273,20 @@
    "with": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 53,
-    "comp_n": 1547,
-    "lim_change": -0.05,
-    "comp_change": 0.7,
-    "p": 0.532
+    "lim_n": 57,
+    "comp_n": 1549,
+    "lim_change": 0.24,
+    "comp_change": 0.71,
+    "p": 0.686
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 48,
-    "comp_n": 1547,
-    "lim_change": -0.71,
-    "comp_change": 0.7,
-    "p": 0.255
+    "lim_n": 52,
+    "comp_n": 1549,
+    "lim_change": -0.34,
+    "comp_change": 0.71,
+    "p": 0.379
    },
    "schools": 6
   },
@@ -612,696 +1297,11 @@
   "qualified": 11,
   "in_the_process": 9,
   "lapsed_on_the_list": 2,
-  "reviewed": 56,
+  "reviewed": 60,
   "measures": 57,
   "outcomes": 13,
-  "improved_every_year": 2,
+  "improved_every_year": 3,
   "lapsed_longer_ago": 25
  },
- "best_schools_added": "2026-10-01",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Meeting or exceeding the standard (levels 3 and 4)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 6976,
-    "2016": 8102,
-    "2017": 7835,
-    "2018": 7772,
-    "2019": 7322,
-    "2022": 6951,
-    "2023": 7302,
-    "2024": 5760,
-    "2025": 7219,
-    "2026": 7390
-   }
-  },
-  "percent_level4": {
-   "label": "Level 4: exceeding the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2019": 6529,
-    "2022": 6137,
-    "2023": 6508,
-    "2024": 4902,
-    "2025": 6369,
-    "2026": 6566
-   }
-  },
-  "percent_level3": {
-   "label": "Level 3: meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2019": 6529,
-    "2022": 6951,
-    "2023": 7302,
-    "2024": 5760,
-    "2025": 7219,
-    "2026": 7390
-   }
-  },
-  "percent_level2": {
-   "label": "Level 2: approaching the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2019": 6529,
-    "2022": 6951,
-    "2023": 7302,
-    "2024": 5760,
-    "2025": 7219,
-    "2026": 7390
-   }
-  },
-  "percent_below": {
-   "label": "Level 1: below the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2019": 6529,
-    "2022": 6951,
-    "2023": 7302,
-    "2024": 5760,
-    "2025": 7219,
-    "2026": 7390
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5926,
-    "2016": 7006,
-    "2017": 6799,
-    "2018": 6738,
-    "2019": 6373,
-    "2022": 5960,
-    "2023": 6339,
-    "2024": 5099,
-    "2025": 6334
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2022": 6935,
-    "2023": 7398,
-    "2024": 5851,
-    "2025": 7339
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2018": 1386,
-    "2019": 1327,
-    "2022": 1102,
-    "2023": 1482,
-    "2024": 1479,
-    "2025": 1536
-   }
-  },
-  "attendance_rate": {
-   "label": "Attendance rate",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2015": 7014,
-    "2016": 8127,
-    "2017": 7956,
-    "2018": 7896,
-    "2019": 7440,
-    "2023": 7325,
-    "2024": 5745,
-    "2025": 7230
-   }
-  },
-  "acc_points": {
-   "label": "State accountability points",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 7764,
-    "2018": 7709
-   }
-  },
-  "growth_pts_48": {
-   "label": "State growth-domain points, grades 4-8 (2016-17, 2017-18)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2017": 2,
-    "2018": 2
-   }
-  },
-  "grade_ab": {
-   "label": "Graded A or B by the state (2015-16 to 2017-18)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2016": 2,
-    "2017": 2,
-    "2018": 2
-   }
-  },
-  "fed_meets": {
-   "label": "Rated Meets or Exceeds Expectations (federal rating)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "fed_progress_meets": {
-   "label": "Academic progress indicators at Meets or better (grades 4-8)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "fed_chronic_meets": {
-   "label": "Chronic-absenteeism indicator at Meets or better (grades K-8)",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "fed_csi": {
-   "label": "Identified for comprehensive support (bottom 5% or graduation under 67%)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "attendance_rate_ceiling": {
-   "label": "Attendance rate of exactly 100%, read as unreported",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 9,
-    "2016": 9,
-    "2017": 10,
-    "2018": 8,
-    "2019": 8,
-    "2020": 10,
-    "2021": 31,
-    "2023": 17,
-    "2024": 25,
-    "2025": 15
-   }
-  },
-  "frl_share": {
-   "label": "Free or reduced-price lunch share, 2021-22 federal report card",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2022": 1733
-   }
-  },
-  "inexperienced_share": {
-   "label": "Inexperienced teachers as a share of teachers, 2021-22 federal report card",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1685
-   }
-  },
-  "emergency_permit_share": {
-   "label": "Teachers on emergency permits as a share of teachers, 2021-22 federal report card",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1685
-   }
-  },
-  "state_grade": {
-   "label": "State A-F school grade as the year's file places it (No Grade, Appeal Pending kept as written)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 1696,
-    "2016": 1718,
-    "2017": 1716,
-    "2018": 1712,
-    "2019": 1707
-   }
-  },
-  "state_grade_scheme": {
-   "label": "The grading scheme the year used (old = 2011-2014 model; hold-harmless 2015 and 2019 = never below the prior year; domain = 2015-16 to 2017-18 model)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 1704,
-    "2016": 1718,
-    "2017": 1716,
-    "2018": 1712,
-    "2019": 1707
-   }
-  },
-  "perf_pts_38": {
-   "label": "State performance-domain points, grades 3-8",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 1377,
-    "2018": 1364
-   }
-  },
-  "fed_grade_2018": {
-   "label": "Federal accountability grade, 2017-18 (an A-F letter; the ratings from 2018-19 use four bands)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 1712
-   }
-  },
-  "fp_ach_38": {
-   "label": "Federal academic achievement indicator points, grades 3-8 (2017-18)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 1396
-   }
-  },
-  "fp_prog_48": {
-   "label": "Federal academic progress indicator points, grades 4-8 (2017-18; capped at 100)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 1425
-   }
-  },
-  "fp_chronic": {
-   "label": "Federal chronic absenteeism indicator points, grades K-8 (2017-18)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 1399
-   }
-  },
-  "fed_points": {
-   "label": "Federal accountability overall points, 2017-18 (0-100)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 1712
-   }
-  },
-  "fed_rating": {
-   "label": "Federal accountability overall rating (2018-19, 2021-22 on)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1707,
-    "2022": 1710,
-    "2023": 1711,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_ela_ach": {
-   "label": "Federal indicator rating: E/LA academic achievement (grades 3-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1438,
-    "2022": 1439,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_math_ach": {
-   "label": "Federal indicator rating: math academic achievement (grades 3-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1438,
-    "2022": 1439,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_ela_prog": {
-   "label": "Federal indicator rating: E/LA academic progress (grades 4-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1438,
-    "2022": 1439,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_math_prog": {
-   "label": "Federal indicator rating: math academic progress (grades 4-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1438,
-    "2022": 1439,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_ela_gap": {
-   "label": "Federal indicator rating: E/LA closing gaps (grades 3-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1438,
-    "2022": 1439,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_math_gap": {
-   "label": "Federal indicator rating: math closing gaps (grades 3-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1438,
-    "2022": 1439,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_elp": {
-   "label": "Federal indicator rating: English learner progress (grades K-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1435,
-    "2022": 1439,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_chronic": {
-   "label": "Federal indicator rating: addressing chronic absenteeism (grades K-8)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2019": 1438,
-    "2022": 1439,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "csi": {
-   "label": "Identified for comprehensive support and improvement (CSI) as the year's file flags it",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1707,
-    "2022": 1710,
-    "2023": 1711,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "atsi": {
-   "label": "A student group identified for additional targeted support (ATSI)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1707,
-    "2022": 1710,
-    "2023": 1711,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "tsi": {
-   "label": "A student group identified for targeted support (TSI; 2021-22 on)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1707,
-    "2022": 1710,
-    "2023": 1711,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "mode_virtual": {
-   "label": "Share of 2020-21 weeks the school's primary mode was virtual (IDOE band)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1574
-   }
-  },
-  "mode_in_person": {
-   "label": "Share of 2020-21 weeks the school's primary mode was in person (IDOE band)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1574
-   }
-  },
-  "mode_hybrid": {
-   "label": "Share of 2020-21 weeks the school's primary mode was hybrid (IDOE band)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1574
-   }
-  },
-  "oss_per100": {
-   "label": "Out-of-school suspensions per 100 students, 2021-22 federal report card (incidents over the card's enrollment)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2022": 1623
-   }
-  },
-  "iss_per100": {
-   "label": "In-school suspensions per 100 students, 2021-22 federal report card",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2022": 1241
-   }
-  },
-  "spend_per_pupil": {
-   "label": "Expenditure per student, 2021-22 federal report card (dollars)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2022": 1724
-   }
-  },
-  "enrollment_rc": {
-   "label": "Enrollment, 2021-22 federal report card",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2022": 1724
-   }
-  },
-  "fr_ela_ach_hs": {
-   "label": "Federal indicator rating: E/LA academic achievement (high school)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 394,
-    "2022": 415,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_math_ach_hs": {
-   "label": "Federal indicator rating: math academic achievement (high school)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 394,
-    "2022": 415,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_elp_hs": {
-   "label": "Federal indicator rating: English learner progress (high school)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 394,
-    "2022": 415,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "fr_chronic_hs": {
-   "label": "Federal indicator rating: addressing chronic absenteeism (high school)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2019": 394,
-    "2022": 415,
-    "2023": 1705,
-    "2024": 1694,
-    "2025": 1690
-   }
-  },
-  "perf_pts_10": {
-   "label": "State performance-domain points, grade 10",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 361,
-    "2018": 362
-   }
-  },
-  "growth_pts_1012": {
-   "label": "State growth-domain points, grades 10-12",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 343,
-    "2018": 361
-   }
-  },
-  "mm_pts_12": {
-   "label": "State multiple-measures points, grade 12",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 369,
-    "2018": 370
-   }
-  },
-  "fp_ach_10": {
-   "label": "Federal academic achievement indicator points, grade 10 (2017-18)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 363
-   }
-  },
-  "fp_grad": {
-   "label": "Federal graduation rate indicator points (2017-18)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 376
-   }
-  },
-  "fp_ccr": {
-   "label": "Federal college and career readiness indicator points (2017-18; nine schools in ten at the cap)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 376
-   }
-  },
-  "fr_ela_prog_hs": {
-   "label": "Federal indicator rating: E/LA academic progress (high school, 2018-19 only)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 394
-   }
-  },
-  "fr_math_prog_hs": {
-   "label": "Federal indicator rating: math academic progress (high school, 2018-19 only)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 394
-   }
-  },
-  "fed_grad_rate": {
-   "label": "Federal four-year graduation rate, all students, 2021-22 federal report card (a different rate from DOMO's)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2022": 486
-   }
-  },
-  "expulsions_per100": {
-   "label": "Expulsions per 100 students, 2021-22 federal report card",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2022": 474
-   }
-  },
-  "rc_absenteeism_pct": {
-   "label": "The 2021-22 federal report card's 'chronic absenteeism' count as a share of enrollment (a different count from the chronic-absence rate; excluded by name)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2022": 473
-   }
-  },
-  "fp_elp": {
-   "label": "Federal English learner progress indicator points (2017-18)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 455
-   }
-  },
-  "csi_type": {
-   "label": "Type of CSI identification, in the file's own words (2021-22 on; 2024-25 carries exits and at-risk notes too)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 134,
-    "2023": 142,
-    "2024": 220,
-    "2025": 249
-   }
-  },
-  "csi_years": {
-   "label": "Years in CSI (the file's own count, 2021-22 on)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 135,
-    "2023": 142,
-    "2024": 220,
-    "2025": 206
-   }
-  }
- }
+ "best_schools_added": "2026-10-01"
 }

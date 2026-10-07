@@ -1,5 +1,5 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state VT --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/VT --data /home/claude/sdf/Build/work/VT/data --extras vt_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state VT --core /home/claude/sdf/Core --out /home/claude/work1/VT --data /home/claude/work1/VT/data --extras vt_core_extras
 reading the core for Vermont ...
 [core] subjects: 15,650 school rows kept; dropped 2,598 rows with no school id and 772 with an id but no school record
 [core] Leader in Me roster: 50 rows
@@ -9,13 +9,13 @@ reading the core for Vermont ...
   identity: Randolph Elementary School (Randolph): 500672000443 -> 500040000443
   identity: Richford Elementary School (Richford): 500681000255 -> 500044400255
   identity: Windsor School (Windsor): 500930000539 -> 500044200539
-[core] Leader in Me roster: 56,181 rows
+[core] Leader in Me roster: 59,452 rows
   exits: 5 of 8 roster schools carry an expiration date; 0 past it by more than 30 days (exited), 0 inside the grace window, 5 in the future, 3 undated (3 with a start date)
   448 schools · 254 districts
 applying the cleaning rules ...
-  7,926 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 23 of 72 reviewed
-  no start date: 1 schools · dated exits: 0 (school-years after an exit with rows: 0) · aggregate 'All grades' rows used 0, skipped 0
+  7,970 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
+  Leader in Me school-years counted: 28 of 72 reviewed
+  no start date: 0 schools · dated exits: 0 (school-years after an exit with rows: 0) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 65.4% of rows in years and subjects whose levels add up)
   proficiency = levels 3 and 4 on 60.8% of rows
 folding in Vermont's own measures (vt_core_extras) ...
@@ -42,34 +42,35 @@ folding in Vermont's own measures (vt_core_extras) ...
     name disagreement (Leader in Me): DOMO 'Saxton River Elementary School' vs state 'SAXTONS RIVER ELEM SCHOOL' (code PS260)
     name disagreement: DOMO 'St. Albans Town Educational Center' vs state 'ST ALBANS TOWN EDUC CENTER' (code PS289)
     name disagreement: DOMO 'U-32 High School (UHSD #32)' vs state 'U32 UHS' (code PS305)
-  membership: Leader in Me schools counted per year on the cards {2022: 3, 2023: 6, 2024: 7, 2025: 7} (the core's own status)
+  membership: Leader in Me schools counted per year on the cards {2019: 1, 2022: 6, 2023: 7, 2024: 7, 2025: 7} (the core's own status)
   value check of the join (files the map was not built from): the dashboard's four-year graduation rate against DOMO's on 225 school-years, median difference 0.0 pts, 100.0% within a point (100.0% to the decimal) -> the same measure; the attendance rate against DOMO's chronic absence on 449, r = -0.714
   fill: graduation from the dashboard on 269 secondary school-years DOMO lacks ({'2015': 58, '2016': 37, '2017': 37, '2018': 26, '2019': 16, '2022': 11, '2023': 31, '2024': 3, '2025': 50}); DOMO's 232 values stand
   rows gain: attendance_rate on 3,581 school-year-bands (7 Leader in Me schools ever); 1 school-years had no band to sit in
   card: 3 Vermont measures, each group on each year's own membership
-    card line attendance_rate: 4 Leader in Me points, latest 2025 n=7 (93.27)
+    card line attendance_rate: 4 Leader in Me points, latest 2025 n=7 (93.27); not drawn (under three): {2019: 1}
     card line truancy_rate: 3 Leader in Me points, latest 2025 n=4 (13.77); not drawn (under three): {2022: 1}
     card line promotion_rate: 4 Leader in Me points, latest 2025 n=6 (87.59)
-  per-school Vermont records for the pack: 2,321 (7 columns)
+  per-school Vermont records for the pack: 2,330 (7 columns)
   Vermont's measures on 3,581 school-year-bands: 2,624 joined to existing rows, 957 school-year-bands added with no test rows of their own
   core measures filled from Vermont's own files where DOMO had none: grad_rate 902 rows
-  school type from NCES: Title I on 423 schools (327 yes), charter 0, magnet 2, alternative 0; Title I published 2017-2022, carried forward after
+  school type from NCES: Title I on 424 schools (328 yes), charter 0, magnet 2, alternative 0; Title I published 2017-2022, carried forward after
   funders: 3 Vermont schools carry a funding source (3 on the page; Kern 0, 0 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 1  by band {'Primary': {'pairs': 1, 'unmatched': 0}, 'Secondary': {'pairs': 0, 'unmatched': 0}}
+  pairs 7  by band {'Primary': {'pairs': 4, 'unmatched': 0}, 'Secondary': {'pairs': 3, 'unmatched': 0}}
   MRA: 13 surveys · 4 schools · 56 sentinel values · 1 shells
-  headline 2022-23 to 2024-25: {'y0': 2023, 'y1': 2025, 'lim_n': 4, 'comp_n': 127, 'lim_change': 2.39, 'comp_change': 0.86, 'p': 0.809} · without the 3 undated schools {'y0': 2023, 'y1': 2025, 'lim_n': 4, 'comp_n': 127, 'lim_change': 2.39, 'comp_change': 0.86, 'p': 0.809}
-  roster: 7 counted, 0 exited, 0 not counted yet, 1 not counted
+  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 4, 'comp_n': 156, 'lim_change': 10.2, 'comp_change': 7.94, 'p': 0.491} · without the 3 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 4, 'comp_n': 156, 'lim_change': 10.2, 'comp_change': 7.94, 'p': 0.491}
+  roster: 7 counted, 0 exited, 1 not counted yet, 0 not counted
+best-performing schools: 2 of 7 counted schools, 53 measures in 12 outcomes
 
-wrote vt_payload.json  (4.6 MB, 8,883 rows) · page kind descriptive (4 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote vt_payload.json  (4.6 MB, 8,927 rows) · page kind descriptive (4 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py vt_payload.json VT_Dashboard.html VT_Methods.html
-payload 4.6 MB -> 0.35 MB gzip
-VT_Dashboard.html: 743 KB
-VT_Methods.html: 46 KB
+payload 4.6 MB -> 0.36 MB gzip
+VT_Dashboard.html: 788 KB
+VT_Methods.html: 56 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state VT --work /home/claude/sdf/Build/work/VT
+$ python3 /home/claude/sdf/Build/verify_core.py --state VT --work /home/claude/work1/VT
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -107,27 +108,29 @@ ok   skill_version.py self-tests pass
 ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
-note the headline window settles on 2023-2025 (the window's edges are 2022-2025)
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [1 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 0 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [0 Year 0 rows]
+ok   schools with no start date appear in neither group  [0 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
 ok   exited schools keep their true Leader in Me years  [0 exited schools with counted years]
 ok   the exit counts on the methods page match the rule  [0 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 7, 'not counted': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 7, 'not counted yet': 1}]
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
 ok   the poverty share rides on most rows for the look-alike caliper  [99%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [107 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [108 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [5,442 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [5,482 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
@@ -137,21 +140,24 @@ ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [157 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [176 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [249 schools]
-ok   the school count never exceeds the band-slice count  [131 schools vs 174 band slices]
+ok   combined-grade schools appear in both bands  [250 schools]
+ok   the school count never exceeds the band-slice count  [160 schools vs 219 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the printed signed gap is not a negative zero  [0.32]
+ok   the signed baseline gap recomputes to the payload's  [offline -0.400 vs payload -0.400 on 7 pairs]
+skip mean signed gap under one point  [only 7 pairs; the gap is -0.40]
+ok   the widest single baseline gap is inside the caliper's reach  [2.5 points]
+ok   the printed signed gap is not a negative zero  [-0.4]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
 ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early'] absent=['lighthouse', 'established']]
 ok   movers are built on ten or more schools each
-  demo district: Hartland School District · prospect district: Hartford School District
+  demo district: Hartland School District · prospect district: Harwood Unified Union School District #60
 
 --------------------------------------------------------------------------
 Tier 2 — behaviour in a real browser
@@ -167,12 +173,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [3 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.8096 scipy 0.8096 · window 2023-2025 · LiM n=4 mean +2.39 · comparison n=127 mean +0.86]
-ok   the headline counts schools, not band slices  [page 131 vs offline 131 on 2023-2025]
+ok   the headline p recomputes offline  [page 0.4927 scipy 0.4927 · window 2022-2025 · LiM n=4 mean +10.19 · comparison n=156 mean +7.94]
+ok   the headline counts schools, not band slices  [page 160 vs offline 160 on 2022-2025]
 ok   the page's Leader in Me count is the builder's  [4 vs 4]
 ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I]
-ok   choosing 'Title I schools' narrows the view and names it  [208 of 447 schools; In Vermont Title I schools, between 2022-23 and 2024-25, Leader in Me schools ro]
+ok   choosing 'Title I schools' narrows the view and names it  [209 of 448 schools; In Vermont Title I schools, between 2021-22 and 2024-25, Leader in Me schools ro]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   Title I status is known for most schools on the page  [94.6%]
 ok   the Primary band filter re-renders without error
@@ -186,11 +192,12 @@ ok   measure 'standard_score' either draws or says why
 ok   measure 'chronic_absent' either draws or says why
 ok   measure 'grad_rate' either draws or says why
 ok   measure 'attendance_rate' either draws or says why
-skip matched view  [fewer than three pairs, or a territory page]
+ok   the matched toggle re-renders the headline  [In Vermont schools (matched to similar schools only), between 2021-22 and 2024-25, Leader ]
+ok   the matched view shrinks or equals the Leader in Me count  [3 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Hartland School District generates cards or says there is nothing to report  [5 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.8096246762485578, 'n1': 4, 'n2': 127}]
+ok   Hartland School District generates cards or says there is nothing to report  [6 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.4926726717139692, 'n1': 4, 'n2': 156}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -209,15 +216,15 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [389 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [120,072 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [140,705 bytes]
 ok   the pptx export is named for the state and chart  [VT_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Vermont_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [119,867 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [141,238 bytes]
 ok   the docx export is named for the state and chart  [VT_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Vermont_schools.docx]
-ok   the research pack downloads with its sections  [7,873 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [10,073 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
+ok   choosing a grade re-renders the headline and names the grade  [In Vermont grade 4 results, between 2021-22 and 2023-24, Leader in Me schools rose 2.7% on Meeting o]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [4 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -248,13 +255,13 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a descriptive page says so on the methods page
 
-  HEADLINE (statewide, 2023-2025, no filters): Leader in Me +2.39 pts (n=4) vs comparison +0.86 pts (n=127), p=0.8096 -> not significant
+  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +10.19 pts (n=4) vs comparison +7.94 pts (n=156), p=0.4927 -> not significant
 
 ==========================================================================
-156 of 156 checks pass · 3 skipped
+163 of 163 checks pass · 3 skipped
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/vt_core_verify.py --work /home/claude/sdf/Build/work/VT
+$ python3 /home/claude/sdf/Build/states/vt_core_verify.py --work /home/claude/work1/VT
 
 Vermont's own measures
 --------------------------------------------------------------------------
@@ -269,11 +276,11 @@ ok   the Leader in Me schools the crosswalk cannot reach are named on the page, 
 ok   the join note on the card carries the reach
 ok   each Leader in Me school's Agency code sits in the pack's state ids  [7 Leader in Me schools]
 ok   the page names the split ids as a limit of DOMO's export
-ok   attendance 2024-25: the pack's attendance_rate is the file's own value re-read from the export  [262 of 262 agree (need 200); 7 Leader in Me schools among them]
-ok   attendance 2024-25: the rows' attendance rate equals the pack's value  [403 of 403]
-ok   attendance 2015-16 (the old ids): the pack's attendance_rate is the file's own value re-read from the export  [264 of 264 agree (need 200); 7 Leader in Me schools among them]
-ok   truancy 2024-25: the pack's truancy_rate is the file's own value re-read from the export  [145 of 145 agree (need 100); 4 Leader in Me schools among them]
-ok   promotion 2024-25: the pack's promotion_rate is the file's own value re-read from the export  [169 of 169 agree (need 120); 6 Leader in Me schools among them]
+ok   attendance 2024-25: the pack's attendance_rate is the file's own value re-read from the export  [263 of 263 agree (need 200); 7 Leader in Me schools among them]
+ok   attendance 2024-25: the rows' attendance rate equals the pack's value  [405 of 405]
+ok   attendance 2015-16 (the old ids): the pack's attendance_rate is the file's own value re-read from the export  [265 of 265 agree (need 200); 7 Leader in Me schools among them]
+ok   truancy 2024-25: the pack's truancy_rate is the file's own value re-read from the export  [146 of 146 agree (need 100); 4 Leader in Me schools among them]
+ok   promotion 2024-25: the pack's promotion_rate is the file's own value re-read from the export  [170 of 170 agree (need 120); 6 Leader in Me schools among them]
 ok   graduation 2024-25: the pack's grad_4yr is the file's own value re-read from the export  [50 of 50 agree (need 40); 1 Leader in Me schools among them]
 ok   six-year graduation 2023-24: the pack's grad_6yr is the file's own value re-read from the export  [51 of 51 agree (need 40); 1 Leader in Me schools among them]
 ok   dropout 2017-18: the pack's dropout_4yr is the file's own value re-read from the export  [56 of 56 agree (need 30); 1 Leader in Me schools among them]
@@ -297,8 +304,8 @@ ok   promotion is carried from 2021-22 only (the closures out), the earlier meas
 ok   zero graduation and dropout rates on schools with no graduating class carry no value
 ok   the postsecondary workbook contributes the class of 2015 only, and the page says the rest sits before it
 ok   every exclusion is counted on the cleaning audit
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 2,388 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [23 Leader in Me school-years on the cards]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 2,397 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [28 Leader in Me school-years on the cards]
 ok   every Leader in Me card member is a school the headline's roster counts  [7 schools]
 ok   no card member sits past the core's last year  [2025 vs 2025]
 ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=7]
@@ -307,10 +314,10 @@ ok   Promotion rate (2021-22 on): the Leader in Me point in 2025 rests on at lea
 ok   every card measure carries the poverty context line
 ok   the card stays at a dozen measures or fewer  [3 on the card]
 ok   a line the Leader in Me side cannot fill is off the card and explained in the note  [thin: []]
-ok   a year where a Leader in Me point would rest on fewer than three schools is not drawn and is named in the note  [{'truancy_rate': {'2022': 1}}]
-ok   the attendance rate is a measure in the rows with Leader in Me school-years behind it  [23 Leader in Me attendance school-years]
-ok   the research pack's per-school Vermont values are keyed to schools on the page  [2,321 records]
-ok   every school with an Agency code on the page has it in the pack  [426 of 447]
+ok   a year where a Leader in Me point would rest on fewer than three schools is not drawn and is named in the note  [{'attendance_rate': {'2019': 1}, 'truancy_rate': {'2022': 1}}]
+ok   the attendance rate is a measure in the rows with Leader in Me school-years behind it  [28 Leader in Me attendance school-years]
+ok   the research pack's per-school Vermont values are keyed to schools on the page  [2,330 records]
+ok   every school with an Agency code on the page has it in the pack  [427 of 448]
 ok   look-alike mode names the attendance rate as its behavior measure
 ok   the banner names the dashboard export and the postsecondary workbook
 ok   the methods page owns the descriptive limit for Vermont's cards  [headline n = 4]

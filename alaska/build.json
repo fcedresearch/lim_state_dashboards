@@ -2,8 +2,8 @@
  "state": "AK",
  "name": "Alaska",
  "folder": "alaska",
- "built": "2026-10-01",
- "seconds": 44,
+ "built": "2026-10-06",
+ "seconds": 38,
  "builder": "build_payload_core.py",
  "page_kind": "territory",
  "lim_headline_n": 0,
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,7 +42,7 @@
   },
   "roster": {
    "path": "/home/claude/work1/AK/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 13
+   "rows": 14
   },
   "comparison": {
    "path": "/home/claude/work1/AK/data/All Other Schools (Non-LiM & Exited).csv",
@@ -59,7 +59,7 @@
  ],
  "extras_module": null,
  "verified": true,
- "dashboard_bytes": 650283,
+ "dashboard_bytes": 662837,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -72,6 +72,61 @@
   "missing": [],
   "rows_share_of_prior": 1.02,
   "prior_year": 2025
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 2010,
+    "2015": 1609,
+    "2017": 1187,
+    "2018": 1198,
+    "2019": 1211,
+    "2022": 1097,
+    "2023": 1100,
+    "2024": 1086,
+    "2025": 1003,
+    "2026": 1021
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 1253
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2014": 1785,
+    "2015": 1413,
+    "2017": 1016,
+    "2018": 1037,
+    "2019": 1058,
+    "2022": 950,
+    "2023": 977,
+    "2024": 963,
+    "2025": 942
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2019": 342,
+    "2022": 272,
+    "2023": 289,
+    "2024": 286,
+    "2025": 278
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -469,60 +524,5 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 3
  },
- "best_schools_added": "2026-10-01",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Percent meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2014": 2010,
-    "2015": 1609,
-    "2017": 1187,
-    "2018": 1198,
-    "2019": 1211,
-    "2022": 1097,
-    "2023": 1100,
-    "2024": 1086,
-    "2025": 1003,
-    "2026": 1021
-   }
-  },
-  "percent_below": {
-   "label": "Percent in the lowest level",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 1253
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2014": 1785,
-    "2015": 1413,
-    "2017": 1016,
-    "2018": 1037,
-    "2019": 1058,
-    "2022": 950,
-    "2023": 977,
-    "2024": 963,
-    "2025": 942
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2019": 342,
-    "2022": 272,
-    "2023": 289,
-    "2024": 286,
-    "2025": 278
-   }
-  }
- }
+ "best_schools_added": "2026-10-01"
 }

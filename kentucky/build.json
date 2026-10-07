@@ -2,54 +2,54 @@
  "state": "KY",
  "name": "Kentucky",
  "folder": "kentucky",
- "built": "2026-09-08",
- "seconds": 154,
+ "built": "2026-10-06",
+ "seconds": 205,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 150,
- "schools": 1290,
+ "lim_headline_n": 162,
+ "schools": 1306,
  "years": [
   2015,
   2025
  ],
- "lim_roster_schools": 254,
+ "lim_roster_schools": 272,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-04"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/KY/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/KY/data/Subjects_Tests_FINAL (8).csv",
    "rows": 111023
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/KY/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 2372
+   "path": "/home/claude/work1/KY/data/LIM Schools (Current_Active) (11).csv",
+   "rows": 2408
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/KY/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 9137
+   "path": "/home/claude/work1/KY/data/All Other Schools (Non-LiM & Exited).csv",
+   "rows": 9101
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/KY/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/KY/data/All MRA Surveys.csv",
    "rows": 234
   }
  },
@@ -65,7 +65,7 @@
  ],
  "extras_module": "ky_core_extras",
  "verified": true,
- "dashboard_bytes": 4102339,
+ "dashboard_bytes": 4164503,
  "latest_results": {
   "year": 2025,
   "label": "2024-25",
@@ -80,6 +80,698 @@
   "missing": [],
   "rows_share_of_prior": 1.01,
   "prior_year": 2024
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5795,
+    "2016": 5741,
+    "2017": 5633,
+    "2018": 6291,
+    "2019": 6448,
+    "2022": 5657,
+    "2023": 5724,
+    "2024": 5640,
+    "2025": 5703
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5795,
+    "2016": 5738,
+    "2017": 5633,
+    "2018": 6281,
+    "2019": 6439,
+    "2022": 5590,
+    "2023": 5645,
+    "2024": 5533,
+    "2025": 5698
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5795,
+    "2016": 5738,
+    "2017": 5633,
+    "2018": 6281,
+    "2019": 6439,
+    "2022": 5590,
+    "2023": 5645,
+    "2024": 5533,
+    "2025": 5698
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5795,
+    "2016": 5738,
+    "2017": 5633,
+    "2018": 6281,
+    "2019": 6439,
+    "2022": 5590,
+    "2023": 5645,
+    "2024": 5533,
+    "2025": 5698
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5795,
+    "2016": 5738,
+    "2017": 5633,
+    "2018": 6281,
+    "2019": 6439,
+    "2022": 5590,
+    "2023": 5645,
+    "2024": 5533,
+    "2025": 5698
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5438,
+    "2016": 5382,
+    "2017": 5386,
+    "2018": 6041,
+    "2019": 6182,
+    "2022": 5425,
+    "2023": 5493,
+    "2024": 5421,
+    "2025": 5509
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2022": 5629,
+    "2023": 5729,
+    "2024": 5603,
+    "2025": 5691
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2024": 1197,
+    "2025": 1201
+   }
+  },
+  "climate_index": {
+   "label": "School climate index (students)",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2022": 5287,
+    "2023": 5318,
+    "2024": 5213,
+    "2025": 5379
+   }
+  },
+  "safety_index": {
+   "label": "School safety index (students)",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2022": 5287,
+    "2023": 5318,
+    "2024": 5213,
+    "2025": 5379
+   }
+  },
+  "attend_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 5521,
+    "2016": 5491,
+    "2017": 5375,
+    "2018": 6328,
+    "2019": 6423,
+    "2023": 5777,
+    "2024": 5677,
+    "2025": 5791
+   }
+  },
+  "oss_per100": {
+   "label": "Out-of-school suspension events per 100",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 5676,
+    "2016": 5683,
+    "2017": 5574,
+    "2018": 6080,
+    "2019": 6412,
+    "2022": 5047,
+    "2023": 5210,
+    "2024": 5186,
+    "2025": 5433
+   }
+  },
+  "acct_overall": {
+   "label": "Overall accountability score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2023": 5318,
+    "2024": 5213,
+    "2025": 5379
+   }
+  },
+  "grad_rate_ky": {
+   "label": "KDE graduation indicator (4- and 5-year)",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 1063,
+    "2019": 1093,
+    "2022": 1127,
+    "2023": 1089,
+    "2024": 1029,
+    "2025": 1201
+   }
+  },
+  "postsec_ready": {
+   "label": "Postsecondary readiness",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 1059,
+    "2019": 1084,
+    "2022": 1127,
+    "2023": 1089,
+    "2024": 1029,
+    "2025": 1201
+   }
+  },
+  "college_going": {
+   "label": "In-state college-going rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 1237,
+    "2016": 1238,
+    "2017": 1244,
+    "2018": 1032,
+    "2019": 1057,
+    "2022": 1110,
+    "2023": 1076,
+    "2024": 1029
+   }
+  },
+  "svy_caring": {
+   "label": "Students who say their school is a caring place",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "svy_adults_care": {
+   "label": "Students who say adults from their school care about them",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "svy_safe_classes": {
+   "label": "Students who feel safe in their classes",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "svy_adult_listens": {
+   "label": "Students with an adult at school who listens to them",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "oss_events": {
+   "label": "Out-of-school suspension events",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1235,
+    "2016": 1228,
+    "2017": 1228,
+    "2018": 1165,
+    "2019": 1230,
+    "2022": 1078,
+    "2023": 1108,
+    "2024": 1119,
+    "2025": 1134
+   }
+  },
+  "oss_students": {
+   "label": "Students with an out-of-school suspension",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1235,
+    "2016": 1228,
+    "2017": 1228,
+    "2018": 1165,
+    "2019": 1230,
+    "2022": 1050,
+    "2023": 1077,
+    "2024": 1104,
+    "2025": 1115
+   }
+  },
+  "isr_events": {
+   "label": "In-school removal events",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1235,
+    "2016": 1228,
+    "2017": 1228,
+    "2018": 1165,
+    "2019": 1230,
+    "2022": 1076,
+    "2023": 1097,
+    "2024": 1094,
+    "2025": 1089
+   }
+  },
+  "total_events": {
+   "label": "Discipline resolutions, all kinds",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1235,
+    "2016": 1228,
+    "2017": 1228,
+    "2018": 1160,
+    "2019": 1230,
+    "2022": 1153,
+    "2023": 1174,
+    "2024": 1177,
+    "2025": 1180
+   }
+  },
+  "enrollment_domo": {
+   "label": "Enrollment as DOMO records it (the denominator of the per-100 rates)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 1223,
+    "2016": 1228,
+    "2017": 1228,
+    "2018": 1165,
+    "2019": 1230,
+    "2022": 1225,
+    "2023": 1222,
+    "2024": 1223,
+    "2025": 1221
+   }
+  },
+  "oss_students_per100": {
+   "label": "Students with an out-of-school suspension per 100 students (DOMO enrollment)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1168,
+    "2016": 1173,
+    "2017": 1172,
+    "2018": 1130,
+    "2019": 1174,
+    "2022": 1007,
+    "2023": 1031,
+    "2024": 1063,
+    "2025": 1076
+   }
+  },
+  "isr_per100": {
+   "label": "In-school removal events per 100 students (DOMO enrollment)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1168,
+    "2016": 1173,
+    "2017": 1172,
+    "2018": 1130,
+    "2019": 1174,
+    "2022": 1025,
+    "2023": 1054,
+    "2024": 1052,
+    "2025": 1048
+   }
+  },
+  "ul_overall": {
+   "label": "Unbridled Learning overall score (2014-15 and 2015-16 only; its own scale)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2015": 1130,
+    "2016": 1126
+   }
+  },
+  "ccr_rate": {
+   "label": "College and career readiness rate under Unbridled Learning (2014-15 to 2016-17; a different definition)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 227,
+    "2016": 227,
+    "2017": 227
+   }
+  },
+  "ccr_rate_bonus": {
+   "label": "The same, with the bonus",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 227,
+    "2016": 227,
+    "2017": 227
+   }
+  },
+  "grads": {
+   "label": "Graduates counted for readiness",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 227,
+    "2016": 227,
+    "2017": 227,
+    "2018": 227,
+    "2019": 227
+   }
+  },
+  "college_enrolled_n": {
+   "label": "Graduates enrolled in a Kentucky college the year after graduation (KYSTATS)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 225,
+    "2016": 225,
+    "2017": 224,
+    "2018": 223,
+    "2019": 223,
+    "2022": 223,
+    "2023": 224,
+    "2024": 226
+   }
+  },
+  "grad_rate_4yr": {
+   "label": "Four-year cohort graduation rate of the class (KYSTATS)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 221,
+    "2016": 225,
+    "2017": 227,
+    "2018": 226,
+    "2019": 226,
+    "2022": 226,
+    "2023": 226,
+    "2024": 226
+   }
+  },
+  "act_composite": {
+   "label": "Average ACT composite of the class (KYSTATS)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 227,
+    "2016": 227,
+    "2017": 227,
+    "2018": 226,
+    "2019": 226,
+    "2022": 226,
+    "2023": 226,
+    "2024": 226
+   }
+  },
+  "ada": {
+   "label": "Adjusted average daily attendance",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1224,
+    "2019": 1227,
+    "2023": 1223,
+    "2024": 1220,
+    "2025": 1217
+   }
+  },
+  "postsec_ready_bonus": {
+   "label": "The same, with the bonus for graduates both academically and career ready",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 226,
+    "2019": 226,
+    "2022": 226,
+    "2023": 226,
+    "2024": 226,
+    "2025": 226
+   }
+  },
+  "stars": {
+   "label": "Star rating, 1 to 5 (2018-19 only)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1121
+   }
+  },
+  "overall_2019": {
+   "label": "Overall accountability score of the five-star system (2018-19 only; its own scale)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1121
+   }
+  },
+  "svy_adult_to_talk": {
+   "label": "Students agreeing: \"If I have a problem, there is an adult from school that I can talk to.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 986,
+    "2024": 951,
+    "2025": 946
+   }
+  },
+  "svy_all_succeed": {
+   "label": "Students agreeing: \"Adults from my school make sure all students get what they need to be successful.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 977,
+    "2024": 966,
+    "2025": 948
+   }
+  },
+  "svy_ask_teacher": {
+   "label": "Students agreeing: \"When I need help with schoolwork, I can ask a teacher.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 932,
+    "2024": 919,
+    "2025": 921
+   }
+  },
+  "svy_concerns_quickly": {
+   "label": "Students agreeing: \"Adults from my school handle safety concerns quickly.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 998,
+    "2024": 985,
+    "2025": 991
+   }
+  },
+  "svy_expect_best": {
+   "label": "Students agreeing: \"My teachers expect me to do my best all the time.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 908,
+    "2024": 873,
+    "2025": 846
+   }
+  },
+  "svy_keep_trying": {
+   "label": "Students agreeing: \"When I want to give up, my teacher says I should keep trying.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 959,
+    "2024": 961,
+    "2025": 945
+   }
+  },
+  "svy_miss_day": {
+   "label": "Students agreeing: \"A teacher or some other adult from my school will care if I miss a day of school.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 1088,
+    "2024": 1076,
+    "2025": 1077
+   }
+  },
+  "svy_physical_safety": {
+   "label": "Students agreeing: \"Adults from my school care about my physical safety.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 921,
+    "2024": 922,
+    "2025": 894
+   }
+  },
+  "svy_rules_fair": {
+   "label": "Students agreeing: \"The school rules are fair.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 1098,
+    "2024": 1093,
+    "2025": 1088
+   }
+  },
+  "svy_state_opinion": {
+   "label": "Students agreeing: \"I feel comfortable stating my opinion in class even if others disagree.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 1110,
+    "2024": 1099,
+    "2025": 1093
+   }
+  },
+  "svy_stay_calm": {
+   "label": "Students agreeing: \"Adults from my school stay calm when dealing with bad behavior.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1112,
+    "2023": 1110,
+    "2024": 1095,
+    "2025": 1090
+   }
+  },
+  "svy_work_safe": {
+   "label": "Students agreeing: \"Adults from my school work hard to make sure students are safe.\" (Quality of School Climate and Safety Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1111,
+    "2023": 846,
+    "2024": 831,
+    "2025": 831
+   }
+  },
+  "acct_rating": {
+   "label": "Overall accountability rating, 1 (red) to 5 (blue)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 1113,
+    "2023": 1113,
+    "2024": 1109,
+    "2025": 1107
+   }
+  },
+  "qscs_status": {
+   "label": "Quality of School Climate and Safety indicator status (the accountability version of the survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1113,
+    "2023": 1113,
+    "2024": 1109,
+    "2025": 1107
+   }
+  },
+  "rm_status": {
+   "label": "Reading and mathematics indicator status",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2022": 1113,
+    "2023": 1113,
+    "2024": 1109,
+    "2025": 1107
+   }
+  },
+  "instate_grads": {
+   "label": "Graduates counted for the report card's in-state transition",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 241,
+    "2023": 243,
+    "2024": 247,
+    "2025": 251
+   }
+  },
+  "instate_transition_rc": {
+   "label": "Transition to in-state postsecondary education as the report card publishes it (the prior class; suppressed for half of high schools)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 97,
+    "2023": 175,
+    "2024": 174,
+    "2025": 174
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -608,18 +1300,18 @@
   },
   "poverty": {
    "lim": {
-    "schools": 254,
+    "schools": 272,
     "missing": 1,
     "at_99_or_more": 0,
     "above_100": 0,
-    "high_poverty_share": 17.7
+    "high_poverty_share": 16.5
    },
    "comparison": {
-    "schools": 1057,
+    "schools": 1039,
     "missing": 20,
     "at_99_or_more": 6,
     "above_100": 4,
-    "high_poverty_share": 25.4
+    "high_poverty_share": 25.9
    }
   },
   "statewide_jumps": [],
@@ -627,20 +1319,20 @@
    "with": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 150,
-    "comp_n": 883,
-    "lim_change": 4.69,
-    "comp_change": 4.84,
-    "p": 0.826
+    "lim_n": 162,
+    "comp_n": 885,
+    "lim_change": 4.87,
+    "comp_change": 4.78,
+    "p": 0.889
    },
    "without": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 117,
-    "comp_n": 883,
-    "lim_change": 4.61,
-    "comp_change": 4.84,
-    "p": 0.766
+    "lim_n": 129,
+    "comp_n": 885,
+    "lim_change": 4.85,
+    "comp_change": 4.78,
+    "p": 0.922
    },
    "schools": 37
   },
@@ -654,703 +1346,11 @@
   "qualified": 16,
   "in_the_process": 15,
   "lapsed_on_the_list": 1,
-  "reviewed": 142,
+  "reviewed": 155,
   "measures": 75,
-  "outcomes": 22,
-  "improved_every_year": 2,
+  "outcomes": 21,
+  "improved_every_year": 3,
   "lapsed_longer_ago": 70
  },
- "best_schools_added": "2026-09-10",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Meeting or exceeding the standard (levels 3 and 4)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5727,
-    "2016": 5673,
-    "2017": 5565,
-    "2018": 6217,
-    "2019": 6374,
-    "2022": 5583,
-    "2023": 5648,
-    "2024": 5565,
-    "2025": 5629
-   }
-  },
-  "percent_level4": {
-   "label": "Level 4: exceeding the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5727,
-    "2016": 5670,
-    "2017": 5565,
-    "2018": 6207,
-    "2019": 6366,
-    "2022": 5516,
-    "2023": 5569,
-    "2024": 5458,
-    "2025": 5624
-   }
-  },
-  "percent_level3": {
-   "label": "Level 3: meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5727,
-    "2016": 5670,
-    "2017": 5565,
-    "2018": 6207,
-    "2019": 6366,
-    "2022": 5516,
-    "2023": 5569,
-    "2024": 5458,
-    "2025": 5624
-   }
-  },
-  "percent_level2": {
-   "label": "Level 2: approaching the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5727,
-    "2016": 5670,
-    "2017": 5565,
-    "2018": 6207,
-    "2019": 6366,
-    "2022": 5516,
-    "2023": 5569,
-    "2024": 5458,
-    "2025": 5624
-   }
-  },
-  "percent_below": {
-   "label": "Level 1: below the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5727,
-    "2016": 5670,
-    "2017": 5565,
-    "2018": 6207,
-    "2019": 6366,
-    "2022": 5516,
-    "2023": 5569,
-    "2024": 5458,
-    "2025": 5624
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5370,
-    "2016": 5314,
-    "2017": 5318,
-    "2018": 5967,
-    "2019": 6108,
-    "2022": 5351,
-    "2023": 5417,
-    "2024": 5346,
-    "2025": 5435
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2022": 5555,
-    "2023": 5653,
-    "2024": 5528,
-    "2025": 5617
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2024": 1180,
-    "2025": 1183
-   }
-  },
-  "climate_index": {
-   "label": "School climate index (students)",
-   "kind": "rows",
-   "family": "culture",
-   "years": {
-    "2022": 5213,
-    "2023": 5242,
-    "2024": 5138,
-    "2025": 5305
-   }
-  },
-  "safety_index": {
-   "label": "School safety index (students)",
-   "kind": "rows",
-   "family": "culture",
-   "years": {
-    "2022": 5213,
-    "2023": 5242,
-    "2024": 5138,
-    "2025": 5305
-   }
-  },
-  "attend_rate": {
-   "label": "Attendance rate",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2015": 5453,
-    "2016": 5423,
-    "2017": 5307,
-    "2018": 6254,
-    "2019": 6349,
-    "2023": 5701,
-    "2024": 5602,
-    "2025": 5717
-   }
-  },
-  "oss_per100": {
-   "label": "Out-of-school suspension events per 100",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2015": 5608,
-    "2016": 5615,
-    "2017": 5506,
-    "2018": 6006,
-    "2019": 6338,
-    "2022": 4973,
-    "2023": 5134,
-    "2024": 5111,
-    "2025": 5359
-   }
-  },
-  "acct_overall": {
-   "label": "Overall accountability score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2023": 5242,
-    "2024": 5138,
-    "2025": 5305
-   }
-  },
-  "grad_rate_ky": {
-   "label": "KDE graduation indicator (4- and 5-year)",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2018": 1047,
-    "2019": 1077,
-    "2022": 1109,
-    "2023": 1071,
-    "2024": 1012,
-    "2025": 1183
-   }
-  },
-  "postsec_ready": {
-   "label": "Postsecondary readiness",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2018": 1043,
-    "2019": 1068,
-    "2022": 1109,
-    "2023": 1071,
-    "2024": 1012,
-    "2025": 1183
-   }
-  },
-  "college_going": {
-   "label": "In-state college-going rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2015": 1217,
-    "2016": 1218,
-    "2017": 1224,
-    "2018": 1016,
-    "2019": 1041,
-    "2022": 1092,
-    "2023": 1058,
-    "2024": 1012
-   }
-  },
-  "svy_caring": {
-   "label": "Students who say their school is a caring place",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "svy_adults_care": {
-   "label": "Students who say adults from their school care about them",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "svy_safe_classes": {
-   "label": "Students who feel safe in their classes",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "svy_adult_listens": {
-   "label": "Students with an adult at school who listens to them",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "oss_events": {
-   "label": "Out-of-school suspension events",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2015": 1219,
-    "2016": 1212,
-    "2017": 1212,
-    "2018": 1149,
-    "2019": 1214,
-    "2022": 1062,
-    "2023": 1092,
-    "2024": 1103,
-    "2025": 1118
-   }
-  },
-  "oss_students": {
-   "label": "Students with an out-of-school suspension",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2015": 1219,
-    "2016": 1212,
-    "2017": 1212,
-    "2018": 1149,
-    "2019": 1214,
-    "2022": 1034,
-    "2023": 1064,
-    "2024": 1088,
-    "2025": 1099
-   }
-  },
-  "isr_events": {
-   "label": "In-school removal events",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2015": 1219,
-    "2016": 1212,
-    "2017": 1212,
-    "2018": 1149,
-    "2019": 1214,
-    "2022": 1062,
-    "2023": 1082,
-    "2024": 1079,
-    "2025": 1074
-   }
-  },
-  "total_events": {
-   "label": "Discipline resolutions, all kinds",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2015": 1219,
-    "2016": 1212,
-    "2017": 1212,
-    "2018": 1144,
-    "2019": 1214,
-    "2022": 1137,
-    "2023": 1158,
-    "2024": 1161,
-    "2025": 1164
-   }
-  },
-  "enrollment_domo": {
-   "label": "Enrollment as DOMO records it (the denominator of the per-100 rates)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 1207,
-    "2016": 1212,
-    "2017": 1212,
-    "2018": 1149,
-    "2019": 1214,
-    "2022": 1209,
-    "2023": 1206,
-    "2024": 1207,
-    "2025": 1205
-   }
-  },
-  "oss_students_per100": {
-   "label": "Students with an out-of-school suspension per 100 students (DOMO enrollment)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2015": 1152,
-    "2016": 1157,
-    "2017": 1156,
-    "2018": 1114,
-    "2019": 1158,
-    "2022": 991,
-    "2023": 1018,
-    "2024": 1047,
-    "2025": 1060
-   }
-  },
-  "isr_per100": {
-   "label": "In-school removal events per 100 students (DOMO enrollment)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2015": 1152,
-    "2016": 1157,
-    "2017": 1156,
-    "2018": 1114,
-    "2019": 1158,
-    "2022": 1011,
-    "2023": 1039,
-    "2024": 1037,
-    "2025": 1033
-   }
-  },
-  "ul_overall": {
-   "label": "Unbridled Learning overall score (2014-15 and 2015-16 only; its own scale)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2015": 1114,
-    "2016": 1110
-   }
-  },
-  "ccr_rate": {
-   "label": "College and career readiness rate under Unbridled Learning (2014-15 to 2016-17; a different definition)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 223,
-    "2016": 223,
-    "2017": 223
-   }
-  },
-  "ccr_rate_bonus": {
-   "label": "The same, with the bonus",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 223,
-    "2016": 223,
-    "2017": 223
-   }
-  },
-  "grads": {
-   "label": "Graduates counted for readiness",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 223,
-    "2016": 223,
-    "2017": 223,
-    "2018": 223,
-    "2019": 223
-   }
-  },
-  "college_enrolled_n": {
-   "label": "Graduates enrolled in a Kentucky college the year after graduation (KYSTATS)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 221,
-    "2016": 221,
-    "2017": 220,
-    "2018": 219,
-    "2019": 219,
-    "2022": 219,
-    "2023": 220,
-    "2024": 222
-   }
-  },
-  "grad_rate_4yr": {
-   "label": "Four-year cohort graduation rate of the class (KYSTATS)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 217,
-    "2016": 221,
-    "2017": 223,
-    "2018": 222,
-    "2019": 222,
-    "2022": 222,
-    "2023": 222,
-    "2024": 222
-   }
-  },
-  "act_composite": {
-   "label": "Average ACT composite of the class (KYSTATS)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 223,
-    "2016": 223,
-    "2017": 223,
-    "2018": 222,
-    "2019": 222,
-    "2022": 222,
-    "2023": 222,
-    "2024": 222
-   }
-  },
-  "ada": {
-   "label": "Adjusted average daily attendance",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 1208,
-    "2019": 1211,
-    "2023": 1207,
-    "2024": 1204,
-    "2025": 1201
-   }
-  },
-  "postsec_ready_bonus": {
-   "label": "The same, with the bonus for graduates both academically and career ready",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 222,
-    "2019": 222,
-    "2022": 222,
-    "2023": 222,
-    "2024": 222,
-    "2025": 222
-   }
-  },
-  "stars": {
-   "label": "Star rating, 1 to 5 (2018-19 only)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1105
-   }
-  },
-  "overall_2019": {
-   "label": "Overall accountability score of the five-star system (2018-19 only; its own scale)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1105
-   }
-  },
-  "svy_adult_to_talk": {
-   "label": "Students agreeing: \"If I have a problem, there is an adult from school that I can talk to.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 971,
-    "2024": 936,
-    "2025": 933
-   }
-  },
-  "svy_all_succeed": {
-   "label": "Students agreeing: \"Adults from my school make sure all students get what they need to be successful.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 962,
-    "2024": 952,
-    "2025": 934
-   }
-  },
-  "svy_ask_teacher": {
-   "label": "Students agreeing: \"When I need help with schoolwork, I can ask a teacher.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 917,
-    "2024": 904,
-    "2025": 909
-   }
-  },
-  "svy_concerns_quickly": {
-   "label": "Students agreeing: \"Adults from my school handle safety concerns quickly.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 984,
-    "2024": 970,
-    "2025": 976
-   }
-  },
-  "svy_expect_best": {
-   "label": "Students agreeing: \"My teachers expect me to do my best all the time.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 893,
-    "2024": 859,
-    "2025": 834
-   }
-  },
-  "svy_keep_trying": {
-   "label": "Students agreeing: \"When I want to give up, my teacher says I should keep trying.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 944,
-    "2024": 947,
-    "2025": 931
-   }
-  },
-  "svy_miss_day": {
-   "label": "Students agreeing: \"A teacher or some other adult from my school will care if I miss a day of school.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 1072,
-    "2024": 1060,
-    "2025": 1062
-   }
-  },
-  "svy_physical_safety": {
-   "label": "Students agreeing: \"Adults from my school care about my physical safety.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 909,
-    "2024": 907,
-    "2025": 882
-   }
-  },
-  "svy_rules_fair": {
-   "label": "Students agreeing: \"The school rules are fair.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 1082,
-    "2024": 1077,
-    "2025": 1072
-   }
-  },
-  "svy_state_opinion": {
-   "label": "Students agreeing: \"I feel comfortable stating my opinion in class even if others disagree.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 1094,
-    "2024": 1083,
-    "2025": 1077
-   }
-  },
-  "svy_stay_calm": {
-   "label": "Students agreeing: \"Adults from my school stay calm when dealing with bad behavior.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1096,
-    "2023": 1094,
-    "2024": 1079,
-    "2025": 1074
-   }
-  },
-  "svy_work_safe": {
-   "label": "Students agreeing: \"Adults from my school work hard to make sure students are safe.\" (Quality of School Climate and Safety Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1095,
-    "2023": 833,
-    "2024": 821,
-    "2025": 820
-   }
-  },
-  "acct_rating": {
-   "label": "Overall accountability rating, 1 (red) to 5 (blue)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 1097,
-    "2023": 1097,
-    "2024": 1093,
-    "2025": 1091
-   }
-  },
-  "qscs_status": {
-   "label": "Quality of School Climate and Safety indicator status (the accountability version of the survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1097,
-    "2023": 1097,
-    "2024": 1093,
-    "2025": 1091
-   }
-  },
-  "rm_status": {
-   "label": "Reading and mathematics indicator status",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2022": 1097,
-    "2023": 1097,
-    "2024": 1093,
-    "2025": 1091
-   }
-  },
-  "instate_grads": {
-   "label": "Graduates counted for the report card's in-state transition",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2022": 239,
-    "2023": 240,
-    "2024": 244,
-    "2025": 248
-   }
-  },
-  "instate_transition_rc": {
-   "label": "Transition to in-state postsecondary education as the report card publishes it (the prior class; suppressed for half of high schools)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2022": 97,
-    "2023": 173,
-    "2024": 172,
-    "2025": 172
-   }
-  }
- }
+ "best_schools_added": "2026-10-06"
 }

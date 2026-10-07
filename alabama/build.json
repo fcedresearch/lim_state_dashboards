@@ -2,8 +2,8 @@
  "state": "AL",
  "name": "Alabama",
  "folder": "alabama",
- "built": "2026-10-01",
- "seconds": 108,
+ "built": "2026-10-06",
+ "seconds": 106,
  "builder": "build_payload_core.py",
  "page_kind": "full",
  "lim_headline_n": 89,
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,7 +42,7 @@
   },
   "roster": {
    "path": "/home/claude/work1/AL/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 1463
+   "rows": 1611
   },
   "comparison": {
    "path": "/home/claude/work1/AL/data/All Other Schools (Non-LiM & Exited).csv",
@@ -71,7 +71,7 @@
  ],
  "extras_module": "al_core_extras",
  "verified": true,
- "dashboard_bytes": 3443033,
+ "dashboard_bytes": 3457069,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -86,6 +86,417 @@
   ],
   "rows_share_of_prior": 0.75,
   "prior_year": 2025
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4770,
+    "2016": 4756,
+    "2017": 4771,
+    "2018": 4725,
+    "2019": 4764,
+    "2022": 4810,
+    "2023": 4750,
+    "2024": 4775,
+    "2025": 4648,
+    "2026": 3498
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4770,
+    "2016": 4756,
+    "2017": 4771,
+    "2018": 4725,
+    "2019": 4764,
+    "2022": 4810,
+    "2023": 4750,
+    "2024": 4775,
+    "2025": 4648,
+    "2026": 3498
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4770,
+    "2016": 4756,
+    "2017": 4771,
+    "2018": 4725,
+    "2019": 4764,
+    "2022": 4810,
+    "2023": 4750,
+    "2024": 4775,
+    "2025": 4648,
+    "2026": 3498
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4770,
+    "2016": 4756,
+    "2017": 4771,
+    "2018": 4725,
+    "2019": 4764,
+    "2022": 4810,
+    "2023": 4750,
+    "2024": 4775,
+    "2025": 4648,
+    "2026": 3498
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4770,
+    "2016": 4756,
+    "2017": 4771,
+    "2018": 4725,
+    "2019": 4764,
+    "2022": 4810,
+    "2023": 4750,
+    "2024": 4775,
+    "2025": 4648,
+    "2026": 3498
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4317,
+    "2016": 4311,
+    "2017": 4317,
+    "2018": 4281,
+    "2019": 4344,
+    "2022": 4381,
+    "2023": 4350,
+    "2024": 4348,
+    "2025": 4275
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2022": 4847,
+    "2023": 4807,
+    "2024": 4844,
+    "2025": 4734
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 1437,
+    "2017": 1483,
+    "2018": 1480,
+    "2019": 1020,
+    "2022": 1486,
+    "2023": 1500,
+    "2024": 1547,
+    "2025": 1522
+   }
+  },
+  "ccr_rate": {
+   "label": "College and career ready",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 1437,
+    "2017": 1458,
+    "2018": 1474,
+    "2022": 1494,
+    "2023": 1531,
+    "2024": 1521
+   }
+  },
+  "acc_points": {
+   "label": "State accountability score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2019": 4838,
+    "2022": 4910,
+    "2023": 4868,
+    "2024": 4863,
+    "2025": 4758
+   }
+  },
+  "acc_achievement": {
+   "label": "Academic achievement indicator score (0-100)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "acc_growth": {
+   "label": "Academic growth indicator score (0-100)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "acc_chronic": {
+   "label": "Chronic absenteeism (state indicator)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "acc_grad": {
+   "label": "Graduation rate (state indicator, class year)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2016": 2,
+    "2017": 2,
+    "2018": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2
+   }
+  },
+  "grade_ab": {
+   "label": "Schools graded A or B",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "college_going": {
+   "label": "Graduates enrolled in college (class of 2025)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2025": 2
+   }
+  },
+  "incidents": {
+   "label": "Reported discipline incidents",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "acc_elp": {
+   "label": "Progress in English language proficiency indicator score (0-100)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2018": 138,
+    "2019": 176,
+    "2022": 232,
+    "2023": 266,
+    "2024": 304,
+    "2025": 340
+   }
+  },
+  "acc_grade": {
+   "label": "State accountability letter grade (ID = insufficient data, AW = approved waiver)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 1261,
+    "2022": 1283,
+    "2023": 1292,
+    "2024": 1290,
+    "2025": 1288
+   }
+  },
+  "inc_per100": {
+   "label": "Reported discipline incidents per 100 students",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2022": 1206,
+    "2023": 1219,
+    "2024": 1208,
+    "2025": 1196
+   }
+  },
+  "sir_listed": {
+   "label": "Listed in the state's incident report that year",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 1206,
+    "2023": 1219,
+    "2024": 1208,
+    "2025": 1196
+   }
+  },
+  "cohort": {
+   "label": "Four-year cohort (federal report-card supporting data, class year; masked cells absent)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 354,
+    "2016": 352,
+    "2017": 357,
+    "2018": 359,
+    "2019": 361,
+    "2020": 366,
+    "2021": 367,
+    "2022": 371,
+    "2023": 376,
+    "2024": 374
+   }
+  },
+  "graduates": {
+   "label": "Graduates in the cohort (supporting data; masked where fewer than 11 sit on either side)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 182,
+    "2016": 209,
+    "2017": 172,
+    "2018": 161,
+    "2019": 129,
+    "2020": 147,
+    "2021": 152,
+    "2022": 166,
+    "2023": 153,
+    "2024": 128
+   }
+  },
+  "ccr_count": {
+   "label": "Cohort members college and career ready (supporting data; masked where fewer than 11 sit on either side)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 344,
+    "2016": 330,
+    "2017": 307,
+    "2018": 282,
+    "2019": 236,
+    "2020": 277,
+    "2021": 260,
+    "2022": 225,
+    "2023": 196,
+    "2024": 162
+   }
+  },
+  "grad_pct_reported": {
+   "label": "Graduation rate as the supporting data publishes it (masked where fewer than 11 sit on either side or the rate is 95 or more)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 159,
+    "2016": 185,
+    "2017": 156,
+    "2018": 147,
+    "2019": 108,
+    "2020": 133,
+    "2021": 140,
+    "2022": 157,
+    "2023": 146,
+    "2024": 113
+   }
+  },
+  "ccr_pct_reported": {
+   "label": "CCR share as the supporting data publishes it (same masking)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 324,
+    "2016": 317,
+    "2017": 296,
+    "2018": 279,
+    "2019": 233,
+    "2020": 273,
+    "2021": 257,
+    "2022": 221,
+    "2023": 190,
+    "2024": 159
+   }
+  },
+  "college_2yr": {
+   "label": "Graduates enrolled in a two-year college (ACHE)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2025": 366
+   }
+  },
+  "college_4yr": {
+   "label": "Graduates enrolled in a four-year college (ACHE)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2025": 366
+   }
+  },
+  "hs_graduates_ache": {
+   "label": "High school graduates in the ACHE count",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2025": 366
+   }
+  },
+  "grad_pct_rebuilt_from_counts": {
+   "label": "Graduation rate rebuilt from the published counts where the file writes '~' (95 or more)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 7,
+    "2016": 11,
+    "2017": 5,
+    "2018": 11,
+    "2019": 17,
+    "2020": 11,
+    "2021": 9,
+    "2022": 7,
+    "2023": 5,
+    "2024": 13
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -493,425 +904,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 30,
+  "qualified": 31,
   "in_the_process": 30,
-  "lapsed_on_the_list": 0,
+  "lapsed_on_the_list": 1,
   "reviewed": 93,
   "measures": 58,
   "outcomes": 15,
-  "improved_every_year": 7,
+  "improved_every_year": 9,
   "lapsed_longer_ago": 59
  },
- "best_schools_added": "2026-09-30",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Meeting or exceeding the standard (levels 3 and 4)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 4770,
-    "2016": 4756,
-    "2017": 4771,
-    "2018": 4725,
-    "2019": 4764,
-    "2022": 4810,
-    "2023": 4750,
-    "2024": 4775,
-    "2025": 4648,
-    "2026": 3498
-   }
-  },
-  "percent_level4": {
-   "label": "Level 4: exceeding the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 4770,
-    "2016": 4756,
-    "2017": 4771,
-    "2018": 4725,
-    "2019": 4764,
-    "2022": 4810,
-    "2023": 4750,
-    "2024": 4775,
-    "2025": 4648,
-    "2026": 3498
-   }
-  },
-  "percent_level3": {
-   "label": "Level 3: meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 4770,
-    "2016": 4756,
-    "2017": 4771,
-    "2018": 4725,
-    "2019": 4764,
-    "2022": 4810,
-    "2023": 4750,
-    "2024": 4775,
-    "2025": 4648,
-    "2026": 3498
-   }
-  },
-  "percent_level2": {
-   "label": "Level 2: approaching the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 4770,
-    "2016": 4756,
-    "2017": 4771,
-    "2018": 4725,
-    "2019": 4764,
-    "2022": 4810,
-    "2023": 4750,
-    "2024": 4775,
-    "2025": 4648,
-    "2026": 3498
-   }
-  },
-  "percent_below": {
-   "label": "Level 1: below the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 4770,
-    "2016": 4756,
-    "2017": 4771,
-    "2018": 4725,
-    "2019": 4764,
-    "2022": 4810,
-    "2023": 4750,
-    "2024": 4775,
-    "2025": 4648,
-    "2026": 3498
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 4317,
-    "2016": 4311,
-    "2017": 4317,
-    "2018": 4281,
-    "2019": 4344,
-    "2022": 4381,
-    "2023": 4350,
-    "2024": 4348,
-    "2025": 4275
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2022": 4847,
-    "2023": 4807,
-    "2024": 4844,
-    "2025": 4734
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2016": 1437,
-    "2017": 1483,
-    "2018": 1480,
-    "2019": 1020,
-    "2022": 1486,
-    "2023": 1500,
-    "2024": 1547,
-    "2025": 1522
-   }
-  },
-  "ccr_rate": {
-   "label": "College and career ready",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2016": 1437,
-    "2017": 1458,
-    "2018": 1474,
-    "2022": 1494,
-    "2023": 1531,
-    "2024": 1521
-   }
-  },
-  "acc_points": {
-   "label": "State accountability score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2019": 4838,
-    "2022": 4910,
-    "2023": 4868,
-    "2024": 4863,
-    "2025": 4758
-   }
-  },
-  "acc_achievement": {
-   "label": "Academic achievement indicator score (0-100)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "acc_growth": {
-   "label": "Academic growth indicator score (0-100)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "acc_chronic": {
-   "label": "Chronic absenteeism (state indicator)",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "acc_grad": {
-   "label": "Graduation rate (state indicator, class year)",
-   "kind": "cards",
-   "family": "graduation",
-   "years": {
-    "2016": 2,
-    "2017": 2,
-    "2018": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2
-   }
-  },
-  "grade_ab": {
-   "label": "Schools graded A or B",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "college_going": {
-   "label": "Graduates enrolled in college (class of 2025)",
-   "kind": "cards",
-   "family": "graduation",
-   "years": {
-    "2025": 2
-   }
-  },
-  "incidents": {
-   "label": "Reported discipline incidents",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "acc_elp": {
-   "label": "Progress in English language proficiency indicator score (0-100)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2018": 138,
-    "2019": 176,
-    "2022": 232,
-    "2023": 266,
-    "2024": 304,
-    "2025": 340
-   }
-  },
-  "acc_grade": {
-   "label": "State accountability letter grade (ID = insufficient data, AW = approved waiver)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 1261,
-    "2022": 1283,
-    "2023": 1292,
-    "2024": 1290,
-    "2025": 1288
-   }
-  },
-  "inc_per100": {
-   "label": "Reported discipline incidents per 100 students",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2022": 1223,
-    "2023": 1219,
-    "2024": 1210,
-    "2025": 1196
-   }
-  },
-  "sir_listed": {
-   "label": "Listed in the state's incident report that year",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2022": 1223,
-    "2023": 1219,
-    "2024": 1210,
-    "2025": 1196
-   }
-  },
-  "cohort": {
-   "label": "Four-year cohort (federal report-card supporting data, class year; masked cells absent)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2015": 354,
-    "2016": 352,
-    "2017": 357,
-    "2018": 359,
-    "2019": 361,
-    "2020": 366,
-    "2021": 367,
-    "2022": 371,
-    "2023": 376,
-    "2024": 374
-   }
-  },
-  "graduates": {
-   "label": "Graduates in the cohort (supporting data; masked where fewer than 11 sit on either side)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 182,
-    "2016": 209,
-    "2017": 172,
-    "2018": 161,
-    "2019": 129,
-    "2020": 147,
-    "2021": 152,
-    "2022": 166,
-    "2023": 153,
-    "2024": 128
-   }
-  },
-  "ccr_count": {
-   "label": "Cohort members college and career ready (supporting data; masked where fewer than 11 sit on either side)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 344,
-    "2016": 330,
-    "2017": 307,
-    "2018": 282,
-    "2019": 236,
-    "2020": 277,
-    "2021": 260,
-    "2022": 225,
-    "2023": 196,
-    "2024": 162
-   }
-  },
-  "grad_pct_reported": {
-   "label": "Graduation rate as the supporting data publishes it (masked where fewer than 11 sit on either side or the rate is 95 or more)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 159,
-    "2016": 185,
-    "2017": 156,
-    "2018": 147,
-    "2019": 108,
-    "2020": 133,
-    "2021": 140,
-    "2022": 157,
-    "2023": 146,
-    "2024": 113
-   }
-  },
-  "ccr_pct_reported": {
-   "label": "CCR share as the supporting data publishes it (same masking)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 324,
-    "2016": 317,
-    "2017": 296,
-    "2018": 279,
-    "2019": 233,
-    "2020": 273,
-    "2021": 257,
-    "2022": 221,
-    "2023": 190,
-    "2024": 159
-   }
-  },
-  "college_2yr": {
-   "label": "Graduates enrolled in a two-year college (ACHE)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2025": 366
-   }
-  },
-  "college_4yr": {
-   "label": "Graduates enrolled in a four-year college (ACHE)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2025": 366
-   }
-  },
-  "hs_graduates_ache": {
-   "label": "High school graduates in the ACHE count",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2025": 366
-   }
-  },
-  "grad_pct_rebuilt_from_counts": {
-   "label": "Graduation rate rebuilt from the published counts where the file writes '~' (95 or more)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 7,
-    "2016": 11,
-    "2017": 5,
-    "2018": 11,
-    "2019": 17,
-    "2020": 11,
-    "2021": 9,
-    "2022": 7,
-    "2023": 5,
-    "2024": 13
-   }
-  }
- }
+ "best_schools_added": "2026-09-30"
 }

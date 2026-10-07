@@ -2,54 +2,54 @@
  "state": "IL",
  "name": "Illinois",
  "folder": "illinois",
- "built": "2026-09-08",
- "seconds": 261,
+ "built": "2026-10-06",
+ "seconds": 280,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 80,
- "schools": 3603,
+ "lim_headline_n": 105,
+ "schools": 3605,
  "years": [
   2015,
   2025
  ],
- "lim_roster_schools": 153,
+ "lim_roster_schools": 154,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-04"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/IL/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/IL/data/Subjects_Tests_FINAL (8).csv",
    "rows": 259108
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/IL/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 1454
+   "path": "/home/claude/work1/IL/data/LIM Schools (Current_Active) (11).csv",
+   "rows": 1456
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/IL/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 31953
+   "path": "/home/claude/work1/IL/data/All Other Schools (Non-LiM & Exited).csv",
+   "rows": 31951
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/IL/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/IL/data/All MRA Surveys.csv",
    "rows": 158
   }
  },
@@ -63,7 +63,7 @@
  ],
  "extras_module": "il_core_extras",
  "verified": true,
- "dashboard_bytes": 6715099,
+ "dashboard_bytes": 6730419,
  "latest_results": {
   "year": 2025,
   "label": "2024-25",
@@ -77,118 +77,21 @@
   "rows_share_of_prior": 1.18,
   "prior_year": 2024
  },
- "audits": {
-  "levels": {
-   "rows": 239038,
-   "levels 3 and 4": 4.4,
-   "levels 2, 3 and 4": 0.5,
-   "level 4 alone": 31.1,
-   "100 minus level 1": 0.1,
-   "best": "level 4 alone",
-   "levels_sum_to_100_share": 35.6,
-   "structure": "no combination of the reported levels reproduces the proficiency rate",
-   "n_levels": null,
-   "proficient_from": null,
-   "reversed_numbering": null,
-   "coverage": 0.0,
-   "years_ok": null,
-   "years_out": null,
-   "cells_out": null,
-   "latest_year_ok": null,
-   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 6% of rows (a five-level state whose export carries four columns, usually)",
-   "combination_shares": {
-    "levels 3 and 4": 6.2,
-    "levels 2, 3 and 4": 0.6,
-    "levels 1 and 2 (1 the top)": 2.4,
-    "levels 1, 2 and 3 (1 the top)": 1.6
-   },
-   "cells": [],
-   "levels_as_measures": false
-  },
-  "poverty": {
-   "lim": {
-    "schools": 153,
-    "missing": 0,
-    "at_99_or_more": 0,
-    "above_100": 0,
-    "high_poverty_share": 33.3
-   },
-   "comparison": {
-    "schools": 3461,
-    "missing": 38,
-    "at_99_or_more": 74,
-    "above_100": 5,
-    "high_poverty_share": 24.4
-   }
-  },
-  "statewide_jumps": [
-   {
-    "subject": "ELA",
-    "from": 2024,
-    "to": 2025,
-    "from_mean": 36.1,
-    "to_mean": 51.0,
-    "change": 14.9
-   },
-   {
-    "subject": "Math",
-    "from": 2024,
-    "to": 2025,
-    "from_mean": 25.6,
-    "to_mean": 36.0,
-    "change": 10.4
-   }
-  ],
-  "sensitivity": {
-   "with": {
-    "y0": 2022,
-    "y1": 2025,
-    "lim_n": 80,
-    "comp_n": 3234,
-    "lim_change": 18.57,
-    "comp_change": 17.34,
-    "p": 0.165
-   },
-   "without": {
-    "y0": 2022,
-    "y1": 2025,
-    "lim_n": 64,
-    "comp_n": 3234,
-    "lim_change": 19.72,
-    "comp_change": 17.34,
-    "p": 0.015
-   },
-   "schools": 17
-  },
-  "subjects_by_keyword": [],
-  "subjects_excluded": []
- },
- "best_schools": {
-  "qualified": 17,
-  "in_the_process": 15,
-  "lapsed_on_the_list": 2,
-  "reviewed": 72,
-  "measures": 58,
-  "outcomes": 19,
-  "improved_every_year": 7,
-  "lapsed_longer_ago": 42
- },
- "best_schools_added": "2026-09-10",
  "measure_years": {
   "percent_proficient": {
    "label": "Percent meeting the standard",
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 8833,
-    "2016": 12702,
-    "2017": 12603,
-    "2018": 12632,
-    "2019": 13114,
-    "2022": 13024,
-    "2023": 12953,
-    "2024": 10878,
-    "2025": 12789
+    "2015": 8839,
+    "2016": 12709,
+    "2017": 12610,
+    "2018": 12639,
+    "2019": 13121,
+    "2022": 13031,
+    "2023": 12960,
+    "2024": 10884,
+    "2025": 12791
    }
   },
   "percent_below": {
@@ -196,14 +99,14 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 8833,
-    "2016": 8931,
-    "2017": 8839,
-    "2018": 8825,
-    "2019": 9146,
-    "2022": 9043,
-    "2023": 8990,
-    "2024": 8900
+    "2015": 8839,
+    "2016": 8937,
+    "2017": 8845,
+    "2018": 8831,
+    "2019": 9152,
+    "2022": 9049,
+    "2023": 8996,
+    "2024": 8906
    }
   },
   "standard_score": {
@@ -211,15 +114,15 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 7943,
-    "2016": 11691,
-    "2017": 11593,
-    "2018": 11634,
-    "2019": 12121,
-    "2022": 12145,
-    "2023": 12092,
-    "2024": 10150,
-    "2025": 12002
+    "2015": 7947,
+    "2016": 11696,
+    "2017": 11598,
+    "2018": 11639,
+    "2019": 12126,
+    "2022": 12150,
+    "2023": 12097,
+    "2024": 10154,
+    "2025": 12004
    }
   },
   "chronic_absent": {
@@ -227,12 +130,12 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2018": 12977,
-    "2019": 13126,
-    "2022": 12928,
-    "2023": 12957,
-    "2024": 10868,
-    "2025": 12748
+    "2018": 12984,
+    "2019": 13133,
+    "2022": 12935,
+    "2023": 12964,
+    "2024": 10874,
+    "2025": 12750
    }
   },
   "grad_rate": {
@@ -253,12 +156,12 @@
    "kind": "rows",
    "family": "culture",
    "years": {
-    "2018": 12688,
-    "2019": 13043,
-    "2022": 13064,
-    "2023": 13021,
-    "2024": 11042,
-    "2025": 12966
+    "2018": 12695,
+    "2019": 13050,
+    "2022": 13071,
+    "2023": 13028,
+    "2024": 11048,
+    "2025": 12968
    }
   },
   "mobility": {
@@ -266,12 +169,12 @@
    "kind": "rows",
    "family": "culture",
    "years": {
-    "2018": 12980,
-    "2019": 13301,
-    "2022": 11992,
-    "2023": 11442,
-    "2024": 9573,
-    "2025": 10909
+    "2018": 12987,
+    "2019": 13308,
+    "2022": 11999,
+    "2023": 11449,
+    "2024": 9579,
+    "2025": 10911
    }
   },
   "e_environment": {
@@ -280,12 +183,12 @@
    "family": "culture",
    "years": {
     "2016": 5494,
-    "2017": 7801,
+    "2017": 7806,
     "2018": 5972,
-    "2019": 12478,
-    "2022": 12353,
-    "2023": 12668,
-    "2024": 10652
+    "2019": 12485,
+    "2022": 12360,
+    "2023": 12675,
+    "2024": 10658
    }
   },
   "e_teachers": {
@@ -293,13 +196,13 @@
    "kind": "rows",
    "family": "culture",
    "years": {
-    "2016": 6934,
-    "2017": 9746,
-    "2018": 7284,
-    "2019": 12242,
-    "2022": 11730,
-    "2023": 12175,
-    "2024": 10154
+    "2016": 6936,
+    "2017": 9751,
+    "2018": 7286,
+    "2019": 12249,
+    "2022": 11737,
+    "2023": 12182,
+    "2024": 10160
    }
   },
   "pct_oss": {
@@ -307,8 +210,8 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2023": 12007,
-    "2024": 10330
+    "2023": 12014,
+    "2024": 10336
    }
   },
   "e_leaders": {
@@ -398,13 +301,13 @@
    "family": null,
    "years": {
     "2016": 1281,
-    "2017": 1946,
-    "2018": 2052,
-    "2019": 3461,
-    "2022": 3460,
-    "2023": 3419,
-    "2024": 3408,
-    "2025": 3400
+    "2017": 1947,
+    "2018": 2054,
+    "2019": 3463,
+    "2022": 3462,
+    "2023": 3421,
+    "2024": 3410,
+    "2025": 3402
    }
   },
   "e_teacher_rr": {
@@ -412,14 +315,14 @@
    "kind": "pack",
    "family": null,
    "years": {
-    "2016": 1819,
-    "2017": 2838,
-    "2018": 2052,
-    "2019": 3461,
-    "2022": 3455,
-    "2023": 3454,
-    "2024": 3454,
-    "2025": 3443
+    "2016": 1820,
+    "2017": 2839,
+    "2018": 2054,
+    "2019": 3463,
+    "2022": 3457,
+    "2023": 3456,
+    "2024": 3456,
+    "2025": 3445
    }
   },
   "crdc_iss": {
@@ -427,8 +330,8 @@
    "kind": "pack",
    "family": "attendance",
    "years": {
-    "2016": 3359,
-    "2018": 3460
+    "2016": 3361,
+    "2018": 3462
    }
   },
   "crdc_oss": {
@@ -436,8 +339,8 @@
    "kind": "pack",
    "family": "attendance",
    "years": {
-    "2016": 3359,
-    "2018": 3460
+    "2016": 3361,
+    "2018": 3462
    }
   },
   "crdc_exp": {
@@ -445,8 +348,8 @@
    "kind": "pack",
    "family": "attendance",
    "years": {
-    "2016": 3359,
-    "2018": 3460
+    "2016": 3361,
+    "2018": 3462
    }
   },
   "crdc_chronic": {
@@ -454,8 +357,8 @@
    "kind": "pack",
    "family": "attendance",
    "years": {
-    "2016": 3359,
-    "2018": 3434
+    "2016": 3361,
+    "2018": 3436
    }
   },
   "crdc_ap": {
@@ -463,8 +366,8 @@
    "kind": "pack",
    "family": null,
    "years": {
-    "2016": 3359,
-    "2018": 3460
+    "2016": 3361,
+    "2018": 3462
    }
   },
   "e_leaders_lvl": {
@@ -472,14 +375,14 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2016": 1696,
-    "2017": 2550,
-    "2018": 1841,
-    "2019": 3169,
-    "2022": 3053,
-    "2023": 3171,
-    "2024": 3127,
-    "2025": 3116
+    "2016": 1697,
+    "2017": 2551,
+    "2018": 1842,
+    "2019": 3171,
+    "2022": 3055,
+    "2023": 3173,
+    "2024": 3129,
+    "2025": 3118
    }
   },
   "e_teachers_lvl": {
@@ -487,14 +390,14 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2016": 1698,
-    "2017": 2553,
-    "2018": 1840,
-    "2019": 3169,
-    "2022": 3052,
-    "2023": 3172,
-    "2024": 3132,
-    "2025": 3114
+    "2016": 1699,
+    "2017": 2554,
+    "2018": 1841,
+    "2019": 3171,
+    "2022": 3054,
+    "2023": 3174,
+    "2024": 3134,
+    "2025": 3116
    }
   },
   "e_families_lvl": {
@@ -502,14 +405,14 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2016": 1688,
-    "2017": 2542,
-    "2018": 1820,
-    "2019": 3132,
-    "2022": 3017,
-    "2023": 3131,
-    "2024": 3079,
-    "2025": 3072
+    "2016": 1689,
+    "2017": 2543,
+    "2018": 1821,
+    "2019": 3134,
+    "2022": 3019,
+    "2023": 3133,
+    "2024": 3081,
+    "2025": 3074
    }
   },
   "low_income": {
@@ -517,12 +420,12 @@
    "kind": "pack",
    "family": null,
    "years": {
-    "2018": 3449,
-    "2019": 3478,
-    "2022": 3409,
-    "2023": 3402,
-    "2024": 3389,
-    "2025": 3389
+    "2018": 3451,
+    "2019": 3480,
+    "2022": 3411,
+    "2023": 3404,
+    "2024": 3391,
+    "2025": 3391
    }
   },
   "attendance": {
@@ -530,12 +433,12 @@
    "kind": "pack",
    "family": "attendance",
    "years": {
-    "2018": 3495,
-    "2019": 3458,
-    "2022": 3461,
-    "2023": 3458,
-    "2024": 3452,
-    "2025": 3440
+    "2018": 3497,
+    "2019": 3460,
+    "2022": 3463,
+    "2023": 3460,
+    "2024": 3454,
+    "2025": 3442
    }
   },
   "truancy": {
@@ -543,8 +446,8 @@
    "kind": "pack",
    "family": "attendance",
    "years": {
-    "2018": 3495,
-    "2019": 3451,
+    "2018": 3497,
+    "2019": 3453,
     "2022": 2556,
     "2023": 2544,
     "2024": 2542,
@@ -648,12 +551,12 @@
    "kind": "pack",
    "family": "attendance",
    "years": {
-    "2018": 3495,
-    "2019": 3444,
-    "2022": 3373,
-    "2023": 3397,
-    "2024": 3367,
-    "2025": 3355
+    "2018": 3497,
+    "2019": 3446,
+    "2022": 3375,
+    "2023": 3399,
+    "2024": 3369,
+    "2025": 3357
    }
   },
   "e_environment_lvl": {
@@ -662,13 +565,13 @@
    "family": "culture",
    "years": {
     "2016": 1192,
-    "2017": 1830,
+    "2017": 1831,
     "2018": 1374,
-    "2019": 3219,
-    "2022": 3207,
-    "2023": 3288,
-    "2024": 3277,
-    "2025": 2764
+    "2019": 3221,
+    "2022": 3209,
+    "2023": 3290,
+    "2024": 3279,
+    "2025": 2766
    }
   },
   "e_instruction_lvl": {
@@ -677,13 +580,13 @@
    "family": "culture",
    "years": {
     "2016": 1191,
-    "2017": 1828,
+    "2017": 1829,
     "2018": 1374,
-    "2019": 3219,
-    "2022": 3207,
-    "2023": 3288,
-    "2024": 3277,
-    "2025": 2622
+    "2019": 3221,
+    "2022": 3209,
+    "2023": 3290,
+    "2024": 3279,
+    "2025": 2624
    }
   },
   "designation": {
@@ -691,12 +594,12 @@
    "kind": "pack",
    "family": "academic",
    "years": {
-    "2018": 3454,
-    "2019": 3431,
-    "2022": 3410,
-    "2023": 3411,
-    "2024": 3432,
-    "2025": 3424
+    "2018": 3456,
+    "2019": 3433,
+    "2022": 3412,
+    "2023": 3413,
+    "2024": 3434,
+    "2025": 3426
    }
   },
   "novice_tds": {
@@ -704,7 +607,7 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2022": 3448
+    "2022": 3450
    }
   },
   "provisional_tds": {
@@ -712,7 +615,7 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2022": 3448
+    "2022": 3450
    }
   },
   "pct_oss_published": {
@@ -720,9 +623,9 @@
    "kind": "pack",
    "family": "attendance",
    "years": {
-    "2023": 2685,
-    "2024": 2714,
-    "2025": 1241
+    "2023": 2687,
+    "2024": 2716,
+    "2025": 1242
    }
   },
   "disc_students": {
@@ -730,9 +633,9 @@
    "kind": "pack",
    "family": null,
    "years": {
-    "2023": 2929,
-    "2024": 2957,
-    "2025": 1779
+    "2023": 2931,
+    "2024": 2959,
+    "2025": 1781
    }
   },
   "disc_oss_students": {
@@ -740,9 +643,9 @@
    "kind": "pack",
    "family": null,
    "years": {
-    "2023": 2685,
-    "2024": 2714,
-    "2025": 1241
+    "2023": 2687,
+    "2024": 2716,
+    "2025": 1242
    }
   },
   "teacher_attendance": {
@@ -750,8 +653,8 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2024": 3443,
-    "2025": 3431
+    "2024": 3445,
+    "2025": 3433
    }
   },
   "novice": {
@@ -759,8 +662,8 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2024": 2902,
-    "2025": 2858
+    "2024": 2904,
+    "2025": 2859
    }
   },
   "provisional": {
@@ -768,8 +671,8 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2024": 3446,
-    "2025": 3432
+    "2024": 3448,
+    "2025": 3434
    }
   },
   "e_leaders_v2": {
@@ -777,7 +680,7 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2025": 3116
+    "2025": 3118
    }
   },
   "e_teachers_v2": {
@@ -785,7 +688,7 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2025": 3114
+    "2025": 3116
    }
   },
   "e_families_v2": {
@@ -793,7 +696,7 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2025": 3072
+    "2025": 3074
    }
   },
   "e_environment_v2": {
@@ -801,7 +704,7 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2025": 2764
+    "2025": 2766
    }
   },
   "e_instruction_v2": {
@@ -809,7 +712,7 @@
    "kind": "pack",
    "family": "culture",
    "years": {
-    "2025": 2622
+    "2025": 2624
    }
   },
   "disc_iss_students": {
@@ -817,10 +720,107 @@
    "kind": "pack",
    "family": null,
    "years": {
-    "2023": 2428,
-    "2024": 2504,
+    "2023": 2430,
+    "2024": 2505,
     "2025": 1180
    }
   }
- }
+ },
+ "audits": {
+  "levels": {
+   "rows": 239038,
+   "levels 3 and 4": 4.4,
+   "levels 2, 3 and 4": 0.5,
+   "level 4 alone": 31.1,
+   "100 minus level 1": 0.1,
+   "best": "level 4 alone",
+   "levels_sum_to_100_share": 35.6,
+   "structure": "no combination of the reported levels reproduces the proficiency rate",
+   "n_levels": null,
+   "proficient_from": null,
+   "reversed_numbering": null,
+   "coverage": 0.0,
+   "years_ok": null,
+   "years_out": null,
+   "cells_out": null,
+   "latest_year_ok": null,
+   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 6% of rows (a five-level state whose export carries four columns, usually)",
+   "combination_shares": {
+    "levels 3 and 4": 6.2,
+    "levels 2, 3 and 4": 0.6,
+    "levels 1 and 2 (1 the top)": 2.4,
+    "levels 1, 2 and 3 (1 the top)": 1.6
+   },
+   "cells": [],
+   "levels_as_measures": false
+  },
+  "poverty": {
+   "lim": {
+    "schools": 154,
+    "missing": 0,
+    "at_99_or_more": 0,
+    "above_100": 0,
+    "high_poverty_share": 33.1
+   },
+   "comparison": {
+    "schools": 3460,
+    "missing": 38,
+    "at_99_or_more": 74,
+    "above_100": 5,
+    "high_poverty_share": 24.4
+   }
+  },
+  "statewide_jumps": [
+   {
+    "subject": "ELA",
+    "from": 2024,
+    "to": 2025,
+    "from_mean": 36.1,
+    "to_mean": 51.0,
+    "change": 14.9
+   },
+   {
+    "subject": "Math",
+    "from": 2024,
+    "to": 2025,
+    "from_mean": 25.6,
+    "to_mean": 36.0,
+    "change": 10.4
+   }
+  ],
+  "sensitivity": {
+   "with": {
+    "y0": 2022,
+    "y1": 2025,
+    "lim_n": 105,
+    "comp_n": 3209,
+    "lim_change": 18.33,
+    "comp_change": 17.34,
+    "p": 0.18
+   },
+   "without": {
+    "y0": 2022,
+    "y1": 2025,
+    "lim_n": 89,
+    "comp_n": 3209,
+    "lim_change": 19.12,
+    "comp_change": 17.34,
+    "p": 0.025
+   },
+   "schools": 17
+  },
+  "subjects_by_keyword": [],
+  "subjects_excluded": []
+ },
+ "best_schools": {
+  "qualified": 17,
+  "in_the_process": 15,
+  "lapsed_on_the_list": 2,
+  "reviewed": 98,
+  "measures": 58,
+  "outcomes": 18,
+  "improved_every_year": 8,
+  "lapsed_longer_ago": 43
+ },
+ "best_schools_added": "2026-10-06"
 }

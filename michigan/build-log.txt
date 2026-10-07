@@ -2,40 +2,41 @@
 $ python3 /home/claude/sdf/Build/build_payload_core.py --state MI --core /home/claude/sdf/Core --out /home/claude/work1/MI --data /home/claude/work1/MI/data --extras mi_core_extras
 reading the core for Michigan ...
 [core] subjects: 186,446 school rows kept; dropped 121,352 rows with no school id and 5,170 with an id but no school record
-[core] Leader in Me roster: 1,844 rows
+[core] Leader in Me roster: 2,032 rows
 [core] comparison schools: 23,813 rows
+[core] comparison: 2 rows set aside for 1 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 198 rows
   newest-year like-for-like: 4 grade-test pairs not in the state's newest file; 1,225 rows at 226 schools left out of that year
   subject rows added from the state's own file: 16,277 (Michigan 2025-26 M-STEP and PSAT 8/9 results (MI School Data))
-  subject rows 202,723 · roster rows 1,844 (200 schools) · comparison rows 23,813 (3015 schools) · MRA surveys 198
+  subject rows 202,723 · roster rows 2,032 (201 schools) · comparison rows 23,811 (3015 schools) · MRA surveys 198
   identity: Carleton Elementary School (Detroit): 261200004880 -> 260110304880
-[core] Leader in Me roster: 56,181 rows
-  exits: 165 of 200 roster schools carry an expiration date; 97 past it by more than 30 days (exited), 5 inside the grace window, 63 in the future, 35 undated (29 with a start date)
+[core] Leader in Me roster: 59,452 rows
+  exits: 166 of 201 roster schools carry an expiration date; 97 past it by more than 30 days (exited), 7 inside the grace window, 62 in the future, 35 undated (29 with a start date)
   3,214 schools · 854 districts
 applying the cleaning rules ...
-  107,590 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
-  Leader in Me school-years counted: 1064 of 2000 reviewed
-  no start date: 10 schools · dated exits: 83 (school-years after an exit with rows: 244) · aggregate 'All grades' rows used 0, skipped 0
+  107,769 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 1144 of 2010 reviewed
+  no start date: 6 schools · dated exits: 83 (school-years after an exit with rows: 244) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 64.8% of rows in years and subjects whose levels add up)
   level values blanked on 10 year-subject cells that do not add up: 2015-16 Science, 2015-16 Social Studies, 2017-18 Social Studies, 2018-19 ELA, 2018-19 Math, 2018-19 Social Studies, 2021-22 ELA, 2021-22 Math ...
   proficiency = levels 3 and 4 on 64.3% of rows
 folding in Michigan's own measures (mi_core_extras) ...
-  school type from NCES: Title I on 3,107 schools (1,730 yes), charter 391, magnet 363, alternative 246; Title I published 2017-2022, carried forward after
-  funders: 73 Michigan schools carry a funding source (69 on the page; Kern 10, 7 on the page); latest non-blank year per school
+  school type from NCES: Title I on 3,111 schools (1,732 yes), charter 392, magnet 364, alternative 246; Title I published 2017-2022, carried forward after
+  funders: 73 Michigan schools carry a funding source (72 on the page; Kern 10, 10 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 133  by band {'Primary': {'pairs': 102, 'unmatched': 2}, 'Secondary': {'pairs': 31, 'unmatched': 0}}
+  pairs 142  by band {'Primary': {'pairs': 107, 'unmatched': 2}, 'Secondary': {'pairs': 35, 'unmatched': 0}}
   MRA: 185 surveys · 67 schools · 601 sentinel values · 10 shells
-  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 87, 'comp_n': 1639, 'lim_change': -0.62, 'comp_change': -0.42, 'p': 0.807} · without the 29 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 65, 'comp_n': 1639, 'lim_change': -0.1, 'comp_change': -0.42, 'p': 0.736}
-  roster: 87 counted, 97 exited, 6 not counted yet, 10 not counted
-best-performing schools: 22 of 99 counted schools, 52 measures in 10 outcomes
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 89, 'comp_n': 1640, 'lim_change': -0.63, 'comp_change': -0.42, 'p': 0.798} · without the 29 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 67, 'comp_n': 1640, 'lim_change': -0.12, 'comp_change': -0.42, 'p': 0.747}
+  roster: 90 counted, 97 exited, 8 not counted yet, 6 not counted
+best-performing schools: 23 of 102 counted schools, 52 measures in 10 outcomes
 
-wrote mi_payload.json  (56.0 MB, 107,590 rows) · page kind full (87 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'daf4896e4e0f'}
+wrote mi_payload.json  (56.1 MB, 107,769 rows) · page kind full (89 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py mi_payload.json MI_Dashboard.html MI_Methods.html
-payload 56.0 MB -> 3.78 MB gzip
-MI_Dashboard.html: 5235 KB
-MI_Methods.html: 51 KB
+payload 56.1 MB -> 3.79 MB gzip
+MI_Dashboard.html: 5258 KB
+MI_Methods.html: 53 KB
 
 $ python3 /home/claude/sdf/Build/verify_core.py --state MI --work /home/claude/work1/MI
 
@@ -56,12 +57,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': -0.1, 'PercentLevel2': -0.1, 'PercentLevel3': -0.1, 'PercentLevel4': -0.1, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [1 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [97 exited, 5 in grace, 63 future]
+ok   the exit rule's counts recompute from the roster  [97 exited, 7 in grace, 62 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [48 composite cells at 100, 2 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [1 collisions]
@@ -76,15 +77,18 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [10 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 28 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [28 Year 0 rows]
+ok   schools with no start date appear in neither group  [6 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [93 exited schools with counted years]
+ok   exited schools keep their true Leader in Me years  [95 exited schools with counted years]
 ok   the exit counts on the methods page match the rule  [97 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 97, 'counted': 87, 'not counted': 10, 'not counted yet': 6}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'exited': 97, 'counted': 90, 'not counted yet': 8, 'not counted': 6}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -92,32 +96,32 @@ ok   the poverty share rides on most rows for the look-alike caliper  [99%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [1370 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [1372 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [93,519 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [93,649 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
 ok   the levels at or above the standard count up, the levels below count down
 ok   the proficiency label names the levels it adds
-ok   years and subjects whose levels do not add up carry no level values  [10 cells set aside, 40,205 grade rows in them]
+ok   years and subjects whose levels do not add up carry no level values  [10 cells set aside, 40,275 grade rows in them]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [2,267 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [2,169 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [847 schools]
-ok   the school count never exceeds the band-slice count  [1726 schools vs 2055 band slices]
+ok   combined-grade schools appear in both bands  [848 schools]
+ok   the school count never exceeds the band-slice count  [1729 schools vs 2059 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline +0.039 vs payload +0.040 on 133 pairs]
-ok   the mean signed baseline gap is under one point  [+0.039]
+ok   the signed baseline gap recomputes to the payload's  [offline +0.028 vs payload +0.030 on 142 pairs]
+ok   the mean signed baseline gap is under one point  [+0.028]
 ok   the widest single baseline gap is inside the caliper's reach  [4.1 points]
-ok   the printed signed gap is not a negative zero  [0.04]
+ok   the printed signed gap is not a negative zero  [0.03]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
@@ -129,7 +133,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [1.2s]
+ok   load time is workable  [1.3s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -138,12 +142,12 @@ ok   the discipline card shows exactly when the payload carries a discipline tre
 ok   the incidents card shows exactly when the payload carries an incident trend  [payload has no incidents]
 ok   the state extras card shows exactly when the payload carries state measures  [no state files]
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.8057 scipy 0.8057 · window 2022-2026 · LiM n=87 mean -0.62 · comparison n=1639 mean -0.42]
-ok   the headline counts schools, not band slices  [page 1726 vs offline 1726 on 2022-2026]
-ok   the page's Leader in Me count is the builder's  [87 vs 87]
+ok   the headline p recomputes offline  [page 0.7971 scipy 0.7971 · window 2022-2026 · LiM n=89 mean -0.63 · comparison n=1640 mean -0.42]
+ok   the headline counts schools, not band slices  [page 1729 vs offline 1729 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [89 vs 89]
 ok   the district filter re-renders the headline  [In Farmington Public School District schools, between 2021-22 and 2025-26, Leader in Me sc]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [1578 of 3273 schools; In Michigan Title I schools, between 2021-22 and 2025-26, Leader in Me schools f]
+ok   choosing 'Title I schools' narrows the view and names it  [1581 of 3277 schools; In Michigan Title I schools, between 2021-22 and 2025-26, Leader in Me schools f]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Michigan schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025-26]
 ok   Title I status is known for most schools on the page  [94.9%]
@@ -158,11 +162,11 @@ ok   measure 'standard_score' either draws or says why
 ok   measure 'chronic_absent' either draws or says why
 ok   measure 'grad_rate' either draws or says why
 ok   the matched toggle re-renders the headline  [In Michigan schools (matched to similar schools only), between 2021-22 and 2025-26, Leader]
-ok   the matched view shrinks or equals the Leader in Me count  [68 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [72 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Farmington Public School District generates cards or says there is nothing to report  [5 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.8057148275796246, 'n1': 87, 'n2': 1639}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.797148811541063, 'n1': 89, 'n2': 1640}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -181,19 +185,19 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [5,001 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [161,246 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [158,109 bytes]
 ok   the pptx export is named for the state and chart  [MI_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Michigan_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [159,498 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [157,099 bytes]
 ok   the docx export is named for the state and chart  [MI_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Michigan_schools.docx]
-ok   the research pack downloads with its sections  [26,239 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'roster']]
+ok   the research pack downloads with its sections  [26,252 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'roster']]
 ok   the pack's Leader in Me count for the district is the page's  [3 vs 3]
 ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Michigan schools like Detroit Public Schools Community District’s, between 2021-22 and 2025-26, Leader in Me schools ]
-ok   the look-alike box reports both counts or says why not  [Schools like Detroit Public Schools Community District’s: 31 Leader in Me schools and 432 comparison schools look like Detroit Public Schools Community District]
+ok   the look-alike box reports both counts or says why not  [Schools like Detroit Public Schools Community District’s: 35 Leader in Me schools and 430 comparison schools look like Detroit Public Schools Community District]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.6933]
+ok   the look-alike headline p recomputes offline  [p=0.6796]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [127 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [131 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
 ok   choosing a grade re-renders the headline and names the grade  [In Michigan grade 4 results, between 2021-22 and 2025-26, Leader in Me schools fell 1.1% on Meeting ]
@@ -226,10 +230,10 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2026, no filters): Leader in Me -0.62 pts (n=87) vs comparison -0.42 pts (n=1639), p=0.8057 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me -0.63 pts (n=89) vs comparison -0.42 pts (n=1640), p=0.7971 -> not significant
 
 ==========================================================================
-170 of 170 checks pass
+173 of 173 checks pass
 ==========================================================================
 
 $ python3 /home/claude/sdf/Build/states/mi_core_verify.py --work /home/claude/work1/MI
@@ -243,13 +247,13 @@ ok   every prepared value is between 0 and 100
 ok   the working subject file carries 2025-26 rows, none twice  [16,277 rows in 2026]
 ok   every 2025-26 row in the working subject file is the prepared file's value  [16,277 of 16,277 found, largest difference 0.000]
 ok   the page runs to 2025-26  [years 2015-2026]
-ok   the payload carries 2025-26 reading and math rows  [ELA 2,412 rows (1,973 schools), math 2,385 rows (1,959 schools)]
-ok   the payload carries the prepared file's 2025-26 science and social studies rows  [Science 1,878 rows, Social Studies 1,785 rows]
+ok   the payload carries 2025-26 reading and math rows  [ELA 2,416 rows (1,976 schools), math 2,389 rows (1,962 schools)]
+ok   the payload carries the prepared file's 2025-26 science and social studies rows  [Science 1,880 rows, Social Studies 1,787 rows]
 ok   no 2025-26 school-band-subject row appears twice in the payload
 ok   every 2025-26 payload value is between 0 and 100
-ok   the grade table carries 2025-26 reading and math, no school-grade-subject twice  [15,635 rows]
+ok   the grade table carries 2025-26 reading and math, no school-grade-subject twice  [15,662 rows]
 ok   every 2025-26 grade-table value is between 0 and 100
-ok   the 2025-26 grade table reads back to the prepared file, to the tenth  [15,635 school-grade-subject values, largest difference 0.05]
+ok   the 2025-26 grade table reads back to the prepared file, to the tenth  [15,662 school-grade-subject values, largest difference 0.05]
 ok   the methods page names Michigan's 2025-26 source and its note
 ok   2025-26 is kept out of the combined figure only where the module declares it  [none]
 

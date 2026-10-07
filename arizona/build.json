@@ -2,61 +2,61 @@
  "state": "AZ",
  "name": "Arizona",
  "folder": "arizona",
- "built": "2026-09-08",
- "seconds": 102,
+ "built": "2026-10-06",
+ "seconds": 77,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 68,
- "schools": 2044,
+ "lim_headline_n": 77,
+ "schools": 2046,
  "years": [
   2015,
   2025
  ],
- "lim_roster_schools": 122,
+ "lim_roster_schools": 124,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-04"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/AZ/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/AZ/data/Subjects_Tests_FINAL (8).csv",
    "rows": 151415
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/AZ/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 1039
+   "path": "/home/claude/work1/AZ/data/LIM Schools (Current_Active) (11).csv",
+   "rows": 1043
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/AZ/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 15087
+   "path": "/home/claude/work1/AZ/data/All Other Schools (Non-LiM & Exited).csv",
+   "rows": 15083
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/AZ/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/AZ/data/All MRA Surveys.csv",
    "rows": 126
   }
  },
  "state_files": [],
  "extras_module": null,
  "verified": true,
- "dashboard_bytes": 1817184,
+ "dashboard_bytes": 1831785,
  "latest_results": {
   "year": 2025,
   "label": "2024-25",
@@ -69,6 +69,64 @@
   "missing": [],
   "rows_share_of_prior": 0.99,
   "prior_year": 2024
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5989,
+    "2016": 7272,
+    "2017": 7408,
+    "2018": 7546,
+    "2019": 6580,
+    "2022": 5999,
+    "2023": 8222,
+    "2024": 5436,
+    "2025": 5396
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5283,
+    "2018": 4034
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5293,
+    "2016": 6492,
+    "2017": 6656,
+    "2018": 6787,
+    "2019": 5861,
+    "2022": 5277,
+    "2023": 7438,
+    "2024": 4811,
+    "2025": 4796
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 1220,
+    "2017": 1295,
+    "2018": 1405,
+    "2019": 1000,
+    "2022": 1135,
+    "2023": 838,
+    "2024": 561,
+    "2025": 529
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -428,18 +486,18 @@
   },
   "poverty": {
    "lim": {
-    "schools": 122,
+    "schools": 124,
     "missing": 10,
     "at_99_or_more": 0,
     "above_100": 0,
-    "high_poverty_share": 26.2
+    "high_poverty_share": 25.8
    },
    "comparison": {
-    "schools": 1973,
+    "schools": 1971,
     "missing": 213,
     "at_99_or_more": 117,
     "above_100": 107,
-    "high_poverty_share": 27.6
+    "high_poverty_share": 27.7
    }
   },
   "statewide_jumps": [],
@@ -447,20 +505,20 @@
    "with": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 68,
-    "comp_n": 1202,
-    "lim_change": 2.35,
-    "comp_change": 0.88,
-    "p": 0.075
+    "lim_n": 77,
+    "comp_n": 1195,
+    "lim_change": 2.68,
+    "comp_change": 0.85,
+    "p": 0.021
    },
    "without": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 61,
-    "comp_n": 1202,
-    "lim_change": 2.3,
-    "comp_change": 0.88,
-    "p": 0.109
+    "lim_n": 70,
+    "comp_n": 1195,
+    "lim_change": 2.66,
+    "comp_change": 0.85,
+    "p": 0.031
    },
    "schools": 10
   },
@@ -471,69 +529,11 @@
   "qualified": 2,
   "in_the_process": 2,
   "lapsed_on_the_list": 0,
-  "reviewed": 71,
+  "reviewed": 80,
   "measures": 45,
   "outcomes": 8,
   "improved_every_year": 1,
-  "lapsed_longer_ago": 25
+  "lapsed_longer_ago": 26
  },
- "best_schools_added": "2026-09-10",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Percent meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5979,
-    "2016": 7262,
-    "2017": 7398,
-    "2018": 7536,
-    "2019": 6570,
-    "2022": 5991,
-    "2023": 8213,
-    "2024": 5427,
-    "2025": 5388
-   }
-  },
-  "percent_below": {
-   "label": "Percent in the lowest level",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5274,
-    "2018": 4028
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5283,
-    "2016": 6482,
-    "2017": 6646,
-    "2018": 6777,
-    "2019": 5851,
-    "2022": 5269,
-    "2023": 7429,
-    "2024": 4802,
-    "2025": 4788
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2016": 1220,
-    "2017": 1295,
-    "2018": 1405,
-    "2019": 1000,
-    "2022": 1135,
-    "2023": 838,
-    "2024": 561,
-    "2025": 529
-   }
-  }
- }
+ "best_schools_added": "2026-10-06"
 }

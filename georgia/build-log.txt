@@ -1,39 +1,41 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state GA --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/GA --data /home/claude/sdf/Build/work/GA/data --extras ga_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state GA --core /home/claude/sdf/Core --out /home/claude/work1/GA --data /home/claude/work1/GA/data --extras ga_core_extras
 reading the core for Georgia ...
 [core] subjects: 178,490 school rows kept; dropped 45,075 rows with no school id and 1,185 with an id but no school record
-[core] Leader in Me roster: 3,059 rows
+[core] Leader in Me roster: 3,499 rows
 [core] comparison schools: 18,158 rows
+[core] comparison: 90 rows set aside for 45 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 405 rows
   MRA: 203 surveys from the state's own pull (All MRA Surveys 2026.csv); 200 new after de-duplication
-  subject rows added from the state's own file: 5,018 (Georgia 2025-26 mathematics (GaDOE Milestones dashboard))
-  subject rows 183,508 · roster rows 3,059 (319 schools) · comparison rows 18,158 (2030 schools) · MRA surveys 605
+  newest-year like-for-like: 13 grade-test pairs not in the state's newest file; 1,140 rows at 399 schools left out of that year
+  subject rows added from the state's own file: 3,878 (Georgia 2025-26 mathematics (GaDOE Milestones dashboard))
+  subject rows 182,368 · roster rows 3,499 (365 schools) · comparison rows 18,068 (2028 schools) · MRA surveys 605
   identity: Main Elementary School (Rome): 130444004356 -> 130444001604
-[core] Leader in Me roster: 56,181 rows
-  exits: 295 of 319 roster schools carry an expiration date; 43 past it by more than 30 days (exited), 2 inside the grace window, 250 in the future, 24 undated (19 with a start date)
-  2,348 schools · 237 districts
+[core] Leader in Me roster: 59,452 rows
+  exits: 335 of 365 roster schools carry an expiration date; 44 past it by more than 30 days (exited), 0 inside the grace window, 291 in the future, 30 undated (20 with a start date)
+  2,349 schools · 238 districts
 applying the cleaning rules ...
-  Math 2026: 1,746 rows kept out of the combined figure (2025-26 reading is not yet published, so the combined figure ends at 2024-25)
-  80,687 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
-  Leader in Me school-years counted: 950 of 3190 reviewed
-  no start date: 28 schools · dated exits: 32 (school-years after an exit with rows: 94) · aggregate 'All grades' rows used 0, skipped 0
+  Math 2026: 1,365 rows kept out of the combined figure (2025-26 reading is not yet published, so the combined figure ends at 2024-25)
+  80,797 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 1003 of 3650 reviewed
+  no start date: 16 schools · dated exits: 32 (school-years after an exit with rows: 91) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 100.0% of rows in years and subjects whose levels add up)
   proficiency = levels 3 and 4 on 100.0% of rows
 folding in Georgia's own measures (ga_core_extras) ...
   discipline bundle unpacked: ['DISCIPLINE_SCHOOL_CHARACTERISTICS.csv', 'DISCIPLINE_SUBGROUP_ACTION_PERCENTS_2014_thru_2017.csv', 'DISCIPLINE_SUBGROUP_ACTION_PERCENTS_2018_thru_2021.csv', 'DISCIPLINE_SUBGROUP_ACTION_PERCENTS_2022_thru_2025.csv', 'DISCIPLINE_SUBGROUP_PERCENTS.csv']
   $ python3 ga_crosswalk.py
-        no match                   203
-        stemmed name + district    9
         ambiguous, dropped         4
-      Leader in Me schools      319  reached   314 (98.4%)
-      Leader in Me schools NOT reached (5) - named, not just counted:
+      Leader in Me schools      365  reached   358 (98.1%)
+      Leader in Me schools NOT reached (7) - named, not just counted:
           130012002290  Centennial Place Academy (Charter)  (Atlanta Public Schools)
           130021002347  Oak Hill Middle School  (Baldwin County)
           130042004198  Martin Luther King Junior Elementary School  (Bibb County)
           130228000217  Conley Hills Elementary School  (Fulton County)
           130444001604  Main Elementary School  (Rome City)
-      independent value check: 201 school-years where DOMO and GaDOE both publish a dropout rate -> 94.5% agree within 0.5 point, median difference 0.00
-      wrote ga_crosswalk.csv (2256 rows)
+          130486001658  Terrell High School  (Terrell County)
+          130486003735  Terrell Middle School  (Terrell County)
+      independent value check: 298 school-years where DOMO and GaDOE both publish a dropout rate -> 95.0% agree within 0.5 point, median difference 0.00
+      wrote ga_crosswalk.csv (2257 rows)
   $ python3 ga_discipline.py
     
     -- reconciliation check: do the band splits rebuild the school rate? --
@@ -50,9 +52,9 @@ folding in Georgia's own measures (ga_core_extras) ...
   $ python3 -c import ga_discipline as g; p=g.build('fine'); keep=['year','ga_school_id','district','school','band','charter','grades_served','enrollment','band_enrollment','single_band','band_pct_iss','band_pct_oss','band_pct_expelled','pbis','small_band']; p[keep].to_csv('ga_discipline_by_fine_band.csv', index=False); print('fine rows', len(p))
     fine rows 29975
   $ python3 ga_extras.py
-      lexile_rows                12144
-      lexile_unmatched           403
-      schoolgrades_unmatched     968
+      lexile_rows                12145
+      lexile_unmatched           401
+      schoolgrades_unmatched     967
       values suppressed as sentinels (TFS / NA / blank), kept NULL not zero:
         dropout                  5957
         lexile                   391
@@ -61,40 +63,41 @@ folding in Georgia's own measures (ga_core_extras) ...
       college_going  years [2019, 2020, 2021, 2022, 2023, 2024, 2025]
       dropout        years [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
       lexile         years [2018, 2019, 2021, 2022, 2023, 2024, 2025]
-      wrote ga_extras.csv (16393 school-years)
-  discipline: 2,497 schools in GaDOE's files, 2,213 reached by the crosswalk
+      wrote ga_extras.csv (16394 school-years)
+  discipline: 2,497 schools in GaDOE's files, 2,214 reached by the crosswalk
   the September 4 families ...
     GSHS: 36,068 item blocks from 904 reports, from the cache (files unchanged)
-    survey: 677 of 677 school reports joined to a roster id (314 of 319 Leader in Me schools carry a report); the crosswalk agrees on 652, sees a renamed school on 2, has no entry for 15, and points at another system for 8 (set aside)
+    survey: 677 of 677 school reports joined to a roster id (314 of 365 Leader in Me schools carry a report); the crosswalk agrees on 652, sees a renamed school on 2, has no entry for 15, and points at another system for 8 (set aside)
     attendance: 8 files, 2017-18 to 2024-25, 18,300 school rows
-    attendance: 2,235 of 2,411 schools reached; the state's chronic absence against DOMO's on 12,238 school-years: correlation 0.998, median difference 0.2 pts -> the same measure; fills 519 school-years DOMO lacks; more than 15 days absent against DOMO's chronic absence: correlation 0.959, median difference 1.4 pts (a different cut)
+    attendance: 2,236 of 2,411 schools reached; the state's chronic absence against DOMO's on 12,326 school-years: correlation 0.998, median difference 0.2 pts -> the same measure; fills 519 school-years DOMO lacks; more than 15 days absent against DOMO's chronic absence: correlation 0.96, median difference 1.4 pts (a different cut)
     CCR: HOPE 11 files, ACT 11, SAT 12 (10 new-format, 2 old-format), AP 11; 4,860 school-years
     postsecondary: C11 classes ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'], C12 classes ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']; 4,175 school-classes
     graduate outcomes: 7,555 school-classes (2007 to 2024 for year-1 enrollment)
-    college enrollment: the dashboard's year-one figure against the school grades column on 1,732 school-years, median difference 0.42 pts, 73.6% within a point -> the same measure; college-going extended by 1668 school-years (2015, 2016, 2017, 2018, 2019); C11 (16 months) runs 4.51 pts above year-one on 3,295 school-classes, a wider window kept to the pack
+    college enrollment: the dashboard's year-one figure against the school grades column on 1,732 school-years, median difference 0.42 pts, 73.6% within a point -> the same measure; college-going extended by 1673 school-years (2015, 2016, 2017, 2018, 2019); C11 (16 months) runs 4.51 pts above year-one on 3,295 school-classes, a wider window kept to the pack
     school grades zip: 7 members; top-level copies identical: {'school_grades_data.csv': True, 'school_grades_literacy_details.csv': True}; CCRPI components on 13,639 school-years
-  rows gain: absent more than 15 days on 13,557 school-year-bands, HOPE eligibility on 3,661; chronic absence filled on 519 school-years; college-going extended on 1,668
-  rows gain: suspension on 19,358 school-year-bands, college-going on 3,388, absent more than 15 days on 13,557, HOPE eligibility on 3,661
-  per-school report-card records for the pack: 25,366 (235,058 values from the September 4 families)
-  Georgia's measures on 20,041 school-year-bands: 19,261 joined to existing rows, 780 school-year-bands added with no test rows of their own
+  rows gain: absent more than 15 days on 13,645 school-year-bands, HOPE eligibility on 3,671; chronic absence filled on 519 school-years; college-going extended on 1,673
+  rows gain: suspension on 19,494 school-year-bands, college-going on 3,397, absent more than 15 days on 13,645, HOPE eligibility on 3,671
+  per-school report-card records for the pack: 25,549 (236,731 values from the September 4 families)
+  Georgia's measures on 20,177 school-year-bands: 19,401 joined to existing rows, 776 school-year-bands added with no test rows of their own
   core measures filled from Georgia's own files where DOMO had none: chronic_absent 868 rows
-  school type from NCES: Title I on 2,247 schools (1,601 yes), charter 123, magnet 13, alternative 19; Title I published 2017-2022, carried forward after
-  funders: 213 Georgia schools carry a funding source (192 on the page; Kern 172, 152 on the page); latest non-blank year per school
+  school type from NCES: Title I on 2,260 schools (1,612 yes), charter 124, magnet 15, alternative 19; Title I published 2017-2022, carried forward after
+  funders: 213 Georgia schools carry a funding source (212 on the page; Kern 172, 172 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 85  by band {'Primary': {'pairs': 64, 'unmatched': 3}, 'Secondary': {'pairs': 21, 'unmatched': 2}}
+  pairs 89  by band {'Primary': {'pairs': 66, 'unmatched': 3}, 'Secondary': {'pairs': 23, 'unmatched': 2}}
   MRA: 575 surveys · 252 schools · 1587 sentinel values · 25 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 238, 'comp_n': 1808, 'lim_change': 3.12, 'comp_change': 3.39, 'p': 0.559} · without the 19 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 220, 'comp_n': 1808, 'lim_change': 3.02, 'comp_change': 3.39, 'p': 0.417}
-  roster: 241 counted, 42 exited, 8 not counted yet, 28 not counted
+  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 241, 'comp_n': 1818, 'lim_change': 3.18, 'comp_change': 3.42, 'p': 0.593} · without the 20 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 223, 'comp_n': 1817, 'lim_change': 3.08, 'comp_change': 3.43, 'p': 0.446}
+  roster: 247 counted, 44 exited, 58 not counted yet, 16 not counted
+best-performing schools: 29 of 254 counted schools, 69 measures in 26 outcomes
 
-wrote ga_payload.json  (58.5 MB, 81,467 rows) · page kind full (238 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote ga_payload.json  (58.8 MB, 81,573 rows) · page kind full (241 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py ga_payload.json GA_Dashboard.html GA_Methods.html
-payload 58.5 MB -> 5.14 MB gzip
-GA_Dashboard.html: 6976 KB
-GA_Methods.html: 64 KB
+payload 58.8 MB -> 5.17 MB gzip
+GA_Dashboard.html: 7049 KB
+GA_Methods.html: 78 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state GA --work /home/claude/sdf/Build/work/GA
+$ python3 /home/claude/sdf/Build/verify_core.py --state GA --work /home/claude/work1/GA
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -113,12 +116,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [43 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
-ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [43 exited, 2 in grace, 250 future]
+ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [1 stale]
+ok   the exit rule's counts recompute from the roster  [44 exited, 0 in grace, 291 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [117 composite cells at 100, 6 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [1 collisions]
@@ -134,15 +137,18 @@ ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 note the headline window settles on 2022-2025 (the window's edges are 2022-2026)
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [28 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 10 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [10 Year 0 rows]
+ok   schools with no start date appear in neither group  [16 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [35 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [43 exited (0 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [41 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [44 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 241, 'exited': 42, 'not counted': 28, 'not counted yet': 8}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 247, 'not counted yet': 58, 'exited': 44, 'not counted': 16}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -152,7 +158,7 @@ ok   the composite flag keeps science, social studies and writing out of the no-
 ok   the grade table lists tested grades in order and every school in it has a name
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [109,989 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [109,661 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
@@ -162,18 +168,18 @@ ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [7,490 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [9,372 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [169 schools]
-ok   the school count never exceeds the band-slice count  [2046 schools vs 2140 band slices]
+ok   the school count never exceeds the band-slice count  [2059 schools vs 2153 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline +0.058 vs payload +0.060 on 85 pairs]
-ok   the mean signed baseline gap is under one point  [+0.058]
+ok   the signed baseline gap recomputes to the payload's  [offline +0.049 vs payload +0.050 on 89 pairs]
+ok   the mean signed baseline gap is under one point  [+0.049]
 ok   the widest single baseline gap is inside the caliper's reach  [3.4 points]
-ok   the printed signed gap is not a negative zero  [0.06]
+ok   the printed signed gap is not a negative zero  [0.05]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
@@ -185,7 +191,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [3.8s]
+ok   load time is workable  [1.7s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -196,12 +202,12 @@ ok   the state extras card shows exactly when the payload carries state measures
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the discipline card carries both bands in the latest year
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.5600 scipy 0.5600 · window 2022-2025 · LiM n=238 mean +3.12 · comparison n=1808 mean +3.39]
-ok   the headline counts schools, not band slices  [page 2046 vs offline 2046 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [238 vs 238]
+ok   the headline p recomputes offline  [page 0.5943 scipy 0.5943 · window 2022-2025 · LiM n=241 mean +3.18 · comparison n=1818 mean +3.42]
+ok   the headline counts schools, not band slices  [page 2059 vs offline 2059 on 2022-2025]
+ok   the page's Leader in Me count is the builder's  [241 vs 241]
 ok   the district filter re-renders the headline  [In Cobb County schools, between 2021-22 and 2024-25, Leader in Me schools rose 1.4% on Mee]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [1519 of 2320 schools; In Georgia Title I schools, between 2021-22 and 2024-25, Leader in Me schools ro]
+ok   choosing 'Title I schools' narrows the view and names it  [1533 of 2333 schools; In Georgia Title I schools, between 2021-22 and 2024-25, Leader in Me schools ro]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Georgia schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2024-25,]
 ok   Title I status is known for most schools on the page  [96.9%]
@@ -221,11 +227,11 @@ ok   measure 'college_going' either draws or says why
 ok   measure 'absent_15plus' either draws or says why
 ok   measure 'hope_eligible' either draws or says why
 ok   the matched toggle re-renders the headline  [In Georgia schools (matched to similar schools only), between 2021-22 and 2024-25, Leader ]
-ok   the matched view shrinks or equals the Leader in Me count  [80 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [84 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Cobb County generates cards or says there is nothing to report  [14 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5600223718850958, 'n1': 238, 'n2': 1808}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5942739250859045, 'n1': 241, 'n2': 1818}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -244,17 +250,17 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [16,642 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [163,366 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [163,643 bytes]
 ok   the pptx export is named for the state and chart  [GA_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Georgia_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [163,491 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [164,505 bytes]
 ok   the docx export is named for the state and chart  [GA_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Georgia_schools.docx]
-ok   the research pack downloads with its sections  [78,849 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
+ok   the research pack downloads with its sections  [78,991 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
 ok   the pack's Leader in Me count for the district is the page's  [10 vs 10]
 ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Georgia schools like Gwinnett County’s, between 2021-22 and 2024-25, Leader in Me schools rose 0.3% on Meeting or exc]
-ok   the look-alike box reports both counts or says why not  [Schools like Gwinnett County’s: 33 Leader in Me schools and 217 comparison schools look like Gwinnett County’s 139 schools with results in these years (each mat]
+ok   the look-alike box reports both counts or says why not  [Schools like Gwinnett County’s: 33 Leader in Me schools and 218 comparison schools look like Gwinnett County’s 139 schools with results in these years (each mat]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.0664]
+ok   the look-alike headline p recomputes offline  [p=0.0727]
 ok   the anchor's own schools are never inside the look-alike groups
 ok   the school list downloads with one row per school  [173 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
@@ -289,25 +295,25 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +3.12 pts (n=238) vs comparison +3.39 pts (n=1808), p=0.5600 -> not significant
+  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +3.18 pts (n=241) vs comparison +3.42 pts (n=1818), p=0.5943 -> not significant
 
 ==========================================================================
-175 of 175 checks pass
+178 of 178 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/ga_core_verify.py --work /home/claude/sdf/Build/work/GA
+$ python3 /home/claude/sdf/Build/states/ga_core_verify.py --work /home/claude/work1/GA
 
 Georgia's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [314 of 319]
-ok   the crosswalk's independent value check holds (DOMO dropout vs GaDOE dropout)  [94.5% within half a point]
+ok   the crosswalk reaches nearly every Leader in Me school  [358 of 365]
+ok   the crosswalk's independent value check holds (DOMO dropout vs GaDOE dropout)  [95.0% within half a point]
 ok   the band split rebuilds the reported school rate on combined schools  [114 schools, median difference 0.000 pts]
-ok   single-band schools carry GaDOE's own suspension rate in the rows  [1984 of 1987 agree]
-ok   college-going carries no 2024-25 values (a different measure, excluded by name)  [14,147 rows, years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024]]
+ok   single-band schools carry GaDOE's own suspension rate in the rows  [1999 of 2002 agree]
+ok   college-going carries no 2024-25 values (a different measure, excluded by name)  [14,186 rows, years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024]]
 ok   college-going sits on secondary rows only
-ok   Dropout rate (7-12): the Leader in Me point in 2025 rests on at least three counted schools  [n=36]
-ok   Reading at or above grade midpoint: the Leader in Me point in 2025 rests on at least three counted schools  [n=208]
-ok   CCRPI score: the Leader in Me point in 2025 rests on at least three counted schools  [n=239]
+ok   Dropout rate (7-12): the Leader in Me point in 2025 rests on at least three counted schools  [n=37]
+ok   Reading at or above grade midpoint: the Leader in Me point in 2025 rests on at least three counted schools  [n=211]
+ok   CCRPI score: the Leader in Me point in 2025 rests on at least three counted schools  [n=242]
 ok   School climate stars: the Leader in Me point in 2024 rests on at least three counted schools  [n=110]
 ok   Grades 3-5: "I feel safe at school": the Leader in Me point in 2024 rests on at least three counted schools  [n=82]
 ok   Grades 3-5: "There is an adult at my school who will help me…": the Leader in Me point in 2024 rests on at least three counted schools  [n=82]
@@ -319,7 +325,7 @@ ok   Grades 6-12: "Students at my school treat each other with respect": the Lea
 ok   Grades 6-12: "I have felt unsafe at school or on my way…": the Leader in Me point in 2024 rests on at least three counted schools  [n=30]
 ok   the discipline card carries every year in GaDOE's file after the closures are shaded  [2014 to 2025]
 ok   the district discipline frame uses the payload's own district labels  [0 unmatched labels]
-ok   the research pack's per-school Georgia values are keyed to schools on the page  [25,366 records]
+ok   the research pack's per-school Georgia values are keyed to schools on the page  [25,549 records]
 ok   the MRA section carries the 2025-26 surveys from Georgia's own pull  [years [2022, 2023, 2024, 2025, 2026]]
 ok   the eight Georgia measures of the August build are on the page
 
@@ -327,7 +333,7 @@ The September 4 families
 --------------------------------------------------------------------------
 ok   every GSHS report in the folder was read except the spring 2014 pre-2.0 report  [904 of 905; set aside: ['2014/785 - Main Elementary School.pdf: the spring 2014 report is the pre-2.0 survey in a different layout, not read']]
 ok   every GSHS school report joined to a roster id through the manifest  [677 of 677]
-ok   the survey reaches nearly every Leader in Me school  [314 of 319 (no report at all: ['Big A Elementary School'])]
+ok   the survey reaches nearly every Leader in Me school with a counted year  [284 of 288 counted schools; 46 roster schools with no counted year yet have no report (reports to pull for their baselines); all roster schools: 314 of 365]
 ok   reports whose roster id belongs to a same-named school in another system are set aside, named, and absent from the pack  [8 set aside; crosswalk agrees on 652, renamed 2, no entry 15]
 ok   no survey value sits in 2014 or earlier anywhere  [survey years [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]]
 ok   the card carries the survey chips and stays under the dozen-chip ceiling  [8 survey chips, 12 chips in all]
@@ -345,26 +351,26 @@ ok   a school's 'I feel safe at school' share rebuilds from its own workbook and
 ok   the card's 2024 state figure for 'I feel safe at school' rebuilds from the state report  [state report 77.18% vs card 77.18]
 ok   the within-school baseline note stands on real counts (three or more schools on most card items)  [schools per item [46, 46, 46, 46, 23, 23, 23, 23]]
 ok   the closure-year survey reports are counted and kept off the card
-ok   the attendance file reaches nearly every school and Leader in Me school  [2,235 of 2,411; 314 Leader in Me]
-ok   the state's chronic absence matches DOMO's on the same school-years before it fills anything  [corr 0.998, median |diff| 0.2 on 12,238]
-ok   the chronic-absence fill never overwrote a DOMO value  [12251 of 12,251 DOMO school-years unchanged]
+ok   the attendance file reaches nearly every school and Leader in Me school  [2,236 of 2,411; 358 Leader in Me]
+ok   the state's chronic absence matches DOMO's on the same school-years before it fills anything  [corr 0.998, median |diff| 0.2 on 12,326]
+ok   the chronic-absence fill never overwrote a DOMO value  [12341 of 12,341 DOMO school-years unchanged]
 ok   the chronic-absence fill landed on every row DOMO lacked  [454 of 454 filled school-years with rows carry the state's value (65 had no row to land on)]
-ok   absent more than 15 days sits on the rows in the attendance years only, closures out  [50,342 rows, years [2018, 2019, 2022, 2023, 2024, 2025]]
+ok   absent more than 15 days sits on the rows in the attendance years only, closures out  [50,684 rows, years [2018, 2019, 2022, 2023, 2024, 2025]]
 ok   absent more than 15 days is carried on both bands of a combined school
 ok   the rows carry GOSA's own more-than-15-days share (five schools reconciled to the file)  [5 of 5 agree]
-ok   HOPE eligibility sits on secondary rows only, closures out  [15,404 rows, years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
+ok   HOPE eligibility sits on secondary rows only, closures out  [15,447 rows, years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   the rows carry GOSA's own HOPE share (five schools reconciled to the file)  [5 of 5 agree]
 ok   HOPE's published share rebuilds from the counts in every file  [11 files]
 ok   the dashboard's year-one enrollment is the school grades college-going figure on the settled classes  [median |diff| 0.23 on classes [2019, 2022, 2023]]
 ok   college-going now reaches the classes of 2015 to 2018 and still carries no 2024-25 values  [years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024]]
-ok   where the school grades file carries college-going, its value stands on the rows  [1720 of 1720]
+ok   where the school grades file carries college-going, its value stands on the rows  [1724 of 1724]
 ok   the extension years carry the dashboard's own year-one figure (five schools reconciled)  [5 of 5 agree]
 ok   the SAT's pre-2016 format sits only in 2014-15 and 2015-16 and under its own name  [old-format years [2015, 2016], new-format 2016-2025]
 ok   the ACT, SAT, AP, C11 and C12 stay off the rows and the card
 ok   the pack carries the new families for schools on the page
 ok   every pack key carries a label
 ok   the pack's published section carries the state report's survey figures and the state attendance row  [6 state rows, 1277 rows in all]
-ok   the district codes the pack maps carry published rows  [223 districts mapped]
+ok   the district codes the pack maps carry published rows  [224 districts mapped]
 ok   school-years that two state schools would both feed (a crosswalk collision) are set aside and named  [attendance: 51 school-years on 8 ids; grades_zip: 41 school-years on 8 ids]
 ok   the school grades zip was checked against the top-level copies
 ok   the ten Georgia measures are on the page

@@ -2,17 +2,17 @@
  "state": "NV",
  "name": "Nevada",
  "folder": "nevada",
- "built": "2026-10-01",
- "seconds": 88,
+ "built": "2026-10-06",
+ "seconds": 99,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 59,
- "schools": 691,
+ "lim_headline_n": 62,
+ "schools": 695,
  "years": [
   2015,
   2026
  ],
- "lim_roster_schools": 101,
+ "lim_roster_schools": 108,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,11 +42,11 @@
   },
   "roster": {
    "path": "/home/claude/work1/NV/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 785
+   "rows": 892
   },
   "comparison": {
    "path": "/home/claude/work1/NV/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 4419
+   "rows": 4405
   },
   "mra": {
    "path": "/home/claude/work1/NV/data/All MRA Surveys.csv",
@@ -61,7 +61,7 @@
  ],
  "extras_module": "nv_core_extras",
  "verified": true,
- "dashboard_bytes": 1059587,
+ "dashboard_bytes": 1077621,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -74,6 +74,326 @@
   "missing": [],
   "rows_share_of_prior": 1.05,
   "prior_year": 2025
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Percent meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 441,
+    "2016": 1505,
+    "2017": 1919,
+    "2018": 1560,
+    "2019": 2127,
+    "2022": 1718,
+    "2023": 1698,
+    "2024": 1631,
+    "2025": 1647,
+    "2026": 1730
+   }
+  },
+  "percent_below": {
+   "label": "Percent in the lowest level",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 437,
+    "2016": 1505,
+    "2017": 1076,
+    "2018": 1560,
+    "2019": 2127,
+    "2022": 546,
+    "2023": 416,
+    "2024": 908
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 438,
+    "2016": 1377,
+    "2017": 1793,
+    "2018": 1447,
+    "2019": 1994,
+    "2022": 1682,
+    "2023": 1672,
+    "2024": 1608,
+    "2025": 1627
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2019": 1787,
+    "2022": 1664,
+    "2023": 1676,
+    "2024": 1597,
+    "2025": 1603
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2016": 33,
+    "2017": 256,
+    "2018": 99,
+    "2019": 258,
+    "2022": 215,
+    "2023": 203,
+    "2024": 236
+   }
+  },
+  "nspf_index": {
+   "label": "NSPF index score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 1529,
+    "2018": 1537,
+    "2019": 1989,
+    "2022": 1770,
+    "2023": 1758,
+    "2024": 1706,
+    "2025": 1721
+   }
+  },
+  "nspf_4plus": {
+   "label": "Schools rated four or five stars",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "nspf_stars": {
+   "label": "Mean star rating (1-5)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "agp_ela": {
+   "label": "Students meeting their growth target in ELA",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "agp_math": {
+   "label": "Students meeting their growth target in math",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "nspf_chronic": {
+   "label": "Chronic absenteeism (state framework)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "nspf_grad": {
+   "label": "Four-year graduation rate (class year)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2017": 1,
+    "2018": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 2
+   }
+  },
+  "nspf_rating": {
+   "label": "NSPF star rating by level (ES elementary, MS middle, HS high; 'Not rated' where the state issued no star)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 590,
+    "2018": 625,
+    "2019": 633,
+    "2022": 661,
+    "2023": 668,
+    "2024": 672,
+    "2025": 671
+   }
+  },
+  "nspf_index_hs": {
+   "label": "NSPF index score as published, high level (rated or not; 2016-17 high-school scores are a different framework)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 140,
+    "2018": 144,
+    "2019": 144,
+    "2022": 151,
+    "2023": 155,
+    "2024": 156,
+    "2025": 154
+   }
+  },
+  "nspf_designation": {
+   "label": "Federal improvement designation that year (CSI, TSI, ATSI, or none)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 590,
+    "2018": 625,
+    "2019": 633,
+    "2022": 661,
+    "2023": 668,
+    "2024": 672,
+    "2025": 671
+   }
+  },
+  "advanced_diploma": {
+   "label": "Advanced diploma share (%), high-school level, as the file for that school year publishes it",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 108,
+    "2019": 113,
+    "2022": 124,
+    "2023": 127,
+    "2024": 127,
+    "2025": 128
+   }
+  },
+  "ccr_completion": {
+   "label": "College and career readiness completion (%), high-school level, as the file for that school year publishes it",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 92,
+    "2019": 100,
+    "2022": 110,
+    "2023": 109,
+    "2024": 107,
+    "2025": 105
+   }
+  },
+  "nspf_grad5": {
+   "label": "Five-year cohort graduation rate (%) from the framework, on the class's own year",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2016": 103,
+    "2017": 99,
+    "2018": 90,
+    "2022": 89,
+    "2023": 87,
+    "2024": 81
+   }
+  },
+  "credit_9th": {
+   "label": "Ninth-grade credit sufficiency (%), high-school level",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 121,
+    "2018": 128,
+    "2019": 118,
+    "2022": 121,
+    "2023": 120,
+    "2024": 121,
+    "2025": 123
+   }
+  },
+  "nspf_index_es": {
+   "label": "NSPF index score as published, elementary level (rated or not; see nspf_rating)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 364,
+    "2018": 391,
+    "2019": 398,
+    "2022": 419,
+    "2023": 421,
+    "2024": 423,
+    "2025": 423
+   }
+  },
+  "nspf_index_ms": {
+   "label": "NSPF index score as published, middle level (rated or not; see nspf_rating)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 146,
+    "2018": 161,
+    "2019": 169,
+    "2022": 179,
+    "2023": 180,
+    "2024": 182,
+    "2025": 180
+   }
+  },
+  "credit_8th": {
+   "label": "Eighth-grade credit requirements met (%) (NAC 389.445), middle level",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 104,
+    "2018": 107,
+    "2019": 109,
+    "2022": 132,
+    "2023": 114,
+    "2024": 131,
+    "2025": 124
+   }
+  },
+  "ccr_participation": {
+   "label": "College and career readiness participation (%), high-school level, as the file for that school year publishes it",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 100,
+    "2019": 108,
+    "2022": 112,
+    "2023": 111,
+    "2024": 107,
+    "2025": 112
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -450,18 +770,18 @@
   },
   "poverty": {
    "lim": {
-    "schools": 101,
+    "schools": 108,
     "missing": 0,
-    "at_99_or_more": 75,
+    "at_99_or_more": 79,
     "above_100": 0,
-    "high_poverty_share": 74.3
+    "high_poverty_share": 73.1
    },
    "comparison": {
-    "schools": 580,
+    "schools": 573,
     "missing": 4,
-    "at_99_or_more": 415,
+    "at_99_or_more": 411,
     "above_100": 1,
-    "high_poverty_share": 72.9
+    "high_poverty_share": 73.1
    }
   },
   "statewide_jumps": [
@@ -470,7 +790,7 @@
     "from": 2015,
     "to": 2016,
     "from_mean": 81.3,
-    "to_mean": 47.0,
+    "to_mean": 46.9,
     "change": -34.4
    },
    {
@@ -479,7 +799,7 @@
     "to": 2016,
     "from_mean": 75.2,
     "to_mean": 35.1,
-    "change": -40.0
+    "change": -40.1
    },
    {
     "subject": "Math",
@@ -494,355 +814,35 @@
    "with": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 59,
-    "comp_n": 474,
-    "lim_change": 5.11,
-    "comp_change": 3.32,
-    "p": 0.091
+    "lim_n": 62,
+    "comp_n": 472,
+    "lim_change": 5.08,
+    "comp_change": 3.28,
+    "p": 0.079
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 43,
-    "comp_n": 474,
-    "lim_change": 5.99,
-    "comp_change": 3.32,
-    "p": 0.04
+    "lim_n": 46,
+    "comp_n": 472,
+    "lim_change": 5.89,
+    "comp_change": 3.28,
+    "p": 0.034
    },
-   "schools": 17
+   "schools": 18
   },
   "subjects_by_keyword": [],
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 19,
-  "in_the_process": 17,
-  "lapsed_on_the_list": 2,
-  "reviewed": 67,
+  "qualified": 20,
+  "in_the_process": 19,
+  "lapsed_on_the_list": 1,
+  "reviewed": 71,
   "measures": 55,
   "outcomes": 13,
-  "improved_every_year": 7,
+  "improved_every_year": 8,
   "lapsed_longer_ago": 24
  },
- "best_schools_added": "2026-10-01",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Percent meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 441,
-    "2016": 1496,
-    "2017": 1909,
-    "2018": 1550,
-    "2019": 2117,
-    "2022": 1709,
-    "2023": 1690,
-    "2024": 1617,
-    "2025": 1633,
-    "2026": 1714
-   }
-  },
-  "percent_below": {
-   "label": "Percent in the lowest level",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 437,
-    "2016": 1496,
-    "2017": 1070,
-    "2018": 1550,
-    "2019": 2117,
-    "2022": 544,
-    "2023": 414,
-    "2024": 899
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 438,
-    "2016": 1368,
-    "2017": 1783,
-    "2018": 1437,
-    "2019": 1984,
-    "2022": 1673,
-    "2023": 1664,
-    "2024": 1594,
-    "2025": 1613
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2019": 1777,
-    "2022": 1655,
-    "2023": 1668,
-    "2024": 1590,
-    "2025": 1589
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2016": 33,
-    "2017": 256,
-    "2018": 99,
-    "2019": 258,
-    "2022": 215,
-    "2023": 203,
-    "2024": 236
-   }
-  },
-  "nspf_index": {
-   "label": "NSPF index score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 1519,
-    "2018": 1527,
-    "2019": 1979,
-    "2022": 1761,
-    "2023": 1748,
-    "2024": 1692,
-    "2025": 1707
-   }
-  },
-  "nspf_4plus": {
-   "label": "Schools rated four or five stars",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "nspf_stars": {
-   "label": "Mean star rating (1-5)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "agp_ela": {
-   "label": "Students meeting their growth target in ELA",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "agp_math": {
-   "label": "Students meeting their growth target in math",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "nspf_chronic": {
-   "label": "Chronic absenteeism (state framework)",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "nspf_grad": {
-   "label": "Four-year graduation rate (class year)",
-   "kind": "cards",
-   "family": "graduation",
-   "years": {
-    "2017": 1,
-    "2018": 1,
-    "2022": 1,
-    "2023": 1,
-    "2024": 2
-   }
-  },
-  "nspf_rating": {
-   "label": "NSPF star rating by level (ES elementary, MS middle, HS high; 'Not rated' where the state issued no star)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 587,
-    "2018": 622,
-    "2019": 630,
-    "2022": 658,
-    "2023": 664,
-    "2024": 668,
-    "2025": 667
-   }
-  },
-  "nspf_index_hs": {
-   "label": "NSPF index score as published, high level (rated or not; 2016-17 high-school scores are a different framework)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 140,
-    "2018": 144,
-    "2019": 144,
-    "2022": 151,
-    "2023": 155,
-    "2024": 155,
-    "2025": 153
-   }
-  },
-  "nspf_designation": {
-   "label": "Federal improvement designation that year (CSI, TSI, ATSI, or none)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 587,
-    "2018": 622,
-    "2019": 630,
-    "2022": 658,
-    "2023": 664,
-    "2024": 668,
-    "2025": 667
-   }
-  },
-  "advanced_diploma": {
-   "label": "Advanced diploma share (%), high-school level, as the file for that school year publishes it",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 108,
-    "2019": 113,
-    "2022": 124,
-    "2023": 127,
-    "2024": 127,
-    "2025": 128
-   }
-  },
-  "ccr_completion": {
-   "label": "College and career readiness completion (%), high-school level, as the file for that school year publishes it",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 92,
-    "2019": 100,
-    "2022": 110,
-    "2023": 109,
-    "2024": 107,
-    "2025": 105
-   }
-  },
-  "nspf_grad5": {
-   "label": "Five-year cohort graduation rate (%) from the framework, on the class's own year",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2016": 103,
-    "2017": 99,
-    "2018": 90,
-    "2022": 89,
-    "2023": 87,
-    "2024": 81
-   }
-  },
-  "credit_9th": {
-   "label": "Ninth-grade credit sufficiency (%), high-school level",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 121,
-    "2018": 128,
-    "2019": 118,
-    "2022": 121,
-    "2023": 120,
-    "2024": 120,
-    "2025": 122
-   }
-  },
-  "nspf_index_es": {
-   "label": "NSPF index score as published, elementary level (rated or not; see nspf_rating)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 361,
-    "2018": 388,
-    "2019": 395,
-    "2022": 416,
-    "2023": 417,
-    "2024": 419,
-    "2025": 419
-   }
-  },
-  "nspf_index_ms": {
-   "label": "NSPF index score as published, middle level (rated or not; see nspf_rating)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 146,
-    "2018": 161,
-    "2019": 169,
-    "2022": 179,
-    "2023": 179,
-    "2024": 181,
-    "2025": 179
-   }
-  },
-  "credit_8th": {
-   "label": "Eighth-grade credit requirements met (%) (NAC 389.445), middle level",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 104,
-    "2018": 107,
-    "2019": 109,
-    "2022": 132,
-    "2023": 114,
-    "2024": 131,
-    "2025": 124
-   }
-  },
-  "ccr_participation": {
-   "label": "College and career readiness participation (%), high-school level, as the file for that school year publishes it",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 100,
-    "2019": 108,
-    "2022": 112,
-    "2023": 111,
-    "2024": 107,
-    "2025": 112
-   }
-  }
- }
+ "best_schools_added": "2026-10-01"
 }

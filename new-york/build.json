@@ -2,54 +2,54 @@
  "state": "NY",
  "name": "New York",
  "folder": "new-york",
- "built": "2026-09-08",
- "seconds": 297,
+ "built": "2026-10-06",
+ "seconds": 342,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 188,
- "schools": 4616,
+ "lim_headline_n": 200,
+ "schools": 4635,
  "years": [
   2015,
   2025
  ],
- "lim_roster_schools": 346,
+ "lim_roster_schools": 361,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-04"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/NY/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/NY/data/Subjects_Tests_FINAL (8).csv",
    "rows": 378206
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/NY/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 3257
+   "path": "/home/claude/work1/NY/data/LIM Schools (Current_Active) (11).csv",
+   "rows": 3287
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/NY/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 38688
+   "path": "/home/claude/work1/NY/data/All Other Schools (Non-LiM & Exited).csv",
+   "rows": 38658
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/NY/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/NY/data/All MRA Surveys.csv",
    "rows": 437
   }
  },
@@ -61,7 +61,7 @@
  ],
  "extras_module": "ny_core_extras",
  "verified": true,
- "dashboard_bytes": 11495407,
+ "dashboard_bytes": 11555495,
  "latest_results": {
   "year": 2025,
   "label": "2024-25",
@@ -75,6 +75,855 @@
   "missing": [],
   "rows_share_of_prior": 0.99,
   "prior_year": 2024
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 18600,
+    "2016": 18676,
+    "2017": 18771,
+    "2018": 18793,
+    "2019": 15267,
+    "2022": 18676,
+    "2023": 16626,
+    "2024": 18994,
+    "2025": 18803
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 15356,
+    "2016": 15406,
+    "2017": 15491,
+    "2018": 15489,
+    "2019": 10634,
+    "2022": 14207,
+    "2023": 11889,
+    "2024": 14183,
+    "2025": 11995
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 15356,
+    "2016": 15406,
+    "2017": 15491,
+    "2018": 15489,
+    "2019": 10634,
+    "2022": 14207,
+    "2023": 11889,
+    "2024": 14183,
+    "2025": 11995
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 15356,
+    "2016": 15406,
+    "2017": 15491,
+    "2018": 15489,
+    "2019": 10634,
+    "2022": 14207,
+    "2023": 11889,
+    "2024": 14183,
+    "2025": 11995
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 15356,
+    "2016": 15406,
+    "2017": 15491,
+    "2018": 15489,
+    "2019": 10634,
+    "2022": 14207,
+    "2023": 11889,
+    "2024": 14183,
+    "2025": 11995
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 17568,
+    "2016": 17666,
+    "2017": 17814,
+    "2018": 17825,
+    "2019": 14305,
+    "2022": 17764,
+    "2023": 15735,
+    "2024": 18006,
+    "2025": 17825
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 18438,
+    "2019": 15175,
+    "2022": 18921,
+    "2023": 16847,
+    "2024": 18830,
+    "2025": 18737
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 5808,
+    "2019": 5522,
+    "2022": 5839,
+    "2023": 5998,
+    "2024": 6040,
+    "2025": 6029
+   }
+  },
+  "attendance_rate": {
+   "label": "Daily attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 18794,
+    "2016": 18810,
+    "2018": 19063,
+    "2019": 15585,
+    "2022": 18987,
+    "2023": 16897,
+    "2024": 18985,
+    "2025": 18795
+   }
+  },
+  "pct_suspended": {
+   "label": "Students suspended out of school",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 16226,
+    "2016": 16265,
+    "2017": 18964,
+    "2019": 15583,
+    "2022": 19015,
+    "2023": 16909,
+    "2024": 19249,
+    "2025": 18983
+   }
+  },
+  "college_enroll": {
+   "label": "College enrollment within 16 months",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2022": 5869,
+    "2023": 5968,
+    "2024": 6022
+   }
+  },
+  "ca_em": {
+   "label": "Chronic absence, grades 1-8 (state accountability figure)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "ca_hs": {
+   "label": "Chronic absence, grades 9-12 (state accountability figure)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "cccr_index": {
+   "label": "College, career and civic readiness index (high schools)",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2025": 2
+   }
+  },
+  "num_suspensions": {
+   "label": "Students suspended out of school at least once (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 4422,
+    "2016": 4401,
+    "2017": 4373,
+    "2019": 4399,
+    "2020": 4420,
+    "2021": 4420,
+    "2022": 4415,
+    "2023": 4412,
+    "2024": 4410,
+    "2025": 4379
+   }
+  },
+  "hs_graduates": {
+   "label": "High school graduates (count; the pre-2018 completers table)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "regents_diploma": {
+   "label": "Graduates earning a Regents diploma of any kind (share of graduates; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "regents_advanced": {
+   "label": "Graduates earning a Regents diploma with advanced designation (share of graduates; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "regents_cte": {
+   "label": "Graduates earning a Regents diploma with a career and technical education endorsement (share of graduates; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "local_diploma": {
+   "label": "Graduates earning a local diploma (share of graduates; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "plan_4yr_college": {
+   "label": "Graduates who said at graduation they planned to attend a four-year college (self-reported plans, not enrollment; through 2016-17)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "plan_2yr_college": {
+   "label": "Graduates planning to attend a two-year college (self-reported; through 2016-17)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "plan_other_postsec": {
+   "label": "Graduates planning other postsecondary study (self-reported; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "plan_military": {
+   "label": "Graduates planning to enter the military (self-reported; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "plan_employment": {
+   "label": "Graduates planning to go to work (self-reported; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "plan_unknown": {
+   "label": "Graduates whose plans were unknown (through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1208,
+    "2016": 1224,
+    "2017": 1239
+   }
+  },
+  "cohort_members": {
+   "label": "Four-year cohort members (the advanced-designation table; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1003,
+    "2016": 1248,
+    "2017": 1263
+   }
+  },
+  "cohort_advanced": {
+   "label": "Cohort members earning a Regents diploma with advanced designation within four years (share of the cohort; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1003,
+    "2016": 1248,
+    "2017": 1263
+   }
+  },
+  "cohort_cte": {
+   "label": "Cohort members earning a Regents diploma with a career and technical endorsement within four years (share of the cohort; through 2016-17)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 1003,
+    "2016": 1248,
+    "2017": 1263
+   }
+  },
+  "nrc_code": {
+   "label": "Need/Resource Capacity category the state assigns the school's district: 1 New York City; 2 large city (Buffalo, Rochester, Syracuse, Yonkers); 3 high need urban-suburban; 4 high need rural; 5 average need; 6 low need; 7 charter school",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2015": 4413,
+    "2016": 4423,
+    "2017": 4396,
+    "2018": 4399,
+    "2019": 4386,
+    "2020": 4421,
+    "2021": 4421,
+    "2022": 4417,
+    "2023": 4408,
+    "2024": 4412,
+    "2025": 4381
+   }
+  },
+  "free_lunch": {
+   "label": "Students eligible for free lunch (share of enrollment, as the state publishes it)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 4423,
+    "2017": 4402,
+    "2018": 4400,
+    "2019": 4399,
+    "2020": 4420,
+    "2021": 4421,
+    "2022": 4416,
+    "2023": 4414,
+    "2024": 4412,
+    "2025": 4381
+   }
+  },
+  "reduced_lunch": {
+   "label": "Students eligible for reduced-price lunch (share of enrollment)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2016": 4423,
+    "2017": 4402,
+    "2018": 4400,
+    "2019": 4399,
+    "2020": 4420,
+    "2021": 4421,
+    "2022": 4416,
+    "2023": 4414,
+    "2024": 4412,
+    "2025": 4381
+   }
+  },
+  "ca_all": {
+   "label": "Chronic absence, whole school, rebuilt from the counts at both levels",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 4232,
+    "2019": 4255,
+    "2021": 4374,
+    "2022": 4382,
+    "2023": 4385,
+    "2024": 4320,
+    "2025": 4318
+   }
+  },
+  "ca_domo_convention": {
+   "label": "Chronic absence as the page carries it where DOMO has none: the grades 9-12 figure where the school has one, otherwise grades 1-8",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 4232,
+    "2019": 4255,
+    "2021": 4374,
+    "2022": 4382,
+    "2023": 4385,
+    "2024": 4320,
+    "2025": 4318
+   }
+  },
+  "ca_students_hs": {
+   "label": "Students in the chronic-absence count, grades 9-12 level",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 1498,
+    "2019": 1537,
+    "2021": 1517,
+    "2022": 1498,
+    "2023": 1484,
+    "2024": 1459,
+    "2025": 1464
+   }
+  },
+  "teachers": {
+   "label": "Teachers (count, from the Student and Educator Database)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 4401,
+    "2019": 4401,
+    "2020": 4421,
+    "2021": 4421,
+    "2022": 4417,
+    "2023": 4416,
+    "2024": 4412,
+    "2025": 4381
+   }
+  },
+  "cccr_cohort": {
+   "label": "Four-year cohort counted for the readiness index",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 1269,
+    "2019": 1262,
+    "2025": 1284
+   }
+  },
+  "cccr_weight2_share": {
+   "label": "Cohort members with a highest-weight credential (a Regents diploma with advanced designation or a career and technical endorsement, the Seal of Biliteracy or equivalent; share of the cohort)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 1212,
+    "2019": 1192,
+    "2025": 1220
+   }
+  },
+  "cccr_biliteracy": {
+   "label": "Annual Seal of Biliteracy earners the state adds to the readiness index (count)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 1269,
+    "2019": 1262,
+    "2025": 1284
+   }
+  },
+  "pw_humanities": {
+   "label": "Graduates who met the fifth-exam requirement with a second social studies Regents exam (the Humanities pathway; share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 1252,
+    "2019": 1243,
+    "2020": 1249,
+    "2021": 1263,
+    "2022": 1253,
+    "2023": 1257,
+    "2024": 1262,
+    "2025": 1265
+   }
+  },
+  "pw_graduates": {
+   "label": "Graduates by June, four years after entering grade 9, counted once each across the pathways (the graduating class)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 1256,
+    "2019": 1246,
+    "2020": 1254,
+    "2021": 1268,
+    "2022": 1258,
+    "2023": 1259,
+    "2024": 1265,
+    "2025": 1267
+   }
+  },
+  "pw_science": {
+   "label": "Graduates on the Science pathway, a second science Regents exam (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 642,
+    "2019": 657,
+    "2020": 589,
+    "2021": 447,
+    "2022": 457,
+    "2023": 577,
+    "2024": 656,
+    "2025": 772
+   }
+  },
+  "pw_cdos": {
+   "label": "Graduates on the Career Development and Occupational Studies pathway (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 322,
+    "2019": 337,
+    "2020": 218,
+    "2021": 128,
+    "2022": 82,
+    "2023": 125,
+    "2024": 211,
+    "2025": 313
+   }
+  },
+  "pw_career": {
+   "label": "Graduates on a career pathway, Career and Technical Education or Career Development and Occupational Studies together (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 455,
+    "2019": 483,
+    "2020": 363,
+    "2021": 246,
+    "2022": 239,
+    "2023": 254,
+    "2024": 357,
+    "2025": 451
+   }
+  },
+  "pw_math": {
+   "label": "Graduates on the Mathematics pathway, a second math Regents exam (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 465,
+    "2019": 521,
+    "2020": 408,
+    "2021": 310,
+    "2022": 334,
+    "2023": 262,
+    "2024": 265,
+    "2025": 517
+   }
+  },
+  "pw_cte": {
+   "label": "Graduates on the Career and Technical Education pathway, an approved career and technical education program and its technical assessment (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 221,
+    "2019": 245,
+    "2020": 232,
+    "2021": 179,
+    "2022": 196,
+    "2023": 181,
+    "2024": 216,
+    "2025": 246
+   }
+  },
+  "college_2yr": {
+   "label": "Graduates enrolled in a two-year college within 16 months (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 1253,
+    "2022": 1255,
+    "2023": 1252,
+    "2024": 1258
+   }
+  },
+  "college_4yr": {
+   "label": "Graduates enrolled in a four-year college within 16 months (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2021": 1253,
+    "2022": 1255,
+    "2023": 1252,
+    "2024": 1258
+   }
+  },
+  "college_graduates": {
+   "label": "Graduates counted for postsecondary enrollment",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1263,
+    "2022": 1262,
+    "2023": 1263,
+    "2024": 1267
+   }
+  },
+  "college_nys_public_2yr": {
+   "label": "Enrolled in a New York public two-year college (SUNY or CUNY) within 16 months (share of graduates)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1253,
+    "2022": 1255,
+    "2023": 1252,
+    "2024": 1258
+   }
+  },
+  "college_nys_public_4yr": {
+   "label": "Enrolled in a New York public four-year college (SUNY or CUNY) within 16 months (share of graduates)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1253,
+    "2022": 1255,
+    "2023": 1252,
+    "2024": 1258
+   }
+  },
+  "college_nys_private_2yr": {
+   "label": "Enrolled in a New York private two-year college within 16 months (share of graduates)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1253,
+    "2022": 1255,
+    "2023": 1252,
+    "2024": 1258
+   }
+  },
+  "college_nys_private_4yr": {
+   "label": "Enrolled in a New York private four-year college within 16 months (share of graduates)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1253,
+    "2022": 1255,
+    "2023": 1252,
+    "2024": 1258
+   }
+  },
+  "college_out_of_state_2yr": {
+   "label": "Enrolled in a two-year college outside New York within 16 months (share of graduates)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1253,
+    "2022": 1255,
+    "2023": 1252,
+    "2024": 1258
+   }
+  },
+  "college_out_of_state_4yr": {
+   "label": "Enrolled in a four-year college outside New York within 16 months (share of graduates)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2021": 1253,
+    "2022": 1255,
+    "2023": 1252,
+    "2024": 1258
+   }
+  },
+  "ca_students_em": {
+   "label": "Students in the chronic-absence count, grades 1-8 level",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 3534,
+    "2019": 3561,
+    "2021": 3643,
+    "2022": 3651,
+    "2023": 3655,
+    "2024": 3604,
+    "2025": 3582
+   }
+  },
+  "attendance_index": {
+   "label": "Attendance index, the state's 2024-25 accountability indicator (0-250; student-weighted across a school's levels)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2025": 4033
+   }
+  },
+  "present_over_95": {
+   "label": "Students present more than 95% of enrolled days (share of enrollment; 2024-25 attendance index bands)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2025": 4322
+   }
+  },
+  "present_85_or_less": {
+   "label": "Students present 85% or less of enrolled days, absent at least three weeks in twenty (share of enrollment; 2024-25)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2025": 4322
+   }
+  },
+  "pw_arts": {
+   "label": "Graduates on the Arts pathway, an approved arts assessment (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 72,
+    "2019": 71,
+    "2020": 72,
+    "2021": 74,
+    "2022": 82,
+    "2023": 74,
+    "2024": 64,
+    "2025": 62
+   }
+  },
+  "pw_humanities_alt": {
+   "label": "Graduates on the Humanities pathway through an approved alternative to the social studies exam (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 77,
+    "2019": 97,
+    "2020": 80,
+    "2021": 93,
+    "2022": 71,
+    "2023": 134,
+    "2024": 204,
+    "2025": 233
+   }
+  },
+  "pw_civic": {
+   "label": "Graduates on the Civic Readiness pathway (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 26,
+    "2023": 28,
+    "2024": 62,
+    "2025": 72
+   }
+  },
+  "teacher_turnover": {
+   "label": "Teacher turnover, share of all teachers who left the school the year before (published for charter schools only; districts carry it in the published section)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 251,
+    "2019": 77,
+    "2020": 154,
+    "2021": 201,
+    "2022": 249,
+    "2023": 269,
+    "2024": 263,
+    "2025": 260
+   }
+  },
+  "teacher_turnover_new": {
+   "label": "Teacher turnover among teachers with fewer than five years' experience (charter schools only)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 250,
+    "2019": 77,
+    "2020": 151,
+    "2021": 200,
+    "2022": 247,
+    "2023": 269,
+    "2024": 262,
+    "2025": 260
+   }
+  },
+  "pw_languages": {
+   "label": "Graduates on the World Languages pathway, a world language assessment (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 109,
+    "2019": 279,
+    "2020": 249,
+    "2021": 145,
+    "2022": 147,
+    "2023": 222,
+    "2024": 291,
+    "2025": 405
+   }
+  },
+  "pw_traditional": {
+   "label": "Graduates on the traditional five-Regents route as the 2017-18 file labels it (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 33,
+    "2019": 4
+   }
+  },
+  "pw_unspecified": {
+   "label": "Graduates whose pathway the file leaves blank (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 3
+   }
+  },
+  "pw_arts_individual": {
+   "label": "Graduates on the Individual Arts Assessment pathway (share of graduates)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2025": 6
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -700,14 +1549,14 @@
   },
   "poverty": {
    "lim": {
-    "schools": 346,
+    "schools": 361,
     "missing": 0,
     "at_99_or_more": 2,
     "above_100": 0,
-    "high_poverty_share": 47.4
+    "high_poverty_share": 47.1
    },
    "comparison": {
-    "schools": 4300,
+    "schools": 4285,
     "missing": 26,
     "at_99_or_more": 36,
     "above_100": 1,
@@ -719,7 +1568,7 @@
     "subject": "ELA",
     "from": 2017,
     "to": 2018,
-    "from_mean": 44.3,
+    "from_mean": 44.2,
     "to_mean": 52.6,
     "change": 8.3
    },
@@ -728,7 +1577,7 @@
     "from": 2017,
     "to": 2018,
     "from_mean": 40.6,
-    "to_mean": 54.4,
+    "to_mean": 54.3,
     "change": 13.7
    },
    {
@@ -744,884 +1593,35 @@
    "with": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 188,
+    "lim_n": 200,
     "comp_n": 3895,
-    "lim_change": 10.34,
-    "comp_change": 8.44,
-    "p": 0.019
+    "lim_change": 10.29,
+    "comp_change": 8.43,
+    "p": 0.018
    },
    "without": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 139,
-    "comp_n": 3895,
-    "lim_change": 10.48,
+    "lim_n": 150,
+    "comp_n": 3894,
+    "lim_change": 10.38,
     "comp_change": 8.44,
-    "p": 0.025
+    "p": 0.027
    },
-   "schools": 54
+   "schools": 56
   },
   "subjects_by_keyword": [],
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 40,
-  "in_the_process": 35,
-  "lapsed_on_the_list": 5,
-  "reviewed": 162,
+  "qualified": 42,
+  "in_the_process": 38,
+  "lapsed_on_the_list": 4,
+  "reviewed": 173,
   "measures": 60,
   "outcomes": 14,
-  "improved_every_year": 4,
-  "lapsed_longer_ago": 113
+  "improved_every_year": 7,
+  "lapsed_longer_ago": 114
  },
- "best_schools_added": "2026-09-10",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Meeting or exceeding the standard (levels 3 and 4)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 18528,
-    "2016": 18613,
-    "2017": 18710,
-    "2018": 18730,
-    "2019": 15215,
-    "2022": 18596,
-    "2023": 16557,
-    "2024": 18913,
-    "2025": 18719
-   }
-  },
-  "percent_level4": {
-   "label": "Level 4: exceeding the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 15293,
-    "2016": 15351,
-    "2017": 15438,
-    "2018": 15434,
-    "2019": 10592,
-    "2022": 14141,
-    "2023": 11832,
-    "2024": 14115,
-    "2025": 11931
-   }
-  },
-  "percent_level3": {
-   "label": "Level 3: meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 15293,
-    "2016": 15351,
-    "2017": 15438,
-    "2018": 15434,
-    "2019": 10592,
-    "2022": 14141,
-    "2023": 11832,
-    "2024": 14115,
-    "2025": 11931
-   }
-  },
-  "percent_level2": {
-   "label": "Level 2: approaching the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 15293,
-    "2016": 15351,
-    "2017": 15438,
-    "2018": 15434,
-    "2019": 10592,
-    "2022": 14141,
-    "2023": 11832,
-    "2024": 14115,
-    "2025": 11931
-   }
-  },
-  "percent_below": {
-   "label": "Level 1: below the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 15293,
-    "2016": 15351,
-    "2017": 15438,
-    "2018": 15434,
-    "2019": 10592,
-    "2022": 14141,
-    "2023": 11832,
-    "2024": 14115,
-    "2025": 11931
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 17503,
-    "2016": 17607,
-    "2017": 17755,
-    "2018": 17764,
-    "2019": 14255,
-    "2022": 17686,
-    "2023": 15668,
-    "2024": 17925,
-    "2025": 17741
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2018": 18373,
-    "2019": 15125,
-    "2022": 18838,
-    "2023": 16777,
-    "2024": 18746,
-    "2025": 18651
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2018": 5787,
-    "2019": 5504,
-    "2022": 5811,
-    "2023": 5974,
-    "2024": 6016,
-    "2025": 6005
-   }
-  },
-  "attendance_rate": {
-   "label": "Daily attendance rate",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2015": 18723,
-    "2016": 18745,
-    "2018": 18998,
-    "2019": 15530,
-    "2022": 18904,
-    "2023": 16827,
-    "2024": 18901,
-    "2025": 18709
-   }
-  },
-  "pct_suspended": {
-   "label": "Students suspended out of school",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2015": 16162,
-    "2016": 16211,
-    "2017": 18900,
-    "2019": 15528,
-    "2022": 18932,
-    "2023": 16839,
-    "2024": 19165,
-    "2025": 18897
-   }
-  },
-  "college_enroll": {
-   "label": "College enrollment within 16 months",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2022": 5841,
-    "2023": 5944,
-    "2024": 5998
-   }
-  },
-  "ca_em": {
-   "label": "Chronic absence, grades 1-8 (state accountability figure)",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "ca_hs": {
-   "label": "Chronic absence, grades 9-12 (state accountability figure)",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "cccr_index": {
-   "label": "College, career and civic readiness index (high schools)",
-   "kind": "cards",
-   "family": "graduation",
-   "years": {
-    "2018": 2,
-    "2019": 2,
-    "2025": 2
-   }
-  },
-  "num_suspensions": {
-   "label": "Students suspended out of school at least once (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 4407,
-    "2016": 4386,
-    "2017": 4358,
-    "2019": 4381,
-    "2020": 4402,
-    "2021": 4402,
-    "2022": 4397,
-    "2023": 4394,
-    "2024": 4391,
-    "2025": 4360
-   }
-  },
-  "hs_graduates": {
-   "label": "High school graduates (count; the pre-2018 completers table)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "regents_diploma": {
-   "label": "Graduates earning a Regents diploma of any kind (share of graduates; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "regents_advanced": {
-   "label": "Graduates earning a Regents diploma with advanced designation (share of graduates; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "regents_cte": {
-   "label": "Graduates earning a Regents diploma with a career and technical education endorsement (share of graduates; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "local_diploma": {
-   "label": "Graduates earning a local diploma (share of graduates; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "plan_4yr_college": {
-   "label": "Graduates who said at graduation they planned to attend a four-year college (self-reported plans, not enrollment; through 2016-17)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "plan_2yr_college": {
-   "label": "Graduates planning to attend a two-year college (self-reported; through 2016-17)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "plan_other_postsec": {
-   "label": "Graduates planning other postsecondary study (self-reported; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "plan_military": {
-   "label": "Graduates planning to enter the military (self-reported; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "plan_employment": {
-   "label": "Graduates planning to go to work (self-reported; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "plan_unknown": {
-   "label": "Graduates whose plans were unknown (through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1205,
-    "2016": 1221,
-    "2017": 1236
-   }
-  },
-  "cohort_members": {
-   "label": "Four-year cohort members (the advanced-designation table; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1000,
-    "2016": 1245,
-    "2017": 1260
-   }
-  },
-  "cohort_advanced": {
-   "label": "Cohort members earning a Regents diploma with advanced designation within four years (share of the cohort; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1000,
-    "2016": 1245,
-    "2017": 1260
-   }
-  },
-  "cohort_cte": {
-   "label": "Cohort members earning a Regents diploma with a career and technical endorsement within four years (share of the cohort; through 2016-17)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 1000,
-    "2016": 1245,
-    "2017": 1260
-   }
-  },
-  "nrc_code": {
-   "label": "Need/Resource Capacity category the state assigns the school's district: 1 New York City; 2 large city (Buffalo, Rochester, Syracuse, Yonkers); 3 high need urban-suburban; 4 high need rural; 5 average need; 6 low need; 7 charter school",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2015": 4398,
-    "2016": 4408,
-    "2017": 4381,
-    "2018": 4384,
-    "2019": 4368,
-    "2020": 4403,
-    "2021": 4403,
-    "2022": 4399,
-    "2023": 4390,
-    "2024": 4393,
-    "2025": 4362
-   }
-  },
-  "free_lunch": {
-   "label": "Students eligible for free lunch (share of enrollment, as the state publishes it)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2016": 4408,
-    "2017": 4387,
-    "2018": 4385,
-    "2019": 4381,
-    "2020": 4402,
-    "2021": 4403,
-    "2022": 4398,
-    "2023": 4396,
-    "2024": 4393,
-    "2025": 4362
-   }
-  },
-  "reduced_lunch": {
-   "label": "Students eligible for reduced-price lunch (share of enrollment)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2016": 4408,
-    "2017": 4387,
-    "2018": 4385,
-    "2019": 4381,
-    "2020": 4402,
-    "2021": 4403,
-    "2022": 4398,
-    "2023": 4396,
-    "2024": 4393,
-    "2025": 4362
-   }
-  },
-  "ca_all": {
-   "label": "Chronic absence, whole school, rebuilt from the counts at both levels",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 4217,
-    "2019": 4240,
-    "2021": 4356,
-    "2022": 4364,
-    "2023": 4367,
-    "2024": 4301,
-    "2025": 4299
-   }
-  },
-  "ca_domo_convention": {
-   "label": "Chronic absence as the page carries it where DOMO has none: the grades 9-12 figure where the school has one, otherwise grades 1-8",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 4217,
-    "2019": 4240,
-    "2021": 4356,
-    "2022": 4364,
-    "2023": 4367,
-    "2024": 4301,
-    "2025": 4299
-   }
-  },
-  "ca_students_hs": {
-   "label": "Students in the chronic-absence count, grades 9-12 level",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2018": 1494,
-    "2019": 1534,
-    "2021": 1512,
-    "2022": 1493,
-    "2023": 1480,
-    "2024": 1454,
-    "2025": 1461
-   }
-  },
-  "teachers": {
-   "label": "Teachers (count, from the Student and Educator Database)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2018": 4386,
-    "2019": 4383,
-    "2020": 4403,
-    "2021": 4403,
-    "2022": 4399,
-    "2023": 4398,
-    "2024": 4393,
-    "2025": 4362
-   }
-  },
-  "cccr_cohort": {
-   "label": "Four-year cohort counted for the readiness index",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2018": 1266,
-    "2019": 1259,
-    "2025": 1281
-   }
-  },
-  "cccr_weight2_share": {
-   "label": "Cohort members with a highest-weight credential (a Regents diploma with advanced designation or a career and technical endorsement, the Seal of Biliteracy or equivalent; share of the cohort)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 1209,
-    "2019": 1189,
-    "2025": 1217
-   }
-  },
-  "cccr_biliteracy": {
-   "label": "Annual Seal of Biliteracy earners the state adds to the readiness index (count)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2018": 1266,
-    "2019": 1259,
-    "2025": 1281
-   }
-  },
-  "pw_humanities": {
-   "label": "Graduates who met the fifth-exam requirement with a second social studies Regents exam (the Humanities pathway; share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 1249,
-    "2019": 1240,
-    "2020": 1246,
-    "2021": 1260,
-    "2022": 1250,
-    "2023": 1254,
-    "2024": 1259,
-    "2025": 1262
-   }
-  },
-  "pw_graduates": {
-   "label": "Graduates by June, four years after entering grade 9, counted once each across the pathways (the graduating class)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2018": 1253,
-    "2019": 1243,
-    "2020": 1251,
-    "2021": 1265,
-    "2022": 1255,
-    "2023": 1256,
-    "2024": 1262,
-    "2025": 1264
-   }
-  },
-  "pw_science": {
-   "label": "Graduates on the Science pathway, a second science Regents exam (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 641,
-    "2019": 656,
-    "2020": 587,
-    "2021": 446,
-    "2022": 457,
-    "2023": 576,
-    "2024": 654,
-    "2025": 769
-   }
-  },
-  "pw_cdos": {
-   "label": "Graduates on the Career Development and Occupational Studies pathway (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 321,
-    "2019": 337,
-    "2020": 218,
-    "2021": 128,
-    "2022": 82,
-    "2023": 124,
-    "2024": 210,
-    "2025": 312
-   }
-  },
-  "pw_career": {
-   "label": "Graduates on a career pathway, Career and Technical Education or Career Development and Occupational Studies together (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 454,
-    "2019": 483,
-    "2020": 362,
-    "2021": 247,
-    "2022": 239,
-    "2023": 254,
-    "2024": 357,
-    "2025": 449
-   }
-  },
-  "pw_math": {
-   "label": "Graduates on the Mathematics pathway, a second math Regents exam (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 465,
-    "2019": 520,
-    "2020": 408,
-    "2021": 310,
-    "2022": 335,
-    "2023": 263,
-    "2024": 265,
-    "2025": 517
-   }
-  },
-  "pw_cte": {
-   "label": "Graduates on the Career and Technical Education pathway, an approved career and technical education program and its technical assessment (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 220,
-    "2019": 245,
-    "2020": 231,
-    "2021": 180,
-    "2022": 196,
-    "2023": 182,
-    "2024": 217,
-    "2025": 245
-   }
-  },
-  "college_2yr": {
-   "label": "Graduates enrolled in a two-year college within 16 months (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2021": 1250,
-    "2022": 1252,
-    "2023": 1249,
-    "2024": 1255
-   }
-  },
-  "college_4yr": {
-   "label": "Graduates enrolled in a four-year college within 16 months (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2021": 1250,
-    "2022": 1252,
-    "2023": 1249,
-    "2024": 1255
-   }
-  },
-  "college_graduates": {
-   "label": "Graduates counted for postsecondary enrollment",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1260,
-    "2022": 1259,
-    "2023": 1260,
-    "2024": 1264
-   }
-  },
-  "college_nys_public_2yr": {
-   "label": "Enrolled in a New York public two-year college (SUNY or CUNY) within 16 months (share of graduates)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1250,
-    "2022": 1252,
-    "2023": 1249,
-    "2024": 1255
-   }
-  },
-  "college_nys_public_4yr": {
-   "label": "Enrolled in a New York public four-year college (SUNY or CUNY) within 16 months (share of graduates)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1250,
-    "2022": 1252,
-    "2023": 1249,
-    "2024": 1255
-   }
-  },
-  "college_nys_private_2yr": {
-   "label": "Enrolled in a New York private two-year college within 16 months (share of graduates)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1250,
-    "2022": 1252,
-    "2023": 1249,
-    "2024": 1255
-   }
-  },
-  "college_nys_private_4yr": {
-   "label": "Enrolled in a New York private four-year college within 16 months (share of graduates)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1250,
-    "2022": 1252,
-    "2023": 1249,
-    "2024": 1255
-   }
-  },
-  "college_out_of_state_2yr": {
-   "label": "Enrolled in a two-year college outside New York within 16 months (share of graduates)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1250,
-    "2022": 1252,
-    "2023": 1249,
-    "2024": 1255
-   }
-  },
-  "college_out_of_state_4yr": {
-   "label": "Enrolled in a four-year college outside New York within 16 months (share of graduates)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2021": 1250,
-    "2022": 1252,
-    "2023": 1249,
-    "2024": 1255
-   }
-  },
-  "ca_students_em": {
-   "label": "Students in the chronic-absence count, grades 1-8 level",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2018": 3519,
-    "2019": 3545,
-    "2021": 3626,
-    "2022": 3633,
-    "2023": 3637,
-    "2024": 3584,
-    "2025": 3563
-   }
-  },
-  "attendance_index": {
-   "label": "Attendance index, the state's 2024-25 accountability indicator (0-250; student-weighted across a school's levels)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2025": 4014
-   }
-  },
-  "present_over_95": {
-   "label": "Students present more than 95% of enrolled days (share of enrollment; 2024-25 attendance index bands)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2025": 4303
-   }
-  },
-  "present_85_or_less": {
-   "label": "Students present 85% or less of enrolled days, absent at least three weeks in twenty (share of enrollment; 2024-25)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2025": 4303
-   }
-  },
-  "pw_arts": {
-   "label": "Graduates on the Arts pathway, an approved arts assessment (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 71,
-    "2019": 71,
-    "2020": 72,
-    "2021": 74,
-    "2022": 82,
-    "2023": 74,
-    "2024": 64,
-    "2025": 62
-   }
-  },
-  "pw_humanities_alt": {
-   "label": "Graduates on the Humanities pathway through an approved alternative to the social studies exam (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 77,
-    "2019": 97,
-    "2020": 80,
-    "2021": 94,
-    "2022": 71,
-    "2023": 134,
-    "2024": 204,
-    "2025": 233
-   }
-  },
-  "pw_civic": {
-   "label": "Graduates on the Civic Readiness pathway (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2022": 26,
-    "2023": 28,
-    "2024": 62,
-    "2025": 72
-   }
-  },
-  "teacher_turnover": {
-   "label": "Teacher turnover, share of all teachers who left the school the year before (published for charter schools only; districts carry it in the published section)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2018": 252,
-    "2019": 77,
-    "2020": 154,
-    "2021": 201,
-    "2022": 250,
-    "2023": 270,
-    "2024": 264,
-    "2025": 261
-   }
-  },
-  "teacher_turnover_new": {
-   "label": "Teacher turnover among teachers with fewer than five years' experience (charter schools only)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2018": 251,
-    "2019": 77,
-    "2020": 151,
-    "2021": 200,
-    "2022": 248,
-    "2023": 270,
-    "2024": 263,
-    "2025": 261
-   }
-  },
-  "pw_languages": {
-   "label": "Graduates on the World Languages pathway, a world language assessment (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 109,
-    "2019": 279,
-    "2020": 249,
-    "2021": 145,
-    "2022": 147,
-    "2023": 223,
-    "2024": 291,
-    "2025": 405
-   }
-  },
-  "pw_traditional": {
-   "label": "Graduates on the traditional five-Regents route as the 2017-18 file labels it (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 33,
-    "2019": 4
-   }
-  },
-  "pw_unspecified": {
-   "label": "Graduates whose pathway the file leaves blank (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 3
-   }
-  },
-  "pw_arts_individual": {
-   "label": "Graduates on the Individual Arts Assessment pathway (share of graduates)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2025": 6
-   }
-  }
- }
+ "best_schools_added": "2026-10-06"
 }

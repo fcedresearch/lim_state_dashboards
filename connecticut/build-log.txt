@@ -2,17 +2,18 @@
 $ python3 /home/claude/sdf/Build/build_payload_core.py --state CT --core /home/claude/sdf/Core --out /home/claude/work1/CT --data /home/claude/work1/CT/data --extras ct_core_extras
 reading the core for Connecticut ...
 [core] subjects: 50,555 school rows kept; dropped 24,109 rows with no school id and 1,951 with an id but no school record
-[core] Leader in Me roster: 93 rows
+[core] Leader in Me roster: 108 rows
 [core] comparison schools: 8,157 rows
+[core] comparison: 4 rows set aside for 2 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 4 rows
   subject rows added from SchoolDigger's bulk file: 4,940 (Connecticut 2025-26 results (SchoolDigger bulk file, the source of DOMO's subject file))
-  subject rows 55,495 · roster rows 93 (11 schools) · comparison rows 8,157 (956 schools) · MRA surveys 4
-[core] Leader in Me roster: 56,181 rows
-  exits: 10 of 11 roster schools carry an expiration date; 3 past it by more than 30 days (exited), 0 inside the grace window, 7 in the future, 1 undated (0 with a start date)
+  subject rows 55,495 · roster rows 108 (13 schools) · comparison rows 8,153 (956 schools) · MRA surveys 4
+[core] Leader in Me roster: 59,452 rows
+  exits: 12 of 13 roster schools carry an expiration date; 3 past it by more than 30 days (exited), 0 inside the grace window, 9 in the future, 1 undated (0 with a start date)
   967 schools · 195 districts
 applying the cleaning rules ...
   24,812 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
-  Leader in Me school-years counted: 17 of 110 reviewed
+  Leader in Me school-years counted: 21 of 130 reviewed
   no start date: 1 schools · dated exits: 3 (school-years after an exit with rows: 5) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 0.0% of rows in years and subjects whose levels add up; not offered because the levels add up on too few rows to stand as measures)
   level values blanked on 25 year-subject cells that do not add up: 2015-16 ELA, 2015-16 Math, 2015-16 Science, 2016-17 ELA, 2016-17 Math, 2016-17 Science, 2017-18 ELA, 2017-18 Math ...
@@ -24,19 +25,19 @@ folding in Connecticut's own measures (ct_core_extras) ...
     Next Generation Accountability export: 10,982 rows from the cache (file unchanged)
   Connecticut measures per school-year: 9,365 school-years, 23 keys; the 2014-15 index excluded by name (1,046 values); acc_index 2016-2025 (8,123 values); chronic_absent 2015-2025 (9,048 values); growth_ela 2016-2025 (6,013 values); fitness 2015-2025 (8,326 values); grad_rate_4yr 2014-2024 (1,616 values); college_entrance 2015-2025 (1,815 values)
   crosswalk: NCES's state organization code for each federal id, audited against the state file's own names and districts
-    959 of 967 schools carry a state code in NCES's directory (948 by the seven-digit code, 11 by the five-digit form of the early directories); Leader in Me 11 of 11, comparison 948 of 956; 959 appear in the state file
+    959 of 967 schools carry a state code in NCES's directory (948 by the seven-digit code, 11 by the five-digit form of the early directories); Leader in Me 13 of 13, comparison 946 of 954; 959 appear in the state file
     names: the state file's own school name agrees with DOMO's on 959 of 959 crosswalked schools, and the state's district names DOMO's on 959 of 959; 0 pairs re-pointed to a folded id; 0 shared codes settled; 0 schools carry more than one state code
-  membership: Leader in Me schools counted per year on the cards {2017: 1, 2018: 1, 2019: 1, 2022: 1, 2023: 2, 2024: 1, 2025: 4} (the core's own status)
+  membership: Leader in Me schools counted per year on the cards {2016: 1, 2017: 1, 2018: 1, 2019: 1, 2022: 1, 2023: 2, 2024: 3, 2025: 5} (the core's own status)
   value check of the join (files the map was not built from): DOMO's chronic absence is the state's Indicator 4 within a point on 2856 of 2856 school-years (to the decimal on 2856); DOMO's graduation rate is Indicator 8, keyed on the class year, within a point on 419 of 419 (to the decimal on 419)
-  rows gain: growth_ela on 7,629 school-year-bands (4 Leader in Me schools ever), growth_math on 7,629 school-year-bands (4 Leader in Me schools ever), fitness on 10,136 school-year-bands (5 Leader in Me schools ever), on_track on 4,097 school-year-bands (3 Leader in Me schools ever); left off the rows for thin Leader in Me coverage: college_entrance (1), arts_access (1); 0 school-years had no band to sit in
+  rows gain: growth_ela on 7,629 school-year-bands (4 Leader in Me schools ever), growth_math on 7,629 school-year-bands (4 Leader in Me schools ever), fitness on 10,136 school-year-bands (6 Leader in Me schools ever), on_track on 4,097 school-year-bands (4 Leader in Me schools ever); left off the rows for thin Leader in Me coverage: college_entrance (2), arts_access (2); 0 school-years had no band to sit in
   fill: chronic absence is the same measure; the state fills 5308 school-years DOMO lacks (2014-15: 915, 2015-16: 920, 2016-17: 919, 2017-18: 919, 2018-19: 911, 2021-22: 198, 2022-23: 204, 2023-24: 212, 2024-25: 110); graduation is the same measure; the state fills 973 secondary school-years DOMO lacks (2014-15: 193, 2015-16: 198, 2016-17: 202, 2017-18: 203, 2021-22: 62, 2022-23: 60, 2023-24: 55); no DOMO value is overwritten
-  card: 6 Connecticut measures, each group on each year's own membership; Leader in Me points in [2025]
-    card line acc_index: 1 Leader in Me point, latest 2025 n=4 (68.74)
-    card line chronic_absent: 1 Leader in Me point, latest 2025 n=4 (11.91)
+  card: 6 Connecticut measures, each group on each year's own membership; Leader in Me points in [2024, 2025]
+    card line acc_index: 2 Leader in Me points, latest 2025 n=5 (71.34)
+    card line chronic_absent: 2 Leader in Me points, latest 2025 n=5 (11.61)
     card line growth_ela: 1 Leader in Me point, latest 2025 n=3 (57.17)
     card line growth_math: 1 Leader in Me point, latest 2025 n=3 (54.16)
-    card line fitness: 1 Leader in Me point, latest 2025 n=4 (49.22)
-    card line on_track: 1 Leader in Me point, latest 2025 n=3 (94.17)
+    card line fitness: 2 Leader in Me points, latest 2025 n=5 (57.77)
+    card line on_track: 1 Leader in Me point, latest 2025 n=4 (94.84)
   per-school Connecticut records for the pack: 8,286 (23 columns)
   Connecticut's measures on 10,182 school-year-bands: 8,901 joined to existing rows, 1,281 school-year-bands added with no test rows of their own
   core measures filled from Connecticut's own files where DOMO had none: chronic_absent 14,351 rows, grad_rate 2,146 rows
@@ -45,18 +46,18 @@ folding in Connecticut's own measures (ct_core_extras) ...
 building matched pairs, inside each band ...
   pairs 1  by band {'Primary': {'pairs': 1, 'unmatched': 0}, 'Secondary': {'pairs': 0, 'unmatched': 0}}
   MRA: 4 surveys · 3 schools · 9 sentinel values · 0 shells
-  headline 2024-25 to 2025-26: {'y0': 2025, 'y1': 2026, 'lim_n': 6, 'comp_n': 768, 'lim_change': 1.23, 'comp_change': 0.27, 'p': 0.524} · without the 0 undated schools {'y0': 2025, 'y1': 2026, 'lim_n': 6, 'comp_n': 768, 'lim_change': 1.23, 'comp_change': 0.27, 'p': 0.524}
-  roster: 6 counted, 3 exited, 1 not counted yet, 1 not counted
+  headline 2024-25 to 2025-26: {'y0': 2025, 'y1': 2026, 'lim_n': 6, 'comp_n': 767, 'lim_change': 1.23, 'comp_change': 0.25, 'p': 0.52} · without the 0 undated schools {'y0': 2025, 'y1': 2026, 'lim_n': 6, 'comp_n': 767, 'lim_change': 1.23, 'comp_change': 0.25, 'p': 0.52}
+  roster: 6 counted, 3 exited, 3 not counted yet, 1 not counted
 measures not offered (no school-year carries a value): percent_below
 best-performing schools: 0 of 6 counted schools, 53 measures in 14 outcomes
 
 wrote ct_payload.json  (16.5 MB, 26,093 rows) · page kind descriptive (6 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'b4086360738c'}
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py ct_payload.json CT_Dashboard.html CT_Methods.html
 payload 16.5 MB -> 1.14 MB gzip
-CT_Dashboard.html: 1792 KB
-CT_Methods.html: 55 KB
+CT_Dashboard.html: 1805 KB
+CT_Methods.html: 57 KB
 
 $ python3 /home/claude/sdf/Build/verify_core.py --state CT --work /home/claude/work1/CT
 
@@ -77,12 +78,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': -0.1, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': -0.1, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [2 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [3 exited, 0 in grace, 7 future]
+ok   the exit rule's counts recompute from the roster  [3 exited, 0 in grace, 9 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [0 composite cells at 100, 0 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -98,7 +99,10 @@ ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 note the headline window settles on 2025-2026 (the window's edges are 2022-2026)
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 10 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [10 Year 0 rows]
 ok   schools with no start date appear in neither group  [1 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
@@ -106,7 +110,7 @@ ok   exited schools keep their true Leader in Me years  [3 exited schools with c
 ok   the exit counts on the methods page match the rule  [3 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 6, 'exited': 3, 'not counted yet': 1, 'not counted': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 6, 'exited': 3, 'not counted yet': 3, 'not counted': 1}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -122,7 +126,7 @@ ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [196 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [248 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [246 schools]
 ok   the school count never exceeds the band-slice count  [774 schools vs 926 band slices]
@@ -144,7 +148,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.5s]
+ok   load time is workable  [0.6s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -154,14 +158,14 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [6 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.5241 scipy 0.5241 · window 2025-2026 · LiM n=6 mean +1.23 · comparison n=768 mean +0.27]
-ok   the headline counts schools, not band slices  [page 774 vs offline 774 on 2025-2026]
+ok   the headline p recomputes offline  [page 0.5195 scipy 0.5195 · window 2025-2026 · LiM n=6 mean +1.23 · comparison n=767 mean +0.25]
+ok   the headline counts schools, not band slices  [page 773 vs offline 773 on 2025-2026]
 ok   the page's Leader in Me count is the builder's  [6 vs 6]
 ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
 ok   choosing 'Title I schools' narrows the view and names it  [571 of 994 schools; In Connecticut Title I schools, between 2024-25 and 2025-26, Leader in Me school]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Connecticut schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025]
 ok   Title I status is known for most schools on the page  [97.4%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
@@ -176,8 +180,8 @@ ok   measure 'on_track' either draws or says why
 skip matched view  [fewer than three pairs, or a territory page]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Branford School District generates cards or says there is nothing to report  [3 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5241347646464495, 'n1': 6, 'n2': 768}]
+ok   Branford School District generates cards or says there is nothing to report  [5 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5194922772537626, 'n1': 6, 'n2': 767}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -194,11 +198,11 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [119 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [95,196 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [97,225 bytes]
 ok   the pptx export is named for the state and chart  [CT_Percent_meeting_the_standard_year_by_year_Connecticut_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [95,575 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [98,343 bytes]
 ok   the docx export is named for the state and chart  [CT_Percent_meeting_the_standard_year_by_year_Connecticut_schools.docx]
-ok   the research pack downloads with its sections  [4,390 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
+ok   the research pack downloads with its sections  [4,474 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
@@ -232,18 +236,18 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a descriptive page says so on the methods page
 
-  HEADLINE (statewide, 2025-2026, no filters): Leader in Me +1.23 pts (n=6) vs comparison +0.27 pts (n=768), p=0.5241 -> not significant
+  HEADLINE (statewide, 2025-2026, no filters): Leader in Me +1.23 pts (n=6) vs comparison +0.25 pts (n=767), p=0.5195 -> not significant
 
 ==========================================================================
-147 of 147 checks pass · 7 skipped
+150 of 150 checks pass · 7 skipped
 ==========================================================================
 
 $ python3 /home/claude/sdf/Build/states/ct_core_verify.py --work /home/claude/work1/CT
 
 Connecticut's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches every Leader in Me school  [11 of 11]
-ok   the crosswalk reaches nearly every comparison school  [948 of 956]
+ok   the crosswalk reaches every Leader in Me school  [13 of 13]
+ok   the crosswalk reaches nearly every comparison school  [946 of 954]
 ok   NCES's own id pairs anchor the crosswalk, the seven-digit code first and the five-digit form only where it opens one code  [948 seven-digit, 11 five-digit, of 967 schools]
 ok   the state file's own school names agree with DOMO's on nearly every crosswalked school (the second audit of the join)  [959 of 959; 0 read one by one]
 ok   the state's reporting district names DOMO's district on nearly every crosswalked school  [959 of 959]
@@ -270,16 +274,16 @@ ok   grad_rate: DOMO's own value stands on every school-year DOMO carries (never
 ok   grad_rate: the school-years DOMO lacks carry the state's value, and the audit counts them  [973 of 973 filled school-years; audit 973; years [2015, 2016, 2017, 2018, 2022, 2023, 2024]]
 ok   chronic absence now runs from the page's first year and never sits in a closure year  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   graduation sits on secondary rows only and never in a closure class
-ok   Accountability index: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 68.74 (n=4) vs offline 68.74 (n=4)]
-ok   Accountability index: the latest comparison point recomputes from the long table and the membership file  [2025: payload 70.07 (n=899) vs offline 70.07 (n=899)]
-ok   Chronic absenteeism: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 11.91 (n=4) vs offline 11.91 (n=4)]
-ok   Chronic absenteeism: the latest comparison point recomputes from the long table and the membership file  [2025: payload 15.65 (n=899) vs offline 15.65 (n=899)]
+ok   Accountability index: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 71.34 (n=5) vs offline 71.34 (n=5)]
+ok   Accountability index: the latest comparison point recomputes from the long table and the membership file  [2025: payload 70.05 (n=898) vs offline 70.05 (n=898)]
+ok   Chronic absenteeism: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 11.61 (n=5) vs offline 11.61 (n=5)]
+ok   Chronic absenteeism: the latest comparison point recomputes from the long table and the membership file  [2025: payload 15.66 (n=898) vs offline 15.66 (n=898)]
 ok   Meeting the ELA growth target: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 57.17 (n=3) vs offline 57.17 (n=3)]
 ok   Meeting the ELA growth target: the latest comparison point recomputes from the long table and the membership file  [2025: payload 63.82 (n=711) vs offline 63.82 (n=711)]
 ok   Meeting the math growth target: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 54.16 (n=3) vs offline 54.16 (n=3)]
 ok   Meeting the math growth target: the latest comparison point recomputes from the long table and the membership file  [2025: payload 65.85 (n=711) vs offline 65.85 (n=711)]
-ok   Meeting the physical fitness standard: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 49.22 (n=4) vs offline 49.22 (n=4)]
-ok   Meeting the physical fitness standard: the latest comparison point recomputes from the long table and the membership file  [2025: payload 51.41 (n=882) vs offline 51.41 (n=882)]
+ok   Meeting the physical fitness standard: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 57.77 (n=5) vs offline 57.77 (n=5)]
+ok   Meeting the physical fitness standard: the latest comparison point recomputes from the long table and the membership file  [2025: payload 51.37 (n=881) vs offline 51.37 (n=881)]
 ok   the closure years are on no Connecticut card  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   no card year sits past the core's last year or before its first  [2015 to 2025]
 ok   growth_ela sits in no closure year on the rows  [[2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
@@ -288,27 +292,27 @@ ok   fitness sits in no closure year on the rows  [[2015, 2016, 2017, 2018, 2019
 ok   the pack carries no closure year, nothing before the page's first year and nothing past its last  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   the 2014-15 accountability index carries no value in the pack or on the card, and 2015-16 on does
 ok   the class-keyed graduation rate carries the class of 2024 from the 2024-25 row and nothing for the closure classes
-ok   the indicators fewer than three counted Leader in Me schools carry stay off the rows and the card and sit in the pack  [thin rows: ['college_entrance', 'arts_access']; Leader in Me schools ever: {'growth_ela': 4, 'growth_math': 4, 'fitness': 5, 'on_track': 3, 'college_entrance': 1, 'arts_access': 1}]
+ok   the indicators fewer than three counted Leader in Me schools carry stay off the rows and the card and sit in the pack  [thin rows: ['college_entrance', 'arts_access']; Leader in Me schools ever: {'growth_ela': 4, 'growth_math': 4, 'fitness': 6, 'on_track': 4, 'college_entrance': 2, 'arts_access': 2}]
 ok   ninth graders on track is a measure on the rows (secondary band) and a line on the card
 ok   the participation rates sit in the pack under their own names and nowhere else
 ok   every exclusion is counted on the cleaning audit
 ok   the district and state rows are read for the pack's published section only
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 8,164 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [11 Leader in Me school-years on the cards]
-ok   every Leader in Me card member is a school the headline's roster counts  [5 schools]
-ok   Accountability index: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=4, 8 comparison points]
-ok   Chronic absenteeism: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=4, 9 comparison points]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 8,163 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [15 Leader in Me school-years on the cards]
+ok   every Leader in Me card member is a school the headline's roster counts  [6 schools]
+ok   Accountability index: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=5, 8 comparison points]
+ok   Chronic absenteeism: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=5, 9 comparison points]
 ok   Meeting the ELA growth target: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=3, 8 comparison points]
 ok   Meeting the math growth target: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=3, 8 comparison points]
-ok   Meeting the physical fitness standard: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=4, 9 comparison points]
-ok   Ninth graders on track to graduate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=3, 9 comparison points]
+ok   Meeting the physical fitness standard: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=5, 9 comparison points]
+ok   Ninth graders on track to graduate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=4, 9 comparison points]
 ok   every card measure carries the poverty context line
 ok   the card stays at a dozen measures or fewer  [6 on the card]
 ok   a line the Leader in Me side cannot fill is off the card and explained in the note  [thin: []]
-ok   a Leader in Me point exists only in a year with three counted schools, and the page names those years  [Leader in Me years [2025]; counted per year {'2017': 1, '2018': 1, '2019': 1, '2022': 1, '2023': 2, '2024': 1, '2025': 4}]
+ok   a Leader in Me point exists only in a year with three counted schools, and the page names those years  [Leader in Me years [2024, 2025]; counted per year {'2016': 1, '2017': 1, '2018': 1, '2019': 1, '2022': 1, '2023': 2, '2024': 3, '2025': 5}]
 ok   the card measures the module set out to carry are on it  [['acc_index', 'chronic_absent', 'fitness', 'growth_ela', 'growth_math', 'on_track']]
-ok   the descriptive limit names the most Leader in Me schools any card line rests on  [4 in the best year]
-ok   growth and fitness are measures in the rows with Leader in Me school-years behind them  [10 Leader in Me growth school-years]
+ok   the descriptive limit names the most Leader in Me schools any card line rests on  [5 in the best year]
+ok   growth and fitness are measures in the rows with Leader in Me school-years behind them  [12 Leader in Me growth school-years]
 ok   a whole-school measure is carried on both bands of a combined school
 ok   chronic absence and graduation are described as state-filled in the measure text
 ok   the research pack's per-school Connecticut values are keyed to schools on the page  [8,286 records]

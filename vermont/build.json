@@ -2,12 +2,12 @@
  "state": "VT",
  "name": "Vermont",
  "folder": "vermont",
- "built": "2026-09-08",
- "seconds": 59,
+ "built": "2026-10-06",
+ "seconds": 49,
  "builder": "build_payload_core.py",
  "page_kind": "descriptive",
  "lim_headline_n": 4,
- "schools": 447,
+ "schools": 448,
  "years": [
   2015,
   2025
@@ -17,39 +17,39 @@
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-04"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/VT/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/VT/data/Subjects_Tests_FINAL (8).csv",
    "rows": 15650
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/VT/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/work1/VT/data/LIM Schools (Current_Active) (11).csv",
    "rows": 50
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/VT/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/work1/VT/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 2057
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/VT/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/VT/data/All MRA Surveys.csv",
    "rows": 14
   }
  },
@@ -60,7 +60,7 @@
  ],
  "extras_module": "vt_core_extras",
  "verified": true,
- "dashboard_bytes": 791912,
+ "dashboard_bytes": 806511,
  "latest_results": {
   "year": 2025,
   "label": "2024-25",
@@ -73,6 +73,217 @@
   "missing": [],
   "rows_share_of_prior": 0.96,
   "prior_year": 2024
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 1170,
+    "2016": 1129,
+    "2017": 1090,
+    "2018": 676,
+    "2019": 874,
+    "2022": 786,
+    "2023": 575,
+    "2024": 850,
+    "2025": 820
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 332,
+    "2016": 1129,
+    "2017": 292,
+    "2019": 874,
+    "2022": 786,
+    "2023": 575,
+    "2024": 850,
+    "2025": 820
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 332,
+    "2016": 1129,
+    "2017": 292,
+    "2019": 874,
+    "2022": 786,
+    "2023": 575,
+    "2024": 850,
+    "2025": 820
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 332,
+    "2016": 1129,
+    "2017": 292,
+    "2019": 874,
+    "2022": 786,
+    "2023": 575,
+    "2024": 850,
+    "2025": 820
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 332,
+    "2016": 315,
+    "2017": 292,
+    "2019": 874,
+    "2022": 786,
+    "2023": 575,
+    "2024": 850,
+    "2025": 820
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 1009,
+    "2016": 970,
+    "2017": 938,
+    "2018": 526,
+    "2019": 764,
+    "2022": 677,
+    "2023": 490,
+    "2024": 731,
+    "2025": 717
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 328,
+    "2019": 525,
+    "2022": 368,
+    "2023": 290,
+    "2024": 370
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2015": 258,
+    "2016": 247,
+    "2017": 239,
+    "2018": 146,
+    "2019": 218,
+    "2022": 177,
+    "2023": 112,
+    "2024": 213,
+    "2025": 185
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2015": 1133,
+    "2016": 1128,
+    "2017": 1111,
+    "2018": 551,
+    "2019": 937,
+    "2022": 909,
+    "2023": 753,
+    "2024": 946,
+    "2025": 936
+   }
+  },
+  "truancy_rate": {
+   "label": "Truancy rate (2021-22 on)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2022": 1,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "promotion_rate": {
+   "label": "Promotion rate (2021-22 on)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "dropout_4yr": {
+   "label": "Four-year cohort dropout rate (Vermont Education Dashboard; through 2017-18)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 57,
+    "2016": 53,
+    "2017": 55,
+    "2018": 56
+   }
+  },
+  "grad_4yr": {
+   "label": "Four-year graduation rate (Vermont Education Dashboard; the same figure as DOMO's, which it fills where DOMO has none)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 58,
+    "2016": 58,
+    "2017": 58,
+    "2018": 56,
+    "2019": 55,
+    "2022": 53,
+    "2023": 53,
+    "2024": 53,
+    "2025": 50
+   }
+  },
+  "grad_6yr": {
+   "label": "Six-year graduation rate (Vermont Education Dashboard)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 58,
+    "2016": 58,
+    "2017": 58,
+    "2018": 58,
+    "2019": 54,
+    "2022": 53,
+    "2023": 53,
+    "2024": 51,
+    "2025": 52
+   }
+  },
+  "postsec_enroll": {
+   "label": "Postsecondary enrollment rate of the graduating class (AOE workbook; the class of 2015 only on this page)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2015": 51
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -367,22 +578,22 @@
   "statewide_jumps": [],
   "sensitivity": {
    "with": {
-    "y0": 2023,
+    "y0": 2022,
     "y1": 2025,
     "lim_n": 4,
-    "comp_n": 127,
-    "lim_change": 2.39,
-    "comp_change": 0.86,
-    "p": 0.809
+    "comp_n": 156,
+    "lim_change": 10.2,
+    "comp_change": 7.94,
+    "p": 0.491
    },
    "without": {
-    "y0": 2023,
+    "y0": 2022,
     "y1": 2025,
     "lim_n": 4,
-    "comp_n": 127,
-    "lim_change": 2.39,
-    "comp_change": 0.86,
-    "p": 0.809
+    "comp_n": 156,
+    "lim_change": 10.2,
+    "comp_change": 7.94,
+    "p": 0.491
    },
    "schools": 3
   },
@@ -390,225 +601,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 1,
-  "in_the_process": 1,
+  "qualified": 2,
+  "in_the_process": 2,
   "lapsed_on_the_list": 0,
   "reviewed": 7,
   "measures": 53,
   "outcomes": 12,
-  "improved_every_year": 1,
+  "improved_every_year": 2,
   "lapsed_longer_ago": 0
  },
- "best_schools_added": "2026-09-10",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Meeting or exceeding the standard (levels 3 and 4)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 1165,
-    "2016": 1124,
-    "2017": 1085,
-    "2018": 672,
-    "2019": 869,
-    "2022": 781,
-    "2023": 570,
-    "2024": 845,
-    "2025": 815
-   }
-  },
-  "percent_level4": {
-   "label": "Level 4: exceeding the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 331,
-    "2016": 1124,
-    "2017": 291,
-    "2019": 869,
-    "2022": 781,
-    "2023": 570,
-    "2024": 845,
-    "2025": 815
-   }
-  },
-  "percent_level3": {
-   "label": "Level 3: meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 331,
-    "2016": 1124,
-    "2017": 291,
-    "2019": 869,
-    "2022": 781,
-    "2023": 570,
-    "2024": 845,
-    "2025": 815
-   }
-  },
-  "percent_level2": {
-   "label": "Level 2: approaching the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 331,
-    "2016": 1124,
-    "2017": 291,
-    "2019": 869,
-    "2022": 781,
-    "2023": 570,
-    "2024": 845,
-    "2025": 815
-   }
-  },
-  "percent_below": {
-   "label": "Level 1: below the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 331,
-    "2016": 314,
-    "2017": 291,
-    "2019": 869,
-    "2022": 781,
-    "2023": 570,
-    "2024": 845,
-    "2025": 815
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 1009,
-    "2016": 970,
-    "2017": 938,
-    "2018": 524,
-    "2019": 761,
-    "2022": 674,
-    "2023": 487,
-    "2024": 728,
-    "2025": 714
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2018": 328,
-    "2019": 525,
-    "2022": 368,
-    "2023": 290,
-    "2024": 370
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2015": 258,
-    "2016": 247,
-    "2017": 239,
-    "2018": 146,
-    "2019": 218,
-    "2022": 177,
-    "2023": 112,
-    "2024": 213,
-    "2025": 185
-   }
-  },
-  "attendance_rate": {
-   "label": "Attendance rate",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2015": 1128,
-    "2016": 1123,
-    "2017": 1106,
-    "2018": 547,
-    "2019": 932,
-    "2022": 904,
-    "2023": 748,
-    "2024": 941,
-    "2025": 931
-   }
-  },
-  "truancy_rate": {
-   "label": "Truancy rate (2021-22 on)",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2022": 1,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "promotion_rate": {
-   "label": "Promotion rate (2021-22 on)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "dropout_4yr": {
-   "label": "Four-year cohort dropout rate (Vermont Education Dashboard; through 2017-18)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 57,
-    "2016": 53,
-    "2017": 55,
-    "2018": 56
-   }
-  },
-  "grad_4yr": {
-   "label": "Four-year graduation rate (Vermont Education Dashboard; the same figure as DOMO's, which it fills where DOMO has none)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 58,
-    "2016": 58,
-    "2017": 58,
-    "2018": 56,
-    "2019": 55,
-    "2022": 53,
-    "2023": 53,
-    "2024": 53,
-    "2025": 50
-   }
-  },
-  "grad_6yr": {
-   "label": "Six-year graduation rate (Vermont Education Dashboard)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 58,
-    "2016": 58,
-    "2017": 58,
-    "2018": 58,
-    "2019": 54,
-    "2022": 53,
-    "2023": 53,
-    "2024": 51,
-    "2025": 52
-   }
-  },
-  "postsec_enroll": {
-   "label": "Postsecondary enrollment rate of the graduating class (AOE workbook; the class of 2015 only on this page)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2015": 51
-   }
-  }
- }
+ "best_schools_added": "2026-10-06"
 }

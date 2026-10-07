@@ -2,61 +2,61 @@
  "state": "KS",
  "name": "Kansas",
  "folder": "kansas",
- "built": "2026-09-08",
- "seconds": 90,
+ "built": "2026-10-06",
+ "seconds": 67,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 52,
+ "lim_headline_n": 60,
  "schools": 1293,
  "years": [
   2015,
   2025
  ],
- "lim_roster_schools": 78,
+ "lim_roster_schools": 81,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-04"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
-   "file": "Archive.zip/All Other Schools (Non-LiM & Exited).csv",
-   "bytes": 146145669,
-   "modified": "2026-09-04"
+   "file": "All Other Schools (Non-LiM & Exited).csv",
+   "bytes": 132812308,
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-04"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/sdf/Build/work/KS/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/KS/data/Subjects_Tests_FINAL (8).csv",
    "rows": 103501
   },
   "roster": {
-   "path": "/home/claude/sdf/Build/work/KS/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 745
+   "path": "/home/claude/work1/KS/data/LIM Schools (Current_Active) (11).csv",
+   "rows": 751
   },
   "comparison": {
-   "path": "/home/claude/sdf/Build/work/KS/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 11084
+   "path": "/home/claude/work1/KS/data/All Other Schools (Non-LiM & Exited).csv",
+   "rows": 11078
   },
   "mra": {
-   "path": "/home/claude/sdf/Build/work/KS/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/KS/data/All MRA Surveys.csv",
    "rows": 182
   }
  },
  "state_files": [],
  "extras_module": null,
  "verified": true,
- "dashboard_bytes": 2357081,
+ "dashboard_bytes": 2369031,
  "latest_results": {
   "year": 2025,
   "label": "2024-25",
@@ -69,6 +69,120 @@
   "missing": [],
   "rows_share_of_prior": 0.93,
   "prior_year": 2024
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4528,
+    "2016": 3040,
+    "2017": 4244,
+    "2018": 4330,
+    "2019": 4411,
+    "2022": 4360,
+    "2023": 4333,
+    "2024": 4284,
+    "2025": 3986
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3040,
+    "2017": 4244,
+    "2018": 4330,
+    "2019": 4411,
+    "2022": 4360,
+    "2023": 4333,
+    "2024": 4284,
+    "2025": 3986
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3040,
+    "2017": 4244,
+    "2018": 4330,
+    "2019": 4411,
+    "2022": 4360,
+    "2023": 4333,
+    "2024": 4284,
+    "2025": 3986
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3040,
+    "2017": 4244,
+    "2018": 4330,
+    "2019": 4411,
+    "2022": 4360,
+    "2023": 4333,
+    "2024": 4284,
+    "2025": 3986
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2016": 3040,
+    "2017": 4244,
+    "2018": 4330,
+    "2019": 4411,
+    "2022": 4360,
+    "2023": 4333,
+    "2024": 4284,
+    "2025": 3986
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4111,
+    "2016": 2634,
+    "2017": 3812,
+    "2018": 3893,
+    "2019": 3989,
+    "2022": 3977,
+    "2023": 3951,
+    "2024": 3907,
+    "2025": 3619
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2023": 4333,
+    "2024": 4284,
+    "2025": 3986
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2022": 1274,
+    "2023": 1290,
+    "2024": 1260
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -416,18 +530,18 @@
   },
   "poverty": {
    "lim": {
-    "schools": 78,
+    "schools": 81,
     "missing": 0,
     "at_99_or_more": 0,
     "above_100": 0,
-    "high_poverty_share": 24.4
+    "high_poverty_share": 23.5
    },
    "comparison": {
-    "schools": 1217,
+    "schools": 1214,
     "missing": 10,
     "at_99_or_more": 1,
     "above_100": 0,
-    "high_poverty_share": 15.9
+    "high_poverty_share": 16.0
    }
   },
   "statewide_jumps": [
@@ -444,20 +558,20 @@
    "with": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 52,
-    "comp_n": 1079,
-    "lim_change": 8.62,
-    "comp_change": 10.9,
-    "p": 0.027
+    "lim_n": 60,
+    "comp_n": 1071,
+    "lim_change": 9.59,
+    "comp_change": 10.86,
+    "p": 0.249
    },
    "without": {
     "y0": 2022,
     "y1": 2025,
-    "lim_n": 49,
-    "comp_n": 1079,
-    "lim_change": 8.6,
-    "comp_change": 10.9,
-    "p": 0.031
+    "lim_n": 57,
+    "comp_n": 1071,
+    "lim_change": 9.63,
+    "comp_change": 10.86,
+    "p": 0.278
    },
    "schools": 3
   },
@@ -465,128 +579,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 7,
-  "in_the_process": 6,
+  "qualified": 8,
+  "in_the_process": 7,
   "lapsed_on_the_list": 1,
-  "reviewed": 50,
+  "reviewed": 58,
   "measures": 49,
   "outcomes": 9,
   "improved_every_year": 2,
   "lapsed_longer_ago": 17
  },
- "best_schools_added": "2026-09-10",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Meeting or exceeding the standard (levels 3 and 4)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 4528,
-    "2016": 3040,
-    "2017": 4244,
-    "2018": 4330,
-    "2019": 4411,
-    "2022": 4360,
-    "2023": 4333,
-    "2024": 4284,
-    "2025": 3986
-   }
-  },
-  "percent_level4": {
-   "label": "Level 4: exceeding the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2016": 3040,
-    "2017": 4244,
-    "2018": 4330,
-    "2019": 4411,
-    "2022": 4360,
-    "2023": 4333,
-    "2024": 4284,
-    "2025": 3986
-   }
-  },
-  "percent_level3": {
-   "label": "Level 3: meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2016": 3040,
-    "2017": 4244,
-    "2018": 4330,
-    "2019": 4411,
-    "2022": 4360,
-    "2023": 4333,
-    "2024": 4284,
-    "2025": 3986
-   }
-  },
-  "percent_level2": {
-   "label": "Level 2: approaching the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2016": 3040,
-    "2017": 4244,
-    "2018": 4330,
-    "2019": 4411,
-    "2022": 4360,
-    "2023": 4333,
-    "2024": 4284,
-    "2025": 3986
-   }
-  },
-  "percent_below": {
-   "label": "Level 1: below the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2016": 3040,
-    "2017": 4244,
-    "2018": 4330,
-    "2019": 4411,
-    "2022": 4360,
-    "2023": 4333,
-    "2024": 4284,
-    "2025": 3986
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 4111,
-    "2016": 2634,
-    "2017": 3812,
-    "2018": 3893,
-    "2019": 3989,
-    "2022": 3977,
-    "2023": 3951,
-    "2024": 3907,
-    "2025": 3619
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2023": 4333,
-    "2024": 4284,
-    "2025": 3986
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2022": 1274,
-    "2023": 1290,
-    "2024": 1260
-   }
-  }
- }
+ "best_schools_added": "2026-10-06"
 }

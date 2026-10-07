@@ -2,17 +2,17 @@
  "state": "NC",
  "name": "North Carolina",
  "folder": "north-carolina",
- "built": "2026-10-01",
- "seconds": 158,
+ "built": "2026-10-06",
+ "seconds": 168,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 140,
- "schools": 2757,
+ "lim_headline_n": 143,
+ "schools": 2760,
  "years": [
   2015,
   2026
  ],
- "lim_roster_schools": 195,
+ "lim_roster_schools": 199,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,11 +42,11 @@
   },
   "roster": {
    "path": "/home/claude/work1/NC/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 1865
+   "rows": 2067
   },
   "comparison": {
    "path": "/home/claude/work1/NC/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 22705
+   "rows": 22697
   },
   "mra": {
    "path": "/home/claude/work1/NC/data/All MRA Surveys.csv",
@@ -91,7 +91,7 @@
  ],
  "extras_module": "nc_core_extras",
  "verified": true,
- "dashboard_bytes": 6429759,
+ "dashboard_bytes": 6451051,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -104,102 +104,22 @@
   "rows_share_of_prior": 0.96,
   "prior_year": 2025
  },
- "audits": {
-  "levels": {
-   "rows": 170681,
-   "levels 3 and 4": 5.5,
-   "levels 2, 3 and 4": 5.5,
-   "level 4 alone": 0.2,
-   "100 minus level 1": 51.4,
-   "best": "100 minus level 1",
-   "levels_sum_to_100_share": 6.0,
-   "structure": "no combination of the reported levels reproduces the proficiency rate",
-   "n_levels": null,
-   "proficient_from": null,
-   "reversed_numbering": null,
-   "coverage": 0.0,
-   "years_ok": null,
-   "years_out": null,
-   "cells_out": null,
-   "latest_year_ok": null,
-   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 10% of rows (a five-level state whose export carries four columns, usually)",
-   "combination_shares": {
-    "levels 3 and 4": 9.5,
-    "levels 2, 3 and 4": 10.2,
-    "levels 1 and 2 (1 the top)": 2.8,
-    "levels 1, 2 and 3 (1 the top)": 2.8
-   },
-   "cells": [],
-   "levels_as_measures": false
-  },
-  "poverty": {
-   "lim": {
-    "schools": 195,
-    "missing": 0,
-    "at_99_or_more": 81,
-    "above_100": 0,
-    "high_poverty_share": 69.2
-   },
-   "comparison": {
-    "schools": 2567,
-    "missing": 31,
-    "at_99_or_more": 980,
-    "above_100": 6,
-    "high_poverty_share": 69.0
-   }
-  },
-  "statewide_jumps": [],
-  "sensitivity": {
-   "with": {
-    "y0": 2022,
-    "y1": 2026,
-    "lim_n": 140,
-    "comp_n": 2215,
-    "lim_change": 8.15,
-    "comp_change": 8.37,
-    "p": 0.75
-   },
-   "without": {
-    "y0": 2022,
-    "y1": 2026,
-    "lim_n": 117,
-    "comp_n": 2215,
-    "lim_change": 8.1,
-    "comp_change": 8.37,
-    "p": 0.73
-   },
-   "schools": 25
-  },
-  "subjects_by_keyword": [],
-  "subjects_excluded": []
- },
- "best_schools": {
-  "qualified": 46,
-  "in_the_process": 45,
-  "lapsed_on_the_list": 1,
-  "reviewed": 142,
-  "measures": 55,
-  "outcomes": 18,
-  "improved_every_year": 5,
-  "lapsed_longer_ago": 47
- },
- "best_schools_added": "2026-09-30",
  "measure_years": {
   "percent_proficient": {
    "label": "Percent meeting the standard",
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 8721,
-    "2016": 8499,
-    "2017": 8011,
-    "2018": 7932,
-    "2019": 8237,
-    "2022": 8810,
-    "2023": 8772,
-    "2024": 8814,
-    "2025": 5890,
-    "2026": 5628
+    "2015": 8732,
+    "2016": 8510,
+    "2017": 8020,
+    "2018": 7941,
+    "2019": 8246,
+    "2022": 8819,
+    "2023": 8781,
+    "2024": 8823,
+    "2025": 5896,
+    "2026": 5634
    }
   },
   "percent_below": {
@@ -207,16 +127,16 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 7712,
-    "2016": 5486,
-    "2017": 5603,
-    "2018": 5526,
-    "2019": 5307,
-    "2022": 8810,
-    "2023": 8772,
-    "2024": 8814,
-    "2025": 5890,
-    "2026": 5584
+    "2015": 7721,
+    "2016": 5494,
+    "2017": 5610,
+    "2018": 5533,
+    "2019": 5313,
+    "2022": 8819,
+    "2023": 8781,
+    "2024": 8823,
+    "2025": 5896,
+    "2026": 5590
    }
   },
   "standard_score": {
@@ -224,15 +144,15 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 8493,
-    "2016": 8293,
-    "2017": 7809,
-    "2018": 7705,
-    "2019": 8032,
-    "2022": 8642,
-    "2023": 8602,
-    "2024": 8647,
-    "2025": 5748
+    "2015": 8504,
+    "2016": 8304,
+    "2017": 7818,
+    "2018": 7714,
+    "2019": 8041,
+    "2022": 8651,
+    "2023": 8611,
+    "2024": 8656,
+    "2025": 5754
    }
   },
   "chronic_absent": {
@@ -240,12 +160,12 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2018": 7722,
-    "2019": 8020,
-    "2022": 8653,
-    "2023": 8598,
-    "2024": 8649,
-    "2025": 5784
+    "2018": 7731,
+    "2019": 8029,
+    "2022": 8662,
+    "2023": 8607,
+    "2024": 8658,
+    "2025": 5790
    }
   },
   "grad_rate": {
@@ -479,12 +399,12 @@
    "kind": "pack",
    "family": "attendance",
    "years": {
-    "2018": 2370,
-    "2019": 2497,
-    "2022": 2577,
-    "2023": 2575,
-    "2024": 2573,
-    "2025": 2546
+    "2018": 2373,
+    "2019": 2500,
+    "2022": 2580,
+    "2023": 2578,
+    "2024": 2576,
+    "2025": 2549
    }
   },
   "spg_grade": {
@@ -492,13 +412,93 @@
    "kind": "pack",
    "family": "academic",
    "years": {
-    "2018": 2431,
-    "2019": 2437,
-    "2022": 2487,
-    "2023": 2491,
-    "2024": 2489,
-    "2025": 2462
+    "2018": 2434,
+    "2019": 2440,
+    "2022": 2490,
+    "2023": 2494,
+    "2024": 2492,
+    "2025": 2465
    }
   }
- }
+ },
+ "audits": {
+  "levels": {
+   "rows": 170681,
+   "levels 3 and 4": 5.5,
+   "levels 2, 3 and 4": 5.5,
+   "level 4 alone": 0.2,
+   "100 minus level 1": 51.4,
+   "best": "100 minus level 1",
+   "levels_sum_to_100_share": 6.0,
+   "structure": "no combination of the reported levels reproduces the proficiency rate",
+   "n_levels": null,
+   "proficient_from": null,
+   "reversed_numbering": null,
+   "coverage": 0.0,
+   "years_ok": null,
+   "years_out": null,
+   "cells_out": null,
+   "latest_year_ok": null,
+   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 10% of rows (a five-level state whose export carries four columns, usually)",
+   "combination_shares": {
+    "levels 3 and 4": 9.5,
+    "levels 2, 3 and 4": 10.2,
+    "levels 1 and 2 (1 the top)": 2.8,
+    "levels 1, 2 and 3 (1 the top)": 2.8
+   },
+   "cells": [],
+   "levels_as_measures": false
+  },
+  "poverty": {
+   "lim": {
+    "schools": 199,
+    "missing": 0,
+    "at_99_or_more": 83,
+    "above_100": 0,
+    "high_poverty_share": 69.3
+   },
+   "comparison": {
+    "schools": 2563,
+    "missing": 31,
+    "at_99_or_more": 978,
+    "above_100": 6,
+    "high_poverty_share": 69.0
+   }
+  },
+  "statewide_jumps": [],
+  "sensitivity": {
+   "with": {
+    "y0": 2022,
+    "y1": 2026,
+    "lim_n": 143,
+    "comp_n": 2214,
+    "lim_change": 8.2,
+    "comp_change": 8.36,
+    "p": 0.814
+   },
+   "without": {
+    "y0": 2022,
+    "y1": 2026,
+    "lim_n": 120,
+    "comp_n": 2214,
+    "lim_change": 8.15,
+    "comp_change": 8.36,
+    "p": 0.794
+   },
+   "schools": 25
+  },
+  "subjects_by_keyword": [],
+  "subjects_excluded": []
+ },
+ "best_schools": {
+  "qualified": 46,
+  "in_the_process": 45,
+  "lapsed_on_the_list": 1,
+  "reviewed": 145,
+  "measures": 54,
+  "outcomes": 17,
+  "improved_every_year": 7,
+  "lapsed_longer_ago": 47
+ },
+ "best_schools_added": "2026-09-30"
 }

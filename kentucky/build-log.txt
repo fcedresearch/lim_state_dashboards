@@ -1,20 +1,21 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state KY --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/KY --data /home/claude/sdf/Build/work/KY/data --extras ky_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state KY --core /home/claude/sdf/Core --out /home/claude/work1/KY --data /home/claude/work1/KY/data --extras ky_core_extras
 reading the core for Kentucky ...
 [core] subjects: 111,023 school rows kept; dropped 42,961 rows with no school id and 1,155 with an id but no school record
-[core] Leader in Me roster: 2,372 rows
+[core] Leader in Me roster: 2,408 rows
 [core] comparison schools: 9,137 rows
+[core] comparison: 36 rows set aside for 18 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 234 rows
-  subject rows 111,023 · roster rows 2,372 (254 schools) · comparison rows 9,137 (1059 schools) · MRA surveys 234
+  subject rows 111,023 · roster rows 2,408 (272 schools) · comparison rows 9,101 (1059 schools) · MRA surveys 234
   subject labels excluded (not achievement tests): ['Editing and Mechanics', 'Language Mechanics']
-[core] Leader in Me roster: 56,181 rows
-  exits: 215 of 254 roster schools carry an expiration date; 82 past it by more than 30 days (exited), 2 inside the grace window, 131 in the future, 39 undated (37 with a start date)
+[core] Leader in Me roster: 59,452 rows
+  exits: 233 of 272 roster schools carry an expiration date; 81 past it by more than 30 days (exited), 0 inside the grace window, 152 in the future, 39 undated (37 with a start date)
   1,311 schools · 176 districts
   2 roster schools have comparison-export rows after their roster years (DOMO's own flag says they left): read as exited after [2016]
 applying the cleaning rules ...
-  51,981 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 1082 of 2286 reviewed
-  no start date: 20 schools · dated exits: 54 (school-years after an exit with rows: 158) · aggregate 'All grades' rows used 0, skipped 0
+  52,632 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
+  Leader in Me school-years counted: 1138 of 2448 reviewed
+  no start date: 4 schools · dated exits: 54 (school-years after an exit with rows: 158) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 94.7% of rows in years and subjects whose levels add up)
   proficiency = levels 3 and 4 on 77.0% of rows
 folding in Kentucky's own measures (ky_core_extras) ...
@@ -98,6 +99,15 @@ folding in Kentucky's own measures (ky_core_extras) ...
     set aside: accountability_summary_2021.csv: the by-demographic summary; the profile carries the all-students figures
     set aside: accountability_summary_2022.csv: the by-demographic summary; the profile carries the all-students figures
     set aside: accountability_summary_2023.csv: the by-demographic summary; the profile carries the all-students figures
+    set aside: KYRC24_ACCT_Survey_Results.csv: the untrimmed survey file (the trimmed school-level extract is read)
+    set aside: quality_of_school_climate_and_safety_survey_elementary_school_2022.csv: the untrimmed survey file (the trimmed school-level extract is read)
+    set aside: quality_of_school_climate_and_safety_survey_elementary_school_2023.csv: the untrimmed survey file (the trimmed school-level extract is read)
+    set aside: quality_of_school_climate_and_safety_survey_high_school_2021.csv: the untrimmed survey file (the trimmed school-level extract is read)
+    set aside: quality_of_school_climate_and_safety_survey_high_school_2022.csv: the untrimmed survey file (the trimmed school-level extract is read)
+    set aside: quality_of_school_climate_and_safety_survey_high_school_2023.csv: the untrimmed survey file (the trimmed school-level extract is read)
+    set aside: quality_of_school_climate_and_safety_survey_middle_school_2021.csv: the untrimmed survey file (the trimmed school-level extract is read)
+    set aside: quality_of_school_climate_and_safety_survey_middle_school_2022.csv: the untrimmed survey file (the trimmed school-level extract is read)
+    set aside: quality_of_school_climate_and_safety_survey_middle_school_2023.csv: the untrimmed survey file (the trimmed school-level extract is read)
     set aside: KYRC24_OVW_Arrests_and_Referrals_to_Law_Enforcement.csv: a federal civil-rights collection for 2020-21 re-printed on the 2023-24 report card, excluded by name
     set aside: KYRC24_OVW_Harassment_and_Bullying.csv: safe-schools detail (events by type, grade, location, context; legal sanctions; precautionary measures; harassment; violent offenses; preschool) not carried
     set aside: KYRC24_OVW_Preschool_Suspensions_and_Expulsions.csv: safe-schools detail (events by type, grade, location, context; legal sanctions; precautionary measures; harassment; violent offenses; preschool) not carried
@@ -151,44 +161,68 @@ folding in Kentucky's own measures (ky_core_extras) ...
     set aside: transition_to_adult_life_2022.csv: graduate-outcome survey, graduate counts or career readiness indicators, not carried
     set aside: transition_to_adult_life_2023.csv: graduate-outcome survey, graduate counts or career readiness indicators, not carried
     set aside: 42 career and technical education files (pathways, participation, Perkins), not carried
-    NCES directory: 1,679 federal-to-state id pairs from the cache (8 CCD files unchanged)
-    survey items: 160,610 school-level-item rows for 5 survey years from the cache (extracts unchanged)
-    HSFR: the High School Summary sheet (95,950 rows) from the cache (workbook unchanged)
+    NCES directory: 1,679 federal-to-state id pairs for Kentucky from 8 CCD files (2016-17 to 2023-24), cached
+    read ACCOUNTABILITY_FEDERAL_DATA_ATTENDANCE_14-15.xlsx (Sheet 1, 1,330 rows) into the cache
+    read ACCOUNTABILITY_FEDERAL_DATA_ATTENDANCE_15-16.xlsx (Sheet 1, 1,325 rows) into the cache
+    read ACCOUNTABILITY_FEDERAL_DATA_ATTENDANCE_16-17.xlsx (Sheet 1, 1,322 rows) into the cache
+    read SAAR_ATTENDENCE_RATE_17-18.xlsx (DATA, 1,535 rows) into the cache
+    read SAAR_ATTENDENCE_RATE_18-19.xlsx (DATA, 1,543 rows) into the cache
+    read SAAR_DAILY_ATTENDANCE_17-18.xlsx (DATA, 1,535 rows) into the cache
+    read SAAR_DAILY_ATTENDANCE_18-19.xlsx (DATA, 1,543 rows) into the cache
+    survey items: 160,610 school-level-item rows for 5 survey years, cached in cache/
+    read LEARNING_ENVIRONMENT_SAFETY_14-15.xlsx (Sheet 1, 87,903 rows) into the cache
+    read LEARNING_ENVIRONMENT_SAFETY_15-16.xlsx (Sheet 1, 94,070 rows) into the cache
+    read LEARNING_ENVIRONMENT_SAFETY_16-17.xlsx (Sheet 1, 89,901 rows) into the cache
+    read SAFESCHOOLS_SCHOOL_17-18.xlsx (DATA, 56,251 rows) into the cache
+    read SAFE_SCHOOLS_18-19.xlsx (DATA, 89,095 rows) into the cache
+    read ACCOUNTABILITY_PROFILE_14-15.xlsx (Sheet 1, 1,450 rows) into the cache
+    read ACCOUNTABILITY_PROFILE_15-16.xlsx (Sheet 1, 1,446 rows) into the cache
+    read ACCOUNTABILITY_PROFILE_16-17.xlsx (Sheet 1, 1,445 rows) into the cache
+    read ACCOUNTABILITY_SUMMARY_17-18.xlsx (DATA, 1,816 rows) into the cache
+    read ACCOUNTABILITY_PROFILE_18-19.xlsx (DATA, 1,816 rows) into the cache
+    read TRANSITION_READINESS_ACCOUNTABILITY_17-18.xlsx (DATA, 8,932 rows) into the cache
+    read TRANSITION_READINESS_ACCOUNTABILITY_18-19.xlsx (DATA, 9,744 rows) into the cache
+    read ACCOUNTABILITY_CCR_HIGHSCHOOL_14-15.xlsx (Sheet 1, 6,902 rows) into the cache
+    read ACCOUNTABILITY_CCR_HIGHSCHOOL_15-16.xlsx (Sheet 1, 6,902 rows) into the cache
+    read ACCOUNTABILITY_CCR_HIGHSCHOOL_16-17.xlsx (Sheet 1, 7,308 rows) into the cache
+    HSFR: reading the High School Summary and College Year 1 Summary sheets of HSFR_PAF.xlsb (49 MB) through pyxlsb
+    read HSFR_PDF_PAF.xlsx (HS Grads 23-24, 229 rows) into the cache
   survey: items for 2021, 2022, 2023, 2024, 2025 (5,786 school-level-years); the indexes for 2022, 2023, 2024, 2025 (4,499 school-years); card items in every drawn year: svy_caring 2021-2025 (5 yrs, ES/HS/MS); svy_adults_care 2021-2025 (5 yrs, ES/HS/MS); svy_safe_classes 2021-2025 (5 yrs, ES/HS/MS); svy_adult_listens 2021-2025 (5 yrs, ES/HS/MS)
   attendance rate for 2015, 2016, 2017, 2018, 2019, 2023, 2024, 2025; discipline for 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025; accountability profile for 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025; readiness for 2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025; college-going for the classes of 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
   crosswalk: NCES's state school code for each federal id, confirmed by the state files' own NCES columns and audited against their names
-    1,311 of 1,311 schools carry a state school code; Leader in Me 254 of 254, comparison 1,057 of 1,057; 1,311 appear in at least one Kentucky file
+    1,311 of 1,311 schools carry a state school code; Leader in Me 272 of 272, comparison 1,039 of 1,039; 1,311 appear in at least one Kentucky file
     pairs by source {'NCES and the state files': 1299, 'the state files only': 12, 'NCES only': 0}; the two sources disagree on 4 codes (renumbered schools, both ids kept with their years); 0 codes sit on two page schools; 0 schools carry more than one code
     names: the state files' own school name agrees with DOMO's on 1,310 of 1,311 crosswalked schools
-  value check of the join (files the map was not built from): the state's attendance rate against DOMO's chronic absence on 3,240 school-years (2022-23, 2023-24, 2024-25), Spearman -0.982 (mean DOMO chronic absence by attendance quarter {'lowest attendance quarter': 47.4, 'second': 30.6, 'third': 21.6, 'highest attendance quarter': 13.2}); the state's graduation indicator against DOMO's graduation rate on 440, Spearman 0.871, equal within 0.15 on 12.3% (so DOMO's rate is another measure and is not filled)
-  suspension denominator: events per 100 of DOMO's enrollment against events per 100 of the state's ADA on 5,216 school-years, Spearman 0.995; median ADA-to-DOMO ratio 0.923; 543 school-years at programs DOMO records under 50 students carry no rate
-  rows gain: climate_index on 4,717 school-year-bands (181 Leader in Me schools ever), safety_index on 4,717 school-year-bands (181 Leader in Me schools ever), attend_rate on 11,054 school-year-bands (207 Leader in Me schools ever), oss_per100 on 11,899 school-year-bands (206 Leader in Me schools ever), acct_overall on 3,535 school-year-bands (172 Leader in Me schools ever), grad_rate_ky on 1,335 school-year-bands (25 Leader in Me schools ever), postsec_ready on 1,332 school-year-bands (25 Leader in Me schools ever), college_going on 1,761 school-year-bands (25 Leader in Me schools ever); 0 school-years had no band to sit in
+  value check of the join (files the map was not built from): the state's attendance rate against DOMO's chronic absence on 3,288 school-years (2022-23, 2023-24, 2024-25), Spearman -0.981 (mean DOMO chronic absence by attendance quarter {'lowest attendance quarter': 46.8, 'second': 30.4, 'third': 21.6, 'highest attendance quarter': 13.2}); the state's graduation indicator against DOMO's graduation rate on 448, Spearman 0.871, equal within 0.15 on 12.1% (so DOMO's rate is another measure and is not filled)
+  suspension denominator: events per 100 of DOMO's enrollment against events per 100 of the state's ADA on 5,296 school-years, Spearman 0.995; median ADA-to-DOMO ratio 0.923; 543 school-years at programs DOMO records under 50 students carry no rate
+  rows gain: climate_index on 4,781 school-year-bands (193 Leader in Me schools ever), safety_index on 4,781 school-year-bands (193 Leader in Me schools ever), attend_rate on 11,182 school-year-bands (222 Leader in Me schools ever), oss_per100 on 12,043 school-year-bands (219 Leader in Me schools ever), acct_overall on 3,583 school-year-bands (184 Leader in Me schools ever), grad_rate_ky on 1,359 school-year-bands (28 Leader in Me schools ever), postsec_ready on 1,356 school-year-bands (28 Leader in Me schools ever), college_going on 1,793 school-year-bands (25 Leader in Me schools ever); 0 school-years had no band to sit in
   card: 12 Kentucky measures, each group on each year's own membership
-    survey card line climate_index: 4 Leader in Me points, latest 2025 n=150 (75.87)
-    survey card line safety_index: 4 Leader in Me points, latest 2025 n=150 (70.36)
-    survey card line svy_caring: 4 Leader in Me points, latest 2025 n=131 (92.73)
-    survey card line svy_adults_care: 4 Leader in Me points, latest 2025 n=122 (93.15)
-    survey card line svy_safe_classes: 4 Leader in Me points, latest 2025 n=145 (89.53)
-    survey card line svy_adult_listens: 4 Leader in Me points, latest 2025 n=141 (93.1)
-  per-school Kentucky records for the pack: 10,895 (47 columns, 16 of them survey items)
-  Kentucky's measures on 12,639 school-year-bands: 11,982 joined to existing rows, 657 school-year-bands added with no test rows of their own
-  school type from NCES: Title I on 1,258 schools (897 yes), charter 0, magnet 71, alternative 126; Title I published 2017-2022, carried forward after
-  funders: 173 Kentucky schools carry a funding source (156 on the page; Kern 77, 60 on the page); latest non-blank year per school
+    survey card line climate_index: 4 Leader in Me points, latest 2025 n=162 (76.04)
+    survey card line safety_index: 4 Leader in Me points, latest 2025 n=162 (70.52)
+    survey card line svy_caring: 4 Leader in Me points, latest 2025 n=139 (92.66)
+    survey card line svy_adults_care: 4 Leader in Me points, latest 2025 n=131 (93.2)
+    survey card line svy_safe_classes: 4 Leader in Me points, latest 2025 n=155 (89.69)
+    survey card line svy_adult_listens: 4 Leader in Me points, latest 2025 n=152 (93.15)
+  per-school Kentucky records for the pack: 11,039 (47 columns, 16 of them survey items)
+  Kentucky's measures on 12,783 school-year-bands: 12,126 joined to existing rows, 657 school-year-bands added with no test rows of their own
+  school type from NCES: Title I on 1,274 schools (905 yes), charter 0, magnet 71, alternative 126; Title I published 2017-2022, carried forward after
+  funders: 173 Kentucky schools carry a funding source (172 on the page; Kern 77, 76 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 162  by band {'Primary': {'pairs': 103, 'unmatched': 1}, 'Secondary': {'pairs': 59, 'unmatched': 5}}
+  pairs 171  by band {'Primary': {'pairs': 109, 'unmatched': 0}, 'Secondary': {'pairs': 62, 'unmatched': 5}}
   MRA: 213 surveys · 98 schools · 808 sentinel values · 10 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 150, 'comp_n': 883, 'lim_change': 4.69, 'comp_change': 4.84, 'p': 0.826} · without the 37 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 117, 'comp_n': 883, 'lim_change': 4.61, 'comp_change': 4.84, 'p': 0.766}
-  roster: 130 counted, 84 exited, 20 not counted yet, 20 not counted
+  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 162, 'comp_n': 885, 'lim_change': 4.87, 'comp_change': 4.78, 'p': 0.889} · without the 37 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 129, 'comp_n': 885, 'lim_change': 4.85, 'comp_change': 4.78, 'p': 0.922}
+  roster: 143 counted, 82 exited, 43 not counted yet, 4 not counted
+best-performing schools: 16 of 155 counted schools, 75 measures in 21 outcomes
 
-wrote ky_payload.json  (35.6 MB, 52,638 rows) · page kind full (150 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote ky_payload.json  (36.2 MB, 53,289 rows) · page kind full (162 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py ky_payload.json KY_Dashboard.html KY_Methods.html
-payload 35.6 MB -> 2.83 MB gzip
-KY_Dashboard.html: 3966 KB
-KY_Methods.html: 60 KB
+payload 36.2 MB -> 2.88 MB gzip
+KY_Dashboard.html: 4067 KB
+KY_Methods.html: 70 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state KY --work /home/claude/sdf/Build/work/KY
+$ python3 /home/claude/sdf/Build/verify_core.py --state KY --work /home/claude/work1/KY
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -207,12 +241,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [2 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [20 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [82 exited, 2 in grace, 131 future]
+ok   the exit rule's counts recompute from the roster  [81 exited, 0 in grace, 152 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [76 composite cells at 100, 4 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -227,15 +261,18 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [20 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 20 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [20 Year 0 rows]
+ok   schools with no start date appear in neither group  [4 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [78 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [84 exited (2 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [80 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [83 exited (2 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 130, 'exited': 84, 'not counted': 20, 'not counted yet': 20}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 143, 'exited': 82, 'not counted yet': 43, 'not counted': 4}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -243,10 +280,10 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [609 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [618 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [56,736 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [57,441 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 99.4% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
@@ -256,18 +293,18 @@ ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [3,970 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [5,129 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [245 schools]
-ok   the school count never exceeds the band-slice count  [1033 schools vs 1200 band slices]
+ok   the school count never exceeds the band-slice count  [1049 schools vs 1216 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline +0.033 vs payload +0.030 on 162 pairs]
-ok   the mean signed baseline gap is under one point  [+0.033]
+ok   the signed baseline gap recomputes to the payload's  [offline +0.022 vs payload +0.020 on 171 pairs]
+ok   the mean signed baseline gap is under one point  [+0.022]
 ok   the widest single baseline gap is inside the caliper's reach  [3.0 points]
-ok   the printed signed gap is not a negative zero  [0.03]
+ok   the printed signed gap is not a negative zero  [0.02]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
@@ -279,7 +316,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [1.6s]
+ok   load time is workable  [1.0s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -289,12 +326,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [12 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.8255 scipy 0.8255 · window 2022-2025 · LiM n=150 mean +4.69 · comparison n=883 mean +4.84]
-ok   the headline counts schools, not band slices  [page 1033 vs offline 1033 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [150 vs 150]
-ok   the district filter re-renders the headline  [In Jefferson County schools, between 2021-22 and 2024-25, Leader in Me schools rose 0.6% o]
+ok   the headline p recomputes offline  [page 0.8900 scipy 0.8900 · window 2022-2025 · LiM n=162 mean +4.87 · comparison n=885 mean +4.78]
+ok   the headline counts schools, not band slices  [page 1047 vs offline 1047 on 2022-2025]
+ok   the page's Leader in Me count is the builder's  [162 vs 162]
+ok   the district filter re-renders the headline  [In Jefferson County schools, between 2021-22 and 2024-25, Leader in Me schools rose 0.7% o]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [858 of 1290 schools; In Kentucky Title I schools, between 2021-22 and 2024-25, Leader in Me schools r]
+ok   choosing 'Title I schools' narrows the view and names it  [868 of 1306 schools; In Kentucky Title I schools, between 2021-22 and 2024-25, Leader in Me schools r]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Kentucky schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2024-25]
 ok   Title I status is known for most schools on the page  [97.5%]
@@ -317,11 +354,11 @@ ok   measure 'grad_rate_ky' either draws or says why
 ok   measure 'postsec_ready' either draws or says why
 ok   measure 'college_going' either draws or says why
 ok   the matched toggle re-renders the headline  [In Kentucky schools (matched to similar schools only), between 2021-22 and 2024-25, Leader]
-ok   the matched view shrinks or equals the Leader in Me count  [116 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [120 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Jefferson County generates cards or says there is nothing to report  [8 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.8255492689448651, 'n1': 150, 'n2': 883}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.8899520295762833, 'n1': 162, 'n2': 885}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -340,22 +377,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [6,231 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [173,820 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [175,278 bytes]
 ok   the pptx export is named for the state and chart  [KY_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Kentucky_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [174,696 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [176,890 bytes]
 ok   the docx export is named for the state and chart  [KY_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Kentucky_schools.docx]
-ok   the research pack downloads with its sections  [108,621 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
-ok   the pack's Leader in Me count for the district is the page's  [20 vs 20]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Kentucky schools like Kenton County’s, between 2021-22 and 2024-25, Leader in Me schools rose 3.6% on Meeting or exce]
-ok   the look-alike box reports both counts or says why not  [Schools like Kenton County’s: 13 Leader in Me schools and 65 comparison schools look like Kenton County’s 17 schools with results in these years (each matched a]
+ok   the research pack downloads with its sections  [109,806 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the pack's Leader in Me count for the district is the page's  [24 vs 24]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Kentucky schools like Kenton County’s, between 2021-22 and 2024-25, Leader in Me schools rose 3.3% on Meeting or exce]
+ok   the look-alike box reports both counts or says why not  [Schools like Kenton County’s: 14 Leader in Me schools and 67 comparison schools look like Kenton County’s 17 schools with results in these years (each matched a]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.7748]
+ok   the look-alike headline p recomputes offline  [p=0.9149]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [31 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [32 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Kentucky grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 5.3% on Meeting ]
+ok   choosing a grade re-renders the headline and names the grade  [In Kentucky grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 5.7% on Meeting ]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [11 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -385,59 +422,59 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +4.69 pts (n=150) vs comparison +4.84 pts (n=883), p=0.8255 -> not significant
+  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +4.87 pts (n=162) vs comparison +4.78 pts (n=885), p=0.8900 -> not significant
 
 ==========================================================================
-178 of 178 checks pass
+181 of 181 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/ky_core_verify.py --work /home/claude/sdf/Build/work/KY
+$ python3 /home/claude/sdf/Build/states/ky_core_verify.py --work /home/claude/work1/KY
 
 Kentucky's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [254 of 254]
-ok   the crosswalk reaches most comparison schools  [1,057 of 1,057]
+ok   the crosswalk reaches nearly every Leader in Me school  [272 of 272]
+ok   the crosswalk reaches most comparison schools  [1,039 of 1,039]
 ok   NCES's own id pairs anchor the crosswalk and the state files' NCES columns confirm nearly all of them  [1,311 pairs for 1,311 schools; by source {'NCES and the state files': 1299, 'the state files only': 12, 'NCES only': 0}]
 ok   the state files' own school names agree with DOMO's on nearly every crosswalked school  [1,310 of 1,311; 1 read one by one]
-ok   DOMO's chronic absence falls as the state's attendance rate rises (an independent check of the join)  [Spearman -0.982 on 3,240 school-years; mean DOMO chronic absence by attendance quarter {'lowest attendance quarter': 47.4, 'second': 30.6, 'third': 21.6, 'highest attendance quarter': 13.2}]
+ok   DOMO's chronic absence falls as the state's attendance rate rises (an independent check of the join)  [Spearman -0.981 on 3,288 school-years; mean DOMO chronic absence by attendance quarter {'lowest attendance quarter': 46.8, 'second': 30.4, 'third': 21.6, 'highest attendance quarter': 13.2}]
 ok   no school code sits on two page schools in the same years  [1,311 pairs, 1,311 schools, 0 codes on two schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page
 ok   the join note on the card carries the reach and names the defective 2024-25 NCES column
 ok   the 2024-25 index file's NCES column is the district id padded with zeros for most schools, and is not used  [{"nces_column": "NCES ID", "twelve_digit": 33561, "district_id_padded": 32643, "distinct": 200, "defective": true}]
 ok   the 2023-24 index file's NCES column is sound, and is used  [{"nces_column": "NCES ID", "twelve_digit": 33588, "district_id_padded": 0, "distinct": 1124, "defective": false}]
 ok   the defective NCES columns are counted on the cleaning audit and named in the methods  [6 files]
-ok   survey index file (re-read from the csv) 2024-25: the pack's climate_index is the state file's own value through the crosswalk  [1091 of 1091 agree, 201 Leader in Me schools among them (need 800)]
-ok   survey index 2024-25: the rows carry the level's own index on its band (elementary on primary, middle and high on secondary)  [1121 of 1121]
-ok   survey item extract (re-read from the csv), the caring-place item 2024-25: the pack's svy_caring is the state file's own value through the crosswalk  [905 of 905 agree, 174 Leader in Me schools among them (need 800)]
+ok   survey index file (re-read from the csv) 2024-25: the pack's climate_index is the state file's own value through the crosswalk  [1107 of 1107 agree, 213 Leader in Me schools among them (need 800)]
+ok   survey index 2024-25: the rows carry the level's own index on its band (elementary on primary, middle and high on secondary)  [1137 of 1137]
+ok   survey item extract (re-read from the csv), the caring-place item 2024-25: the pack's svy_caring is the state file's own value through the crosswalk  [919 of 919 agree, 182 Leader in Me schools among them (need 800)]
 ok   survey items 2024-25: a school suppressed on the item at every level carries no value in the pack  [259 suppressed cells in the file, 196 schools suppressed at every level]
-ok   attendance 2024-25: the pack's attend_rate is the state file's own value through the crosswalk  [1177 of 1177 agree, 206 Leader in Me schools among them (need 900)]
-ok   attendance 2018-19: the pack's attend_rate is the state file's own value through the crosswalk  [1180 of 1180 agree, 203 Leader in Me schools among them (need 900)]
+ok   attendance 2024-25: the pack's attend_rate is the state file's own value through the crosswalk  [1193 of 1193 agree, 221 Leader in Me schools among them (need 900)]
+ok   attendance 2018-19: the pack's attend_rate is the state file's own value through the crosswalk  [1196 of 1196 agree, 217 Leader in Me schools among them (need 900)]
 ok   attendance 2024-25: the 57 rates of exactly 0 or 100 in the state file carry no attendance value in the pack  [24 of them on the page]
 ok   no attendance rate in the pack is exactly 0 or 100
-ok   discipline events 2017-18: the pack's oss_events is the state file's own value through the crosswalk  [1149 of 1149 agree, 195 Leader in Me schools among them (need 800)]
-ok   discipline events 2024-25: the pack's oss_events is the state file's own value through the crosswalk  [1118 of 1118 agree, 195 Leader in Me schools among them (need 800)]
-ok   discipline events (re-read from the csv) 2024-25: the pack's oss_events is the state file's own value through the crosswalk  [1118 of 1118 agree, 195 Leader in Me schools among them (need 800)]
+ok   discipline events 2017-18: the pack's oss_events is the state file's own value through the crosswalk  [1165 of 1165 agree, 206 Leader in Me schools among them (need 800)]
+ok   discipline events 2024-25: the pack's oss_events is the state file's own value through the crosswalk  [1134 of 1134 agree, 209 Leader in Me schools among them (need 800)]
+ok   discipline events (re-read from the csv) 2024-25: the pack's oss_events is the state file's own value through the crosswalk  [1134 of 1134 agree, 209 Leader in Me schools among them (need 800)]
 ok   discipline 2024-25: a suppressed count carries no suspension rate in the pack  [103 suppressed in the file, 87 on the page]
-ok   the suspension rate is events per 100 of DOMO's enrollment, exactly, on every pack record  [9,939 records]
+ok   the suspension rate is events per 100 of DOMO's enrollment, exactly, on every pack record  [10,083 records]
 ok   no school DOMO records under 50 students carries a suspension rate  [430 such school-years carry events only]
-ok   DOMO's enrollment and the state's own ADA rank the schools' suspension rates alike (the denominator check)  [Spearman 0.995 on 5,216 school-years]
-ok   accountability profile, the overall combined indicator rate 2024-25: the pack's acct_overall is the state file's own value through the crosswalk  [1091 of 1091 agree, 201 Leader in Me schools among them (need 900)]
-ok   accountability profile, the graduation rate indicator 2024-25: the pack's grad_rate_ky is the state file's own value through the crosswalk  [222 of 222 agree, 25 Leader in Me schools among them (need 150)]
-ok   accountability profile (re-read from the csv) 2024-25: the pack's acct_overall is the state file's own value through the crosswalk  [1091 of 1091 agree, 201 Leader in Me schools among them (need 900)]
+ok   DOMO's enrollment and the state's own ADA rank the schools' suspension rates alike (the denominator check)  [Spearman 0.995 on 5,296 school-years]
+ok   accountability profile, the overall combined indicator rate 2024-25: the pack's acct_overall is the state file's own value through the crosswalk  [1107 of 1107 agree, 213 Leader in Me schools among them (need 900)]
+ok   accountability profile, the graduation rate indicator 2024-25: the pack's grad_rate_ky is the state file's own value through the crosswalk  [226 of 226 agree, 28 Leader in Me schools among them (need 150)]
+ok   accountability profile (re-read from the csv) 2024-25: the pack's acct_overall is the state file's own value through the crosswalk  [1107 of 1107 agree, 213 Leader in Me schools among them (need 900)]
 ok   the OAA copy of the latest profile agrees with the report card file (a second copy of the same figures)  [{"pairs": 1263, "within_0_05": 100.0}]
-ok   postsecondary readiness 2024-25: the pack's postsec_ready is the state file's own value through the crosswalk  [222 of 222 agree, 25 Leader in Me schools among them (need 150)]
-ok   transition readiness 2018-19: the pack's postsec_ready is the state file's own value through the crosswalk  [222 of 222 agree, 24 Leader in Me schools among them (need 150)]
-ok   KYSTATS college-going, the feedback report's class of 2023 2022-23: the pack's college_going is the state file's own value through the crosswalk  [220 of 220 agree, 24 Leader in Me schools among them (need 150)]
-ok   KYSTATS college-going, the July 2026 file's class of 2024 2023-24: the pack's college_going is the state file's own value through the crosswalk  [222 of 222 agree, 25 Leader in Me schools among them (need 150)]
+ok   postsecondary readiness 2024-25: the pack's postsec_ready is the state file's own value through the crosswalk  [226 of 226 agree, 28 Leader in Me schools among them (need 150)]
+ok   transition readiness 2018-19: the pack's postsec_ready is the state file's own value through the crosswalk  [226 of 226 agree, 27 Leader in Me schools among them (need 150)]
+ok   KYSTATS college-going, the feedback report's class of 2023 2022-23: the pack's college_going is the state file's own value through the crosswalk  [224 of 224 agree, 27 Leader in Me schools among them (need 150)]
+ok   KYSTATS college-going, the July 2026 file's class of 2024 2023-24: the pack's college_going is the state file's own value through the crosswalk  [226 of 226 agree, 28 Leader in Me schools among them (need 150)]
 ok   the feedback report's any-college and in-state rates are the same number (so the page says in-state)  [checked on 2970 rows of the College Year 1 sheet]
-ok   School climate index (students, 0-100): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 75.87 (n=150) vs offline 75.87 (n=150)]
-ok   School safety index (students, 0-100): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 70.36 (n=150) vs offline 70.36 (n=150)]
-ok   Students who say their school is a caring place: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 92.73 (n=131) vs offline 92.73 (n=131)]
-ok   Attendance rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 93.61 (n=154) vs offline 93.61 (n=154)]
-ok   Out-of-school suspension events per 100 students: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 7.06 (n=149) vs offline 7.06 (n=149)]
-ok   Overall accountability score: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 64.41 (n=150) vs offline 64.41 (n=150)]
-ok   Graduation rate indicator (4- and 5-year): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 96.66 (n=22) vs offline 96.66 (n=22)]
-ok   Graduates postsecondary ready: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 90.75 (n=22) vs offline 90.75 (n=22)]
+ok   School climate index (students, 0-100): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 76.04 (n=162) vs offline 76.04 (n=162)]
+ok   School safety index (students, 0-100): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 70.52 (n=162) vs offline 70.52 (n=162)]
+ok   Students who say their school is a caring place: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 92.66 (n=139) vs offline 92.66 (n=139)]
+ok   Attendance rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 93.43 (n=169) vs offline 93.43 (n=169)]
+ok   Out-of-school suspension events per 100 students: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 7.96 (n=162) vs offline 7.96 (n=162)]
+ok   Overall accountability score: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 64.49 (n=162) vs offline 64.49 (n=162)]
+ok   Graduation rate indicator (4- and 5-year): the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 96.24 (n=25) vs offline 96.24 (n=25)]
+ok   Graduates postsecondary ready: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 90.32 (n=25) vs offline 90.32 (n=25)]
 ok   In-state college-going rate: the latest Leader in Me point recomputes from the long table and the membership file  [2024: payload 52.89 (n=24) vs offline 52.89 (n=24)]
 ok   the closure years are on no Kentucky card  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   climate_index sits in no closure year on the rows  [[2022, 2023, 2024, 2025]]
@@ -451,50 +488,50 @@ ok   college_going sits in no closure year on the rows  [[2015, 2016, 2017, 2018
 ok   the pack carries no closure year
 ok   the 2020-21 survey (an NTI-era instrument) is drawn on no card line and carries no pack value  [item years [2021, 2022, 2023, 2024, 2025]]
 ok   the 2021-22 overall accountability rate (status alone) carries no value on the card, the rows or the pack  [card years [2023, 2024, 2025]]
-ok   the 2014-15 to 2016-17 college and career readiness rate sits in the pack under its own name and not in the readiness series  [669 CCR values]
+ok   the 2014-15 to 2016-17 college and career readiness rate sits in the pack under its own name and not in the readiness series  [681 CCR values]
 ok   the civil-rights suspension files (a 2020-21 collection re-printed twice) are excluded by name and counted
 ok   the two civil-rights files carry the same collection year and the same counts (only the co-op label differs)  [collected ['20202021']; 14,960 rows each]
-ok   DOMO's graduation rate is not filled from the state's indicator (another measure)  [agree within 0.15 on 12.3% of 440 school-years]
+ok   DOMO's graduation rate is not filled from the state's indicator (another measure)  [agree within 0.15 on 12.1% of 448 school-years]
 ok   every exclusion is counted on the cleaning audit
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 10,560 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [1,082 Leader in Me school-years on the cards]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 10,699 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [1,138 Leader in Me school-years on the cards]
 ok   no card member sits past the core's last year  [2025 vs 2025]
-ok   School climate index (students, 0-100): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=150]
-ok   School safety index (students, 0-100): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=150]
-ok   Students who say their school is a caring place: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=131]
-ok   Students who say adults from their school care about them: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=122]
-ok   Students who feel safe in their classes: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=145]
-ok   Students with an adult at school who listens to them: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=141]
-ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=154]
-ok   Out-of-school suspension events per 100 students: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=149]
-ok   Overall accountability score: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=150]
-ok   Graduation rate indicator (4- and 5-year): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=22]
-ok   Graduates postsecondary ready: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=22]
+ok   School climate index (students, 0-100): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=162]
+ok   School safety index (students, 0-100): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=162]
+ok   Students who say their school is a caring place: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=139]
+ok   Students who say adults from their school care about them: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=131]
+ok   Students who feel safe in their classes: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=155]
+ok   Students with an adult at school who listens to them: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=152]
+ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=169]
+ok   Out-of-school suspension events per 100 students: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=162]
+ok   Overall accountability score: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=162]
+ok   Graduation rate indicator (4- and 5-year): the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=25]
+ok   Graduates postsecondary ready: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=25]
 ok   In-state college-going rate: the Leader in Me point in 2024 rests on at least three counted schools and a comparison line exists  [n=24]
 ok   every card measure carries the poverty context line
 ok   the card carries a dozen measures at most  [12 on the card]
 ok   the four Quality of School Climate and Safety Survey items and the two indexes are on the card  [svy_caring, svy_adults_care, svy_safe_classes, svy_adult_listens]
 ok   Students who say their school is a caring place: the item wording is quoted in the caption and the respondent group is named
-ok   Students who say their school is a caring place: four Leader in Me points, each on twenty or more schools, the latest in 2025  [4 points, latest n=131]
+ok   Students who say their school is a caring place: four Leader in Me points, each on twenty or more schools, the latest in 2025  [4 points, latest n=139]
 ok   Students who say their school is a caring place: drawn only in years the item is worded the same, at every level  [item years [2022, 2023, 2024, 2025], levels ['ES', 'HS', 'MS']]
 ok   Students who say adults from their school care about them: the item wording is quoted in the caption and the respondent group is named
-ok   Students who say adults from their school care about them: four Leader in Me points, each on twenty or more schools, the latest in 2025  [4 points, latest n=122]
+ok   Students who say adults from their school care about them: four Leader in Me points, each on twenty or more schools, the latest in 2025  [4 points, latest n=131]
 ok   Students who say adults from their school care about them: drawn only in years the item is worded the same, at every level  [item years [2022, 2023, 2024, 2025], levels ['ES', 'HS', 'MS']]
 ok   Students who feel safe in their classes: the item wording is quoted in the caption and the respondent group is named
-ok   Students who feel safe in their classes: four Leader in Me points, each on twenty or more schools, the latest in 2025  [4 points, latest n=145]
+ok   Students who feel safe in their classes: four Leader in Me points, each on twenty or more schools, the latest in 2025  [4 points, latest n=155]
 ok   Students who feel safe in their classes: drawn only in years the item is worded the same, at every level  [item years [2022, 2023, 2024, 2025], levels ['ES', 'HS', 'MS']]
 ok   Students with an adult at school who listens to them: the item wording is quoted in the caption and the respondent group is named
-ok   Students with an adult at school who listens to them: four Leader in Me points, each on twenty or more schools, the latest in 2025  [4 points, latest n=141]
+ok   Students with an adult at school who listens to them: four Leader in Me points, each on twenty or more schools, the latest in 2025  [4 points, latest n=152]
 ok   Students with an adult at school who listens to them: drawn only in years the item is worded the same, at every level  [item years [2022, 2023, 2024, 2025], levels ['ES', 'HS', 'MS']]
-ok   School climate index (students, 0-100): four Leader in Me points on a hundred or more schools each, the latest in 2025  [[(2022, 141), (2023, 143), (2024, 158), (2025, 150)]]
-ok   School safety index (students, 0-100): four Leader in Me points on a hundred or more schools each, the latest in 2025  [[(2022, 141), (2023, 143), (2024, 158), (2025, 150)]]
-ok   the survey's climate index is a measure in the rows with Leader in Me school-years behind it  [592 Leader in Me school-years]
+ok   School climate index (students, 0-100): four Leader in Me points on a hundred or more schools each, the latest in 2025  [[(2022, 149), (2023, 144), (2024, 158), (2025, 162)]]
+ok   School safety index (students, 0-100): four Leader in Me points on a hundred or more schools each, the latest in 2025  [[(2022, 149), (2023, 144), (2024, 158), (2025, 162)]]
+ok   the survey's climate index is a measure in the rows with Leader in Me school-years behind it  [613 Leader in Me school-years]
 ok   the eight Kentucky measures are on the page beside the core's  [percent_proficient, percent_level4, percent_level3, percent_level2, percent_below, standard_score, chronic_absent, grad_rate, climate_index, safety_index, attend_rate, oss_per100, acct_overall, grad_rate_ky, postsec_ready, college_going]
 ok   the methods page carries the survey note with the index construction and the wording rule
 ok   the research pack carries every survey item worded the same in every year and level, labelled with the wording  [16 survey columns in the pack]
 ok   the banner names the survey and KYSTATS
-ok   the research pack's per-school Kentucky values are keyed to schools on the page  [10,895 records]
-ok   every school with a state code on the page has it in the pack  [1,290 of 1,290]
+ok   the research pack's per-school Kentucky values are keyed to schools on the page  [11,039 records]
+ok   every school with a state code on the page has it in the pack  [1,306 of 1,306]
 ok   look-alike mode names suspension events per 100 as its behavior measure
 ok   the measures the card can carry are on it: the survey, attendance, suspension, the accountability score, graduation, readiness and college-going  [12 on the card]
 

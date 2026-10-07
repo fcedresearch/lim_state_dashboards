@@ -1,17 +1,18 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state WI --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/WI --data /home/claude/sdf/Build/work/WI/data --extras wi_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state WI --core /home/claude/sdf/Core --out /home/claude/work1/WI --data /home/claude/work1/WI/data --extras wi_core_extras
 reading the core for Wisconsin ...
 [core] subjects: 146,103 school rows kept; dropped 80,839 rows with no school id and 2,953 with an id but no school record
-[core] Leader in Me roster: 492 rows
+[core] Leader in Me roster: 496 rows
 [core] comparison schools: 18,061 rows
+[core] comparison: 4 rows set aside for 2 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 143 rows
-  subject rows 146,103 · roster rows 492 (52 schools) · comparison rows 18,061 (2019 schools) · MRA surveys 143
-[core] Leader in Me roster: 56,181 rows
-  exits: 48 of 52 roster schools carry an expiration date; 18 past it by more than 30 days (exited), 0 inside the grace window, 30 in the future, 4 undated (3 with a start date)
+  subject rows 146,103 · roster rows 496 (54 schools) · comparison rows 18,057 (2019 schools) · MRA surveys 143
+[core] Leader in Me roster: 59,452 rows
+  exits: 50 of 54 roster schools carry an expiration date; 18 past it by more than 30 days (exited), 0 inside the grace window, 32 in the future, 4 undated (3 with a start date)
   2,071 schools · 462 districts
 applying the cleaning rules ...
   76,706 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 170 of 468 reviewed
+  Leader in Me school-years counted: 179 of 486 reviewed
   no start date: 2 schools · dated exits: 5 (school-years after an exit with rows: 10) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 68.8% of rows in years and subjects whose levels add up)
   level values blanked on 11 year-subject cells that do not add up: 2014-15 ELA, 2014-15 Math, 2014-15 Social Studies, 2015-16 ELA, 2015-16 Math, 2015-16 Science, 2015-16 Social Studies, 2016-17 ELA ...
@@ -42,7 +43,7 @@ folding in Wisconsin's own measures (wi_core_extras) ...
   report cards: 12 years (2011-12, 2012-13, 2013-14, 2015-16, 2016-17, 2017-18, 2018-19, 2020-21, 2021-22, 2022-23, 2023-24, 2024-25); no card was issued for 2014-15 or 2019-20
   postsecondary: classes of 2011 to 2025; ACT census 2014-15 on, graduates' ACT classes of 2011 to 2025; AP 2010-11 to 2024-25
   crosswalk: NCES's district and school codes for each federal id, audited against the WISEdash files' own names and an independent name-within-district join
-    2,070 of 2,071 schools carry a state id (NCES's directory, plus 8 by name alone); Leader in Me 52 of 52, comparison 2,018 of 2,019; 2,070 appear in at least one WISEdash file
+    2,070 of 2,071 schools carry a state id (NCES's directory, plus 8 by name alone); Leader in Me 54 of 54, comparison 2,016 of 2,017; 2,070 appear in at least one WISEdash file
     names: the WISEdash files' own school name agrees with DOMO's on 2,083 of 2,084 crosswalked schools; the name-within-district join speaks for 2,057 schools, both speak for 2,048 and agree on 2,048; 0 triples re-pointed to a folded id; 0 shared state ids settled; 22 schools carry more than one state id across the years
   value check of the join (a field the map was not built from): DOMO's dropout rate is the WISEdash rate within 0.1 on 100.0% of 7,728 school-years (truncated to one decimal on 100.0%, r = 0.9999); DOMO's student count against the attendance file's correlates at 0.958 across 16,697 school-years
   chronic absence and graduation: the folder carries no rate for either (the report card's chronic-absenteeism and graduation components are scores: r = -0.836 against DOMO's chronic absence on 7,371 school-years, r = 0.579 against DOMO's graduation rate on 3,327); nothing is filled or overwritten
@@ -53,20 +54,21 @@ folding in Wisconsin's own measures (wi_core_extras) ...
   school type from NCES: Title I on 2,031 schools (1,137 yes), charter 234, magnet 8, alternative 16; Title I published 2017-2022, carried forward after
   funders: 19 Wisconsin schools carry a funding source (18 on the page; Kern 13, 12 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 39  by band {'Primary': {'pairs': 27, 'unmatched': 0}, 'Secondary': {'pairs': 12, 'unmatched': 0}}
+  pairs 41  by band {'Primary': {'pairs': 28, 'unmatched': 0}, 'Secondary': {'pairs': 13, 'unmatched': 0}}
   MRA: 140 surveys · 42 schools · 402 sentinel values · 1 shells
   headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 40, 'comp_n': 1730, 'lim_change': 8.79, 'comp_change': 12.68, 'p': 0.006} · without the 3 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 37, 'comp_n': 1730, 'lim_change': 8.32, 'comp_change': 12.68, 'p': 0.003}
-  roster: 31 counted, 18 exited, 1 not counted yet, 2 not counted
+  roster: 31 counted, 18 exited, 3 not counted yet, 2 not counted
+best-performing schools: 5 of 34 counted schools, 66 measures in 17 outcomes
 
-wrote wi_payload.json  (59.2 MB, 78,457 rows) · page kind full (40 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote wi_payload.json  (59.3 MB, 78,457 rows) · page kind full (40 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py wi_payload.json WI_Dashboard.html WI_Methods.html
-payload 59.2 MB -> 4.60 MB gzip
-WI_Dashboard.html: 6269 KB
-WI_Methods.html: 57 KB
+payload 59.3 MB -> 4.60 MB gzip
+WI_Dashboard.html: 6314 KB
+WI_Methods.html: 67 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state WI --work /home/claude/sdf/Build/work/WI
+$ python3 /home/claude/sdf/Build/verify_core.py --state WI --work /home/claude/work1/WI
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -85,12 +87,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': -0.01, 'PercentLevel2': -0.01, 'PercentLevel3': -0.01, 'PercentLevel4': -0.01, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [0 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [2 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [18 exited, 0 in grace, 30 future]
+ok   the exit rule's counts recompute from the roster  [18 exited, 0 in grace, 32 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [34 composite cells at 100, 3 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [0 collisions]
@@ -105,7 +107,10 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 12 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [12 Year 0 rows]
 ok   schools with no start date appear in neither group  [2 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
@@ -113,7 +118,7 @@ ok   exited schools keep their true Leader in Me years  [17 exited schools with 
 ok   the exit counts on the methods page match the rule  [18 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 31, 'exited': 18, 'not counted': 2, 'not counted yet': 1}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 31, 'exited': 18, 'not counted yet': 3, 'not counted': 2}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -135,7 +140,7 @@ ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [1,121 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [1,133 rows]
 ok   Lighthouse schools are inside the Leader in Me family
 ok   combined-grade schools appear in both bands  [497 schools]
 ok   the school count never exceeds the band-slice count  [1770 schools vs 2076 band slices]
@@ -143,10 +148,10 @@ ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline +0.073 vs payload +0.070 on 39 pairs]
-ok   the mean signed baseline gap is under one point  [+0.073]
-ok   the widest single baseline gap is inside the caliper's reach  [2.5 points]
-ok   the printed signed gap is not a negative zero  [0.07]
+ok   the signed baseline gap recomputes to the payload's  [offline -0.030 vs payload -0.030 on 41 pairs]
+ok   the mean signed baseline gap is under one point  [-0.030]
+ok   the widest single baseline gap is inside the caliper's reach  [4.1 points]
+ok   the printed signed gap is not a negative zero  [-0.03]
 ok   no MRA value of exactly 100 survives into the payload
 ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
@@ -158,7 +163,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [3.0s]
+ok   load time is workable  [1.5s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -175,7 +180,7 @@ ok   the district filter re-renders the headline  [In Green Bay Area Public Scho
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
 ok   choosing 'Title I schools' narrows the view and names it  [1071 of 2065 schools; In Wisconsin Title I schools, between 2021-22 and 2024-25, Leader in Me schools ]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Wisconsin schools (Leader in Me side: Kern Family Foundation schools), between 2022-23 and 2024-2]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Wisconsin schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2024-2]
 ok   Title I status is known for most schools on the page  [98.4%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
@@ -194,7 +199,7 @@ ok   measure 'growth_score' either draws or says why
 ok   measure 'act_composite' either draws or says why
 ok   measure 'college_first_fall' either draws or says why
 ok   the matched toggle re-renders the headline  [In Wisconsin schools (matched to similar schools only), between 2021-22 and 2024-25, Leade]
-ok   the matched view shrinks or equals the Leader in Me count  [32 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [34 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Green Bay Area Public School District generates cards or says there is nothing to report  [11 cards]
@@ -217,11 +222,11 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [4,061 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [130,227 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [136,111 bytes]
 ok   the pptx export is named for the state and chart  [WI_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Wisconsin_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [131,111 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [137,732 bytes]
 ok   the docx export is named for the state and chart  [WI_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Wisconsin_schools.docx]
-ok   the research pack downloads with its sections  [40,349 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [40,359 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 ok   the pack's Leader in Me count for the district is the page's  [3 vs 3]
 ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Wisconsin schools like Milwaukee School District’s, between 2021-22 and 2024-25, Leader in Me schools rose 5.2% on Me]
 ok   the look-alike box reports both counts or says why not  [Schools like Milwaukee School District’s: 4 Leader in Me schools and 172 comparison schools look like Milwaukee School District’s 135 schools with results in th]
@@ -266,15 +271,15 @@ ok   a statewide jump is flagged on the methods page
   HEADLINE (statewide, 2022-2025, no filters): Leader in Me +8.79 pts (n=40) vs comparison +12.68 pts (n=1730), p=0.0061 -> significant in the comparison group's favour
 
 ==========================================================================
-178 of 178 checks pass
+181 of 181 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/wi_core_verify.py --work /home/claude/sdf/Build/work/WI
+$ python3 /home/claude/sdf/Build/states/wi_core_verify.py --work /home/claude/work1/WI
 
 Wisconsin's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [52 of 52]
-ok   the crosswalk reaches most comparison schools  [2,018 of 2,019]
+ok   the crosswalk reaches nearly every Leader in Me school  [54 of 54]
+ok   the crosswalk reaches most comparison schools  [2,016 of 2,017]
 ok   NCES's own id triples anchor the crosswalk  [2,084 triples for 2,071 schools]
 ok   the WISEdash files' own school names agree with DOMO's on nearly every crosswalked school  [2,083 of 2,084; 1 read one by one]
 ok   the independent name-within-district join agrees with NCES's id wherever both speak  [2,048 of 2,048; 0 disagreements]
@@ -345,8 +350,8 @@ ok   the target group outcomes line runs only inside the 2020-21 redesign
 ok   the AP recalibration of 2024 and 2025 is named on the card and the methods page
 ok   every exclusion is counted on the cleaning audit
 ok   the files' year labels were read as the school year's end (2024-25 is 2025), as the pull manifest records
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 17,531 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [170 Leader in Me school-years on the cards]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 17,528 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [179 Leader in Me school-years on the cards]
 ok   no card member sits past the core's last year or before its first  [2015 to 2025 vs 2015 to 2025]
 ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=42]
 ok   Dropout rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=16]

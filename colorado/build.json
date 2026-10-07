@@ -2,8 +2,8 @@
  "state": "CO",
  "name": "Colorado",
  "folder": "colorado",
- "built": "2026-10-01",
- "seconds": 152,
+ "built": "2026-10-06",
+ "seconds": 162,
  "builder": "build_payload_core.py",
  "page_kind": "full",
  "lim_headline_n": 30,
@@ -12,7 +12,7 @@
   2015,
   2026
  ],
- "lim_roster_schools": 62,
+ "lim_roster_schools": 64,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,11 +42,11 @@
   },
   "roster": {
    "path": "/home/claude/work1/CO/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 554
+   "rows": 617
   },
   "comparison": {
    "path": "/home/claude/work1/CO/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 13892
+   "rows": 13888
   },
   "mra": {
    "path": "/home/claude/work1/CO/data/All MRA Surveys.csv",
@@ -66,7 +66,7 @@
  ],
  "extras_module": "co_core_extras",
  "verified": true,
- "dashboard_bytes": 3271103,
+ "dashboard_bytes": 3283951,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -81,86 +81,6 @@
   "rows_share_of_prior": 0.55,
   "prior_year": 2025
  },
- "audits": {
-  "levels": {
-   "rows": 119535,
-   "levels 3 and 4": 10.4,
-   "levels 2, 3 and 4": 1.9,
-   "level 4 alone": 0.1,
-   "100 minus level 1": 0.1,
-   "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 8.3,
-   "structure": "no combination of the reported levels reproduces the proficiency rate",
-   "n_levels": null,
-   "proficient_from": null,
-   "reversed_numbering": null,
-   "coverage": 0.0,
-   "years_ok": null,
-   "years_out": null,
-   "cells_out": null,
-   "latest_year_ok": null,
-   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 15% of rows (a five-level state whose export carries four columns, usually)",
-   "combination_shares": {
-    "levels 3 and 4": 15.1,
-    "levels 2, 3 and 4": 3.1,
-    "levels 1 and 2 (1 the top)": 2.1,
-    "levels 1, 2 and 3 (1 the top)": 2.0
-   },
-   "cells": [],
-   "levels_as_measures": false
-  },
-  "poverty": {
-   "lim": {
-    "schools": 62,
-    "missing": 0,
-    "at_99_or_more": 0,
-    "above_100": 0,
-    "high_poverty_share": 24.2
-   },
-   "comparison": {
-    "schools": 1726,
-    "missing": 29,
-    "at_99_or_more": 2,
-    "above_100": 1,
-    "high_poverty_share": 20.6
-   }
-  },
-  "statewide_jumps": [],
-  "sensitivity": {
-   "with": {
-    "y0": 2022,
-    "y1": 2026,
-    "lim_n": 30,
-    "comp_n": 1051,
-    "lim_change": 3.47,
-    "comp_change": 2.82,
-    "p": 0.72
-   },
-   "without": {
-    "y0": 2022,
-    "y1": 2026,
-    "lim_n": 26,
-    "comp_n": 1051,
-    "lim_change": 3.4,
-    "comp_change": 2.82,
-    "p": 0.783
-   },
-   "schools": 7
-  },
-  "subjects_by_keyword": [],
-  "subjects_excluded": []
- },
- "best_schools": {
-  "qualified": 8,
-  "in_the_process": 8,
-  "lapsed_on_the_list": 0,
-  "reviewed": 39,
-  "measures": 60,
-  "outcomes": 17,
-  "improved_every_year": 0,
-  "lapsed_longer_ago": 19
- },
- "best_schools_added": "2026-09-30",
  "measure_years": {
   "percent_proficient": {
    "label": "Percent meeting the standard",
@@ -843,5 +763,85 @@
     "2026": 1600
    }
   }
- }
+ },
+ "audits": {
+  "levels": {
+   "rows": 119535,
+   "levels 3 and 4": 10.4,
+   "levels 2, 3 and 4": 1.9,
+   "level 4 alone": 0.1,
+   "100 minus level 1": 0.1,
+   "best": "levels 3 and 4",
+   "levels_sum_to_100_share": 8.3,
+   "structure": "no combination of the reported levels reproduces the proficiency rate",
+   "n_levels": null,
+   "proficient_from": null,
+   "reversed_numbering": null,
+   "coverage": 0.0,
+   "years_ok": null,
+   "years_out": null,
+   "cells_out": null,
+   "latest_year_ok": null,
+   "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 15% of rows (a five-level state whose export carries four columns, usually)",
+   "combination_shares": {
+    "levels 3 and 4": 15.1,
+    "levels 2, 3 and 4": 3.1,
+    "levels 1 and 2 (1 the top)": 2.1,
+    "levels 1, 2 and 3 (1 the top)": 2.0
+   },
+   "cells": [],
+   "levels_as_measures": false
+  },
+  "poverty": {
+   "lim": {
+    "schools": 64,
+    "missing": 0,
+    "at_99_or_more": 0,
+    "above_100": 0,
+    "high_poverty_share": 23.4
+   },
+   "comparison": {
+    "schools": 1724,
+    "missing": 29,
+    "at_99_or_more": 2,
+    "above_100": 1,
+    "high_poverty_share": 20.6
+   }
+  },
+  "statewide_jumps": [],
+  "sensitivity": {
+   "with": {
+    "y0": 2022,
+    "y1": 2026,
+    "lim_n": 30,
+    "comp_n": 1051,
+    "lim_change": 3.47,
+    "comp_change": 2.82,
+    "p": 0.72
+   },
+   "without": {
+    "y0": 2022,
+    "y1": 2026,
+    "lim_n": 26,
+    "comp_n": 1050,
+    "lim_change": 3.4,
+    "comp_change": 2.82,
+    "p": 0.781
+   },
+   "schools": 8
+  },
+  "subjects_by_keyword": [],
+  "subjects_excluded": []
+ },
+ "best_schools": {
+  "qualified": 7,
+  "in_the_process": 7,
+  "lapsed_on_the_list": 0,
+  "reviewed": 39,
+  "measures": 60,
+  "outcomes": 17,
+  "improved_every_year": 0,
+  "lapsed_longer_ago": 19
+ },
+ "best_schools_added": "2026-09-30"
 }

@@ -2,17 +2,17 @@
  "state": "UT",
  "name": "Utah",
  "folder": "utah",
- "built": "2026-10-01",
- "seconds": 72,
+ "built": "2026-10-06",
+ "seconds": 76,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 50,
- "schools": 942,
+ "lim_headline_n": 52,
+ "schools": 946,
  "years": [
   2015,
   2026
  ],
- "lim_roster_schools": 99,
+ "lim_roster_schools": 109,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
@@ -20,9 +20,9 @@
    "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-30"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
@@ -42,11 +42,11 @@
   },
   "roster": {
    "path": "/home/claude/work1/UT/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 904
+   "rows": 1024
   },
   "comparison": {
    "path": "/home/claude/work1/UT/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 7217
+   "rows": 7199
   },
   "mra": {
    "path": "/home/claude/work1/UT/data/All MRA Surveys.csv",
@@ -64,7 +64,7 @@
  ],
  "extras_module": "ut_core_extras",
  "verified": true,
- "dashboard_bytes": 2388623,
+ "dashboard_bytes": 2414781,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -77,6 +77,431 @@
   "missing": [],
   "rows_share_of_prior": 1.06,
   "prior_year": 2025
+ },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 3928,
+    "2016": 3877,
+    "2017": 3838,
+    "2018": 3214,
+    "2019": 4109,
+    "2022": 3716,
+    "2023": 3797,
+    "2024": 3756,
+    "2025": 2597,
+    "2026": 2744
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3838,
+    "2022": 3716,
+    "2023": 3797,
+    "2024": 3756,
+    "2025": 2597,
+    "2026": 2741
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3838,
+    "2022": 3716,
+    "2023": 3797,
+    "2024": 3756,
+    "2025": 2597,
+    "2026": 2741
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3838,
+    "2022": 3716,
+    "2023": 3797,
+    "2024": 3756,
+    "2025": 2597,
+    "2026": 2741
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3838,
+    "2022": 3716,
+    "2023": 3797,
+    "2024": 3756,
+    "2025": 2597,
+    "2026": 2741
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 2896,
+    "2016": 2863,
+    "2017": 2801,
+    "2018": 2497,
+    "2019": 2997,
+    "2022": 2844,
+    "2023": 2905,
+    "2024": 2873,
+    "2025": 2000
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 2124,
+    "2019": 2771,
+    "2022": 3431,
+    "2023": 3820,
+    "2024": 3777,
+    "2025": 2632
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 382,
+    "2019": 446,
+    "2022": 427,
+    "2023": 434,
+    "2024": 421,
+    "2025": 403
+   }
+  },
+  "attendance_rate": {
+   "label": "Attendance rate",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 3360,
+    "2019": 4167,
+    "2022": 3875,
+    "2023": 3972,
+    "2024": 3923,
+    "2025": 2781
+   }
+  },
+  "mgp": {
+   "label": "Median growth percentile",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3930,
+    "2018": 3350,
+    "2019": 4158,
+    "2022": 3904,
+    "2023": 3975,
+    "2024": 3926,
+    "2025": 2779
+   }
+  },
+  "act_composite": {
+   "label": "ACT composite (grade 11)",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 438,
+    "2019": 518,
+    "2022": 481,
+    "2023": 511,
+    "2024": 503,
+    "2025": 466
+   }
+  },
+  "att_econ": {
+   "label": "Attendance rate, economically disadvantaged students",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "mgp_ela": {
+   "label": "Median growth percentile, English language arts",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "mgp_math": {
+   "label": "Median growth percentile, mathematics",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "act_18": {
+   "label": "Grade 11 students scoring 18 or higher on the ACT",
+   "kind": "cards",
+   "family": "graduation",
+   "years": {
+    "2018": 1,
+    "2019": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "mgp_science": {
+   "label": "Median growth percentile, science (overall)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2017": 830,
+    "2019": 860,
+    "2022": 884,
+    "2023": 891,
+    "2024": 886,
+    "2025": 877
+   }
+  },
+  "days_attended": {
+   "label": "Average days attended",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 864,
+    "2019": 872,
+    "2022": 900,
+    "2023": 902,
+    "2024": 896,
+    "2025": 887
+   }
+  },
+  "days_membership": {
+   "label": "Average days enrolled (membership)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 864,
+    "2019": 872,
+    "2022": 900,
+    "2023": 902,
+    "2024": 896,
+    "2025": 887
+   }
+  },
+  "att_el": {
+   "label": "Attendance rate, English learners",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 663,
+    "2019": 693,
+    "2022": 754,
+    "2023": 777,
+    "2024": 764,
+    "2025": 742
+   }
+  },
+  "att_swd": {
+   "label": "Attendance rate, students with a disability",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 859,
+    "2019": 868,
+    "2022": 896,
+    "2023": 897,
+    "2024": 894,
+    "2025": 884
+   }
+  },
+  "mgp_ela_rise": {
+   "label": "Median growth percentile, English language arts, RISE (grades 3-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 752,
+    "2022": 772,
+    "2023": 781,
+    "2024": 774,
+    "2025": 768
+   }
+  },
+  "mgp_math_rise": {
+   "label": "Median growth percentile, mathematics, RISE (grades 3-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 751,
+    "2022": 772,
+    "2023": 781,
+    "2024": 774,
+    "2025": 767
+   }
+  },
+  "mgp_science_rise": {
+   "label": "Median growth percentile, science, RISE (grades 3-8)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 747,
+    "2022": 767,
+    "2023": 775,
+    "2024": 768,
+    "2025": 762
+   }
+  },
+  "days_absent": {
+   "label": "Average days absent, 2024-25 (mean of the school's grade averages; a grade reported as zero is left out)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2025": 851
+   }
+  },
+  "pct_excused": {
+   "label": "Share of absences excused, 2024-25 (mean of the school's grade shares)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2025": 851
+   }
+  },
+  "mgp_ela_aspire": {
+   "label": "Median growth percentile, English language arts, Utah Aspire Plus (grades 9-10)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 245,
+    "2022": 245,
+    "2023": 247,
+    "2024": 248,
+    "2025": 246
+   }
+  },
+  "mgp_math_aspire": {
+   "label": "Median growth percentile, mathematics, Utah Aspire Plus (grades 9-10)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 243,
+    "2022": 242,
+    "2023": 246,
+    "2024": 248,
+    "2025": 245
+   }
+  },
+  "mgp_science_aspire": {
+   "label": "Median growth percentile, science, Utah Aspire Plus (grades 9-10)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 241,
+    "2022": 245,
+    "2023": 247,
+    "2024": 249,
+    "2025": 247
+   }
+  },
+  "act_english": {
+   "label": "ACT English, grade 11 mean",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 152,
+    "2019": 155,
+    "2022": 158,
+    "2023": 161,
+    "2024": 162,
+    "2025": 160
+   }
+  },
+  "act_reading": {
+   "label": "ACT reading, grade 11 mean",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 152,
+    "2019": 155,
+    "2022": 158,
+    "2023": 161,
+    "2024": 162,
+    "2025": 160
+   }
+  },
+  "act_math": {
+   "label": "ACT mathematics, grade 11 mean",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 152,
+    "2019": 155,
+    "2022": 158,
+    "2023": 161,
+    "2024": 162,
+    "2025": 160
+   }
+  },
+  "act_science": {
+   "label": "ACT science, grade 11 mean",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 152,
+    "2019": 155,
+    "2022": 158,
+    "2023": 161,
+    "2024": 162,
+    "2025": 160
+   }
+  },
+  "act_18_range": {
+   "label": "Grade 11 students scoring 18 or higher on the ACT composite, the state's range where it masks the value",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2018": 25,
+    "2019": 19,
+    "2022": 21,
+    "2023": 20,
+    "2024": 23,
+    "2025": 22
+   }
+  }
  },
  "audits": {
   "levels": {
@@ -463,14 +888,14 @@
   },
   "poverty": {
    "lim": {
-    "schools": 99,
+    "schools": 109,
     "missing": 0,
     "at_99_or_more": 0,
     "above_100": 0,
-    "high_poverty_share": 2.0
+    "high_poverty_share": 1.8
    },
    "comparison": {
-    "schools": 842,
+    "schools": 832,
     "missing": 4,
     "at_99_or_more": 13,
     "above_100": 1,
@@ -482,20 +907,20 @@
    "with": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 50,
-    "comp_n": 704,
-    "lim_change": 1.87,
+    "lim_n": 52,
+    "comp_n": 706,
+    "lim_change": 1.19,
     "comp_change": 1.14,
-    "p": 0.56
+    "p": 0.969
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 34,
-    "comp_n": 704,
-    "lim_change": 2.59,
+    "lim_n": 36,
+    "comp_n": 706,
+    "lim_change": 1.57,
     "comp_change": 1.14,
-    "p": 0.347
+    "p": 0.8
    },
    "schools": 21
   },
@@ -503,439 +928,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 11,
-  "in_the_process": 9,
+  "qualified": 12,
+  "in_the_process": 10,
   "lapsed_on_the_list": 2,
-  "reviewed": 55,
+  "reviewed": 57,
   "measures": 58,
   "outcomes": 13,
-  "improved_every_year": 1,
+  "improved_every_year": 5,
   "lapsed_longer_ago": 34
  },
- "best_schools_added": "2026-10-01",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Meeting or exceeding the standard (levels 3 and 4)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 3904,
-    "2016": 3859,
-    "2017": 3817,
-    "2018": 3204,
-    "2019": 4088,
-    "2022": 3692,
-    "2023": 3773,
-    "2024": 3735,
-    "2025": 2582,
-    "2026": 2728
-   }
-  },
-  "percent_level4": {
-   "label": "Level 4: exceeding the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 3817,
-    "2022": 3692,
-    "2023": 3773,
-    "2024": 3735,
-    "2025": 2582,
-    "2026": 2725
-   }
-  },
-  "percent_level3": {
-   "label": "Level 3: meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 3817,
-    "2022": 3692,
-    "2023": 3773,
-    "2024": 3735,
-    "2025": 2582,
-    "2026": 2725
-   }
-  },
-  "percent_level2": {
-   "label": "Level 2: approaching the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 3817,
-    "2022": 3692,
-    "2023": 3773,
-    "2024": 3735,
-    "2025": 2582,
-    "2026": 2725
-   }
-  },
-  "percent_below": {
-   "label": "Level 1: below the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 3817,
-    "2022": 3692,
-    "2023": 3773,
-    "2024": 3735,
-    "2025": 2582,
-    "2026": 2725
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 2884,
-    "2016": 2857,
-    "2017": 2792,
-    "2018": 2488,
-    "2019": 2988,
-    "2022": 2832,
-    "2023": 2893,
-    "2024": 2864,
-    "2025": 1991
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2018": 2116,
-    "2019": 2759,
-    "2022": 3411,
-    "2023": 3797,
-    "2024": 3756,
-    "2025": 2617
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2018": 382,
-    "2019": 443,
-    "2022": 424,
-    "2023": 431,
-    "2024": 418,
-    "2025": 400
-   }
-  },
-  "attendance_rate": {
-   "label": "Attendance rate",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2018": 3347,
-    "2019": 4146,
-    "2022": 3852,
-    "2023": 3949,
-    "2024": 3902,
-    "2025": 2766
-   }
-  },
-  "mgp": {
-   "label": "Median growth percentile",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 3909,
-    "2018": 3338,
-    "2019": 4137,
-    "2022": 3881,
-    "2023": 3952,
-    "2024": 3905,
-    "2025": 2764
-   }
-  },
-  "act_composite": {
-   "label": "ACT composite (grade 11)",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2018": 437,
-    "2019": 515,
-    "2022": 478,
-    "2023": 508,
-    "2024": 500,
-    "2025": 463
-   }
-  },
-  "att_econ": {
-   "label": "Attendance rate, economically disadvantaged students",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "mgp_ela": {
-   "label": "Median growth percentile, English language arts",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "mgp_math": {
-   "label": "Median growth percentile, mathematics",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "act_18": {
-   "label": "Grade 11 students scoring 18 or higher on the ACT",
-   "kind": "cards",
-   "family": "graduation",
-   "years": {
-    "2018": 1,
-    "2019": 1,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "mgp_science": {
-   "label": "Median growth percentile, science (overall)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2017": 827,
-    "2019": 856,
-    "2022": 880,
-    "2023": 887,
-    "2024": 882,
-    "2025": 873
-   }
-  },
-  "days_attended": {
-   "label": "Average days attended",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 860,
-    "2019": 868,
-    "2022": 896,
-    "2023": 898,
-    "2024": 892,
-    "2025": 883
-   }
-  },
-  "days_membership": {
-   "label": "Average days enrolled (membership)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2018": 860,
-    "2019": 868,
-    "2022": 896,
-    "2023": 898,
-    "2024": 892,
-    "2025": 883
-   }
-  },
-  "att_el": {
-   "label": "Attendance rate, English learners",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 660,
-    "2019": 690,
-    "2022": 752,
-    "2023": 773,
-    "2024": 761,
-    "2025": 739
-   }
-  },
-  "att_swd": {
-   "label": "Attendance rate, students with a disability",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 855,
-    "2019": 864,
-    "2022": 893,
-    "2023": 893,
-    "2024": 890,
-    "2025": 880
-   }
-  },
-  "mgp_ela_rise": {
-   "label": "Median growth percentile, English language arts, RISE (grades 3-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 749,
-    "2022": 769,
-    "2023": 777,
-    "2024": 770,
-    "2025": 764
-   }
-  },
-  "mgp_math_rise": {
-   "label": "Median growth percentile, mathematics, RISE (grades 3-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 748,
-    "2022": 769,
-    "2023": 777,
-    "2024": 770,
-    "2025": 763
-   }
-  },
-  "mgp_science_rise": {
-   "label": "Median growth percentile, science, RISE (grades 3-8)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 744,
-    "2022": 764,
-    "2023": 771,
-    "2024": 764,
-    "2025": 758
-   }
-  },
-  "days_absent": {
-   "label": "Average days absent, 2024-25 (mean of the school's grade averages; a grade reported as zero is left out)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2025": 847
-   }
-  },
-  "pct_excused": {
-   "label": "Share of absences excused, 2024-25 (mean of the school's grade shares)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2025": 847
-   }
-  },
-  "mgp_ela_aspire": {
-   "label": "Median growth percentile, English language arts, Utah Aspire Plus (grades 9-10)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 245,
-    "2022": 245,
-    "2023": 247,
-    "2024": 248,
-    "2025": 246
-   }
-  },
-  "mgp_math_aspire": {
-   "label": "Median growth percentile, mathematics, Utah Aspire Plus (grades 9-10)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 243,
-    "2022": 242,
-    "2023": 246,
-    "2024": 248,
-    "2025": 245
-   }
-  },
-  "mgp_science_aspire": {
-   "label": "Median growth percentile, science, Utah Aspire Plus (grades 9-10)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 241,
-    "2022": 245,
-    "2023": 247,
-    "2024": 249,
-    "2025": 247
-   }
-  },
-  "act_english": {
-   "label": "ACT English, grade 11 mean",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 151,
-    "2019": 154,
-    "2022": 157,
-    "2023": 160,
-    "2024": 161,
-    "2025": 159
-   }
-  },
-  "act_reading": {
-   "label": "ACT reading, grade 11 mean",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 151,
-    "2019": 154,
-    "2022": 157,
-    "2023": 160,
-    "2024": 161,
-    "2025": 159
-   }
-  },
-  "act_math": {
-   "label": "ACT mathematics, grade 11 mean",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 151,
-    "2019": 154,
-    "2022": 157,
-    "2023": 160,
-    "2024": 161,
-    "2025": 159
-   }
-  },
-  "act_science": {
-   "label": "ACT science, grade 11 mean",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 151,
-    "2019": 154,
-    "2022": 157,
-    "2023": 160,
-    "2024": 161,
-    "2025": 159
-   }
-  },
-  "act_18_range": {
-   "label": "Grade 11 students scoring 18 or higher on the ACT composite, the state's range where it masks the value",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 25,
-    "2019": 19,
-    "2022": 21,
-    "2023": 20,
-    "2024": 23,
-    "2025": 22
-   }
-  }
- }
+ "best_schools_added": "2026-10-01"
 }

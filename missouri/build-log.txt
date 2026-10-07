@@ -1,20 +1,21 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state MO --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/MO --data /home/claude/sdf/Build/work/MO/data --extras mo_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state MO --core /home/claude/sdf/Core --out /home/claude/work1/MO --data /home/claude/work1/MO/data --extras mo_core_extras
 reading the core for Missouri ...
 [core] subjects: 106,874 school rows kept; dropped 66,487 rows with no school id and 3,973 with an id but no school record
-[core] Leader in Me roster: 2,184 rows
+[core] Leader in Me roster: 2,192 rows
 [core] comparison schools: 15,057 rows
+[core] comparison: 8 rows set aside for 4 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 414 rows
-  subject rows 106,874 · roster rows 2,184 (232 schools) · comparison rows 15,057 (1826 schools) · MRA surveys 414
+  subject rows 106,874 · roster rows 2,192 (236 schools) · comparison rows 15,049 (1826 schools) · MRA surveys 414
   identity: Barry School (Kansas City): 292523003443 -> 292523001451
-[core] Leader in Me roster: 56,181 rows
-  exits: 203 of 232 roster schools carry an expiration date; 70 past it by more than 30 days (exited), 3 inside the grace window, 130 in the future, 29 undated (28 with a start date)
+[core] Leader in Me roster: 59,452 rows
+  exits: 207 of 236 roster schools carry an expiration date; 71 past it by more than 30 days (exited), 0 inside the grace window, 136 in the future, 29 undated (28 with a start date)
   2,056 schools · 529 districts
   1 roster schools have comparison-export rows after their roster years (DOMO's own flag says they left): read as exited after [2017]
 applying the cleaning rules ...
-  52,904 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 1005 of 2088 reviewed
-  no start date: 3 schools · dated exits: 61 (school-years after an exit with rows: 156) · aggregate 'All grades' rows used 0, skipped 0
+  52,999 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
+  Leader in Me school-years counted: 1115 of 2124 reviewed
+  no start date: 1 schools · dated exits: 61 (school-years after an exit with rows: 156) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 48.4% of rows in years and subjects whose levels add up; not offered because the latest year's reading and math levels do not add up)
   level values blanked on 37 year-subject cells that do not add up: 2015-16 ELA (end-of-course), 2015-16 ELA, 2015-16 Math (end-of-course), 2015-16 Math, 2015-16 Science (end-of-course), 2015-16 Science, 2015-16 Social Studies (end-of-course), 2017-18 Math (end-of-course) ...
   proficiency = levels 3 and 4 on 48.2% of rows
@@ -38,34 +39,35 @@ folding in Missouri's own measures (mo_core_extras) ...
     advanced coursework: 10,647 counts from the cache (file unchanged)
   measures read: adv_credit 2016, 2017, 2018, 2019, 2020, 2021, 2022; apr_ci_pct 2023, 2024, 2025; apr_pct 2022, 2023, 2024, 2025; apr_perf_pct 2023, 2024, 2025; apr_perf_possible 2023, 2024, 2025; apr_possible 2022, 2023, 2024, 2025; att_points 2023, 2024, 2025; attend_90 2016, 2017, 2018, 2019, 2022; ccr_assess 2016, 2017, 2018, 2019, 2020, 2021, 2022; ccr_points 2023, 2024, 2025; ela_growth_pts 2023, 2024, 2025; ela_growth_z 2022; ela_mpi_msip5 2018, 2019; ela_mpi_msip6 2022, 2023, 2024, 2025; ela_prof 2018, 2019, 2022; follow_up 2015, 2016, 2017, 2018, 2021; grad4 2016, 2017, 2018, 2019, 2020, 2021, 2022; grad_points 2023, 2024, 2025; math_growth_pts 2023, 2024, 2025; math_growth_z 2022; math_mpi_msip5 2018, 2019; math_mpi_msip6 2022, 2023, 2024, 2025; math_prof 2018, 2019, 2022
   crosswalk: NCES's county-district code and school number for each federal id, audited by DESE's own school name within district
-    2,050 of 2,056 schools carry a state id in NCES's directory; Leader in Me 232 of 232, comparison 1,818 of 1,824; 2,035 appear in at least one APR file
+    2,050 of 2,056 schools carry a state id in NCES's directory; Leader in Me 236 of 236, comparison 1,814 of 1,820; 2,035 appear in at least one APR file
     the second way (DESE's school name within district, exactly): 2,029 of 2,368 state buildings reach a DOMO school by name and 2,037 by code; both reach 2,028 and agree on 2,028; 9 DOMO schools are reached by code alone (DESE spells them differently); 1 by name alone; 1 triples re-pointed to a folded id; 0 shared state ids settled; 1 schools carry more than one state id across the years
   state values on DOMO ids: 125,810 school-year values for 2,035 schools on the page; APR scores for 2022: 1,947, 2023: 1,966, 2024: 1,948, 2025: 1,941; buildings scored on attendance and KEA alone, off the measure: 2022 16, 2023 18, 2024 14, 2025 13
-  value checks (files the map was not built from): 100 minus the state's attendance against DOMO's chronic absence 2017-18 r=0.992 gap -2.7 pts on 1,825; 2018-19 r=0.994 gap -2.7 pts on 1,837; 2021-22 r=0.996 gap -4.6 pts on 1,606; the state's four-year graduation rate against DOMO's at the same label 2017-18 61.4% within half a point of 482; 2018-19 72.6% within half a point of 486; 2021-22 85.2% within half a point of 384; the state's ELA percent proficient against the core's proficiency 2017-18 r=0.971; 2018-19 r=0.976; 2021-22 r=0.964
+  value checks (files the map was not built from): 100 minus the state's attendance against DOMO's chronic absence 2017-18 r=0.992 gap -2.7 pts on 1,827; 2018-19 r=0.994 gap -2.7 pts on 1,839; 2021-22 r=0.996 gap -4.6 pts on 1,608; the state's four-year graduation rate against DOMO's at the same label 2017-18 61.3% within half a point of 483; 2018-19 72.5% within half a point of 487; 2021-22 85.2% within half a point of 385; the state's ELA percent proficient against the core's proficiency 2017-18 r=0.971; 2018-19 r=0.976; 2021-22 r=0.964
   graduation fill (only where DOMO has none): 2015-16, 2016-17 from the 2018 and 2019 files' prior-year columns, 1,021 school-years on 512 high schools
-  rows gain: apr_pct on 9,672 school-year-bands (204 Leader in Me schools ever), attend_90 on 12,222 school-year-bands (157 Leader in Me schools ever), ccr_assess on 2,539 school-year-bands (4 Leader in Me schools ever), adv_credit on 2,538 school-year-bands (4 Leader in Me schools ever); 0 school-years had no band to sit in
+  rows gain: apr_pct on 9,684 school-year-bands (206 Leader in Me schools ever), attend_90 on 12,237 school-year-bands (161 Leader in Me schools ever), ccr_assess on 2,544 school-year-bands (5 Leader in Me schools ever), adv_credit on 2,543 school-year-bands (5 Leader in Me schools ever); 0 school-years had no band to sit in
   card: 6 Missouri measures, each group on each year's own membership (thin, left off: follow_up)
-  per-school records for the pack: 17,223 school-years on 2,032 schools; state codes for 2,047
-  reach: APR supporting data for 232 of 232 Leader in Me schools and 1,800 of 1,824 comparison schools; an APR score for 231 Leader in Me; a state graduation rate for 16 Leader in Me and 503 comparison high schools
-  Missouri's measures on 19,484 school-year-bands: 16,030 joined to existing rows, 3,454 school-year-bands added with no test rows of their own
-  core measures filled from Missouri's own files where DOMO had none: grad_rate 3,542 rows
-  school type from NCES: Title I on 2,016 schools (1,090 yes), charter 92, magnet 28, alternative 4; Title I published 2017-2022, carried forward after
-  funders: 148 Missouri schools carry a funding source (146 on the page; Kern 71, 69 on the page); latest non-blank year per school
+  per-school records for the pack: 17,242 school-years on 2,034 schools; state codes for 2,049
+  reach: APR supporting data for 236 of 236 Leader in Me schools and 1,796 of 1,820 comparison schools; an APR score for 235 Leader in Me; a state graduation rate for 16 Leader in Me and 503 comparison high schools
+  Missouri's measures on 19,508 school-year-bands: 16,054 joined to existing rows, 3,454 school-year-bands added with no test rows of their own
+  core measures filled from Missouri's own files where DOMO had none: grad_rate 3,555 rows
+  school type from NCES: Title I on 2,018 schools (1,091 yes), charter 92, magnet 28, alternative 4; Title I published 2017-2022, carried forward after
+  funders: 148 Missouri schools carry a funding source (148 on the page; Kern 71, 71 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
-  pairs 140  by band {'Primary': {'pairs': 104, 'unmatched': 4}, 'Secondary': {'pairs': 36, 'unmatched': 1}}
+  pairs 142  by band {'Primary': {'pairs': 106, 'unmatched': 4}, 'Secondary': {'pairs': 36, 'unmatched': 2}}
   MRA: 392 surveys · 141 schools · 1287 sentinel values · 8 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 158, 'comp_n': 1296, 'lim_change': 0.69, 'comp_change': 1.73, 'p': 0.152} · without the 28 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 135, 'comp_n': 1296, 'lim_change': 0.59, 'comp_change': 1.73, 'p': 0.146}
-  roster: 156 counted, 71 exited, 2 not counted yet, 3 not counted
+  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 160, 'comp_n': 1296, 'lim_change': 0.76, 'comp_change': 1.73, 'p': 0.177} · without the 28 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 137, 'comp_n': 1296, 'lim_change': 0.66, 'comp_change': 1.73, 'p': 0.172}
+  roster: 157 counted, 72 exited, 6 not counted yet, 1 not counted
+best-performing schools: 24 of 162 counted schools, 58 measures in 14 outcomes
 
-wrote mo_payload.json  (29.6 MB, 56,358 rows) · page kind full (158 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-08-19', 'rules_fingerprint': '88ba249d83ae', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': 'fb6eaf7cb415'}
+wrote mo_payload.json  (29.7 MB, 56,453 rows) · page kind full (160 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py mo_payload.json MO_Dashboard.html MO_Methods.html
-payload 29.6 MB -> 1.84 MB gzip
-MO_Dashboard.html: 2680 KB
-MO_Methods.html: 56 KB
+payload 29.7 MB -> 1.85 MB gzip
+MO_Dashboard.html: 2735 KB
+MO_Methods.html: 66 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state MO --work /home/claude/sdf/Build/work/MO
+$ python3 /home/claude/sdf/Build/verify_core.py --state MO --work /home/claude/work1/MO
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -84,12 +86,12 @@ ok   no test value above 100
 ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': -0.1, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': -0.1, 'PercentMetStandard': 0.0}]
 ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
 ok   every comparison row is LIM School = false
-ok   comparison rows for roster schools sit only in years the roster does not carry  [1 roster schools have comparison rows]
+ok   comparison rows for roster schools sit only in years the roster does not carry  [5 roster schools have comparison rows]
 ok   the roster's '% White' is a count, not a percentage
 ok   one expiration date per roster school
 ok   every expiration date parsed
 ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
-ok   the exit rule's counts recompute from the roster  [70 exited, 3 in grace, 130 future]
+ok   the exit rule's counts recompute from the roster  [71 exited, 0 in grace, 136 future]
 ok   the grace window is the 30 days Eve set
 ok   MRA exact-100 values were counted as sentinels  [113 composite cells at 100, 14 in 90-99.9]
 ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [1 collisions]
@@ -104,15 +106,18 @@ ok   payload carries a build stamp
 ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
-ok   no Leader in Me row counted before its full year was finished  [0 rows]
-ok   schools with no start date appear in neither group  [3 schools]
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 14 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [14 Year 0 rows]
+ok   schools with no start date appear in neither group  [1 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [70 exited schools with counted years]
-ok   the exit counts on the methods page match the rule  [71 exited (1 from DOMO's flags)]
+ok   exited schools keep their true Leader in Me years  [72 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [72 exited (1 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 156, 'exited': 71, 'not counted': 3, 'not counted yet': 2}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 157, 'exited': 72, 'not counted yet': 6, 'not counted': 1}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -120,23 +125,23 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [652 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [653 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   no level measure is offered when the level structure is unconfirmed  [the latest year's reading and math levels do not add up]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's pre-start years count in the comparison group  [2,837 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [2,636 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [514 schools]
-ok   the school count never exceeds the band-slice count  [1454 schools vs 1616 band slices]
+ok   combined-grade schools appear in both bands  [515 schools]
+ok   the school count never exceeds the band-slice count  [1456 schools vs 1619 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
 ok   no Leader in Me school is paired twice inside a band
-ok   the signed baseline gap recomputes to the payload's  [offline -0.025 vs payload -0.020 on 140 pairs]
-ok   the mean signed baseline gap is under one point  [-0.025]
+ok   the signed baseline gap recomputes to the payload's  [offline -0.019 vs payload -0.020 on 142 pairs]
+ok   the mean signed baseline gap is under one point  [-0.019]
 ok   the widest single baseline gap is inside the caliper's reach  [3.9 points]
 ok   the printed signed gap is not a negative zero  [-0.02]
 ok   no MRA value of exactly 100 survives into the payload
@@ -150,7 +155,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [1.3s]
+ok   load time is workable  [0.9s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -160,12 +165,12 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [6 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.1509 scipy 0.1509 · window 2022-2025 · LiM n=158 mean +0.69 · comparison n=1296 mean +1.73]
-ok   the headline counts schools, not band slices  [page 1454 vs offline 1454 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [158 vs 158]
-ok   the district filter re-renders the headline  [In Independence 30 schools, between 2023-24 and 2024-25, Leader in Me schools rose 0.7% on]
+ok   the headline p recomputes offline  [page 0.1758 scipy 0.1758 · window 2022-2025 · LiM n=160 mean +0.75 · comparison n=1296 mean +1.73]
+ok   the headline counts schools, not band slices  [page 1456 vs offline 1456 on 2022-2025]
+ok   the page's Leader in Me count is the builder's  [160 vs 160]
+ok   the district filter re-renders the headline  [In Independence 30 schools, between 2022-23 and 2024-25, Leader in Me schools rose 0.3% on]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [1066 of 2053 schools; In Missouri Title I schools, between 2021-22 and 2024-25, Leader in Me schools r]
+ok   choosing 'Title I schools' narrows the view and names it  [1067 of 2055 schools; In Missouri Title I schools, between 2021-22 and 2024-25, Leader in Me schools r]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Missouri schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2024-25]
 ok   Title I status is known for most schools on the page  [98.2%]
@@ -181,11 +186,11 @@ ok   measure 'attend_90' either draws or says why
 ok   measure 'ccr_assess' either draws or says why
 ok   measure 'adv_credit' either draws or says why
 ok   the matched toggle re-renders the headline  [In Missouri schools (matched to similar schools only), between 2021-22 and 2024-25, Leader]
-ok   the matched view shrinks or equals the Leader in Me count  [91 matched]
+ok   the matched view shrinks or equals the Leader in Me count  [93 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Independence 30 generates cards or says there is nothing to report  [10 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.15087067668730814, 'n1': 158, 'n2': 1296}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.17580879657735016, 'n1': 160, 'n2': 1296}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -204,11 +209,11 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [10,623 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [154,237 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [152,921 bytes]
 ok   the pptx export is named for the state and chart  [MO_Percent_meeting_the_standard_year_by_year_Missouri_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [154,523 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [153,944 bytes]
 ok   the docx export is named for the state and chart  [MO_Percent_meeting_the_standard_year_by_year_Missouri_schools.docx]
-ok   the research pack downloads with its sections  [12,987 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the research pack downloads with its sections  [13,730 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
 ok   the pack's Leader in Me count for the district is the page's  [18 vs 18]
 ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Missouri schools like Springfield R-Xii’s, between 2021-22 and 2024-25, Leader in Me schools fell 0.2% on Percent mee]
 ok   the look-alike box reports both counts or says why not  [Schools like Springfield R-Xii’s: 23 Leader in Me schools and 153 comparison schools look like Springfield R-Xii’s 49 schools with results in these years (each ]
@@ -249,27 +254,27 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +0.69 pts (n=158) vs comparison +1.73 pts (n=1296), p=0.1509 -> not significant
+  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +0.75 pts (n=160) vs comparison +1.73 pts (n=1296), p=0.1758 -> not significant
 
 ==========================================================================
-165 of 165 checks pass
+168 of 168 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/mo_core_verify.py --work /home/claude/sdf/Build/work/MO
+$ python3 /home/claude/sdf/Build/states/mo_core_verify.py --work /home/claude/work1/MO
 
 Missouri's own measures
 --------------------------------------------------------------------------
-ok   the crosswalk reaches nearly every Leader in Me school  [232 of 232]
-ok   the crosswalk reaches most comparison schools  [1,818 of 1,824]
+ok   the crosswalk reaches nearly every Leader in Me school  [236 of 236]
+ok   the crosswalk reaches most comparison schools  [1,814 of 1,820]
 ok   NCES's own id triples anchor the crosswalk  [2,052 triples for 2,056 schools]
 ok   the second way (DESE's school name within district) agrees with the state-id join wherever both speak  [2,028 of 2,028; 0 disagreements]
 ok   the name audit reaches most state buildings that have a DOMO record  [2,029 by name against 2,037 by code]
 ok   no state id is on two schools  [2,052 triples, 2,050 schools]
 ok   the Leader in Me schools the crosswalk cannot reach are named on the page
 ok   the join note on the card carries the reach
-ok   the complement of the state's attendance tracks DOMO's chronic absence school by school (an independent check of the join)  [2017-18 r=0.992 on 1,825; 2018-19 r=0.994 on 1,837; 2021-22 r=0.996 on 1,606]
+ok   the complement of the state's attendance tracks DOMO's chronic absence school by school (an independent check of the join)  [2017-18 r=0.992 on 1,827; 2018-19 r=0.994 on 1,839; 2021-22 r=0.996 on 1,608]
 ok   the two attendance counts are not the same number (the level gap the page names)  [2017-18 median gap -2.7; 2018-19 median gap -2.7; 2021-22 median gap -4.6]
-ok   the state's ELA percent proficient tracks the core's proficiency school by school  [2017-18 r=0.971 on 1,850; 2018-19 r=0.976 on 1,859; 2021-22 r=0.964 on 1,456]
+ok   the state's ELA percent proficient tracks the core's proficiency school by school  [2017-18 r=0.971 on 1,852; 2018-19 r=0.976 on 1,861; 2021-22 r=0.964 on 1,458]
 ok   DOMO's graduation rate sits on the same label as the state's in every overlapping year  [2017-18: file labelled Y+0; 2018-19: file labelled Y+0; 2021-22: file labelled Y+0]
 ok   the MSIP 5 summary carries no building score (determinations only), as the page says
 ok   Missouri 2022 APR Summary Building Report.xlsx: the percent rebuilds from the points on every building with points possible  [2,128 of 2,128]
@@ -278,34 +283,34 @@ ok   Missouri 2024 APR Summary Building Report.xlsx: the percent rebuilds from t
 ok   Missouri 2025 APR Summary Building Report.xlsx: the percent rebuilds from the points on every building with points possible  [2,127 of 2,127]
 ok   the 2021-22 file's prior-year follow-up columns are all zero and were not read
 ok   a school-year carried by two files agrees on nearly every value (the later file's copy kept)  [adv_credit: files 2018 and 2019: 1,006 of 1,032; attend_90: files 2018 and 2019: 4,237 of 4,239; ccr_assess: files 2018 and 2019: 993 of 1,032; follow_up: files 2018 and 2019: 1,038 of 1,040; grad4: files 2018 and 2019: 999 of 1,040]
-ok   APR summary 2025: the pack's apr_pct for 2024-25 is the state file's own value through the crosswalk  [1938 of 1938 agree (need 100)]
-ok   APR summary 2025 (Leader in Me schools): the pack's apr_pct for 2024-25 is the state file's own value through the crosswalk  [223 of 223 agree (need 30)]
-ok   APR summary 2025: the pack's apr_perf_pct for 2024-25 is the state file's own value through the crosswalk  [1938 of 1938 agree (need 100)]
-ok   APR summary 2022 (a fraction in the file): the pack's apr_pct for 2021-22 is the state file's own value through the crosswalk  [1944 of 1944 agree (need 100)]
-ok   APR supporting 2022: the pack's attend_90 for 2021-22 is the state file's own value through the crosswalk  [1959 of 1959 agree (need 100)]
-ok   APR supporting 2022: the pack's grad4 for the class of 2022 is the state file's own value through the crosswalk  [507 of 507 agree (need 100)]
-ok   APR supporting 2022: the pack's adv_credit for the class of 2022 is the state file's own value through the crosswalk  [505 of 505 agree (need 100)]
-ok   APR supporting 2022 (the prior-year column: a closure class, pack only): the pack's grad4 for the class of 2021 is the state file's own value through the crosswalk  [505 of 505 agree (need 100)]
-ok   APR supporting 2022: the pack's ela_mpi_msip6 for 2021-22 is the state file's own value through the crosswalk  [1941 of 1941 agree (need 100)]
-ok   APR supporting 2019: the pack's grad4 for the class of 2019 is the state file's own value through the crosswalk  [512 of 512 agree (need 100)]
-ok   APR supporting 2019: the pack's ccr_assess for the class of 2019 is the state file's own value through the crosswalk  [511 of 511 agree (need 100)]
-ok   APR supporting 2019: the pack's attend_90 for 2018-19 is the state file's own value through the crosswalk  [1957 of 1957 agree (need 100)]
-ok   APR supporting 2019: the pack's ela_mpi_msip5 for 2018-19 is the state file's own value through the crosswalk  [1960 of 1960 agree (need 100)]
-ok   APR supporting 2018 (a prior-year column): the pack's attend_90 for 2015-16 is the state file's own value through the crosswalk  [1946 of 1946 agree (need 100)]
-ok   APR supporting 2018 (the follow-up, a class behind): the pack's follow_up for the class of 2017 is the state file's own value through the crosswalk  [506 of 509 agree (need 100)]
-ok   APR supporting 2025: the pack's ela_mpi_msip6 for 2024-25 is the state file's own value through the crosswalk  [1936 of 1936 agree (need 100)]
-ok   APR supporting 2025: the pack's att_points for 2024-25 is the state file's own value through the crosswalk  [1951 of 1951 agree (need 100)]
-ok   APR summary 2019: the pack's ELA status determination is the file's own  [1932 of 1932]
-ok   advanced coursework 2025: the pack's dual_credit_completed for the class of 2025 is the state file's own value through the crosswalk  [453 of 453 agree (need 100)]
+ok   APR summary 2025: the pack's apr_pct for 2024-25 is the state file's own value through the crosswalk  [1940 of 1940 agree (need 100)]
+ok   APR summary 2025 (Leader in Me schools): the pack's apr_pct for 2024-25 is the state file's own value through the crosswalk  [226 of 226 agree (need 30)]
+ok   APR summary 2025: the pack's apr_perf_pct for 2024-25 is the state file's own value through the crosswalk  [1940 of 1940 agree (need 100)]
+ok   APR summary 2022 (a fraction in the file): the pack's apr_pct for 2021-22 is the state file's own value through the crosswalk  [1946 of 1946 agree (need 100)]
+ok   APR supporting 2022: the pack's attend_90 for 2021-22 is the state file's own value through the crosswalk  [1961 of 1961 agree (need 100)]
+ok   APR supporting 2022: the pack's grad4 for the class of 2022 is the state file's own value through the crosswalk  [508 of 508 agree (need 100)]
+ok   APR supporting 2022: the pack's adv_credit for the class of 2022 is the state file's own value through the crosswalk  [506 of 506 agree (need 100)]
+ok   APR supporting 2022 (the prior-year column: a closure class, pack only): the pack's grad4 for the class of 2021 is the state file's own value through the crosswalk  [506 of 506 agree (need 100)]
+ok   APR supporting 2022: the pack's ela_mpi_msip6 for 2021-22 is the state file's own value through the crosswalk  [1943 of 1943 agree (need 100)]
+ok   APR supporting 2019: the pack's grad4 for the class of 2019 is the state file's own value through the crosswalk  [513 of 513 agree (need 100)]
+ok   APR supporting 2019: the pack's ccr_assess for the class of 2019 is the state file's own value through the crosswalk  [512 of 512 agree (need 100)]
+ok   APR supporting 2019: the pack's attend_90 for 2018-19 is the state file's own value through the crosswalk  [1959 of 1959 agree (need 100)]
+ok   APR supporting 2019: the pack's ela_mpi_msip5 for 2018-19 is the state file's own value through the crosswalk  [1962 of 1962 agree (need 100)]
+ok   APR supporting 2018 (a prior-year column): the pack's attend_90 for 2015-16 is the state file's own value through the crosswalk  [1948 of 1948 agree (need 100)]
+ok   APR supporting 2018 (the follow-up, a class behind): the pack's follow_up for the class of 2017 is the state file's own value through the crosswalk  [507 of 510 agree (need 100)]
+ok   APR supporting 2025: the pack's ela_mpi_msip6 for 2024-25 is the state file's own value through the crosswalk  [1938 of 1938 agree (need 100)]
+ok   APR supporting 2025: the pack's att_points for 2024-25 is the state file's own value through the crosswalk  [1953 of 1953 agree (need 100)]
+ok   APR summary 2019: the pack's ELA status determination is the file's own  [1934 of 1934]
+ok   advanced coursework 2025: the pack's dual_credit_completed for the class of 2025 is the state file's own value through the crosswalk  [454 of 454 agree (need 100)]
 ok   advanced coursework 2025: the pack's ap_completed for the class of 2025 is the state file's own value through the crosswalk  [222 of 222 agree (need 50)]
-ok   the APR score is on the rows for 2021-22 to 2024-25 only (MSIP 6), on both bands where a school reports both  [22,955 rows, years [2022, 2023, 2024, 2025]]
+ok   the APR score is on the rows for 2021-22 to 2024-25 only (MSIP 6), on both bands where a school reports both  [22,995 rows, years [2022, 2023, 2024, 2025]]
 ok   the attendance rate is on the rows for the years the supporting data carries it, never a closure year  [years [2016, 2017, 2018, 2019, 2022]]
-ok   ccr_assess sits on secondary rows only, on the class's year, never a closure class  [8,398 rows, years [2016, 2017, 2018, 2019, 2022]]
-ok   adv_credit sits on secondary rows only, on the class's year, never a closure class  [8,390 rows, years [2016, 2017, 2018, 2019, 2022]]
-ok   every row value of apr_pct is the pack's value for that school-year  [9,455 school-year-bands]
-ok   every row value of attend_90 is the pack's value for that school-year  [12,190 school-year-bands]
-ok   every row value of ccr_assess is the pack's value for that school-year  [2,539 school-year-bands]
-ok   every row value of adv_credit is the pack's value for that school-year  [2,538 school-year-bands]
+ok   ccr_assess sits on secondary rows only, on the class's year, never a closure class  [8,427 rows, years [2016, 2017, 2018, 2019, 2022]]
+ok   adv_credit sits on secondary rows only, on the class's year, never a closure class  [8,419 rows, years [2016, 2017, 2018, 2019, 2022]]
+ok   every row value of apr_pct is the pack's value for that school-year  [9,467 school-year-bands]
+ok   every row value of attend_90 is the pack's value for that school-year  [12,205 school-year-bands]
+ok   every row value of ccr_assess is the pack's value for that school-year  [2,544 school-year-bands]
+ok   every row value of adv_credit is the pack's value for that school-year  [2,543 school-year-bands]
 ok   buildings scored on attendance and kindergarten entry alone carry no APR score on the rows  [61 such building-years in the pack]
 ok   no APR score in the pack for a 2022-23 on building with no performance points possible  [0 found]
 ok   no ccr_assess value above 100 reaches the pack or the rows
@@ -314,32 +319,32 @@ ok   no attend_90 value above 100 reaches the pack or the rows
 ok   no grad4 value above 100 reaches the pack or the rows
 ok   no follow_up value above 100 reaches the pack or the rows
 ok   the graduation fill covers exactly the years DOMO carries no Missouri graduation rate  [filled [2016, 2017]; DOMO years [2018, 2019, 2021, 2022, 2023, 2024, 2025]]
-ok   every DOMO graduation value on the rows from 2017-18 on is DOMO's own (nothing overwritten)  [2,503 school-years]
-ok   the filled 2015-16 and 2016-17 graduation values are the state's own four-year rates  [1,019 school-years]
+ok   every DOMO graduation value on the rows from 2017-18 on is DOMO's own (nothing overwritten)  [2,509 school-years]
+ok   the filled 2015-16 and 2016-17 graduation values are the state's own four-year rates  [1,021 school-years]
 ok   chronic absence is never filled from the attendance measure (no value before DOMO's first year)
 ok   the fill is stated on the methods page
 ok   the Missouri card is on the page with a manageable set of measures  [6 measures: apr_pct, attend_90, att_points, grad4, ccr_assess, adv_credit]
 ok   no card point sits in a closure year
 ok   every Leader in Me school-year on the card is a Leader in Me school-year in the rows  [0 outside]
 ok   every card school-year is a school-year the page carries a row for
-ok   APR score: share of accountability points earned: the Leader in Me point in 2024-25 rests on at least three counted schools  [n=165]
+ok   APR score: share of accountability points earned: the Leader in Me point in 2024-25 rests on at least three counted schools  [n=167]
 ok   APR score: share of accountability points earned: every card point recomputes from the pack on the core's own membership
-ok   Students attending 90% or more of days: the Leader in Me point in 2021-22 rests on at least three counted schools  [n=136]
+ok   Students attending 90% or more of days: the Leader in Me point in 2021-22 rests on at least three counted schools  [n=139]
 ok   Students attending 90% or more of days: every card point recomputes from the pack on the core's own membership
-ok   Attendance indicator points earned (share of possible): the Leader in Me point in 2024-25 rests on at least three counted schools  [n=165]
+ok   Attendance indicator points earned (share of possible): the Leader in Me point in 2024-25 rests on at least three counted schools  [n=167]
 ok   Attendance indicator points earned (share of possible): every card point recomputes from the pack on the core's own membership
-ok   Four-year graduation rate (DESE, class year): the Leader in Me point in the class of 2022 rests on at least three counted schools  [n=4]
+ok   Four-year graduation rate (DESE, class year): the Leader in Me point in the class of 2022 rests on at least three counted schools  [n=5]
 ok   Four-year graduation rate (DESE, class year): every card point recomputes from the pack on the core's own membership
-ok   Graduates with a qualifying college or career assessment score: the Leader in Me point in the class of 2022 rests on at least three counted schools  [n=4]
+ok   Graduates with a qualifying college or career assessment score: the Leader in Me point in the class of 2022 rests on at least three counted schools  [n=5]
 ok   Graduates with a qualifying college or career assessment score: every card point recomputes from the pack on the core's own membership
-ok   Graduates earning advanced credit: the Leader in Me point in the class of 2022 rests on at least three counted schools  [n=4]
+ok   Graduates earning advanced credit: the Leader in Me point in the class of 2022 rests on at least three counted schools  [n=5]
 ok   Graduates earning advanced credit: every card point recomputes from the pack on the core's own membership
 ok   the APR line on the card starts at 2021-22 (MSIP 6), named for its era
 ok   the attendance line stops where the files stop carrying the rate
 ok   the MAP Performance Index is kept apart by era in the pack, never on the card
-ok   the research pack's per-school Missouri values are keyed to schools on the page  [17,223 records]
+ok   the research pack's per-school Missouri values are keyed to schools on the page  [17,242 records]
 ok   every pack column has a label
-ok   each school's state code is on the page  [2,047 codes]
+ok   each school's state code is on the page  [2,049 codes]
 ok   the Missouri measures are offered beside the core's  [apr_pct, attend_90, ccr_assess, adv_credit]
 ok   the closure-class exclusion and the PK-2 exclusion are counted in the cleaning audit
 

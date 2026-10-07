@@ -2,54 +2,54 @@
  "state": "TN",
  "name": "Tennessee",
  "folder": "tennessee",
- "built": "2026-09-17",
- "seconds": 153,
+ "built": "2026-10-06",
+ "seconds": 342,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 24,
- "schools": 1875,
+ "lim_headline_n": 28,
+ "schools": 1877,
  "years": [
   2015,
   2026
  ],
- "lim_roster_schools": 64,
+ "lim_roster_schools": 77,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-17"
+   "modified": "2026-09-30"
   },
   "roster": {
-   "file": "LIM Schools (Current_Active) (11).csv",
-   "bytes": 12784777,
-   "modified": "2026-09-17"
+   "file": "LIM Schools (Current_Active) (12).csv",
+   "bytes": 13445693,
+   "modified": "2026-10-06"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
    "bytes": 132812308,
-   "modified": "2026-09-17"
+   "modified": "2026-09-30"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-17"
+   "modified": "2026-09-30"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/work3/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/work1/TN/data/Subjects_Tests_FINAL (8).csv",
    "rows": 207449
   },
   "roster": {
-   "path": "/home/claude/work3/data/LIM Schools (Current_Active) (11).csv",
-   "rows": 529
+   "path": "/home/claude/work1/TN/data/LIM Schools (Current_Active) (11).csv",
+   "rows": 629
   },
   "comparison": {
-   "path": "/home/claude/work3/data/All Other Schools (Non-LiM & Exited).csv",
-   "rows": 14015
+   "path": "/home/claude/work1/TN/data/All Other Schools (Non-LiM & Exited).csv",
+   "rows": 13991
   },
   "mra": {
-   "path": "/home/claude/work3/data/All MRA Surveys.csv",
+   "path": "/home/claude/work1/TN/data/All MRA Surveys.csv",
    "rows": 68
   }
  },
@@ -67,7 +67,7 @@
  ],
  "extras_module": "tn_core_extras",
  "verified": true,
- "dashboard_bytes": 3822033,
+ "dashboard_bytes": 3874045,
  "latest_results": {
   "year": 2026,
   "label": "2025-26",
@@ -83,9 +83,739 @@
   "rows_share_of_prior": 0.71,
   "prior_year": 2025
  },
+ "measure_years": {
+  "percent_proficient": {
+   "label": "Meeting or exceeding the standard (levels 3 and 4)",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 5313,
+    "2016": 2948,
+    "2017": 3666,
+    "2018": 7809,
+    "2019": 4973,
+    "2022": 6969,
+    "2023": 7115,
+    "2024": 7118,
+    "2025": 7047,
+    "2026": 4978
+   }
+  },
+  "percent_level4": {
+   "label": "Level 4: exceeding the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3666,
+    "2023": 4559,
+    "2024": 4695,
+    "2025": 4923,
+    "2026": 3624
+   }
+  },
+  "percent_level3": {
+   "label": "Level 3: meeting the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3666,
+    "2023": 4559,
+    "2024": 4695,
+    "2025": 4923,
+    "2026": 3624
+   }
+  },
+  "percent_level2": {
+   "label": "Level 2: approaching the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3666,
+    "2023": 4559,
+    "2024": 4695,
+    "2025": 4923,
+    "2026": 3624
+   }
+  },
+  "percent_below": {
+   "label": "Level 1: below the standard",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2017": 3666,
+    "2023": 4559,
+    "2024": 4695,
+    "2025": 4923,
+    "2026": 3624
+   }
+  },
+  "standard_score": {
+   "label": "SchoolDigger standard score",
+   "kind": "rows",
+   "family": "academic",
+   "years": {
+    "2015": 4923,
+    "2016": 2948,
+    "2017": 3459,
+    "2018": 7268,
+    "2019": 4643,
+    "2022": 6521,
+    "2023": 6715,
+    "2024": 6716,
+    "2025": 6674
+   }
+  },
+  "chronic_absent": {
+   "label": "Chronic absence",
+   "kind": "rows",
+   "family": "attendance",
+   "years": {
+    "2018": 6390,
+    "2019": 4084,
+    "2022": 6297,
+    "2023": 6772,
+    "2024": 6806,
+    "2025": 6687
+   }
+  },
+  "grad_rate": {
+   "label": "Graduation rate",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 1498,
+    "2019": 981,
+    "2022": 1288,
+    "2023": 1446,
+    "2024": 1447,
+    "2025": 1440
+   }
+  },
+  "teacher_retention": {
+   "label": "Teacher retention",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2018": 7417,
+    "2019": 4988,
+    "2022": 7009,
+    "2023": 7048,
+    "2024": 6754,
+    "2025": 6731
+   }
+  },
+  "tch_satisfied": {
+   "label": "Teachers satisfied at this school (TN Educator Survey)",
+   "kind": "rows",
+   "family": "culture",
+   "years": {
+    "2018": 5429,
+    "2019": 3750,
+    "2022": 4269,
+    "2023": 3995,
+    "2024": 4653,
+    "2025": 4302
+   }
+  },
+  "ready_grad": {
+   "label": "Ready Graduate share",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2018": 1439,
+    "2019": 1097,
+    "2022": 1501,
+    "2023": 1552,
+    "2024": 1557,
+    "2025": 1584
+   }
+  },
+  "act_21": {
+   "label": "ACT 21 or higher",
+   "kind": "rows",
+   "family": "graduation",
+   "years": {
+    "2022": 1443,
+    "2023": 1495,
+    "2024": 1513,
+    "2025": 1576
+   }
+  },
+  "tes_satisfied": {
+   "label": "Teachers satisfied being a teacher at this school",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "tes_trust": {
+   "label": "Teachers seeing trust and mutual respect",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "tes_lead_roles": {
+   "label": "Teachers encouraged into leadership roles",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "tes_raise_concerns": {
+   "label": "Staff comfortable raising concerns with leaders",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "tes_students_respect": {
+   "label": "Teachers saying students treat adults with respect",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "tes_recommend": {
+   "label": "Teachers who would recommend the school to parents",
+   "kind": "cards",
+   "family": "culture",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "oss_5plus": {
+   "label": "Schools suspending 5% or more of students",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2018": 2,
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "essa_growth": {
+   "label": "ESSA growth indicator score (0-4)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "essa_achievement": {
+   "label": "ESSA achievement indicator score (0-4)",
+   "kind": "cards",
+   "family": "academic",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "essa_absenteeism": {
+   "label": "ESSA chronic absenteeism indicator score (0-4)",
+   "kind": "cards",
+   "family": "attendance",
+   "years": {
+    "2019": 2,
+    "2022": 2,
+    "2023": 2,
+    "2024": 2,
+    "2025": 2
+   }
+  },
+  "tes_eval_fair": {
+   "label": "Teachers agreeing: \"The processes used to conduct my teacher evaluation are fair to me.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1010,
+    "2018": 1125,
+    "2019": 1238,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_eval_improved": {
+   "label": "Teachers agreeing: \"In general, the teacher evaluation process used in my school has led to improvements in my teaching.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1010,
+    "2018": 1125,
+    "2019": 1238,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_like_run": {
+   "label": "Teachers agreeing: \"I like the way things are run at this school.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2017": 1010,
+    "2018": 1125,
+    "2019": 1238,
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_response_rate": {
+   "label": "Tennessee Educator Survey response rate (teachers)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2017": 1010,
+    "2018": 1125,
+    "2019": 1238,
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_learning_community": {
+   "label": "Teachers agreeing: \"Our school staff is a learning community in which ideas and suggestions for improvement are encouraged.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 1125,
+    "2019": 1238,
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_minimal_interruptions": {
+   "label": "Teachers agreeing: \"Teachers in my school are allowed to focus on teaching students with minimal interruptions.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 1125,
+    "2019": 1238,
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_principal_vision": {
+   "label": "Teachers agreeing: \"The principal at my school communicates a clear vision for this school.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2018": 1125,
+    "2019": 1238,
+    "2022": 1000
+   }
+  },
+  "pct_oss": {
+   "label": "Out-of-school suspension rate, as the state publishes it (complete for 2017-18 and 2018-19; from 2021-22 only where 10 or more students and 5% or more)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1689,
+    "2019": 1702,
+    "2022": 469,
+    "2023": 454,
+    "2024": 529,
+    "2025": 553
+   }
+  },
+  "pct_iss": {
+   "label": "In-school suspension rate, as the state publishes it (same suppression)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1689,
+    "2019": 1702,
+    "2022": 465,
+    "2023": 480,
+    "2024": 531,
+    "2025": 557
+   }
+  },
+  "pct_expelled": {
+   "label": "Expulsion rate (2017-18 and 2018-19)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2018": 1689,
+    "2019": 1702
+   }
+  },
+  "students": {
+   "label": "Enrollment in the discipline file",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 1690,
+    "2019": 1702,
+    "2024": 1744,
+    "2025": 1727
+   }
+  },
+  "tes_leader_discipline": {
+   "label": "Teachers agreeing: \"School leadership effectively handles student discipline and behavioral problems.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2019": 1238,
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_plan_collaborative": {
+   "label": "Teachers agreeing: \"My collaborative planning time is sufficient.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2019": 1238,
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_plan_individual": {
+   "label": "Teachers agreeing: \"My individual planning time is sufficient.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2019": 1238,
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "essa_elpa": {
+   "label": "ESSA English learner progress indicator score (0-4)",
+   "kind": "pack",
+   "family": "academic",
+   "years": {
+    "2019": 622,
+    "2022": 743,
+    "2023": 796,
+    "2024": 855,
+    "2025": 908
+   }
+  },
+  "essa_ineligible": {
+   "label": "Ineligible for an accountability designation that year (1 = yes)",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2019": 1679,
+    "2022": 1723,
+    "2023": 1734,
+    "2024": 1735,
+    "2025": 1716
+   }
+  },
+  "tes_help_each_other": {
+   "label": "Teachers agreeing: \"Teachers at my school feel responsible to help each other do their best.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091
+   }
+  },
+  "tes_leader_curricula": {
+   "label": "Teachers agreeing: \"My school's leader is knowledgeable about the curricula being used.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_leader_feedback": {
+   "label": "Teachers agreeing: \"My school's leader regularly gives feedback on my instruction.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_leader_knows_strengths": {
+   "label": "Teachers agreeing: \"My school's leader knows my instructional strengths and areas of growth.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_leader_models": {
+   "label": "Teachers agreeing: \"My school's leader regularly models effective instruction.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_leader_nonacademic": {
+   "label": "Teachers agreeing: \"My school's leader is knowledgeable about the non-academic needs of my students.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_maintain_discipline": {
+   "label": "Teachers agreeing: \"Teachers at my school help maintain discipline in the entire school, not just their classroom.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_responsibility": {
+   "label": "Teachers agreeing: \"Teachers at my school take responsibility for improving their school.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_safe_bullying": {
+   "label": "Teachers agreeing: \"Students in my school are safe from bullying.\" (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 1000,
+    "2023": 928,
+    "2024": 1091,
+    "2025": 1005
+   }
+  },
+  "tes_sm_climate": {
+   "label": "Teachers agreeing on the summative measure: school climate (2021 and 2022 only) (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 999
+   }
+  },
+  "tes_sm_leadership": {
+   "label": "Teachers agreeing on the summative measure: perceptions of leadership (2021 and 2022 only) (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 999
+   }
+  },
+  "tes_sm_responsibility": {
+   "label": "Teachers agreeing on the summative measure: collective responsibility (2021 and 2022 only) (Tennessee Educator Survey)",
+   "kind": "pack",
+   "family": "culture",
+   "years": {
+    "2022": 999
+   }
+  },
+  "pct_disciplined": {
+   "label": "Share of students with any disciplinary action, as the state publishes it (2021-22 on, same suppression)",
+   "kind": "pack",
+   "family": "attendance",
+   "years": {
+    "2022": 808,
+    "2023": 794,
+    "2024": 881,
+    "2025": 915
+   }
+  },
+  "ready_grad_cohort": {
+   "label": "Graduating cohort counted for Ready Graduate",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2018": 369,
+    "2019": 381,
+    "2022": 405,
+    "2023": 411,
+    "2024": 418,
+    "2025": 423
+   }
+  },
+  "college_enroll": {
+   "label": "Graduates enrolled in any postsecondary institution the following fall",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 92,
+    "2018": 87,
+    "2019": 96,
+    "2022": 95
+   }
+  },
+  "college_four_year": {
+   "label": "Graduates enrolled in a four-year institution",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 92,
+    "2018": 87,
+    "2019": 96,
+    "2022": 95
+   }
+  },
+  "college_community": {
+   "label": "Graduates enrolled in a community college",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 92,
+    "2018": 87,
+    "2019": 96,
+    "2022": 95
+   }
+  },
+  "college_technical": {
+   "label": "Graduates enrolled in a technical college",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2017": 92,
+    "2018": 87,
+    "2019": 96,
+    "2022": 95
+   }
+  },
+  "essa_grad": {
+   "label": "ESSA graduation rate indicator score (0-4)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2019": 335,
+    "2022": 334,
+    "2023": 336,
+    "2024": 347,
+    "2025": 349
+   }
+  },
+  "essa_ready_grad": {
+   "label": "ESSA Ready Graduate indicator score (0-4)",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2019": 334,
+    "2022": 334,
+    "2023": 336,
+    "2024": 347,
+    "2025": 349
+   }
+  },
+  "act_composite": {
+   "label": "Average ACT composite score",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 378,
+    "2023": 382,
+    "2024": 386,
+    "2025": 389
+   }
+  },
+  "act_tests": {
+   "label": "Valid ACT tests",
+   "kind": "pack",
+   "family": null,
+   "years": {
+    "2022": 397,
+    "2023": 395,
+    "2024": 396,
+    "2025": 401
+   }
+  },
+  "act_participation": {
+   "label": "ACT participation rate",
+   "kind": "pack",
+   "family": "graduation",
+   "years": {
+    "2022": 378,
+    "2023": 382,
+    "2024": 386,
+    "2025": 389
+   }
+  }
+ },
  "audits": {
   "levels": {
-   "rows": 202736,
+   "rows": 202720,
    "levels 3 and 4": 28.0,
    "levels 2, 3 and 4": 0.1,
    "level 4 alone": 0.1,
@@ -449,8 +1179,8 @@
     {
      "year": 2026,
      "subject": "ELA",
-     "rows": 7529,
-     "level_rows": 3704,
+     "rows": 7522,
+     "level_rows": 3700,
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
@@ -458,8 +1188,8 @@
     {
      "year": 2026,
      "subject": "Math",
-     "rows": 8698,
-     "level_rows": 4678,
+     "rows": 8689,
+     "level_rows": 4675,
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
@@ -478,18 +1208,18 @@
   },
   "poverty": {
    "lim": {
-    "schools": 64,
-    "missing": 17,
+    "schools": 77,
+    "missing": 18,
     "at_99_or_more": 1,
     "above_100": 0,
-    "high_poverty_share": 25.0
+    "high_poverty_share": 20.8
    },
    "comparison": {
-    "schools": 1817,
+    "schools": 1804,
     "missing": 178,
-    "at_99_or_more": 252,
-    "above_100": 241,
-    "high_poverty_share": 32.3
+    "at_99_or_more": 251,
+    "above_100": 240,
+    "high_poverty_share": 32.5
    }
   },
   "statewide_jumps": [
@@ -497,7 +1227,7 @@
     "subject": "ELA",
     "from": 2015,
     "to": 2016,
-    "from_mean": 48.7,
+    "from_mean": 48.8,
     "to_mean": 29.4,
     "change": -19.3
    },
@@ -538,22 +1268,22 @@
    "with": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 24,
-    "comp_n": 1530,
-    "lim_change": 7.64,
+    "lim_n": 28,
+    "comp_n": 1528,
+    "lim_change": 7.97,
     "comp_change": 6.96,
-    "p": 0.573
+    "p": 0.375
    },
    "without": {
     "y0": 2022,
     "y1": 2026,
-    "lim_n": 16,
-    "comp_n": 1530,
-    "lim_change": 7.39,
+    "lim_n": 19,
+    "comp_n": 1528,
+    "lim_change": 7.31,
     "comp_change": 6.96,
-    "p": 0.766
+    "p": 0.779
    },
-   "schools": 9
+   "schools": 10
   },
   "subjects_by_keyword": [],
   "subjects_excluded": []
@@ -562,741 +1292,11 @@
   "qualified": 5,
   "in_the_process": 3,
   "lapsed_on_the_list": 2,
-  "reviewed": 25,
-  "measures": 64,
-  "outcomes": 20,
+  "reviewed": 29,
+  "measures": 68,
+  "outcomes": 22,
   "improved_every_year": 2,
   "lapsed_longer_ago": 33
  },
- "best_schools_added": "2026-09-10",
- "measure_years": {
-  "percent_proficient": {
-   "label": "Meeting or exceeding the standard (levels 3 and 4)",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 5310,
-    "2016": 2948,
-    "2017": 3664,
-    "2018": 7805,
-    "2019": 4971,
-    "2022": 6963,
-    "2023": 7109,
-    "2024": 7112,
-    "2025": 7041,
-    "2026": 4971
-   }
-  },
-  "percent_level4": {
-   "label": "Level 4: exceeding the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 3664,
-    "2023": 4555,
-    "2024": 4689,
-    "2025": 4917,
-    "2026": 3619
-   }
-  },
-  "percent_level3": {
-   "label": "Level 3: meeting the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 3664,
-    "2023": 4555,
-    "2024": 4689,
-    "2025": 4917,
-    "2026": 3619
-   }
-  },
-  "percent_level2": {
-   "label": "Level 2: approaching the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 3664,
-    "2023": 4555,
-    "2024": 4689,
-    "2025": 4917,
-    "2026": 3619
-   }
-  },
-  "percent_below": {
-   "label": "Level 1: below the standard",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2017": 3664,
-    "2023": 4555,
-    "2024": 4689,
-    "2025": 4917,
-    "2026": 3619
-   }
-  },
-  "standard_score": {
-   "label": "SchoolDigger standard score",
-   "kind": "rows",
-   "family": "academic",
-   "years": {
-    "2015": 4920,
-    "2016": 2948,
-    "2017": 3457,
-    "2018": 7264,
-    "2019": 4641,
-    "2022": 6515,
-    "2023": 6709,
-    "2024": 6710,
-    "2025": 6668
-   }
-  },
-  "chronic_absent": {
-   "label": "Chronic absence",
-   "kind": "rows",
-   "family": "attendance",
-   "years": {
-    "2018": 6386,
-    "2019": 4082,
-    "2022": 6291,
-    "2023": 6766,
-    "2024": 6800,
-    "2025": 6681
-   }
-  },
-  "grad_rate": {
-   "label": "Graduation rate",
-   "kind": "rows",
-   "family": "graduation",
-   "years": {
-    "2018": 1498,
-    "2019": 981,
-    "2022": 1288,
-    "2023": 1446,
-    "2024": 1447,
-    "2025": 1440
-   }
-  },
-  "teacher_retention": {
-   "label": "Teacher retention",
-   "kind": "rows",
-   "family": "culture",
-   "years": {
-    "2018": 7413,
-    "2019": 4985,
-    "2022": 7003,
-    "2023": 7042,
-    "2024": 6748,
-    "2025": 6725
-   }
-  },
-  "tch_satisfied": {
-   "label": "Teachers satisfied at this school (TN Educator Survey)",
-   "kind": "rows",
-   "family": "culture",
-   "years": {
-    "2018": 5425,
-    "2019": 3750,
-    "2022": 4269,
-    "2023": 3992,
-    "2024": 4650,
-    "2025": 4299
-   }
-  },
-  "tes_satisfied": {
-   "label": "Teachers satisfied being a teacher at this school",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "tes_trust": {
-   "label": "Teachers seeing trust and mutual respect",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "tes_lead_roles": {
-   "label": "Teachers encouraged into leadership roles",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "tes_raise_concerns": {
-   "label": "Staff comfortable raising concerns with leaders",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "tes_students_respect": {
-   "label": "Teachers saying students treat adults with respect",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2017": 2,
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "tes_recommend": {
-   "label": "Teachers who would recommend the school to parents",
-   "kind": "cards",
-   "family": "culture",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "oss_5plus": {
-   "label": "Schools suspending 5% or more of students",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2018": 2,
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "essa_growth": {
-   "label": "ESSA growth indicator score (0-4)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "essa_achievement": {
-   "label": "ESSA achievement indicator score (0-4)",
-   "kind": "cards",
-   "family": "academic",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "essa_absenteeism": {
-   "label": "ESSA chronic absenteeism indicator score (0-4)",
-   "kind": "cards",
-   "family": "attendance",
-   "years": {
-    "2019": 2,
-    "2022": 2,
-    "2023": 2,
-    "2024": 2,
-    "2025": 2
-   }
-  },
-  "tes_eval_fair": {
-   "label": "Teachers agreeing: \"The processes used to conduct my teacher evaluation are fair to me.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2017": 1010,
-    "2018": 1124,
-    "2019": 1238,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_eval_improved": {
-   "label": "Teachers agreeing: \"In general, the teacher evaluation process used in my school has led to improvements in my teaching.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2017": 1010,
-    "2018": 1124,
-    "2019": 1238,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_like_run": {
-   "label": "Teachers agreeing: \"I like the way things are run at this school.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2017": 1010,
-    "2018": 1124,
-    "2019": 1238,
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_response_rate": {
-   "label": "Tennessee Educator Survey response rate (teachers)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2017": 1010,
-    "2018": 1124,
-    "2019": 1238,
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_learning_community": {
-   "label": "Teachers agreeing: \"Our school staff is a learning community in which ideas and suggestions for improvement are encouraged.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2018": 1124,
-    "2019": 1238,
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_minimal_interruptions": {
-   "label": "Teachers agreeing: \"Teachers in my school are allowed to focus on teaching students with minimal interruptions.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2018": 1124,
-    "2019": 1238,
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_principal_vision": {
-   "label": "Teachers agreeing: \"The principal at my school communicates a clear vision for this school.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2018": 1124,
-    "2019": 1238,
-    "2022": 1000
-   }
-  },
-  "pct_oss": {
-   "label": "Out-of-school suspension rate, as the state publishes it (complete for 2017-18 and 2018-19; from 2021-22 only where 10 or more students and 5% or more)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 1687,
-    "2019": 1700,
-    "2022": 469,
-    "2023": 454,
-    "2024": 529,
-    "2025": 552
-   }
-  },
-  "pct_iss": {
-   "label": "In-school suspension rate, as the state publishes it (same suppression)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 1687,
-    "2019": 1700,
-    "2022": 464,
-    "2023": 480,
-    "2024": 531,
-    "2025": 556
-   }
-  },
-  "pct_expelled": {
-   "label": "Expulsion rate (2017-18 and 2018-19)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2018": 1687,
-    "2019": 1700
-   }
-  },
-  "students": {
-   "label": "Enrollment in the discipline file",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2018": 1688,
-    "2019": 1700,
-    "2024": 1742,
-    "2025": 1725
-   }
-  },
-  "tes_leader_discipline": {
-   "label": "Teachers agreeing: \"School leadership effectively handles student discipline and behavioral problems.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2019": 1238,
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_plan_collaborative": {
-   "label": "Teachers agreeing: \"My collaborative planning time is sufficient.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2019": 1238,
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_plan_individual": {
-   "label": "Teachers agreeing: \"My individual planning time is sufficient.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2019": 1238,
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "essa_elpa": {
-   "label": "ESSA English learner progress indicator score (0-4)",
-   "kind": "pack",
-   "family": "academic",
-   "years": {
-    "2019": 622,
-    "2022": 742,
-    "2023": 795,
-    "2024": 854,
-    "2025": 907
-   }
-  },
-  "essa_ineligible": {
-   "label": "Ineligible for an accountability designation that year (1 = yes)",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2019": 1678,
-    "2022": 1721,
-    "2023": 1732,
-    "2024": 1733,
-    "2025": 1714
-   }
-  },
-  "tes_help_each_other": {
-   "label": "Teachers agreeing: \"Teachers at my school feel responsible to help each other do their best.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090
-   }
-  },
-  "tes_leader_curricula": {
-   "label": "Teachers agreeing: \"My school's leader is knowledgeable about the curricula being used.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_leader_feedback": {
-   "label": "Teachers agreeing: \"My school's leader regularly gives feedback on my instruction.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_leader_knows_strengths": {
-   "label": "Teachers agreeing: \"My school's leader knows my instructional strengths and areas of growth.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_leader_models": {
-   "label": "Teachers agreeing: \"My school's leader regularly models effective instruction.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_leader_nonacademic": {
-   "label": "Teachers agreeing: \"My school's leader is knowledgeable about the non-academic needs of my students.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_maintain_discipline": {
-   "label": "Teachers agreeing: \"Teachers at my school help maintain discipline in the entire school, not just their classroom.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_responsibility": {
-   "label": "Teachers agreeing: \"Teachers at my school take responsibility for improving their school.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_safe_bullying": {
-   "label": "Teachers agreeing: \"Students in my school are safe from bullying.\" (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 1000,
-    "2023": 927,
-    "2024": 1090,
-    "2025": 1004
-   }
-  },
-  "tes_sm_climate": {
-   "label": "Teachers agreeing on the summative measure: school climate (2021 and 2022 only) (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 999
-   }
-  },
-  "tes_sm_leadership": {
-   "label": "Teachers agreeing on the summative measure: perceptions of leadership (2021 and 2022 only) (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 999
-   }
-  },
-  "tes_sm_responsibility": {
-   "label": "Teachers agreeing on the summative measure: collective responsibility (2021 and 2022 only) (Tennessee Educator Survey)",
-   "kind": "pack",
-   "family": "culture",
-   "years": {
-    "2022": 999
-   }
-  },
-  "pct_disciplined": {
-   "label": "Share of students with any disciplinary action, as the state publishes it (2021-22 on, same suppression)",
-   "kind": "pack",
-   "family": "attendance",
-   "years": {
-    "2022": 807,
-    "2023": 794,
-    "2024": 880,
-    "2025": 914
-   }
-  },
-  "ready_grad_cohort": {
-   "label": "Graduating cohort counted for Ready Graduate",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2018": 369,
-    "2019": 381,
-    "2022": 405,
-    "2023": 411,
-    "2024": 418,
-    "2025": 423
-   }
-  },
-  "ready_grad": {
-   "label": "Ready Graduate share of the class",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2018": 321,
-    "2019": 336,
-    "2022": 363,
-    "2023": 366,
-    "2024": 371,
-    "2025": 365
-   }
-  },
-  "college_enroll": {
-   "label": "Graduates enrolled in any postsecondary institution the following fall",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2017": 92,
-    "2018": 87,
-    "2019": 96,
-    "2022": 95
-   }
-  },
-  "college_four_year": {
-   "label": "Graduates enrolled in a four-year institution",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2017": 92,
-    "2018": 87,
-    "2019": 96,
-    "2022": 95
-   }
-  },
-  "college_community": {
-   "label": "Graduates enrolled in a community college",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2017": 92,
-    "2018": 87,
-    "2019": 96,
-    "2022": 95
-   }
-  },
-  "college_technical": {
-   "label": "Graduates enrolled in a technical college",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2017": 92,
-    "2018": 87,
-    "2019": 96,
-    "2022": 95
-   }
-  },
-  "essa_grad": {
-   "label": "ESSA graduation rate indicator score (0-4)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2019": 335,
-    "2022": 334,
-    "2023": 336,
-    "2024": 347,
-    "2025": 349
-   }
-  },
-  "essa_ready_grad": {
-   "label": "ESSA Ready Graduate indicator score (0-4)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2019": 334,
-    "2022": 334,
-    "2023": 336,
-    "2024": 347,
-    "2025": 349
-   }
-  },
-  "act_21": {
-   "label": "ACT composite of 21 or higher (share of the class)",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2022": 340,
-    "2023": 343,
-    "2024": 349,
-    "2025": 358
-   }
-  },
-  "act_composite": {
-   "label": "Average ACT composite score",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2022": 378,
-    "2023": 382,
-    "2024": 386,
-    "2025": 389
-   }
-  },
-  "act_tests": {
-   "label": "Valid ACT tests",
-   "kind": "pack",
-   "family": null,
-   "years": {
-    "2022": 397,
-    "2023": 395,
-    "2024": 396,
-    "2025": 401
-   }
-  },
-  "act_participation": {
-   "label": "ACT participation rate",
-   "kind": "pack",
-   "family": "graduation",
-   "years": {
-    "2022": 378,
-    "2023": 382,
-    "2024": 386,
-    "2025": 389
-   }
-  }
- }
+ "best_schools_added": "2026-10-06"
 }

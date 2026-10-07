@@ -1,276 +1,276 @@
 {
  "state": "National",
  "abbr": "US",
- "built": "2026-09-10",
- "schools": 92119,
+ "built": "2026-10-06",
+ "schools": 93039,
  "states": 51,
- "surveys": 7193,
- "payload_bytes": 47367682,
- "gzip_bytes": 7606128,
+ "surveys": 7183,
+ "payload_bytes": 48602977,
+ "gzip_bytes": 7819051,
  "build_stamp": {
   "builder": "build_payload_core.py",
-  "builder_sha": "fb6eaf7cb415",
+  "builder_sha": "80c29b2972e0",
   "rules_files": [
    "lim_rules.py",
    "analysis.py"
   ],
-  "rules_fingerprint": "88ba249d83ae",
-  "skill_version": "2026-08-19"
+  "rules_fingerprint": "14c8e8e4e5ca",
+  "skill_version": "2026-10-06"
  },
  "sources": [
   {
    "name": "Alaska page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "territory"
   },
   {
    "name": "Alabama page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Arkansas page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Arizona page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "California page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Colorado page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Connecticut page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "District of Columbia page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Delaware page",
-   "built": "2026-09-08",
-   "kind": "full"
+   "built": "2026-10-06",
+   "kind": "descriptive"
   },
   {
    "name": "Florida page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Georgia page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Hawaii page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Iowa page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Idaho page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Illinois page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Indiana page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Kansas page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Kentucky page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Louisiana page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Massachusetts page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Maryland page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Maine page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "territory"
   },
   {
    "name": "Michigan page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Minnesota page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Missouri page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Mississippi page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Montana page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "North Carolina page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "North Dakota page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "territory"
   },
   {
    "name": "Nebraska page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "New Hampshire page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "New Jersey page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "New Mexico page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Nevada page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "New York page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Ohio page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Oklahoma page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Oregon page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Pennsylvania page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Rhode Island page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "territory"
   },
   {
    "name": "South Carolina page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "South Dakota page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Tennessee page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Texas page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Utah page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Virginia page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Vermont page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Washington page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "Wisconsin page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "full"
   },
   {
    "name": "West Virginia page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   },
   {
    "name": "Wyoming page",
-   "built": "2026-09-08",
+   "built": "2026-10-06",
    "kind": "descriptive"
   }
  ]
