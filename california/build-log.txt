@@ -1,12 +1,14 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state CA --core /home/claude/sdf/Core --out /home/claude/work1/CA --data /home/claude/work1/CA/data --extras ca_core_extras
+$ python3 /home/claude/w/Build/build_payload_core.py --state CA --core /home/claude/w/Core --out /home/claude/work_ca --data /home/claude/work_ca/data --extras ca_core_extras
 reading the core for California ...
 [core] subjects: 732,996 school rows kept; dropped 131,754 rows with no school id and 7,242 with an id but no school record
 [core] Leader in Me roster: 5,981 rows
 [core] comparison schools: 78,491 rows
 [core] comparison: 80 rows set aside for 40 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 657 rows
-  subject rows 732,996 · roster rows 5,981 (726 schools) · comparison rows 78,411 (9970 schools) · MRA surveys 657
+  newest-year like-for-like: 25 grade-test pairs not in the state's newest file; 1,004 rows at 298 schools left out of that year
+  subject rows added from the state's own file: 75,202 (California 2025-26 CAASPP Smarter Balanced results (CDE research file))
+  subject rows 808,198 · roster rows 5,981 (726 schools) · comparison rows 78,411 (9970 schools) · MRA surveys 657
   subject labels excluded (not achievement tests): ['Listening', 'Overall', 'Speaking']
   identity: Alliance College-Ready Middle Academy 4 (Los Angeles): 060186512528 -> 062271012528
   identity: Animo Pat Brown (Los Angeles): 060225710849 -> 062271010849
@@ -49,17 +51,17 @@ reading the core for California ...
   identity: Watts Learning Center (Los Angeles): 062271007522 -> 060157307522
   identity: e3 Civic High (San Diego): 063432013288 -> 060235013288
   identity: iLEAD Lancaster Charter (Lancaster): 060206013037 -> 062088013037
-  identity: Montgomery Middle (San Diego) keeps two ids (both report in 2015-2025)
+  identity: Montgomery Middle (San Diego) keeps two ids (both report in 2015-2026)
 [core] Leader in Me roster: 59,452 rows
   exits: 627 of 726 roster schools carry an expiration date; 247 past it by more than 30 days (exited), 0 inside the grace window, 380 in the future, 99 undated (65 with a start date)
   10,615 schools · 1957 districts
 applying the cleaning rules ...
-  298,602 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 2107 of 6534 reviewed
-  no start date: 52 schools · dated exits: 118 (school-years after an exit with rows: 226) · aggregate 'All grades' rows used 76, skipped 94
-  achievement levels as measures: yes (four levels, numbered from the top; proficiency is the top 2; 96.4% of rows in years and subjects whose levels add up)
+  323,152 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 2549 of 7260 reviewed
+  no start date: 52 schools · dated exits: 190 (school-years after an exit with rows: 412) · aggregate 'All grades' rows used 256, skipped 328
+  achievement levels as measures: yes (four levels, numbered from the top; proficiency is the top 2; 96.7% of rows in years and subjects whose levels add up)
   level values blanked on 6 year-subject cells that do not add up: 2014-15 Science, 2015-16 Science, 2021-22 ELA (end-of-course), 2022-23 ELA (end-of-course), 2023-24 ELA (end-of-course), 2024-25 Writing
-  proficiency = levels 3 and 4 on 91.8% of rows
+  proficiency = levels 3 and 4 on 92.6% of rows
 folding in California's own measures (ca_core_extras) ...
   state files (resolved by pattern; the log names the file each year came from):
     suspension 2015: suspension15_school-level.txt
@@ -148,7 +150,7 @@ folding in California's own measures (ca_core_extras) ...
     set aside: cgr16mo21.txt: the full file beside its trimmed extract cgr16mo21_school-level.txt, not read twice
     set aside: cgr16mo22.txt: the full file beside its trimmed extract cgr16mo22_school-level.txt, not read twice
     set aside: cgr16mo23.txt: the full file beside its trimmed extract cgr16mo23_school-level.txt, not read twice
-    NCES directory: 11,987 federal-to-state id triples for California from 8 CCD files (2016-17 to 2023-24), cached
+    NCES directory: 11,987 federal-to-state id triples from the cache (8 CCD files unchanged)
     suspension 2015: 10,032 schools (duplicate All rows dropped; 511 district-office and non-public rows out; 126 suppressed '*'); the rate rebuilds from the counts on 99.8% of rows; statewide 3.8%
     suspension 2016: 10,053 schools (duplicate All rows dropped; 513 district-office and non-public rows out; 116 suppressed '*'); the rate rebuilds from the counts on 99.7% of rows; statewide 3.7%
     suspension 2017: 10,056 schools (duplicate All rows dropped; 515 district-office and non-public rows out; 107 suppressed '*'); the rate rebuilds from the counts on 99.8% of rows; statewide 3.6%
@@ -203,7 +205,7 @@ folding in California's own measures (ca_core_extras) ...
     reach: Leader in Me 726 of 726, comparison 9,837 of 9,889
     names: the state files' own school name agrees with DOMO's on 10,542 of 10,569 joined schools; the district agrees on 9,480 of 9,523 pair joins and 168 of 1,046 school-code joins (a charter listed under its authorizer by the state and as its own agency by NCES and DOMO)
     value check (a column the map was not built from): the state's 2024-25 cumulative enrollment against DOMO's student count on 9,380 schools, Spearman 0.986, median ratio 1.07, 90.1% within 25%
-  rows gain: pct_suspended on 117,768 school-year-bands (561 Leader in Me schools ever), college_going on 14,610 school-year-bands (36 Leader in Me schools ever), cci_prepared on 4,472 school-year-bands (51 Leader in Me schools ever); 0 school-years had no band to sit in; 1,643 suspension rates on fewer than 20 students kept to the pack
+  rows gain: pct_suspended on 117,943 school-year-bands (561 Leader in Me schools ever), college_going on 14,610 school-year-bands (36 Leader in Me schools ever), cci_prepared on 4,472 school-year-bands (51 Leader in Me schools ever); 0 school-years had no band to sit in; 1,643 suspension rates on fewer than 20 students kept to the pack
   card: 5 California measures, each group on each year's own membership
     card line pct_suspended: 9 Leader in Me points, latest 2025 n=442 (2.3) against 2.88 (n=8,747)
     card line college_going: 5 Leader in Me points, latest 2023 n=34 (64.3) against 55.0 (n=2,133)
@@ -211,25 +213,25 @@ folding in California's own measures (ca_core_extras) ...
     card line growth_ela: 1 Leader in Me points, latest 2025 n=414 (0.38) against 0.93 (n=6,911)
     card line growth_math: 1 Leader in Me points, latest 2025 n=414 (-0.64) against 0.99 (n=6,911)
   per-school California records for the pack: 102,613 (21 columns); state codes for 10,508 schools; published statewide years 9
-  California's measures on 117,797 school-year-bands: 109,534 joined to existing rows, 8,263 school-year-bands added with no test rows of their own
+  California's measures on 117,972 school-year-bands: 109,534 joined to existing rows, 8,438 school-year-bands added with no test rows of their own
   school type from NCES: Title I on 9,780 schools (7,087 yes), charter 2,173, magnet 520, alternative 858; Title I published 2017-2020, carried forward after
   funders: 335 California schools carry a funding source (325 on the page; Kern 153, 144 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 444  by band {'Primary': {'pairs': 254, 'unmatched': 1}, 'Secondary': {'pairs': 190, 'unmatched': 0}}
   MRA: 579 surveys · 276 schools · 1767 sentinel values · 76 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 434, 'comp_n': 8318, 'lim_change': 2.91, 'comp_change': 2.67, 'p': 0.493} · without the 65 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 389, 'comp_n': 8305, 'lim_change': 2.81, 'comp_change': 2.67, 'p': 0.699}
-  roster: 326 counted, 244 exited, 104 not counted yet, 52 not counted
-best-performing schools: 95 of 381 counted schools, 58 measures in 15 outcomes
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 428, 'comp_n': 8237, 'lim_change': 3.52, 'comp_change': 3.28, 'p': 0.568} · without the 65 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 381, 'comp_n': 8224, 'lim_change': 3.38, 'comp_change': 3.28, 'p': 0.821}
+  roster: 387 counted, 244 exited, 43 not counted yet, 52 not counted
+best-performing schools: 98 of 440 counted schools, 58 measures in 15 outcomes
 
-wrote ca_payload.json  (198.7 MB, 306,865 rows) · page kind full (434 Leader in Me schools on the headline)
+wrote ca_payload.json  (211.9 MB, 331,590 rows) · page kind full (428 Leader in Me schools on the headline)
 build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py ca_payload.json CA_Dashboard.html CA_Methods.html
-payload 198.7 MB -> 15.28 MB gzip
-CA_Dashboard.html: 20216 KB
-CA_Methods.html: 72 KB
+payload 211.9 MB -> 16.36 MB gzip
+CA_Dashboard.html: 21620 KB
+CA_Methods.html: 76 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state CA --work /home/claude/work1/CA
+$ python3 /home/claude/w/Build/verify_core.py --state CA --work /home/claude/work_ca
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -269,17 +271,17 @@ ok   years exclude both COVID years
 ok   the straight-numbers window starts in 2022 or later
 ok   the long window is scored relative to the state
 ok   no Leader in Me row counted before its Year 1  [0 rows]
-ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 434 Year 0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 446 Year 0 rows]
 ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
-ok   Year 0 rows carry no years-in-process credit  [434 Year 0 rows]
+ok   Year 0 rows carry no years-in-process credit  [446 Year 0 rows]
 ok   schools with no start date appear in neither group  [52 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [235 exited schools with counted years]
+ok   exited schools keep their true Leader in Me years  [238 exited schools with counted years]
 ok   the exit counts on the methods page match the rule  [247 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 326, 'exited': 244, 'not counted yet': 104, 'not counted': 52}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 387, 'exited': 244, 'not counted': 52, 'not counted yet': 43}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -287,11 +289,11 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [5662 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [5384 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [507,517 grade rows, 100.0% within 1.5 points]
-ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 99.0% of grade rows within 1.5]
+ok   the level shares sum to 100 on the grade rows that carry them  [562,799 grade rows, 100.0% within 1.5 points]
+ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 99.1% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 4: below the standard; Level 3: approaching the standard; Level 2: meeting the standard; Level 1: exceeding the standard]
 ok   the levels at or above the standard count up, the levels below count down
@@ -301,10 +303,10 @@ ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's years before launch count in the comparison group  [12,040 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [12,140 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [4327 schools]
-ok   the school count never exceeds the band-slice count  [8770 schools vs 11747 band slices]
+ok   combined-grade schools appear in both bands  [4349 schools]
+ok   the school count never exceeds the band-slice count  [8670 schools vs 11572 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -318,13 +320,13 @@ ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
 ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
 ok   movers are built on ten or more schools each
-  demo district: Los Angeles Unified · prospect district: Long Beach Unified
+  demo district: Los Angeles Unified · prospect district: San Francisco Unified
 
 --------------------------------------------------------------------------
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [4.5s]
+ok   load time is workable  [5.5s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -334,14 +336,126 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [5 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.4941 scipy 0.4941 · window 2022-2025 · LiM n=434 mean +2.91 · comparison n=8318 mean +2.67]
-ok   the headline counts schools, not band slices  [page 8752 vs offline 8752 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [434 vs 434]
-ok   the district filter re-renders the headline  [In Los Angeles Unified schools, between 2021-22 and 2024-25, Leader in Me schools rose 8.6]
+ok   the headline p recomputes offline  [page 0.5643 scipy 0.5643 · window 2022-2026 · LiM n=428 mean +3.53 · comparison n=8237 mean +3.28]
+ok   the headline counts schools, not band slices  [page 8665 vs offline 8665 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [428 vs 428]
+ok   the district filter re-renders the headline  [In Los Angeles Unified schools, between 2021-22 and 2025-26, Leader in Me schools rose 7.5]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [6663 of 10560 schools; In California Title I schools, between 2021-22 and 2024-25, Leader in Me schools]
+ok   choosing 'Title I schools' narrows the view and names it  [6663 of 10560 schools; In California Title I schools, between 2021-22 and 2025-26, Leader in Me schools]
+
+[2026-10-21] verify_core.py (run separately after the build process was interrupted mid-verify):
+
+--------------------------------------------------------------------------
+Tier 0 — install and input-value audit
+--------------------------------------------------------------------------
+ok   the template in use carries the brand palette and the ink helper
+ok   the template carries the three-school floor in headline and movement
+ok   the template reads the payload's raw window on the insights tab
+ok   the template honours the composite row flag
+ok   the template carries the research pack, look-alike mode and the school list
+ok   the office helper carries the Word table builder
+ok   the subject pull is one state's (federal id state code)
+ok   the roster and comparison pulls are one state's
+ok   2019-20 rows, if the file has any, are excluded from the payload  [0 rows in the file]
+ok   no duplicate school-year-grade-subject rows
+ok   no test value above 100
+ok   negatives, if any, are sentinels under one point  [{'PercentLevel1': 0.0, 'PercentLevel2': 0.0, 'PercentLevel3': 0.0, 'PercentLevel4': 0.0, 'PercentMetStandard': 0.0}]
+ok   the Leader in Me flag never flips true->false in the roster (a snapshot)
+ok   every comparison row is LIM School = false
+ok   comparison rows for roster schools sit only in years the roster does not carry  [40 roster schools have comparison rows]
+ok   the roster's '% White' is a count, not a percentage
+ok   one expiration date per roster school
+ok   every expiration date parsed
+ok   an expiration date that precedes the school's start date is set aside as stale, and counted  [0 stale]
+ok   the exit rule's counts recompute from the roster  [247 exited, 0 in grace, 380 future]
+ok   the grace window is the 30 days Eve set
+ok   MRA exact-100 values were counted as sentinels  [134 composite cells at 100, 4 in 90-99.9]
+ok   name-and-city collisions between the two groups were handled (folded or kept apart)  [42 collisions]
+ok   no school appears in both groups in the same year
+
+--------------------------------------------------------------------------
+Tier 1 — rules and maths
+--------------------------------------------------------------------------
+ok   lim_rules.py self-tests pass
+ok   skill_version.py self-tests pass
+ok   payload carries a build stamp
+ok   years exclude both COVID years
+ok   the straight-numbers window starts in 2022 or later
+ok   the long window is scored relative to the state
+ok   no Leader in Me row counted before its Year 1  [0 rows]
+ok   every Year 0 row is the school year a school launched into after it began  [0 rows out of place of 446 Year 0 rows]
+ok   the launch-year rule re-derived from start dates agrees with every counted row  [0 rows out of place]
+ok   Year 0 rows carry no years-in-process credit  [446 Year 0 rows]
+ok   schools with no start date appear in neither group  [52 schools]
+ok   the count of undated schools is on the methods page
+ok   no row survives after a school's dated exit, in either group  [0 rows]
+ok   exited schools keep their true Leader in Me years  [238 exited schools with counted years]
+ok   the exit counts on the methods page match the rule  [247 exited (0 from DOMO's flags)]
+ok   lim_exit carries every exited school and nothing else
+ok   the roster section lists every roster school once
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 387, 'exited': 244, 'not counted': 52, 'not counted yet': 43}]
+ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
+ok   the headline sensitivity without the undated schools is on the methods page
+ok   size bands are the NCES categories in the payload's order
+ok   the poverty share rides on most rows for the look-alike caliper  [100%]
+ok   every offered measure is carried by at least one school-year
+ok   the composite flag keeps science, social studies and writing out of the no-filter view
+ok   the grade table lists tested grades in order and every school in it has a name
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [5384 schools]
+ok   the grade table carries no school-year the rules dropped
+ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
+ok   the level shares sum to 100 on the grade rows that carry them  [562,799 grade rows, 100.0% within 1.5 points]
+ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 99.1% of grade rows within 1.5]
+ok   the grade table carries the level columns
+ok   the level labels carry the state's own numbering  [Level 4: below the standard; Level 3: approaching the standard; Level 2: meeting the standard; Level 1: exceeding the standard]
+ok   the levels at or above the standard count up, the levels below count down
+ok   the proficiency label names the levels it adds
+ok   years and subjects whose levels do not add up carry no level values  [6 cells set aside, 21,888 grade rows in them]
+ok   school names and start dates are in the payload for the pack
+ok   MRA by-school rows exist for the pack
+ok   the MRA respondent map names a group or a blend for every measure
+ok   look-alike settings are in the payload with their rationale
+ok   a Leader in Me school's years before launch count in the comparison group  [12,140 rows]
+ok   Lighthouse schools are inside the Leader in Me family
+ok   combined-grade schools appear in both bands  [4349 schools]
+ok   the school count never exceeds the band-slice count  [8670 schools vs 11572 band slices]
+ok   pairs are built inside bands
+ok   the by-band pair counts sum to the total
+ok   no comparison school is used twice
+ok   no Leader in Me school is paired twice inside a band
+ok   the signed baseline gap recomputes to the payload's  [offline +0.015 vs payload +0.020 on 444 pairs]
+ok   the mean signed baseline gap is under one point  [+0.015]
+ok   the widest single baseline gap is inside the caliper's reach  [3.4 points]
+ok   the printed signed gap is not a negative zero  [0.02]
+ok   no MRA value of exactly 100 survives into the payload
+ok   every MRA value sits on the published scale
+ok   the MRA trend stays inside one instrument version
+ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
+ok   movers are built on ten or more schools each
+  demo district: Los Angeles Unified · prospect district: San Francisco Unified
+
+--------------------------------------------------------------------------
+Tier 2 — behaviour in a real browser
+--------------------------------------------------------------------------
+ok   the page loads and the headline renders
+ok   load time is workable  [7.2s]
+ok   no console errors on load
+ok   chart c1 draws an svg or explains why
+ok   chart c2 draws an svg or explains why
+ok   the MRA card shows exactly when a trend line can be drawn
+ok   the discipline card shows exactly when the payload carries a discipline trend  [payload has no discipline_ga]
+ok   the incidents card shows exactly when the payload carries an incident trend  [payload has no incidents]
+ok   the state extras card shows exactly when the payload carries state measures  [5 state measures]
+ok   every state measure on the card draws a Leader in Me and a comparison line
+ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
+ok   the headline p recomputes offline  [page 0.5643 scipy 0.5643 · window 2022-2026 · LiM n=428 mean +3.53 · comparison n=8237 mean +3.28]
+ok   the headline counts schools, not band slices  [page 8665 vs offline 8665 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [428 vs 428]
+ok   the district filter re-renders the headline  [In Los Angeles Unified schools, between 2021-22 and 2025-26, Leader in Me schools rose 7.5]
+ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
+ok   choosing 'Title I schools' narrows the view and names it  [6663 of 10560 schools; In California Title I schools, between 2021-22 and 2025-26, Leader in Me schools]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In California schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2024-]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In California schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2025-]
 ok   Title I status is known for most schools on the page  [92.6%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
@@ -356,12 +470,12 @@ ok   measure 'grad_rate' either draws or says why
 ok   measure 'pct_suspended' either draws or says why
 ok   measure 'college_going' either draws or says why
 ok   measure 'cci_prepared' either draws or says why
-ok   the matched toggle re-renders the headline  [In California schools (matched to similar schools only), between 2021-22 and 2024-25, Lead]
-ok   the matched view shrinks or equals the Leader in Me count  [246 matched]
+ok   the matched toggle re-renders the headline  [In California schools (matched to similar schools only), between 2021-22 and 2025-26, Lead]
+ok   the matched view shrinks or equals the Leader in Me count  [216 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Los Angeles Unified generates cards or says there is nothing to report  [9 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.49408759192938945, 'n1': 434, 'n2': 8318}]
+ok   Los Angeles Unified generates cards or says there is nothing to report  [7 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.5642914317617851, 'n1': 428, 'n2': 8237}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -380,22 +494,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [16,821 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [201,715 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [219,275 bytes]
 ok   the pptx export is named for the state and chart  [CA_Meeting_or_exceeding_the_standard_levels_1_and_2_year_by_year_California_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [202,702 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [220,795 bytes]
 ok   the docx export is named for the state and chart  [CA_Meeting_or_exceeding_the_standard_levels_1_and_2_year_by_year_California_schools.docx]
-ok   the research pack downloads with its sections  [265,680 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
-ok   the pack's Leader in Me count for the district is the page's  [48 vs 48]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In California schools like Long Beach Unified’s, between 2021-22 and 2024-25, Leader in Me schools rose 3.2% on Meeting ]
-ok   the look-alike box reports both counts or says why not  [Schools like Long Beach Unified’s: 282 Leader in Me schools and 3768 comparison schools look like Long Beach Unified’s 83 schools with results in these years (e]
+ok   the research pack downloads with its sections  [276,841 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+ok   the pack's Leader in Me count for the district is the page's  [85 vs 85]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In California schools like San Francisco Unified’s, between 2021-22 and 2025-26, Leader in Me schools rose 3.5% on Meeti]
+ok   the look-alike box reports both counts or says why not  [Schools like San Francisco Unified’s: 180 Leader in Me schools and 2198 comparison schools look like San Francisco Unified’s 102 schools with results in these y]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.6670]
+ok   the look-alike headline p recomputes offline  [p=0.9582]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [365 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [282 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In California grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 2.7% on Meetin]
+ok   choosing a grade re-renders the headline and names the grade  [In California grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 2.8% on Meetin]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [6 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -425,13 +539,13 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +2.91 pts (n=434) vs comparison +2.67 pts (n=8318), p=0.4941 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +3.53 pts (n=428) vs comparison +3.28 pts (n=8237), p=0.5643 -> not significant
 
 ==========================================================================
 177 of 177 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/ca_core_verify.py --work /home/claude/work1/CA
+[2026-10-21] ca_core_verify.py:
 
 California's own measures
 --------------------------------------------------------------------------
@@ -486,3 +600,34 @@ ok   the pack's published section carries the state's own suspension and college
 ok   the methods page owns the suspension floor, the indicator's rules change and the one-year growth model
 
 ALL CALIFORNIA CHECKS PASS
+
+[2026-10-21] verify_best.py:
+Tier F — the tab in a real browser
+--------------------------------------------------------------------------
+
+1429 checks, 0 failed
+ALL CHECKS PASS
+
+[2026-10-21] prepublish_check.py:
+== CA pre-publish checks
+  ok   1 coverage: the newest year reaches about as many schools and rows as the year before  [schools 7,439 vs 7,460 (1.00); grade-subject rows 53,548 vs 54,748 (0.98), grades 3-8 reading and math, against DOMO 2025]
+  WARN 2 test set: every grade and test DOMO carried the year before is in the newest file, or listed as pending  [25 pairs missing, 881 of their rows in reading or math: 5th Grade Science (5812); 8th Grade Science (2742); 11th Grade Science (1668); 12th Grade Science (942); 4th Grade Reading (209); 4th Grade Writing (209); 3rd Grade Reading (202); 3rd Grade Writing (202)]
+  ok   3 levels: no more rows with only some of the four levels than DOMO's year before  [0.0% of newest-year rows against 4.7% in DOMO 2025]
+  ok   4 suppressed values: the audit counts masked, recovered and bounded cells  [rows_masked]
+  ok   5 definition: the audit compares the newest year with DOMO's year before  [domo_2024_25_definition, coverage_against_domo_2025]
+/home/claude/w/Build/prepublish_check.py:128: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  rows["xall"] = rows["xall"].fillna(False).astype(bool)
+  ok   6 like-for-like: newest-year rows left out because the school took a test the newest file lacks  [1,004 rows]
+  ok   10a launch-year rule: no Leader in Me row is counted before its Year 1  [0 rows]
+  ok   10b Year 0 sits in neither group: every Year 0 row is a school's launch year, none is a comparison row  [446 Year 0 rows; 0 out of place; 0 launch years left in the comparison group]
+  ok   10c the page carries the years-since-launch chart and the Year 0 hover help  [chart yes, hover help yes]
+  ok   10d the methods page states the launch-year rule (September 15, Year 0)
+  ok   7 statewide ELA 2025->2026: a change of 8 points or more is explained in the record  [45.6 -> 46.6 (+1.0)]
+  ok   7 statewide Math 2025->2026: a change of 8 points or more is explained in the record  [34.9 -> 35.9 (+1.0)]
+  ok   8 earlier years unchanged: 2023 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2024 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2025 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   11 every measure on the live page is on the new page  [13 measures now, 13 live]
+  ok   9 headline full_history: change against the live page is reported in the release note  [new +3.12 p=0.0 n=402 | live +3.06 p=0.0 n=403]
+  ok   9 headline since_covid: change against the live page is reported in the release note  [new +0.25 p=0.564 n=428 | live +0.24 p=0.494 n=434]
+  -> 0 FAIL, 1 WARN
