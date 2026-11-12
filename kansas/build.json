@@ -2,64 +2,68 @@
  "state": "KS",
  "name": "Kansas",
  "folder": "kansas",
- "built": "2026-10-06",
- "seconds": 67,
+ "built": "2026-11-12",
+ "seconds": 107,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 60,
- "schools": 1293,
+ "lim_headline_n": 57,
+ "schools": 1331,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 81,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (12).csv",
    "bytes": 13445693,
-   "modified": "2026-10-06"
+   "modified": "2026-11-12"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
    "bytes": 132812308,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/work1/KS/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/sdf/Build/work/KS/data/Subjects_Tests_FINAL (8).csv",
    "rows": 103501
   },
   "roster": {
-   "path": "/home/claude/work1/KS/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/sdf/Build/work/KS/data/LIM Schools (Current_Active) (11).csv",
    "rows": 751
   },
   "comparison": {
-   "path": "/home/claude/work1/KS/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/sdf/Build/work/KS/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 11078
   },
   "mra": {
-   "path": "/home/claude/work1/KS/data/All MRA Surveys.csv",
+   "path": "/home/claude/sdf/Build/work/KS/data/All MRA Surveys.csv",
    "rows": 182
   }
  },
- "state_files": [],
+ "state_files": [
+  "SchoolDigger API_KS_2026/",
+  "sd_newest_audit.json",
+  "sd_newest_subjects.csv"
+ ],
  "extras_module": null,
  "verified": true,
- "dashboard_bytes": 2369031,
+ "dashboard_bytes": 2488331,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
+  "year": 2026,
+  "label": "2025-26",
   "status": "complete",
   "subjects": [
    "ELA",
@@ -67,8 +71,8 @@
    "Science"
   ],
   "missing": [],
-  "rows_share_of_prior": 0.93,
-  "prior_year": 2024
+  "rows_share_of_prior": 1.12,
+  "prior_year": 2025
  },
  "measure_years": {
   "percent_proficient": {
@@ -84,7 +88,8 @@
     "2022": 4360,
     "2023": 4333,
     "2024": 4284,
-    "2025": 3986
+    "2025": 3986,
+    "2026": 4473
    }
   },
   "percent_level4": {
@@ -186,18 +191,18 @@
  },
  "audits": {
   "levels": {
-   "rows": 95443,
-   "levels 3 and 4": 87.8,
-   "levels 2, 3 and 4": 0.2,
+   "rows": 107263,
+   "levels 3 and 4": 78.2,
+   "levels 2, 3 and 4": 0.3,
    "level 4 alone": 0.9,
-   "100 minus level 1": 0.4,
+   "100 minus level 1": 0.3,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 87.7,
+   "levels_sum_to_100_share": 78.0,
    "structure": "four levels, numbered from the bottom; proficiency is the top 2",
    "n_levels": 4,
    "proficient_from": 3,
    "reversed_numbering": false,
-   "coverage": 87.7,
+   "coverage": 78.0,
    "years_ok": [
     2016,
     2017,
@@ -209,7 +214,8 @@
     2025
    ],
    "years_out": [
-    2015
+    2015,
+    2026
    ],
    "cells_out": [
     "2014-15 ELA (end-of-course)",
@@ -524,6 +530,33 @@
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "ELA",
+     "rows": 4662,
+     "level_rows": 0,
+     "sum_to_100": 0.0,
+     "match": 0.0,
+     "ok": false
+    },
+    {
+     "year": 2026,
+     "subject": "Math",
+     "rows": 4662,
+     "level_rows": 0,
+     "sum_to_100": 0.0,
+     "match": 0.0,
+     "ok": false
+    },
+    {
+     "year": 2026,
+     "subject": "Science",
+     "rows": 2496,
+     "level_rows": 0,
+     "sum_to_100": 0.0,
+     "match": 0.0,
+     "ok": false
     }
    ],
    "levels_as_measures": true
@@ -557,21 +590,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 60,
-    "comp_n": 1071,
-    "lim_change": 9.59,
-    "comp_change": 10.86,
-    "p": 0.249
+    "y1": 2026,
+    "lim_n": 57,
+    "comp_n": 1087,
+    "lim_change": 10.72,
+    "comp_change": 12.26,
+    "p": 0.132
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 57,
-    "comp_n": 1071,
-    "lim_change": 9.63,
-    "comp_change": 10.86,
-    "p": 0.278
+    "y1": 2026,
+    "lim_n": 54,
+    "comp_n": 1087,
+    "lim_change": 10.72,
+    "comp_change": 12.26,
+    "p": 0.152
    },
    "schools": 3
   },
@@ -579,14 +612,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 8,
-  "in_the_process": 7,
+  "qualified": 9,
+  "in_the_process": 8,
   "lapsed_on_the_list": 1,
-  "reviewed": 58,
+  "reviewed": 59,
   "measures": 49,
   "outcomes": 9,
   "improved_every_year": 2,
   "lapsed_longer_ago": 17
  },
- "best_schools_added": "2026-10-06"
+ "best_schools_added": "2026-11-12"
 }

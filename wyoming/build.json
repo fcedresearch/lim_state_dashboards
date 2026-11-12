@@ -2,64 +2,71 @@
  "state": "WY",
  "name": "Wyoming",
  "folder": "wyoming",
- "built": "2026-10-06",
- "seconds": 48,
+ "built": "2026-11-12",
+ "seconds": 84,
  "builder": "build_payload_core.py",
  "page_kind": "descriptive",
- "lim_headline_n": 15,
- "schools": 315,
+ "lim_headline_n": 14,
+ "schools": 316,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 15,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (12).csv",
    "bytes": 13445693,
-   "modified": "2026-10-06"
+   "modified": "2026-11-12"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
    "bytes": 132812308,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/work1/WY/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/sdf/Build/work/WY/data/Subjects_Tests_FINAL (8).csv",
    "rows": 17732
   },
   "roster": {
-   "path": "/home/claude/work1/WY/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/sdf/Build/work/WY/data/LIM Schools (Current_Active) (11).csv",
    "rows": 148
   },
   "comparison": {
-   "path": "/home/claude/work1/WY/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/sdf/Build/work/WY/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 2521
   },
   "mra": {
-   "path": "/home/claude/work1/WY/data/All MRA Surveys.csv",
+   "path": "/home/claude/sdf/Build/work/WY/data/All MRA Surveys.csv",
    "rows": 25
   }
  },
- "state_files": [],
- "extras_module": null,
+ "state_files": [
+  "English Learner Progress_WY/",
+  "Proficiency_WY_2025/",
+  "Proficiency_WY_2026/",
+  "School Grade_WY/",
+  "wy_2026_subjects.csv",
+  "wy_2026_subjects_audit.json"
+ ],
+ "extras_module": "wy_core_extras",
  "verified": true,
- "dashboard_bytes": 819173,
+ "dashboard_bytes": 871641,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
+  "year": 2026,
+  "label": "2025-26",
   "status": "complete",
   "subjects": [
    "ELA",
@@ -67,8 +74,8 @@
    "Science"
   ],
   "missing": [],
-  "rows_share_of_prior": 1.02,
-  "prior_year": 2024
+  "rows_share_of_prior": 0.99,
+  "prior_year": 2025
  },
  "measure_years": {
   "percent_proficient": {
@@ -84,7 +91,8 @@
     "2022": 986,
     "2023": 998,
     "2024": 995,
-    "2025": 1012
+    "2025": 1012,
+    "2026": 1001
    }
   },
   "percent_level4": {
@@ -100,7 +108,8 @@
     "2022": 986,
     "2023": 998,
     "2024": 995,
-    "2025": 1012
+    "2025": 1012,
+    "2026": 1001
    }
   },
   "percent_level3": {
@@ -116,7 +125,8 @@
     "2022": 986,
     "2023": 998,
     "2024": 995,
-    "2025": 1012
+    "2025": 1012,
+    "2026": 1001
    }
   },
   "percent_level2": {
@@ -132,7 +142,8 @@
     "2022": 986,
     "2023": 998,
     "2024": 995,
-    "2025": 1012
+    "2025": 1012,
+    "2026": 1001
    }
   },
   "percent_below": {
@@ -148,7 +159,8 @@
     "2022": 986,
     "2023": 998,
     "2024": 995,
-    "2025": 1012
+    "2025": 1012,
+    "2026": 1001
    }
   },
   "standard_score": {
@@ -183,11 +195,11 @@
  },
  "audits": {
   "levels": {
-   "rows": 15818,
+   "rows": 17687,
    "levels 3 and 4": 100.0,
-   "levels 2, 3 and 4": 0.6,
-   "level 4 alone": 0.2,
-   "100 minus level 1": 0.6,
+   "levels 2, 3 and 4": 0.7,
+   "level 4 alone": 0.3,
+   "100 minus level 1": 0.7,
    "best": "levels 3 and 4",
    "levels_sum_to_100_share": 100.0,
    "structure": "four levels, numbered from the top; proficiency is the top 2",
@@ -204,7 +216,8 @@
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "years_out": [],
    "cells_out": [],
@@ -212,9 +225,9 @@
    "reason": null,
    "combination_shares": {
     "levels 3 and 4": 4.2,
-    "levels 2, 3 and 4": 2.9,
+    "levels 2, 3 and 4": 3.0,
     "levels 1 and 2 (1 the top)": 100.0,
-    "levels 1, 2 and 3 (1 the top)": 0.6
+    "levels 1, 2 and 3 (1 the top)": 0.7
    },
    "cells": [
     {
@@ -459,6 +472,33 @@
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "ELA",
+     "rows": 802,
+     "level_rows": 802,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Math",
+     "rows": 782,
+     "level_rows": 782,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Science",
+     "rows": 285,
+     "level_rows": 285,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
     }
    ],
    "levels_as_measures": true
@@ -483,21 +523,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 15,
-    "comp_n": 249,
-    "lim_change": 2.7,
-    "comp_change": 2.41,
-    "p": 0.901
+    "y1": 2026,
+    "lim_n": 14,
+    "comp_n": 246,
+    "lim_change": 5.15,
+    "comp_change": 4.94,
+    "p": 0.93
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 14,
-    "comp_n": 249,
-    "lim_change": 2.36,
-    "comp_change": 2.41,
-    "p": 0.984
+    "y1": 2026,
+    "lim_n": 13,
+    "comp_n": 246,
+    "lim_change": 4.57,
+    "comp_change": 4.94,
+    "p": 0.878
    },
    "schools": 1
   },
@@ -505,14 +545,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 3,
-  "in_the_process": 3,
+  "qualified": 2,
+  "in_the_process": 2,
   "lapsed_on_the_list": 0,
   "reviewed": 14,
   "measures": 48,
   "outcomes": 8,
-  "improved_every_year": 1,
+  "improved_every_year": 0,
   "lapsed_longer_ago": 1
  },
- "best_schools_added": "2026-10-06"
+ "best_schools_added": "2026-11-12"
 }

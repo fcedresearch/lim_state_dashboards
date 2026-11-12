@@ -1,39 +1,43 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state WY --core /home/claude/sdf/Core --out /home/claude/work1/WY --data /home/claude/work1/WY/data
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state WY --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/WY --data /home/claude/sdf/Build/work/WY/data --extras wy_core_extras
 reading the core for Wyoming ...
 [core] subjects: 17,732 school rows kept; dropped 8,255 rows with no school id and 499 with an id but no school record
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 0 with no date, 15 not in the ledger
 [core] Leader in Me roster: 148 rows
 [core] comparison schools: 2,521 rows
 [core] MRA surveys: 25 rows
-  subject rows 17,732 · roster rows 148 (15 schools) · comparison rows 2,521 (306 schools) · MRA surveys 25
+  subject rows added from the state's own file: 1,869 (Wyoming 2025-26 WY-TOPP results (WDE Assessment Performance Results))
+  subject rows 19,601 · roster rows 148 (15 schools) · comparison rows 2,521 (306 schools) · MRA surveys 25
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 266 with no date, 6430 not in the ledger
 [core] Leader in Me roster: 59,452 rows
   exits: 14 of 15 roster schools carry an expiration date; 2 past it by more than 30 days (exited), 0 inside the grace window, 12 in the future, 1 undated (1 with a start date)
   321 schools · 50 districts
 applying the cleaning rules ...
-  8,268 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 50 of 135 reviewed
-  no start date: 0 schools · dated exits: 0 (school-years after an exit with rows: 0) · aggregate 'All grades' rows used 0, skipped 0
+  9,269 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 64 of 150 reviewed
+  no start date: 0 schools · dated exits: 1 (school-years after an exit with rows: 1) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: yes (four levels, numbered from the top; proficiency is the top 2; 100.0% of rows in years and subjects whose levels add up)
   proficiency = levels 3 and 4 on 100.0% of rows
-  school type from NCES: Title I on 308 schools (140 yes), charter 6, magnet 0, alternative 5; Title I published 2017-2022, carried forward after
+folding in Wyoming's own measures (wy_core_extras) ...
+  school type from NCES: Title I on 309 schools (141 yes), charter 7, magnet 0, alternative 5; Title I published 2017-2022, carried forward after
   funders: 1 Wyoming schools carry a funding source (1 on the page; Kern 1, 1 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 4  by band {'Primary': {'pairs': 4, 'unmatched': 0}, 'Secondary': {'pairs': 0, 'unmatched': 0}}
   MRA: 24 surveys · 13 schools · 70 sentinel values · 1 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 15, 'comp_n': 249, 'lim_change': 2.7, 'comp_change': 2.41, 'p': 0.901} · without the 1 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 14, 'comp_n': 249, 'lim_change': 2.36, 'comp_change': 2.41, 'p': 0.984}
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 14, 'comp_n': 246, 'lim_change': 5.15, 'comp_change': 4.94, 'p': 0.93} · without the 1 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 13, 'comp_n': 246, 'lim_change': 4.57, 'comp_change': 4.94, 'p': 0.878}
   roster: 13 counted, 2 exited, 0 not counted yet, 0 not counted
 measures not offered (no school-year carries a value): chronic_absent
-best-performing schools: 3 of 14 counted schools, 48 measures in 8 outcomes
+best-performing schools: 2 of 14 counted schools, 48 measures in 8 outcomes
 
-wrote wy_payload.json  (4.4 MB, 8,268 rows) · page kind descriptive (15 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
+wrote wy_payload.json  (4.9 MB, 9,269 rows) · page kind descriptive (14 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '76c03d6e5866'}
 
 $ python3 build2.py wy_payload.json WY_Dashboard.html WY_Methods.html
-payload 4.4 MB -> 0.37 MB gzip
-WY_Dashboard.html: 800 KB
-WY_Methods.html: 44 KB
+payload 4.9 MB -> 0.41 MB gzip
+WY_Dashboard.html: 851 KB
+WY_Methods.html: 46 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state WY --work /home/claude/work1/WY
+$ python3 /home/claude/sdf/Build/verify_core.py --state WY --work /home/claude/sdf/Build/work/WY
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -92,10 +96,10 @@ ok   every offered measure is carried by at least one school-year
 ok   a measure no school-year carries is named on the methods page as not offered  [Chronic absence]
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [143 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [140 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [13,422 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [15,002 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 4: below the standard; Level 3: approaching the standard; Level 2: meeting the standard; Level 1: exceeding the standard]
@@ -107,8 +111,8 @@ ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
 ok   a Leader in Me school's years before launch count in the comparison group  [303 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [85 schools]
-ok   the school count never exceeds the band-slice count  [264 schools vs 327 band slices]
+ok   combined-grade schools appear in both bands  [86 schools]
+ok   the school count never exceeds the band-slice count  [260 schools vs 315 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -137,12 +141,12 @@ ok   the discipline card shows exactly when the payload carries a discipline tre
 ok   the incidents card shows exactly when the payload carries an incident trend  [payload has no incidents]
 ok   the state extras card shows exactly when the payload carries state measures  [no state files]
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.9021 scipy 0.9021 · window 2022-2025 · LiM n=15 mean +2.70 · comparison n=249 mean +2.41]
-ok   the headline counts schools, not band slices  [page 264 vs offline 264 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [15 vs 15]
+ok   the headline p recomputes offline  [page 0.9326 scipy 0.9326 · window 2022-2026 · LiM n=14 mean +5.14 · comparison n=246 mean +4.94]
+ok   the headline counts schools, not band slices  [page 260 vs offline 260 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [14 vs 14]
 ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Alternative schools]
-ok   choosing 'Title I schools' narrows the view and names it  [130 of 315 schools; In Wyoming Title I schools, between 2021-22 and 2024-25, Leader in Me schools ro]
+ok   choosing 'Title I schools' narrows the view and names it  [138 of 316 schools; In Wyoming Title I schools, between 2021-22 and 2025-26, Leader in Me schools ro]
 ok   every school in the 'Title I schools' view carries that attribute
 ok   Title I status is known for most schools on the page  [97.8%]
 ok   the Primary band filter re-renders without error
@@ -154,12 +158,12 @@ ok   measure 'percent_level2' either draws or says why
 ok   measure 'percent_below' either draws or says why
 ok   measure 'standard_score' either draws or says why
 ok   measure 'grad_rate' either draws or says why
-ok   the matched toggle re-renders the headline  [In Wyoming schools (matched to similar schools only), between 2021-22 and 2024-25, Leader ]
-ok   the matched view shrinks or equals the Leader in Me count  [4 matched]
+ok   the matched toggle re-renders the headline  [In Wyoming schools (matched to similar schools only), between 2021-22 and 2025-26, Leader ]
+ok   the matched view shrinks or equals the Leader in Me count  [3 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Goshen County School District #1 generates cards or says there is nothing to report  [3 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.9021206013679282, 'n1': 15, 'n2': 249}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.9326455758764973, 'n1': 14, 'n2': 246}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -178,15 +182,15 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [702 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [127,974 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [137,071 bytes]
 ok   the pptx export is named for the state and chart  [WY_Meeting_or_exceeding_the_standard_levels_1_and_2_year_by_year_Wyoming_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [126,408 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [135,950 bytes]
 ok   the docx export is named for the state and chart  [WY_Meeting_or_exceeding_the_standard_levels_1_and_2_year_by_year_Wyoming_schools.docx]
-ok   the research pack downloads with its sections  [12,332 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'roster']]
+ok   the research pack downloads with its sections  [14,022 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'roster']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
 skip look-alike mode  [no prospect district with three or more schools, or not a full page]
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Wyoming grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 3.7% on Meeting o]
+ok   choosing a grade re-renders the headline and names the grade  [In Wyoming grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 8.4% on Meeting o]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [2 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -217,8 +221,65 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a descriptive page says so on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +2.70 pts (n=15) vs comparison +2.41 pts (n=249), p=0.9021 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +5.14 pts (n=14) vs comparison +4.94 pts (n=246), p=0.9326 -> not significant
 
 ==========================================================================
 161 of 161 checks pass · 4 skipped
 ==========================================================================
+
+$ python3 Build/verify_best.py --page Out/wyoming/index.html
+
+--------------------------------------------------------------------------
+Tier A — who is on the list
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier B — every number rebuilt from the page's own data
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier C — the rules, applied again
+--------------------------------------------------------------------------
+     (1 composite changes on this list are negative and are printed as such)
+
+--------------------------------------------------------------------------
+Tier D — the order
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier E — what the page says
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier F — the tab in a real browser
+--------------------------------------------------------------------------
+
+64 checks, 0 failed
+ALL CHECKS PASS
+
+$ python3 Build/prepublish_check.py --state WY ... (ledger beside the roster for check 22 only)
+== WY pre-publish checks
+  ok   1 coverage: the newest year reaches about as many schools and rows as the year before  [schools 222 vs 211 (1.05); grade-subject rows 1,304 vs 1,304 (1.00), grades 3-8 reading and math, against DOMO 2025]
+  ok   2 test set: every grade and test DOMO carried the year before is in the newest file
+  ok   3 levels: no more rows with only some of the four levels than DOMO's year before  [0.0% of newest-year rows against 0.0% in DOMO 2025]
+  ok   4 suppressed values: the audit counts masked, recovered and bounded cells  [rows_blank_1_to_5_tested, rows_blank_2024_25, what_masking_selects_check_23]
+  ok   5 definition: the audit compares the newest year with DOMO's year before  [coverage_against_domo_2025]
+  ok   6 like-for-like: newest-year rows left out because the school took a test the newest file lacks  [0 rows]
+  ok   10a launch-year rule: no Leader in Me row is counted before its Year 1  [0 rows]
+  ok   10b Year 0 sits in neither group: every Year 0 row is a school's launch year, none is a comparison row  [3 Year 0 rows; 0 out of place; 0 launch years left in the comparison group]
+  ok   10c the page carries the years-since-launch chart and the Year 0 hover help  [chart yes, hover help yes]
+  ok   10d the methods page states the launch-year rule (September 15, Year 0)
+  ok   7 statewide ELA 2025->2026: a change of 8 points or more is explained in the record  [55.2 -> 56.6 (+1.4)]
+  ok   7 statewide Math 2025->2026: a change of 8 points or more is explained in the record  [52.0 -> 55.4 (+3.4)]
+  ok   8 earlier years unchanged: 2023 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2024 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2025 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   11 every measure on the live page is on the new page  [7 measures now, 7 live]
+  ok   9 headline full_history: change against the live page is reported in the release note  [new -1.94 p=0.481 n=12 | live -2.62 p=0.388 n=13]
+  ok   9 headline since_covid: change against the live page is reported in the release note  [new +0.20 p=0.933 n=14 | live +0.29 p=0.902 n=15]
+  ok   22a start dates: every roster school is in the ledger  [0 not in school-start-dates-2026-11-11.csv]
+  ok   22b start dates: every school without a date has a recorded reason  [0 with none]
+  ok   22c start dates: the roster carries every date the ledger has  [0 blank on the roster, dated in the ledger]
+  ok   22d start dates: the roster and the ledger agree  [0 differ]
+  ok   22e start dates: schools with no date count in neither group and are named on the page  [0 of 15 roster schools]
+  -> 0 FAIL, 0 WARN

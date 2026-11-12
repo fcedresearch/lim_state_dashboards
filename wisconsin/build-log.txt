@@ -1,22 +1,25 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state WI --core /home/claude/sdf/Core --out /home/claude/work1/WI --data /home/claude/work1/WI/data --extras wi_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state WI --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/WI --data /home/claude/sdf/Build/work/WI/data --extras wi_core_extras
 reading the core for Wisconsin ...
 [core] subjects: 146,103 school rows kept; dropped 80,839 rows with no school id and 2,953 with an id but no school record
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 2 with no date, 54 not in the ledger
 [core] Leader in Me roster: 496 rows
 [core] comparison schools: 18,061 rows
 [core] comparison: 4 rows set aside for 2 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 143 rows
-  subject rows 146,103 · roster rows 496 (54 schools) · comparison rows 18,057 (2019 schools) · MRA surveys 143
+  subject rows added from the state's own file: 15,042 (Wisconsin 2025-26 Forward Exam and ACT results (DPI WISEdash certified files))
+  subject rows 161,145 · roster rows 496 (54 schools) · comparison rows 18,057 (2019 schools) · MRA surveys 143
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 266 with no date, 6430 not in the ledger
 [core] Leader in Me roster: 59,452 rows
   exits: 50 of 54 roster schools carry an expiration date; 18 past it by more than 30 days (exited), 0 inside the grace window, 32 in the future, 4 undated (3 with a start date)
   2,071 schools · 462 districts
 applying the cleaning rules ...
-  76,706 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 179 of 486 reviewed
-  no start date: 2 schools · dated exits: 5 (school-years after an exit with rows: 10) · aggregate 'All grades' rows used 0, skipped 0
-  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 68.8% of rows in years and subjects whose levels add up)
+  85,605 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 214 of 540 reviewed
+  no start date: 2 schools · dated exits: 15 (school-years after an exit with rows: 21) · aggregate 'All grades' rows used 0, skipped 0
+  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 72.0% of rows in years and subjects whose levels add up)
   level values blanked on 11 year-subject cells that do not add up: 2014-15 ELA, 2014-15 Math, 2014-15 Social Studies, 2015-16 ELA, 2015-16 Math, 2015-16 Science, 2015-16 Social Studies, 2016-17 ELA ...
-  proficiency = levels 3 and 4 on 68.7% of rows
+  proficiency = levels 3 and 4 on 71.9% of rows
   statewide jump: ELA 2015->2016: 52.1 -> 43.5 (-8.6)
   statewide jump: ELA 2023->2024: 40.4 -> 51.0 (+10.6)
   statewide jump: Math 2023->2024: 40.3 -> 51.9 (+11.6)
@@ -28,16 +31,22 @@ folding in Wisconsin's own measures (wi_core_extras) ...
     discipline old: 6 files, 2010-11 to 2015-16
     postsec postsec: 15 files, 2010-11 to 2024-25
     ccr act_grad: 15 files, 2010-11 to 2024-25
-    ccr act_state: 11 files, 2014-15 to 2024-25
+    ccr act_state: 12 files, 2014-15 to 2025-26
     ccr ap: 15 files, 2010-11 to 2024-25
     report_card report_card: 12 files, 2011-12 to 2024-25
-    NCES directory: 2,444 federal-to-state id triples from the cache (8 CCD files unchanged)
-    attendance: 251,167 rows from the cache (15 files unchanged)
-    discipline: 170,553 rows from the cache (24 files unchanged)
-    report_cards: 25,252 rows from the cache (12 files unchanged)
-    postsec: 8,426 rows from the cache (15 files unchanged)
-    act: 13,203 rows from the cache (26 files unchanged)
-    ap: 6,482 rows from the cache (15 files unchanged)
+    NCES directory: 2,444 federal-to-state id triples for Wisconsin from 8 CCD files (2016-17 to 2023-24), cached
+    attendance: reading 15 files from the zips ...
+    attendance: 251,167 rows, cached in cache/
+    discipline: reading 24 files from the zips ...
+    discipline: 170,553 rows, cached in cache/
+    report_cards: reading 12 files from the zips ...
+    report_cards: 25,252 rows, cached in cache/
+    postsec: reading 15 files from the zips ...
+    postsec: 8,426 rows, cached in cache/
+    act: reading 27 files from the zips ...
+    act: 13,745 rows, cached in cache/
+    ap: reading 15 files from the zips ...
+    ap: 6,482 rows, cached in cache/
   attendance: 15 years (2010-11 to 2024-25), 33,772 school-years, the published rate rebuilds from the file's own days on every numeric row; dropouts alongside
   discipline: students suspended 2010-11 to 2015-16, removals 2016-17 to 2024-25 (two eras, two measures)
   report cards: 12 years (2011-12, 2012-13, 2013-14, 2015-16, 2016-17, 2017-18, 2018-19, 2020-21, 2021-22, 2022-23, 2023-24, 2024-25); no card was issued for 2014-15 or 2019-20
@@ -47,28 +56,28 @@ folding in Wisconsin's own measures (wi_core_extras) ...
     names: the WISEdash files' own school name agrees with DOMO's on 2,083 of 2,084 crosswalked schools; the name-within-district join speaks for 2,057 schools, both speak for 2,048 and agree on 2,048; 0 triples re-pointed to a folded id; 0 shared state ids settled; 22 schools carry more than one state id across the years
   value check of the join (a field the map was not built from): DOMO's dropout rate is the WISEdash rate within 0.1 on 100.0% of 7,728 school-years (truncated to one decimal on 100.0%, r = 0.9999); DOMO's student count against the attendance file's correlates at 0.958 across 16,697 school-years
   chronic absence and graduation: the folder carries no rate for either (the report card's chronic-absenteeism and graduation components are scores: r = -0.836 against DOMO's chronic absence on 7,371 school-years, r = 0.579 against DOMO's graduation rate on 3,327); nothing is filled or overwritten
-  rows gain: attend_rate on 21,515 school-year-bands (48 Leader in Me schools ever), oss_per100 on 16,849 school-year-bands (48 Leader in Me schools ever), overall_score on 18,748 school-year-bands (48 Leader in Me schools ever), growth_score on 17,385 school-year-bands (48 Leader in Me schools ever), act_composite on 4,293 school-year-bands (9 Leader in Me schools ever), college_first_fall on 4,186 school-year-bands (8 Leader in Me schools ever); 0 school-years had no band to sit in; two-band schools split {'exact': 5712, 'by_subtraction': 808, 'left_to_whole_school': 1416}
+  rows gain: attend_rate on 21,590 school-year-bands (48 Leader in Me schools ever), oss_per100 on 16,919 school-year-bands (48 Leader in Me schools ever), overall_score on 18,814 school-year-bands (48 Leader in Me schools ever), growth_score on 17,450 school-year-bands (48 Leader in Me schools ever), act_composite on 4,778 school-year-bands (9 Leader in Me schools ever), college_first_fall on 4,187 school-year-bands (8 Leader in Me schools ever); 0 school-years had no band to sit in; two-band schools split {'exact': 5712, 'by_subtraction': 808, 'left_to_whole_school': 1416}
   card: 11 Wisconsin measures, each group on each year's own membership
-  per-school Wisconsin records for the pack: 17,556 (57 columns)
-  Wisconsin's measures on 21,696 school-year-bands: 19,945 joined to existing rows, 1,751 school-year-bands added with no test rows of their own
-  school type from NCES: Title I on 2,031 schools (1,137 yes), charter 234, magnet 8, alternative 16; Title I published 2017-2022, carried forward after
+  per-school Wisconsin records for the pack: 18,078 (57 columns)
+  Wisconsin's measures on 22,266 school-year-bands: 20,430 joined to existing rows, 1,836 school-year-bands added with no test rows of their own
+  school type from NCES: Title I on 2,033 schools (1,137 yes), charter 236, magnet 8, alternative 16; Title I published 2017-2022, carried forward after
   funders: 19 Wisconsin schools carry a funding source (18 on the page; Kern 13, 12 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 41  by band {'Primary': {'pairs': 28, 'unmatched': 0}, 'Secondary': {'pairs': 13, 'unmatched': 0}}
   MRA: 140 surveys · 42 schools · 402 sentinel values · 1 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 40, 'comp_n': 1730, 'lim_change': 8.79, 'comp_change': 12.68, 'p': 0.006} · without the 3 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 37, 'comp_n': 1730, 'lim_change': 8.32, 'comp_change': 12.68, 'p': 0.003}
-  roster: 31 counted, 18 exited, 3 not counted yet, 2 not counted
-best-performing schools: 5 of 34 counted schools, 66 measures in 17 outcomes
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 33, 'comp_n': 1731, 'lim_change': 9.31, 'comp_change': 12.84, 'p': 0.041} · without the 3 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 30, 'comp_n': 1731, 'lim_change': 8.34, 'comp_change': 12.84, 'p': 0.013}
+  roster: 32 counted, 18 exited, 2 not counted yet, 2 not counted
+best-performing schools: 8 of 35 counted schools, 66 measures in 17 outcomes
 
-wrote wi_payload.json  (59.3 MB, 78,457 rows) · page kind full (40 Leader in Me schools on the headline)
+wrote wi_payload.json  (64.0 MB, 87,441 rows) · page kind full (33 Leader in Me schools on the headline)
 build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py wi_payload.json WI_Dashboard.html WI_Methods.html
-payload 59.3 MB -> 4.60 MB gzip
-WI_Dashboard.html: 6314 KB
-WI_Methods.html: 67 KB
+payload 64.0 MB -> 4.96 MB gzip
+WI_Dashboard.html: 6785 KB
+WI_Methods.html: 70 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state WI --work /home/claude/work1/WI
+$ python3 /home/claude/sdf/Build/verify_core.py --state WI --work /home/claude/sdf/Build/work/WI
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -118,7 +127,7 @@ ok   exited schools keep their true Leader in Me years  [17 exited schools with 
 ok   the exit counts on the methods page match the rule  [18 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 31, 'exited': 18, 'not counted yet': 3, 'not counted': 2}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 32, 'exited': 18, 'not counted': 2, 'not counted yet': 2}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -126,10 +135,10 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [1039 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [1017 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [63,331 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [73,998 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
@@ -140,10 +149,10 @@ ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's years before launch count in the comparison group  [1,133 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [1,141 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [497 schools]
-ok   the school count never exceeds the band-slice count  [1770 schools vs 2076 band slices]
+ok   combined-grade schools appear in both bands  [505 schools]
+ok   the school count never exceeds the band-slice count  [1764 schools vs 2064 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -157,13 +166,13 @@ ok   every MRA value sits on the published scale
 ok   the MRA trend stays inside one instrument version
 ok   every promised MRA group either draws or is explained with real counts  [drawn=['all', 'early', 'established', 'lighthouse'] absent=[]]
 ok   movers are built on ten or more schools each
-  demo district: Green Bay Area Public School District · prospect district: Milwaukee School District
+  demo district: Wausau School District · prospect district: Milwaukee School District
 
 --------------------------------------------------------------------------
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [1.5s]
+ok   load time is workable  [1.3s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -173,14 +182,14 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [11 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.0061 scipy 0.0061 · window 2022-2025 · LiM n=40 mean +8.79 · comparison n=1730 mean +12.68]
-ok   the headline counts schools, not band slices  [page 1770 vs offline 1770 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [40 vs 40]
-ok   the district filter re-renders the headline  [In Green Bay Area Public School District schools, between 2021-22 and 2024-25, Leader in M]
+ok   the headline p recomputes offline  [page 0.0406 scipy 0.0406 · window 2022-2026 · LiM n=33 mean +9.31 · comparison n=1731 mean +12.84]
+ok   the headline counts schools, not band slices  [page 1764 vs offline 1764 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [33 vs 33]
+ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Magnet schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [1071 of 2065 schools; In Wisconsin Title I schools, between 2021-22 and 2024-25, Leader in Me schools ]
+ok   choosing 'Title I schools' narrows the view and names it  [1071 of 2067 schools; In Wisconsin Title I schools, between 2021-22 and 2025-26, Leader in Me schools ]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Wisconsin schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2024-2]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Wisconsin schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2025-2]
 ok   Title I status is known for most schools on the page  [98.4%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
@@ -198,12 +207,12 @@ ok   measure 'overall_score' either draws or says why
 ok   measure 'growth_score' either draws or says why
 ok   measure 'act_composite' either draws or says why
 ok   measure 'college_first_fall' either draws or says why
-ok   the matched toggle re-renders the headline  [In Wisconsin schools (matched to similar schools only), between 2021-22 and 2024-25, Leade]
-ok   the matched view shrinks or equals the Leader in Me count  [34 matched]
+ok   the matched toggle re-renders the headline  [In Wisconsin schools (matched to similar schools only), between 2021-22 and 2025-26, Leade]
+ok   the matched view shrinks or equals the Leader in Me count  [28 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Green Bay Area Public School District generates cards or says there is nothing to report  [11 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.006102067247371027, 'n1': 40, 'n2': 1730}]
+ok   Wausau School District generates cards or says there is nothing to report  [10 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.04064443310204863, 'n1': 33, 'n2': 1731}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -222,22 +231,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [4,061 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [136,111 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [142,794 bytes]
 ok   the pptx export is named for the state and chart  [WI_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Wisconsin_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [137,732 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [144,878 bytes]
 ok   the docx export is named for the state and chart  [WI_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Wisconsin_schools.docx]
-ok   the research pack downloads with its sections  [40,359 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
-ok   the pack's Leader in Me count for the district is the page's  [3 vs 3]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Wisconsin schools like Milwaukee School District’s, between 2021-22 and 2024-25, Leader in Me schools rose 5.2% on Me]
-ok   the look-alike box reports both counts or says why not  [Schools like Milwaukee School District’s: 4 Leader in Me schools and 172 comparison schools look like Milwaukee School District’s 135 schools with results in th]
+ok   the research pack downloads with its sections  [44,926 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'report_card_school']]
+skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Wisconsin schools like Milwaukee School District’s, between 2021-22 and 2025-26, Leader in Me schools rose 1.5% on Me]
+ok   the look-alike box reports both counts or says why not  [Schools like Milwaukee School District’s: 4 Leader in Me schools and 174 comparison schools look like Milwaukee School District’s 143 schools with results in th]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.1388]
+ok   the look-alike headline p recomputes offline  [p=0.0099]
 ok   the anchor's own schools are never inside the look-alike groups
 ok   the school list downloads with one row per school  [147 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Wisconsin grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 2.2% on Meeting]
+ok   choosing a grade re-renders the headline and names the grade  [In Wisconsin grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 1.9% on Meeting]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [9 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -268,13 +277,13 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +8.79 pts (n=40) vs comparison +12.68 pts (n=1730), p=0.0061 -> significant in the comparison group's favour
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +9.31 pts (n=33) vs comparison +12.84 pts (n=1731), p=0.0406 -> significant in the comparison group's favour
 
 ==========================================================================
-181 of 181 checks pass
+180 of 180 checks pass · 1 skipped
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/wi_core_verify.py --work /home/claude/work1/WI
+$ python3 /home/claude/sdf/Build/states/wi_core_verify.py --work /home/claude/sdf/Build/work/WI
 
 Wisconsin's own measures
 --------------------------------------------------------------------------
@@ -291,39 +300,39 @@ ok   the Leader in Me schools the crosswalk cannot reach are named on the page, 
 ok   the join note on the card carries the reach and names the anchor
 ok   chronic absence and graduation were neither filled nor overwritten, and the page says why  [report card scores correlate at -0.836 and 0.579, so they are scores, not the rates]
 ok   the report card's chronic-absenteeism and graduation components are in the pack labelled as scores
-ok   attendance 2024-25: the pack's attend_rate is the state file's own value through the crosswalk  [1901 of 1901 agree (need 1500)]
-ok   attend_rate: a one-band school's row value is the pack's whole-school value  [13265 of 13265]
-ok   attendance 2024-25: a two-band school's primary-band row rate is rebuilt from the file's PK-5 grade rows (or falls back to the whole-school rate)  [432 of 432 two-band schools]
-ok   dropouts 2024-25: the pack's dropout_rate is the state file's own value through the crosswalk  [1038 of 1038 agree (need 800)]
-ok   dropouts (grade-12 completers, the college denominator) 2024-25: the pack's grade12_completers is the state file's own value through the crosswalk  [498 of 498 agree (need 300)]
+ok   attendance 2024-25: the pack's attend_rate is the state file's own value through the crosswalk  [1902 of 1902 agree (need 1500)]
+ok   attend_rate: a one-band school's row value is the pack's whole-school value  [13199 of 13199]
+ok   attendance 2024-25: a two-band school's primary-band row rate is rebuilt from the file's PK-5 grade rows (or falls back to the whole-school rate)  [436 of 436 two-band schools]
+ok   dropouts 2024-25: the pack's dropout_rate is the state file's own value through the crosswalk  [1040 of 1040 agree (need 800)]
+ok   dropouts (grade-12 completers, the college denominator) 2024-25: the pack's grade12_completers is the state file's own value through the crosswalk  [500 of 500 agree (need 300)]
 ok   the attendance rate is a measure in the rows with Leader in Me school-years behind it
-ok   attendance 2024-25: the 30 schools the file puts at exactly 100 or 0 carry no rate in the pack or the rows  [9 of them on the page; 834 such rates across the years read as unreported]
+ok   attendance 2024-25: the 30 schools the file puts at exactly 100 or 0 carry no rate in the pack or the rows  [10 of them on the page; 834 such rates across the years read as unreported]
 ok   no whole-school attendance rate of exactly 100 or 0 reaches the pack  [834 read as unreported]
-ok   discipline actions (removals over third-Friday enrollment) 2024-25: the pack's oss_per100 is the state file's own value through the crosswalk  [1902 of 1902 agree (need 1500)]
-ok   discipline actions (the removal count itself) 2024-25: the pack's oss_removals is the state file's own value through the crosswalk  [1902 of 1902 agree (need 1500)]
-ok   oss_per100: a one-band school's row value is the pack's whole-school value  [10315 of 10315]
+ok   discipline actions (removals over third-Friday enrollment) 2024-25: the pack's oss_per100 is the state file's own value through the crosswalk  [1904 of 1904 agree (need 1500)]
+ok   discipline actions (the removal count itself) 2024-25: the pack's oss_removals is the state file's own value through the crosswalk  [1904 of 1904 agree (need 1500)]
+ok   oss_per100: a one-band school's row value is the pack's whole-school value  [10273 of 10273]
 ok   discipline 2024-25: a school with fewer than ten students carries no suspension rate  [0 such schools on the page]
 ok   suspensions per 100 is a measure in the rows and the look-alike behavior measure
 ok   two-band schools were split from the grade rows, exactly or by subtraction, or left to the whole-school rate, and the page counts each path  [{'exact': 5712, 'by_subtraction': 808, 'left_to_whole_school': 1416}]
 ok   the grade rows rebuild the school's removal total wherever no grade is suppressed
 ok   report card (overall accountability score, re-read from the workbook) 2024-25: the pack's overall_score is the state file's own value through the crosswalk  [1883 of 1883 agree (need 1500)]
 ok   report card (growth priority-area score, re-read) 2024-25: the pack's growth_score is the state file's own value through the crosswalk  [1857 of 1857 agree (need 1500)]
-ok   overall_score: a one-band school's row value is the pack's whole-school value  [11490 of 11490]
-ok   growth_score: a one-band school's row value is the pack's whole-school value  [10205 of 10205]
-ok   report card 2024-25: the 141 schools under alternate accountability carry no score and no rating share  [27 of them on the page]
+ok   overall_score: a one-band school's row value is the pack's whole-school value  [11428 of 11428]
+ok   growth_score: a one-band school's row value is the pack's whole-school value  [10142 of 10142]
+ok   report card 2024-25: the 141 schools under alternate accountability carry no score and no rating share  [29 of them on the page]
 ok   report card 2024-25: the 579 private Choice-program rows sit under no school on the page
 ok   report card 2024-25: the pack's top-rating flag is the file's own rating  [957 rated top of 1883]
 ok   the overall score and the growth score are measures in the rows on both bands
 ok   the report card carries no 2014-15 or 2019-20 and the page says so
-ok   ACT statewide (grade-11 composite, re-read) 2024-25: the pack's act_composite is the state file's own value through the crosswalk  [485 of 485 agree (need 350)]
-ok   ACT statewide (juniors tested, re-read) 2024-25: the pack's act_tested is the state file's own value through the crosswalk  [505 of 505 agree (need 350)]
-ok   act_composite: a one-band school's row value is the pack's whole-school value  [4089 of 4089]
+ok   ACT statewide (grade-11 composite, re-read) 2025-26: the pack's act_composite is the state file's own value through the crosswalk  [485 of 485 agree (need 350)]
+ok   ACT statewide (juniors tested, re-read) 2025-26: the pack's act_tested is the state file's own value through the crosswalk  [504 of 504 agree (need 350)]
+ok   act_composite: a one-band school's row value is the pack's whole-school value  [4542 of 4542]
 ok   the ACT composite sits on the secondary band only and never on fewer than ten test-takers
 ok   the graduates' ACT composite is excluded by name for the class of 2015 and earlier (the last to test by choice)  [class of 2015: 41530 tested statewide; class of 2016: 60620]
 ok   AP (exams scored 3 or above, re-read) 2024-25: the pack's ap_pass is the state file's own value through the crosswalk  [351 of 351 agree (need 250)]
 ok   postsecondary enrollment (first-fall enrollees, re-read) 2024-25: the pack's first_fall is the state file's own value through the crosswalk  [467 of 467 agree (need 350)]
 ok   postsecondary 2024-25: the first-fall rate is the first-fall count over the dropout file's grade-12 completers, never on fewer than ten  [466 schools]
-ok   college_first_fall: a one-band school's row value is the pack's whole-school value  [4000 of 4000]
+ok   college_first_fall: a one-band school's row value is the pack's whole-school value  [4001 of 4001]
 ok   the first-fall rate names its denominator wherever it appears
 ok   Attendance rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 93.44 (n=42) vs offline 93.44 (n=42)]
 ok   Dropout rate: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 0.29 (n=16) vs offline 0.29 (n=16)]
@@ -333,15 +342,15 @@ ok   Growth priority-area score: the latest Leader in Me point recomputes from t
 ok   On-track to graduation score: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 86.2 (n=41) vs offline 86.2 (n=41)]
 ok   Target group outcomes score: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 64.66 (n=39) vs offline 64.66 (n=39)]
 ok   Rated Exceeds or Significantly Exceeds Expectations: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 53.66 (n=41) vs offline 53.66 (n=41)]
-ok   ACT composite, grade 11: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 19.65 (n=7) vs offline 19.65 (n=7)]
+ok   ACT composite, grade 11: the latest Leader in Me point recomputes from the long table and the membership file  [2026: payload 20.25 (n=5) vs offline 20.25 (n=5)]
 ok   AP exams scored 3 or above: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 76.02 (n=6) vs offline 76.02 (n=6)]
 ok   First-fall college enrollment: the latest Leader in Me point recomputes from the long table and the membership file  [2025: payload 56.98 (n=6) vs offline 56.98 (n=6)]
-ok   the closure years are on no Wisconsin card  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
+ok   the closure years are on no Wisconsin card  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
 ok   attend_rate sits in no closure year on the rows  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   oss_per100 sits in no closure year on the rows  [[2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   overall_score sits in no closure year on the rows  [[2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   growth_score sits in no closure year on the rows  [[2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
-ok   act_composite sits in no closure year on the rows  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
+ok   act_composite sits in no closure year on the rows  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]]
 ok   college_first_fall sits in no closure year on the rows  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
 ok   the pack carries no closure year
 ok   the suspension measure never touches the students-suspended files (2010-11 to 2015-16), which sit in the pack under their own name  [oss_per100 from 2017; pct_suspended to 2016]
@@ -350,9 +359,9 @@ ok   the target group outcomes line runs only inside the 2020-21 redesign
 ok   the AP recalibration of 2024 and 2025 is named on the card and the methods page
 ok   every exclusion is counted on the cleaning audit
 ok   the files' year labels were read as the school year's end (2024-25 is 2025), as the pull manifest records
-ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 17,528 school-years]
-ok   no Leader in Me card member is a school-year the core dropped  [179 Leader in Me school-years on the cards]
-ok   no card member sits past the core's last year or before its first  [2015 to 2025 vs 2015 to 2025]
+ok   the card membership is the core's own status wherever a school has rows that year  [0 mismatches over 19,407 school-years]
+ok   no Leader in Me card member is a school-year the core dropped  [214 Leader in Me school-years on the cards]
+ok   no card member sits past the core's last year or before its first  [2015 to 2026 vs 2015 to 2026]
 ok   Attendance rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=42]
 ok   Dropout rate: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=16]
 ok   Out-of-school suspensions per 100 students: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=42]
@@ -361,14 +370,14 @@ ok   Growth priority-area score: the Leader in Me point in 2025 rests on at leas
 ok   On-track to graduation score: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=41]
 ok   Target group outcomes score: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=39]
 ok   Rated Exceeds or Significantly Exceeds Expectations: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=41]
-ok   ACT composite, grade 11: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=7]
+ok   ACT composite, grade 11: the Leader in Me point in 2026 rests on at least three counted schools and a comparison line exists  [n=5]
 ok   AP exams scored 3 or above: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=6]
 ok   First-fall college enrollment: the Leader in Me point in 2025 rests on at least three counted schools and a comparison line exists  [n=6]
 ok   every card measure carries the poverty context line
 ok   the card carries a manageable set, a dozen measures at most  [11]
-ok   the research pack's per-school Wisconsin values are keyed to schools on the page  [17,556 records]
+ok   the research pack's per-school Wisconsin values are keyed to schools on the page  [18,078 records]
 ok   every pack column is labelled
-ok   every school with a state code on the page has it in the pack  [2,064 of 2,065]
+ok   every school with a state code on the page has it in the pack  [2,066 of 2,067]
 ok   the six Wisconsin row measures are on the page beside the core's
 ok   no measure label contains another (the measure picker is driven by label text)  [meeting or exceeding the standard (levels 3 and 4); level 4: exceeding the standard; level 3: meeting the standard; level 2: approaching the standard; level 1: below the standard; schooldigger standard score; chronic absence; graduation rate; attendance rate; out-of-school suspensions per 100 students; overall accountability score; growth priority-area score; act composite, grade 11; first-fall college enrollment]
 ok   the banner names the WISEdash files and the report cards
@@ -376,3 +385,35 @@ ok   the methods page carries the two-era discipline note, the attendance band n
 ok   the sources list names the completion file the folder lacks
 
 ALL WISCONSIN CHECKS PASS
+
+== November 12, 2026 (Thursday pipeline): checks run on the built page
+$ python3 Build/verify_best.py --page Out/wisconsin/index.html
+
+165 checks, 0 failed
+ALL CHECKS PASS
+$ python3 Build/prepublish_check.py --state WI ... --live <live wisconsin/index.html> (ledger school-start-dates-2026-11-11.csv beside the roster for check 22 only)
+== WI pre-publish checks
+  ok   1 coverage: the newest year reaches about as many schools and rows as the year before  [schools 1,479 vs 1,492 (0.99); grade-subject rows 9,737 vs 9,838 (0.99), grades 3-8 reading and math, against DOMO 2025]
+  ok   2 test set: every grade and test DOMO carried the year before is in the newest file
+  ok   3 levels: no more rows with only some of the four levels than DOMO's year before  [0.0% of newest-year rows against 0.0% in DOMO 2025]
+  ok   4 suppressed values: the audit counts masked, recovered and bounded cells  [rows_masked, rows_masked_2024_25_same_reading, what_masking_selects_check_23]
+  ok   5 definition: the audit compares the newest year with DOMO's year before  [domo_2024_25_definition, coverage_against_domo_2025]
+  ok   6 like-for-like: newest-year rows left out because the school took a test the newest file lacks  [0 rows]
+  ok   10a launch-year rule: no Leader in Me row is counted before its Year 1  [0 rows]
+  ok   10b Year 0 sits in neither group: every Year 0 row is a school's launch year, none is a comparison row  [12 Year 0 rows; 0 out of place; 0 launch years left in the comparison group]
+  ok   10c the page carries the years-since-launch chart and the Year 0 hover help  [chart yes, hover help yes]
+  ok   10d the methods page states the launch-year rule (September 15, Year 0)
+  ok   7 statewide ELA 2025->2026: a change of 8 points or more is explained in the record  [51.1 -> 51.6 (+0.5)]
+  ok   7 statewide Math 2025->2026: a change of 8 points or more is explained in the record  [50.6 -> 49.0 (-1.6)]
+  ok   8 earlier years unchanged: 2023 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2024 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2025 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   11 every measure on the live page is on the new page  [19 measures now, 19 live]
+  ok   9 headline full_history: change against the live page is reported in the release note  [new -0.83 p=0.586 n=33 | live -1.52 p=0.312 n=40]
+  ok   9 headline since_covid: change against the live page is reported in the release note  [new -3.53 p=0.041 n=33 | live -3.89 p=0.006 n=40]
+  ok   22a start dates: every roster school is in the ledger  [0 not in school-start-dates-2026-11-11.csv]
+  ok   22b start dates: every school without a date has a recorded reason  [0 with none]
+  WARN 22c start dates: the roster carries every date the ledger has  [2 blank on the roster, dated in the ledger: Dr Howard Fuller Collegiate Academy, Webster Middle]
+  WARN 22d start dates: the roster and the ledger agree  [2 differ: Lake Mills Elementary, Lake Mills High]
+  ok   22e start dates: schools with no date count in neither group and are named on the page  [0 of 54 roster schools]
+  -> 0 FAIL, 2 WARN

@@ -1,23 +1,26 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state OK --core /home/claude/sdf/Core --out /home/claude/work1/OK --data /home/claude/work1/OK/data --extras ok_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state OK --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/OK --data /home/claude/sdf/Build/work/OK/data --extras ok_core_extras
 reading the core for Oklahoma ...
 [core] subjects: 61,176 school rows kept; dropped 35,465 rows with no school id and 6,607 with an id but no school record
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 0 with no date, 106 not in the ledger
 [core] Leader in Me roster: 769 rows
 [core] comparison schools: 9,330 rows
 [core] comparison: 3 rows set aside for 2 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 118 rows
-  subject rows 61,176 · roster rows 769 (106 schools) · comparison rows 9,327 (1741 schools) · MRA surveys 118
+  subject rows added from the state's own file: 13,455 (Oklahoma 2025-26 OSTP and CCRA results (Oklahoma School Report Card, Academic Achievement file))
+  subject rows 74,631 · roster rows 769 (106 schools) · comparison rows 9,327 (1741 schools) · MRA surveys 118
   identity: Cherokee Elementary School (Catoosa): 400687029891 -> 400687029754
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 266 with no date, 6430 not in the ledger
 [core] Leader in Me roster: 59,452 rows
   exits: 99 of 106 roster schools carry an expiration date; 29 past it by more than 30 days (exited), 0 inside the grace window, 70 in the future, 7 undated (7 with a start date)
   1,844 schools · 554 districts
 applying the cleaning rules ...
-  27,029 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 295 of 954 reviewed
-  no start date: 0 schools · dated exits: 22 (school-years after an exit with rows: 30) · aggregate 'All grades' rows used 4668, skipped 1942
-  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 84.7% of rows in years and subjects whose levels add up)
-  level values blanked on 3 year-subject cells that do not add up: 2022-23 Social Studies, 2023-24 Social Studies, 2024-25 Social Studies
-  proficiency = levels 3 and 4 on 83.2% of rows
+  32,092 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 373 of 1060 reviewed
+  no start date: 0 schools · dated exits: 26 (school-years after an exit with rows: 51) · aggregate 'All grades' rows used 4718, skipped 2362
+  achievement levels as measures: yes (four levels, numbered from the bottom; proficiency is the top 2; 86.5% of rows in years and subjects whose levels add up)
+  level values blanked on 4 year-subject cells that do not add up: 2022-23 Social Studies, 2023-24 Social Studies, 2024-25 Social Studies, 2025-26 Social Studies
+  proficiency = levels 3 and 4 on 85.2% of rows
   statewide jump: ELA 2016->2017: 72.9 -> 41.5 (-31.3)
   statewide jump: ELA 2023->2024: 34.4 -> 44.5 (+10.1)
   statewide jump: ELA 2024->2025: 44.5 -> 28.1 (-16.4)
@@ -97,29 +100,29 @@ folding in Oklahoma's own measures (ok_core_extras) ...
   DOMO's graduation rate against the report card's four-year rate: 2016-17: 27.6% of 192 equal the file labelled 2017-18 to a hundredth, -% the same-labelled file; 2021-22: 83.5% of 345 equal the file labelled 2022-23 to a hundredth, 1.2% the same-labelled file; 2022-23: 66.8% of 431 equal the file labelled 2023-24 to a hundredth, 1.6% the same-labelled file; 2023-24: 100.0% of 427 equal the file labelled 2024-25 to a hundredth, 2.6% the same-labelled file
   graduation fill (only where DOMO has none, on the class's own year): class of 2018 from the 2018-19 file: 444 school-years DOMO lacks (0 DOMO has, kept); class of 2022 from the 2022-23 file: 101 school-years DOMO lacks (345 DOMO has, kept; 1 added rows take DOMO's export value); class of 2023 from the 2023-24 file: 26 school-years DOMO lacks (431 DOMO has, kept; 2 added rows take DOMO's export value); class of 2024 from the 2024-25 file: 32 school-years DOMO lacks (427 DOMO has, kept; 3 added rows take DOMO's export value); 2016-17 not filled (DOMO's own values that year are another source)
   chronic-absence fill (only where DOMO has none): 5,961 school-years (2017-18: 1661, 2018-19: 1666, 2021-22: 822, 2022-23: 788, 2023-24: 708, 2024-25: 316); DOMO's own values kept on 4,004; 29 added school-year-bands take DOMO's export value
-  rows gain: rc_points on 12,365 school-year-bands (99 Leader in Me schools ever), growth_score on 9,393 school-year-bands (88 Leader in Me schools ever), teacher_retention on 3,893 school-year-bands (42 Leader in Me schools ever), college_going on 3,645 school-year-bands (6 Leader in Me schools ever); 112 school-years had no band to sit in
+  rows gain: rc_points on 12,349 school-year-bands (99 Leader in Me schools ever), growth_score on 9,381 school-year-bands (88 Leader in Me schools ever), teacher_retention on 3,893 school-year-bands (42 Leader in Me schools ever), college_going on 3,645 school-year-bands (6 Leader in Me schools ever); 112 school-years had no band to sit in
   card: 12 Oklahoma measures, each group on each year's own membership
   per-school Oklahoma records for the pack: 11,365 school-years; state codes for 1,825 schools
-  Oklahoma's measures on 13,794 school-year-bands: 6,823 joined to existing rows, 6,971 school-year-bands added with no test rows of their own
-  core measures filled from Oklahoma's own files where DOMO had none: chronic_absent 9,969 rows, grad_rate 617 rows
-  school type from NCES: Title I on 1,757 schools (1,216 yes), charter 78, magnet 0, alternative 1; Title I published 2017-2022, carried forward after
+  Oklahoma's measures on 13,778 school-year-bands: 6,823 joined to existing rows, 6,955 school-year-bands added with no test rows of their own
+  core measures filled from Oklahoma's own files where DOMO had none: chronic_absent 9,938 rows, grad_rate 617 rows
+  school type from NCES: Title I on 1,757 schools (1,215 yes), charter 78, magnet 0, alternative 1; Title I published 2017-2022, carried forward after
   funders: 72 Oklahoma schools carry a funding source (72 on the page; Kern 48, 48 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 24  by band {'Primary': {'pairs': 13, 'unmatched': 0}, 'Secondary': {'pairs': 11, 'unmatched': 0}}
   MRA: 110 surveys · 60 schools · 313 sentinel values · 4 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 60, 'comp_n': 745, 'lim_change': -2.79, 'comp_change': -2.27, 'p': 0.499} · without the 7 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 56, 'comp_n': 745, 'lim_change': -2.78, 'comp_change': -2.27, 'p': 0.527}
-  roster: 72 counted, 29 exited, 5 not counted yet, 0 not counted
-best-performing schools: 3 of 75 counted schools, 67 measures in 18 outcomes
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 59, 'comp_n': 745, 'lim_change': -3.84, 'comp_change': -3.39, 'p': 0.628} · without the 7 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 55, 'comp_n': 745, 'lim_change': -3.79, 'comp_change': -3.39, 'p': 0.68}
+  roster: 74 counted, 29 exited, 3 not counted yet, 0 not counted
+best-performing schools: 5 of 75 counted schools, 67 measures in 18 outcomes
 
-wrote ok_payload.json  (21.2 MB, 34,000 rows) · page kind full (60 Leader in Me schools on the headline)
+wrote ok_payload.json  (23.6 MB, 39,047 rows) · page kind full (59 Leader in Me schools on the headline)
 build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py ok_payload.json OK_Dashboard.html OK_Methods.html
-payload 21.2 MB -> 1.72 MB gzip
-OK_Dashboard.html: 2564 KB
-OK_Methods.html: 71 KB
+payload 23.6 MB -> 1.88 MB gzip
+OK_Dashboard.html: 2768 KB
+OK_Methods.html: 73 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state OK --work /home/claude/work1/OK
+$ python3 /home/claude/sdf/Build/verify_core.py --state OK --work /home/claude/sdf/Build/work/OK
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -169,7 +172,7 @@ ok   exited schools keep their true Leader in Me years  [28 exited schools with 
 ok   the exit counts on the methods page match the rule  [29 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 72, 'exited': 29, 'not counted yet': 5}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 74, 'exited': 29, 'not counted yet': 3}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -177,24 +180,24 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [575 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [594 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   the 4 achievement levels are measures of their own  [percent_below, percent_level2, percent_level3, percent_level4]
-ok   the level shares sum to 100 on the grade rows that carry them  [27,081 grade rows, 100.0% within 1.5 points]
+ok   the level shares sum to 100 on the grade rows that carry them  [33,516 grade rows, 100.0% within 1.5 points]
 ok   the levels from the proficiency cut up add up to the proficiency rate  [cut at canonical level 3 of 4; 100.0% of grade rows within 1.5]
 ok   the grade table carries the level columns
 ok   the level labels carry the state's own numbering  [Level 1: below the standard; Level 2: approaching the standard; Level 3: meeting the standard; Level 4: exceeding the standard]
 ok   the levels at or above the standard count up, the levels below count down
 ok   the proficiency label names the levels it adds
-ok   years and subjects whose levels do not add up carry no level values  [3 cells set aside, 907 grade rows in them]
+ok   years and subjects whose levels do not add up carry no level values  [4 cells set aside, 1,360 grade rows in them]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's years before launch count in the comparison group  [1,469 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [1,478 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [422 schools]
-ok   the school count never exceeds the band-slice count  [805 schools vs 868 band slices]
+ok   combined-grade schools appear in both bands  [420 schools]
+ok   the school count never exceeds the band-slice count  [804 schools vs 868 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -214,7 +217,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [0.7s]
+ok   load time is workable  [0.5s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -224,14 +227,14 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [12 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.4966 scipy 0.4966 · window 2022-2025 · LiM n=60 mean -2.79 · comparison n=745 mean -2.27]
-ok   the headline counts schools, not band slices  [page 805 vs offline 805 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [60 vs 60]
+ok   the headline p recomputes offline  [page 0.6291 scipy 0.6291 · window 2022-2026 · LiM n=59 mean -3.84 · comparison n=745 mean -3.39]
+ok   the headline counts schools, not band slices  [page 804 vs offline 804 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [59 vs 59]
 ok   the district filter re-renders the headline  [Not enough schools match these filters to compare anything yet. Remove a filter on the lef]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [1195 of 1794 schools; In Oklahoma Title I schools, between 2021-22 and 2024-25, Leader in Me schools f]
+ok   choosing 'Title I schools' narrows the view and names it  [1195 of 1794 schools; In Oklahoma Title I schools, between 2021-22 and 2025-26, Leader in Me schools f]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Oklahoma schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025-26]
 ok   Title I status is known for most schools on the page  [97.9%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
@@ -247,12 +250,12 @@ ok   measure 'rc_points' either draws or says why
 ok   measure 'growth_score' either draws or says why
 ok   measure 'teacher_retention' either draws or says why
 ok   measure 'college_going' either draws or says why
-ok   the matched toggle re-renders the headline  [In Oklahoma schools (matched to similar schools only), between 2021-22 and 2024-25, Leader]
-ok   the matched view shrinks or equals the Leader in Me count  [20 matched]
+ok   the matched toggle re-renders the headline  [In Oklahoma schools (matched to similar schools only), between 2021-22 and 2025-26, Leader]
+ok   the matched view shrinks or equals the Leader in Me count  [19 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
 ok   Moore generates cards or says there is nothing to report  [10 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.49656319613338984, 'n1': 60, 'n2': 745}]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.6291336621904187, 'n1': 59, 'n2': 745}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -271,19 +274,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [3,412 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [178,018 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [183,361 bytes]
 ok   the pptx export is named for the state and chart  [OK_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Oklahoma_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [178,914 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [184,717 bytes]
 ok   the docx export is named for the state and chart  [OK_Meeting_or_exceeding_the_standard_levels_3_and_4_year_by_year_Oklahoma_schools.docx]
-ok   the research pack downloads with its sections  [28,617 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
+ok   the research pack downloads with its sections  [30,483 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
 skip pack count against the page  [no district with three Leader in Me and three comparison schools in the end year]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it will come back.]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Oklahoma schools like Edmond’s, between 2024-25 and 2025-26, Leader in Me schools rose 2.3% on Meeting or exceeding t]
 ok   the look-alike box reports both counts or says why not  [Schools like Edmond’s: 6 Leader in Me schools and 37 comparison schools look like Edmond’s 28 schools with results in these years (each matched at its first yea]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-skip look-alike recompute  [look-alike groups have no balanced window]
+ok   the look-alike headline p recomputes offline  [p=0.3087]
+ok   the anchor's own schools are never inside the look-alike groups
+ok   the school list downloads with one row per school  [34 rows, 0 same-name pairs]
+ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Oklahoma grade 4 results, between 2021-22 and 2024-25, Leader in Me schools fell 7.3% on Meeting ]
+ok   choosing a grade re-renders the headline and names the grade  [In Oklahoma grade 4 results, between 2021-22 and 2025-26, Leader in Me schools fell 10.3% on Meeting]
 ok   the level measures stay on while a grade is chosen
 ok   whole-school measures switch off while a grade is chosen  [7 whole-school measures in the payload]
 ok   dark mode re-renders without errors
@@ -314,13 +320,13 @@ ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 ok   a statewide jump is flagged on the methods page
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me -2.79 pts (n=60) vs comparison -2.27 pts (n=745), p=0.4966 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me -3.84 pts (n=59) vs comparison -3.39 pts (n=745), p=0.6291 -> not significant
 
 ==========================================================================
-174 of 174 checks pass · 2 skipped
+178 of 178 checks pass · 1 skipped
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/ok_core_verify.py --work /home/claude/work1/OK
+$ python3 /home/claude/sdf/Build/states/ok_core_verify.py --work /home/claude/sdf/Build/work/OK
 
 Oklahoma's own measures
 --------------------------------------------------------------------------
@@ -352,11 +358,11 @@ ok   the OSRHE gpa rows join by name within county for nearly every row and neve
 ok   the OSRHE remediation rows join by name within county for nearly every row and never guess an ambiguous name  [3,158 of 3,178; {'exact': 3150, 'ambiguous': 20, 'name contained, high-school site': 6, 'generic words removed': 2}]
 ok   the name-joined OSRHE college-going rate equals the OEIP's coded copy of it for the same class (a check of the name join; a revision of a few students apart is not a wrong school)  [class of 2022: 93.7% of 447, 28 apart by at most 8.33 points; class of 2023: 100.0% of 451, 0 apart by at most 0.53 points]
 ok   the report card overall score is a measure of its own
-ok   every report card overall score on the rows recomputes from the joined report card (whole-school, the same value on each band)  [12,303 school-year-bands, 0 with no source, max gap 0.000]
+ok   every report card overall score on the rows recomputes from the joined report card (whole-school, the same value on each band)  [12,287 school-year-bands, 0 with no source, max gap 0.000]
 ok   the report card overall score sits on the graded years only, no closure year  [years [2018, 2019, 2022, 2023, 2024, 2025]]
 ok   the report card overall score stands on three or more counted Leader in Me schools  [99 Leader in Me schools]
 ok   the growth indicator is a measure of its own
-ok   every growth indicator on the rows recomputes from the joined report card (whole-school, the same value on each band)  [9,340 school-year-bands, 0 with no source, max gap 0.000]
+ok   every growth indicator on the rows recomputes from the joined report card (whole-school, the same value on each band)  [9,328 school-year-bands, 0 with no source, max gap 0.000]
 ok   the growth indicator sits on the graded years only, no closure year  [years [2018, 2019, 2022, 2023, 2024, 2025]]
 ok   the growth indicator stands on three or more counted Leader in Me schools  [88 Leader in Me schools]
 ok   every counted school-year with a report card carries the overall score on the rows  [0 missing]
@@ -390,7 +396,7 @@ ok   the grad4_class line sits on class years the files carry and never on a clo
 ok   the college_going line sits on class years the files carry and never on a closure class  [[2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024]]
 ok   the gpa_3plus line sits on class years the files carry and never on a closure class  [[2018, 2019, 2022, 2023]]
 ok   the remediation line sits on class years the files carry and never on a closure class  [[2018, 2019, 2022, 2023]]
-ok   every Leader in Me school-year behind the card is a roster school inside its counted years  [277 Leader in Me school-years, 0 after a dated exit]
+ok   every Leader in Me school-year behind the card is a roster school inside its counted years  [348 Leader in Me school-years, 0 after a dated exit]
 ok   every Leader in Me school-year in the pack is one the payload rows count  [245 pack school-years]
 ok   every pack column carries a label  [[]]
 ok   the research pack's per-school values are keyed to schools on the page and carry no closure year  [11,365 records, years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]]
@@ -404,3 +410,60 @@ ok   the methods page names the exclusions
 ok   the sources name the report cards, the OEIP workbooks and the Regents' indicators
 
 ALL OKLAHOMA CHECKS PASS
+
+$ python3 Build/verify_best.py --page Out/oklahoma/index.html
+
+--------------------------------------------------------------------------
+Tier A — who is on the list
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier B — every number rebuilt from the page's own data
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier C — the rules, applied again
+--------------------------------------------------------------------------
+     (5 composite changes on this list are negative and are printed as such)
+
+--------------------------------------------------------------------------
+Tier D — the order
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier E — what the page says
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier F — the tab in a real browser
+--------------------------------------------------------------------------
+
+102 checks, 0 failed
+ALL CHECKS PASS
+
+$ python3 Build/prepublish_check.py --state OK ... (ledger beside the roster for check 22 only)
+== OK pre-publish checks
+  ok   1 coverage: the newest year reaches about as many schools and rows as the year before  [schools 982 vs 915 (1.07); grade-subject rows 5,662 vs 5,501 (1.03), grades 3-8 reading and math, against DOMO 2025]
+  ok   2 test set: every grade and test DOMO carried the year before is in the newest file
+  ok   3 levels: no more rows with only some of the four levels than DOMO's year before  [0.0% of newest-year rows against 0.0% in DOMO 2025]
+  ok   4 suppressed values: the audit counts masked, recovered and bounded cells  [rows_masked, what_masking_selects_check_23]
+  ok   5 definition: the audit compares the newest year with DOMO's year before  [domo_2024_25_definition, coverage_against_domo_2025]
+  ok   6 like-for-like: newest-year rows left out because the school took a test the newest file lacks  [0 rows]
+  ok   10a launch-year rule: no Leader in Me row is counted before its Year 1  [0 rows]
+  ok   10b Year 0 sits in neither group: every Year 0 row is a school's launch year, none is a comparison row  [144 Year 0 rows; 0 out of place; 0 launch years left in the comparison group]
+  ok   10c the page carries the years-since-launch chart and the Year 0 hover help  [chart yes, hover help yes]
+  ok   10d the methods page states the launch-year rule (September 15, Year 0)
+  ok   7 statewide ELA 2025->2026: a change of 8 points or more is explained in the record  [28.0 -> 27.0 (-1.0)]
+  ok   7 statewide Math 2025->2026: a change of 8 points or more is explained in the record  [23.9 -> 24.4 (+0.4)]
+  ok   8 earlier years unchanged: 2023 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2024 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2025 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   11 every measure on the live page is on the new page  [20 measures now, 20 live]
+  ok   9 headline full_history: change against the live page is reported in the release note  [new +0.65 p=0.705 n=39 | live +1.03 p=0.518 n=42]
+  ok   9 headline since_covid: change against the live page is reported in the release note  [new -0.45 p=0.629 n=59 | live -0.52 p=0.497 n=60]
+  ok   22a start dates: every roster school is in the ledger  [0 not in school-start-dates-2026-11-11.csv]
+  ok   22b start dates: every school without a date has a recorded reason  [0 with none]
+  ok   22c start dates: the roster carries every date the ledger has  [0 blank on the roster, dated in the ledger]
+  WARN 22d start dates: the roster and the ledger agree  [3 differ: Santa Fe South Shidler Elementary School, Wetumka Elementary School, Wetumka High School]
+  ok   22e start dates: schools with no date count in neither group and are named on the page  [0 of 106 roster schools]
+  -> 0 FAIL, 1 WARN

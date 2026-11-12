@@ -1,41 +1,45 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state AZ --core /home/claude/sdf/Core --out /home/claude/work1/AZ --data /home/claude/work1/AZ/data
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state AZ --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/AZ --data /home/claude/sdf/Build/work/AZ/data
 reading the core for Arizona ...
 [core] subjects: 151,415 school rows kept; dropped 65,789 rows with no school id and 3,981 with an id but no school record
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 11 with no date, 124 not in the ledger
 [core] Leader in Me roster: 1,043 rows
 [core] comparison schools: 15,087 rows
 [core] comparison: 4 rows set aside for 2 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 126 rows
-  subject rows 151,415 · roster rows 1,043 (124 schools) · comparison rows 15,083 (1973 schools) · MRA surveys 126
+  newest-year like-for-like: 3 grade-test pairs not in the state's newest file; 0 rows at 0 schools left out of that year
+  subject rows added from SchoolDigger's API: 8,840 (Arizona 2025-26 results (SchoolDigger API, the source of DOMO's subject file))
+  subject rows 160,255 · roster rows 1,043 (124 schools) · comparison rows 15,083 (1973 schools) · MRA surveys 126
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 266 with no date, 6430 not in the ledger
 [core] Leader in Me roster: 59,452 rows
   exits: 109 of 124 roster schools carry an expiration date; 38 past it by more than 30 days (exited), 0 inside the grace window, 71 in the future, 15 undated (10 with a start date)
-  2,095 schools · 631 districts
+  2,095 schools · 637 districts
 applying the cleaning rules ...
-  59,848 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 455 of 1116 reviewed
-  no start date: 11 schools · dated exits: 17 (school-years after an exit with rows: 37) · aggregate 'All grades' rows used 47, skipped 28
-  achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 17.4% of rows in years and subjects whose levels add up; not offered because the levels add up on too few rows to stand as measures)
+  64,008 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 539 of 1240 reviewed
+  no start date: 11 schools · dated exits: 27 (school-years after an exit with rows: 58) · aggregate 'All grades' rows used 47, skipped 28
+  achievement levels as measures: no (four levels, numbered from the bottom; proficiency is the top 2; 16.3% of rows in years and subjects whose levels add up; not offered because the levels add up on too few rows to stand as measures)
   level values blanked on 27 year-subject cells that do not add up: 2014-15 Math (end-of-course), 2015-16 ELA, 2015-16 Math (end-of-course), 2015-16 Math, 2015-16 Science, 2016-17 ELA, 2016-17 Math (end-of-course), 2016-17 Math ...
-  proficiency = levels 3 and 4 on 12.2% of rows
-  school type from NCES: Title I on 2,015 schools (1,076 yes), charter 588, magnet 0, alternative 42; Title I published 2017-2022, carried forward after
+  proficiency = levels 3 and 4 on 11.4% of rows
+  school type from NCES: Title I on 2,028 schools (1,087 yes), charter 596, magnet 0, alternative 42; Title I published 2017-2022, carried forward after
   funders: 59 Arizona schools carry a funding source (55 on the page; Kern 31, 29 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 79  by band {'Primary': {'pairs': 42, 'unmatched': 1}, 'Secondary': {'pairs': 37, 'unmatched': 1}}
   MRA: 114 surveys · 49 schools · 348 sentinel values · 10 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 77, 'comp_n': 1195, 'lim_change': 2.68, 'comp_change': 0.85, 'p': 0.021} · without the 10 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 70, 'comp_n': 1195, 'lim_change': 2.66, 'comp_change': 0.85, 'p': 0.031}
-  roster: 73 counted, 36 exited, 4 not counted yet, 11 not counted
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 72, 'comp_n': 1266, 'lim_change': 3.46, 'comp_change': 1.42, 'p': 0.034} · without the 10 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 63, 'comp_n': 1266, 'lim_change': 3.21, 'comp_change': 1.42, 'p': 0.082}
+  roster: 75 counted, 36 exited, 2 not counted yet, 11 not counted
 measures not offered (no school-year carries a value): chronic_absent
-best-performing schools: 2 of 80 counted schools, 45 measures in 8 outcomes
+best-performing schools: 4 of 81 counted schools, 45 measures in 8 outcomes
 
-wrote az_payload.json  (25.6 MB, 59,848 rows) · page kind full (77 Leader in Me schools on the headline)
-build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
+wrote az_payload.json  (27.3 MB, 64,008 rows) · page kind full (72 Leader in Me schools on the headline)
+build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '76c03d6e5866'}
 
 $ python3 build2.py az_payload.json AZ_Dashboard.html AZ_Methods.html
-payload 25.6 MB -> 1.13 MB gzip
-AZ_Dashboard.html: 1789 KB
-AZ_Methods.html: 45 KB
+payload 27.3 MB -> 1.19 MB gzip
+AZ_Dashboard.html: 1872 KB
+AZ_Methods.html: 48 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state AZ --work /home/claude/work1/AZ
+$ python3 /home/claude/sdf/Build/verify_core.py --state AZ --work /home/claude/sdf/Build/work/AZ
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -85,7 +89,7 @@ ok   exited schools keep their true Leader in Me years  [34 exited schools with 
 ok   the exit counts on the methods page match the rule  [38 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
-ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 73, 'exited': 36, 'not counted': 11, 'not counted yet': 4}]
+ok   the roster section's exited count matches (a school with no start date stays 'not counted')  [{'counted': 75, 'exited': 36, 'not counted': 11, 'not counted yet': 2}]
 ok   an exited school's reason names its expiration and the grace rule, or DOMO's own flag
 ok   the headline sensitivity without the undated schools is on the methods page
 ok   size bands are the NCES categories in the payload's order
@@ -94,17 +98,17 @@ ok   every offered measure is carried by at least one school-year
 ok   a measure no school-year carries is named on the methods page as not offered  [Chronic absence]
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [853 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [914 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   no level measure is offered when the level structure is unconfirmed  [the levels add up on too few rows to stand as measures]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's years before launch count in the comparison group  [1,917 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [1,921 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [1079 schools]
-ok   the school count never exceeds the band-slice count  [1272 schools vs 1849 band slices]
+ok   combined-grade schools appear in both bands  [1095 schools]
+ok   the school count never exceeds the band-slice count  [1338 schools vs 1897 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -133,27 +137,27 @@ ok   the discipline card shows exactly when the payload carries a discipline tre
 ok   the incidents card shows exactly when the payload carries an incident trend  [payload has no incidents]
 ok   the state extras card shows exactly when the payload carries state measures  [no state files]
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.0212 scipy 0.0212 · window 2022-2025 · LiM n=77 mean +2.68 · comparison n=1195 mean +0.85]
-ok   the headline counts schools, not band slices  [page 1272 vs offline 1272 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [77 vs 77]
-ok   the district filter re-renders the headline  [In Chandler Unified District #80 schools, between 2021-22 and 2024-25, Leader in Me school]
+ok   the headline p recomputes offline  [page 0.0334 scipy 0.0334 · window 2022-2026 · LiM n=72 mean +3.46 · comparison n=1266 mean +1.41]
+ok   the headline counts schools, not band slices  [page 1338 vs offline 1338 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [72 vs 72]
+ok   the district filter re-renders the headline  [In Chandler Unified District #80 schools, between 2021-22 and 2025-26, Leader in Me school]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [1184 of 2046 schools; In Arizona Title I schools, between 2021-22 and 2024-25, Leader in Me schools ro]
+ok   choosing 'Title I schools' narrows the view and names it  [1199 of 2087 schools; In Arizona Title I schools, between 2021-22 and 2025-26, Leader in Me schools ro]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Arizona schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2024-25,]
-ok   Title I status is known for most schools on the page  [98.5%]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In Arizona schools (Leader in Me side: Kern Family Foundation schools), between 2021-22 and 2025-26,]
+ok   Title I status is known for most schools on the page  [97.2%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
 ok   measure 'percent_proficient' either draws or says why
 ok   measure 'percent_below' either draws or says why
 ok   measure 'standard_score' either draws or says why
 ok   measure 'grad_rate' either draws or says why
-ok   the matched toggle re-renders the headline  [In Arizona schools (matched to similar schools only), between 2021-22 and 2024-25, Leader ]
-ok   the matched view shrinks or equals the Leader in Me count  [45 matched]
+ok   the matched toggle re-renders the headline  [In Arizona schools (matched to similar schools only), between 2021-22 and 2025-26, Leader ]
+ok   the matched view shrinks or equals the Leader in Me count  [40 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Chandler Unified District #80 generates cards or says there is nothing to report  [6 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.021174853624899043, 'n1': 77, 'n2': 1195}]
+ok   Chandler Unified District #80 generates cards or says there is nothing to report  [5 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.03336262579207851, 'n1': 72, 'n2': 1266}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -172,22 +176,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [3,238 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [167,513 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [167,673 bytes]
 ok   the pptx export is named for the state and chart  [AZ_Percent_meeting_the_standard_year_by_year_Arizona_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [166,274 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [166,835 bytes]
 ok   the docx export is named for the state and chart  [AZ_Percent_meeting_the_standard_year_by_year_Arizona_schools.docx]
-ok   the research pack downloads with its sections  [9,915 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'roster']]
+ok   the research pack downloads with its sections  [10,304 rows, sections ['about', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card', 'roster']]
 ok   the pack's Leader in Me count for the district is the page's  [3 vs 3]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Arizona schools like Gilbert Unified District’s, between 2021-22 and 2024-25, Leader in Me schools rose 0.6% on Perce]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In Arizona schools like Gilbert Unified District’s, between 2021-22 and 2025-26, Leader in Me schools fell 0.1% on Perce]
 ok   the look-alike box reports both counts or says why not  [Schools like Gilbert Unified District’s: 18 Leader in Me schools and 225 comparison schools look like Gilbert Unified District’s 37 schools with results in thes]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.5202]
+ok   the look-alike headline p recomputes offline  [p=0.9869]
 ok   the anchor's own schools are never inside the look-alike groups
 ok   the school list downloads with one row per school  [55 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In Arizona grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 1.8% on Percent m]
+ok   choosing a grade re-renders the headline and names the grade  [In Arizona grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 5.3% on Percent m]
 ok   whole-school measures switch off while a grade is chosen  [2 whole-school measures in the payload]
 ok   dark mode re-renders without errors
 ok   no horizontal overflow at 900px  [0px]
@@ -216,8 +220,65 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +2.68 pts (n=77) vs comparison +0.85 pts (n=1195), p=0.0212 -> significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +3.46 pts (n=72) vs comparison +1.41 pts (n=1266), p=0.0334 -> significant
 
 ==========================================================================
 162 of 162 checks pass
 ==========================================================================
+
+$ python3 Build/verify_best.py --page Out/arizona/index.html
+
+--------------------------------------------------------------------------
+Tier A — who is on the list
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier B — every number rebuilt from the page's own data
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier C — the rules, applied again
+--------------------------------------------------------------------------
+     (0 composite changes on this list are negative and are printed as such)
+
+--------------------------------------------------------------------------
+Tier D — the order
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier E — what the page says
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Tier F — the tab in a real browser
+--------------------------------------------------------------------------
+
+91 checks, 0 failed
+ALL CHECKS PASS
+
+$ python3 Build/prepublish_check.py --state AZ ... (ledger beside the roster for check 22 only)
+== AZ pre-publish checks
+  ok   1 coverage: the newest year reaches about as many schools and rows as the year before  [schools 1,315 vs 1,155 (1.14); grade-subject rows 8,283 vs 8,046 (1.03), grades 3-8 reading and math, against DOMO 2025]
+  WARN 2 test set: every grade and test DOMO carried the year before is in the newest file, or listed as pending  [3 pairs missing, 0 of their rows in reading or math: 5th Grade Science (744); 8th Grade Science (492); 11th Grade Science (253)]
+  ok   3 levels: no more rows with only some of the four levels than DOMO's year before  [0.0% of newest-year rows against 38.2% in DOMO 2025]
+  ok   4 suppressed values: the audit counts masked, recovered and bounded cells  [ambiguous_rows_set_aside, ambiguous_pairs]
+  ok   5 definition: the audit compares the newest year with DOMO's year before  [definition_audit_prior_year]
+  ok   6 like-for-like: newest-year rows left out because the school took a test the newest file lacks  [0 rows]
+  ok   10a launch-year rule: no Leader in Me row is counted before its Year 1  [0 rows]
+  ok   10b Year 0 sits in neither group: every Year 0 row is a school's launch year, none is a comparison row  [21 Year 0 rows; 0 out of place; 0 launch years left in the comparison group]
+  ok   10c the page carries the years-since-launch chart and the Year 0 hover help  [chart yes, hover help yes]
+  ok   10d the methods page states the launch-year rule (September 15, Year 0)
+  ok   7 statewide ELA 2025->2026: a change of 8 points or more is explained in the record  [44.5 -> 43.9 (-0.6)]
+  ok   7 statewide Math 2025->2026: a change of 8 points or more is explained in the record  [39.6 -> 39.6 (+0.0)]
+  ok   8 earlier years unchanged: 2023 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2024 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2025 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   11 every measure on the live page is on the new page  [4 measures now, 4 live]
+  ok   9 headline full_history: change against the live page is reported in the release note  [new -1.13 p=0.399 n=62 | live -1.67 p=0.208 n=66]
+  ok   9 headline since_covid: change against the live page is reported in the release note  [new +2.05 p=0.033 n=72 | live +1.83 p=0.021 n=77]
+  ok   22a start dates: every roster school is in the ledger  [0 not in school-start-dates-2026-11-11.csv]
+  ok   22b start dates: every school without a date has a recorded reason  [0 with none]
+  WARN 22c start dates: the roster carries every date the ledger has  [6 blank on the roster, dated in the ledger: Arizona Charter Academy, Belen Soto Elementary School, Corte Sierra Elementary School, Dreaming Summit Elementary, Harvest Preparatory Academy San Luis AZ, Sweetwater Community School]
+  WARN 22d start dates: the roster and the ledger agree  [3 differ: Lincoln Elementary School, Western Sky Middle School, Wigwam Creek Middle School]
+  ok   22e start dates: schools with no date count in neither group and are named on the page  [5 of 124 roster schools: Apache Trail High School, Arizona Language Preparatory, Cavett Elementary School, Sierra Linda High School, Wheeler Elementary School]
+  -> 0 FAIL, 3 WARN

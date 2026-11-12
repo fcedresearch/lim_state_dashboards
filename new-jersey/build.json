@@ -2,54 +2,54 @@
  "state": "NJ",
  "name": "New Jersey",
  "folder": "new-jersey",
- "built": "2026-10-06",
- "seconds": 588,
+ "built": "2026-11-12",
+ "seconds": 440,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 45,
+ "lim_headline_n": 43,
  "schools": 2292,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 103,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (12).csv",
    "bytes": 13445693,
-   "modified": "2026-10-06"
+   "modified": "2026-11-12"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
    "bytes": 132812308,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/work1/NJ/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/sdf/Build/work/NJ/data/Subjects_Tests_FINAL (8).csv",
    "rows": 174895
   },
   "roster": {
-   "path": "/home/claude/work1/NJ/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/sdf/Build/work/NJ/data/LIM Schools (Current_Active) (11).csv",
    "rows": 847
   },
   "comparison": {
-   "path": "/home/claude/work1/NJ/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/sdf/Build/work/NJ/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 20268
   },
   "mra": {
-   "path": "/home/claude/work1/NJ/data/All MRA Surveys.csv",
+   "path": "/home/claude/sdf/Build/work/NJ/data/All MRA Surveys.csv",
    "rows": 91
   }
  },
@@ -57,14 +57,19 @@
   "Academic Growth_NJ/",
   "PULL-MANIFEST_NJ.csv",
   "Postsecondary Enrollment_NJ/",
-  "School Performance Reports Database_NJ/"
+  "Proficiency_NJ_2025/",
+  "Proficiency_NJ_2026/",
+  "School Performance Reports Database_NJ/",
+  "nj_2026_HELD_audit.json",
+  "nj_2026_subjects.csv",
+  "nj_2026_subjects_audit.json"
  ],
  "extras_module": "nj_core_extras",
  "verified": true,
- "dashboard_bytes": 4132091,
+ "dashboard_bytes": 4397491,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
+  "year": 2026,
+  "label": "2025-26",
   "status": "complete",
   "subjects": [
    "ELA",
@@ -72,8 +77,8 @@
    "Science"
   ],
   "missing": [],
-  "rows_share_of_prior": 1.01,
-  "prior_year": 2024
+  "rows_share_of_prior": 0.99,
+  "prior_year": 2025
  },
  "measure_years": {
   "percent_proficient": {
@@ -89,7 +94,8 @@
     "2022": 8209,
     "2023": 8191,
     "2024": 8112,
-    "2025": 8197
+    "2025": 8197,
+    "2026": 8078
    }
   },
   "percent_below": {
@@ -105,7 +111,8 @@
     "2022": 8209,
     "2023": 8191,
     "2024": 8112,
-    "2025": 8197
+    "2025": 8197,
+    "2026": 8071
    }
   },
   "standard_score": {
@@ -129,15 +136,15 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2015": 5029,
-    "2016": 5939,
-    "2017": 6073,
-    "2018": 6027,
-    "2019": 6125,
-    "2022": 8317,
-    "2023": 8319,
-    "2024": 8248,
-    "2025": 8304
+    "2015": 5044,
+    "2016": 5954,
+    "2017": 6088,
+    "2018": 6042,
+    "2019": 6140,
+    "2022": 8331,
+    "2023": 8337,
+    "2024": 8266,
+    "2025": 8322
    }
   },
   "grad_rate": {
@@ -161,14 +168,14 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 5019,
-    "2016": 5073,
-    "2017": 5135,
-    "2018": 5157,
-    "2019": 5196,
-    "2023": 6980,
-    "2024": 6911,
-    "2025": 6930
+    "2015": 5034,
+    "2016": 5088,
+    "2017": 5150,
+    "2018": 5172,
+    "2019": 5211,
+    "2023": 6996,
+    "2024": 6929,
+    "2025": 6948
    }
   },
   "msgp_math": {
@@ -176,14 +183,14 @@
    "kind": "rows",
    "family": "academic",
    "years": {
-    "2015": 5003,
-    "2016": 5073,
-    "2017": 5115,
-    "2018": 5136,
-    "2019": 5175,
-    "2023": 6958,
-    "2024": 6895,
-    "2025": 6916
+    "2015": 5018,
+    "2016": 5088,
+    "2017": 5130,
+    "2018": 5151,
+    "2019": 5190,
+    "2023": 6974,
+    "2024": 6913,
+    "2025": 6934
    }
   },
   "pct_oss": {
@@ -191,13 +198,13 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2017": 6043,
-    "2018": 3748,
-    "2019": 3508,
-    "2022": 5554,
-    "2023": 8343,
-    "2024": 8263,
-    "2025": 8295
+    "2017": 6058,
+    "2018": 3760,
+    "2019": 3518,
+    "2022": 5568,
+    "2023": 8361,
+    "2024": 8281,
+    "2025": 8313
    }
   },
   "pct_susp": {
@@ -205,15 +212,15 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2015": 5969,
-    "2016": 6040,
-    "2017": 6041,
-    "2018": 3838,
-    "2019": 3530,
-    "2022": 5556,
-    "2023": 8343,
-    "2024": 8263,
-    "2025": 8295
+    "2015": 5984,
+    "2016": 6055,
+    "2017": 6056,
+    "2018": 3851,
+    "2019": 3541,
+    "2022": 5570,
+    "2023": 8361,
+    "2024": 8281,
+    "2025": 8313
    }
   },
   "dropout": {
@@ -657,13 +664,13 @@
  },
  "audits": {
   "levels": {
-   "rows": 159842,
-   "levels 3 and 4": 7.6,
-   "levels 2, 3 and 4": 2.0,
-   "level 4 alone": 25.9,
-   "100 minus level 1": 3.1,
+   "rows": 178328,
+   "levels 3 and 4": 8.3,
+   "levels 2, 3 and 4": 1.9,
+   "level 4 alone": 24.2,
+   "100 minus level 1": 2.9,
    "best": "level 4 alone",
-   "levels_sum_to_100_share": 34.4,
+   "levels_sum_to_100_share": 33.1,
    "structure": "no combination of the reported levels reproduces the proficiency rate",
    "n_levels": null,
    "proficient_from": null,
@@ -675,8 +682,8 @@
    "latest_year_ok": null,
    "reason": "no combination of the reported levels reproduces PercentMetStandard on more than 9% of rows (a five-level state whose export carries four columns, usually)",
    "combination_shares": {
-    "levels 3 and 4": 8.7,
-    "levels 2, 3 and 4": 2.7,
+    "levels 3 and 4": 9.4,
+    "levels 2, 3 and 4": 2.6,
     "levels 1 and 2 (1 the top)": 1.9,
     "levels 1, 2 and 3 (1 the top)": 1.8
    },
@@ -703,21 +710,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 45,
-    "comp_n": 1992,
-    "lim_change": 7.51,
-    "comp_change": 6.23,
-    "p": 0.263
+    "y1": 2026,
+    "lim_n": 43,
+    "comp_n": 1977,
+    "lim_change": 6.31,
+    "comp_change": 5.16,
+    "p": 0.353
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 37,
-    "comp_n": 1992,
-    "lim_change": 6.54,
-    "comp_change": 6.23,
-    "p": 0.797
+    "y1": 2026,
+    "lim_n": 35,
+    "comp_n": 1977,
+    "lim_change": 5.07,
+    "comp_change": 5.16,
+    "p": 0.943
    },
    "schools": 9
   },
@@ -725,14 +732,14 @@
   "subjects_excluded": []
  },
  "best_schools": {
-  "qualified": 7,
-  "in_the_process": 7,
+  "qualified": 6,
+  "in_the_process": 6,
   "lapsed_on_the_list": 0,
-  "reviewed": 49,
+  "reviewed": 52,
   "measures": 61,
   "outcomes": 18,
-  "improved_every_year": 3,
-  "lapsed_longer_ago": 34
+  "improved_every_year": 2,
+  "lapsed_longer_ago": 35
  },
- "best_schools_added": "2026-10-06"
+ "best_schools_added": "2026-11-12"
 }

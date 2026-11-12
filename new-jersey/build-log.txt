@@ -1,21 +1,24 @@
 
-$ python3 /home/claude/sdf/Build/build_payload_core.py --state NJ --core /home/claude/sdf/Core --out /home/claude/work1/NJ --data /home/claude/work1/NJ/data --extras nj_core_extras
+$ python3 /home/claude/sdf/Build/build_payload_core.py --state NJ --core /home/claude/sdf/Core --out /home/claude/sdf/Build/work/NJ --data /home/claude/sdf/Build/work/NJ/data --extras nj_core_extras
 reading the core for New Jersey ...
 [core] subjects: 174,895 school rows kept; dropped 105,220 rows with no school id and 4,287 with an id but no school record
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 9 with no date, 103 not in the ledger
 [core] Leader in Me roster: 847 rows
 [core] comparison schools: 20,278 rows
 [core] comparison: 10 rows set aside for 5 schools the roster now carries in the same years (joined after the comparison export)
 [core] MRA surveys: 91 rows
-  subject rows 174,895 · roster rows 847 (103 schools) · comparison rows 20,268 (2204 schools) · MRA surveys 91
+  subject rows added from the state's own file: 18,486 (New Jersey 2025-26 NJSLA and NJGPA results (NJDOE school data files))
+  subject rows 193,381 · roster rows 847 (103 schools) · comparison rows 20,268 (2204 schools) · MRA surveys 91
+[core] roster start dates: 0 schools filled from the ledger (no ledger in Core/roster-updates), 266 with no date, 6430 not in the ledger
 [core] Leader in Me roster: 59,452 rows
   exits: 91 of 103 roster schools carry an expiration date; 55 past it by more than 30 days (exited), 0 inside the grace window, 36 in the future, 12 undated (9 with a start date)
   2,302 schools · 669 districts
 applying the cleaning rules ...
-  62,419 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025]
-  Leader in Me school-years counted: 277 of 927 reviewed
-  no start date: 9 schools · dated exits: 25 (school-years after an exit with rows: 48) · aggregate 'All grades' rows used 0, skipped 0
+  70,497 school-year-band-subject rows · years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025, 2026]
+  Leader in Me school-years counted: 331 of 1030 reviewed
+  no start date: 9 schools · dated exits: 35 (school-years after an exit with rows: 81) · aggregate 'All grades' rows used 0, skipped 0
   achievement levels as measures: no (no combination of the reported levels reproduces the proficiency rate; 0.0% of rows in years and subjects whose levels add up; not offered because no combination of the reported levels reproduces PercentMetStandard on more than 9% of rows (a five-level state whose export carries four columns, usually))
-  proficiency = level 4 alone on 25.9% of rows
+  proficiency = level 4 alone on 24.2% of rows
 folding in New Jersey's own measures (nj_core_extras) ...
   state files (resolved by the registry; the log names the ones set aside):
     set aside: Database_SchoolDetail_2020-2021.xlsx: every value in the 2020-21 workbook describes a closure year or restates an earlier file
@@ -49,30 +52,30 @@ folding in New Jersey's own measures (nj_core_extras) ...
     names: the state files' own school name agrees with DOMO's on 2,275 of 2,284 crosswalked schools; 0 pairs re-pointed to a folded id; 0 shared state codes settled; 0 schools carry more than one state code across the years
   value check of the join and of the two shared measures: the state's chronic absenteeism against DOMO's chronic absence on 14,586 school-years (2016-17, 2017-18, 2018-19, 2021-22, 2022-23, 2023-24, 2024-25): correlation 1.0, median difference 0.0 pts, 100.0% within 0.15 -> the same measure; the state's four-year graduation rate against DOMO's on 2,406: correlation 1.0, median difference 0.0 pts, 100.0% within 0.15 -> the same measure; in 2024-25 the state prints two calculations and DOMO carries the federal one (100.0% within 0.15 on 417; the state calculation 30.5%)
   fills where DOMO has no value: chronic absence on 4,509 school-years (2014-15: 1737, 2015-16: 2139, 2016-17: 129, 2017-18: 113, 2018-19: 85, 2021-22: 73, 2022-23: 74, 2023-24: 84, 2024-25: 75); graduation on 907 (class of 2015: 403, class of 2016: 409, class of 2017: 25, class of 2018: 24, class of 2019: 14, class of 2022: 7, class of 2023: 5, class of 2024: 9, class of 2025: 11)
-  rows gain: msgp_ela on 18,342 school-year-bands (64 Leader in Me schools ever), msgp_math on 18,309 school-year-bands (64 Leader in Me schools ever), pct_oss on 16,423 school-year-bands (81 Leader in Me schools ever), pct_susp on 22,013 school-year-bands (81 Leader in Me schools ever), dropout on 3,618 school-year-bands (8 Leader in Me schools ever); 0 school-years had no band to sit in
+  rows gain: msgp_ela on 18,469 school-year-bands (64 Leader in Me schools ever), msgp_math on 18,436 school-year-bands (64 Leader in Me schools ever), pct_oss on 16,528 school-year-bands (81 Leader in Me schools ever), pct_susp on 22,150 school-year-bands (81 Leader in Me schools ever), dropout on 3,618 school-year-bands (8 Leader in Me schools ever); 0 school-years had no band to sit in
   card: 11 New Jersey measures, each group on each year's own membership
   incidents: 14 statewide points, 1,698 district-year rows; the state's own per-100 rate rebuilds from the count and enrollment within 0.1 on 100.0% of 14,836 school-years
   per-school New Jersey records for the pack: 19,719 (36 columns)
-  New Jersey's measures on 24,449 school-year-bands: 23,167 joined to existing rows, 1,282 school-year-bands added with no test rows of their own
-  core measures filled from New Jersey's own files where DOMO had none: chronic_absent 11,812 rows, grad_rate 1,904 rows
+  New Jersey's measures on 24,592 school-year-bands: 23,167 joined to existing rows, 1,425 school-year-bands added with no test rows of their own
+  core measures filled from New Jersey's own files where DOMO had none: chronic_absent 11,875 rows, grad_rate 1,904 rows
   school type from NCES: Title I on 2,252 schools (1,629 yes), charter 102, magnet 0, alternative 9; Title I published 2017-2022, carried forward after
   funders: 30 New Jersey schools carry a funding source (30 on the page; Kern 14, 14 on the page); latest non-blank year per school
 building matched pairs, inside each band ...
   pairs 43  by band {'Primary': {'pairs': 28, 'unmatched': 2}, 'Secondary': {'pairs': 15, 'unmatched': 0}}
   MRA: 82 surveys · 42 schools · 247 sentinel values · 5 shells
-  headline 2021-22 to 2024-25: {'y0': 2022, 'y1': 2025, 'lim_n': 45, 'comp_n': 1992, 'lim_change': 7.51, 'comp_change': 6.23, 'p': 0.263} · without the 9 undated schools {'y0': 2022, 'y1': 2025, 'lim_n': 37, 'comp_n': 1992, 'lim_change': 6.54, 'comp_change': 6.23, 'p': 0.797}
+  headline 2021-22 to 2025-26: {'y0': 2022, 'y1': 2026, 'lim_n': 43, 'comp_n': 1977, 'lim_change': 6.31, 'comp_change': 5.16, 'p': 0.353} · without the 9 undated schools {'y0': 2022, 'y1': 2026, 'lim_n': 35, 'comp_n': 1977, 'lim_change': 5.07, 'comp_change': 5.16, 'p': 0.943}
   roster: 38 counted, 51 exited, 5 not counted yet, 9 not counted
-best-performing schools: 7 of 49 counted schools, 61 measures in 18 outcomes
+best-performing schools: 6 of 52 counted schools, 61 measures in 18 outcomes
 
-wrote nj_payload.json  (41.1 MB, 63,701 rows) · page kind full (45 Leader in Me schools on the headline)
+wrote nj_payload.json  (44.6 MB, 71,922 rows) · page kind full (43 Leader in Me schools on the headline)
 build stamp: {'skill_version': '2026-10-06', 'rules_fingerprint': '14c8e8e4e5ca', 'rules_files': ['lim_rules.py', 'analysis.py'], 'builder': 'build_payload_core.py', 'builder_sha': '80c29b2972e0'}
 
 $ python3 build2.py nj_payload.json NJ_Dashboard.html NJ_Methods.html
-payload 41.1 MB -> 2.85 MB gzip
-NJ_Dashboard.html: 4035 KB
-NJ_Methods.html: 65 KB
+payload 44.6 MB -> 3.05 MB gzip
+NJ_Dashboard.html: 4294 KB
+NJ_Methods.html: 67 KB
 
-$ python3 /home/claude/sdf/Build/verify_core.py --state NJ --work /home/claude/work1/NJ
+$ python3 /home/claude/sdf/Build/verify_core.py --state NJ --work /home/claude/sdf/Build/work/NJ
 
 --------------------------------------------------------------------------
 Tier 0 — install and input-value audit
@@ -118,7 +121,7 @@ ok   Year 0 rows carry no years-in-process credit  [66 Year 0 rows]
 ok   schools with no start date appear in neither group  [9 schools]
 ok   the count of undated schools is on the methods page
 ok   no row survives after a school's dated exit, in either group  [0 rows]
-ok   exited schools keep their true Leader in Me years  [43 exited schools with counted years]
+ok   exited schools keep their true Leader in Me years  [46 exited schools with counted years]
 ok   the exit counts on the methods page match the rule  [55 exited (0 from DOMO's flags)]
 ok   lim_exit carries every exited school and nothing else
 ok   the roster section lists every roster school once
@@ -130,17 +133,17 @@ ok   the poverty share rides on most rows for the look-alike caliper  [100%]
 ok   every offered measure is carried by at least one school-year
 ok   the composite flag keeps science, social studies and writing out of the no-filter view
 ok   the grade table lists tested grades in order and every school in it has a name
-ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [1230 schools]
+ok   grade-4 reading values in the grade table equal the subject file's, to the tenth  [1219 schools]
 ok   the grade table carries no school-year the rules dropped
 ok   no level measure is offered when the level structure is unconfirmed  [no combination of the reported levels reproduces PercentMetStandard on more than 9% of rows (a five-level state whose export carries four columns, usually)]
 ok   school names and start dates are in the payload for the pack
 ok   MRA by-school rows exist for the pack
 ok   the MRA respondent map names a group or a blend for every measure
 ok   look-alike settings are in the payload with their rationale
-ok   a Leader in Me school's years before launch count in the comparison group  [1,443 rows]
+ok   a Leader in Me school's years before launch count in the comparison group  [1,475 rows]
 ok   Lighthouse schools are inside the Leader in Me family
-ok   combined-grade schools appear in both bands  [658 schools]
-ok   the school count never exceeds the band-slice count  [2040 schools vs 2565 band slices]
+ok   combined-grade schools appear in both bands  [676 schools]
+ok   the school count never exceeds the band-slice count  [2020 schools vs 2528 band slices]
 ok   pairs are built inside bands
 ok   the by-band pair counts sum to the total
 ok   no comparison school is used twice
@@ -160,7 +163,7 @@ ok   movers are built on ten or more schools each
 Tier 2 — behaviour in a real browser
 --------------------------------------------------------------------------
 ok   the page loads and the headline renders
-ok   load time is workable  [1.1s]
+ok   load time is workable  [0.9s]
 ok   no console errors on load
 ok   chart c1 draws an svg or explains why
 ok   chart c2 draws an svg or explains why
@@ -170,14 +173,14 @@ ok   the incidents card shows exactly when the payload carries an incident trend
 ok   the state extras card shows exactly when the payload carries state measures  [11 state measures]
 ok   every state measure on the card draws a Leader in Me and a comparison line
 ok   the in-page Welch test matches scipy on 25 random samples  [worst |dp| 1.14e-08]
-ok   the headline p recomputes offline  [page 0.2609 scipy 0.2609 · window 2022-2025 · LiM n=45 mean +7.52 · comparison n=1992 mean +6.23]
-ok   the headline counts schools, not band slices  [page 2037 vs offline 2037 on 2022-2025]
-ok   the page's Leader in Me count is the builder's  [45 vs 45]
-ok   the district filter re-renders the headline  [In Trenton Public School District schools, between 2022-23 and 2024-25, Leader in Me schoo]
+ok   the headline p recomputes offline  [page 0.3534 scipy 0.3534 · window 2022-2026 · LiM n=43 mean +6.31 · comparison n=1977 mean +5.16]
+ok   the headline counts schools, not band slices  [page 2020 vs offline 2020 on 2022-2026]
+ok   the page's Leader in Me count is the builder's  [43 vs 43]
+ok   the district filter re-renders the headline  [In Trenton Public School District schools, between 2022-23 and 2025-26, Leader in Me schoo]
 ok   the school type filter is offered with the payload's kinds  [Title I schools, Not Title I, Charter schools, Alternative schools, Kern Family Foundation schools]
-ok   choosing 'Title I schools' narrows the view and names it  [1525 of 2292 schools; In New Jersey Title I schools, between 2021-22 and 2024-25, Leader in Me schools]
+ok   choosing 'Title I schools' narrows the view and names it  [1525 of 2292 schools; In New Jersey Title I schools, between 2021-22 and 2025-26, Leader in Me schools]
 ok   every school in the 'Title I schools' view carries that attribute
-ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [Not enough schools match these filters to compare anything yet. Remove a filter on the left and it w]
+ok   'Kern Family Foundation schools' narrows the Leader in Me side only and keeps the comparison side whole  [In New Jersey schools (Leader in Me side: Kern Family Foundation schools), between 2024-25 and 2025-]
 ok   Title I status is known for most schools on the page  [98.3%]
 ok   the Primary band filter re-renders without error
 ok   the Secondary band filter re-renders without error
@@ -191,12 +194,12 @@ ok   measure 'msgp_math' either draws or says why
 ok   measure 'pct_oss' either draws or says why
 ok   measure 'pct_susp' either draws or says why
 ok   measure 'dropout' either draws or says why
-ok   the matched toggle re-renders the headline  [In New Jersey schools (matched to similar schools only), between 2021-22 and 2024-25, Lead]
-ok   the matched view shrinks or equals the Leader in Me count  [21 matched]
+ok   the matched toggle re-renders the headline  [In New Jersey schools (matched to similar schools only), between 2021-22 and 2025-26, Lead]
+ok   the matched view shrinks or equals the Leader in Me count  [18 matched]
 ok   no console errors after the filter sweep
 ok   the insights tab hides the explore view
-ok   Trenton Public School District generates cards or says there is nothing to report  [11 cards]
-ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.2609035058798179, 'n1': 45, 'n2': 1992}]
+ok   Trenton Public School District generates cards or says there is nothing to report  [12 cards]
+ok   the insights tab uses the same unit and window as the explore tab  [{'p': 0.35337153674305877, 'n1': 43, 'n2': 1977}]
 ok   no console errors on the insights tab
 ok   the MRA tab is offered exactly when the payload carries surveys
 ok   the MRA tab shows its own view and sidebar and hides the explore ones
@@ -215,22 +218,22 @@ ok   the same-schools switch keeps only schools surveyed at both ends
 ok   no console errors on the MRA tab
 ok   the MRA view downloads one row per school, year and measure  [2,394 rows]
 ok   leaving the MRA tab restores the explore view
-ok   export c1.pptx downloads, opens and carries the chart image  [186,830 bytes]
+ok   export c1.pptx downloads, opens and carries the chart image  [204,886 bytes]
 ok   the pptx export is named for the state and chart  [NJ_Percent_meeting_the_standard_year_by_year_New_Jersey_schools.pptx]
-ok   export c1.docx downloads, opens and carries the chart image  [187,997 bytes]
+ok   export c1.docx downloads, opens and carries the chart image  [206,534 bytes]
 ok   the docx export is named for the state and chart  [NJ_Percent_meeting_the_standard_year_by_year_New_Jersey_schools.docx]
-ok   the research pack downloads with its sections  [12,745 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
-ok   the pack's Leader in Me count for the district is the page's  [8 vs 8]
-ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In New Jersey schools like Newark Public School District’s, between 2021-22 and 2024-25, Leader in Me schools rose 5.7% ]
-ok   the look-alike box reports both counts or says why not  [Schools like Newark Public School District’s: 29 Leader in Me schools and 285 comparison schools look like Newark Public School District’s 59 schools with resul]
+ok   the research pack downloads with its sections  [13,687 rows, sections ['about', 'district_published', 'field_insight', 'growth_test', 'movement', 'mra', 'mra_school', 'report_card']]
+ok   the pack's Leader in Me count for the district is the page's  [11 vs 11]
+ok   look-alike mode rewrites the headline around the anchor district, or says nothing matched  [In New Jersey schools like Newark Public School District’s, between 2021-22 and 2025-26, Leader in Me schools rose 5.1% ]
+ok   the look-alike box reports both counts or says why not  [Schools like Newark Public School District’s: 30 Leader in Me schools and 288 comparison schools look like Newark Public School District’s 59 schools with resul]
 ok   the matched switch is disabled while an anchor is set
 ok   no console errors in look-alike mode
-ok   the look-alike headline p recomputes offline  [p=0.3817]
+ok   the look-alike headline p recomputes offline  [p=0.3243]
 ok   the anchor's own schools are never inside the look-alike groups
-ok   the school list downloads with one row per school  [90 rows, 0 same-name pairs]
+ok   the school list downloads with one row per school  [91 rows, 0 same-name pairs]
 ok   the school list carries traits and change columns
 ok   the grade filter lists the tested grades
-ok   choosing a grade re-renders the headline and names the grade  [In New Jersey grade 4 results, between 2021-22 and 2024-25, Leader in Me schools rose 10.8% on Perce]
+ok   choosing a grade re-renders the headline and names the grade  [In New Jersey grade 4 results, between 2021-22 and 2025-26, Leader in Me schools rose 6.2% on Percen]
 ok   whole-school measures switch off while a grade is chosen  [8 whole-school measures in the payload]
 ok   dark mode re-renders without errors
 ok   no horizontal overflow at 900px  [0px]
@@ -259,13 +262,13 @@ ok   the methods page carries the exit-dating box
 ok   the methods page carries the look-alike section
 ok   the undated schools are listed by name in the payload
 
-  HEADLINE (statewide, 2022-2025, no filters): Leader in Me +7.52 pts (n=45) vs comparison +6.23 pts (n=1992), p=0.2609 -> not significant
+  HEADLINE (statewide, 2022-2026, no filters): Leader in Me +6.31 pts (n=43) vs comparison +5.16 pts (n=1977), p=0.3534 -> not significant
 
 ==========================================================================
 168 of 168 checks pass
 ==========================================================================
 
-$ python3 /home/claude/sdf/Build/states/nj_core_verify.py --work /home/claude/work1/NJ
+$ python3 /home/claude/sdf/Build/states/nj_core_verify.py --work /home/claude/sdf/Build/work/NJ
 
 New Jersey's own measures
 --------------------------------------------------------------------------
@@ -301,7 +304,7 @@ The fills
 --------------------------------------------------------------------------
 ok   the chronic-absence fill never overwrote a DOMO value  [14586 of 14,586 DOMO school-years unchanged]
 ok   the graduation fill never overwrote a DOMO value  [2815 of 2,815 DOMO school-years unchanged]
-ok   the chronic-absence fill landed on every row DOMO lacked  [5758 of 5758 filled school-year-bands with rows carry the state's value]
+ok   the chronic-absence fill landed on every row DOMO lacked  [5821 of 5821 filled school-year-bands with rows carry the state's value]
 ok   chronic absence was filled in bulk only for the years DOMO does not carry (2014-15 and 2015-16), and elsewhere only the odd school-year DOMO lacks  [fill by year {2015: 1737, 2016: 2139, 2017: 129, 2018: 113, 2019: 85, 2022: 73, 2023: 74, 2024: 84, 2025: 75}]
 ok   graduation was filled in bulk only for the classes DOMO does not carry (2015 and 2016), on the secondary band, and elsewhere only the odd school-class DOMO lacks  [907 school-classes: {2015: 403, 2016: 409, 2017: 25, 2018: 24, 2019: 14, 2022: 7, 2023: 5, 2024: 9, 2025: 11}]
 ok   the graduation fill reached the 2014-15 and 2015-16 rows  [1781 rows]
@@ -311,10 +314,10 @@ The rows
 --------------------------------------------------------------------------
 ok   the four New Jersey measures are on the page  [['chronic_absent', 'dropout', 'grad_rate', 'msgp_ela', 'msgp_math', 'pct_oss', 'pct_susp', 'percent_below', 'percent_proficient', 'standard_score']]
 ok   every row measure's plain-English description names no bare acronym
-ok   msgp_ela sits on the rows in the state's years only, closures out, and on both bands of a combined school  [46,401 rows, years [2015, 2016, 2017, 2018, 2019, 2023, 2024, 2025], 4918 combined school-years on both bands]
-ok   msgp_math sits on the rows in the state's years only, closures out, and on both bands of a combined school  [46,271 rows, years [2015, 2016, 2017, 2018, 2019, 2023, 2024, 2025], 4918 combined school-years on both bands]
-ok   pct_oss sits on the rows in the state's years only, closures out, and on both bands of a combined school  [43,754 rows, years [2017, 2018, 2019, 2022, 2023, 2024, 2025], 3499 combined school-years on both bands]
-ok   pct_susp sits on the rows in the state's years only, closures out, and on both bands of a combined school  [55,875 rows, years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025], 4738 combined school-years on both bands]
+ok   msgp_ela sits on the rows in the state's years only, closures out, and on both bands of a combined school  [46,528 rows, years [2015, 2016, 2017, 2018, 2019, 2023, 2024, 2025], 5045 combined school-years on both bands]
+ok   msgp_math sits on the rows in the state's years only, closures out, and on both bands of a combined school  [46,398 rows, years [2015, 2016, 2017, 2018, 2019, 2023, 2024, 2025], 5045 combined school-years on both bands]
+ok   pct_oss sits on the rows in the state's years only, closures out, and on both bands of a combined school  [43,859 rows, years [2017, 2018, 2019, 2022, 2023, 2024, 2025], 3604 combined school-years on both bands]
+ok   pct_susp sits on the rows in the state's years only, closures out, and on both bands of a combined school  [56,012 rows, years [2015, 2016, 2017, 2018, 2019, 2022, 2023, 2024, 2025], 4875 combined school-years on both bands]
 ok   the dropout rate stays off the rows (too few Leader in Me high schools) or sits on the secondary band only
 ok   reading growth reaches at least three counted Leader in Me schools  [64 schools]
 
@@ -372,3 +375,35 @@ ok   the district codes the pack maps carry published rows  [666 districts mappe
 ok   the sources list names the databases, the growth workbooks, the postsecondary workbooks and the NCES directory
 
 ALL NEW JERSEY CHECKS PASS
+
+== November 12, 2026 (Thursday pipeline, afternoon): checks run on the built page
+$ python3 Build/verify_best.py --page Out/new-jersey/index.html
+
+119 checks, 0 failed
+ALL CHECKS PASS
+$ python3 Build/prepublish_check.py --state NJ ... (ledger beside the roster for check 22 only)
+== NJ pre-publish checks
+  ok   1 coverage: the newest year reaches about as many schools and rows as the year before  [schools 1,740 vs 1,755 (0.99); grade-subject rows 12,534 vs 12,715 (0.99), grades 3-8 reading and math, against DOMO 2025]
+  ok   2 test set: every grade and test DOMO carried the year before is in the newest file
+  ok   3 levels: no more rows with only some of the four levels than DOMO's year before  [3.8% of newest-year rows against 3.6% in DOMO 2025]
+  ok   4 suppressed values: the audit counts masked, recovered and bounded cells  [rows_masked, rows_masked_2024_25, what_masking_selects_check_23]
+  ok   5 definition: the audit compares the newest year with DOMO's year before  [coverage_against_domo_2025]
+  ok   6 like-for-like: newest-year rows left out because the school took a test the newest file lacks  [0 rows]
+  ok   10a launch-year rule: no Leader in Me row is counted before its Year 1  [0 rows]
+  ok   10b Year 0 sits in neither group: every Year 0 row is a school's launch year, none is a comparison row  [66 Year 0 rows; 0 out of place; 0 launch years left in the comparison group]
+  ok   10c the page carries the years-since-launch chart and the Year 0 hover help  [chart yes, hover help yes]
+  ok   10d the methods page states the launch-year rule (September 15, Year 0)
+  ok   7 statewide ELA 2025->2026: a change of 8 points or more is explained in the record  [54.2 -> 52.3 (-1.9)]
+  ok   7 statewide Math 2025->2026: a change of 8 points or more is explained in the record  [50.2 -> 50.1 (-0.0)]
+  ok   8 earlier years unchanged: 2023 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2024 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   8 earlier years unchanged: 2025 values match the live page  [0 changed, 0 missing, 0 gone with 0 roster schools now in neither group, 0 new]
+  ok   11 every measure on the live page is on the new page  [16 measures now, 16 live]
+  ok   9 headline full_history: change against the live page is reported in the release note  [new -2.24 p=0.228 n=43 | live -3.12 p=0.097 n=43]
+  ok   9 headline since_covid: change against the live page is reported in the release note  [new +1.15 p=0.353 n=43 | live +1.29 p=0.261 n=45]
+  ok   22a start dates: every roster school is in the ledger  [0 not in school-start-dates-2026-11-11.csv]
+  ok   22b start dates: every school without a date has a recorded reason  [0 with none]
+  WARN 22c start dates: the roster carries every date the ledger has  [3 blank on the roster, dated in the ledger: Edison Academy Magnet School, Highland Elementary School, Jackson Memorial High School]
+  WARN 22d start dates: the roster and the ledger agree  [5 differ: Bragg Elementary School, Bridgeton High School, Broad Street School, Indiana Avenue Elementary School, Quarter Mile Lane School]
+  ok   22e start dates: schools with no date count in neither group and are named on the page  [6 of 103 roster schools: Arthur J. Holland Middle School, Columbia High School, Dr. Martin Luther King Middle School, Freedom Prep Charter School, Grace A Dunn Middle School, Trenton Central High School - Main Campus]
+  -> 0 FAIL, 2 WARN
