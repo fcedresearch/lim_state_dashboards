@@ -1,15 +1,18 @@
 {
  "state": "National",
  "abbr": "US",
- "built": "2026-10-06",
- "schools": 93039,
+ "built": "2026-11-12",
+ "schools": 93120,
  "states": 51,
  "surveys": 7183,
- "payload_bytes": 48602977,
- "gzip_bytes": 7819051,
+ "payload_bytes": 48643519,
+ "gzip_bytes": 7928291,
  "build_stamp": {
   "builder": "build_payload_core.py",
-  "builder_sha": "80c29b2972e0",
+  "builder_sha": [
+   "76c03d6e5866",
+   "80c29b2972e0"
+  ],
   "rules_files": [
    "lim_rules.py",
    "analysis.py"
@@ -35,12 +38,12 @@
   },
   {
    "name": "Arizona page",
-   "built": "2026-10-06",
+   "built": "2026-11-12",
    "kind": "full"
   },
   {
    "name": "California page",
-   "built": "2026-10-06",
+   "built": "2026-10-21",
    "kind": "full"
   },
   {
@@ -100,12 +103,12 @@
   },
   {
    "name": "Kansas page",
-   "built": "2026-10-06",
+   "built": "2026-11-12",
    "kind": "full"
   },
   {
    "name": "Kentucky page",
-   "built": "2026-10-06",
+   "built": "2026-11-12",
    "kind": "full"
   },
   {
@@ -175,7 +178,7 @@
   },
   {
    "name": "New Jersey page",
-   "built": "2026-10-06",
+   "built": "2026-11-12",
    "kind": "full"
   },
   {
@@ -200,7 +203,7 @@
   },
   {
    "name": "Oklahoma page",
-   "built": "2026-10-06",
+   "built": "2026-11-12",
    "kind": "full"
   },
   {
@@ -215,7 +218,7 @@
   },
   {
    "name": "Rhode Island page",
-   "built": "2026-10-06",
+   "built": "2026-11-12",
    "kind": "territory"
   },
   {
@@ -260,7 +263,7 @@
   },
   {
    "name": "Wisconsin page",
-   "built": "2026-10-06",
+   "built": "2026-11-12",
    "kind": "full"
   },
   {
@@ -270,7 +273,7 @@
   },
   {
    "name": "Wyoming page",
-   "built": "2026-10-06",
+   "built": "2026-11-12",
    "kind": "descriptive"
   }
  ]
