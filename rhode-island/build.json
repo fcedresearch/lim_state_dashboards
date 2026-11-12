@@ -2,54 +2,54 @@
  "state": "RI",
  "name": "Rhode Island",
  "folder": "rhode-island",
- "built": "2026-10-06",
- "seconds": 48,
+ "built": "2026-11-12",
+ "seconds": 93,
  "builder": "build_payload_core.py",
  "page_kind": "territory",
  "lim_headline_n": 0,
  "schools": 311,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 0,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (12).csv",
    "bytes": 13445693,
-   "modified": "2026-10-06"
+   "modified": "2026-10-07"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
    "bytes": 132812308,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/work1/RI/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/sdf/Build/work/RI/data/Subjects_Tests_FINAL (8).csv",
    "rows": 19917
   },
   "roster": {
-   "path": "/home/claude/work1/RI/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/sdf/Build/work/RI/data/LIM Schools (Current_Active) (11).csv",
    "rows": 0
   },
   "comparison": {
-   "path": "/home/claude/work1/RI/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/sdf/Build/work/RI/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 2761
   },
   "mra": {
-   "path": "/home/claude/work1/RI/data/All MRA Surveys.csv",
+   "path": "/home/claude/sdf/Build/work/RI/data/All MRA Surveys.csv",
    "rows": 0
   }
  },
@@ -59,14 +59,18 @@
   "Discipline_RI/",
   "PULL-MANIFEST_RI.csv",
   "Postsecondary Enrollment_RI/",
-  "School Grade_RI/"
+  "Proficiency_RI_2026/",
+  "Report Card Data_RI_2026/",
+  "School Grade_RI/",
+  "ri_2026_subjects.csv",
+  "ri_2026_subjects_audit.json"
  ],
  "extras_module": "ri_core_extras",
  "verified": true,
- "dashboard_bytes": 944469,
+ "dashboard_bytes": 1011703,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
+  "year": 2026,
+  "label": "2025-26",
   "status": "complete",
   "subjects": [
    "ELA",
@@ -75,7 +79,7 @@
   ],
   "missing": [],
   "rows_share_of_prior": 1.02,
-  "prior_year": 2024
+  "prior_year": 2025
  },
  "measure_years": {
   "percent_proficient": {
@@ -91,7 +95,8 @@
     "2022": 787,
     "2023": 801,
     "2024": 804,
-    "2025": 819
+    "2025": 819,
+    "2026": 837
    }
   },
   "percent_level4": {
@@ -105,7 +110,8 @@
     "2022": 787,
     "2023": 801,
     "2024": 804,
-    "2025": 819
+    "2025": 819,
+    "2026": 837
    }
   },
   "percent_level3": {
@@ -119,7 +125,8 @@
     "2022": 787,
     "2023": 801,
     "2024": 804,
-    "2025": 819
+    "2025": 819,
+    "2026": 837
    }
   },
   "percent_level2": {
@@ -133,7 +140,8 @@
     "2022": 787,
     "2023": 801,
     "2024": 804,
-    "2025": 819
+    "2025": 819,
+    "2026": 837
    }
   },
   "percent_below": {
@@ -147,7 +155,8 @@
     "2022": 787,
     "2023": 801,
     "2024": 804,
-    "2025": 819
+    "2025": 819,
+    "2026": 837
    }
   },
   "standard_score": {
@@ -171,12 +180,13 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2018": 652,
-    "2019": 888,
-    "2022": 835,
-    "2023": 847,
-    "2024": 846,
-    "2025": 857
+    "2018": 654,
+    "2019": 890,
+    "2022": 837,
+    "2023": 849,
+    "2024": 848,
+    "2025": 859,
+    "2026": 872
    }
   },
   "grad_rate": {
@@ -189,7 +199,8 @@
     "2019": 171,
     "2022": 163,
     "2023": 162,
-    "2024": 162
+    "2024": 162,
+    "2025": 164
    }
   },
   "attendance_rate": {
@@ -197,15 +208,15 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2015": 930,
-    "2016": 943,
-    "2017": 925,
-    "2018": 652,
-    "2019": 887,
-    "2022": 835,
-    "2023": 847,
-    "2024": 846,
-    "2025": 857
+    "2015": 932,
+    "2016": 945,
+    "2017": 927,
+    "2018": 654,
+    "2019": 889,
+    "2022": 837,
+    "2023": 849,
+    "2024": 848,
+    "2025": 859
    }
   },
   "truancy": {
@@ -213,14 +224,14 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2015": 918,
-    "2016": 932,
-    "2017": 918,
-    "2018": 651,
-    "2019": 887,
-    "2022": 833,
-    "2023": 845,
-    "2024": 844
+    "2015": 920,
+    "2016": 934,
+    "2017": 920,
+    "2018": 653,
+    "2019": 889,
+    "2022": 835,
+    "2023": 847,
+    "2024": 846
    }
   },
   "oss_per100": {
@@ -228,12 +239,13 @@
    "kind": "rows",
    "family": "attendance",
    "years": {
-    "2018": 652,
-    "2019": 888,
-    "2022": 835,
-    "2023": 848,
-    "2024": 846,
-    "2025": 857
+    "2018": 654,
+    "2019": 890,
+    "2022": 837,
+    "2023": 850,
+    "2024": 848,
+    "2025": 859,
+    "2026": 872
    }
   },
   "teacher_chronic_absent": {
@@ -241,12 +253,13 @@
    "kind": "rows",
    "family": "culture",
    "years": {
-    "2018": 644,
-    "2019": 650,
-    "2022": 827,
-    "2023": 831,
-    "2024": 841,
-    "2025": 848
+    "2018": 646,
+    "2019": 652,
+    "2022": 829,
+    "2023": 833,
+    "2024": 843,
+    "2025": 850,
+    "2026": 863
    }
   },
   "college_going": {
@@ -405,7 +418,8 @@
     "2018": 57,
     "2022": 58,
     "2023": 59,
-    "2024": 59
+    "2024": 59,
+    "2025": 59
    }
   },
   "grad_rate_composite": {
@@ -417,7 +431,8 @@
     "2018": 59,
     "2022": 60,
     "2023": 61,
-    "2024": 61
+    "2024": 61,
+    "2025": 61
    }
   },
   "growth_index_ela": {
@@ -430,7 +445,8 @@
     "2022": 279,
     "2023": 280,
     "2024": 278,
-    "2025": 278
+    "2025": 278,
+    "2026": 273
    }
   },
   "growth_index_math": {
@@ -443,7 +459,8 @@
     "2022": 279,
     "2023": 280,
     "2024": 278,
-    "2025": 278
+    "2025": 278,
+    "2026": 273
    }
   },
   "star_rating": {
@@ -456,7 +473,8 @@
     "2022": 285,
     "2023": 286,
     "2024": 285,
-    "2025": 283
+    "2025": 283,
+    "2026": 280
    }
   },
   "commissioners_seal": {
@@ -468,7 +486,8 @@
     "2022": 60,
     "2023": 60,
     "2024": 59,
-    "2025": 61
+    "2025": 61,
+    "2026": 61
    }
   },
   "postsecondary_success_index": {
@@ -480,7 +499,8 @@
     "2022": 60,
     "2023": 60,
     "2024": 59,
-    "2025": 61
+    "2025": 61,
+    "2026": 61
    }
   },
   "teachers": {
@@ -490,24 +510,25 @@
    "years": {
     "2023": 289,
     "2024": 285,
-    "2025": 283
+    "2025": 283,
+    "2026": 280
    }
   }
  },
  "audits": {
   "levels": {
-   "rows": 17885,
-   "levels 3 and 4": 70.3,
-   "levels 2, 3 and 4": 0.9,
+   "rows": 20033,
+   "levels 3 and 4": 73.5,
+   "levels 2, 3 and 4": 0.8,
    "level 4 alone": 0.9,
    "100 minus level 1": 0.1,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 69.5,
+   "levels_sum_to_100_share": 72.7,
    "structure": "four levels, numbered from the bottom; proficiency is the top 2",
    "n_levels": 4,
    "proficient_from": 3,
    "reversed_numbering": false,
-   "coverage": 69.5,
+   "coverage": 72.7,
    "years_ok": [
     2017,
     2018,
@@ -515,7 +536,8 @@
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "years_out": [
     2015,
@@ -532,7 +554,7 @@
    "latest_year_ok": true,
    "reason": null,
    "combination_shares": {
-    "levels 3 and 4": 72.0,
+    "levels 3 and 4": 75.1,
     "levels 2, 3 and 4": 0.2,
     "levels 1 and 2 (1 the top)": 2.2,
     "levels 1, 2 and 3 (1 the top)": 0.8
@@ -771,6 +793,33 @@
      "sum_to_100": 100.0,
      "match": 100.0,
      "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "ELA",
+     "rows": 941,
+     "level_rows": 941,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Math",
+     "rows": 956,
+     "level_rows": 956,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Science",
+     "rows": 251,
+     "level_rows": 251,
+     "sum_to_100": 100.0,
+     "match": 100.0,
+     "ok": true
     }
    ],
    "levels_as_measures": true
@@ -795,20 +844,20 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
+    "y1": 2026,
     "lim_n": 0,
-    "comp_n": 269,
+    "comp_n": 266,
     "lim_change": null,
-    "comp_change": 2.18,
+    "comp_change": 0.65,
     "p": null
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
+    "y1": 2026,
     "lim_n": 0,
-    "comp_n": 269,
+    "comp_n": 266,
     "lim_change": null,
-    "comp_change": 2.18,
+    "comp_change": 0.65,
     "p": null
    },
    "schools": 0
@@ -826,5 +875,5 @@
   "improved_every_year": 0,
   "lapsed_longer_ago": 0
  },
- "best_schools_added": "2026-10-06"
+ "best_schools_added": "2026-11-12"
 }

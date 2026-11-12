@@ -2,54 +2,54 @@
  "state": "KY",
  "name": "Kentucky",
  "folder": "kentucky",
- "built": "2026-10-06",
- "seconds": 205,
+ "built": "2026-11-12",
+ "seconds": 146,
  "builder": "build_payload_core.py",
  "page_kind": "full",
- "lim_headline_n": 162,
+ "lim_headline_n": 170,
  "schools": 1306,
  "years": [
   2015,
-  2025
+  2026
  ],
  "lim_roster_schools": 272,
  "core_exports": {
   "subjects": {
    "file": "Archive.zip/Subjects_Tests_FINAL (8).csv",
    "bytes": 146145669,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "roster": {
    "file": "LIM Schools (Current_Active) (12).csv",
    "bytes": 13445693,
-   "modified": "2026-10-06"
+   "modified": "2026-10-07"
   },
   "comparison": {
    "file": "All Other Schools (Non-LiM & Exited).csv",
    "bytes": 132812308,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   },
   "mra": {
    "file": "All MRA Surveys.csv",
    "bytes": 2466245,
-   "modified": "2026-09-30"
+   "modified": "2026-09-03"
   }
  },
  "state_pull": {
   "subjects": {
-   "path": "/home/claude/work1/KY/data/Subjects_Tests_FINAL (8).csv",
+   "path": "/home/claude/sdf/Build/work/KY/data/Subjects_Tests_FINAL (8).csv",
    "rows": 111023
   },
   "roster": {
-   "path": "/home/claude/work1/KY/data/LIM Schools (Current_Active) (11).csv",
+   "path": "/home/claude/sdf/Build/work/KY/data/LIM Schools (Current_Active) (11).csv",
    "rows": 2408
   },
   "comparison": {
-   "path": "/home/claude/work1/KY/data/All Other Schools (Non-LiM & Exited).csv",
+   "path": "/home/claude/sdf/Build/work/KY/data/All Other Schools (Non-LiM & Exited).csv",
    "rows": 9101
   },
   "mra": {
-   "path": "/home/claude/work1/KY/data/All MRA Surveys.csv",
+   "path": "/home/claude/sdf/Build/work/KY/data/All MRA Surveys.csv",
    "rows": 234
   }
  },
@@ -61,14 +61,17 @@
   "Climate Survey_KY/",
   "Discipline_KY/",
   "PULL-MANIFEST_KY.csv",
-  "Postsecondary Enrollment_KY/"
+  "Postsecondary Enrollment_KY/",
+  "Proficiency_KY_2026/",
+  "ky_2026_subjects.csv",
+  "ky_2026_subjects_audit.json"
  ],
  "extras_module": "ky_core_extras",
  "verified": true,
- "dashboard_bytes": 4164503,
+ "dashboard_bytes": 4410915,
  "latest_results": {
-  "year": 2025,
-  "label": "2024-25",
+  "year": 2026,
+  "label": "2025-26",
   "status": "complete",
   "subjects": [
    "ELA",
@@ -78,8 +81,8 @@
    "Writing"
   ],
   "missing": [],
-  "rows_share_of_prior": 1.01,
-  "prior_year": 2024
+  "rows_share_of_prior": 1.0,
+  "prior_year": 2025
  },
  "measure_years": {
   "percent_proficient": {
@@ -95,7 +98,8 @@
     "2022": 5657,
     "2023": 5724,
     "2024": 5640,
-    "2025": 5703
+    "2025": 5703,
+    "2026": 5697
    }
   },
   "percent_level4": {
@@ -111,7 +115,8 @@
     "2022": 5590,
     "2023": 5645,
     "2024": 5533,
-    "2025": 5698
+    "2025": 5698,
+    "2026": 5691
    }
   },
   "percent_level3": {
@@ -127,7 +132,8 @@
     "2022": 5590,
     "2023": 5645,
     "2024": 5533,
-    "2025": 5698
+    "2025": 5698,
+    "2026": 5691
    }
   },
   "percent_level2": {
@@ -143,7 +149,8 @@
     "2022": 5590,
     "2023": 5645,
     "2024": 5533,
-    "2025": 5698
+    "2025": 5698,
+    "2026": 5691
    }
   },
   "percent_below": {
@@ -159,7 +166,8 @@
     "2022": 5590,
     "2023": 5645,
     "2024": 5533,
-    "2025": 5698
+    "2025": 5698,
+    "2026": 5691
    }
   },
   "standard_score": {
@@ -775,18 +783,18 @@
  },
  "audits": {
   "levels": {
-   "rows": 101531,
-   "levels 3 and 4": 77.0,
+   "rows": 112358,
+   "levels 3 and 4": 75.9,
    "levels 2, 3 and 4": 0.2,
    "level 4 alone": 0.6,
    "100 minus level 1": 0.1,
    "best": "levels 3 and 4",
-   "levels_sum_to_100_share": 86.5,
+   "levels_sum_to_100_share": 86.7,
    "structure": "four levels, numbered from the bottom; proficiency is the top 2",
    "n_levels": 4,
    "proficient_from": 3,
    "reversed_numbering": false,
-   "coverage": 94.7,
+   "coverage": 95.2,
    "years_ok": [
     2015,
     2016,
@@ -796,7 +804,8 @@
     2022,
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "years_out": [],
    "cells_out": [],
@@ -1294,6 +1303,51 @@
      "sum_to_100": 99.8,
      "match": 100.0,
      "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "ELA",
+     "rows": 3203,
+     "level_rows": 3203,
+     "sum_to_100": 99.9,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Math",
+     "rows": 3066,
+     "level_rows": 3066,
+     "sum_to_100": 99.8,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Science",
+     "rows": 1040,
+     "level_rows": 1040,
+     "sum_to_100": 99.8,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Social Studies",
+     "rows": 1208,
+     "level_rows": 1208,
+     "sum_to_100": 99.7,
+     "match": 100.0,
+     "ok": true
+    },
+    {
+     "year": 2026,
+     "subject": "Writing",
+     "rows": 1094,
+     "level_rows": 1094,
+     "sum_to_100": 99.8,
+     "match": 100.0,
+     "ok": true
     }
    ],
    "levels_as_measures": true
@@ -1318,21 +1372,21 @@
   "sensitivity": {
    "with": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 162,
-    "comp_n": 885,
-    "lim_change": 4.87,
-    "comp_change": 4.78,
-    "p": 0.889
+    "y1": 2026,
+    "lim_n": 170,
+    "comp_n": 872,
+    "lim_change": 5.04,
+    "comp_change": 5.04,
+    "p": 0.99
    },
    "without": {
     "y0": 2022,
-    "y1": 2025,
-    "lim_n": 129,
-    "comp_n": 885,
-    "lim_change": 4.85,
-    "comp_change": 4.78,
-    "p": 0.922
+    "y1": 2026,
+    "lim_n": 137,
+    "comp_n": 872,
+    "lim_change": 5.13,
+    "comp_change": 5.04,
+    "p": 0.895
    },
    "schools": 37
   },
@@ -1343,14 +1397,14 @@
   ]
  },
  "best_schools": {
-  "qualified": 16,
-  "in_the_process": 15,
-  "lapsed_on_the_list": 1,
-  "reviewed": 155,
+  "qualified": 33,
+  "in_the_process": 31,
+  "lapsed_on_the_list": 2,
+  "reviewed": 179,
   "measures": 75,
   "outcomes": 21,
-  "improved_every_year": 3,
-  "lapsed_longer_ago": 70
+  "improved_every_year": 12,
+  "lapsed_longer_ago": 71
  },
- "best_schools_added": "2026-10-06"
+ "best_schools_added": "2026-11-12"
 }
